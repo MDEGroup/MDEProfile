@@ -14,6 +14,9 @@ package it.univaq.MDEProfiler.graph.model.graph;
  * <ul>
  *   <li>{@link it.univaq.MDEProfiler.graph.model.graph.Edge#getSource <em>Source</em>}</li>
  *   <li>{@link it.univaq.MDEProfiler.graph.model.graph.Edge#getTarget <em>Target</em>}</li>
+ *   <li>{@link it.univaq.MDEProfiler.graph.model.graph.Edge#isExact <em>Exact</em>}</li>
+ *   <li>{@link it.univaq.MDEProfiler.graph.model.graph.Edge#getDiscoverBy <em>Discover By</em>}</li>
+ *   <li>{@link it.univaq.MDEProfiler.graph.model.graph.Edge#getPathDiscoveredByHeuristic <em>Path Discovered By Heuristic</em>}</li>
  * </ul>
  *
  * @see it.univaq.MDEProfiler.graph.model.graph.GraphPackage#getEdge()
@@ -72,5 +75,83 @@ public interface Edge extends Named {
 	 * @generated
 	 */
 	void setTarget(Node value);
+
+	/**
+	 * Returns the value of the '<em><b>Exact</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Exact</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Exact</em>' attribute.
+	 * @see #setExact(boolean)
+	 * @see it.univaq.MDEProfiler.graph.model.graph.GraphPackage#getEdge_Exact()
+	 * @model
+	 * @generated
+	 */
+	boolean isExact();
+
+	/**
+	 * Sets the value of the '{@link it.univaq.MDEProfiler.graph.model.graph.Edge#isExact <em>Exact</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Exact</em>' attribute.
+	 * @see #isExact()
+	 * @generated
+	 */
+	void setExact(boolean value);
+
+	/**
+	 * Returns the value of the '<em><b>Discover By</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Discover By</em>' reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Discover By</em>' reference.
+	 * @see #setDiscoverBy(Node)
+	 * @see it.univaq.MDEProfiler.graph.model.graph.GraphPackage#getEdge_DiscoverBy()
+	 * @model required="true"
+	 * @generated
+	 */
+	Node getDiscoverBy();
+
+	/**
+	 * Sets the value of the '{@link it.univaq.MDEProfiler.graph.model.graph.Edge#getDiscoverBy <em>Discover By</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Discover By</em>' reference.
+	 * @see #getDiscoverBy()
+	 * @generated
+	 */
+	void setDiscoverBy(Node value);
+
+	/**
+	 * Returns the value of the '<em><b>Path Discovered By Heuristic</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Path Discovered By Heuristic</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Path Discovered By Heuristic</em>' attribute.
+	 * @see #setPathDiscoveredByHeuristic(String)
+	 * @see it.univaq.MDEProfiler.graph.model.graph.GraphPackage#getEdge_PathDiscoveredByHeuristic()
+	 * @model
+	 * @generated
+	 */
+	String getPathDiscoveredByHeuristic();
+
+	/**
+	 * Sets the value of the '{@link it.univaq.MDEProfiler.graph.model.graph.Edge#getPathDiscoveredByHeuristic <em>Path Discovered By Heuristic</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Path Discovered By Heuristic</em>' attribute.
+	 * @see #getPathDiscoveredByHeuristic()
+	 * @generated
+	 */
+	void setPathDiscoveredByHeuristic(String value);
 
 } // Edge

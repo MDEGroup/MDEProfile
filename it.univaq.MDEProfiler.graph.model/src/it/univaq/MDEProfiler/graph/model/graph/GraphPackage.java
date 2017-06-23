@@ -4,7 +4,6 @@ package it.univaq.MDEProfiler.graph.model.graph;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.EEnum;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 
@@ -123,13 +122,31 @@ public interface GraphPackage extends EPackage {
 	int GRAPH__NODES = NAMED_FEATURE_COUNT + 0;
 
 	/**
+	 * The feature id for the '<em><b>Edges</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GRAPH__EDGES = NAMED_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Owner</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GRAPH__OWNER = NAMED_FEATURE_COUNT + 2;
+
+	/**
 	 * The number of structural features of the '<em>Graph</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int GRAPH_FEATURE_COUNT = NAMED_FEATURE_COUNT + 1;
+	int GRAPH_FEATURE_COUNT = NAMED_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of operations of the '<em>Graph</em>' class.
@@ -169,7 +186,7 @@ public interface GraphPackage extends EPackage {
 	int NODE__FILE_PATH = NAMED_FEATURE_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>Type</b></em>' attribute.
+	 * The feature id for the '<em><b>Type</b></em>' attribute list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -178,13 +195,22 @@ public interface GraphPackage extends EPackage {
 	int NODE__TYPE = NAMED_FEATURE_COUNT + 1;
 
 	/**
+	 * The feature id for the '<em><b>Derived Or Not Exists</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NODE__DERIVED_OR_NOT_EXISTS = NAMED_FEATURE_COUNT + 2;
+
+	/**
 	 * The number of structural features of the '<em>Node</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int NODE_FEATURE_COUNT = NAMED_FEATURE_COUNT + 2;
+	int NODE_FEATURE_COUNT = NAMED_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of operations of the '<em>Node</em>' class.
@@ -233,13 +259,40 @@ public interface GraphPackage extends EPackage {
 	int EDGE__TARGET = NAMED_FEATURE_COUNT + 1;
 
 	/**
+	 * The feature id for the '<em><b>Exact</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EDGE__EXACT = NAMED_FEATURE_COUNT + 2;
+
+	/**
+	 * The feature id for the '<em><b>Discover By</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EDGE__DISCOVER_BY = NAMED_FEATURE_COUNT + 3;
+
+	/**
+	 * The feature id for the '<em><b>Path Discovered By Heuristic</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EDGE__PATH_DISCOVERED_BY_HEURISTIC = NAMED_FEATURE_COUNT + 4;
+
+	/**
 	 * The number of structural features of the '<em>Edge</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int EDGE_FEATURE_COUNT = NAMED_FEATURE_COUNT + 2;
+	int EDGE_FEATURE_COUNT = NAMED_FEATURE_COUNT + 5;
 
 	/**
 	 * The number of operations of the '<em>Edge</em>' class.
@@ -249,17 +302,6 @@ public interface GraphPackage extends EPackage {
 	 * @ordered
 	 */
 	int EDGE_OPERATION_COUNT = NAMED_OPERATION_COUNT + 0;
-
-
-	/**
-	 * The meta object id for the '{@link it.univaq.MDEProfiler.graph.model.graph.NodeType <em>Node Type</em>}' enum.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see it.univaq.MDEProfiler.graph.model.graph.NodeType
-	 * @see it.univaq.MDEProfiler.graph.model.graph.GraphPackageImpl#getNodeType()
-	 * @generated
-	 */
-	int NODE_TYPE = 4;
 
 
 	/**
@@ -305,6 +347,28 @@ public interface GraphPackage extends EPackage {
 	EReference getGraph_Nodes();
 
 	/**
+	 * Returns the meta object for the containment reference list '{@link it.univaq.MDEProfiler.graph.model.graph.Graph#getEdges <em>Edges</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Edges</em>'.
+	 * @see it.univaq.MDEProfiler.graph.model.graph.Graph#getEdges()
+	 * @see #getGraph()
+	 * @generated
+	 */
+	EReference getGraph_Edges();
+
+	/**
+	 * Returns the meta object for the attribute '{@link it.univaq.MDEProfiler.graph.model.graph.Graph#getOwner <em>Owner</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Owner</em>'.
+	 * @see it.univaq.MDEProfiler.graph.model.graph.Graph#getOwner()
+	 * @see #getGraph()
+	 * @generated
+	 */
+	EAttribute getGraph_Owner();
+
+	/**
 	 * Returns the meta object for class '{@link it.univaq.MDEProfiler.graph.model.graph.Node <em>Node</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -326,15 +390,26 @@ public interface GraphPackage extends EPackage {
 	EAttribute getNode_FilePath();
 
 	/**
-	 * Returns the meta object for the attribute '{@link it.univaq.MDEProfiler.graph.model.graph.Node#getType <em>Type</em>}'.
+	 * Returns the meta object for the attribute list '{@link it.univaq.MDEProfiler.graph.model.graph.Node#getType <em>Type</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Type</em>'.
+	 * @return the meta object for the attribute list '<em>Type</em>'.
 	 * @see it.univaq.MDEProfiler.graph.model.graph.Node#getType()
 	 * @see #getNode()
 	 * @generated
 	 */
 	EAttribute getNode_Type();
+
+	/**
+	 * Returns the meta object for the attribute '{@link it.univaq.MDEProfiler.graph.model.graph.Node#isDerivedOrNotExists <em>Derived Or Not Exists</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Derived Or Not Exists</em>'.
+	 * @see it.univaq.MDEProfiler.graph.model.graph.Node#isDerivedOrNotExists()
+	 * @see #getNode()
+	 * @generated
+	 */
+	EAttribute getNode_DerivedOrNotExists();
 
 	/**
 	 * Returns the meta object for class '{@link it.univaq.MDEProfiler.graph.model.graph.Edge <em>Edge</em>}'.
@@ -369,14 +444,37 @@ public interface GraphPackage extends EPackage {
 	EReference getEdge_Target();
 
 	/**
-	 * Returns the meta object for enum '{@link it.univaq.MDEProfiler.graph.model.graph.NodeType <em>Node Type</em>}'.
+	 * Returns the meta object for the attribute '{@link it.univaq.MDEProfiler.graph.model.graph.Edge#isExact <em>Exact</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for enum '<em>Node Type</em>'.
-	 * @see it.univaq.MDEProfiler.graph.model.graph.NodeType
+	 * @return the meta object for the attribute '<em>Exact</em>'.
+	 * @see it.univaq.MDEProfiler.graph.model.graph.Edge#isExact()
+	 * @see #getEdge()
 	 * @generated
 	 */
-	EEnum getNodeType();
+	EAttribute getEdge_Exact();
+
+	/**
+	 * Returns the meta object for the reference '{@link it.univaq.MDEProfiler.graph.model.graph.Edge#getDiscoverBy <em>Discover By</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Discover By</em>'.
+	 * @see it.univaq.MDEProfiler.graph.model.graph.Edge#getDiscoverBy()
+	 * @see #getEdge()
+	 * @generated
+	 */
+	EReference getEdge_DiscoverBy();
+
+	/**
+	 * Returns the meta object for the attribute '{@link it.univaq.MDEProfiler.graph.model.graph.Edge#getPathDiscoveredByHeuristic <em>Path Discovered By Heuristic</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Path Discovered By Heuristic</em>'.
+	 * @see it.univaq.MDEProfiler.graph.model.graph.Edge#getPathDiscoveredByHeuristic()
+	 * @see #getEdge()
+	 * @generated
+	 */
+	EAttribute getEdge_PathDiscoveredByHeuristic();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -438,6 +536,22 @@ public interface GraphPackage extends EPackage {
 		EReference GRAPH__NODES = eINSTANCE.getGraph_Nodes();
 
 		/**
+		 * The meta object literal for the '<em><b>Edges</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference GRAPH__EDGES = eINSTANCE.getGraph_Edges();
+
+		/**
+		 * The meta object literal for the '<em><b>Owner</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute GRAPH__OWNER = eINSTANCE.getGraph_Owner();
+
+		/**
 		 * The meta object literal for the '{@link it.univaq.MDEProfiler.graph.model.graph.NodeImpl <em>Node</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -456,12 +570,20 @@ public interface GraphPackage extends EPackage {
 		EAttribute NODE__FILE_PATH = eINSTANCE.getNode_FilePath();
 
 		/**
-		 * The meta object literal for the '<em><b>Type</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Type</b></em>' attribute list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
 		EAttribute NODE__TYPE = eINSTANCE.getNode_Type();
+
+		/**
+		 * The meta object literal for the '<em><b>Derived Or Not Exists</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute NODE__DERIVED_OR_NOT_EXISTS = eINSTANCE.getNode_DerivedOrNotExists();
 
 		/**
 		 * The meta object literal for the '{@link it.univaq.MDEProfiler.graph.model.graph.EdgeImpl <em>Edge</em>}' class.
@@ -490,14 +612,28 @@ public interface GraphPackage extends EPackage {
 		EReference EDGE__TARGET = eINSTANCE.getEdge_Target();
 
 		/**
-		 * The meta object literal for the '{@link it.univaq.MDEProfiler.graph.model.graph.NodeType <em>Node Type</em>}' enum.
+		 * The meta object literal for the '<em><b>Exact</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see it.univaq.MDEProfiler.graph.model.graph.NodeType
-		 * @see it.univaq.MDEProfiler.graph.model.graph.GraphPackageImpl#getNodeType()
 		 * @generated
 		 */
-		EEnum NODE_TYPE = eINSTANCE.getNodeType();
+		EAttribute EDGE__EXACT = eINSTANCE.getEdge_Exact();
+
+		/**
+		 * The meta object literal for the '<em><b>Discover By</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference EDGE__DISCOVER_BY = eINSTANCE.getEdge_DiscoverBy();
+
+		/**
+		 * The meta object literal for the '<em><b>Path Discovered By Heuristic</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute EDGE__PATH_DISCOVERED_BY_HEURISTIC = eINSTANCE.getEdge_PathDiscoveredByHeuristic();
 
 	}
 

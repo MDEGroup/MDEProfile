@@ -13,4 +13,5 @@ Require-Bundle: org.eclipse.jgit;bundle-version="4.4.0",
  org.slf4j.api;bundle-version="1.7.2",
  org.eclipse.m2e.maven.runtime.slf4j.simple;bundle-version="1.7.0",
  slf4j.api;bundle-version="1.6.6",
- com.jcraft.jsch;bundle-version="0.1.53"
+ com.jcraft.jsch;bundle-version="0.1.53",
+ org.jsoup;bundle-version="1.7.2"
