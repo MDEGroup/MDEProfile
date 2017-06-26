@@ -132,23 +132,18 @@ public class AntWithATLHeuristic implements IHeuristic {
 							}
 							else{
 								//IN MODEL
-								String antValue = modelNode.get(elementRealValue).getAttributeMap().get("path").toString();
-								antValue = getRealValue(antValue, project);
-								System.out.println("IN MODEL " + antValue);
-								String antMMValue = getRealValue(modelNode.get(elementRealValue).getAttributeMap().get("metamodel").toString(),project);
-								RuntimeConfigurable metamodelRuntimeConfigurable = modelNode.get(antMMValue);
-								System.out.println("IN METAMODEL " + getRealValue(metamodelRuntimeConfigurable.getAttributeMap().get("path").toString(),project));
-								//Controllare se il modello esiste nel grafo 
-								//Se esiste restituirlo
-								//Se non esiste crearlo e controllare se esiste nel filesystem
-								Node model = FileUtils.getNodeByFilePath(g, f.getParent() + File.separator + antValue);
+								String modelAntValue = modelNode.get(elementRealValue).getAttributeMap().get("path").toString();
+								modelAntValue = getRealValue(modelAntValue, project);
+								String metamodelANTValue = getRealValue(modelNode.get(elementRealValue).getAttributeMap().get("metamodel").toString(),project);
+								RuntimeConfigurable metamodelRuntimeConfigurable = modelNode.get(metamodelANTValue);
+								Node model = FileUtils.getNodeByFilePath(g, f.getParent() + File.separator + modelAntValue);
 								if (model == null) {
-									model = FileUtils.getNodeByFilePathLazy(g, f.getParent() + File.separator + antValue);
+									model = FileUtils.getNodeByFilePathLazy(g, f.getParent() + File.separator + modelAntValue);
 								}
 								if (model == null){
 									model = GraphFactory.eINSTANCE.createNode();
 									model.setDerivedOrNotExists(true);
-									model.setFilePath(f.getPath() + File.separator + antValue);
+									model.setFilePath(f.getPath() + File.separator + modelAntValue);
 									g.getNodes().add(model);
 								}
 								String modelAntName = getRealValue(ne.getAttributeMap().get("model").toString(), project);
@@ -190,6 +185,7 @@ public class AntWithATLHeuristic implements IHeuristic {
 							model.setName(s);
 							model.setFilePath(f.getParent() + File.separator + s);
 							model.getType().add(modelKind);
+							model.setDerivedOrNotExists(true);
 							g.getNodes().add(model);
 							File tempFile = new File(model.getFilePath());
 							if(tempFile.exists())
