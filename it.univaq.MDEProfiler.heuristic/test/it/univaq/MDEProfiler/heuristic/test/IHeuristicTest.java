@@ -110,7 +110,7 @@ public class IHeuristicTest {
 	}
 	
 	@Test
-	public void testRevolvePath(){
+	public void testRevolvePath() throws Exception{
 		Project p = antATL.getProject("/home/juri/MDEProfiler/Table2SVGBarChart/Table2SVGBarChart/build.xml");
 		assertNotNull(p);
 		assertNotNull(antATL.getRealValue("${transformations.dir}${source.metamodel.name}2${target.name}.asm", p));
@@ -119,6 +119,7 @@ public class IHeuristicTest {
 	public void testProperties(){
 		assertNotNull(FileUtils.getRootFolder());
 	}
+	@Ignore
 	@Test
 	public void testANTATLPath(){
 		String repo = "/home/juri/MDEProfiler/Table2SVGBarChart/";
@@ -132,7 +133,73 @@ public class IHeuristicTest {
 		it.univaq.MDEProfiler.graph.util.Serializer.serializeModel(g, "/home/juri/MDEProfiler/graph.xmi");
 		//transformations/TableSVGBarChart.atl
 	}
+	@Ignore
+	@Test
+	public void testAnt2Maven(){
+		String repo = "/home/juri/MDEProfiler/Ant2Maven";
+		Graph g = GraphFactory.eINSTANCE.createGraph();
+		g.setName("/home/juri/MDEProfiler/Table2SVGBarChart/Table2SVGBarChart/");
+		ecore.getGraph(repo, g);
+		atl.getGraph(repo, g);
+		km3.getGraph(repo, g);
+		launcher.getGraph(repo, g);
+		launcherGraph.getGraph(repo, g);
+		atlPath.getGraph(repo, g);
+		ant.getGraph(repo, g);
+		antATL.getGraph(repo, g);
+		it.univaq.MDEProfiler.graph.util.Serializer.serializeModel(g, repo + "/graph.xmi");
+	}
+	@Ignore
+	@Test
+	public void testAssertionModification(){
+		String repo = "/home/juri/MDEProfiler/AssertionModification";
+		Graph g = GraphFactory.eINSTANCE.createGraph();
+		g.setName("/home/juri/MDEProfiler/AssertionModification/AssertionModification/");
+		ecore.getGraph(repo, g);
+		atl.getGraph(repo, g);
+		km3.getGraph(repo, g);
+		launcher.getGraph(repo, g);
+		launcherGraph.getGraph(repo, g);
+		atlPath.getGraph(repo, g);
+		ant.getGraph(repo, g);
+		antATL.getGraph(repo, g);
+		it.univaq.MDEProfiler.graph.util.Serializer.serializeModel(g, repo + "/graph.xmi");
+	}
+	@Ignore
+	@Test
+	public void testTable2SVGBarChart(){
+		String repo = "/home/juri/MDEProfiler/Table2SVGBarChart";
+		Graph g = GraphFactory.eINSTANCE.createGraph();
+		g.setName("/home/juri/MDEProfiler/Table2SVGBarChart/Table2SVGBarChart/");
+		ecore.getGraph(repo, g);
+		atl.getGraph(repo, g);
+		km3.getGraph(repo, g);
+		launcher.getGraph(repo, g);
+		launcherGraph.getGraph(repo, g);
+		atlPath.getGraph(repo, g);
+		ant.getGraph(repo, g);
+		antATL.getGraph(repo, g);
+		it.univaq.MDEProfiler.graph.util.Serializer.serializeModel(g, repo + "/graph.xmi");
+	}
 	
+	
+	@Test
+	public void testMeasuringModelRepositories(){
+		String repo = "/home/juri/MDEProfiler/MeasuringModelRepositories/";
+		Graph g = GraphFactory.eINSTANCE.createGraph();
+		g.setName("/home/juri/MDEProfiler/MeasuringModelRepositories/MeasuringModelRepositories/");
+		ecore.getGraph(repo, g);
+		atl.getGraph(repo, g);
+		km3.getGraph(repo, g);
+		launcher.getGraph(repo, g);
+		launcherGraph.getGraph(repo, g);
+		atlPath.getGraph(repo, g);
+		ant.getGraph(repo, g);
+		antATL.getGraph(repo, g);
+		it.univaq.MDEProfiler.graph.util.Serializer.serializeModel(g, repo + "/graph.xmi");
+	}
+	
+	@Ignore
 	@Test
 	public void testeFileUtil(){
 		String repo = "/home/juri/MDEProfiler/Table2SVGBarChart/";
@@ -149,4 +216,6 @@ public class IHeuristicTest {
 		assertNotNull(s2);
 		//transformations/TableSVGBarChart.atl
 	}
+	
+	
 }

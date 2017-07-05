@@ -9,7 +9,7 @@ import it.univaq.MDEProfiler.graph.model.graph.Node;
 
 public class AntHeuristic implements IHeuristic {
 
-	private String extension = "build.xml";
+	private String extension = ".xml";
 	private String nodeKind = "NodeType.ANT";
 	@Override
 	public Graph getGraph(String repoFolder, Graph g) {

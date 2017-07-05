@@ -87,19 +87,11 @@ public class ATLZooRepositoryManager {
 	 * Return the relate path of project
 	 */
 	public String unZipProjectZipFile(String basePath, String zipFile) throws Exception {
-		String result = "";
 		String zipFilePath = downloadProjectFile(basePath, zipFile);
 		//zipFilePath = zipFilePath.replaceAll(basePath, "");
 		String projectFolder = zipFilePath.substring(0, zipFilePath.lastIndexOf("/"));
-		File rootFolder = new File(projectFolder);
-		if(rootFolder.isDirectory()){
-			File[] files = rootFolder.listFiles();
-			if(files.length == 2)
-				for (File file : files) 
-					if(file.isDirectory())
-						result = file.getAbsolutePath();
-		}
-		return (result.endsWith("/"))? result : result + File.separator;
+		Unzip.unzip(zipFilePath, projectFolder);
+		return (projectFolder.endsWith("/"))? projectFolder : projectFolder + File.separator;
 	}
 
 }

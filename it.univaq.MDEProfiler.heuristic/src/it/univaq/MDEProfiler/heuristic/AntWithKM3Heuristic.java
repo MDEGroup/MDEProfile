@@ -1,6 +1,5 @@
 package it.univaq.MDEProfiler.heuristic;
 
-import java.awt.GradientPaint;
 import java.io.File;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -9,7 +8,6 @@ import java.util.HashMap;
 import java.util.Hashtable;
 import java.util.Iterator;
 import java.util.List;
-import java.util.Optional;
 import java.util.Set;
 import java.util.regex.Pattern;
 import java.util.stream.Collectors;
@@ -36,28 +34,28 @@ import it.univaq.MDEProfiler.graph.model.graph.Graph;
 import it.univaq.MDEProfiler.graph.model.graph.GraphFactory;
 import it.univaq.MDEProfiler.graph.model.graph.Node;
 
-public class AntWithATLHeuristic implements IHeuristic {
+public class AntWithKM3Heuristic implements IHeuristic {
 
-	private Logger logger = Logger.getLogger(AntWithATLHeuristic.class);
+	private Logger logger = Logger.getLogger(AntWithKM3Heuristic.class);
 	private String nodeKind = "NodeType.ANT";
 	private String modelKind = "NodeType.Model";
+	private String ecoreNodeString = "NodeType.ECORE";
 	private Graph g;
-	private String metametamodel = "NodeType.MetaMetaModel";
-	private static String ecoreNodeString = "NodeType.Ecore";
-	private static Node ecoreNode;
 	private static String source = "SOURCE";
 	private static String target = "TARGET";
 	private static String lib = "LIBRARY";
 	private static String modelIn = "MODEL_INPUT";
 	private static String modelOut = "MODEL_OUT";
 	private static String metamodelConformance = "CONFORM2";
-	public AntWithATLHeuristic(){
+	private static Node ecoreNode;
+	public AntWithKM3Heuristic(){
 		ecoreNode = GraphFactory.eINSTANCE.createNode();
 		ecoreNode.setName("Ecore");
-		ecoreNode.getType().add(ecoreNodeString );
+		ecoreNode.getType().add(ecoreNodeString);
 	}
 	@Override
 	public Graph getGraph(String repoFolder, Graph g) {
+		// TODO
 		this.g = g;
 		for (Node n : g.getNodes().
 				stream().
@@ -104,7 +102,7 @@ public class AntWithATLHeuristic implements IHeuristic {
 					filter(task -> task.getTaskName().equals("am3.atl")).
 					collect(Collectors.toList())) {
 				String trafoPath = (String) task.getRuntimeConfigurableWrapper().getAttributeMap().get("path");
-				String realTrafoPath = getRealValue(trafoPath, project).replaceAll("\\.asm", ".atl");
+				String realTrafoPath = getRealValue(trafoPath, project) + ".atl";
 				File f = new File(antScriptNode.getFilePath());
 				Node trafoNode = FileUtils.getNodeByFilePath(g, f.getParent() +"/" + realTrafoPath);
 				if (trafoNode == null) 
@@ -116,6 +114,7 @@ public class AntWithATLHeuristic implements IHeuristic {
 						Edge ed = GraphFactory.eINSTANCE.createEdge();
 						ed.setPathDiscoveredByHeuristic(realTrafoPath);
 						ed.setDiscoverBy(antScriptNode);
+						ed.setSource(antScriptNode);
 						ed.setExact(true);
 						ed.setSource(trafoNode);
 						RuntimeConfigurable ne = childs.nextElement();
@@ -123,112 +122,54 @@ public class AntWithATLHeuristic implements IHeuristic {
 							String elementRealValue = getRealValue(ne.getAttributeMap().get("model").toString(), project);
 							ModelInfo elementInfo = modelInfoMap.get(elementRealValue);
 							if(elementInfo != null){
-								//Potrebbe essere null il path,
-								//Guardare nel caso nsUri
-								if(modelNode.get(elementInfo.getMetamodelName()).getAttributeMap().get("path") != null){
-									String antValue = modelNode.get(elementInfo.getMetamodelName()).getAttributeMap().get("path").toString();
-									String antResolvedValue = getRealValue(f.getParent() + "/" + antValue, project);
-									antResolvedValue += getLastValue(antValue, project);
-									Node metamodel = FileUtils.getNodeByFilePath(g, antResolvedValue);
-									if(metamodel == null){
-										metamodel = FileUtils.getNodeByFilePathLazy(g, antResolvedValue);
-										ed.setExact(false);
-									}
-									ed.setTarget(metamodel);
-									if(elementInfo.isInput())
-										ed.setName(source);
-									if(elementInfo.isOutput())
-										ed.setName(target);
+								String antValue = modelNode.get(elementInfo.getMetamodelName()).getAttributeMap().get("path").toString();
+								String antResolvedValue = getRealValue(f.getParent() + "/" + antValue, project);
+								antResolvedValue += getLastValue(antValue, project);
+								Node metamodel = FileUtils.getNodeByFilePath(g, antResolvedValue);
+								if(metamodel == null){
+									metamodel = FileUtils.getNodeByFilePathLazy(g, antResolvedValue);
+									ed.setExact(false);
 								}
-								if(modelNode.get(elementInfo.getMetamodelName()).getAttributeMap().get("nsUri") != null){
-									Node uri;
-									Optional<Node> node = g.getNodes().stream().
-										filter(z -> z.getFilePath().equals(modelNode.get(elementInfo.getMetamodelName()).getAttributeMap().get("nsUri").toString())).findFirst();
-									if(node.isPresent())
-										uri = node.get();
-									else {
-										uri = GraphFactory.eINSTANCE.createNode();
-										uri.setDerivedOrNotExists(false);
-										uri.setName(modelNode.get(elementInfo.getMetamodelName()).getAttributeMap().get("name").toString());
-										uri.setFilePath(modelNode.get(elementInfo.getMetamodelName()).getAttributeMap().get("nsUri").toString());
-										uri.getType().add(metametamodel);
-										g.getNodes().add(uri);
-									}
-									ed.setTarget(uri);
-									if(elementInfo.isInput())
-										ed.setName(source);
-									if(elementInfo.isOutput())
-										ed.setName(target);
-								}
+								ed.setTarget(metamodel);
+								if(elementInfo.isInput())
+									ed.setName(source);
+								if(elementInfo.isOutput())
+									ed.setName(target);
+								
 							}
 							else{
 								//IN MODEL
-								if(elementRealValue.equals("%EMF")){
-									g.getNodes().add(ecoreNode);
-									Edge e = GraphFactory.eINSTANCE.createEdge();
-									e.setExact(true);
-									
-									
+								String modelAntValue = modelNode.get(elementRealValue).getAttributeMap().get("path").toString();
+								modelAntValue = getRealValue(modelAntValue, project);
+								String metamodelANTValue = getRealValue(modelNode.get(elementRealValue).getAttributeMap().get("metamodel").toString(),project);
+								RuntimeConfigurable metamodelRuntimeConfigurable = modelNode.get(metamodelANTValue);
+								Node model = FileUtils.getNodeByFilePath(g, f.getParent() + File.separator + modelAntValue);
+								if (model == null) {
+									model = FileUtils.getNodeByFilePathLazy(g, f.getParent() + File.separator + modelAntValue);
 								}
-								else if(modelNode.get(elementRealValue).getAttributeMap().get("path")!=null){
-									String modelAntValue = modelNode.get(elementRealValue).getAttributeMap().get("path").toString();
-									modelAntValue = getRealValue(modelAntValue, project);
-									String metamodelANTValue = getRealValue(modelNode.get(elementRealValue).getAttributeMap().get("metamodel").toString(),project);
-									RuntimeConfigurable metamodelRuntimeConfigurable = modelNode.get(metamodelANTValue);
-									Node model = FileUtils.getNodeByFilePath(g, f.getParent() + File.separator + modelAntValue);
-									if (model == null) {
-										model = FileUtils.getNodeByFilePathLazy(g, f.getParent() + File.separator + modelAntValue);
-									}
-									if (model == null){
-										model = GraphFactory.eINSTANCE.createNode();
-										model.setDerivedOrNotExists(true);
-										model.setFilePath(f.getPath() + File.separator + modelAntValue);
-										g.getNodes().add(model);
-									}
-									String modelAntName = getRealValue(ne.getAttributeMap().get("model").toString(), project);
-									String metamodelName = getRealValue(modelNode.get(modelAntName).getAttributeMap().get("metamodel").toString(),project);
-									if(modelNode.get(metamodelName).getAttributeMap().get("path") != null){
-										String metamodelPath = getRealValue(modelNode.get(metamodelName).getAttributeMap().get("path").toString(), project);
-										Node metamodelNode = FileUtils.getNodeByFilePath(g, metamodelPath);
-										Edge e = GraphFactory.eINSTANCE.createEdge();
-										e.setExact(true);
-										if(metamodelNode == null){
-											metamodelNode = FileUtils.getNodeByFilePathLazy(g, metamodelPath);
-											e.setExact(false);
-										}
-										e.setDiscoverBy(antScriptNode);
-										e.setName(metamodelConformance);
-										e.setTarget(metamodelNode);
-										e.setSource(model);
-										g.getEdges().add(e);
-										ed.setTarget(model);
-										ed.setName(modelIn);
-									}
-									if(modelNode.get(metamodelName).getAttributeMap().get("nsUri") != null){
-										Edge e = GraphFactory.eINSTANCE.createEdge();
-										e.setExact(true);
-										Node metamodelNode;
-										Optional<Node> node = g.getNodes().stream().
-											filter(z -> z.getFilePath().equals(modelNode.get(metamodelName).getAttributeMap().get("nsUri").toString())).findFirst();
-										if(node.isPresent())
-											metamodelNode = node.get();
-										else {
-											metamodelNode = GraphFactory.eINSTANCE.createNode();
-											metamodelNode.setDerivedOrNotExists(false);
-											metamodelNode.setName(modelNode.get(elementInfo.getMetamodelName()).getAttributeMap().get("name").toString());
-											metamodelNode.setFilePath(modelNode.get(elementInfo.getMetamodelName()).getAttributeMap().get("nsUri").toString());
-											metamodelNode.getType().add(metametamodel);
-											g.getNodes().add(metamodelNode);
-										}
-										e.setDiscoverBy(antScriptNode);
-										e.setName(metamodelConformance);
-										e.setTarget(metamodelNode);
-										e.setSource(model);
-										g.getEdges().add(e);
-										ed.setTarget(model);
-										ed.setName(modelIn);
-									}
+								if (model == null){
+									model = GraphFactory.eINSTANCE.createNode();
+									model.setDerivedOrNotExists(true);
+									model.setFilePath(f.getPath() + File.separator + modelAntValue);
+									g.getNodes().add(model);
 								}
+								String modelAntName = getRealValue(ne.getAttributeMap().get("model").toString(), project);
+								String metamodelName = getRealValue(modelNode.get(modelAntName).getAttributeMap().get("metamodel").toString(),project);
+								String metamodelPath = getRealValue(modelNode.get(metamodelName).getAttributeMap().get("path").toString(), project);
+								Node metamodelNode = FileUtils.getNodeByFilePath(g, metamodelPath);
+								Edge e = GraphFactory.eINSTANCE.createEdge();
+								e.setExact(true);
+								if(metamodelNode == null){
+									metamodelNode = FileUtils.getNodeByFilePathLazy(g, metamodelPath);
+									e.setExact(false);
+								}
+								e.setDiscoverBy(antScriptNode);
+								e.setName(metamodelConformance);
+								e.setTarget(metamodelNode);
+								e.setSource(model);
+								g.getEdges().add(e);
+								ed.setTarget(model);
+								ed.setName(modelIn);
 								
 							}
 						}
@@ -243,7 +184,7 @@ public class AntWithATLHeuristic implements IHeuristic {
 							ed.setTarget(metamodel);
 						}
 						if(ne.getElementTag().equals("outModel")){
-							// DA PUTTRE IN mapNode
+							// DA PUTTERE IN mapNode
 							String s = getRealValue(ne.getAttributeMap().get("model").toString(), project);
 							ne.setAttribute("path", f.getParent() + File.separator + s);
 							modelNode.put(s, ne);
@@ -257,26 +198,23 @@ public class AntWithATLHeuristic implements IHeuristic {
 							if(tempFile.exists())
 								model.setDerivedOrNotExists(true);
 							String metamodel = getRealValue(ne.getAttributeMap().get("metamodel").toString(), project);
-							if(!metamodel.equals("%EMF")){
-								Node metamodelNode = FileUtils.getNodeByFilePath(g, metamodel);
-								
-								Edge e = GraphFactory.eINSTANCE.createEdge();
-								e.setExact(true);
-								if(metamodelNode == null){
-									metamodelNode = FileUtils.getNodeByFilePathLazy(g, metamodel);
-									e.setExact(false);
-								}
-								e.setSource(model);
-								e.setDiscoverBy(antScriptNode);
-								e.setName(metamodelConformance);
-								if(metamodelNode == null){
-									metamodelNode = FileUtils.getNodeByFilePathLazy(g, metamodel);
-								}
-								e.setTarget(metamodelNode);
-								results.add(e);
-								ed.setTarget(model);
-								ed.setName(modelOut);
+							Node metamodelNode = FileUtils.getNodeByFilePath(g, metamodel);
+							Edge e = GraphFactory.eINSTANCE.createEdge();
+							e.setExact(true);
+							if(metamodelNode == null){
+								metamodelNode = FileUtils.getNodeByFilePathLazy(g, metamodel);
+								e.setExact(false);
 							}
+							e.setSource(model);
+							e.setDiscoverBy(antScriptNode);
+							e.setName(metamodelConformance);
+							if(metamodelNode == null){
+								metamodelNode = FileUtils.getNodeByFilePathLazy(g, metamodel);
+							}
+							e.setTarget(metamodelNode);
+							results.add(e);
+							ed.setTarget(model);
+							ed.setName(modelOut);
 						}
 							
 						results.add(ed);
@@ -290,11 +228,6 @@ public class AntWithATLHeuristic implements IHeuristic {
 			logger.error(e.getMessage());
 		}
 		return results;
-	}
-	
-	private Node getNode(){
-		//TODO
-		return null;
 	}
 
 
@@ -340,8 +273,6 @@ public class AntWithATLHeuristic implements IHeuristic {
 
 			result += project.getProperty(string);
 		}
-		if(splitted.length != 0)
-			result += splitted[splitted.length-1];
 		return result;
 	}
 	private String getLastValue(String trafoPath, Project project) {
