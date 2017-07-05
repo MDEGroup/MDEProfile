@@ -95,12 +95,10 @@ public class IHeuristicResults {
 			it.univaq.MDEProfiler.graph.util.Serializer.serializeModel(g, resultsFolder + file.getName() + ".xmi");
 		}
 	}
-	@Ignore
 	@Test
 	public void stats() throws IOException{
 		File baseFolderFile = new File(resultsFolder);
-		int cont = 1;
-		String csvFile = "/home/juri/Scrivania/abc.csv";
+		String csvFile = "/home/juri/Scrivania/abc2.csv";
 		FileWriter writer = new FileWriter(csvFile);
 		FileUtils.writeLine(writer, Arrays.asList("Project Name", "#Elements", "Types", "#Dangling", "Dangling"));
 		for (File file : baseFolderFile.listFiles()) {
@@ -130,15 +128,16 @@ public class IHeuristicResults {
 		}
 		writer.close();
 	}
-	@Test
-	public void stats2() throws IOException{
-		File baseFolderFile = new File(resultsFolder);
-		int count = 0;
-		for (File file : baseFolderFile.listFiles()) {
-			Graph g = it.univaq.MDEProfiler.graph.util.Serializer.deserializeModel(file.getAbsolutePath());
-			if(g.getNodes().stream().filter(z-> z.getType().contains("NodeType.LAUNCHER")).collect(Collectors.toList()).size()!=0)
-				count++;
-		}
-		System.out.println(count);
-	}
+//	@Ignore
+//	@Test
+//	public void stats2() throws IOException{
+//		File baseFolderFile = new File(resultsFolder);
+//		int count = 0;
+//		for (File file : baseFolderFile.listFiles()) {
+//			Graph g = it.univaq.MDEProfiler.graph.util.Serializer.deserializeModel(file.getAbsolutePath());
+//			if(g.getNodes().stream().filter(z-> z.getType().contains("NodeType.LAUNCHER")).collect(Collectors.toList()).size()!=0)
+//				count++;
+//		}
+//		System.out.println(count);
+//	}
 }

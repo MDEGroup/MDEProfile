@@ -10,6 +10,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 import it.univaq.MDEProfiler.graph.model.graph.Graph;
 import it.univaq.MDEProfiler.graph.model.graph.Node;
@@ -53,12 +54,12 @@ public class FileUtils {
 	}
 	
 	public static Node getNodeByFilePath(Graph g, String filePath){
-		Optional<Node> s = g.getNodes().stream()
-				.filter(n -> 
-				n.getFilePath().contains(filePath)).findFirst();
-		if(s.isPresent())
-			return s.get();
-		else return null;
+		for(Node node : g.getNodes()){
+			if(node.getFilePath().contains(filePath)){
+				return node;
+			}
+		}
+		return null;
 	}
 	public static Node getNodeByFilePathLazy(Graph g, String fileName) {
 		Optional<Node> s = g.getNodes().stream()
