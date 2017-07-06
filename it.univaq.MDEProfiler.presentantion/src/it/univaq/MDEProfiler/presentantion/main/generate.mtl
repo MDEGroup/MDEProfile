@@ -1,0 +1,74 @@
+[comment encoding = UTF-8 /]
+[module generate('http://it.univaq.MDEProfiler/graph')]
+
+
+[template public generateElement(aGraph : Graph)]
+[comment @main/]
+[file ('demo.html', false, 'UTF-8')]
+<!doctype html>
+<html>
+<head>
+  <title>Network | Basic usage</title>
+
+  <script type="text/javascript" src="vis.js"></script>
+  <link href="vis-network.min.css" rel="stylesheet" type="text/css" />
+
+  <style type="text/css">
+    #mynetwork {
+      width: 600px;
+      height: 400px;
+      border: 1px solid lightgray;
+    }
+
+    p {
+      max-width:700px;
+    }
+  </style>
+</head>
+<body>
+
+<p>
+  	GitHub repoName: [aGraph.name/]<br/>
+	GitHub owner: [aGraph.owner/]<br/>
+	GitHub URL: <a href="https://github.com/[aGraph.owner/]/[aGraph.name/]">Github repo</a>
+</p>
+
+<div id="mynetwork"></div>
+
+<script type="text/javascript">
+  // create an array with nodes
+  var nodes = new vis.DataSet(
+     [ '[' /]
+	
+	[for (it : Node | aGraph.nodes)]
+		{id: "[it.uri/]", label: '[it.name/]', [if (it.type->includes('NodeType.ECORE'))]color: 'lime' [/if][if (it.type->includes('NodeType.ATL'))]color: '#7BE141' [/if][if (it.type->includes('NodeType.LAUNCHER'))]color: 'rgb(255,168,7)' [/if][if (it.type->includes('NodeType.ANT'))]color: 'rgb(200,68,170)' [/if]},
+	[/for]
+	 [ ']' /]	
+
+  );
+
+  // create an array with edges
+  var edges = new vis.DataSet(
+	 [ '[' /]
+	[for(it : Edge | aGraph.edges)]
+		{from: "[it.source.uri/]", to: "[it.target.uri/]"},
+	[/for]
+ 	[ ']' /]
+  );
+
+  // create a network
+  var container = document.getElementById('mynetwork');
+  var data = {
+    nodes: nodes,
+    edges: edges
+  };
+  var options = {
+    nodes: {borderWidth: 2},
+    interaction: {hover: true}
+  }
+  var network = new vis.Network(container, data, options);
+</script>
+</body>
+</html>
+[/file]
+[/template]

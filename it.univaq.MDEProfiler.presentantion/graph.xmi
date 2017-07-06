@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="ASCII"?>
+<graph:Graph xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:graph="http://it.univaq.MDEProfiler/graph" name="/home/juri/MDEProfiler/Table2SVGBarChart/Table2SVGBarChart/"
+	xsi:schemaLocation="http://it.univaq.MDEProfiler/graph Graph.ecore">
+  <nodes name="example-Table.ecore" uri="/home/juri/MDEProfiler/Table2SVGBarChart/Table2SVGBarChart/models/example-Table.ecore">
+    <type>NodeType.ECORE</type>
+  </nodes>
+  <nodes name="Table.ecore" uri="/home/juri/MDEProfiler/Table2SVGBarChart/Table2SVGBarChart/metamodels/Table.ecore">
+    <type>NodeType.ECORE</type>
+  </nodes>
+  <nodes name="XML.ecore" uri="/home/juri/MDEProfiler/Table2SVGBarChart/Table2SVGBarChart/metamodels/XML.ecore">
+    <type>NodeType.ECORE</type>
+  </nodes>
+  <nodes name="SVG.ecore" uri="/home/juri/MDEProfiler/Table2SVGBarChart/Table2SVGBarChart/metamodels/SVG.ecore">
+    <type>NodeType.ECORE</type>
+  </nodes>
+  <nodes name="TableHelpers.atl" uri="/home/juri/MDEProfiler/Table2SVGBarChart/Table2SVGBarChart/lib/TableHelpers.atl">
+    <type>NodeType.ATL</type>
+  </nodes>
+  <nodes name="Table2SVGBarChart.atl" uri="/home/juri/MDEProfiler/Table2SVGBarChart/Table2SVGBarChart/transformations/Table2SVGBarChart.atl">
+    <type>NodeType.ATL</type>
+  </nodes>
+  <nodes name="SVG2XML.atl" uri="/home/juri/MDEProfiler/Table2SVGBarChart/Table2SVGBarChart/transformations/SVG2XML.atl">
+    <type>NodeType.ATL</type>
+  </nodes>
+  <nodes name="SVG.km3" uri="/home/juri/MDEProfiler/Table2SVGBarChart/Table2SVGBarChart/metamodels/SVG.km3">
+    <type>NodeType.KM3</type>
+  </nodes>
+  <nodes name="Table.km3" uri="/home/juri/MDEProfiler/Table2SVGBarChart/Table2SVGBarChart/metamodels/Table.km3">
+    <type>NodeType.KM3</type>
+  </nodes>
+  <nodes name="XML.km3" uri="/home/juri/MDEProfiler/Table2SVGBarChart/Table2SVGBarChart/metamodels/XML.km3">
+    <type>NodeType.KM3</type>
+  </nodes>
+  <nodes name="Table2SVGBarChart build.xml.launch" uri="/home/juri/MDEProfiler/Table2SVGBarChart/Table2SVGBarChart/conf/Table2SVGBarChart build.xml.launch">
+    <type>NodeType.LAUNCHER</type>
+  </nodes>
+  <nodes name="build.xml" uri="/home/juri/MDEProfiler/Table2SVGBarChart/Table2SVGBarChart/build.xml">
+    <type>NodeType.ANT</type>
+  </nodes>
+  <nodes name="example-SVGBarChart.ecore" uri="/home/juri/MDEProfiler/Table2SVGBarChart/Table2SVGBarChart/example-SVGBarChart.ecore" derivedOrNotExists="true">
+    <type>NodeType.Model</type>
+  </nodes>
+  <nodes name="example-XML.ecore" uri="/home/juri/MDEProfiler/Table2SVGBarChart/Table2SVGBarChart/example-XML.ecore" derivedOrNotExists="true">
+    <type>NodeType.Model</type>
+  </nodes>
+  <edges name="SOURCE" source="//@nodes.5" target="//@nodes.1" exact="true" discoverBy="//@nodes.11" pathDiscoveredByHeuristic="transformations/Table2SVGBarChart.atl"/>
+  <edges name="CONFORM2" source="//@nodes.0" target="//@nodes.1" exact="true" discoverBy="//@nodes.11"/>
+  <edges name="TARGET" source="//@nodes.5" target="//@nodes.3" exact="true" discoverBy="//@nodes.11" pathDiscoveredByHeuristic="transformations/Table2SVGBarChart.atl"/>
+  <edges name="CONFORM2" source="//@nodes.12" target="//@nodes.0" exact="true" discoverBy="//@nodes.11"/>
+  <edges name="SOURCE" source="//@nodes.6" target="//@nodes.3" exact="true" discoverBy="//@nodes.11" pathDiscoveredByHeuristic="transformations/SVG2XML.atl"/>
+  <edges name="CONFORM2" source="//@nodes.12" target="//@nodes.3" exact="true" discoverBy="//@nodes.11"/>
+  <edges name="TARGET" source="//@nodes.6" target="//@nodes.2" exact="true" discoverBy="//@nodes.11" pathDiscoveredByHeuristic="transformations/SVG2XML.atl"/>
+  <edges name="CONFORM2" source="//@nodes.13" target="//@nodes.2" exact="true" discoverBy="//@nodes.11"/>
+  <edges name="MODEL_INPUT" source="//@nodes.5" target="//@nodes.0" exact="true" discoverBy="//@nodes.11" pathDiscoveredByHeuristic="transformations/Table2SVGBarChart.atl"/>
+  <edges name="LIBRARY" source="//@nodes.5" target="//@nodes.4" exact="true" discoverBy="//@nodes.11" pathDiscoveredByHeuristic="transformations/Table2SVGBarChart.atl"/>
+  <edges name="MODEL_OUT" source="//@nodes.5" target="//@nodes.12" exact="true" discoverBy="//@nodes.11" pathDiscoveredByHeuristic="transformations/Table2SVGBarChart.atl"/>
+  <edges name="MODEL_INPUT" source="//@nodes.6" target="//@nodes.12" exact="true" discoverBy="//@nodes.11" pathDiscoveredByHeuristic="transformations/SVG2XML.atl"/>
+  <edges name="MODEL_OUT" source="//@nodes.6" target="//@nodes.13" exact="true" discoverBy="//@nodes.11" pathDiscoveredByHeuristic="transformations/SVG2XML.atl"/>
+</graph:Graph>
