@@ -61,22 +61,15 @@ public class IHeuristicResults {
 		List<String> list = ATLRepoManager.getProjectURLFromATLZooSite();
 		for (String string : list) {
 			try {
-				if(string.startsWith("IntroduceP"))
-					System.out.println(string);
 				String s = ATLRepoManager.unZipProjectZipFile(baseFolder, string);
-				if(s.equals("/"))
-					System.out.println("error");
-				System.out.println(s);
 			} catch (Exception e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
 			}
 			
 		}
 	}
 	@Ignore
 	@Test
-	public void heu(){
+	public void harvester(){
 		File baseFolderFile = new File(baseFolder);
 		int cont = 1;
 		for (File file : baseFolderFile.listFiles()) {
