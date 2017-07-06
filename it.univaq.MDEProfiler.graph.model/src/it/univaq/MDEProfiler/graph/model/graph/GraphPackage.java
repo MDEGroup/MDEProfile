@@ -177,13 +177,13 @@ public interface GraphPackage extends EPackage {
 	int NODE__NAME = NAMED__NAME;
 
 	/**
-	 * The feature id for the '<em><b>File Path</b></em>' attribute.
+	 * The feature id for the '<em><b>Uri</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int NODE__FILE_PATH = NAMED_FEATURE_COUNT + 0;
+	int NODE__URI = NAMED_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Type</b></em>' attribute list.
@@ -379,15 +379,15 @@ public interface GraphPackage extends EPackage {
 	EClass getNode();
 
 	/**
-	 * Returns the meta object for the attribute '{@link it.univaq.MDEProfiler.graph.model.graph.Node#getFilePath <em>File Path</em>}'.
+	 * Returns the meta object for the attribute '{@link it.univaq.MDEProfiler.graph.model.graph.Node#getUri <em>Uri</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>File Path</em>'.
-	 * @see it.univaq.MDEProfiler.graph.model.graph.Node#getFilePath()
+	 * @return the meta object for the attribute '<em>Uri</em>'.
+	 * @see it.univaq.MDEProfiler.graph.model.graph.Node#getUri()
 	 * @see #getNode()
 	 * @generated
 	 */
-	EAttribute getNode_FilePath();
+	EAttribute getNode_Uri();
 
 	/**
 	 * Returns the meta object for the attribute list '{@link it.univaq.MDEProfiler.graph.model.graph.Node#getType <em>Type</em>}'.
@@ -562,12 +562,12 @@ public interface GraphPackage extends EPackage {
 		EClass NODE = eINSTANCE.getNode();
 
 		/**
-		 * The meta object literal for the '<em><b>File Path</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Uri</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute NODE__FILE_PATH = eINSTANCE.getNode_FilePath();
+		EAttribute NODE__URI = eINSTANCE.getNode_Uri();
 
 		/**
 		 * The meta object literal for the '<em><b>Type</b></em>' attribute list feature.

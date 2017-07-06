@@ -61,7 +61,7 @@ public class IHeuristicTest {
 		g = atl.getGraph(repoFolder, g);
 		g = launcher.getGraph(repoFolder, g);
 		System.out.println(g);
-		g.getNodes().forEach(s -> System.out.println(s.getFilePath()));
+		g.getNodes().forEach(s -> System.out.println(s.getUri()));
 		it.univaq.MDEProfiler.graph.util.Serializer.serializeModel(g, "/home/juri/MDEProfiler/graph.xmi");
 	}
 	@Ignore
@@ -209,7 +209,7 @@ public class IHeuristicTest {
 		Node m = GraphFactory.eINSTANCE.createNode();
 		m.setDerivedOrNotExists(false);
 		m.setName("asd");
-		m.setFilePath("/home/juri/MDEProfiler/Table2SVGBarChart/Table2SVGBarChart/build.xml");
+		m.setUri("/home/juri/MDEProfiler/Table2SVGBarChart/Table2SVGBarChart/build.xml");
 		Node s1 = FileUtils.getNodeByFilePathLazy(g, g.getName() + "transformations/Table2SVGBarChart.atl");
 		assertNotNull(s1);
 		Node s2 = FileUtils.getNodeByFilePath(g, g.getName() + "transformations/Table2SVGBarChart.atl");

@@ -16,7 +16,7 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Graph.ecore#//Graph/owner"/>
     </genClasses>
     <genClasses ecoreClass="Graph.ecore#//Node">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Graph.ecore#//Node/filePath"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Graph.ecore#//Node/uri"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Graph.ecore#//Node/type"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Graph.ecore#//Node/derivedOrNotExists"/>
     </genClasses>

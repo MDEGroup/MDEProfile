@@ -1,6 +1,5 @@
 package it.univaq.MDEProfiler.heuristic;
 
-import java.awt.GradientPaint;
 import java.io.File;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -18,11 +17,9 @@ import org.apache.log4j.Logger;
 import org.apache.tools.ant.Project;
 import org.apache.tools.ant.ProjectHelper;
 import org.apache.tools.ant.PropertyHelper;
-import org.apache.tools.ant.PropertyHelper.PropertyEvaluator;
 import org.apache.tools.ant.RuntimeConfigurable;
 import org.apache.tools.ant.Target;
 import org.apache.tools.ant.Task;
-import org.apache.tools.ant.taskdefs.Basename;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.gmt.am3.tools.ant.tasks.LoadModelTask;
 import org.eclipse.m2m.atl.core.ATLCoreException;
@@ -59,7 +56,7 @@ public class AntWithATLHeuristic implements IHeuristic {
 	public AntWithATLHeuristic(){
 		ecoreNode = GraphFactory.eINSTANCE.createNode();
 		ecoreNode.setName("Ecore");
-		ecoreNode.setFilePath("Ecore");
+		ecoreNode.setUri("Ecore");
 		ecoreNode.getType().add(ecoreNodeString );
 	}
 	
@@ -89,7 +86,7 @@ public class AntWithATLHeuristic implements IHeuristic {
 		try {
 			Project project = null;
 			try{
-				project = getProject(antScriptNode.getFilePath());
+				project = getProject(antScriptNode.getUri());
 			} catch(Exception e){
 				antScriptNode.getType().remove(nodeKind);
 			}
@@ -121,7 +118,7 @@ public class AntWithATLHeuristic implements IHeuristic {
 					collect(Collectors.toList())) {
 				String trafoPath = (String) task.getRuntimeConfigurableWrapper().getAttributeMap().get("path");
 				String realTrafoPath = getRealValue(trafoPath, project).replaceAll("\\.asm", ".atl");
-				File antFile = new File(antScriptNode.getFilePath());
+				File antFile = new File(antScriptNode.getUri());
 				Node trafoNode = FileUtils.getNodeByFilePath(g, antFile.getParent() +"/" + realTrafoPath);
 				if (trafoNode == null) 
 					trafoNode = FileUtils.getNodeByFilePathLazy(g, realTrafoPath);
@@ -183,7 +180,7 @@ public class AntWithATLHeuristic implements IHeuristic {
 									if (model == null){
 										model = GraphFactory.eINSTANCE.createNode();
 										model.setDerivedOrNotExists(true);
-										model.setFilePath(antFile.getPath() + File.separator + modelAntValue);
+										model.setUri(antFile.getPath() + File.separator + modelAntValue);
 										g.getNodes().add(model);
 									}
 									if(loadModel.get(metamodelName).getAttributeMap().get("path") != null){
@@ -241,14 +238,14 @@ public class AntWithATLHeuristic implements IHeuristic {
 	private Node getMetamodelByNSUri(ModelInfo elementInfo, String metamodelURI) {
 		Node metamodel;
 		Optional<Node> node = g.getNodes().stream().
-			filter(z -> z.getFilePath().equals(metamodelURI)).findFirst();
+			filter(z -> z.getUri().equals(metamodelURI)).findFirst();
 		if(node.isPresent())
 			metamodel = node.get();
 		else {
 			metamodel = GraphFactory.eINSTANCE.createNode();
 			metamodel.setDerivedOrNotExists(true);
 			metamodel.setName(loadModel.get(elementInfo.getMetamodelName()).getAttributeMap().get("name").toString());
-			metamodel.setFilePath(metamodelURI);
+			metamodel.setUri(metamodelURI);
 			metamodel.getType().add(metametamodel);
 			g.getNodes().add(metamodel);
 		}
@@ -256,7 +253,7 @@ public class AntWithATLHeuristic implements IHeuristic {
 	}
 	
 	private Node getNodeOut(RuntimeConfigurable trafoElementRuntimeConfigurable, Project project, Node antScriptNode){
-		File antFile = new File(antScriptNode.getFilePath());
+		File antFile = new File(antScriptNode.getUri());
 		String modelRC = getRealValue(trafoElementRuntimeConfigurable.getAttributeMap().get("model").toString(), project);
 		String metamodel = getRealValue(trafoElementRuntimeConfigurable.getAttributeMap().get("metamodel").toString(), project);
 		String outputPat = antFile.getParent() + File.separator + modelRC;
@@ -266,12 +263,12 @@ public class AntWithATLHeuristic implements IHeuristic {
 		if(modelNode == null){
 			modelNode = GraphFactory.eINSTANCE.createNode();
 			modelNode.setName(modelRC);
-			modelNode.setFilePath(antFile.getParent() + File.separator + modelRC);
+			modelNode.setUri(antFile.getParent() + File.separator + modelRC);
 			modelNode.getType().add(modelKind);
 			modelNode.setDerivedOrNotExists(true);
 			g.getNodes().add(modelNode);
 		}
-		File tempFile = new File(modelNode.getFilePath());
+		File tempFile = new File(modelNode.getUri());
 		if(tempFile.exists())
 			modelNode.setDerivedOrNotExists(true);
 		Edge conformanceEdge = GraphFactory.eINSTANCE.createEdge();
@@ -306,7 +303,7 @@ public class AntWithATLHeuristic implements IHeuristic {
 			atlMetamodel = modelFactory
 					.getBuiltInResource("ATL.ecore");
 			EMFModel atlDynModel = (EMFModel) modelFactory.newModel(atlMetamodel);
-			atlParser.inject(atlDynModel, trafoNode.getFilePath());
+			atlParser.inject(atlDynModel, trafoNode.getUri());
 			Resource originalTrafo = atlDynModel.getResource();
 			ATLModel atlModel = new ATLModel(originalTrafo, originalTrafo.getURI()
 					.toFileString(), true);
