@@ -115,6 +115,7 @@ public class HeuristicManager {
 		heuristics.add(new LauncherATLHeuristic());
 		heuristics.add(new AntWithATLHeuristic());
 		Graph g = harvestProject(file, heuristics);
+
 		return g;
 	}
 }

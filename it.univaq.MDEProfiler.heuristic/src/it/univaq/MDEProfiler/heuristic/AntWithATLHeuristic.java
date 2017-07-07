@@ -19,7 +19,6 @@ import org.apache.tools.ant.RuntimeConfigurable;
 import org.apache.tools.ant.Target;
 import org.apache.tools.ant.Task;
 import org.eclipse.emf.ecore.resource.Resource;
-import org.eclipse.gmt.am3.tools.ant.tasks.LoadModelTask;
 import org.eclipse.m2m.atl.core.ATLCoreException;
 import org.eclipse.m2m.atl.core.IReferenceModel;
 import org.eclipse.m2m.atl.core.ModelFactory;
@@ -100,8 +99,6 @@ public class AntWithATLHeuristic implements IHeuristic {
 			for (Task task : tasks.stream().
 					filter(task -> task.getTaskName().equals("am3.loadModel")).
 					collect(Collectors.toList())) {
-				if(task instanceof LoadModelTask)
-					System.out.println("EUREKA!");
 				String taskName = (String) task.getRuntimeConfigurableWrapper().getAttributeMap().get("name");
 				PropertyHelper.getProperty(project, "");
 				

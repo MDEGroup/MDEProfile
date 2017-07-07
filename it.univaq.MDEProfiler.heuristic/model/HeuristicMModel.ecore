@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="HeuristicMModel" nsURI="http://it.disim.univaq/mde/heuristic"
+    nsPrefix="heuristic">
+  <eClassifiers xsi:type="ecore:EClass" name="Heuristic" abstract="true">
+    <eOperations name="getGraph" eType="ecore:EClass ../../it.univaq.MDEProfiler.graph.model/model/Graph.ecore#//Graph">
+      <eParameters name="repoFolder" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eParameters name="g" eType="ecore:EClass ../../it.univaq.MDEProfiler.graph.model/model/Graph.ecore#//Graph"/>
+    </eOperations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="KM3Heuristic" eSuperTypes="#//Heuristic"/>
+  <eClassifiers xsi:type="ecore:EClass" name="LauncherATLHeuristic" eSuperTypes="#//LauncherHeuristic">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="sourceMM" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="targetMM" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="LauncherHeuristic" eSuperTypes="#//Heuristic"/>
+  <eClassifiers xsi:type="ecore:EClass" name="EcoreHeuristic" eSuperTypes="#//Heuristic"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ATLHeuristic" eSuperTypes="#//Heuristic"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ANTWithKM3Heuristic" eSuperTypes="#//ANTHeuristic">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="source" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="target" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="modelIn" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="modelOut" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ANTWithATLHeuristic" eSuperTypes="#//ANTHeuristic">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="source" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="target" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="modelIn" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="modelOut" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ANTHeuristic" eSuperTypes="#//Heuristic"/>
+</ecore:EPackage>
