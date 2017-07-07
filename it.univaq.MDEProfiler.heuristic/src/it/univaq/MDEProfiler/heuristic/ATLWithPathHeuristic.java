@@ -36,25 +36,22 @@ import it.univaq.MDEProfiler.graph.model.graph.Node;
 
 public class ATLWithPathHeuristic implements IHeuristic {
 
-	private static String nodeKind = "NodeType.ATL";
-	private static String nodePathKind = "NodeType.ATLWithPath";
+
+	
 	private Graph g;
-	private static String source = "SOURCE";
-	private static String target = "TARGET"; 
 	@Override
 	public Graph getGraph(String repoFolder, Graph g) {
 		this.g = g;
 		for (Node n : g.getNodes().
 				stream().
-				filter(z -> z.getType().contains(nodeKind)).
+				filter(z -> z.getType().contains(FileUtils.ATLKind)).
 				collect(Collectors.toList())) {
 			try {
 				int k = g.getEdges().size();
-				List<Edge> eds;
-				eds = getEdges(n);
+				List<Edge> eds = getEdges(n);
 				g.getEdges().addAll(eds);
 				if (g.getEdges().size() > k)
-					n.getType().add(nodePathKind);
+					n.getType().add(FileUtils.ATL_WitPathKind);
 			} catch (ATLCoreException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
@@ -91,7 +88,7 @@ public class ATLWithPathHeuristic implements IHeuristic {
 					n = FileUtils.getNodeByFilePathLazy(g, string);
 				}
 				if (n != null){
-					ed.setName(source);
+					ed.setName(FileUtils.source);
 					ed.setSource(atl);
 					ed.setTarget(n);
 					edges.add(ed);
@@ -106,7 +103,7 @@ public class ATLWithPathHeuristic implements IHeuristic {
 				if (n == null)
 					n = FileUtils.getNodeByFilePathLazy(g, string);
 				if (n != null){
-					ed.setName(target);
+					ed.setName(FileUtils.target);
 					ed.setTarget(n);
 					ed.setSource(atl);
 					edges.add(ed);

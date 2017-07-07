@@ -1,5 +1,4 @@
 package it.univaq.MDEProfiler.heuristic;
-
 import java.io.File;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -10,7 +9,6 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Optional;
 import java.util.Set;
-import java.util.regex.Pattern;
 import java.util.stream.Collectors;
 
 import org.apache.log4j.Logger;
@@ -21,7 +19,6 @@ import org.apache.tools.ant.RuntimeConfigurable;
 import org.apache.tools.ant.Target;
 import org.apache.tools.ant.Task;
 import org.eclipse.emf.ecore.resource.Resource;
-import org.eclipse.gmt.am3.tools.ant.tasks.LoadModelTask;
 import org.eclipse.m2m.atl.core.ATLCoreException;
 import org.eclipse.m2m.atl.core.IReferenceModel;
 import org.eclipse.m2m.atl.core.ModelFactory;
@@ -40,24 +37,19 @@ import it.univaq.MDEProfiler.graph.model.graph.Node;
 public class AntWithATLHeuristic implements IHeuristic {
 
 	private Logger logger = Logger.getLogger(AntWithATLHeuristic.class);
-	private String nodeKind = "NodeType.ANT";
-	private String modelKind = "NodeType.Model";
+	
+
 	private Graph g;
-	private String metametamodel = "NodeType.MetaMetaModel";
-	private static String ecoreNodeString = "NodeType.Ecore";
+	
+	
 	private static Node ecoreNode;
-	private static String source = "SOURCE";
-	private static String target = "TARGET";
-	private static String lib = "LIBRARY";
-	private static String modelIn = "MODEL_INPUT";
-	private static String modelOut = "MODEL_OUT";
-	private static String metamodelConformance = "CONFORM2";
+	
 	private HashMap<String, RuntimeConfigurable> loadModel = new HashMap<String, RuntimeConfigurable>();
 	public AntWithATLHeuristic(){
 		ecoreNode = GraphFactory.eINSTANCE.createNode();
 		ecoreNode.setName("Ecore");
 		ecoreNode.setUri("Ecore");
-		ecoreNode.getType().add(ecoreNodeString );
+		ecoreNode.getType().add(FileUtils.ecoreKind );
 	}
 	
 	@Override
@@ -65,19 +57,24 @@ public class AntWithATLHeuristic implements IHeuristic {
 		this.g = g;
 		for (Node n : g.getNodes().
 				stream().
-				filter(z -> z.getType().contains(nodeKind)).
+				filter(z -> z.getType().contains(FileUtils.ANTKind)).
 				collect(Collectors.toList())) {
-			g.getEdges().addAll(getEdges(n));
+			List<Edge> edges = getEdges(n);
+			if(edges.size() != 0)
+				n.getType().add(FileUtils.ANT_ATLKind);
+				g.getEdges().addAll(edges);
 		}
 		return g;
 	}
 
-	public Project getProject(String pathBuildFile) throws Exception{
+
+	public Project getProject(String pathBuildFile){
 		Project project = new Project();
 		// "/home/juri/MDEProfiler/Table2SVGBarChart/Table2SVGBarChart/build.xml"
 		File buildFile = new File(pathBuildFile);
-		project.init();
 		ProjectHelper.configureProject(project, buildFile);
+
+		project.init();
 		return project;
 	}
 
@@ -88,7 +85,7 @@ public class AntWithATLHeuristic implements IHeuristic {
 			try{
 				project = getProject(antScriptNode.getUri());
 			} catch(Exception e){
-				antScriptNode.getType().remove(nodeKind);
+				antScriptNode.getType().remove(FileUtils.ANTKind);
 			}
 		Hashtable<String, Target> t = project.getTargets();
 		Set<String> keys = t.keySet();
@@ -102,10 +99,9 @@ public class AntWithATLHeuristic implements IHeuristic {
 			for (Task task : tasks.stream().
 					filter(task -> task.getTaskName().equals("am3.loadModel")).
 					collect(Collectors.toList())) {
-				if(task instanceof LoadModelTask)
-					System.out.println("EUREKA!");
 				String taskName = (String) task.getRuntimeConfigurableWrapper().getAttributeMap().get("name");
 				PropertyHelper.getProperty(project, "");
+				
 				loadModel.put(getRealValue(taskName, project), task.getRuntimeConfigurableWrapper());
 			}
 		}
@@ -144,7 +140,6 @@ public class AntWithATLHeuristic implements IHeuristic {
 								Node metamodel = null;
 								if( metamodelPath != null){
 									String antResolvedValue = getRealValue(antFile.getParent() + "/" + metamodelPath, project);
-									antResolvedValue += getLastValue(metamodelPath, project);
 									metamodel = getMetamodel(antResolvedValue);
 								}
 								if(metamodelURI != null){
@@ -152,9 +147,9 @@ public class AntWithATLHeuristic implements IHeuristic {
 								}
 								ed.setTarget(metamodel);
 								if(elementInfo.isInput())
-									ed.setName(source);
+									ed.setName(FileUtils.source);
 								if(elementInfo.isOutput())
-									ed.setName(target);
+									ed.setName(FileUtils.target);
 								g.getEdges().add(ed);
 							}
 							else{
@@ -196,19 +191,19 @@ public class AntWithATLHeuristic implements IHeuristic {
 										metamodelNode = getMetamodelByNSUri(elementInfo, metamodelUri);
 									}
 									conformanceEdge.setDiscoverBy(antScriptNode);
-									conformanceEdge.setName(metamodelConformance);
+									conformanceEdge.setName(FileUtils.metamodelConformance);
 									conformanceEdge.setTarget(metamodelNode);
 									conformanceEdge.setSource(model);
 									g.getEdges().add(conformanceEdge);
 									ed.setTarget(model);
-									ed.setName(modelIn);
+									ed.setName(FileUtils.modelIn);
 								}
 								
 							}
 						}
 						if(currentRCInAM3ATL.getElementTag().equals("library")){
-							ed.setName(lib);
-							String elementRealValue = getRealValue(currentRCInAM3ATL.getAttributeMap().get("path").toString(), project);
+							ed.setName(FileUtils.lib);
+							String elementRealValue = getRealValue(currentRCInAM3ATL.getAttributeMap().get("path").toString(), project).replace("asm", "atl");
 							Node metamodel = FileUtils.getNodeByFilePath(g, elementRealValue);
 							if(metamodel == null){
 								metamodel = FileUtils.getNodeByFilePathLazy(g, elementRealValue);
@@ -220,7 +215,7 @@ public class AntWithATLHeuristic implements IHeuristic {
 							//it is a output model 
 							Node model = getNodeOut(currentRCInAM3ATL, project, antScriptNode);
 							ed.setTarget(model);
-							ed.setName(modelOut);
+							ed.setName(FileUtils.modelOut);
 						}
 						results.add(ed);
 					}
@@ -235,6 +230,17 @@ public class AntWithATLHeuristic implements IHeuristic {
 		return results;
 	}
 
+	private String getRealValue(String taskName, Project project) {
+		try{
+			String result = PropertyHelper.getPropertyHelper(project).parseProperties(taskName).toString();
+			if(result.contains("{"))
+				System.out.println(result);
+			return result;
+		} catch(Exception e){
+			return null;
+		}
+	}
+
 	private Node getMetamodelByNSUri(ModelInfo elementInfo, String metamodelURI) {
 		Node metamodel;
 		Optional<Node> node = g.getNodes().stream().
@@ -246,7 +252,7 @@ public class AntWithATLHeuristic implements IHeuristic {
 			metamodel.setDerivedOrNotExists(true);
 			metamodel.setName(loadModel.get(elementInfo.getMetamodelName()).getAttributeMap().get("name").toString());
 			metamodel.setUri(metamodelURI);
-			metamodel.getType().add(metametamodel);
+			metamodel.getType().add(FileUtils.metaMetaModelKind);
 			g.getNodes().add(metamodel);
 		}
 		return metamodel;
@@ -264,7 +270,7 @@ public class AntWithATLHeuristic implements IHeuristic {
 			modelNode = GraphFactory.eINSTANCE.createNode();
 			modelNode.setName(modelRC);
 			modelNode.setUri(antFile.getParent() + File.separator + modelRC);
-			modelNode.getType().add(modelKind);
+			modelNode.getType().add(FileUtils.modelKind);
 			modelNode.setDerivedOrNotExists(true);
 			g.getNodes().add(modelNode);
 		}
@@ -276,7 +282,7 @@ public class AntWithATLHeuristic implements IHeuristic {
 		conformanceEdge.setSource(modelNode);
 		conformanceEdge.setDiscoverBy(antScriptNode);
 		conformanceEdge.setTarget(getMetamodel(metamodel));
-		conformanceEdge.setName(metamodelConformance);
+		conformanceEdge.setName(FileUtils.metamodelConformance);
 		g.getEdges().add(conformanceEdge);
 		return modelNode;
 	}
@@ -291,7 +297,6 @@ public class AntWithATLHeuristic implements IHeuristic {
 		else 
 			return ecoreNode;
 	}
-
 
 	private HashMap<String, ModelInfo> recoveryLink(Node trafoNode)  {
 		
@@ -317,53 +322,4 @@ public class AntWithATLHeuristic implements IHeuristic {
 		}
 		return result;
 	}
-
-	public String getRealValue(String trafoPath, Project project) {
-		String regExp = "\\$\\{[\\w.]*\\}";
-		Pattern pattern = Pattern.compile(regExp);
-		java.util.regex.Matcher matcher = pattern.matcher(trafoPath);
-		if (!matcher.find())
-			return trafoPath;
-		String result = "";
-		List<String> s = getProperties(trafoPath);
-		int count = 0;
-		String[] splitted = trafoPath.split(regExp);
-		for (String string : s) {
-			if (splitted.length > count)
-				result += splitted[count++];
-
-			result += project.getProperty(string);
-		}
-		if(splitted.length != 0)
-			result += splitted[splitted.length-1];
-		return result;
-		
-//		Object o = PropertyHelper.getProperty(project, trafoPath);
-//		return o.toString();
-	}
-	private String getLastValue(String trafoPath, Project project) {
-		String regExp = "\\$\\{[\\w.]*\\}";
-		Pattern pattern = Pattern.compile(regExp);
-		java.util.regex.Matcher matcher = pattern.matcher(trafoPath);
-		if (!matcher.find())
-			return "";
-		String[] splitted = trafoPath.split(regExp);
-		if(splitted.length >= 1)
-			return splitted[splitted.length-1];
-		return "";
-	}
-
-	public List<String> getProperties(String s) {
-		List<String> result = new ArrayList<String>();
-		if (s == null)
-			return result;
-		String regExp = "\\$\\{[\\w.]*\\}";
-		Pattern pattern = Pattern.compile(regExp);
-		java.util.regex.Matcher matcher = pattern.matcher(s);
-		while (matcher.find()) {
-			result.add(matcher.group(0).replaceAll("\\$\\{", "").replaceAll("}", ""));
-		}
-		return result;
-	}
-
 }

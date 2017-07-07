@@ -10,7 +10,7 @@ import it.univaq.MDEProfiler.graph.model.graph.Node;
 public class LauncherHeuristic implements IHeuristic {
 
 	private static String extension = ".launch";
-	private static String nodeKind = "NodeType.LAUNCHER";
+	
 	@Override
 	public Graph getGraph(String repoFolder, Graph g) {
 		File repoFolderF = new File(repoFolder);
@@ -21,7 +21,7 @@ public class LauncherHeuristic implements IHeuristic {
 				if(!file.isDirectory()){
 					Node n = GraphFactory.eINSTANCE.createNode();
 					n.setDerivedOrNotExists(false);
-					n.getType().add(nodeKind);
+					n.getType().add(FileUtils.launcherKind);
 					n.setUri(file.getAbsolutePath());
 					n.setName(file.getName());
 					g.getNodes().add(n);

@@ -27,22 +27,29 @@ import it.univaq.MDEProfiler.graph.model.graph.Node;
 
 public class LauncherATLHeuristic implements IHeuristic {
 
-	private static String launcherKind = "NodeType.LAUNCHER";
-	private static String launcherATLKind = "NodeType.LAUNCHER_ATL";
-	private static String sourceMM = "sourceMM";
-	private static String targetMM = "targetMM";
-	private static String launcherEdge = "launcher";
+	
+	private static String source = "SOURCE";
+	private static String target = "TARGET";
+	private static String lib = "LIBRARY";
+	private static String modelIn = "MODEL_INPUT";
+	private static String modelOut = "MODEL_OUT";
+	private static String metamodelConformance = "CONFORM2";
+
+	private Node currentLauncher;
+	private Graph g;
 	@Override
 	public Graph getGraph(String repoFolder, Graph g) {
+		this.g = g;
 		for (Node n : g.getNodes().
 				stream().filter(z -> z.getType().
-				contains(launcherKind)).
+				contains(FileUtils.launcherKind)).
 				collect(Collectors.toList())) {
 			try {
 				int k = g.getEdges().size();
+				currentLauncher = n;
 				g = parseLauncher(n, g);
 				if (g.getEdges().size() > k)
-					n.getType().add(launcherATLKind);
+					n.getType().add(FileUtils.launcherATLKind);
 			} catch (XPathExpressionException | SAXException | IOException | ParserConfigurationException e) {
 				e.printStackTrace();
 			}
@@ -59,8 +66,9 @@ public class LauncherATLHeuristic implements IHeuristic {
 		for (int temp = 0; temp < nodes.getLength(); temp++) {
 			org.w3c.dom.Node v = nodes.item(0);
 			if (v.getNodeType() == org.w3c.dom.Node.ELEMENT_NODE) {
-                Element launchConfiguration = (Element) v;
-                if(launchConfiguration.getAttribute("type").equals("org.eclipse.m2m.atl.adt.launching.atlTransformation")){
+                Element launchConfiguration = (Element) v;			
+                if(launchConfiguration.getAttribute("type").equals("org.eclipse.m2m.atl.adt.launching.atlTransformation") ||
+                		launchConfiguration.getAttribute("type").equals("org.atl.eclipse.adt.launching.atlTransformation")){
                 	XPathFactory xPathfactory = XPathFactory.newInstance();
                 	XPath xpath = xPathfactory.newXPath();
                 	XPathExpression expr = xpath.compile("//stringAttribute[@key=\"ATL File Name\"]");
@@ -81,32 +89,9 @@ public class LauncherATLHeuristic implements IHeuristic {
             					e.setSource(atlNode);
                 		}
                 	}
-                	List<Edge> inputMetamodelsEdge = getEdges(g, atlNode, "//mapAttribute[@key=\"Input\"]", document);
-                	List<Edge> outputMetamodelsEdge = getEdges(g, atlNode, "//mapAttribute[@key=\"Output\"]", document);
-                	
-                	Edge e = GraphFactory.eINSTANCE.createEdge();
-                	e.setSource(launcher);
-                	e.setTarget(atlNode);
-                	e.setName(launcherEdge);
-                	
-                	for (Edge edge : outputMetamodelsEdge) {
-                		edge.setName(targetMM);
-                		Edge tempe = GraphFactory.eINSTANCE.createEdge();
-                		tempe.setName(launcherEdge);
-                		tempe.setSource(launcher);
-                		tempe.setTarget(edge.getTarget());
-                		tempe.setDiscoverBy(launcher);
-                		g.getEdges().add(tempe);
-					}
-                	for (Edge edge : inputMetamodelsEdge) {
-                		edge.setName(sourceMM);
-                		Edge tempe = GraphFactory.eINSTANCE.createEdge();
-                		tempe.setName(launcherEdge);
-                		tempe.setSource(launcher);
-                		tempe.setTarget(edge.getTarget());
-                		g.getEdges().add(tempe);
-					}
-                	g.getEdges().add(e);
+                	List<Edge> inputMetamodelsEdge = getEdgesIn(g, atlNode, document);
+                	List<Edge> outputMetamodelsEdge = getEdgesOut(g, atlNode, document);
+                	outputMetamodelsEdge.forEach(z-> z.setName(target));
                 	g.getEdges().addAll(inputMetamodelsEdge);
                 	g.getEdges().addAll(outputMetamodelsEdge);
                 }
@@ -133,11 +118,11 @@ public class LauncherATLHeuristic implements IHeuristic {
 		}
     	return null;
 	}
-	private List<Edge> getEdges(Graph g, Node src, String query, Document document) throws XPathExpressionException{
+	private List<Edge> getEdgesIn(Graph g, Node src, Document document) throws XPathExpressionException{
 		List<Edge> result = new ArrayList<Edge>();
 		XPathFactory xPathfactory = XPathFactory.newInstance();
     	XPath xpath = xPathfactory.newXPath();
-    	XPathExpression expr = xpath.compile(query);
+    	XPathExpression expr = xpath.compile("//mapAttribute[@key=\"Input\"]");
     	NodeList inputMetamodels = (NodeList) expr.evaluate(document, XPathConstants.NODESET);
     	for(int i = 0; i < inputMetamodels.getLength(); i++){
     		if(inputMetamodels.item(i) instanceof Element) {
@@ -145,25 +130,123 @@ public class LauncherATLHeuristic implements IHeuristic {
     			NodeList inputNL = e.getElementsByTagName("mapEntry");
     			for(int k = 0; i < inputNL.getLength(); i++){
     				Element el = (Element) inputNL.item(k);
-    				Edge edg = GraphFactory.eINSTANCE.createEdge();
-    				edg.setSource(src);
-    				String path = getArtifactPath(document, el.getAttribute("value"));
-    				edg.setPathDiscoveredByHeuristic(path);
-    				edg.setDiscoverBy(src);
-    				edg.setExact(true);
-    				Node trgNode = FileUtils.getNodeByFilePath(g, path);
-    				if (trgNode == null){
-    					edg.setExact(false);
-    					trgNode = FileUtils.getNodeByFilePathLazy(g, path);
+    				Edge sourceMM = GraphFactory.eINSTANCE.createEdge();
+    				sourceMM.setName(source);
+    				sourceMM.setSource(src);
+    				String pathEcore = getArtifactPath(document, el.getAttribute("value"));
+    				sourceMM.setPathDiscoveredByHeuristic(pathEcore);
+    				sourceMM.setDiscoverBy(currentLauncher);
+    				
+    				sourceMM.setExact(true);
+    				Node mmNode = FileUtils.getNodeByFilePath(g, pathEcore);
+    				if (mmNode == null){
+    					sourceMM.setExact(false);
+    					mmNode = FileUtils.getNodeByFilePathLazy(g, pathEcore);
     				}
-    				if (trgNode != null){
-    					edg.setTarget(trgNode);
+    				if (mmNode != null){
+    					sourceMM.setTarget(mmNode);
     				}
-    				if (edg.getSource() != null && edg.getTarget() != null)
-    					result.add(edg);
+    				if (sourceMM.getSource() != null && sourceMM.getTarget() != null)
+    					result.add(sourceMM);
+    				
+    				
+    				String pathModel = getArtifactPath(document, el.getAttribute("key"));
+    				Node model = getModelNode(pathModel);
+    				Edge conformance = GraphFactory.eINSTANCE.createEdge();
+    				conformance.setSource(model);
+    				conformance.setTarget(mmNode);
+    				conformance.setDiscoverBy(currentLauncher);
+    				conformance.setName(metamodelConformance);
+    				result.add(conformance);
+    				
+    				
+    				Edge modelEdgIn = GraphFactory.eINSTANCE.createEdge();
+    				modelEdgIn.setSource(model);
+    				modelEdgIn.setTarget(src);
+    				modelEdgIn.setDiscoverBy(currentLauncher);
+    				modelEdgIn.setName(modelIn);
+    				
+    				result.add(modelEdgIn);
+    				
+    				result.add(conformance);
+    				
+    				
     			}
     		}
     	}
     	return result;
 	}
+	private List<Edge> getEdgesOut(Graph g, Node src, Document document) throws XPathExpressionException{
+		List<Edge> result = new ArrayList<Edge>();
+		XPathFactory xPathfactory = XPathFactory.newInstance();
+    	XPath xpath = xPathfactory.newXPath();
+    	XPathExpression expr = xpath.compile("//mapAttribute[@key=\"Output\"]");
+    	NodeList inputMetamodels = (NodeList) expr.evaluate(document, XPathConstants.NODESET);
+    	for(int i = 0; i < inputMetamodels.getLength(); i++){
+    		if(inputMetamodels.item(i) instanceof Element) {
+    			Element e = (Element) inputMetamodels.item(i);
+    			NodeList inputNL = e.getElementsByTagName("mapEntry");
+    			for(int k = 0; i < inputNL.getLength(); i++){
+    				Element el = (Element) inputNL.item(k);
+    				Edge targetMM = GraphFactory.eINSTANCE.createEdge();
+    				targetMM.setName(target);
+    				targetMM.setSource(src);
+    				String pathEcore = getArtifactPath(document, el.getAttribute("value"));
+    				targetMM.setPathDiscoveredByHeuristic(pathEcore);
+    				targetMM.setDiscoverBy(currentLauncher);
+    				
+    				targetMM.setExact(true);
+    				Node mmNode = FileUtils.getNodeByFilePath(g, pathEcore);
+    				if (mmNode == null){
+    					targetMM.setExact(false);
+    					mmNode = FileUtils.getNodeByFilePathLazy(g, pathEcore);
+    				}
+    				if (mmNode != null){
+    					targetMM.setTarget(mmNode);
+    				}
+    				if (targetMM.getSource() != null && targetMM.getTarget() != null)
+    					result.add(targetMM);
+    				
+    				
+    				String pathModel = getArtifactPath(document, el.getAttribute("key"));
+    				Node model = getModelNode(pathModel);
+    				Edge conformance = GraphFactory.eINSTANCE.createEdge();
+    				conformance.setSource(model);
+    				conformance.setTarget(mmNode);
+    				conformance.setDiscoverBy(currentLauncher);
+    				conformance.setName(metamodelConformance);
+    				
+    				Edge modelEdgOut = GraphFactory.eINSTANCE.createEdge();
+    				modelEdgOut.setSource(model);
+    				modelEdgOut.setTarget(src);
+    				modelEdgOut.setDiscoverBy(currentLauncher);
+    				modelEdgOut.setName(modelOut);
+    				
+    				result.add(modelEdgOut);
+    				
+    				result.add(conformance);
+    				
+    			}
+    		}
+    	}
+    	return result;
+	}
+	private Node getModelNode(String path){
+		File f = new File(currentLauncher.getUri());
+		String s = f.getParent();
+		Node n = FileUtils.getNodeByFilePath(g, path);
+		if( n == null){
+			n = GraphFactory.eINSTANCE.createNode();
+			n.setName(path);
+			File f2 = new File(s + path);
+			if(f2.exists()) n.setDerivedOrNotExists(false);
+			else n.setDerivedOrNotExists(true);
+			n.setUri(f2.getAbsolutePath());
+			n.getType().add(FileUtils.modelKind);
+			g.getNodes().add(n);
+			return n;
+		}
+		else return n;
+	}
+	
 }

@@ -10,7 +10,7 @@ import it.univaq.MDEProfiler.graph.model.graph.Node;
 public class AntHeuristic implements IHeuristic {
 
 	private String extension = ".xml";
-	private String nodeKind = "NodeType.ANT";
+	
 	@Override
 	public Graph getGraph(String repoFolder, Graph g) {
 		File repoFolderF = new File(repoFolder);
@@ -21,7 +21,7 @@ public class AntHeuristic implements IHeuristic {
 			{
 				Node n = GraphFactory.eINSTANCE.createNode();
 				n.setDerivedOrNotExists(false);
-				n.getType().add(nodeKind);
+				n.getType().add(FileUtils.ANTKind);
 				n.setUri(file.getAbsolutePath());
 				n.setName(file.getName());
 				g.getNodes().add(n);
