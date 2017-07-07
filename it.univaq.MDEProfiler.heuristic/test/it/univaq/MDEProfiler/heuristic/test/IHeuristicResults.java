@@ -22,6 +22,7 @@ import it.univaq.MDEProfiler.heuristic.AntHeuristic;
 import it.univaq.MDEProfiler.heuristic.AntWithATLHeuristic;
 import it.univaq.MDEProfiler.heuristic.EcoreHeuristic;
 import it.univaq.MDEProfiler.heuristic.FileUtils;
+import it.univaq.MDEProfiler.heuristic.HeuristicManager;
 import it.univaq.MDEProfiler.heuristic.IHeuristic;
 import it.univaq.MDEProfiler.heuristic.KM3Heuristic;
 import it.univaq.MDEProfiler.heuristic.LauncherATLHeuristic;
@@ -35,12 +36,12 @@ public class IHeuristicResults {
 	private IHeuristic launcherGraph;
 	private IHeuristic atlPath;
 	private IHeuristic ant;
-	private AntWithATLHeuristic antATL;
+	private AntWithATLHeuristic antATL; 
 	private IHeuristic km3;
 	private ParseDataSet pds;
 	private String resultsFolder = "/home/juri/MDEProfilerResults/";
 	private String baseFolder = "/home/juri/MDEProfiler2/";
-	
+	private HeuristicManager heuristicManager;
 	@Before
 	public void init(){
 		atl = new ATLHeuristic();
@@ -53,6 +54,7 @@ public class IHeuristicResults {
 		km3 = new KM3Heuristic();
 		pds = new ParseDataSet();
 		ATLRepoManager = new ATLZooRepositoryManager();
+		heuristicManager = new HeuristicManager();
 	}
 	@Ignore
 	@Test
@@ -66,31 +68,304 @@ public class IHeuristicResults {
 			
 		}
 	}
-	@Ignore
+	
+	
 	@Test
-	public void harvester(){
+	public void harvesterManager() throws IOException{
+		String csvFile = "/home/juri/Scrivania/davideResults.csv";
+		FileWriter writer = new FileWriter(csvFile);
+		
+		
 		File baseFolderFile = new File(baseFolder);
-		int cont = 1;
+		String LastHeuristic = "Last Heuristic";
+		String NODES = "#NODES";
+		String EDGES = "#EDGES";
+		String DANGLING = "#DANGLING";
+		String AVG_GRAPH_DENCITY = "AVG_GRAPH_DENCITY";
+		String INVOLVED_PROJECTS_LAST_HEU_ = "INVOLVED PROJECTS BY LAST HEU";
+		String PERC_DANGLING = "%DANGLING";
+		
+		FileUtils.writeLine(writer, Arrays.asList(LastHeuristic, NODES, EDGES, DANGLING, AVG_GRAPH_DENCITY,INVOLVED_PROJECTS_LAST_HEU_, PERC_DANGLING));
+		int _NODES = 0;
+		int _EDGES = 0;
+		int _DANGLING = 0;
+		double _AVG_GRAPH_DENCITY = 0;
+		int _INVOLVED_PROJECTS_LAST_HEU_ = 0;
+		double _PERC_DANGLING = 0;
 		for (File file : baseFolderFile.listFiles()) {
-			String repo = file.getAbsolutePath();
-			System.out.println(cont++ + " _ " + file.getName());
 			Graph g = GraphFactory.eINSTANCE.createGraph();
-			g.setName(file.getAbsolutePath());
-			ecore.getGraph(repo, g);
-			atl.getGraph(repo, g);
-			km3.getGraph(repo, g);
-			launcher.getGraph(repo, g);
-			launcherGraph.getGraph(repo, g);
-			atlPath.getGraph(repo, g);
-			ant.getGraph(repo, g);
-			antATL.getGraph(repo, g);
-			it.univaq.MDEProfiler.graph.util.Serializer.serializeModel(g, resultsFolder + file.getName() + ".xmi");
+			g = heuristicManager.launcherEcore(file);
+			int _GRAPH_NODES = g.getNodes().size();
+			int _GRAPH_EDGES = g.getEdges().size();
+			int _GRAPH_DANGLING = HeuristicManager.getDanglingNodes(g).size();;
+			double _GRAPH_AVG_GRAPH_DENCITY = (_GRAPH_EDGES != 0)? ((2 * _GRAPH_EDGES)*1.0)/((_GRAPH_NODES*(_GRAPH_NODES-1))*1.0) : 0;
+			if(g.getNodes().stream().anyMatch(z -> z.getType().contains(FileUtils.ecoreKind)))
+				_INVOLVED_PROJECTS_LAST_HEU_ ++;
+			double _GRAPH_PERC_DANGLING = (_GRAPH_DANGLING != 0)?(_GRAPH_DANGLING * 1.0) / (_GRAPH_NODES * 1.0):0;
+			
+			_NODES += _GRAPH_NODES;
+			_EDGES += _GRAPH_EDGES;
+			_DANGLING += _GRAPH_DANGLING;
+			_AVG_GRAPH_DENCITY += _GRAPH_AVG_GRAPH_DENCITY;
+			_PERC_DANGLING += _GRAPH_PERC_DANGLING;
 		}
+		FileUtils.writeLine(writer, Arrays.asList(
+				"Ecore",
+				"" + _NODES, 
+				"" + _EDGES, 
+				"" + _DANGLING, 
+				"" + (_AVG_GRAPH_DENCITY/90),
+				"" + _INVOLVED_PROJECTS_LAST_HEU_, 
+				"" + (_PERC_DANGLING/90)));
+		writer.flush();
+		
+		
+		
+		_NODES = 0;
+		_EDGES = 0;
+		_DANGLING = 0;
+		_AVG_GRAPH_DENCITY = 0;
+		_INVOLVED_PROJECTS_LAST_HEU_ = 0;
+		_PERC_DANGLING = 0;
+		for (File file : baseFolderFile.listFiles()) {
+			Graph g = GraphFactory.eINSTANCE.createGraph();
+			g = heuristicManager.launcherEcore_ATL(file);
+			int _GRAPH_NODES = g.getNodes().size();
+			int _GRAPH_EDGES = g.getEdges().size();
+			int _GRAPH_DANGLING = HeuristicManager.getDanglingNodes(g).size();;
+			double _GRAPH_AVG_GRAPH_DENCITY = (_GRAPH_EDGES != 0)? ((2 * _GRAPH_EDGES)*1.0)/((_GRAPH_NODES*(_GRAPH_NODES-1))*1.0) : 0;
+			if(g.getNodes().stream().anyMatch(z -> z.getType().contains(FileUtils.ATLKind)))
+				_INVOLVED_PROJECTS_LAST_HEU_ ++;
+			double _GRAPH_PERC_DANGLING = (_GRAPH_DANGLING != 0)?(_GRAPH_DANGLING * 1.0) / (_GRAPH_NODES * 1.0):0;
+			
+			_NODES += _GRAPH_NODES;
+			_EDGES += _GRAPH_EDGES;
+			_DANGLING += _GRAPH_DANGLING;
+			_AVG_GRAPH_DENCITY += _GRAPH_AVG_GRAPH_DENCITY;
+			_PERC_DANGLING += _GRAPH_PERC_DANGLING;
+		}
+		FileUtils.writeLine(writer, Arrays.asList(
+				"ATL",
+				"" + _NODES, 
+				"" + _EDGES, 
+				"" + _DANGLING, 
+				"" + (_AVG_GRAPH_DENCITY/90),
+				"" + _INVOLVED_PROJECTS_LAST_HEU_, 
+				"" + (_PERC_DANGLING/90)));
+		writer.flush();
+		
+		_NODES = 0;
+		_EDGES = 0;
+		_DANGLING = 0;
+		_AVG_GRAPH_DENCITY = 0;
+		_INVOLVED_PROJECTS_LAST_HEU_ = 0;
+		_PERC_DANGLING = 0;
+		for (File file : baseFolderFile.listFiles()) {
+			Graph g = GraphFactory.eINSTANCE.createGraph();
+			g = heuristicManager.launcherEcore_ATL_KM3(file);
+			int _GRAPH_NODES = g.getNodes().size();
+			int _GRAPH_EDGES = g.getEdges().size();
+			int _GRAPH_DANGLING = HeuristicManager.getDanglingNodes(g).size();;
+			double _GRAPH_AVG_GRAPH_DENCITY = (_GRAPH_EDGES != 0)? ((2 * _GRAPH_EDGES)*1.0)/((_GRAPH_NODES*(_GRAPH_NODES-1))*1.0) : 0;
+			if(g.getNodes().stream().anyMatch(z -> z.getType().contains(FileUtils.KM3Kind)))
+				_INVOLVED_PROJECTS_LAST_HEU_ ++;
+			double _GRAPH_PERC_DANGLING = (_GRAPH_DANGLING != 0)?(_GRAPH_DANGLING * 1.0) / (_GRAPH_NODES * 1.0):0;
+			
+			_NODES += _GRAPH_NODES;
+			_EDGES += _GRAPH_EDGES;
+			_DANGLING += _GRAPH_DANGLING;
+			_AVG_GRAPH_DENCITY += _GRAPH_AVG_GRAPH_DENCITY;
+			_PERC_DANGLING += _GRAPH_PERC_DANGLING;
+		}
+		FileUtils.writeLine(writer, Arrays.asList(
+				"KM3",
+				"" + _NODES, 
+				"" + _EDGES, 
+				"" + _DANGLING, 
+				"" + (_AVG_GRAPH_DENCITY/90),
+				"" + _INVOLVED_PROJECTS_LAST_HEU_, 
+				"" + (_PERC_DANGLING/90)));
+		writer.flush();
+		
+		_NODES = 0;
+		_EDGES = 0;
+		_DANGLING = 0;
+		_AVG_GRAPH_DENCITY = 0;
+		_INVOLVED_PROJECTS_LAST_HEU_ = 0;
+		_PERC_DANGLING = 0;
+		for (File file : baseFolderFile.listFiles()) {
+			Graph g = GraphFactory.eINSTANCE.createGraph();
+			g = heuristicManager.launcherEcore_ATL_KM3_Launcher(file);
+			int _GRAPH_NODES = g.getNodes().size();
+			int _GRAPH_EDGES = g.getEdges().size();
+			int _GRAPH_DANGLING = HeuristicManager.getDanglingNodes(g).size();;
+			double _GRAPH_AVG_GRAPH_DENCITY = (_GRAPH_EDGES != 0)? ((2 * _GRAPH_EDGES)*1.0)/((_GRAPH_NODES*(_GRAPH_NODES-1))*1.0) : 0;
+			if(g.getNodes().stream().anyMatch(z -> z.getType().contains(FileUtils.launcherKind)))
+				_INVOLVED_PROJECTS_LAST_HEU_ ++;
+			double _GRAPH_PERC_DANGLING = (_GRAPH_DANGLING != 0)?(_GRAPH_DANGLING * 1.0) / (_GRAPH_NODES * 1.0):0;
+			
+			_NODES += _GRAPH_NODES;
+			_EDGES += _GRAPH_EDGES;
+			_DANGLING += _GRAPH_DANGLING;
+			_AVG_GRAPH_DENCITY += _GRAPH_AVG_GRAPH_DENCITY;
+			_PERC_DANGLING += _GRAPH_PERC_DANGLING;
+		}
+		FileUtils.writeLine(writer, Arrays.asList(
+				"Launcher",
+				"" + _NODES, 
+				"" + _EDGES, 
+				"" + _DANGLING, 
+				"" + (_AVG_GRAPH_DENCITY/90),
+				"" + _INVOLVED_PROJECTS_LAST_HEU_, 
+				"" + (_PERC_DANGLING/90)));
+		writer.flush();
+		
+		
+		_NODES = 0;
+		_EDGES = 0;
+		_DANGLING = 0;
+		_AVG_GRAPH_DENCITY = 0;
+		_INVOLVED_PROJECTS_LAST_HEU_ = 0;
+		_PERC_DANGLING = 0;
+		for (File file : baseFolderFile.listFiles()) {
+			Graph g = GraphFactory.eINSTANCE.createGraph();
+			g = heuristicManager.launcherEcore_ATL_KM3_Launcher_ANT(file);
+			int _GRAPH_NODES = g.getNodes().size();
+			int _GRAPH_EDGES = g.getEdges().size();
+			int _GRAPH_DANGLING = HeuristicManager.getDanglingNodes(g).size();;
+			double _GRAPH_AVG_GRAPH_DENCITY = (_GRAPH_EDGES != 0)? ((2 * _GRAPH_EDGES)*1.0)/((_GRAPH_NODES*(_GRAPH_NODES-1))*1.0) : 0;
+			if(g.getNodes().stream().anyMatch(z -> z.getType().contains(FileUtils.ANTKind)))
+				_INVOLVED_PROJECTS_LAST_HEU_ ++;
+			double _GRAPH_PERC_DANGLING = (_GRAPH_DANGLING != 0)?(_GRAPH_DANGLING * 1.0) / (_GRAPH_NODES * 1.0):0;
+			
+			_NODES += _GRAPH_NODES;
+			_EDGES += _GRAPH_EDGES;
+			_DANGLING += _GRAPH_DANGLING;
+			_AVG_GRAPH_DENCITY += _GRAPH_AVG_GRAPH_DENCITY;
+			_PERC_DANGLING += _GRAPH_PERC_DANGLING;
+		}
+		FileUtils.writeLine(writer, Arrays.asList(
+				"Ant",
+				"" + _NODES, 
+				"" + _EDGES, 
+				"" + _DANGLING, 
+				"" + (_AVG_GRAPH_DENCITY/90),
+				"" + _INVOLVED_PROJECTS_LAST_HEU_, 
+				"" + (_PERC_DANGLING/90)));
+		writer.flush();
+		
+		
+		_NODES = 0;
+		_EDGES = 0;
+		_DANGLING = 0;
+		_AVG_GRAPH_DENCITY = 0;
+		_INVOLVED_PROJECTS_LAST_HEU_ = 0;
+		_PERC_DANGLING = 0;
+		for (File file : baseFolderFile.listFiles()) {
+			Graph g = GraphFactory.eINSTANCE.createGraph();
+			g = heuristicManager.launcherEcore_ATL_ATLWithPath(file);
+			int _GRAPH_NODES = g.getNodes().size();
+			int _GRAPH_EDGES = g.getEdges().size();
+			int _GRAPH_DANGLING = HeuristicManager.getDanglingNodes(g).size();;
+			double _GRAPH_AVG_GRAPH_DENCITY = (_GRAPH_EDGES != 0)? ((2 * _GRAPH_EDGES)*1.0)/((_GRAPH_NODES*(_GRAPH_NODES-1))*1.0) : 0;
+			if(g.getNodes().stream().anyMatch(z -> z.getType().contains(FileUtils.ATL_WitPathKind)))
+				_INVOLVED_PROJECTS_LAST_HEU_ ++;
+			double _GRAPH_PERC_DANGLING = (_GRAPH_DANGLING != 0)?(_GRAPH_DANGLING * 1.0) / (_GRAPH_NODES * 1.0):0;
+			
+			_NODES += _GRAPH_NODES;
+			_EDGES += _GRAPH_EDGES;
+			_DANGLING += _GRAPH_DANGLING;
+			_AVG_GRAPH_DENCITY += _GRAPH_AVG_GRAPH_DENCITY;
+			_PERC_DANGLING += _GRAPH_PERC_DANGLING;
+		}
+		FileUtils.writeLine(writer, Arrays.asList(
+				"ATL with path",
+				"" + _NODES, 
+				"" + _EDGES, 
+				"" + _DANGLING, 
+				"" + (_AVG_GRAPH_DENCITY/90),
+				"" + _INVOLVED_PROJECTS_LAST_HEU_, 
+				"" + (_PERC_DANGLING/90)));
+		writer.flush();
+		
+		
+		_NODES = 0;
+		_EDGES = 0;
+		_DANGLING = 0;
+		_AVG_GRAPH_DENCITY = 0;
+		_INVOLVED_PROJECTS_LAST_HEU_ = 0;
+		_PERC_DANGLING = 0;
+		for (File file : baseFolderFile.listFiles()) {
+			Graph g = GraphFactory.eINSTANCE.createGraph();
+			g = heuristicManager.launcherEcore_ATL_ATLWithPathLaucher_LauncherATL(file);
+			int _GRAPH_NODES = g.getNodes().size();
+			int _GRAPH_EDGES = g.getEdges().size();
+			int _GRAPH_DANGLING = HeuristicManager.getDanglingNodes(g).size();;
+			double _GRAPH_AVG_GRAPH_DENCITY = (_GRAPH_EDGES != 0)? ((2 * _GRAPH_EDGES)*1.0)/((_GRAPH_NODES*(_GRAPH_NODES-1))*1.0) : 0;
+			if(g.getNodes().stream().anyMatch(z -> z.getType().contains(FileUtils.launcherATLKind)))
+				_INVOLVED_PROJECTS_LAST_HEU_ ++;
+			double _GRAPH_PERC_DANGLING = (_GRAPH_DANGLING != 0)?(_GRAPH_DANGLING * 1.0) / (_GRAPH_NODES * 1.0):0;
+			
+			_NODES += _GRAPH_NODES;
+			_EDGES += _GRAPH_EDGES;
+			_DANGLING += _GRAPH_DANGLING;
+			_AVG_GRAPH_DENCITY += _GRAPH_AVG_GRAPH_DENCITY;
+			_PERC_DANGLING += _GRAPH_PERC_DANGLING;
+		}
+		FileUtils.writeLine(writer, Arrays.asList(
+				"Launcher ATL",
+				"" + _NODES, 
+				"" + _EDGES, 
+				"" + _DANGLING, 
+				"" + (_AVG_GRAPH_DENCITY/90),
+				"" + _INVOLVED_PROJECTS_LAST_HEU_, 
+				"" + (_PERC_DANGLING/90)));
+		writer.flush();
+		
+		
+		_NODES = 0;
+		_EDGES = 0;
+		_DANGLING = 0;
+		_AVG_GRAPH_DENCITY = 0;
+		_INVOLVED_PROJECTS_LAST_HEU_ = 0;
+		_PERC_DANGLING = 0;
+		for (File file : baseFolderFile.listFiles()) {
+			Graph g = GraphFactory.eINSTANCE.createGraph();
+			g = heuristicManager.launcherEcore_ATL_ATLWithPathLaucher_LauncherATL_ANT_ANTWithATL(file);
+			int _GRAPH_NODES = g.getNodes().size();
+			int _GRAPH_EDGES = g.getEdges().size();
+			int _GRAPH_DANGLING = HeuristicManager.getDanglingNodes(g).size();;
+			double _GRAPH_AVG_GRAPH_DENCITY = (_GRAPH_EDGES != 0)? ((2 * _GRAPH_EDGES)*1.0)/((_GRAPH_NODES*(_GRAPH_NODES-1))*1.0) : 0;
+			if(g.getNodes().stream().anyMatch(z -> z.getType().contains(FileUtils.ANT_ATLKind)))
+				_INVOLVED_PROJECTS_LAST_HEU_ ++;
+			double _GRAPH_PERC_DANGLING = (_GRAPH_DANGLING != 0)?(_GRAPH_DANGLING * 1.0) / (_GRAPH_NODES * 1.0):0;
+			
+			_NODES += _GRAPH_NODES;
+			_EDGES += _GRAPH_EDGES;
+			_DANGLING += _GRAPH_DANGLING;
+			_AVG_GRAPH_DENCITY += _GRAPH_AVG_GRAPH_DENCITY;
+			_PERC_DANGLING += _GRAPH_PERC_DANGLING;
+		}
+		FileUtils.writeLine(writer, Arrays.asList(
+				"ANT ATL",
+				"" + _NODES, 
+				"" + _EDGES, 
+				"" + _DANGLING, 
+				"" + (_AVG_GRAPH_DENCITY/90),
+				"" + _INVOLVED_PROJECTS_LAST_HEU_, 
+				"" + (_PERC_DANGLING/90)));
+		writer.flush();
+		
+        writer.close();
+		
 	}
+	
+	
+	@Ignore
 	@Test
 	public void stats() throws IOException{
 		File baseFolderFile = new File(resultsFolder);
-		String csvFile = "/home/juri/Scrivania/abc2.csv";
+		String csvFile = "/home/juri/Scrivania/abc3.csv";
 		FileWriter writer = new FileWriter(csvFile);
 		FileUtils.writeLine(writer, Arrays.asList("Project Name", "#Elements", "Types", "#Dangling", "Dangling"));
 		for (File file : baseFolderFile.listFiles()) {
@@ -120,16 +395,16 @@ public class IHeuristicResults {
 		}
 		writer.close();
 	}
-//	@Ignore
-//	@Test
-//	public void stats2() throws IOException{
-//		File baseFolderFile = new File(resultsFolder);
-//		int count = 0;
-//		for (File file : baseFolderFile.listFiles()) {
-//			Graph g = it.univaq.MDEProfiler.graph.util.Serializer.deserializeModel(file.getAbsolutePath());
-//			if(g.getNodes().stream().filter(z-> z.getType().contains("NodeType.LAUNCHER")).collect(Collectors.toList()).size()!=0)
-//				count++;
-//		}
-//		System.out.println(count);
-//	}
+	@Ignore
+	@Test
+	public void stats2() throws IOException{
+		File baseFolderFile = new File(resultsFolder);
+		int count = 0;
+		for (File file : baseFolderFile.listFiles()) {
+			Graph g = it.univaq.MDEProfiler.graph.util.Serializer.deserializeModel(file.getAbsolutePath());
+			if(g.getNodes().stream().filter(z-> z.getType().contains("NodeType.LAUNCHER")).collect(Collectors.toList()).size()!=0)
+				count++;
+		}
+		System.out.println(count);
+	}
 }

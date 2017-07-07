@@ -3,6 +3,8 @@ package it.univaq.MDEProfiler.heuristic;
 import java.io.File;
 import java.util.List;
 
+import org.eclipse.jgit.util.FileUtil;
+
 import it.univaq.MDEProfiler.graph.model.graph.Graph;
 import it.univaq.MDEProfiler.graph.model.graph.GraphFactory;
 import it.univaq.MDEProfiler.graph.model.graph.Node;
@@ -23,7 +25,7 @@ public class EcoreHeuristic implements IHeuristic {
 			{
 				Node n = GraphFactory.eINSTANCE.createNode();
 				n.setDerivedOrNotExists(false);
-				n.getType().add("NodeType.ECORE");
+				n.getType().add(FileUtils.ecoreKind);
 				n.setUri(file.getAbsolutePath());
 				n.setName(file.getName());
 				g.getNodes().add(n);

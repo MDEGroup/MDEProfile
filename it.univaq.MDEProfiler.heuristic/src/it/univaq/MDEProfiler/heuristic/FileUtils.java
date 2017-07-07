@@ -16,6 +16,28 @@ import it.univaq.MDEProfiler.graph.model.graph.Node;
 
 
 public class FileUtils {
+	
+	
+	public static String ATLKind = "NodeType.ATL";
+	public static String ATL_WitPathKind = "NodeType.ATLWithPath";
+	public static String ANTKind = "NodeType.ANT";
+	public static final String ANT_ATLKind = "NodeType.ANT_ATL";
+	public static String modelKind = "NodeType.Model";
+	public static String metaMetaModelKind = "NodeType.MetaMetaModel";
+	public static String ecoreKind = "NodeType.Ecore";
+	public static String KM3Kind = "NodeType.KM3";
+	public static String launcherKind = "NodeType.LAUNCHER";
+	public static String launcherATLKind = "NodeType.LAUNCHER_ATL";
+	
+	
+	public static String source = "SOURCE";
+	public static String target = "TARGET";
+	public static String lib = "LIBRARY";
+	public static String modelIn = "MODEL_INPUT";
+	public static String modelOut = "MODEL_OUT";
+	public static String metamodelConformance = "CONFORM2";
+	
+	
 
 	public static List<File> getFilesByEndingValue(File rootFolder, String extension) {
 		List<File> result = new ArrayList<File>();
@@ -71,6 +93,7 @@ public class FileUtils {
 	
 	///
 	private static final char DEFAULT_SEPARATOR = ',';
+	
 
     public static void writeLine(Writer w, List<String> values) throws IOException {
         writeLine(w, values, DEFAULT_SEPARATOR, ' ');

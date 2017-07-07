@@ -10,7 +10,7 @@ import it.univaq.MDEProfiler.graph.model.graph.Node;
 public class KM3Heuristic implements IHeuristic {
 
 	private String extension = ".km3";
-	private String nodeKind = "NodeType.KM3";
+	
 	@Override
 	public Graph getGraph(String repoFolder, Graph g) {
 		File repoFolderF = new File(repoFolder);
@@ -21,7 +21,7 @@ public class KM3Heuristic implements IHeuristic {
 			{
 				Node n = GraphFactory.eINSTANCE.createNode();
 				n.setDerivedOrNotExists(false);
-				n.getType().add(nodeKind);
+				n.getType().add(FileUtils.KM3Kind);
 				n.setUri(file.getAbsolutePath());
 				n.setName(file.getName());
 				g.getNodes().add(n);
