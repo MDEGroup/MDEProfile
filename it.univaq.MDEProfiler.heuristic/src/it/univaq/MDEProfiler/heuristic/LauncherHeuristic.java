@@ -16,13 +16,13 @@ public class LauncherHeuristic implements IHeuristic {
 		File repoFolderF = new File(repoFolder);
 		List<File> fList = FileUtils.getFilesByEndingValue(repoFolderF, extension);
 		for (File file : fList) {
-			boolean guard = g.getNodes().stream().anyMatch(s -> s.getFilePath().equals(file.getAbsolutePath()));
+			boolean guard = g.getNodes().stream().anyMatch(s -> s.getUri().equals(file.getAbsolutePath()));
 			if (!guard) {
 				if(!file.isDirectory()){
 					Node n = GraphFactory.eINSTANCE.createNode();
 					n.setDerivedOrNotExists(false);
 					n.getType().add(nodeKind);
-					n.setFilePath(file.getAbsolutePath());
+					n.setUri(file.getAbsolutePath());
 					n.setName(file.getName());
 					g.getNodes().add(n);
 				}

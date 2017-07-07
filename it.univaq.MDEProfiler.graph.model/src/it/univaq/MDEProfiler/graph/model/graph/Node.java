@@ -14,7 +14,7 @@ import org.eclipse.emf.common.util.EList;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link it.univaq.MDEProfiler.graph.model.graph.Node#getFilePath <em>File Path</em>}</li>
+ *   <li>{@link it.univaq.MDEProfiler.graph.model.graph.Node#getUri <em>Uri</em>}</li>
  *   <li>{@link it.univaq.MDEProfiler.graph.model.graph.Node#getType <em>Type</em>}</li>
  *   <li>{@link it.univaq.MDEProfiler.graph.model.graph.Node#isDerivedOrNotExists <em>Derived Or Not Exists</em>}</li>
  * </ul>
@@ -25,30 +25,30 @@ import org.eclipse.emf.common.util.EList;
  */
 public interface Node extends Named {
 	/**
-	 * Returns the value of the '<em><b>File Path</b></em>' attribute.
+	 * Returns the value of the '<em><b>Uri</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>File Path</em>' attribute isn't clear,
+	 * If the meaning of the '<em>Uri</em>' attribute isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>File Path</em>' attribute.
-	 * @see #setFilePath(String)
-	 * @see it.univaq.MDEProfiler.graph.model.graph.GraphPackage#getNode_FilePath()
+	 * @return the value of the '<em>Uri</em>' attribute.
+	 * @see #setUri(String)
+	 * @see it.univaq.MDEProfiler.graph.model.graph.GraphPackage#getNode_Uri()
 	 * @model required="true"
 	 * @generated
 	 */
-	String getFilePath();
+	String getUri();
 
 	/**
-	 * Sets the value of the '{@link it.univaq.MDEProfiler.graph.model.graph.Node#getFilePath <em>File Path</em>}' attribute.
+	 * Sets the value of the '{@link it.univaq.MDEProfiler.graph.model.graph.Node#getUri <em>Uri</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>File Path</em>' attribute.
-	 * @see #getFilePath()
+	 * @param value the new value of the '<em>Uri</em>' attribute.
+	 * @see #getUri()
 	 * @generated
 	 */
-	void setFilePath(String value);
+	void setUri(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Type</b></em>' attribute list.

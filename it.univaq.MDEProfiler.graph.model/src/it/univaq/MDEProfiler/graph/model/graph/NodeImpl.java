@@ -19,7 +19,7 @@ import org.eclipse.emf.ecore.util.EDataTypeUniqueEList;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link it.univaq.MDEProfiler.graph.model.graph.NodeImpl#getFilePath <em>File Path</em>}</li>
+ *   <li>{@link it.univaq.MDEProfiler.graph.model.graph.NodeImpl#getUri <em>Uri</em>}</li>
  *   <li>{@link it.univaq.MDEProfiler.graph.model.graph.NodeImpl#getType <em>Type</em>}</li>
  *   <li>{@link it.univaq.MDEProfiler.graph.model.graph.NodeImpl#isDerivedOrNotExists <em>Derived Or Not Exists</em>}</li>
  * </ul>
@@ -28,24 +28,24 @@ import org.eclipse.emf.ecore.util.EDataTypeUniqueEList;
  */
 public class NodeImpl extends NamedImpl implements Node {
 	/**
-	 * The default value of the '{@link #getFilePath() <em>File Path</em>}' attribute.
+	 * The default value of the '{@link #getUri() <em>Uri</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getFilePath()
+	 * @see #getUri()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String FILE_PATH_EDEFAULT = null;
+	protected static final String URI_EDEFAULT = null;
 
 	/**
-	 * The cached value of the '{@link #getFilePath() <em>File Path</em>}' attribute.
+	 * The cached value of the '{@link #getUri() <em>Uri</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getFilePath()
+	 * @see #getUri()
 	 * @generated
 	 * @ordered
 	 */
-	protected String filePath = FILE_PATH_EDEFAULT;
+	protected String uri = URI_EDEFAULT;
 
 	/**
 	 * The cached value of the '{@link #getType() <em>Type</em>}' attribute list.
@@ -101,8 +101,8 @@ public class NodeImpl extends NamedImpl implements Node {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getFilePath() {
-		return filePath;
+	public String getUri() {
+		return uri;
 	}
 
 	/**
@@ -110,11 +110,11 @@ public class NodeImpl extends NamedImpl implements Node {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setFilePath(String newFilePath) {
-		String oldFilePath = filePath;
-		filePath = newFilePath;
+	public void setUri(String newUri) {
+		String oldUri = uri;
+		uri = newUri;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, GraphPackage.NODE__FILE_PATH, oldFilePath, filePath));
+			eNotify(new ENotificationImpl(this, Notification.SET, GraphPackage.NODE__URI, oldUri, uri));
 	}
 
 	/**
@@ -158,8 +158,8 @@ public class NodeImpl extends NamedImpl implements Node {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case GraphPackage.NODE__FILE_PATH:
-				return getFilePath();
+			case GraphPackage.NODE__URI:
+				return getUri();
 			case GraphPackage.NODE__TYPE:
 				return getType();
 			case GraphPackage.NODE__DERIVED_OR_NOT_EXISTS:
@@ -177,8 +177,8 @@ public class NodeImpl extends NamedImpl implements Node {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case GraphPackage.NODE__FILE_PATH:
-				setFilePath((String)newValue);
+			case GraphPackage.NODE__URI:
+				setUri((String)newValue);
 				return;
 			case GraphPackage.NODE__TYPE:
 				getType().clear();
@@ -199,8 +199,8 @@ public class NodeImpl extends NamedImpl implements Node {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case GraphPackage.NODE__FILE_PATH:
-				setFilePath(FILE_PATH_EDEFAULT);
+			case GraphPackage.NODE__URI:
+				setUri(URI_EDEFAULT);
 				return;
 			case GraphPackage.NODE__TYPE:
 				getType().clear();
@@ -220,8 +220,8 @@ public class NodeImpl extends NamedImpl implements Node {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case GraphPackage.NODE__FILE_PATH:
-				return FILE_PATH_EDEFAULT == null ? filePath != null : !FILE_PATH_EDEFAULT.equals(filePath);
+			case GraphPackage.NODE__URI:
+				return URI_EDEFAULT == null ? uri != null : !URI_EDEFAULT.equals(uri);
 			case GraphPackage.NODE__TYPE:
 				return type != null && !type.isEmpty();
 			case GraphPackage.NODE__DERIVED_OR_NOT_EXISTS:
@@ -240,8 +240,8 @@ public class NodeImpl extends NamedImpl implements Node {
 		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (filePath: ");
-		result.append(filePath);
+		result.append(" (uri: ");
+		result.append(uri);
 		result.append(", type: ");
 		result.append(type);
 		result.append(", derivedOrNotExists: ");

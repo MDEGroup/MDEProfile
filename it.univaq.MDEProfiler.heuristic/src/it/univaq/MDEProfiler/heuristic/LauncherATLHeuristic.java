@@ -53,7 +53,7 @@ public class LauncherATLHeuristic implements IHeuristic {
 	private Graph parseLauncher(Node launcher, Graph g) throws SAXException, IOException, ParserConfigurationException, XPathExpressionException {
 		DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
 		DocumentBuilder builder = factory.newDocumentBuilder();
-		Document document = builder.parse(new File(launcher.getFilePath()));
+		Document document = builder.parse(new File(launcher.getUri()));
 		NodeList nodes = document.getElementsByTagName("launchConfiguration");
 		Node atlNode = null;
 		for (int temp = 0; temp < nodes.getLength(); temp++) {

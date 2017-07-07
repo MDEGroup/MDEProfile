@@ -8,7 +8,6 @@ import java.util.List;
 import java.util.Set;
 import java.util.stream.Collectors;
 
-import org.eclipse.emf.common.util.EList;
 import org.junit.Before;
 import org.junit.Ignore;
 import org.junit.Test;
@@ -114,7 +113,7 @@ public class IHeuristicResults {
 			for (Node node : dangling) {
 				StringBuilder b = new StringBuilder();
 				node.getType().forEach(b::append);
-				concatenateDandling += node.getFilePath() + " -> " + b.toString() + " | ";
+				concatenateDandling += node.getUri() + " -> " + b.toString() + " | ";
 			}
 			FileUtils.writeLine(writer, Arrays.asList(g.getName(), g.getNodes().size() + "", concatenateType, dangling.size() + "", concatenateDandling));
 	        writer.flush();

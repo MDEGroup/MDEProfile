@@ -1,0 +1,86 @@
+<!doctype html>
+<html>
+<head>
+  <title>Network | Basic usage</title>
+
+  <script type="text/javascript" src="vis.js"></script>
+  <link href="vis-network.min.css" rel="stylesheet" type="text/css" />
+
+  <style type="text/css">
+    #mynetwork {
+      width: 600px;
+      height: 400px;
+      border: 1px solid lightgray;
+    }
+
+    p {
+      max-width:700px;
+    }
+  </style>
+</head>
+<body>
+
+<p>
+  	GitHub repoName: /home/juri/MDEProfiler/Table2SVGBarChart/Table2SVGBarChart/<br/>
+	GitHub owner: <br/>
+	GitHub URL: <a href="https://github.com///home/juri/MDEProfiler/Table2SVGBarChart/Table2SVGBarChart/">Github repo</a>
+</p>
+
+<div id="mynetwork"></div>
+
+<script type="text/javascript">
+  // create an array with nodes
+  var nodes = new vis.DataSet(
+     [
+	
+		{id: "/home/juri/MDEProfiler/Table2SVGBarChart/Table2SVGBarChart/models/example-Table.ecore", label: 'example-Table.ecore', color: 'lime' },
+		{id: "/home/juri/MDEProfiler/Table2SVGBarChart/Table2SVGBarChart/metamodels/Table.ecore", label: 'Table.ecore', color: 'lime' },
+		{id: "/home/juri/MDEProfiler/Table2SVGBarChart/Table2SVGBarChart/metamodels/XML.ecore", label: 'XML.ecore', color: 'lime' },
+		{id: "/home/juri/MDEProfiler/Table2SVGBarChart/Table2SVGBarChart/metamodels/SVG.ecore", label: 'SVG.ecore', color: 'lime' },
+		{id: "/home/juri/MDEProfiler/Table2SVGBarChart/Table2SVGBarChart/lib/TableHelpers.atl", label: 'TableHelpers.atl', color: '#7BE141' },
+		{id: "/home/juri/MDEProfiler/Table2SVGBarChart/Table2SVGBarChart/transformations/Table2SVGBarChart.atl", label: 'Table2SVGBarChart.atl', color: '#7BE141' },
+		{id: "/home/juri/MDEProfiler/Table2SVGBarChart/Table2SVGBarChart/transformations/SVG2XML.atl", label: 'SVG2XML.atl', color: '#7BE141' },
+		{id: "/home/juri/MDEProfiler/Table2SVGBarChart/Table2SVGBarChart/metamodels/SVG.km3", label: 'SVG.km3', },
+		{id: "/home/juri/MDEProfiler/Table2SVGBarChart/Table2SVGBarChart/metamodels/Table.km3", label: 'Table.km3', },
+		{id: "/home/juri/MDEProfiler/Table2SVGBarChart/Table2SVGBarChart/metamodels/XML.km3", label: 'XML.km3', },
+		{id: "/home/juri/MDEProfiler/Table2SVGBarChart/Table2SVGBarChart/conf/Table2SVGBarChart build.xml.launch", label: 'Table2SVGBarChart build.xml.launch', color: 'rgb(255,168,7)' },
+		{id: "/home/juri/MDEProfiler/Table2SVGBarChart/Table2SVGBarChart/build.xml", label: 'build.xml', color: 'rgb(200,68,170)' },
+		{id: "/home/juri/MDEProfiler/Table2SVGBarChart/Table2SVGBarChart/example-SVGBarChart.ecore", label: 'example-SVGBarChart.ecore', },
+		{id: "/home/juri/MDEProfiler/Table2SVGBarChart/Table2SVGBarChart/example-XML.ecore", label: 'example-XML.ecore', },
+	 ]	
+
+  );
+
+  // create an array with edges
+  var edges = new vis.DataSet(
+	 [
+		{from: "/home/juri/MDEProfiler/Table2SVGBarChart/Table2SVGBarChart/transformations/Table2SVGBarChart.atl", to: "/home/juri/MDEProfiler/Table2SVGBarChart/Table2SVGBarChart/metamodels/Table.ecore"},
+		{from: "/home/juri/MDEProfiler/Table2SVGBarChart/Table2SVGBarChart/models/example-Table.ecore", to: "/home/juri/MDEProfiler/Table2SVGBarChart/Table2SVGBarChart/metamodels/Table.ecore"},
+		{from: "/home/juri/MDEProfiler/Table2SVGBarChart/Table2SVGBarChart/transformations/Table2SVGBarChart.atl", to: "/home/juri/MDEProfiler/Table2SVGBarChart/Table2SVGBarChart/metamodels/SVG.ecore"},
+		{from: "/home/juri/MDEProfiler/Table2SVGBarChart/Table2SVGBarChart/example-SVGBarChart.ecore", to: "/home/juri/MDEProfiler/Table2SVGBarChart/Table2SVGBarChart/models/example-Table.ecore"},
+		{from: "/home/juri/MDEProfiler/Table2SVGBarChart/Table2SVGBarChart/transformations/SVG2XML.atl", to: "/home/juri/MDEProfiler/Table2SVGBarChart/Table2SVGBarChart/metamodels/SVG.ecore"},
+		{from: "/home/juri/MDEProfiler/Table2SVGBarChart/Table2SVGBarChart/example-SVGBarChart.ecore", to: "/home/juri/MDEProfiler/Table2SVGBarChart/Table2SVGBarChart/metamodels/SVG.ecore"},
+		{from: "/home/juri/MDEProfiler/Table2SVGBarChart/Table2SVGBarChart/transformations/SVG2XML.atl", to: "/home/juri/MDEProfiler/Table2SVGBarChart/Table2SVGBarChart/metamodels/XML.ecore"},
+		{from: "/home/juri/MDEProfiler/Table2SVGBarChart/Table2SVGBarChart/example-XML.ecore", to: "/home/juri/MDEProfiler/Table2SVGBarChart/Table2SVGBarChart/metamodels/XML.ecore"},
+		{from: "/home/juri/MDEProfiler/Table2SVGBarChart/Table2SVGBarChart/transformations/Table2SVGBarChart.atl", to: "/home/juri/MDEProfiler/Table2SVGBarChart/Table2SVGBarChart/models/example-Table.ecore"},
+		{from: "/home/juri/MDEProfiler/Table2SVGBarChart/Table2SVGBarChart/transformations/Table2SVGBarChart.atl", to: "/home/juri/MDEProfiler/Table2SVGBarChart/Table2SVGBarChart/lib/TableHelpers.atl"},
+		{from: "/home/juri/MDEProfiler/Table2SVGBarChart/Table2SVGBarChart/transformations/Table2SVGBarChart.atl", to: "/home/juri/MDEProfiler/Table2SVGBarChart/Table2SVGBarChart/example-SVGBarChart.ecore"},
+		{from: "/home/juri/MDEProfiler/Table2SVGBarChart/Table2SVGBarChart/transformations/SVG2XML.atl", to: "/home/juri/MDEProfiler/Table2SVGBarChart/Table2SVGBarChart/example-SVGBarChart.ecore"},
+		{from: "/home/juri/MDEProfiler/Table2SVGBarChart/Table2SVGBarChart/transformations/SVG2XML.atl", to: "/home/juri/MDEProfiler/Table2SVGBarChart/Table2SVGBarChart/example-XML.ecore"},
+ 	]
+  );
+
+  // create a network
+  var container = document.getElementById('mynetwork');
+  var data = {
+    nodes: nodes,
+    edges: edges
+  };
+  var options = {
+    nodes: {borderWidth: 2},
+    interaction: {hover: true}
+  }
+  var network = new vis.Network(container, data, options);
+</script>
+</body>
+</html>

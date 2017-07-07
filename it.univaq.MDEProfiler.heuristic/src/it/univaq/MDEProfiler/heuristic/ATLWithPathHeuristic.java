@@ -69,7 +69,7 @@ public class ATLWithPathHeuristic implements IHeuristic {
 		IReferenceModel atlMetamodel = modelFactory
 				.getBuiltInResource("ATL.ecore");
 		EMFModel atlDynModel = (EMFModel) modelFactory.newModel(atlMetamodel);
-		atlParser.inject(atlDynModel, atl.getFilePath());
+		atlParser.inject(atlDynModel, atl.getUri());
 
 		Resource originalTrafo = atlDynModel.getResource();
 

@@ -54,7 +54,7 @@ public class FileUtils {
 	
 	public static Node getNodeByFilePath(Graph g, String filePath){
 		for(Node node : g.getNodes()){
-			if(node.getFilePath().contains(filePath)){
+			if(node.getUri().contains(filePath)){
 				return node;
 			}
 		}
