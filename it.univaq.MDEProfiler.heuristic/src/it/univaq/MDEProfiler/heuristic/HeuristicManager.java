@@ -33,7 +33,7 @@ public class HeuristicManager {
 		Graph g = GraphFactory.eINSTANCE.createGraph();
 		g.setName(file.getAbsolutePath());
 		for (IHeuristic iHeuristic : heuristics) {
-			iHeuristic.getGraph(repo, g);
+			g=iHeuristic.getGraph(repo, g);
 		}
 		return g;
 	}
