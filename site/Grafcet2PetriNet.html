@@ -1,0 +1,82 @@
+<!doctype html>
+<html>
+<head>
+  <title>Network | Basic usage</title>
+
+  <script type="text/javascript" src="vis.js"></script>
+  <link href="vis-network.min.css" rel="stylesheet" type="text/css" />
+
+  <style type="text/css">
+    #mynetwork {
+      width: 600px;
+      height: 400px;
+      border: 1px solid lightgray;
+    }
+
+    p {
+      max-width:700px;
+    }
+  </style>
+</head>
+<body>
+
+<p>
+  	<h1>Project Name: Grafcet2PetriNet<br/></h1>
+	
+	
+</p>
+
+<div id="mynetwork"></div>
+
+<script type="text/javascript">
+  // create an array with nodes
+  var nodes = new vis.DataSet(
+     [
+	
+		{id: "/home/juri/MDEProfiler2/Grafcet2PetriNet/Grafcet2PetriNet/Metamodels/PNML_simplified.ecore", label: 'PNML_simplified.ecore', },
+		{id: "/home/juri/MDEProfiler2/Grafcet2PetriNet/Grafcet2PetriNet/Metamodels/Grafcet.ecore", label: 'Grafcet.ecore', },
+		{id: "/home/juri/MDEProfiler2/Grafcet2PetriNet/Grafcet2PetriNet/Metamodels/XML.ecore", label: 'XML.ecore', },
+		{id: "/home/juri/MDEProfiler2/Grafcet2PetriNet/Grafcet2PetriNet/Metamodels/PetriNet.ecore", label: 'PetriNet.ecore', },
+		{id: "/home/juri/MDEProfiler2/Grafcet2PetriNet/Grafcet2PetriNet/Models/PetriNet2Grafcet_example.ecore", label: 'PetriNet2Grafcet_example.ecore', },
+		{id: "/home/juri/MDEProfiler2/Grafcet2PetriNet/Grafcet2PetriNet/Models/example.ecore", label: 'example.ecore', },
+		{id: "/home/juri/MDEProfiler2/Grafcet2PetriNet/Grafcet2PetriNet/Models/PetriNet2PNML_example.ecore", label: 'PetriNet2PNML_example.ecore', },
+		{id: "/home/juri/MDEProfiler2/Grafcet2PetriNet/Grafcet2PetriNet/Models/Grafcet2PetriNet_example.ecore", label: 'Grafcet2PetriNet_example.ecore', },
+		{id: "/home/juri/MDEProfiler2/Grafcet2PetriNet/Grafcet2PetriNet/Models/XML2PNML_example.ecore", label: 'XML2PNML_example.ecore', },
+		{id: "/home/juri/MDEProfiler2/Grafcet2PetriNet/Grafcet2PetriNet/Models/PNML2XML_example.ecore", label: 'PNML2XML_example.ecore', },
+		{id: "/home/juri/MDEProfiler2/Grafcet2PetriNet/Grafcet2PetriNet/Models/PNML2PetriNet_example.ecore", label: 'PNML2PetriNet_example.ecore', },
+		{id: "/home/juri/MDEProfiler2/Grafcet2PetriNet/Grafcet2PetriNet/Transformations/PetriNet2Grafcet.atl", label: 'PetriNet2Grafcet.atl', color: '#7BE141' },
+		{id: "/home/juri/MDEProfiler2/Grafcet2PetriNet/Grafcet2PetriNet/Transformations/Grafcet2PetriNet.atl", label: 'Grafcet2PetriNet.atl', color: '#7BE141' },
+		{id: "/home/juri/MDEProfiler2/Grafcet2PetriNet/Grafcet2PetriNet/Transformations/PNML2XML.atl", label: 'PNML2XML.atl', color: '#7BE141' },
+		{id: "/home/juri/MDEProfiler2/Grafcet2PetriNet/Grafcet2PetriNet/Transformations/PetriNet2PNML.atl", label: 'PetriNet2PNML.atl', color: '#7BE141' },
+		{id: "/home/juri/MDEProfiler2/Grafcet2PetriNet/Grafcet2PetriNet/Transformations/XML2Text.atl", label: 'XML2Text.atl', color: '#7BE141' },
+		{id: "/home/juri/MDEProfiler2/Grafcet2PetriNet/Grafcet2PetriNet/Transformations/XML2PNML.atl", label: 'XML2PNML.atl', color: '#7BE141' },
+		{id: "/home/juri/MDEProfiler2/Grafcet2PetriNet/Grafcet2PetriNet/Transformations/PNML2PetriNet.atl", label: 'PNML2PetriNet.atl', color: '#7BE141' },
+		{id: "/home/juri/MDEProfiler2/Grafcet2PetriNet/Grafcet2PetriNet/Metamodels/PNML_simplified.km3", label: 'PNML_simplified.km3', },
+		{id: "/home/juri/MDEProfiler2/Grafcet2PetriNet/Grafcet2PetriNet/Metamodels/Grafcet.km3", label: 'Grafcet.km3', },
+		{id: "/home/juri/MDEProfiler2/Grafcet2PetriNet/Grafcet2PetriNet/Metamodels/PetriNet.km3", label: 'PetriNet.km3', },
+		{id: "/home/juri/MDEProfiler2/Grafcet2PetriNet/Grafcet2PetriNet/Metamodels/XML.km3", label: 'XML.km3', },
+		{id: "/home/juri/MDEProfiler2/Grafcet2PetriNet/Grafcet2PetriNet/Models/XML2Text_example.xml", label: 'XML2Text_example.xml', },
+	 ]	
+
+  );
+
+  // create an array with edges
+  var edges = new vis.DataSet(
+	 [
+ 	]
+  );
+
+  // create a network
+  var container = document.getElementById('mynetwork');
+  var data = {
+    nodes: nodes,
+    edges: edges
+  };
+  var options = {
+    nodes: {borderWidth: 2},
+    interaction: {hover: true}
+  }
+  var network = new vis.Network(container, data, options);
+</script>
+</body>
+</html>

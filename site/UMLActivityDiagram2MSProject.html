@@ -1,10 +1,3 @@
-[comment encoding = UTF-8 /]
-[module generate('http://it.univaq.MDEProfiler/graph')]
-
-
-[template public generateElement(aGraph : Graph)]
-[comment @main/]
-[file (aGraph.name + '.html', false, 'UTF-8')]
 <!doctype html>
 <html>
 <head>
@@ -28,7 +21,7 @@
 <body>
 
 <p>
-  	<h1>Project Name: [aGraph.name.replaceAll('/home/juri/MDEProfiler2/', '')/]<br/></h1>
+  	<h1>Project Name: UMLActivityDiagram2MSProject<br/></h1>
 	
 	
 </p>
@@ -38,22 +31,21 @@
 <script type="text/javascript">
   // create an array with nodes
   var nodes = new vis.DataSet(
-     [ '[' /]
+     [
 	
-	[for (it : Node | aGraph.nodes)]
-		{id: "[it.uri/]", label: '[it.name/]', [if (it.type->includes('NodeType.ECORE'))]color: 'lime' [/if][if (it.type->includes('NodeType.ATL'))]color: '#7BE141' [/if][if (it.type->includes('NodeType.LAUNCHER'))]color: 'rgb(255,168,7)' [/if][if (it.type->includes('NodeType.ANT'))]color: 'rgb(200,68,170)' [/if]},
-	[/for]
-	 [ ']' /]	
+		{id: "/home/juri/MDEProfiler2/UMLActivityDiagram2MSProject/UmlActivityDiagram2MSProject/example-project.ecore", label: 'example-project.ecore', },
+		{id: "/home/juri/MDEProfiler2/UMLActivityDiagram2MSProject/UmlActivityDiagram2MSProject/MSProject.ecore", label: 'MSProject.ecore', },
+		{id: "/home/juri/MDEProfiler2/UMLActivityDiagram2MSProject/UmlActivityDiagram2MSProject/UmlActivityDiagram2MSProject.atl", label: 'UmlActivityDiagram2MSProject.atl', color: '#7BE141' },
+		{id: "/home/juri/MDEProfiler2/UMLActivityDiagram2MSProject/UmlActivityDiagram2MSProject/MSProject.km3", label: 'MSProject.km3', },
+		{id: "/home/juri/MDEProfiler2/UMLActivityDiagram2MSProject/UmlActivityDiagram2MSProject/example.xml", label: 'example.xml', },
+	 ]	
 
   );
 
   // create an array with edges
   var edges = new vis.DataSet(
-	 [ '[' /]
-	[for(it : Edge | aGraph.edges)]
-		{from: "[it.source.uri/]", to: "[it.target.uri/]"},
-	[/for]
- 	[ ']' /]
+	 [
+ 	]
   );
 
   // create a network
@@ -70,5 +62,3 @@
 </script>
 </body>
 </html>
-[/file]
-[/template]

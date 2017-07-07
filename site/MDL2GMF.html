@@ -1,0 +1,101 @@
+<!doctype html>
+<html>
+<head>
+  <title>Network | Basic usage</title>
+
+  <script type="text/javascript" src="vis.js"></script>
+  <link href="vis-network.min.css" rel="stylesheet" type="text/css" />
+
+  <style type="text/css">
+    #mynetwork {
+      width: 600px;
+      height: 400px;
+      border: 1px solid lightgray;
+    }
+
+    p {
+      max-width:700px;
+    }
+  </style>
+</head>
+<body>
+
+<p>
+  	<h1>Project Name: MDL2GMF<br/></h1>
+	
+	
+</p>
+
+<div id="mynetwork"></div>
+
+<script type="text/javascript">
+  // create an array with nodes
+  var nodes = new vis.DataSet(
+     [
+	
+		{id: "/home/juri/MDEProfiler2/MDL2GMF/org.eclipse.m2m.atl.mdl2gmf/Metamodel/Property.ecore", label: 'Property.ecore', },
+		{id: "/home/juri/MDEProfiler2/MDL2GMF/org.eclipse.m2m.atl.mdl2gmf/MDL2GMF.atl", label: 'MDL2GMF.atl', color: '#7BE141' },
+		{id: "/home/juri/MDEProfiler2/MDL2GMF/org.eclipse.m2m.atl.mdl2gmf/MDLHelpers.atl", label: 'MDLHelpers.atl', color: '#7BE141' },
+		{id: "/home/juri/MDEProfiler2/MDL2GMF/org.eclipse.m2m.atl.mdl2gmf/MDL2UML21.atl", label: 'MDL2UML21.atl', color: '#7BE141' },
+		{id: "/home/juri/MDEProfiler2/MDL2GMF/org.eclipse.m2m.atl.mdl2gmf/MDL2Diagram.launch", label: 'MDL2Diagram.launch', color: 'rgb(255,168,7)' },
+		{id: "/home/juri/MDEProfiler2/MDL2GMF/org.eclipse.m2m.atl.mdl2gmf/build/build.xml", label: 'build.xml', color: 'rgb(200,68,170)' },
+		{id: "/home/juri/MDEProfiler2/MDL2GMF/org.eclipse.m2m.atl.mdl2gmf/org.eclipse.atl.mdl2uml/Model/Sample.mdl", label: '/org.eclipse.atl.mdl2uml/Model/Sample.mdl', },
+		{id: "/home/juri/MDEProfiler2/MDL2GMF/org.eclipse.m2m.atl.mdl2gmf/org.eclipse.atl.mdl2uml/output/test.ecore", label: '/org.eclipse.atl.mdl2uml/output/test.ecore', },
+		{id: "/home/juri/MDEProfiler2/MDL2GMF/org.eclipse.m2m.atl.mdl2gmf/build/build.xml/../Sample/QVT.mdl", label: '../Sample/QVT.mdl', },
+		{id: "http://www.eclipse.org/uml2/2.1.0/UML", label: 'UML', },
+		{id: "/home/juri/MDEProfiler2/MDL2GMF/org.eclipse.m2m.atl.mdl2gmf/build/result", label: 'result', },
+		{id: "/home/juri/MDEProfiler2/MDL2GMF/org.eclipse.m2m.atl.mdl2gmf/build/build.xml/../temp/${name}.xmi", label: '../temp/${name}.xmi', },
+		{id: "http://www.eclipse.org/gmf/runtime/1.0.1/notation", label: 'GMF', },
+		{id: "/home/juri/MDEProfiler2/MDL2GMF/org.eclipse.m2m.atl.mdl2gmf/build/result2", label: 'result2', },
+	 ]	
+
+  );
+
+  // create an array with edges
+  var edges = new vis.DataSet(
+	 [
+		{from: "/home/juri/MDEProfiler2/MDL2GMF/org.eclipse.m2m.atl.mdl2gmf/org.eclipse.atl.mdl2uml/Model/Sample.mdl", to: "invalid"},
+		{from: "/home/juri/MDEProfiler2/MDL2GMF/org.eclipse.m2m.atl.mdl2gmf/org.eclipse.atl.mdl2uml/Model/Sample.mdl", to: "/home/juri/MDEProfiler2/MDL2GMF/org.eclipse.m2m.atl.mdl2gmf/Metamodel/Property.ecore"},
+		{from: "/home/juri/MDEProfiler2/MDL2GMF/org.eclipse.m2m.atl.mdl2gmf/org.eclipse.atl.mdl2uml/output/test.ecore", to: "/home/juri/MDEProfiler2/MDL2GMF/org.eclipse.m2m.atl.mdl2gmf/Metamodel/Property.ecore"},
+		{from: "/home/juri/MDEProfiler2/MDL2GMF/org.eclipse.m2m.atl.mdl2gmf/org.eclipse.atl.mdl2uml/output/test.ecore", to: "invalid"},
+		{from: "/home/juri/MDEProfiler2/MDL2GMF/org.eclipse.m2m.atl.mdl2gmf/org.eclipse.atl.mdl2uml/output/test.ecore", to: "/home/juri/MDEProfiler2/MDL2GMF/org.eclipse.m2m.atl.mdl2gmf/Metamodel/Property.ecore"},
+		{from: "/home/juri/MDEProfiler2/MDL2GMF/org.eclipse.m2m.atl.mdl2gmf/org.eclipse.atl.mdl2uml/output/test.ecore", to: "invalid"},
+		{from: "/home/juri/MDEProfiler2/MDL2GMF/org.eclipse.m2m.atl.mdl2gmf/org.eclipse.atl.mdl2uml/output/test.ecore", to: "/home/juri/MDEProfiler2/MDL2GMF/org.eclipse.m2m.atl.mdl2gmf/Metamodel/Property.ecore"},
+		{from: "/home/juri/MDEProfiler2/MDL2GMF/org.eclipse.m2m.atl.mdl2gmf/org.eclipse.atl.mdl2uml/output/test.ecore", to: "invalid"},
+		{from: "/home/juri/MDEProfiler2/MDL2GMF/org.eclipse.m2m.atl.mdl2gmf/build/build.xml/../Sample/QVT.mdl", to: "invalid"},
+		{from: "/home/juri/MDEProfiler2/MDL2GMF/org.eclipse.m2m.atl.mdl2gmf/MDL2UML21.atl", to: "invalid"},
+		{from: "/home/juri/MDEProfiler2/MDL2GMF/org.eclipse.m2m.atl.mdl2gmf/MDL2UML21.atl", to: "http://www.eclipse.org/uml2/2.1.0/UML"},
+		{from: "/home/juri/MDEProfiler2/MDL2GMF/org.eclipse.m2m.atl.mdl2gmf/build/result", to: "/home/juri/MDEProfiler2/MDL2GMF/org.eclipse.m2m.atl.mdl2gmf/MDL2UML21.atl"},
+		{from: "/home/juri/MDEProfiler2/MDL2GMF/org.eclipse.m2m.atl.mdl2gmf/build/build.xml/../temp/${name}.xmi", to: "/home/juri/MDEProfiler2/MDL2GMF/org.eclipse.m2m.atl.mdl2gmf/Metamodel/Property.ecore"},
+		{from: "/home/juri/MDEProfiler2/MDL2GMF/org.eclipse.m2m.atl.mdl2gmf/MDL2GMF.atl", to: "/home/juri/MDEProfiler2/MDL2GMF/org.eclipse.m2m.atl.mdl2gmf/Metamodel/Property.ecore"},
+		{from: "/home/juri/MDEProfiler2/MDL2GMF/org.eclipse.m2m.atl.mdl2gmf/build/build.xml/../Sample/QVT.mdl", to: "invalid"},
+		{from: "/home/juri/MDEProfiler2/MDL2GMF/org.eclipse.m2m.atl.mdl2gmf/MDL2GMF.atl", to: "invalid"},
+		{from: "/home/juri/MDEProfiler2/MDL2GMF/org.eclipse.m2m.atl.mdl2gmf/build/result", to: "http://www.eclipse.org/uml2/2.1.0/UML"},
+		{from: "/home/juri/MDEProfiler2/MDL2GMF/org.eclipse.m2m.atl.mdl2gmf/MDL2GMF.atl", to: "http://www.eclipse.org/uml2/2.1.0/UML"},
+		{from: "/home/juri/MDEProfiler2/MDL2GMF/org.eclipse.m2m.atl.mdl2gmf/MDL2GMF.atl", to: "http://www.eclipse.org/gmf/runtime/1.0.1/notation"},
+		{from: "/home/juri/MDEProfiler2/MDL2GMF/org.eclipse.m2m.atl.mdl2gmf/build/result2", to: "/home/juri/MDEProfiler2/MDL2GMF/org.eclipse.m2m.atl.mdl2gmf/Metamodel/Property.ecore"},
+		{from: "/home/juri/MDEProfiler2/MDL2GMF/org.eclipse.m2m.atl.mdl2gmf/MDL2UML21.atl", to: "/home/juri/MDEProfiler2/MDL2GMF/org.eclipse.m2m.atl.mdl2gmf/build/build.xml/../Sample/QVT.mdl"},
+		{from: "/home/juri/MDEProfiler2/MDL2GMF/org.eclipse.m2m.atl.mdl2gmf/MDL2UML21.atl", to: "/home/juri/MDEProfiler2/MDL2GMF/org.eclipse.m2m.atl.mdl2gmf/MDLHelpers.atl"},
+		{from: "/home/juri/MDEProfiler2/MDL2GMF/org.eclipse.m2m.atl.mdl2gmf/MDL2UML21.atl", to: "/home/juri/MDEProfiler2/MDL2GMF/org.eclipse.m2m.atl.mdl2gmf/build/result"},
+		{from: "/home/juri/MDEProfiler2/MDL2GMF/org.eclipse.m2m.atl.mdl2gmf/MDL2GMF.atl", to: "/home/juri/MDEProfiler2/MDL2GMF/org.eclipse.m2m.atl.mdl2gmf/build/build.xml/../temp/${name}.xmi"},
+		{from: "/home/juri/MDEProfiler2/MDL2GMF/org.eclipse.m2m.atl.mdl2gmf/MDL2GMF.atl", to: "/home/juri/MDEProfiler2/MDL2GMF/org.eclipse.m2m.atl.mdl2gmf/build/build.xml/../Sample/QVT.mdl"},
+		{from: "/home/juri/MDEProfiler2/MDL2GMF/org.eclipse.m2m.atl.mdl2gmf/MDL2GMF.atl", to: "/home/juri/MDEProfiler2/MDL2GMF/org.eclipse.m2m.atl.mdl2gmf/build/result"},
+		{from: "/home/juri/MDEProfiler2/MDL2GMF/org.eclipse.m2m.atl.mdl2gmf/MDL2GMF.atl", to: "/home/juri/MDEProfiler2/MDL2GMF/org.eclipse.m2m.atl.mdl2gmf/MDLHelpers.atl"},
+		{from: "/home/juri/MDEProfiler2/MDL2GMF/org.eclipse.m2m.atl.mdl2gmf/MDL2GMF.atl", to: "/home/juri/MDEProfiler2/MDL2GMF/org.eclipse.m2m.atl.mdl2gmf/build/result2"},
+ 	]
+  );
+
+  // create a network
+  var container = document.getElementById('mynetwork');
+  var data = {
+    nodes: nodes,
+    edges: edges
+  };
+  var options = {
+    nodes: {borderWidth: 2},
+    interaction: {hover: true}
+  }
+  var network = new vis.Network(container, data, options);
+</script>
+</body>
+</html>

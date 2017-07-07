@@ -1,0 +1,124 @@
+<!doctype html>
+<html>
+<head>
+  <title>Network | Basic usage</title>
+
+  <script type="text/javascript" src="vis.js"></script>
+  <link href="vis-network.min.css" rel="stylesheet" type="text/css" />
+
+  <style type="text/css">
+    #mynetwork {
+      width: 600px;
+      height: 400px;
+      border: 1px solid lightgray;
+    }
+
+    p {
+      max-width:700px;
+    }
+  </style>
+</head>
+<body>
+
+<p>
+  	<h1>Project Name: MakePartialRoleTotal<br/></h1>
+	
+	
+</p>
+
+<div id="mynetwork"></div>
+
+<script type="text/javascript">
+  // create an array with nodes
+  var nodes = new vis.DataSet(
+     [
+	
+		{id: "/home/juri/MDEProfiler2/MakePartialRoleTotal/MakingPartialRolesTotalB/without_context/TCS.ecore", label: 'TCS.ecore', },
+		{id: "/home/juri/MDEProfiler2/MakePartialRoleTotal/MakingPartialRolesTotalB/without_context/InputModels/exampleB-KM3.ecore", label: 'exampleB-KM3.ecore', },
+		{id: "/home/juri/MDEProfiler2/MakePartialRoleTotal/MakingPartialRolesTotalB/without_context/OutputModels/exampleB-KM3Target.ecore", label: 'exampleB-KM3Target.ecore', },
+		{id: "/home/juri/MDEProfiler2/MakePartialRoleTotal/MakingPartialRolesTotalB/with_context/TCS.ecore", label: 'TCS.ecore', },
+		{id: "/home/juri/MDEProfiler2/MakePartialRoleTotal/MakingPartialRolesTotalB/with_context/InputModels/exampleB-KM3.ecore", label: 'exampleB-KM3.ecore', },
+		{id: "/home/juri/MDEProfiler2/MakePartialRoleTotal/MakingPartialRolesTotalB/with_context/OutputModels/exampleB-KM3Target.ecore", label: 'exampleB-KM3Target.ecore', },
+		{id: "/home/juri/MDEProfiler2/MakePartialRoleTotal/MakingPartialRolesTotalA/without_context/TCS.ecore", label: 'TCS.ecore', },
+		{id: "/home/juri/MDEProfiler2/MakePartialRoleTotal/MakingPartialRolesTotalA/without_context/InputModels/example-KM3.ecore", label: 'example-KM3.ecore', },
+		{id: "/home/juri/MDEProfiler2/MakePartialRoleTotal/MakingPartialRolesTotalA/without_context/OutputModels/example-KM3target.ecore", label: 'example-KM3target.ecore', },
+		{id: "/home/juri/MDEProfiler2/MakePartialRoleTotal/MakingPartialRolesTotalA/with_context/TCS.ecore", label: 'TCS.ecore', },
+		{id: "/home/juri/MDEProfiler2/MakePartialRoleTotal/MakingPartialRolesTotalA/with_context/InputModels/example-KM3.ecore", label: 'example-KM3.ecore', },
+		{id: "/home/juri/MDEProfiler2/MakePartialRoleTotal/MakingPartialRolesTotalA/with_context/OutputModels/example-KM3target.ecore", label: 'example-KM3target.ecore', },
+		{id: "/home/juri/MDEProfiler2/MakePartialRoleTotal/MakingPartialRolesTotalB/without_context/PartialRolesTotalB.atl", label: 'PartialRolesTotalB.atl', color: '#7BE141' },
+		{id: "/home/juri/MDEProfiler2/MakePartialRoleTotal/MakingPartialRolesTotalB/with_context/PartialRolesTotalB.atl", label: 'PartialRolesTotalB.atl', color: '#7BE141' },
+		{id: "/home/juri/MDEProfiler2/MakePartialRoleTotal/MakingPartialRolesTotalA/without_context/partial2totalRole.atl", label: 'partial2totalRole.atl', color: '#7BE141' },
+		{id: "/home/juri/MDEProfiler2/MakePartialRoleTotal/MakingPartialRolesTotalA/with_context/partial2totalRole.atl", label: 'partial2totalRole.atl', color: '#7BE141' },
+		{id: "/home/juri/MDEProfiler2/MakePartialRoleTotal/MakingPartialRolesTotalB/without_context/InputModels/exampleB.km3", label: 'exampleB.km3', },
+		{id: "/home/juri/MDEProfiler2/MakePartialRoleTotal/MakingPartialRolesTotalB/without_context/OutputModels/exampleB-KM3Target.km3", label: 'exampleB-KM3Target.km3', },
+		{id: "/home/juri/MDEProfiler2/MakePartialRoleTotal/MakingPartialRolesTotalB/with_context/InputModels/exampleB.km3", label: 'exampleB.km3', },
+		{id: "/home/juri/MDEProfiler2/MakePartialRoleTotal/MakingPartialRolesTotalB/with_context/OutputModels/exampleB-KM3Target.km3", label: 'exampleB-KM3Target.km3', },
+		{id: "/home/juri/MDEProfiler2/MakePartialRoleTotal/MakingPartialRolesTotalA/without_context/InputModels/example.km3", label: 'example.km3', },
+		{id: "/home/juri/MDEProfiler2/MakePartialRoleTotal/MakingPartialRolesTotalA/without_context/OutputModels/example-KM3target.km3", label: 'example-KM3target.km3', },
+		{id: "/home/juri/MDEProfiler2/MakePartialRoleTotal/MakingPartialRolesTotalA/with_context/InputModels/example.km3", label: 'example.km3', },
+		{id: "/home/juri/MDEProfiler2/MakePartialRoleTotal/MakingPartialRolesTotalA/with_context/OutputModels/example-KM3target.km3", label: 'example-KM3target.km3', },
+		{id: "/home/juri/MDEProfiler2/MakePartialRoleTotal/MakingPartialRolesTotalB/without_context/CatalogueOfModelTransformations build_example.xml (17).launch", label: 'CatalogueOfModelTransformations build_example.xml (17).launch', color: 'rgb(255,168,7)' },
+		{id: "/home/juri/MDEProfiler2/MakePartialRoleTotal/MakingPartialRolesTotalB/with_context/CatalogueOfModelTransformations build_example.xml (16).launch", label: 'CatalogueOfModelTransformations build_example.xml (16).launch', color: 'rgb(255,168,7)' },
+		{id: "/home/juri/MDEProfiler2/MakePartialRoleTotal/MakingPartialRolesTotalA/without_context/CatalogueOfModelTransformations build_example.xml (15).launch", label: 'CatalogueOfModelTransformations build_example.xml (15).launch', color: 'rgb(255,168,7)' },
+		{id: "/home/juri/MDEProfiler2/MakePartialRoleTotal/MakingPartialRolesTotalA/with_context/CatalogueOfModelTransformations build_example.xml (14).launch", label: 'CatalogueOfModelTransformations build_example.xml (14).launch', color: 'rgb(255,168,7)' },
+		{id: "/home/juri/MDEProfiler2/MakePartialRoleTotal/MakingPartialRolesTotalB/without_context/build_example.xml", label: 'build_example.xml', color: 'rgb(200,68,170)' },
+		{id: "/home/juri/MDEProfiler2/MakePartialRoleTotal/MakingPartialRolesTotalB/with_context/build_example.xml", label: 'build_example.xml', color: 'rgb(200,68,170)' },
+		{id: "/home/juri/MDEProfiler2/MakePartialRoleTotal/MakingPartialRolesTotalA/without_context/build_example.xml", label: 'build_example.xml', color: 'rgb(200,68,170)' },
+		{id: "/home/juri/MDEProfiler2/MakePartialRoleTotal/MakingPartialRolesTotalA/with_context/build_example.xml", label: 'build_example.xml', color: 'rgb(200,68,170)' },
+		{id: "http://www.eclipse.org/gmt/2005/KM3", label: '${sourceMetaModel}', },
+		{id: "/home/juri/MDEProfiler2/MakePartialRoleTotal/MakingPartialRolesTotalB/without_context/build_example.xml//CatalogueOfModelTransformations/MakePartialRoleTotal/MakingPartialRolesTotalB/without_context/InputModels/${sourceModel}", label: '/CatalogueOfModelTransformations/MakePartialRoleTotal/MakingPartialRolesTotalB/without_context/InputModels/${sourceModel}', },
+		{id: "/home/juri/MDEProfiler2/MakePartialRoleTotal/MakingPartialRolesTotalB/without_context/${targetModel}", label: '${targetModel}', },
+		{id: "/home/juri/MDEProfiler2/MakePartialRoleTotal/MakingPartialRolesTotalB/with_context/build_example.xml//CatalogueOfModelTransformations/MakePartialRoleTotal/MakingPartialRolesTotalB/with_context/InputModels/${sourceModel}", label: '/CatalogueOfModelTransformations/MakePartialRoleTotal/MakingPartialRolesTotalB/with_context/InputModels/${sourceModel}', },
+		{id: "/home/juri/MDEProfiler2/MakePartialRoleTotal/MakingPartialRolesTotalB/with_context/${targetModel}", label: '${targetModel}', },
+		{id: "/home/juri/MDEProfiler2/MakePartialRoleTotal/MakingPartialRolesTotalA/without_context/build_example.xml//CatalogueOfModelTransformations/MakePartialRoleTotal/MakingPartialRolesTotalA/without_context/InputModels/${sourceModel}", label: '/CatalogueOfModelTransformations/MakePartialRoleTotal/MakingPartialRolesTotalA/without_context/InputModels/${sourceModel}', },
+		{id: "/home/juri/MDEProfiler2/MakePartialRoleTotal/MakingPartialRolesTotalA/without_context/${targetModel}", label: '${targetModel}', },
+		{id: "/home/juri/MDEProfiler2/MakePartialRoleTotal/MakingPartialRolesTotalA/with_context/build_example.xml//CatalogueOfModelTransformations/MakePartialRoleTotal/MakingPartialRolesTotalA/with_context/InputModels/${sourceModel}", label: '/CatalogueOfModelTransformations/MakePartialRoleTotal/MakingPartialRolesTotalA/with_context/InputModels/${sourceModel}', },
+		{id: "/home/juri/MDEProfiler2/MakePartialRoleTotal/MakingPartialRolesTotalA/with_context/${targetModel}", label: '${targetModel}', },
+	 ]	
+
+  );
+
+  // create an array with edges
+  var edges = new vis.DataSet(
+	 [
+		{from: "/home/juri/MDEProfiler2/MakePartialRoleTotal/MakingPartialRolesTotalB/without_context/PartialRolesTotalB.atl", to: "http://www.eclipse.org/gmt/2005/KM3"},
+		{from: "/home/juri/MDEProfiler2/MakePartialRoleTotal/MakingPartialRolesTotalB/without_context/build_example.xml//CatalogueOfModelTransformations/MakePartialRoleTotal/MakingPartialRolesTotalB/without_context/InputModels/${sourceModel}", to: "http://www.eclipse.org/gmt/2005/KM3"},
+		{from: "/home/juri/MDEProfiler2/MakePartialRoleTotal/MakingPartialRolesTotalB/without_context/PartialRolesTotalB.atl", to: "http://www.eclipse.org/gmt/2005/KM3"},
+		{from: "/home/juri/MDEProfiler2/MakePartialRoleTotal/MakingPartialRolesTotalB/without_context/${targetModel}", to: "/home/juri/MDEProfiler2/MakePartialRoleTotal/MakingPartialRolesTotalB/without_context/OutputModels/exampleB-KM3Target.ecore"},
+		{from: "/home/juri/MDEProfiler2/MakePartialRoleTotal/MakingPartialRolesTotalB/without_context/PartialRolesTotalB.atl", to: "/home/juri/MDEProfiler2/MakePartialRoleTotal/MakingPartialRolesTotalB/without_context/build_example.xml//CatalogueOfModelTransformations/MakePartialRoleTotal/MakingPartialRolesTotalB/without_context/InputModels/${sourceModel}"},
+		{from: "/home/juri/MDEProfiler2/MakePartialRoleTotal/MakingPartialRolesTotalB/without_context/PartialRolesTotalB.atl", to: "/home/juri/MDEProfiler2/MakePartialRoleTotal/MakingPartialRolesTotalB/without_context/${targetModel}"},
+		{from: "/home/juri/MDEProfiler2/MakePartialRoleTotal/MakingPartialRolesTotalB/without_context/PartialRolesTotalB.atl", to: "http://www.eclipse.org/gmt/2005/KM3"},
+		{from: "/home/juri/MDEProfiler2/MakePartialRoleTotal/MakingPartialRolesTotalB/with_context/build_example.xml//CatalogueOfModelTransformations/MakePartialRoleTotal/MakingPartialRolesTotalB/with_context/InputModels/${sourceModel}", to: "http://www.eclipse.org/gmt/2005/KM3"},
+		{from: "/home/juri/MDEProfiler2/MakePartialRoleTotal/MakingPartialRolesTotalB/without_context/PartialRolesTotalB.atl", to: "http://www.eclipse.org/gmt/2005/KM3"},
+		{from: "/home/juri/MDEProfiler2/MakePartialRoleTotal/MakingPartialRolesTotalB/with_context/${targetModel}", to: "/home/juri/MDEProfiler2/MakePartialRoleTotal/MakingPartialRolesTotalB/without_context/OutputModels/exampleB-KM3Target.ecore"},
+		{from: "/home/juri/MDEProfiler2/MakePartialRoleTotal/MakingPartialRolesTotalB/without_context/PartialRolesTotalB.atl", to: "/home/juri/MDEProfiler2/MakePartialRoleTotal/MakingPartialRolesTotalB/with_context/build_example.xml//CatalogueOfModelTransformations/MakePartialRoleTotal/MakingPartialRolesTotalB/with_context/InputModels/${sourceModel}"},
+		{from: "/home/juri/MDEProfiler2/MakePartialRoleTotal/MakingPartialRolesTotalB/without_context/PartialRolesTotalB.atl", to: "/home/juri/MDEProfiler2/MakePartialRoleTotal/MakingPartialRolesTotalB/with_context/${targetModel}"},
+		{from: "/home/juri/MDEProfiler2/MakePartialRoleTotal/MakingPartialRolesTotalA/without_context/partial2totalRole.atl", to: "http://www.eclipse.org/gmt/2005/KM3"},
+		{from: "/home/juri/MDEProfiler2/MakePartialRoleTotal/MakingPartialRolesTotalA/without_context/build_example.xml//CatalogueOfModelTransformations/MakePartialRoleTotal/MakingPartialRolesTotalA/without_context/InputModels/${sourceModel}", to: "http://www.eclipse.org/gmt/2005/KM3"},
+		{from: "/home/juri/MDEProfiler2/MakePartialRoleTotal/MakingPartialRolesTotalA/without_context/partial2totalRole.atl", to: "http://www.eclipse.org/gmt/2005/KM3"},
+		{from: "/home/juri/MDEProfiler2/MakePartialRoleTotal/MakingPartialRolesTotalA/without_context/${targetModel}", to: "/home/juri/MDEProfiler2/MakePartialRoleTotal/MakingPartialRolesTotalA/without_context/OutputModels/example-KM3target.ecore"},
+		{from: "/home/juri/MDEProfiler2/MakePartialRoleTotal/MakingPartialRolesTotalA/without_context/partial2totalRole.atl", to: "/home/juri/MDEProfiler2/MakePartialRoleTotal/MakingPartialRolesTotalA/without_context/build_example.xml//CatalogueOfModelTransformations/MakePartialRoleTotal/MakingPartialRolesTotalA/without_context/InputModels/${sourceModel}"},
+		{from: "/home/juri/MDEProfiler2/MakePartialRoleTotal/MakingPartialRolesTotalA/without_context/partial2totalRole.atl", to: "/home/juri/MDEProfiler2/MakePartialRoleTotal/MakingPartialRolesTotalA/without_context/${targetModel}"},
+		{from: "/home/juri/MDEProfiler2/MakePartialRoleTotal/MakingPartialRolesTotalA/without_context/partial2totalRole.atl", to: "http://www.eclipse.org/gmt/2005/KM3"},
+		{from: "/home/juri/MDEProfiler2/MakePartialRoleTotal/MakingPartialRolesTotalA/with_context/build_example.xml//CatalogueOfModelTransformations/MakePartialRoleTotal/MakingPartialRolesTotalA/with_context/InputModels/${sourceModel}", to: "http://www.eclipse.org/gmt/2005/KM3"},
+		{from: "/home/juri/MDEProfiler2/MakePartialRoleTotal/MakingPartialRolesTotalA/without_context/partial2totalRole.atl", to: "http://www.eclipse.org/gmt/2005/KM3"},
+		{from: "/home/juri/MDEProfiler2/MakePartialRoleTotal/MakingPartialRolesTotalA/with_context/${targetModel}", to: "/home/juri/MDEProfiler2/MakePartialRoleTotal/MakingPartialRolesTotalA/without_context/OutputModels/example-KM3target.ecore"},
+		{from: "/home/juri/MDEProfiler2/MakePartialRoleTotal/MakingPartialRolesTotalA/without_context/partial2totalRole.atl", to: "/home/juri/MDEProfiler2/MakePartialRoleTotal/MakingPartialRolesTotalA/with_context/build_example.xml//CatalogueOfModelTransformations/MakePartialRoleTotal/MakingPartialRolesTotalA/with_context/InputModels/${sourceModel}"},
+		{from: "/home/juri/MDEProfiler2/MakePartialRoleTotal/MakingPartialRolesTotalA/without_context/partial2totalRole.atl", to: "/home/juri/MDEProfiler2/MakePartialRoleTotal/MakingPartialRolesTotalA/with_context/${targetModel}"},
+ 	]
+  );
+
+  // create a network
+  var container = document.getElementById('mynetwork');
+  var data = {
+    nodes: nodes,
+    edges: edges
+  };
+  var options = {
+    nodes: {borderWidth: 2},
+    interaction: {hover: true}
+  }
+  var network = new vis.Network(container, data, options);
+</script>
+</body>
+</html>

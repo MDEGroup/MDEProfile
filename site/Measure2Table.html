@@ -1,0 +1,77 @@
+<!doctype html>
+<html>
+<head>
+  <title>Network | Basic usage</title>
+
+  <script type="text/javascript" src="vis.js"></script>
+  <link href="vis-network.min.css" rel="stylesheet" type="text/css" />
+
+  <style type="text/css">
+    #mynetwork {
+      width: 600px;
+      height: 400px;
+      border: 1px solid lightgray;
+    }
+
+    p {
+      max-width:700px;
+    }
+  </style>
+</head>
+<body>
+
+<p>
+  	<h1>Project Name: Measure2Table<br/></h1>
+	
+	
+</p>
+
+<div id="mynetwork"></div>
+
+<script type="text/javascript">
+  // create an array with nodes
+  var nodes = new vis.DataSet(
+     [
+	
+		{id: "/home/juri/MDEProfiler2/Measure2Table/Measure2Table/models/example-Measure.ecore", label: 'example-Measure.ecore', },
+		{id: "/home/juri/MDEProfiler2/Measure2Table/Measure2Table/models/example-Table.ecore", label: 'example-Table.ecore', },
+		{id: "/home/juri/MDEProfiler2/Measure2Table/Measure2Table/metamodels/Table.ecore", label: 'Table.ecore', },
+		{id: "/home/juri/MDEProfiler2/Measure2Table/Measure2Table/metamodels/Measure.ecore", label: 'Measure.ecore', },
+		{id: "/home/juri/MDEProfiler2/Measure2Table/Measure2Table/lib/MeasureHelpers.atl", label: 'MeasureHelpers.atl', color: '#7BE141' },
+		{id: "/home/juri/MDEProfiler2/Measure2Table/Measure2Table/transformations/Measure2Table.atl", label: 'Measure2Table.atl', color: '#7BE141' },
+		{id: "/home/juri/MDEProfiler2/Measure2Table/Measure2Table/metamodels/Table.km3", label: 'Table.km3', },
+		{id: "/home/juri/MDEProfiler2/Measure2Table/Measure2Table/metamodels/Measure.km3", label: 'Measure.km3', },
+		{id: "/home/juri/MDEProfiler2/Measure2Table/Measure2Table/conf/Measure2Table build.xml.launch", label: 'Measure2Table build.xml.launch', color: 'rgb(255,168,7)' },
+		{id: "/home/juri/MDEProfiler2/Measure2Table/Measure2Table/build.xml", label: 'build.xml', color: 'rgb(200,68,170)' },
+		{id: "/home/juri/MDEProfiler2/Measure2Table/Measure2Table/example-Table.ecore", label: 'example-Table.ecore', },
+	 ]	
+
+  );
+
+  // create an array with edges
+  var edges = new vis.DataSet(
+	 [
+		{from: "/home/juri/MDEProfiler2/Measure2Table/Measure2Table/transformations/Measure2Table.atl", to: "/home/juri/MDEProfiler2/Measure2Table/Measure2Table/metamodels/Measure.ecore"},
+		{from: "/home/juri/MDEProfiler2/Measure2Table/Measure2Table/models/example-Measure.ecore", to: "/home/juri/MDEProfiler2/Measure2Table/Measure2Table/metamodels/Measure.ecore"},
+		{from: "/home/juri/MDEProfiler2/Measure2Table/Measure2Table/transformations/Measure2Table.atl", to: "/home/juri/MDEProfiler2/Measure2Table/Measure2Table/metamodels/Table.ecore"},
+		{from: "/home/juri/MDEProfiler2/Measure2Table/Measure2Table/example-Table.ecore", to: "/home/juri/MDEProfiler2/Measure2Table/Measure2Table/models/example-Measure.ecore"},
+		{from: "/home/juri/MDEProfiler2/Measure2Table/Measure2Table/transformations/Measure2Table.atl", to: "/home/juri/MDEProfiler2/Measure2Table/Measure2Table/models/example-Measure.ecore"},
+		{from: "/home/juri/MDEProfiler2/Measure2Table/Measure2Table/transformations/Measure2Table.atl", to: "/home/juri/MDEProfiler2/Measure2Table/Measure2Table/lib/MeasureHelpers.atl"},
+		{from: "/home/juri/MDEProfiler2/Measure2Table/Measure2Table/transformations/Measure2Table.atl", to: "/home/juri/MDEProfiler2/Measure2Table/Measure2Table/example-Table.ecore"},
+ 	]
+  );
+
+  // create a network
+  var container = document.getElementById('mynetwork');
+  var data = {
+    nodes: nodes,
+    edges: edges
+  };
+  var options = {
+    nodes: {borderWidth: 2},
+    interaction: {hover: true}
+  }
+  var network = new vis.Network(container, data, options);
+</script>
+</body>
+</html>

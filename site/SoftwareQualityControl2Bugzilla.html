@@ -1,0 +1,72 @@
+<!doctype html>
+<html>
+<head>
+  <title>Network | Basic usage</title>
+
+  <script type="text/javascript" src="vis.js"></script>
+  <link href="vis-network.min.css" rel="stylesheet" type="text/css" />
+
+  <style type="text/css">
+    #mynetwork {
+      width: 600px;
+      height: 400px;
+      border: 1px solid lightgray;
+    }
+
+    p {
+      max-width:700px;
+    }
+  </style>
+</head>
+<body>
+
+<p>
+  	<h1>Project Name: SoftwareQualityControl2Bugzilla<br/></h1>
+	
+	
+</p>
+
+<div id="mynetwork"></div>
+
+<script type="text/javascript">
+  // create an array with nodes
+  var nodes = new vis.DataSet(
+     [
+	
+		{id: "/home/juri/MDEProfiler2/SoftwareQualityControl2Bugzilla/SoftwareQualityControl2BugzillaFile/modelsExamples/BugzillaExample.ecore", label: 'BugzillaExample.ecore', },
+		{id: "/home/juri/MDEProfiler2/SoftwareQualityControl2Bugzilla/SoftwareQualityControl2BugzillaFile/modelsExamples/SoftwareQualityControlExample.ecore", label: 'SoftwareQualityControlExample.ecore', },
+		{id: "/home/juri/MDEProfiler2/SoftwareQualityControl2Bugzilla/SoftwareQualityControl2BugzillaFile/modelsExamples/BugzillaXMLExample.ecore", label: 'BugzillaXMLExample.ecore', },
+		{id: "/home/juri/MDEProfiler2/SoftwareQualityControl2Bugzilla/SoftwareQualityControl2BugzillaFile/metamodels/Bugzilla.ecore", label: 'Bugzilla.ecore', },
+		{id: "/home/juri/MDEProfiler2/SoftwareQualityControl2Bugzilla/SoftwareQualityControl2BugzillaFile/metamodels/XML.ecore", label: 'XML.ecore', },
+		{id: "/home/juri/MDEProfiler2/SoftwareQualityControl2Bugzilla/SoftwareQualityControl2BugzillaFile/metamodels/SoftwareQualityControl.ecore", label: 'SoftwareQualityControl.ecore', },
+		{id: "/home/juri/MDEProfiler2/SoftwareQualityControl2Bugzilla/SoftwareQualityControl2BugzillaFile/transformations/Bugzilla2XML.atl", label: 'Bugzilla2XML.atl', color: '#7BE141' },
+		{id: "/home/juri/MDEProfiler2/SoftwareQualityControl2Bugzilla/SoftwareQualityControl2BugzillaFile/transformations/SoftwareQualityControl2Bugzilla.atl", label: 'SoftwareQualityControl2Bugzilla.atl', color: '#7BE141' },
+		{id: "/home/juri/MDEProfiler2/SoftwareQualityControl2Bugzilla/SoftwareQualityControl2BugzillaFile/transformations/XML2BugzillaText.atl", label: 'XML2BugzillaText.atl', color: '#7BE141' },
+		{id: "/home/juri/MDEProfiler2/SoftwareQualityControl2Bugzilla/SoftwareQualityControl2BugzillaFile/metamodels/XML.km3", label: 'XML.km3', },
+		{id: "/home/juri/MDEProfiler2/SoftwareQualityControl2Bugzilla/SoftwareQualityControl2BugzillaFile/metamodels/Bugzilla.km3", label: 'Bugzilla.km3', },
+		{id: "/home/juri/MDEProfiler2/SoftwareQualityControl2Bugzilla/SoftwareQualityControl2BugzillaFile/metamodels/SoftwareQualityControl.km3", label: 'SoftwareQualityControl.km3', },
+		{id: "/home/juri/MDEProfiler2/SoftwareQualityControl2Bugzilla/SoftwareQualityControl2BugzillaFile/modelsExamples/BugzillaXMLfileExample.xml", label: 'BugzillaXMLfileExample.xml', },
+	 ]	
+
+  );
+
+  // create an array with edges
+  var edges = new vis.DataSet(
+	 [
+ 	]
+  );
+
+  // create a network
+  var container = document.getElementById('mynetwork');
+  var data = {
+    nodes: nodes,
+    edges: edges
+  };
+  var options = {
+    nodes: {borderWidth: 2},
+    interaction: {hover: true}
+  }
+  var network = new vis.Network(container, data, options);
+</script>
+</body>
+</html>

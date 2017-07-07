@@ -1,0 +1,86 @@
+<!doctype html>
+<html>
+<head>
+  <title>Network | Basic usage</title>
+
+  <script type="text/javascript" src="vis.js"></script>
+  <link href="vis-network.min.css" rel="stylesheet" type="text/css" />
+
+  <style type="text/css">
+    #mynetwork {
+      width: 600px;
+      height: 400px;
+      border: 1px solid lightgray;
+    }
+
+    p {
+      max-width:700px;
+    }
+  </style>
+</head>
+<body>
+
+<p>
+  	<h1>Project Name: Table2TabularHTML<br/></h1>
+	
+	
+</p>
+
+<div id="mynetwork"></div>
+
+<script type="text/javascript">
+  // create an array with nodes
+  var nodes = new vis.DataSet(
+     [
+	
+		{id: "/home/juri/MDEProfiler2/Table2TabularHTML/Table2TabularHTML/models/example-Table.ecore", label: 'example-Table.ecore', },
+		{id: "/home/juri/MDEProfiler2/Table2TabularHTML/Table2TabularHTML/metamodels/Table.ecore", label: 'Table.ecore', },
+		{id: "/home/juri/MDEProfiler2/Table2TabularHTML/Table2TabularHTML/metamodels/HTML.ecore", label: 'HTML.ecore', },
+		{id: "/home/juri/MDEProfiler2/Table2TabularHTML/Table2TabularHTML/metamodels/XML.ecore", label: 'XML.ecore', },
+		{id: "/home/juri/MDEProfiler2/Table2TabularHTML/Table2TabularHTML/lib/TableHelpers.atl", label: 'TableHelpers.atl', color: '#7BE141' },
+		{id: "/home/juri/MDEProfiler2/Table2TabularHTML/Table2TabularHTML/transformations/Table2TabularHTML.atl", label: 'Table2TabularHTML.atl', color: '#7BE141' },
+		{id: "/home/juri/MDEProfiler2/Table2TabularHTML/Table2TabularHTML/transformations/HTML2XML.atl", label: 'HTML2XML.atl', color: '#7BE141' },
+		{id: "/home/juri/MDEProfiler2/Table2TabularHTML/Table2TabularHTML/metamodels/HTML.km3", label: 'HTML.km3', },
+		{id: "/home/juri/MDEProfiler2/Table2TabularHTML/Table2TabularHTML/metamodels/Table.km3", label: 'Table.km3', },
+		{id: "/home/juri/MDEProfiler2/Table2TabularHTML/Table2TabularHTML/metamodels/XML.km3", label: 'XML.km3', },
+		{id: "/home/juri/MDEProfiler2/Table2TabularHTML/Table2TabularHTML/conf/Table2TabularHTML build.xml.launch", label: 'Table2TabularHTML build.xml.launch', color: 'rgb(255,168,7)' },
+		{id: "/home/juri/MDEProfiler2/Table2TabularHTML/Table2TabularHTML/build.xml", label: 'build.xml', color: 'rgb(200,68,170)' },
+		{id: "/home/juri/MDEProfiler2/Table2TabularHTML/Table2TabularHTML/example-TabularHTML.ecore", label: 'example-TabularHTML.ecore', },
+		{id: "/home/juri/MDEProfiler2/Table2TabularHTML/Table2TabularHTML/example-XML.ecore", label: 'example-XML.ecore', },
+	 ]	
+
+  );
+
+  // create an array with edges
+  var edges = new vis.DataSet(
+	 [
+		{from: "/home/juri/MDEProfiler2/Table2TabularHTML/Table2TabularHTML/transformations/Table2TabularHTML.atl", to: "/home/juri/MDEProfiler2/Table2TabularHTML/Table2TabularHTML/metamodels/Table.ecore"},
+		{from: "/home/juri/MDEProfiler2/Table2TabularHTML/Table2TabularHTML/models/example-Table.ecore", to: "/home/juri/MDEProfiler2/Table2TabularHTML/Table2TabularHTML/metamodels/Table.ecore"},
+		{from: "/home/juri/MDEProfiler2/Table2TabularHTML/Table2TabularHTML/transformations/Table2TabularHTML.atl", to: "/home/juri/MDEProfiler2/Table2TabularHTML/Table2TabularHTML/metamodels/HTML.ecore"},
+		{from: "/home/juri/MDEProfiler2/Table2TabularHTML/Table2TabularHTML/example-TabularHTML.ecore", to: "/home/juri/MDEProfiler2/Table2TabularHTML/Table2TabularHTML/models/example-Table.ecore"},
+		{from: "/home/juri/MDEProfiler2/Table2TabularHTML/Table2TabularHTML/transformations/HTML2XML.atl", to: "/home/juri/MDEProfiler2/Table2TabularHTML/Table2TabularHTML/metamodels/HTML.ecore"},
+		{from: "/home/juri/MDEProfiler2/Table2TabularHTML/Table2TabularHTML/metamodels/HTML.ecore", to: "/home/juri/MDEProfiler2/Table2TabularHTML/Table2TabularHTML/metamodels/HTML.ecore"},
+		{from: "/home/juri/MDEProfiler2/Table2TabularHTML/Table2TabularHTML/transformations/HTML2XML.atl", to: "/home/juri/MDEProfiler2/Table2TabularHTML/Table2TabularHTML/metamodels/XML.ecore"},
+		{from: "/home/juri/MDEProfiler2/Table2TabularHTML/Table2TabularHTML/example-XML.ecore", to: "/home/juri/MDEProfiler2/Table2TabularHTML/Table2TabularHTML/metamodels/XML.ecore"},
+		{from: "/home/juri/MDEProfiler2/Table2TabularHTML/Table2TabularHTML/transformations/Table2TabularHTML.atl", to: "/home/juri/MDEProfiler2/Table2TabularHTML/Table2TabularHTML/models/example-Table.ecore"},
+		{from: "/home/juri/MDEProfiler2/Table2TabularHTML/Table2TabularHTML/transformations/Table2TabularHTML.atl", to: "/home/juri/MDEProfiler2/Table2TabularHTML/Table2TabularHTML/lib/TableHelpers.atl"},
+		{from: "/home/juri/MDEProfiler2/Table2TabularHTML/Table2TabularHTML/transformations/Table2TabularHTML.atl", to: "/home/juri/MDEProfiler2/Table2TabularHTML/Table2TabularHTML/example-TabularHTML.ecore"},
+		{from: "/home/juri/MDEProfiler2/Table2TabularHTML/Table2TabularHTML/transformations/HTML2XML.atl", to: "/home/juri/MDEProfiler2/Table2TabularHTML/Table2TabularHTML/metamodels/HTML.ecore"},
+		{from: "/home/juri/MDEProfiler2/Table2TabularHTML/Table2TabularHTML/transformations/HTML2XML.atl", to: "/home/juri/MDEProfiler2/Table2TabularHTML/Table2TabularHTML/example-XML.ecore"},
+ 	]
+  );
+
+  // create a network
+  var container = document.getElementById('mynetwork');
+  var data = {
+    nodes: nodes,
+    edges: edges
+  };
+  var options = {
+    nodes: {borderWidth: 2},
+    interaction: {hover: true}
+  }
+  var network = new vis.Network(container, data, options);
+</script>
+</body>
+</html>

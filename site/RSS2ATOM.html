@@ -1,0 +1,132 @@
+<!doctype html>
+<html>
+<head>
+  <title>Network | Basic usage</title>
+
+  <script type="text/javascript" src="vis.js"></script>
+  <link href="vis-network.min.css" rel="stylesheet" type="text/css" />
+
+  <style type="text/css">
+    #mynetwork {
+      width: 600px;
+      height: 400px;
+      border: 1px solid lightgray;
+    }
+
+    p {
+      max-width:700px;
+    }
+  </style>
+</head>
+<body>
+
+<p>
+  	<h1>Project Name: RSS2ATOM<br/></h1>
+	
+	
+</p>
+
+<div id="mynetwork"></div>
+
+<script type="text/javascript">
+  // create an array with nodes
+  var nodes = new vis.DataSet(
+     [
+	
+		{id: "/home/juri/MDEProfiler2/RSS2ATOM/RSS2ATOM/ATOM/Exemple1-ATOM.ecore", label: 'Exemple1-ATOM.ecore', },
+		{id: "/home/juri/MDEProfiler2/RSS2ATOM/RSS2ATOM/ATOM/Exemple-ATOM.ecore", label: 'Exemple-ATOM.ecore', },
+		{id: "/home/juri/MDEProfiler2/RSS2ATOM/RSS2ATOM/ATOM/ATOM.ecore", label: 'ATOM.ecore', },
+		{id: "/home/juri/MDEProfiler2/RSS2ATOM/RSS2ATOM/XML/Exemple1-XML.ecore", label: 'Exemple1-XML.ecore', },
+		{id: "/home/juri/MDEProfiler2/RSS2ATOM/RSS2ATOM/XML/XML.ecore", label: 'XML.ecore', },
+		{id: "/home/juri/MDEProfiler2/RSS2ATOM/RSS2ATOM/XML/Exemple-XML.ecore", label: 'Exemple-XML.ecore', },
+		{id: "/home/juri/MDEProfiler2/RSS2ATOM/RSS2ATOM/XML/Exemple-ATOMinv.ecore", label: 'Exemple-ATOMinv.ecore', },
+		{id: "/home/juri/MDEProfiler2/RSS2ATOM/RSS2ATOM/XML/Exemple-RSSinv.ecore", label: 'Exemple-RSSinv.ecore', },
+		{id: "/home/juri/MDEProfiler2/RSS2ATOM/RSS2ATOM/RSS/Exemple1-RSS.ecore", label: 'Exemple1-RSS.ecore', },
+		{id: "/home/juri/MDEProfiler2/RSS2ATOM/RSS2ATOM/RSS/RSS.ecore", label: 'RSS.ecore', },
+		{id: "/home/juri/MDEProfiler2/RSS2ATOM/RSS2ATOM/RSS/Exemple-RSS.ecore", label: 'Exemple-RSS.ecore', },
+		{id: "/home/juri/MDEProfiler2/RSS2ATOM/RSS2ATOM/ATLTransformations/RSS2ATOM.atl", label: 'RSS2ATOM.atl', color: '#7BE141' },
+		{id: "/home/juri/MDEProfiler2/RSS2ATOM/RSS2ATOM/ATLTransformations/XML2RSS.atl", label: 'XML2RSS.atl', color: '#7BE141' },
+		{id: "/home/juri/MDEProfiler2/RSS2ATOM/RSS2ATOM/ATLTransformations/ATOM2RSS.atl", label: 'ATOM2RSS.atl', color: '#7BE141' },
+		{id: "/home/juri/MDEProfiler2/RSS2ATOM/RSS2ATOM/ATLTransformations/RSS2XML.atl", label: 'RSS2XML.atl', color: '#7BE141' },
+		{id: "/home/juri/MDEProfiler2/RSS2ATOM/RSS2ATOM/ATLTransformations/XML2ATOM.atl", label: 'XML2ATOM.atl', color: '#7BE141' },
+		{id: "/home/juri/MDEProfiler2/RSS2ATOM/RSS2ATOM/ATLTransformations/ATOM2XML.atl", label: 'ATOM2XML.atl', color: '#7BE141' },
+		{id: "/home/juri/MDEProfiler2/RSS2ATOM/RSS2ATOM/ATOM/ATOM.km3", label: 'ATOM.km3', },
+		{id: "/home/juri/MDEProfiler2/RSS2ATOM/RSS2ATOM/XML/XML.km3", label: 'XML.km3', },
+		{id: "/home/juri/MDEProfiler2/RSS2ATOM/RSS2ATOM/RSS/RSS.km3", label: 'RSS.km3', },
+		{id: "/home/juri/MDEProfiler2/RSS2ATOM/RSS2ATOM/build.xml", label: 'build.xml', color: 'rgb(200,68,170)' },
+		{id: "/home/juri/MDEProfiler2/RSS2ATOM/RSS2ATOM/XML/Exemple-ATOMinv.xml", label: 'Exemple-ATOMinv.xml', },
+		{id: "/home/juri/MDEProfiler2/RSS2ATOM/RSS2ATOM/XML/Exemple.xml", label: 'Exemple.xml', },
+		{id: "/home/juri/MDEProfiler2/RSS2ATOM/RSS2ATOM/XML/Exemple1.xml", label: 'Exemple1.xml', },
+		{id: "/home/juri/MDEProfiler2/RSS2ATOM/RSS2ATOM/XML/Exemple-RSSinv.xml", label: 'Exemple-RSSinv.xml', },
+		{id: "/home/juri/MDEProfiler2/RSS2ATOM/RSS2ATOM/build.xml/${sourceModel6}", label: '${sourceModel6}', },
+		{id: "/home/juri/MDEProfiler2/RSS2ATOM/RSS2ATOM/targetModel6", label: 'targetModel6', },
+		{id: "/home/juri/MDEProfiler2/RSS2ATOM/RSS2ATOM/build.xml/${sourceModel5}", label: '${sourceModel5}', },
+		{id: "/home/juri/MDEProfiler2/RSS2ATOM/RSS2ATOM/targetModel5", label: 'targetModel5', },
+		{id: "/home/juri/MDEProfiler2/RSS2ATOM/RSS2ATOM/build.xml/${sourceModel4}", label: '${sourceModel4}', },
+		{id: "/home/juri/MDEProfiler2/RSS2ATOM/RSS2ATOM/targetModel4", label: 'targetModel4', },
+		{id: "/home/juri/MDEProfiler2/RSS2ATOM/RSS2ATOM/build.xml/${sourceModel3}", label: '${sourceModel3}', },
+		{id: "/home/juri/MDEProfiler2/RSS2ATOM/RSS2ATOM/targetModel3", label: 'targetModel3', },
+		{id: "/home/juri/MDEProfiler2/RSS2ATOM/RSS2ATOM/build.xml/${sourceModel2}", label: '${sourceModel2}', },
+		{id: "/home/juri/MDEProfiler2/RSS2ATOM/RSS2ATOM/targetModel2", label: 'targetModel2', },
+		{id: "/home/juri/MDEProfiler2/RSS2ATOM/RSS2ATOM/build.xml/${sourceModel1}", label: '${sourceModel1}', },
+		{id: "/home/juri/MDEProfiler2/RSS2ATOM/RSS2ATOM/targetModel1", label: 'targetModel1', },
+	 ]	
+
+  );
+
+  // create an array with edges
+  var edges = new vis.DataSet(
+	 [
+		{from: "/home/juri/MDEProfiler2/RSS2ATOM/RSS2ATOM/build.xml/${sourceModel6}", to: "/home/juri/MDEProfiler2/RSS2ATOM/RSS2ATOM/ATOM/ATOM.ecore"},
+		{from: "/home/juri/MDEProfiler2/RSS2ATOM/RSS2ATOM/ATLTransformations/ATOM2XML.atl", to: "/home/juri/MDEProfiler2/RSS2ATOM/RSS2ATOM/ATOM/ATOM.ecore"},
+		{from: "/home/juri/MDEProfiler2/RSS2ATOM/RSS2ATOM/ATLTransformations/ATOM2XML.atl", to: "/home/juri/MDEProfiler2/RSS2ATOM/RSS2ATOM/XML/XML.ecore"},
+		{from: "/home/juri/MDEProfiler2/RSS2ATOM/RSS2ATOM/targetModel6", to: "/home/juri/MDEProfiler2/RSS2ATOM/RSS2ATOM/XML/Exemple1-XML.ecore"},
+		{from: "/home/juri/MDEProfiler2/RSS2ATOM/RSS2ATOM/build.xml/${sourceModel5}", to: "/home/juri/MDEProfiler2/RSS2ATOM/RSS2ATOM/RSS/RSS.ecore"},
+		{from: "/home/juri/MDEProfiler2/RSS2ATOM/RSS2ATOM/ATLTransformations/RSS2ATOM.atl", to: "/home/juri/MDEProfiler2/RSS2ATOM/RSS2ATOM/ATOM/ATOM.ecore"},
+		{from: "/home/juri/MDEProfiler2/RSS2ATOM/RSS2ATOM/ATLTransformations/RSS2ATOM.atl", to: "/home/juri/MDEProfiler2/RSS2ATOM/RSS2ATOM/RSS/RSS.ecore"},
+		{from: "/home/juri/MDEProfiler2/RSS2ATOM/RSS2ATOM/targetModel5", to: "/home/juri/MDEProfiler2/RSS2ATOM/RSS2ATOM/ATOM/Exemple1-ATOM.ecore"},
+		{from: "/home/juri/MDEProfiler2/RSS2ATOM/RSS2ATOM/build.xml/${sourceModel4}", to: "/home/juri/MDEProfiler2/RSS2ATOM/RSS2ATOM/XML/XML.ecore"},
+		{from: "/home/juri/MDEProfiler2/RSS2ATOM/RSS2ATOM/ATLTransformations/XML2RSS.atl", to: "/home/juri/MDEProfiler2/RSS2ATOM/RSS2ATOM/XML/XML.ecore"},
+		{from: "/home/juri/MDEProfiler2/RSS2ATOM/RSS2ATOM/ATLTransformations/XML2RSS.atl", to: "/home/juri/MDEProfiler2/RSS2ATOM/RSS2ATOM/RSS/RSS.ecore"},
+		{from: "/home/juri/MDEProfiler2/RSS2ATOM/RSS2ATOM/targetModel4", to: "/home/juri/MDEProfiler2/RSS2ATOM/RSS2ATOM/ATOM/Exemple1-ATOM.ecore"},
+		{from: "/home/juri/MDEProfiler2/RSS2ATOM/RSS2ATOM/build.xml/${sourceModel3}", to: "/home/juri/MDEProfiler2/RSS2ATOM/RSS2ATOM/RSS/RSS.ecore"},
+		{from: "/home/juri/MDEProfiler2/RSS2ATOM/RSS2ATOM/ATLTransformations/RSS2XML.atl", to: "/home/juri/MDEProfiler2/RSS2ATOM/RSS2ATOM/RSS/RSS.ecore"},
+		{from: "/home/juri/MDEProfiler2/RSS2ATOM/RSS2ATOM/ATLTransformations/RSS2XML.atl", to: "/home/juri/MDEProfiler2/RSS2ATOM/RSS2ATOM/XML/XML.ecore"},
+		{from: "/home/juri/MDEProfiler2/RSS2ATOM/RSS2ATOM/targetModel3", to: "/home/juri/MDEProfiler2/RSS2ATOM/RSS2ATOM/XML/Exemple1-XML.ecore"},
+		{from: "/home/juri/MDEProfiler2/RSS2ATOM/RSS2ATOM/build.xml/${sourceModel2}", to: "/home/juri/MDEProfiler2/RSS2ATOM/RSS2ATOM/ATOM/ATOM.ecore"},
+		{from: "/home/juri/MDEProfiler2/RSS2ATOM/RSS2ATOM/ATLTransformations/ATOM2RSS.atl", to: "/home/juri/MDEProfiler2/RSS2ATOM/RSS2ATOM/ATOM/ATOM.ecore"},
+		{from: "/home/juri/MDEProfiler2/RSS2ATOM/RSS2ATOM/ATLTransformations/ATOM2RSS.atl", to: "/home/juri/MDEProfiler2/RSS2ATOM/RSS2ATOM/RSS/RSS.ecore"},
+		{from: "/home/juri/MDEProfiler2/RSS2ATOM/RSS2ATOM/targetModel2", to: "/home/juri/MDEProfiler2/RSS2ATOM/RSS2ATOM/ATOM/Exemple1-ATOM.ecore"},
+		{from: "/home/juri/MDEProfiler2/RSS2ATOM/RSS2ATOM/build.xml/${sourceModel1}", to: "/home/juri/MDEProfiler2/RSS2ATOM/RSS2ATOM/XML/XML.ecore"},
+		{from: "/home/juri/MDEProfiler2/RSS2ATOM/RSS2ATOM/ATLTransformations/XML2ATOM.atl", to: "/home/juri/MDEProfiler2/RSS2ATOM/RSS2ATOM/XML/XML.ecore"},
+		{from: "/home/juri/MDEProfiler2/RSS2ATOM/RSS2ATOM/ATLTransformations/XML2ATOM.atl", to: "/home/juri/MDEProfiler2/RSS2ATOM/RSS2ATOM/ATOM/ATOM.ecore"},
+		{from: "/home/juri/MDEProfiler2/RSS2ATOM/RSS2ATOM/targetModel1", to: "/home/juri/MDEProfiler2/RSS2ATOM/RSS2ATOM/ATOM/Exemple1-ATOM.ecore"},
+		{from: "/home/juri/MDEProfiler2/RSS2ATOM/RSS2ATOM/ATLTransformations/ATOM2XML.atl", to: "/home/juri/MDEProfiler2/RSS2ATOM/RSS2ATOM/build.xml/${sourceModel6}"},
+		{from: "/home/juri/MDEProfiler2/RSS2ATOM/RSS2ATOM/ATLTransformations/ATOM2XML.atl", to: "/home/juri/MDEProfiler2/RSS2ATOM/RSS2ATOM/targetModel6"},
+		{from: "/home/juri/MDEProfiler2/RSS2ATOM/RSS2ATOM/ATLTransformations/RSS2ATOM.atl", to: "/home/juri/MDEProfiler2/RSS2ATOM/RSS2ATOM/build.xml/${sourceModel5}"},
+		{from: "/home/juri/MDEProfiler2/RSS2ATOM/RSS2ATOM/ATLTransformations/RSS2ATOM.atl", to: "/home/juri/MDEProfiler2/RSS2ATOM/RSS2ATOM/targetModel5"},
+		{from: "/home/juri/MDEProfiler2/RSS2ATOM/RSS2ATOM/ATLTransformations/XML2RSS.atl", to: "/home/juri/MDEProfiler2/RSS2ATOM/RSS2ATOM/build.xml/${sourceModel4}"},
+		{from: "/home/juri/MDEProfiler2/RSS2ATOM/RSS2ATOM/ATLTransformations/XML2RSS.atl", to: "/home/juri/MDEProfiler2/RSS2ATOM/RSS2ATOM/targetModel4"},
+		{from: "/home/juri/MDEProfiler2/RSS2ATOM/RSS2ATOM/ATLTransformations/RSS2XML.atl", to: "/home/juri/MDEProfiler2/RSS2ATOM/RSS2ATOM/build.xml/${sourceModel3}"},
+		{from: "/home/juri/MDEProfiler2/RSS2ATOM/RSS2ATOM/ATLTransformations/RSS2XML.atl", to: "/home/juri/MDEProfiler2/RSS2ATOM/RSS2ATOM/targetModel3"},
+		{from: "/home/juri/MDEProfiler2/RSS2ATOM/RSS2ATOM/ATLTransformations/ATOM2RSS.atl", to: "/home/juri/MDEProfiler2/RSS2ATOM/RSS2ATOM/build.xml/${sourceModel2}"},
+		{from: "/home/juri/MDEProfiler2/RSS2ATOM/RSS2ATOM/ATLTransformations/ATOM2RSS.atl", to: "/home/juri/MDEProfiler2/RSS2ATOM/RSS2ATOM/targetModel2"},
+		{from: "/home/juri/MDEProfiler2/RSS2ATOM/RSS2ATOM/ATLTransformations/XML2ATOM.atl", to: "/home/juri/MDEProfiler2/RSS2ATOM/RSS2ATOM/build.xml/${sourceModel1}"},
+		{from: "/home/juri/MDEProfiler2/RSS2ATOM/RSS2ATOM/ATLTransformations/XML2ATOM.atl", to: "/home/juri/MDEProfiler2/RSS2ATOM/RSS2ATOM/targetModel1"},
+ 	]
+  );
+
+  // create a network
+  var container = document.getElementById('mynetwork');
+  var data = {
+    nodes: nodes,
+    edges: edges
+  };
+  var options = {
+    nodes: {borderWidth: 2},
+    interaction: {hover: true}
+  }
+  var network = new vis.Network(container, data, options);
+</script>
+</body>
+</html>

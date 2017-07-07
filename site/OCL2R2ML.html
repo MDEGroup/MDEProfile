@@ -1,0 +1,86 @@
+<!doctype html>
+<html>
+<head>
+  <title>Network | Basic usage</title>
+
+  <script type="text/javascript" src="vis.js"></script>
+  <link href="vis-network.min.css" rel="stylesheet" type="text/css" />
+
+  <style type="text/css">
+    #mynetwork {
+      width: 600px;
+      height: 400px;
+      border: 1px solid lightgray;
+    }
+
+    p {
+      max-width:700px;
+    }
+  </style>
+</head>
+<body>
+
+<p>
+  	<h1>Project Name: OCL2R2ML<br/></h1>
+	
+	
+</p>
+
+<div id="mynetwork"></div>
+
+<script type="text/javascript">
+  // create an array with nodes
+  var nodes = new vis.DataSet(
+     [
+	
+		{id: "/home/juri/MDEProfiler2/OCL2R2ML/OCL2R2ML/metamodels/ocl/OCL.ecore", label: 'OCL.ecore', },
+		{id: "/home/juri/MDEProfiler2/OCL2R2ML/OCL2R2ML/metamodels/r2ml/r2ml.ecore", label: 'r2ml.ecore', },
+		{id: "/home/juri/MDEProfiler2/OCL2R2ML/OCL2R2ML/metamodels/xml/XML.ecore", label: 'XML.ecore', },
+		{id: "/home/juri/MDEProfiler2/OCL2R2ML/OCL2R2ML/transformations/R2ML2XML/R2ML2XML.atl", label: 'R2ML2XML.atl', color: '#7BE141' },
+		{id: "/home/juri/MDEProfiler2/OCL2R2ML/OCL2R2ML/transformations/OCL2R2ML/OCL2R2ML.atl", label: 'OCL2R2ML.atl', color: '#7BE141' },
+		{id: "/home/juri/MDEProfiler2/OCL2R2ML/OCL2R2ML/metamodels/ocl/OCL.km3", label: 'OCL.km3', },
+		{id: "/home/juri/MDEProfiler2/OCL2R2ML/OCL2R2ML/metamodels/r2ml/r2ml.km3", label: 'r2ml.km3', },
+		{id: "/home/juri/MDEProfiler2/OCL2R2ML/OCL2R2ML/metamodels/xml/XML.km3", label: 'XML.km3', },
+		{id: "/home/juri/MDEProfiler2/OCL2R2ML/OCL2R2ML/OCL2R2ML.xml.launch", label: 'OCL2R2ML.xml.launch', color: 'rgb(255,168,7)' },
+		{id: "/home/juri/MDEProfiler2/OCL2R2ML/OCL2R2ML/OCL2R2ML.xml", label: 'OCL2R2ML.xml', color: 'rgb(200,68,170)' },
+		{id: "/home/juri/MDEProfiler2/OCL2R2ML/OCL2R2ML/models/r2ml-xml/R2MLRule.xml", label: 'R2MLRule.xml', },
+		{id: "/home/juri/MDEProfiler2/OCL2R2ML/OCL2R2ML/OCL2R2ML.xml//OCL2R2ML/models/ocl/m1.ocl", label: '/OCL2R2ML/models/ocl/m1.ocl', },
+		{id: "/home/juri/MDEProfiler2/OCL2R2ML/OCL2R2ML/r2mlModel", label: 'r2mlModel', },
+		{id: "/home/juri/MDEProfiler2/OCL2R2ML/OCL2R2ML/xmlModel", label: 'xmlModel', },
+	 ]	
+
+  );
+
+  // create an array with edges
+  var edges = new vis.DataSet(
+	 [
+		{from: "/home/juri/MDEProfiler2/OCL2R2ML/OCL2R2ML/OCL2R2ML.xml//OCL2R2ML/models/ocl/m1.ocl", to: "invalid"},
+		{from: "/home/juri/MDEProfiler2/OCL2R2ML/OCL2R2ML/transformations/OCL2R2ML/OCL2R2ML.atl", to: "invalid"},
+		{from: "/home/juri/MDEProfiler2/OCL2R2ML/OCL2R2ML/transformations/OCL2R2ML/OCL2R2ML.atl", to: "invalid"},
+		{from: "/home/juri/MDEProfiler2/OCL2R2ML/OCL2R2ML/r2mlModel", to: "/home/juri/MDEProfiler2/OCL2R2ML/OCL2R2ML/metamodels/ocl/OCL.ecore"},
+		{from: "/home/juri/MDEProfiler2/OCL2R2ML/OCL2R2ML/r2mlModel", to: "invalid"},
+		{from: "/home/juri/MDEProfiler2/OCL2R2ML/OCL2R2ML/transformations/R2ML2XML/R2ML2XML.atl", to: "invalid"},
+		{from: "/home/juri/MDEProfiler2/OCL2R2ML/OCL2R2ML/transformations/R2ML2XML/R2ML2XML.atl", to: "invalid"},
+		{from: "/home/juri/MDEProfiler2/OCL2R2ML/OCL2R2ML/xmlModel", to: "/home/juri/MDEProfiler2/OCL2R2ML/OCL2R2ML/metamodels/xml/XML.ecore"},
+		{from: "/home/juri/MDEProfiler2/OCL2R2ML/OCL2R2ML/transformations/OCL2R2ML/OCL2R2ML.atl", to: "/home/juri/MDEProfiler2/OCL2R2ML/OCL2R2ML/OCL2R2ML.xml//OCL2R2ML/models/ocl/m1.ocl"},
+		{from: "/home/juri/MDEProfiler2/OCL2R2ML/OCL2R2ML/transformations/OCL2R2ML/OCL2R2ML.atl", to: "/home/juri/MDEProfiler2/OCL2R2ML/OCL2R2ML/r2mlModel"},
+		{from: "/home/juri/MDEProfiler2/OCL2R2ML/OCL2R2ML/transformations/OCL2R2ML/OCL2R2ML.atl", to: "invalid"},
+		{from: "/home/juri/MDEProfiler2/OCL2R2ML/OCL2R2ML/transformations/R2ML2XML/R2ML2XML.atl", to: "/home/juri/MDEProfiler2/OCL2R2ML/OCL2R2ML/r2mlModel"},
+		{from: "/home/juri/MDEProfiler2/OCL2R2ML/OCL2R2ML/transformations/R2ML2XML/R2ML2XML.atl", to: "/home/juri/MDEProfiler2/OCL2R2ML/OCL2R2ML/xmlModel"},
+ 	]
+  );
+
+  // create a network
+  var container = document.getElementById('mynetwork');
+  var data = {
+    nodes: nodes,
+    edges: edges
+  };
+  var options = {
+    nodes: {borderWidth: 2},
+    interaction: {hover: true}
+  }
+  var network = new vis.Network(container, data, options);
+</script>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!doctype html>
+<html>
+<head>
+  <title>Network | Basic usage</title>
+
+  <script type="text/javascript" src="vis.js"></script>
+  <link href="vis-network.min.css" rel="stylesheet" type="text/css" />
+
+  <style type="text/css">
+    #mynetwork {
+      width: 600px;
+      height: 400px;
+      border: 1px solid lightgray;
+    }
+
+    p {
+      max-width:700px;
+    }
+  </style>
+</head>
+<body>
+
+<p>
+  	<h1>Project Name: UMLCD2UMLProfile<br/></h1>
+	
+	
+</p>
+
+<div id="mynetwork"></div>
+
+<script type="text/javascript">
+  // create an array with nodes
+  var nodes = new vis.DataSet(
+     [
+	
+		{id: "/home/juri/MDEProfiler2/UMLCD2UMLProfile/UMLClassDiagram_to_UMLProfile/Transformations/UMLCD2UMLProfile.atl", label: 'UMLCD2UMLProfile.atl', color: '#7BE141' },
+		{id: "/home/juri/MDEProfiler2/UMLCD2UMLProfile/UMLClassDiagram_to_UMLProfile/Transformations/UML2Copy.atl", label: 'UML2Copy.atl', color: '#7BE141' },
+		{id: "/home/juri/MDEProfiler2/UMLCD2UMLProfile/UMLClassDiagram_to_UMLProfile/Transformations/UMLCD2UMLProfile.launch", label: 'UMLCD2UMLProfile.launch', color: 'rgb(255,168,7)' },
+		{id: "/home/juri/MDEProfiler2/UMLCD2UMLProfile/UMLClassDiagram_to_UMLProfile/Transformations/build.xml.launch", label: 'build.xml.launch', color: 'rgb(255,168,7)' },
+		{id: "/home/juri/MDEProfiler2/UMLCD2UMLProfile/UMLClassDiagram_to_UMLProfile/Transformations/build.xml", label: 'build.xml', },
+		{id: "/home/juri/MDEProfiler2/UMLCD2UMLProfile/UMLClassDiagram_to_UMLProfile/Transformations/UMLClassDiagram_to_UMLProfile/ParamModels/UML.uml", label: '/UMLClassDiagram_to_UMLProfile/ParamModels/UML.uml', },
+		{id: "/home/juri/MDEProfiler2/UMLCD2UMLProfile/UMLClassDiagram_to_UMLProfile/Transformations/UMLClassDiagram_to_UMLProfile/OutputModel/Book.profile.uml", label: '/UMLClassDiagram_to_UMLProfile/OutputModel/Book.profile.uml', },
+		{id: "/home/juri/MDEProfiler2/UMLCD2UMLProfile/UMLClassDiagram_to_UMLProfile/Transformations/build.xml/../InputModel/Book.uml", label: '../InputModel/Book.uml', },
+	 ]	
+
+  );
+
+  // create an array with edges
+  var edges = new vis.DataSet(
+	 [
+		{from: "/home/juri/MDEProfiler2/UMLCD2UMLProfile/UMLClassDiagram_to_UMLProfile/Transformations/UMLClassDiagram_to_UMLProfile/ParamModels/UML.uml", to: "invalid"},
+		{from: "/home/juri/MDEProfiler2/UMLCD2UMLProfile/UMLClassDiagram_to_UMLProfile/Transformations/UMLClassDiagram_to_UMLProfile/ParamModels/UML.uml", to: "/home/juri/MDEProfiler2/UMLCD2UMLProfile/UMLClassDiagram_to_UMLProfile/Transformations/UML2Copy.atl"},
+		{from: "/home/juri/MDEProfiler2/UMLCD2UMLProfile/UMLClassDiagram_to_UMLProfile/Transformations/UMLClassDiagram_to_UMLProfile/ParamModels/UML.uml", to: "invalid"},
+		{from: "/home/juri/MDEProfiler2/UMLCD2UMLProfile/UMLClassDiagram_to_UMLProfile/Transformations/UMLClassDiagram_to_UMLProfile/ParamModels/UML.uml", to: "/home/juri/MDEProfiler2/UMLCD2UMLProfile/UMLClassDiagram_to_UMLProfile/Transformations/UML2Copy.atl"},
+		{from: "/home/juri/MDEProfiler2/UMLCD2UMLProfile/UMLClassDiagram_to_UMLProfile/Transformations/UMLClassDiagram_to_UMLProfile/ParamModels/UML.uml", to: "invalid"},
+		{from: "/home/juri/MDEProfiler2/UMLCD2UMLProfile/UMLClassDiagram_to_UMLProfile/Transformations/UMLClassDiagram_to_UMLProfile/ParamModels/UML.uml", to: "/home/juri/MDEProfiler2/UMLCD2UMLProfile/UMLClassDiagram_to_UMLProfile/Transformations/UML2Copy.atl"},
+		{from: "/home/juri/MDEProfiler2/UMLCD2UMLProfile/UMLClassDiagram_to_UMLProfile/Transformations/UMLClassDiagram_to_UMLProfile/OutputModel/Book.profile.uml", to: "/home/juri/MDEProfiler2/UMLCD2UMLProfile/UMLClassDiagram_to_UMLProfile/Transformations/UML2Copy.atl"},
+		{from: "/home/juri/MDEProfiler2/UMLCD2UMLProfile/UMLClassDiagram_to_UMLProfile/Transformations/UMLClassDiagram_to_UMLProfile/OutputModel/Book.profile.uml", to: "invalid"},
+ 	]
+  );
+
+  // create a network
+  var container = document.getElementById('mynetwork');
+  var data = {
+    nodes: nodes,
+    edges: edges
+  };
+  var options = {
+    nodes: {borderWidth: 2},
+    interaction: {hover: true}
+  }
+  var network = new vis.Network(container, data, options);
+</script>
+</body>
+</html>

@@ -1,0 +1,106 @@
+<!doctype html>
+<html>
+<head>
+  <title>Network | Basic usage</title>
+
+  <script type="text/javascript" src="vis.js"></script>
+  <link href="vis-network.min.css" rel="stylesheet" type="text/css" />
+
+  <style type="text/css">
+    #mynetwork {
+      width: 600px;
+      height: 400px;
+      border: 1px solid lightgray;
+    }
+
+    p {
+      max-width:700px;
+    }
+  </style>
+</head>
+<body>
+
+<p>
+  	<h1>Project Name: CPL2SPL<br/></h1>
+	
+	
+</p>
+
+<div id="mynetwork"></div>
+
+<script type="text/javascript">
+  // create an array with nodes
+  var nodes = new vis.DataSet(
+     [
+	
+		{id: "/home/juri/MDEProfiler2/CPL2SPL/CPL2SPL/SPL/SPL.ecore", label: 'SPL.ecore', },
+		{id: "/home/juri/MDEProfiler2/CPL2SPL/CPL2SPL/AMMACore/TCS.ecore", label: 'TCS.ecore', },
+		{id: "/home/juri/MDEProfiler2/CPL2SPL/CPL2SPL/AMMACore/XML.ecore", label: 'XML.ecore', },
+		{id: "/home/juri/MDEProfiler2/CPL2SPL/CPL2SPL/CPL/CPL.ecore", label: 'CPL.ecore', },
+		{id: "/home/juri/MDEProfiler2/CPL2SPL/CPL2SPL/CPL2SPL.atl", label: 'CPL2SPL.atl', color: '#7BE141' },
+		{id: "/home/juri/MDEProfiler2/CPL2SPL/CPL2SPL/CPL/XMLSyntax/XML2CPL.atl", label: 'XML2CPL.atl', color: '#7BE141' },
+		{id: "/home/juri/MDEProfiler2/CPL2SPL/CPL2SPL/CPL/XMLSyntax/XMLHelpers.atl", label: 'XMLHelpers.atl', color: '#7BE141' },
+		{id: "/home/juri/MDEProfiler2/CPL2SPL/CPL2SPL/SPL/SPL.km3", label: 'SPL.km3', },
+		{id: "/home/juri/MDEProfiler2/CPL2SPL/CPL2SPL/CPL/CPL.km3", label: 'CPL.km3', },
+		{id: "/home/juri/MDEProfiler2/CPL2SPL/CPL2SPL/CPL2SP.xml.launch", label: 'CPL2SP.xml.launch', color: 'rgb(255,168,7)' },
+		{id: "/home/juri/MDEProfiler2/CPL2SPL/CPL2SPL/StepByStep/CPL2SPL.launch", label: 'CPL2SPL.launch', color: 'rgb(255,168,7)' },
+		{id: "/home/juri/MDEProfiler2/CPL2SPL/CPL2SPL/StepByStep/XML2CPL.launch", label: 'XML2CPL.launch', color: 'rgb(255,168,7)' },
+		{id: "/home/juri/MDEProfiler2/CPL2SPL/CPL2SPL/StepByStep/SPL2Text.xml.launch", label: 'SPL2Text.xml.launch', color: 'rgb(255,168,7)' },
+		{id: "/home/juri/MDEProfiler2/CPL2SPL/CPL2SPL/CPL2SPL.xml", label: 'CPL2SPL.xml', color: 'rgb(200,68,170)' },
+		{id: "/home/juri/MDEProfiler2/CPL2SPL/CPL2SPL/StepByStep/AComplexExample.cpl.xml", label: 'AComplexExample.cpl.xml', },
+		{id: "/home/juri/MDEProfiler2/CPL2SPL/CPL2SPL/StepByStep/SPL2Text.xml", label: 'SPL2Text.xml', color: 'rgb(200,68,170)' },
+		{id: "/home/juri/MDEProfiler2/CPL2SPL/CPL2SPL/StepByStep/CPL2SPL/StepByStep/AComplexExample.cpl-CPL.ecore", label: '/CPL2SPL/StepByStep/AComplexExample.cpl-CPL.ecore', },
+		{id: "/home/juri/MDEProfiler2/CPL2SPL/CPL2SPL/StepByStep/CPL2SPL/StepByStep/AComplexExample.cpl-SPL.ecore", label: '/CPL2SPL/StepByStep/AComplexExample.cpl-SPL.ecore', },
+		{id: "/home/juri/MDEProfiler2/CPL2SPL/CPL2SPL/StepByStep/CPL2SPL/StepByStep/AComplexExample.cpl-XML.ecore", label: '/CPL2SPL/StepByStep/AComplexExample.cpl-XML.ecore', },
+		{id: "/home/juri/MDEProfiler2/CPL2SPL/CPL2SPL/CPL2SPL.xml/${sourceModel}", label: '${sourceModel}', },
+		{id: "/home/juri/MDEProfiler2/CPL2SPL/CPL2SPL/cplModel", label: 'cplModel', },
+		{id: "/home/juri/MDEProfiler2/CPL2SPL/CPL2SPL/splModel", label: 'splModel', },
+	 ]	
+
+  );
+
+  // create an array with edges
+  var edges = new vis.DataSet(
+	 [
+		{from: "/home/juri/MDEProfiler2/CPL2SPL/CPL2SPL/CPL2SPL.atl", to: "/home/juri/MDEProfiler2/CPL2SPL/CPL2SPL/CPL/CPL.ecore"},
+		{from: "/home/juri/MDEProfiler2/CPL2SPL/CPL2SPL/StepByStep/CPL2SPL/StepByStep/AComplexExample.cpl-CPL.ecore", to: "/home/juri/MDEProfiler2/CPL2SPL/CPL2SPL/CPL/CPL.ecore"},
+		{from: "/home/juri/MDEProfiler2/CPL2SPL/CPL2SPL/StepByStep/CPL2SPL/StepByStep/AComplexExample.cpl-CPL.ecore", to: "/home/juri/MDEProfiler2/CPL2SPL/CPL2SPL/CPL2SPL.atl"},
+		{from: "/home/juri/MDEProfiler2/CPL2SPL/CPL2SPL/CPL2SPL.atl", to: "/home/juri/MDEProfiler2/CPL2SPL/CPL2SPL/SPL/SPL.ecore"},
+		{from: "/home/juri/MDEProfiler2/CPL2SPL/CPL2SPL/StepByStep/CPL2SPL/StepByStep/AComplexExample.cpl-SPL.ecore", to: "/home/juri/MDEProfiler2/CPL2SPL/CPL2SPL/CPL2SPL.atl"},
+		{from: "/home/juri/MDEProfiler2/CPL2SPL/CPL2SPL/StepByStep/CPL2SPL/StepByStep/AComplexExample.cpl-SPL.ecore", to: "/home/juri/MDEProfiler2/CPL2SPL/CPL2SPL/SPL/SPL.ecore"},
+		{from: "/home/juri/MDEProfiler2/CPL2SPL/CPL2SPL/CPL/XMLSyntax/XML2CPL.atl", to: "/home/juri/MDEProfiler2/CPL2SPL/CPL2SPL/AMMACore/XML.ecore"},
+		{from: "/home/juri/MDEProfiler2/CPL2SPL/CPL2SPL/StepByStep/CPL2SPL/StepByStep/AComplexExample.cpl-XML.ecore", to: "/home/juri/MDEProfiler2/CPL2SPL/CPL2SPL/AMMACore/XML.ecore"},
+		{from: "/home/juri/MDEProfiler2/CPL2SPL/CPL2SPL/StepByStep/CPL2SPL/StepByStep/AComplexExample.cpl-XML.ecore", to: "/home/juri/MDEProfiler2/CPL2SPL/CPL2SPL/CPL/XMLSyntax/XML2CPL.atl"},
+		{from: "/home/juri/MDEProfiler2/CPL2SPL/CPL2SPL/CPL/XMLSyntax/XML2CPL.atl", to: "/home/juri/MDEProfiler2/CPL2SPL/CPL2SPL/CPL/CPL.ecore"},
+		{from: "/home/juri/MDEProfiler2/CPL2SPL/CPL2SPL/StepByStep/CPL2SPL/StepByStep/AComplexExample.cpl-CPL.ecore", to: "/home/juri/MDEProfiler2/CPL2SPL/CPL2SPL/CPL/XMLSyntax/XML2CPL.atl"},
+		{from: "/home/juri/MDEProfiler2/CPL2SPL/CPL2SPL/StepByStep/CPL2SPL/StepByStep/AComplexExample.cpl-CPL.ecore", to: "/home/juri/MDEProfiler2/CPL2SPL/CPL2SPL/CPL/CPL.ecore"},
+		{from: "/home/juri/MDEProfiler2/CPL2SPL/CPL2SPL/CPL2SPL.xml/${sourceModel}", to: "/home/juri/MDEProfiler2/CPL2SPL/CPL2SPL/AMMACore/XML.ecore"},
+		{from: "/home/juri/MDEProfiler2/CPL2SPL/CPL2SPL/CPL/XMLSyntax/XML2CPL.atl", to: "/home/juri/MDEProfiler2/CPL2SPL/CPL2SPL/AMMACore/XML.ecore"},
+		{from: "/home/juri/MDEProfiler2/CPL2SPL/CPL2SPL/CPL/XMLSyntax/XML2CPL.atl", to: "/home/juri/MDEProfiler2/CPL2SPL/CPL2SPL/CPL/CPL.ecore"},
+		{from: "/home/juri/MDEProfiler2/CPL2SPL/CPL2SPL/cplModel", to: "/home/juri/MDEProfiler2/CPL2SPL/CPL2SPL/SPL/SPL.ecore"},
+		{from: "/home/juri/MDEProfiler2/CPL2SPL/CPL2SPL/cplModel", to: "/home/juri/MDEProfiler2/CPL2SPL/CPL2SPL/CPL/CPL.ecore"},
+		{from: "/home/juri/MDEProfiler2/CPL2SPL/CPL2SPL/CPL2SPL.atl", to: "/home/juri/MDEProfiler2/CPL2SPL/CPL2SPL/CPL/CPL.ecore"},
+		{from: "/home/juri/MDEProfiler2/CPL2SPL/CPL2SPL/CPL2SPL.atl", to: "/home/juri/MDEProfiler2/CPL2SPL/CPL2SPL/SPL/SPL.ecore"},
+		{from: "/home/juri/MDEProfiler2/CPL2SPL/CPL2SPL/splModel", to: "/home/juri/MDEProfiler2/CPL2SPL/CPL2SPL/SPL/SPL.ecore"},
+		{from: "/home/juri/MDEProfiler2/CPL2SPL/CPL2SPL/CPL/XMLSyntax/XML2CPL.atl", to: "/home/juri/MDEProfiler2/CPL2SPL/CPL2SPL/CPL2SPL.xml/${sourceModel}"},
+		{from: "/home/juri/MDEProfiler2/CPL2SPL/CPL2SPL/CPL/XMLSyntax/XML2CPL.atl", to: "/home/juri/MDEProfiler2/CPL2SPL/CPL2SPL/cplModel"},
+		{from: "/home/juri/MDEProfiler2/CPL2SPL/CPL2SPL/CPL/XMLSyntax/XML2CPL.atl", to: "/home/juri/MDEProfiler2/CPL2SPL/CPL2SPL/CPL/XMLSyntax/XMLHelpers.atl"},
+		{from: "/home/juri/MDEProfiler2/CPL2SPL/CPL2SPL/CPL2SPL.atl", to: "/home/juri/MDEProfiler2/CPL2SPL/CPL2SPL/cplModel"},
+		{from: "/home/juri/MDEProfiler2/CPL2SPL/CPL2SPL/CPL2SPL.atl", to: "/home/juri/MDEProfiler2/CPL2SPL/CPL2SPL/splModel"},
+ 	]
+  );
+
+  // create a network
+  var container = document.getElementById('mynetwork');
+  var data = {
+    nodes: nodes,
+    edges: edges
+  };
+  var options = {
+    nodes: {borderWidth: 2},
+    interaction: {hover: true}
+  }
+  var network = new vis.Network(container, data, options);
+</script>
+</body>
+</html>

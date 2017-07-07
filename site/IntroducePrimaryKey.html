@@ -1,0 +1,92 @@
+<!doctype html>
+<html>
+<head>
+  <title>Network | Basic usage</title>
+
+  <script type="text/javascript" src="vis.js"></script>
+  <link href="vis-network.min.css" rel="stylesheet" type="text/css" />
+
+  <style type="text/css">
+    #mynetwork {
+      width: 600px;
+      height: 400px;
+      border: 1px solid lightgray;
+    }
+
+    p {
+      max-width:700px;
+    }
+  </style>
+</head>
+<body>
+
+<p>
+  	<h1>Project Name: IntroducePrimaryKey<br/></h1>
+	
+	
+</p>
+
+<div id="mynetwork"></div>
+
+<script type="text/javascript">
+  // create an array with nodes
+  var nodes = new vis.DataSet(
+     [
+	
+		{id: "/home/juri/MDEProfiler2/IntroducePrimaryKey/without_context/TCS.ecore", label: 'TCS.ecore', },
+		{id: "/home/juri/MDEProfiler2/IntroducePrimaryKey/without_context/InputModels/example-KM3.ecore", label: 'example-KM3.ecore', },
+		{id: "/home/juri/MDEProfiler2/IntroducePrimaryKey/without_context/OutputModels/example-KM3target.ecore", label: 'example-KM3target.ecore', },
+		{id: "/home/juri/MDEProfiler2/IntroducePrimaryKey/with_context/TCS.ecore", label: 'TCS.ecore', },
+		{id: "/home/juri/MDEProfiler2/IntroducePrimaryKey/with_context/InputModels/example-KM3.ecore", label: 'example-KM3.ecore', },
+		{id: "/home/juri/MDEProfiler2/IntroducePrimaryKey/with_context/OutputModels/example-KM3target.ecore", label: 'example-KM3target.ecore', },
+		{id: "/home/juri/MDEProfiler2/IntroducePrimaryKey/without_context/PrimaryKey.atl", label: 'PrimaryKey.atl', color: '#7BE141' },
+		{id: "/home/juri/MDEProfiler2/IntroducePrimaryKey/with_context/PrimaryKey.atl", label: 'PrimaryKey.atl', color: '#7BE141' },
+		{id: "/home/juri/MDEProfiler2/IntroducePrimaryKey/without_context/InputModels/example.km3", label: 'example.km3', },
+		{id: "/home/juri/MDEProfiler2/IntroducePrimaryKey/without_context/OutputModels/example-KM3target.km3", label: 'example-KM3target.km3', },
+		{id: "/home/juri/MDEProfiler2/IntroducePrimaryKey/with_context/InputModels/example.km3", label: 'example.km3', },
+		{id: "/home/juri/MDEProfiler2/IntroducePrimaryKey/with_context/OutputModels/example-KM3target.km3", label: 'example-KM3target.km3', },
+		{id: "/home/juri/MDEProfiler2/IntroducePrimaryKey/without_context/CatalogueOfModelTransformations build_example.xml (19).launch", label: 'CatalogueOfModelTransformations build_example.xml (19).launch', color: 'rgb(255,168,7)' },
+		{id: "/home/juri/MDEProfiler2/IntroducePrimaryKey/with_context/CatalogueOfModelTransformations build_example.xml (18).launch", label: 'CatalogueOfModelTransformations build_example.xml (18).launch', color: 'rgb(255,168,7)' },
+		{id: "/home/juri/MDEProfiler2/IntroducePrimaryKey/without_context/build_example.xml", label: 'build_example.xml', color: 'rgb(200,68,170)' },
+		{id: "/home/juri/MDEProfiler2/IntroducePrimaryKey/with_context/build_example.xml", label: 'build_example.xml', color: 'rgb(200,68,170)' },
+		{id: "http://www.eclipse.org/gmt/2005/KM3", label: '${sourceMetaModel}', },
+		{id: "/home/juri/MDEProfiler2/IntroducePrimaryKey/without_context/build_example.xml//CatalogueOfModelTransformations/IntroducePrimaryKey/without_context/InputModels/${sourceModel}", label: '/CatalogueOfModelTransformations/IntroducePrimaryKey/without_context/InputModels/${sourceModel}', },
+		{id: "/home/juri/MDEProfiler2/IntroducePrimaryKey/without_context/${targetModel}", label: '${targetModel}', },
+		{id: "/home/juri/MDEProfiler2/IntroducePrimaryKey/with_context/build_example.xml//CatalogueOfModelTransformations/IntroducePrimaryKey/with_context/InputModels/${sourceModel}", label: '/CatalogueOfModelTransformations/IntroducePrimaryKey/with_context/InputModels/${sourceModel}', },
+		{id: "/home/juri/MDEProfiler2/IntroducePrimaryKey/with_context/${targetModel}", label: '${targetModel}', },
+	 ]	
+
+  );
+
+  // create an array with edges
+  var edges = new vis.DataSet(
+	 [
+		{from: "/home/juri/MDEProfiler2/IntroducePrimaryKey/without_context/PrimaryKey.atl", to: "http://www.eclipse.org/gmt/2005/KM3"},
+		{from: "/home/juri/MDEProfiler2/IntroducePrimaryKey/without_context/build_example.xml//CatalogueOfModelTransformations/IntroducePrimaryKey/without_context/InputModels/${sourceModel}", to: "http://www.eclipse.org/gmt/2005/KM3"},
+		{from: "/home/juri/MDEProfiler2/IntroducePrimaryKey/without_context/PrimaryKey.atl", to: "http://www.eclipse.org/gmt/2005/KM3"},
+		{from: "/home/juri/MDEProfiler2/IntroducePrimaryKey/without_context/${targetModel}", to: "/home/juri/MDEProfiler2/IntroducePrimaryKey/without_context/OutputModels/example-KM3target.ecore"},
+		{from: "/home/juri/MDEProfiler2/IntroducePrimaryKey/without_context/PrimaryKey.atl", to: "/home/juri/MDEProfiler2/IntroducePrimaryKey/without_context/build_example.xml//CatalogueOfModelTransformations/IntroducePrimaryKey/without_context/InputModels/${sourceModel}"},
+		{from: "/home/juri/MDEProfiler2/IntroducePrimaryKey/without_context/PrimaryKey.atl", to: "/home/juri/MDEProfiler2/IntroducePrimaryKey/without_context/${targetModel}"},
+		{from: "/home/juri/MDEProfiler2/IntroducePrimaryKey/without_context/PrimaryKey.atl", to: "http://www.eclipse.org/gmt/2005/KM3"},
+		{from: "/home/juri/MDEProfiler2/IntroducePrimaryKey/with_context/build_example.xml//CatalogueOfModelTransformations/IntroducePrimaryKey/with_context/InputModels/${sourceModel}", to: "http://www.eclipse.org/gmt/2005/KM3"},
+		{from: "/home/juri/MDEProfiler2/IntroducePrimaryKey/without_context/PrimaryKey.atl", to: "http://www.eclipse.org/gmt/2005/KM3"},
+		{from: "/home/juri/MDEProfiler2/IntroducePrimaryKey/with_context/${targetModel}", to: "/home/juri/MDEProfiler2/IntroducePrimaryKey/without_context/OutputModels/example-KM3target.ecore"},
+		{from: "/home/juri/MDEProfiler2/IntroducePrimaryKey/without_context/PrimaryKey.atl", to: "/home/juri/MDEProfiler2/IntroducePrimaryKey/with_context/build_example.xml//CatalogueOfModelTransformations/IntroducePrimaryKey/with_context/InputModels/${sourceModel}"},
+		{from: "/home/juri/MDEProfiler2/IntroducePrimaryKey/without_context/PrimaryKey.atl", to: "/home/juri/MDEProfiler2/IntroducePrimaryKey/with_context/${targetModel}"},
+ 	]
+  );
+
+  // create a network
+  var container = document.getElementById('mynetwork');
+  var data = {
+    nodes: nodes,
+    edges: edges
+  };
+  var options = {
+    nodes: {borderWidth: 2},
+    interaction: {hover: true}
+  }
+  var network = new vis.Network(container, data, options);
+</script>
+</body>
+</html>

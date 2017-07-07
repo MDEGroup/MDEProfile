@@ -69,7 +69,7 @@ public class IHeuristicResults {
 		}
 	}
 	
-	
+	@Ignore
 	@Test
 	public void harvesterManager() throws IOException{
 		String csvFile = "/home/juri/Scrivania/davideResults.csv";

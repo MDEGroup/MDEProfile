@@ -1,0 +1,103 @@
+<!doctype html>
+<html>
+<head>
+  <title>Network | Basic usage</title>
+
+  <script type="text/javascript" src="vis.js"></script>
+  <link href="vis-network.min.css" rel="stylesheet" type="text/css" />
+
+  <style type="text/css">
+    #mynetwork {
+      width: 600px;
+      height: 400px;
+      border: 1px solid lightgray;
+    }
+
+    p {
+      max-width:700px;
+    }
+  </style>
+</head>
+<body>
+
+<p>
+  	<h1>Project Name: Port<br/></h1>
+	
+	
+</p>
+
+<div id="mynetwork"></div>
+
+<script type="text/javascript">
+  // create an array with nodes
+  var nodes = new vis.DataSet(
+     [
+	
+		{id: "/home/juri/MDEProfiler2/Port/Port/Metamodel/TypeA.ecore", label: 'TypeA.ecore', },
+		{id: "/home/juri/MDEProfiler2/Port/Port/Metamodel/TypeB.ecore", label: 'TypeB.ecore', },
+		{id: "/home/juri/MDEProfiler2/Port/Port/Tranformations/TypeA2TypeB_v1.atl", label: 'TypeA2TypeB_v1.atl', color: '#7BE141' },
+		{id: "/home/juri/MDEProfiler2/Port/Port/Tranformations/TypeA2TypeB_v2.atl", label: 'TypeA2TypeB_v2.atl', color: '#7BE141' },
+		{id: "/home/juri/MDEProfiler2/Port/Port/Tranformations/TypeA2TypeB_v3.atl", label: 'TypeA2TypeB_v3.atl', color: '#7BE141' },
+		{id: "/home/juri/MDEProfiler2/Port/Port/Tranformations/TypeA2TypeB_v4.atl", label: 'TypeA2TypeB_v4.atl', color: '#7BE141' },
+		{id: "/home/juri/MDEProfiler2/Port/Port/Tranformations/TypeA2TypeB_v1.launch", label: 'TypeA2TypeB_v1.launch', color: 'rgb(255,168,7)' },
+		{id: "/home/juri/MDEProfiler2/Port/Port/Tranformations/TypeA2TypeB_v3.launch", label: 'TypeA2TypeB_v3.launch', color: 'rgb(255,168,7)' },
+		{id: "/home/juri/MDEProfiler2/Port/Port/Tranformations/TypeA2TypeB_v4.launch", label: 'TypeA2TypeB_v4.launch', color: 'rgb(255,168,7)' },
+		{id: "/home/juri/MDEProfiler2/Port/Port/Tranformations/TypeA2TypeB_v2.launch", label: 'TypeA2TypeB_v2.launch', color: 'rgb(255,168,7)' },
+		{id: "/home/juri/MDEProfiler2/Port/Port/Tranformations/Port/SampleModels/sample-TypeA.xmi", label: '/Port/SampleModels/sample-TypeA.xmi', },
+		{id: "/home/juri/MDEProfiler2/Port/Port/Tranformations/Port/SampleModels/sample-TypeB.xmi", label: '/Port/SampleModels/sample-TypeB.xmi', },
+	 ]	
+
+  );
+
+  // create an array with edges
+  var edges = new vis.DataSet(
+	 [
+		{from: "/home/juri/MDEProfiler2/Port/Port/Tranformations/TypeA2TypeB_v1.atl", to: "/home/juri/MDEProfiler2/Port/Port/Metamodel/TypeA.ecore"},
+		{from: "/home/juri/MDEProfiler2/Port/Port/Tranformations/TypeA2TypeB_v1.atl", to: "/home/juri/MDEProfiler2/Port/Port/Metamodel/TypeB.ecore"},
+		{from: "/home/juri/MDEProfiler2/Port/Port/Tranformations/TypeA2TypeB_v2.atl", to: "/home/juri/MDEProfiler2/Port/Port/Metamodel/TypeA.ecore"},
+		{from: "/home/juri/MDEProfiler2/Port/Port/Tranformations/TypeA2TypeB_v2.atl", to: "/home/juri/MDEProfiler2/Port/Port/Metamodel/TypeB.ecore"},
+		{from: "/home/juri/MDEProfiler2/Port/Port/Tranformations/TypeA2TypeB_v3.atl", to: "/home/juri/MDEProfiler2/Port/Port/Metamodel/TypeA.ecore"},
+		{from: "/home/juri/MDEProfiler2/Port/Port/Tranformations/TypeA2TypeB_v3.atl", to: "/home/juri/MDEProfiler2/Port/Port/Metamodel/TypeB.ecore"},
+		{from: "/home/juri/MDEProfiler2/Port/Port/Tranformations/TypeA2TypeB_v4.atl", to: "/home/juri/MDEProfiler2/Port/Port/Metamodel/TypeA.ecore"},
+		{from: "/home/juri/MDEProfiler2/Port/Port/Tranformations/TypeA2TypeB_v4.atl", to: "/home/juri/MDEProfiler2/Port/Port/Metamodel/TypeB.ecore"},
+		{from: "/home/juri/MDEProfiler2/Port/Port/Tranformations/TypeA2TypeB_v1.atl", to: "/home/juri/MDEProfiler2/Port/Port/Metamodel/TypeA.ecore"},
+		{from: "/home/juri/MDEProfiler2/Port/Port/Tranformations/Port/SampleModels/sample-TypeA.xmi", to: "/home/juri/MDEProfiler2/Port/Port/Metamodel/TypeA.ecore"},
+		{from: "/home/juri/MDEProfiler2/Port/Port/Tranformations/Port/SampleModels/sample-TypeA.xmi", to: "/home/juri/MDEProfiler2/Port/Port/Tranformations/TypeA2TypeB_v1.atl"},
+		{from: "/home/juri/MDEProfiler2/Port/Port/Tranformations/TypeA2TypeB_v1.atl", to: "/home/juri/MDEProfiler2/Port/Port/Metamodel/TypeB.ecore"},
+		{from: "/home/juri/MDEProfiler2/Port/Port/Tranformations/Port/SampleModels/sample-TypeB.xmi", to: "/home/juri/MDEProfiler2/Port/Port/Tranformations/TypeA2TypeB_v1.atl"},
+		{from: "/home/juri/MDEProfiler2/Port/Port/Tranformations/Port/SampleModels/sample-TypeB.xmi", to: "/home/juri/MDEProfiler2/Port/Port/Metamodel/TypeB.ecore"},
+		{from: "/home/juri/MDEProfiler2/Port/Port/Tranformations/TypeA2TypeB_v3.atl", to: "/home/juri/MDEProfiler2/Port/Port/Metamodel/TypeA.ecore"},
+		{from: "/home/juri/MDEProfiler2/Port/Port/Tranformations/Port/SampleModels/sample-TypeA.xmi", to: "/home/juri/MDEProfiler2/Port/Port/Metamodel/TypeA.ecore"},
+		{from: "/home/juri/MDEProfiler2/Port/Port/Tranformations/Port/SampleModels/sample-TypeA.xmi", to: "/home/juri/MDEProfiler2/Port/Port/Tranformations/TypeA2TypeB_v3.atl"},
+		{from: "/home/juri/MDEProfiler2/Port/Port/Tranformations/TypeA2TypeB_v3.atl", to: "/home/juri/MDEProfiler2/Port/Port/Metamodel/TypeB.ecore"},
+		{from: "/home/juri/MDEProfiler2/Port/Port/Tranformations/Port/SampleModels/sample-TypeB.xmi", to: "/home/juri/MDEProfiler2/Port/Port/Tranformations/TypeA2TypeB_v3.atl"},
+		{from: "/home/juri/MDEProfiler2/Port/Port/Tranformations/Port/SampleModels/sample-TypeB.xmi", to: "/home/juri/MDEProfiler2/Port/Port/Metamodel/TypeB.ecore"},
+		{from: "/home/juri/MDEProfiler2/Port/Port/Tranformations/TypeA2TypeB_v4.atl", to: "/home/juri/MDEProfiler2/Port/Port/Metamodel/TypeA.ecore"},
+		{from: "/home/juri/MDEProfiler2/Port/Port/Tranformations/Port/SampleModels/sample-TypeA.xmi", to: "/home/juri/MDEProfiler2/Port/Port/Metamodel/TypeA.ecore"},
+		{from: "/home/juri/MDEProfiler2/Port/Port/Tranformations/Port/SampleModels/sample-TypeA.xmi", to: "/home/juri/MDEProfiler2/Port/Port/Tranformations/TypeA2TypeB_v4.atl"},
+		{from: "/home/juri/MDEProfiler2/Port/Port/Tranformations/TypeA2TypeB_v4.atl", to: "/home/juri/MDEProfiler2/Port/Port/Metamodel/TypeB.ecore"},
+		{from: "/home/juri/MDEProfiler2/Port/Port/Tranformations/Port/SampleModels/sample-TypeB.xmi", to: "/home/juri/MDEProfiler2/Port/Port/Tranformations/TypeA2TypeB_v4.atl"},
+		{from: "/home/juri/MDEProfiler2/Port/Port/Tranformations/Port/SampleModels/sample-TypeB.xmi", to: "/home/juri/MDEProfiler2/Port/Port/Metamodel/TypeB.ecore"},
+		{from: "/home/juri/MDEProfiler2/Port/Port/Tranformations/TypeA2TypeB_v2.atl", to: "/home/juri/MDEProfiler2/Port/Port/Metamodel/TypeA.ecore"},
+		{from: "/home/juri/MDEProfiler2/Port/Port/Tranformations/Port/SampleModels/sample-TypeA.xmi", to: "/home/juri/MDEProfiler2/Port/Port/Metamodel/TypeA.ecore"},
+		{from: "/home/juri/MDEProfiler2/Port/Port/Tranformations/Port/SampleModels/sample-TypeA.xmi", to: "/home/juri/MDEProfiler2/Port/Port/Tranformations/TypeA2TypeB_v2.atl"},
+		{from: "/home/juri/MDEProfiler2/Port/Port/Tranformations/TypeA2TypeB_v2.atl", to: "/home/juri/MDEProfiler2/Port/Port/Metamodel/TypeB.ecore"},
+		{from: "/home/juri/MDEProfiler2/Port/Port/Tranformations/Port/SampleModels/sample-TypeB.xmi", to: "/home/juri/MDEProfiler2/Port/Port/Tranformations/TypeA2TypeB_v2.atl"},
+		{from: "/home/juri/MDEProfiler2/Port/Port/Tranformations/Port/SampleModels/sample-TypeB.xmi", to: "/home/juri/MDEProfiler2/Port/Port/Metamodel/TypeB.ecore"},
+ 	]
+  );
+
+  // create a network
+  var container = document.getElementById('mynetwork');
+  var data = {
+    nodes: nodes,
+    edges: edges
+  };
+  var options = {
+    nodes: {borderWidth: 2},
+    interaction: {hover: true}
+  }
+  var network = new vis.Network(container, data, options);
+</script>
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!doctype html>
+<html>
+<head>
+  <title>Network | Basic usage</title>
+
+  <script type="text/javascript" src="vis.js"></script>
+  <link href="vis-network.min.css" rel="stylesheet" type="text/css" />
+
+  <style type="text/css">
+    #mynetwork {
+      width: 600px;
+      height: 400px;
+      border: 1px solid lightgray;
+    }
+
+    p {
+      max-width:700px;
+    }
+  </style>
+</head>
+<body>
+
+<p>
+  	<h1>Project Name: KMLInjector<br/></h1>
+	
+	
+</p>
+
+<div id="mynetwork"></div>
+
+<script type="text/javascript">
+  // create an array with nodes
+  var nodes = new vis.DataSet(
+     [
+	
+		{id: "/home/juri/MDEProfiler2/KMLInjector/KMLInjector/Metamodels/KML.ecore", label: 'KML.ecore', },
+		{id: "/home/juri/MDEProfiler2/KMLInjector/KMLInjector/Metamodels/XML.ecore", label: 'XML.ecore', },
+		{id: "/home/juri/MDEProfiler2/KMLInjector/KMLInjector/InputModels/example-XML.ecore", label: 'example-XML.ecore', },
+		{id: "/home/juri/MDEProfiler2/KMLInjector/KMLInjector/OutputModels/example-KML.ecore", label: 'example-KML.ecore', },
+		{id: "/home/juri/MDEProfiler2/KMLInjector/KMLInjector/Transformations/XML2KML.atl", label: 'XML2KML.atl', color: '#7BE141' },
+		{id: "/home/juri/MDEProfiler2/KMLInjector/KMLInjector/Metamodels/XML.km3", label: 'XML.km3', },
+		{id: "/home/juri/MDEProfiler2/KMLInjector/KMLInjector/Metamodels/KML.km3", label: 'KML.km3', },
+		{id: "/home/juri/MDEProfiler2/KMLInjector/KMLInjector/KMLInjector build.xml.launch", label: 'KMLInjector build.xml.launch', color: 'rgb(255,168,7)' },
+		{id: "/home/juri/MDEProfiler2/KMLInjector/KMLInjector/XML2KML.launch", label: 'XML2KML.launch', color: 'rgb(255,168,7)' },
+		{id: "/home/juri/MDEProfiler2/KMLInjector/KMLInjector/build.xml", label: 'build.xml', color: 'rgb(200,68,170)' },
+		{id: "/home/juri/MDEProfiler2/KMLInjector/KMLInjector/InputModels/example.xml", label: 'example.xml', },
+		{id: "/home/juri/MDEProfiler2/KMLInjector/KMLInjector/build.xml//KMLInjector/InputModels/${sourceModel}", label: '/KMLInjector/InputModels/${sourceModel}', },
+		{id: "/home/juri/MDEProfiler2/KMLInjector/KMLInjector/${targetModel}", label: '${targetModel}', },
+	 ]	
+
+  );
+
+  // create an array with edges
+  var edges = new vis.DataSet(
+	 [
+		{from: "/home/juri/MDEProfiler2/KMLInjector/KMLInjector/Transformations/XML2KML.atl", to: "/home/juri/MDEProfiler2/KMLInjector/KMLInjector/Metamodels/XML.ecore"},
+		{from: "/home/juri/MDEProfiler2/KMLInjector/KMLInjector/InputModels/example-XML.ecore", to: "/home/juri/MDEProfiler2/KMLInjector/KMLInjector/Metamodels/XML.ecore"},
+		{from: "/home/juri/MDEProfiler2/KMLInjector/KMLInjector/InputModels/example-XML.ecore", to: "/home/juri/MDEProfiler2/KMLInjector/KMLInjector/Transformations/XML2KML.atl"},
+		{from: "/home/juri/MDEProfiler2/KMLInjector/KMLInjector/Transformations/XML2KML.atl", to: "/home/juri/MDEProfiler2/KMLInjector/KMLInjector/Metamodels/KML.ecore"},
+		{from: "/home/juri/MDEProfiler2/KMLInjector/KMLInjector/OutputModels/example-KML.ecore", to: "/home/juri/MDEProfiler2/KMLInjector/KMLInjector/Transformations/XML2KML.atl"},
+		{from: "/home/juri/MDEProfiler2/KMLInjector/KMLInjector/OutputModels/example-KML.ecore", to: "/home/juri/MDEProfiler2/KMLInjector/KMLInjector/Metamodels/KML.ecore"},
+		{from: "/home/juri/MDEProfiler2/KMLInjector/KMLInjector/Transformations/XML2KML.atl", to: "/home/juri/MDEProfiler2/KMLInjector/KMLInjector/Metamodels/XML.ecore"},
+		{from: "/home/juri/MDEProfiler2/KMLInjector/KMLInjector/build.xml//KMLInjector/InputModels/${sourceModel}", to: "/home/juri/MDEProfiler2/KMLInjector/KMLInjector/Metamodels/XML.ecore"},
+		{from: "/home/juri/MDEProfiler2/KMLInjector/KMLInjector/Transformations/XML2KML.atl", to: "/home/juri/MDEProfiler2/KMLInjector/KMLInjector/Metamodels/KML.ecore"},
+		{from: "/home/juri/MDEProfiler2/KMLInjector/KMLInjector/${targetModel}", to: "/home/juri/MDEProfiler2/KMLInjector/KMLInjector/Metamodels/KML.ecore"},
+		{from: "/home/juri/MDEProfiler2/KMLInjector/KMLInjector/Transformations/XML2KML.atl", to: "/home/juri/MDEProfiler2/KMLInjector/KMLInjector/build.xml//KMLInjector/InputModels/${sourceModel}"},
+		{from: "/home/juri/MDEProfiler2/KMLInjector/KMLInjector/Transformations/XML2KML.atl", to: "/home/juri/MDEProfiler2/KMLInjector/KMLInjector/${targetModel}"},
+ 	]
+  );
+
+  // create a network
+  var container = document.getElementById('mynetwork');
+  var data = {
+    nodes: nodes,
+    edges: edges
+  };
+  var options = {
+    nodes: {borderWidth: 2},
+    interaction: {hover: true}
+  }
+  var network = new vis.Network(container, data, options);
+</script>
+</body>
+</html>

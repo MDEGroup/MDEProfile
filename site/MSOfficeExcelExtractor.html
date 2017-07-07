@@ -1,0 +1,68 @@
+<!doctype html>
+<html>
+<head>
+  <title>Network | Basic usage</title>
+
+  <script type="text/javascript" src="vis.js"></script>
+  <link href="vis-network.min.css" rel="stylesheet" type="text/css" />
+
+  <style type="text/css">
+    #mynetwork {
+      width: 600px;
+      height: 400px;
+      border: 1px solid lightgray;
+    }
+
+    p {
+      max-width:700px;
+    }
+  </style>
+</head>
+<body>
+
+<p>
+  	<h1>Project Name: MSOfficeExcelExtractor<br/></h1>
+	
+	
+</p>
+
+<div id="mynetwork"></div>
+
+<script type="text/javascript">
+  // create an array with nodes
+  var nodes = new vis.DataSet(
+     [
+	
+		{id: "/home/juri/MDEProfiler2/MSOfficeExcelExtractor/MicrosoftOfficeExcelExtractor/modelsExamples/XMLModelExample.ecore", label: 'XMLModelExample.ecore', },
+		{id: "/home/juri/MDEProfiler2/MSOfficeExcelExtractor/MicrosoftOfficeExcelExtractor/modelsExamples/ExcelModelExample.ecore", label: 'ExcelModelExample.ecore', },
+		{id: "/home/juri/MDEProfiler2/MSOfficeExcelExtractor/MicrosoftOfficeExcelExtractor/metamodels/MSOfficeExcel_SpreadsheetMLSimplified.ecore", label: 'MSOfficeExcel_SpreadsheetMLSimplified.ecore', },
+		{id: "/home/juri/MDEProfiler2/MSOfficeExcelExtractor/MicrosoftOfficeExcelExtractor/metamodels/XML.ecore", label: 'XML.ecore', },
+		{id: "/home/juri/MDEProfiler2/MSOfficeExcelExtractor/MicrosoftOfficeExcelExtractor/transformations/XML2ExcelText.atl", label: 'XML2ExcelText.atl', color: '#7BE141' },
+		{id: "/home/juri/MDEProfiler2/MSOfficeExcelExtractor/MicrosoftOfficeExcelExtractor/transformations/SpreadsheetMLSimplified2XML.atl", label: 'SpreadsheetMLSimplified2XML.atl', color: '#7BE141' },
+		{id: "/home/juri/MDEProfiler2/MSOfficeExcelExtractor/MicrosoftOfficeExcelExtractor/metamodels/XML.km3", label: 'XML.km3', },
+		{id: "/home/juri/MDEProfiler2/MSOfficeExcelExtractor/MicrosoftOfficeExcelExtractor/metamodels/MSOfficeExcel_SpreadsheetMLSimplified.km3", label: 'MSOfficeExcel_SpreadsheetMLSimplified.km3', },
+		{id: "/home/juri/MDEProfiler2/MSOfficeExcelExtractor/MicrosoftOfficeExcelExtractor/modelsExamples/exampleExcelJavaSource.xml", label: 'exampleExcelJavaSource.xml', },
+	 ]	
+
+  );
+
+  // create an array with edges
+  var edges = new vis.DataSet(
+	 [
+ 	]
+  );
+
+  // create a network
+  var container = document.getElementById('mynetwork');
+  var data = {
+    nodes: nodes,
+    edges: edges
+  };
+  var options = {
+    nodes: {borderWidth: 2},
+    interaction: {hover: true}
+  }
+  var network = new vis.Network(container, data, options);
+</script>
+</body>
+</html>

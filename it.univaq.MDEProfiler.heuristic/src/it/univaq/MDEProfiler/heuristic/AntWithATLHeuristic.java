@@ -174,6 +174,7 @@ public class AntWithATLHeuristic implements IHeuristic {
 									conformanceEdge.setExact(true);	
 									if (model == null){
 										model = GraphFactory.eINSTANCE.createNode();
+										model.setName(modelAntValue);
 										model.setDerivedOrNotExists(true);
 										model.setUri(antFile.getPath() + File.separator + modelAntValue);
 										g.getNodes().add(model);

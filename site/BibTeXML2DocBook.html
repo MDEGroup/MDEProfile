@@ -1,0 +1,68 @@
+<!doctype html>
+<html>
+<head>
+  <title>Network | Basic usage</title>
+
+  <script type="text/javascript" src="vis.js"></script>
+  <link href="vis-network.min.css" rel="stylesheet" type="text/css" />
+
+  <style type="text/css">
+    #mynetwork {
+      width: 600px;
+      height: 400px;
+      border: 1px solid lightgray;
+    }
+
+    p {
+      max-width:700px;
+    }
+  </style>
+</head>
+<body>
+
+<p>
+  	<h1>Project Name: BibTeXML2DocBook<br/></h1>
+	
+	
+</p>
+
+<div id="mynetwork"></div>
+
+<script type="text/javascript">
+  // create an array with nodes
+  var nodes = new vis.DataSet(
+     [
+	
+		{id: "/home/juri/MDEProfiler2/BibTeXML2DocBook/BibTeXML2DocBook/docbook-example.ecore", label: 'docbook-example.ecore', },
+		{id: "/home/juri/MDEProfiler2/BibTeXML2DocBook/BibTeXML2DocBook/BibTeX.ecore", label: 'BibTeX.ecore', },
+		{id: "/home/juri/MDEProfiler2/BibTeXML2DocBook/BibTeXML2DocBook/DocBook.ecore", label: 'DocBook.ecore', },
+		{id: "/home/juri/MDEProfiler2/BibTeXML2DocBook/BibTeXML2DocBook/bibtex-example.ecore", label: 'bibtex-example.ecore', },
+		{id: "/home/juri/MDEProfiler2/BibTeXML2DocBook/BibTeXML2DocBook/BibTeX2DocBook.atl", label: 'BibTeX2DocBook.atl', color: '#7BE141' },
+		{id: "/home/juri/MDEProfiler2/BibTeXML2DocBook/BibTeXML2DocBook/BibTeX.km3", label: 'BibTeX.km3', },
+		{id: "/home/juri/MDEProfiler2/BibTeXML2DocBook/BibTeXML2DocBook/DocBook.km3", label: 'DocBook.km3', },
+		{id: "/home/juri/MDEProfiler2/BibTeXML2DocBook/BibTeXML2DocBook/xml-example.xml", label: 'xml-example.xml', },
+		{id: "/home/juri/MDEProfiler2/BibTeXML2DocBook/BibTeXML2DocBook/xml-example-final.xml", label: 'xml-example-final.xml', },
+	 ]	
+
+  );
+
+  // create an array with edges
+  var edges = new vis.DataSet(
+	 [
+ 	]
+  );
+
+  // create a network
+  var container = document.getElementById('mynetwork');
+  var data = {
+    nodes: nodes,
+    edges: edges
+  };
+  var options = {
+    nodes: {borderWidth: 2},
+    interaction: {hover: true}
+  }
+  var network = new vis.Network(container, data, options);
+</script>
+</body>
+</html>

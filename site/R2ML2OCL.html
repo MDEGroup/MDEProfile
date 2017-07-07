@@ -1,0 +1,91 @@
+<!doctype html>
+<html>
+<head>
+  <title>Network | Basic usage</title>
+
+  <script type="text/javascript" src="vis.js"></script>
+  <link href="vis-network.min.css" rel="stylesheet" type="text/css" />
+
+  <style type="text/css">
+    #mynetwork {
+      width: 600px;
+      height: 400px;
+      border: 1px solid lightgray;
+    }
+
+    p {
+      max-width:700px;
+    }
+  </style>
+</head>
+<body>
+
+<p>
+  	<h1>Project Name: R2ML2OCL<br/></h1>
+	
+	
+</p>
+
+<div id="mynetwork"></div>
+
+<script type="text/javascript">
+  // create an array with nodes
+  var nodes = new vis.DataSet(
+     [
+	
+		{id: "/home/juri/MDEProfiler2/R2ML2OCL/R2ML2OCL/metamodels/tcs/TCS.ecore", label: 'TCS.ecore', },
+		{id: "/home/juri/MDEProfiler2/R2ML2OCL/R2ML2OCL/metamodels/ocl/OCL.ecore", label: 'OCL.ecore', },
+		{id: "/home/juri/MDEProfiler2/R2ML2OCL/R2ML2OCL/metamodels/r2ml/r2ml.ecore", label: 'r2ml.ecore', },
+		{id: "/home/juri/MDEProfiler2/R2ML2OCL/R2ML2OCL/metamodels/xml/XML.ecore", label: 'XML.ecore', },
+		{id: "/home/juri/MDEProfiler2/R2ML2OCL/R2ML2OCL/transformations/XML2R2ML/XML2R2ML.atl", label: 'XML2R2ML.atl', color: '#7BE141' },
+		{id: "/home/juri/MDEProfiler2/R2ML2OCL/R2ML2OCL/transformations/XML2R2ML/XMLHelpers.atl", label: 'XMLHelpers.atl', color: '#7BE141' },
+		{id: "/home/juri/MDEProfiler2/R2ML2OCL/R2ML2OCL/transformations/R2ML2OCL/R2ML2OCL.atl", label: 'R2ML2OCL.atl', color: '#7BE141' },
+		{id: "/home/juri/MDEProfiler2/R2ML2OCL/R2ML2OCL/metamodels/tcs/TCS.km3", label: 'TCS.km3', },
+		{id: "/home/juri/MDEProfiler2/R2ML2OCL/R2ML2OCL/metamodels/ocl/OCL.km3", label: 'OCL.km3', },
+		{id: "/home/juri/MDEProfiler2/R2ML2OCL/R2ML2OCL/metamodels/r2ml/r2ml.km3", label: 'r2ml.km3', },
+		{id: "/home/juri/MDEProfiler2/R2ML2OCL/R2ML2OCL/metamodels/xml/XML.km3", label: 'XML.km3', },
+		{id: "/home/juri/MDEProfiler2/R2ML2OCL/R2ML2OCL/R2ML2OCL.xml.launch", label: 'R2ML2OCL.xml.launch', color: 'rgb(255,168,7)' },
+		{id: "/home/juri/MDEProfiler2/R2ML2OCL/R2ML2OCL/R2ML2OCL.xml", label: 'R2ML2OCL.xml', color: 'rgb(200,68,170)' },
+		{id: "/home/juri/MDEProfiler2/R2ML2OCL/R2ML2OCL/models/r2ml-xml/R2MLRule.xml", label: 'R2MLRule.xml', },
+		{id: "/home/juri/MDEProfiler2/R2ML2OCL/R2ML2OCL/R2ML2OCL.xml/${sourceModel}", label: '${sourceModel}', },
+		{id: "/home/juri/MDEProfiler2/R2ML2OCL/R2ML2OCL/r2mlModel", label: 'r2mlModel', },
+		{id: "/home/juri/MDEProfiler2/R2ML2OCL/R2ML2OCL/m1", label: 'm1', },
+	 ]	
+
+  );
+
+  // create an array with edges
+  var edges = new vis.DataSet(
+	 [
+		{from: "/home/juri/MDEProfiler2/R2ML2OCL/R2ML2OCL/R2ML2OCL.xml/${sourceModel}", to: "invalid"},
+		{from: "/home/juri/MDEProfiler2/R2ML2OCL/R2ML2OCL/transformations/XML2R2ML/XML2R2ML.atl", to: "invalid"},
+		{from: "/home/juri/MDEProfiler2/R2ML2OCL/R2ML2OCL/transformations/XML2R2ML/XML2R2ML.atl", to: "invalid"},
+		{from: "/home/juri/MDEProfiler2/R2ML2OCL/R2ML2OCL/r2mlModel", to: "/home/juri/MDEProfiler2/R2ML2OCL/R2ML2OCL/metamodels/tcs/TCS.ecore"},
+		{from: "/home/juri/MDEProfiler2/R2ML2OCL/R2ML2OCL/r2mlModel", to: "invalid"},
+		{from: "/home/juri/MDEProfiler2/R2ML2OCL/R2ML2OCL/transformations/R2ML2OCL/R2ML2OCL.atl", to: "invalid"},
+		{from: "/home/juri/MDEProfiler2/R2ML2OCL/R2ML2OCL/transformations/R2ML2OCL/R2ML2OCL.atl", to: "invalid"},
+		{from: "/home/juri/MDEProfiler2/R2ML2OCL/R2ML2OCL/m1", to: "/home/juri/MDEProfiler2/R2ML2OCL/R2ML2OCL/metamodels/tcs/TCS.ecore"},
+		{from: "/home/juri/MDEProfiler2/R2ML2OCL/R2ML2OCL/transformations/XML2R2ML/XML2R2ML.atl", to: "/home/juri/MDEProfiler2/R2ML2OCL/R2ML2OCL/R2ML2OCL.xml/${sourceModel}"},
+		{from: "/home/juri/MDEProfiler2/R2ML2OCL/R2ML2OCL/transformations/XML2R2ML/XML2R2ML.atl", to: "/home/juri/MDEProfiler2/R2ML2OCL/R2ML2OCL/r2mlModel"},
+		{from: "/home/juri/MDEProfiler2/R2ML2OCL/R2ML2OCL/transformations/XML2R2ML/XML2R2ML.atl", to: "/home/juri/MDEProfiler2/R2ML2OCL/R2ML2OCL/transformations/XML2R2ML/XMLHelpers.atl"},
+		{from: "/home/juri/MDEProfiler2/R2ML2OCL/R2ML2OCL/transformations/XML2R2ML/XML2R2ML.atl", to: "invalid"},
+		{from: "/home/juri/MDEProfiler2/R2ML2OCL/R2ML2OCL/transformations/R2ML2OCL/R2ML2OCL.atl", to: "/home/juri/MDEProfiler2/R2ML2OCL/R2ML2OCL/r2mlModel"},
+		{from: "/home/juri/MDEProfiler2/R2ML2OCL/R2ML2OCL/transformations/R2ML2OCL/R2ML2OCL.atl", to: "/home/juri/MDEProfiler2/R2ML2OCL/R2ML2OCL/m1"},
+		{from: "/home/juri/MDEProfiler2/R2ML2OCL/R2ML2OCL/transformations/R2ML2OCL/R2ML2OCL.atl", to: "invalid"},
+ 	]
+  );
+
+  // create a network
+  var container = document.getElementById('mynetwork');
+  var data = {
+    nodes: nodes,
+    edges: edges
+  };
+  var options = {
+    nodes: {borderWidth: 2},
+    interaction: {hover: true}
+  }
+  var network = new vis.Network(container, data, options);
+</script>
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!doctype html>
+<html>
+<head>
+  <title>Network | Basic usage</title>
+
+  <script type="text/javascript" src="vis.js"></script>
+  <link href="vis-network.min.css" rel="stylesheet" type="text/css" />
+
+  <style type="text/css">
+    #mynetwork {
+      width: 600px;
+      height: 400px;
+      border: 1px solid lightgray;
+    }
+
+    p {
+      max-width:700px;
+    }
+  </style>
+</head>
+<body>
+
+<p>
+  	<h1>Project Name: IEEE1471_2_MoDAF<br/></h1>
+	
+	
+</p>
+
+<div id="mynetwork"></div>
+
+<script type="text/javascript">
+  // create an array with nodes
+  var nodes = new vis.DataSet(
+     [
+	
+		{id: "/home/juri/MDEProfiler2/IEEE1471_2_MoDAF/IEEE1471_2_MoDAF/example/sample-IEEE1471.ecore", label: 'sample-IEEE1471.ecore', },
+		{id: "/home/juri/MDEProfiler2/IEEE1471_2_MoDAF/IEEE1471_2_MoDAF/example/sample-MoDAF.ecore", label: 'sample-MoDAF.ecore', },
+		{id: "/home/juri/MDEProfiler2/IEEE1471_2_MoDAF/IEEE1471_2_MoDAF/metamodel/IEEE1471ConceptualModel.ecore", label: 'IEEE1471ConceptualModel.ecore', },
+		{id: "/home/juri/MDEProfiler2/IEEE1471_2_MoDAF/IEEE1471_2_MoDAF/metamodel/MoDAF-AV.ecore", label: 'MoDAF-AV.ecore', },
+		{id: "/home/juri/MDEProfiler2/IEEE1471_2_MoDAF/IEEE1471_2_MoDAF/transformation/IEEE1471_2_MoDAF.atl", label: 'IEEE1471_2_MoDAF.atl', color: '#7BE141' },
+		{id: "/home/juri/MDEProfiler2/IEEE1471_2_MoDAF/IEEE1471_2_MoDAF/metamodel/MoDAF-AV.km3", label: 'MoDAF-AV.km3', },
+		{id: "/home/juri/MDEProfiler2/IEEE1471_2_MoDAF/IEEE1471_2_MoDAF/metamodel/IEEE1471ConceptualModel.km3", label: 'IEEE1471ConceptualModel.km3', },
+		{id: "/home/juri/MDEProfiler2/IEEE1471_2_MoDAF/IEEE1471_2_MoDAF/IEEE1471_2_MoDAF loadModel.xml.launch", label: 'IEEE1471_2_MoDAF loadModel.xml.launch', color: 'rgb(255,168,7)' },
+		{id: "/home/juri/MDEProfiler2/IEEE1471_2_MoDAF/IEEE1471_2_MoDAF/IEEE1471_2_MoDAF IEEE1471_2_MoDAF.xml.launch", label: 'IEEE1471_2_MoDAF IEEE1471_2_MoDAF.xml.launch', color: 'rgb(255,168,7)' },
+		{id: "/home/juri/MDEProfiler2/IEEE1471_2_MoDAF/IEEE1471_2_MoDAF/transformation/IEEE1471_2_MoDAF.launch", label: 'IEEE1471_2_MoDAF.launch', color: 'rgb(255,168,7)' },
+		{id: "/home/juri/MDEProfiler2/IEEE1471_2_MoDAF/IEEE1471_2_MoDAF/IEEE1471_2_MoDAF.xml", label: 'IEEE1471_2_MoDAF.xml', color: 'rgb(200,68,170)' },
+		{id: "/home/juri/MDEProfiler2/IEEE1471_2_MoDAF/IEEE1471_2_MoDAF/loadModel.xml", label: 'loadModel.xml', color: 'rgb(200,68,170)' },
+		{id: "/home/juri/MDEProfiler2/IEEE1471_2_MoDAF/IEEE1471_2_MoDAF/IEEE1471_2_MoDAF.xml/${sourceModel}", label: '${sourceModel}', },
+		{id: "/home/juri/MDEProfiler2/IEEE1471_2_MoDAF/IEEE1471_2_MoDAF/target", label: 'target', },
+	 ]	
+
+  );
+
+  // create an array with edges
+  var edges = new vis.DataSet(
+	 [
+		{from: "/home/juri/MDEProfiler2/IEEE1471_2_MoDAF/IEEE1471_2_MoDAF/transformation/IEEE1471_2_MoDAF.atl", to: "/home/juri/MDEProfiler2/IEEE1471_2_MoDAF/IEEE1471_2_MoDAF/metamodel/IEEE1471ConceptualModel.ecore"},
+		{from: "/home/juri/MDEProfiler2/IEEE1471_2_MoDAF/IEEE1471_2_MoDAF/example/sample-IEEE1471.ecore", to: "/home/juri/MDEProfiler2/IEEE1471_2_MoDAF/IEEE1471_2_MoDAF/metamodel/IEEE1471ConceptualModel.ecore"},
+		{from: "/home/juri/MDEProfiler2/IEEE1471_2_MoDAF/IEEE1471_2_MoDAF/example/sample-IEEE1471.ecore", to: "/home/juri/MDEProfiler2/IEEE1471_2_MoDAF/IEEE1471_2_MoDAF/transformation/IEEE1471_2_MoDAF.atl"},
+		{from: "/home/juri/MDEProfiler2/IEEE1471_2_MoDAF/IEEE1471_2_MoDAF/transformation/IEEE1471_2_MoDAF.atl", to: "/home/juri/MDEProfiler2/IEEE1471_2_MoDAF/IEEE1471_2_MoDAF/metamodel/MoDAF-AV.ecore"},
+		{from: "/home/juri/MDEProfiler2/IEEE1471_2_MoDAF/IEEE1471_2_MoDAF/example/sample-MoDAF.ecore", to: "/home/juri/MDEProfiler2/IEEE1471_2_MoDAF/IEEE1471_2_MoDAF/transformation/IEEE1471_2_MoDAF.atl"},
+		{from: "/home/juri/MDEProfiler2/IEEE1471_2_MoDAF/IEEE1471_2_MoDAF/example/sample-MoDAF.ecore", to: "/home/juri/MDEProfiler2/IEEE1471_2_MoDAF/IEEE1471_2_MoDAF/metamodel/MoDAF-AV.ecore"},
+		{from: "/home/juri/MDEProfiler2/IEEE1471_2_MoDAF/IEEE1471_2_MoDAF/IEEE1471_2_MoDAF.xml/${sourceModel}", to: "/home/juri/MDEProfiler2/IEEE1471_2_MoDAF/IEEE1471_2_MoDAF/metamodel/IEEE1471ConceptualModel.ecore"},
+		{from: "/home/juri/MDEProfiler2/IEEE1471_2_MoDAF/IEEE1471_2_MoDAF/transformation/IEEE1471_2_MoDAF.atl", to: "/home/juri/MDEProfiler2/IEEE1471_2_MoDAF/IEEE1471_2_MoDAF/metamodel/IEEE1471ConceptualModel.ecore"},
+		{from: "/home/juri/MDEProfiler2/IEEE1471_2_MoDAF/IEEE1471_2_MoDAF/transformation/IEEE1471_2_MoDAF.atl", to: "/home/juri/MDEProfiler2/IEEE1471_2_MoDAF/IEEE1471_2_MoDAF/metamodel/MoDAF-AV.ecore"},
+		{from: "/home/juri/MDEProfiler2/IEEE1471_2_MoDAF/IEEE1471_2_MoDAF/target", to: "/home/juri/MDEProfiler2/IEEE1471_2_MoDAF/IEEE1471_2_MoDAF/example/sample-IEEE1471.ecore"},
+		{from: "/home/juri/MDEProfiler2/IEEE1471_2_MoDAF/IEEE1471_2_MoDAF/transformation/IEEE1471_2_MoDAF.atl", to: "/home/juri/MDEProfiler2/IEEE1471_2_MoDAF/IEEE1471_2_MoDAF/IEEE1471_2_MoDAF.xml/${sourceModel}"},
+		{from: "/home/juri/MDEProfiler2/IEEE1471_2_MoDAF/IEEE1471_2_MoDAF/transformation/IEEE1471_2_MoDAF.atl", to: "/home/juri/MDEProfiler2/IEEE1471_2_MoDAF/IEEE1471_2_MoDAF/target"},
+ 	]
+  );
+
+  // create a network
+  var container = document.getElementById('mynetwork');
+  var data = {
+    nodes: nodes,
+    edges: edges
+  };
+  var options = {
+    nodes: {borderWidth: 2},
+    interaction: {hover: true}
+  }
+  var network = new vis.Network(container, data, options);
+</script>
+</body>
+</html>

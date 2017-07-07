@@ -1,0 +1,82 @@
+<!doctype html>
+<html>
+<head>
+  <title>Network | Basic usage</title>
+
+  <script type="text/javascript" src="vis.js"></script>
+  <link href="vis-network.min.css" rel="stylesheet" type="text/css" />
+
+  <style type="text/css">
+    #mynetwork {
+      width: 600px;
+      height: 400px;
+      border: 1px solid lightgray;
+    }
+
+    p {
+      max-width:700px;
+    }
+  </style>
+</head>
+<body>
+
+<p>
+  	<h1>Project Name: KM32Measure<br/></h1>
+	
+	
+</p>
+
+<div id="mynetwork"></div>
+
+<script type="text/javascript">
+  // create an array with nodes
+  var nodes = new vis.DataSet(
+     [
+	
+		{id: "/home/juri/MDEProfiler2/KM32Measure/KM32Measure/models/example-Measure.ecore", label: 'example-Measure.ecore', },
+		{id: "/home/juri/MDEProfiler2/KM32Measure/KM32Measure/metamodels/Measure.ecore", label: 'Measure.ecore', },
+		{id: "/home/juri/MDEProfiler2/KM32Measure/KM32Measure/lib/FLAME4KM3.atl", label: 'FLAME4KM3.atl', color: '#7BE141' },
+		{id: "/home/juri/MDEProfiler2/KM32Measure/KM32Measure/lib/MOOD4KM3.atl", label: 'MOOD4KM3.atl', color: '#7BE141' },
+		{id: "/home/juri/MDEProfiler2/KM32Measure/KM32Measure/lib/EMOOSE4KM3.atl", label: 'EMOOSE4KM3.atl', color: '#7BE141' },
+		{id: "/home/juri/MDEProfiler2/KM32Measure/KM32Measure/lib/QMOOD4KM3.atl", label: 'QMOOD4KM3.atl', color: '#7BE141' },
+		{id: "/home/juri/MDEProfiler2/KM32Measure/KM32Measure/transformations/KM32Measure.atl", label: 'KM32Measure.atl', color: '#7BE141' },
+		{id: "/home/juri/MDEProfiler2/KM32Measure/KM32Measure/models/example.km3", label: 'example.km3', },
+		{id: "/home/juri/MDEProfiler2/KM32Measure/KM32Measure/metamodels/Measure.km3", label: 'Measure.km3', },
+		{id: "/home/juri/MDEProfiler2/KM32Measure/KM32Measure/conf/KM32Measure build.xml.launch", label: 'KM32Measure build.xml.launch', color: 'rgb(255,168,7)' },
+		{id: "/home/juri/MDEProfiler2/KM32Measure/KM32Measure/build.xml", label: 'build.xml', color: 'rgb(200,68,170)' },
+		{id: "${source.metamodel.uri}", label: '${source.metamodel.name}', },
+		{id: "/home/juri/MDEProfiler2/KM32Measure/KM32Measure/example-Measure.ecore", label: 'example-Measure.ecore', },
+	 ]	
+
+  );
+
+  // create an array with edges
+  var edges = new vis.DataSet(
+	 [
+		{from: "/home/juri/MDEProfiler2/KM32Measure/KM32Measure/transformations/KM32Measure.atl", to: "${source.metamodel.uri}"},
+		{from: "/home/juri/MDEProfiler2/KM32Measure/KM32Measure/models/example.km3", to: "${source.metamodel.uri}"},
+		{from: "/home/juri/MDEProfiler2/KM32Measure/KM32Measure/transformations/KM32Measure.atl", to: "/home/juri/MDEProfiler2/KM32Measure/KM32Measure/metamodels/Measure.ecore"},
+		{from: "/home/juri/MDEProfiler2/KM32Measure/KM32Measure/example-Measure.ecore", to: "/home/juri/MDEProfiler2/KM32Measure/KM32Measure/models/example-Measure.ecore"},
+		{from: "/home/juri/MDEProfiler2/KM32Measure/KM32Measure/transformations/KM32Measure.atl", to: "/home/juri/MDEProfiler2/KM32Measure/KM32Measure/models/example.km3"},
+		{from: "/home/juri/MDEProfiler2/KM32Measure/KM32Measure/transformations/KM32Measure.atl", to: "/home/juri/MDEProfiler2/KM32Measure/KM32Measure/lib/FLAME4KM3.atl"},
+		{from: "/home/juri/MDEProfiler2/KM32Measure/KM32Measure/transformations/KM32Measure.atl", to: "/home/juri/MDEProfiler2/KM32Measure/KM32Measure/lib/MOOD4KM3.atl"},
+		{from: "/home/juri/MDEProfiler2/KM32Measure/KM32Measure/transformations/KM32Measure.atl", to: "/home/juri/MDEProfiler2/KM32Measure/KM32Measure/lib/EMOOSE4KM3.atl"},
+		{from: "/home/juri/MDEProfiler2/KM32Measure/KM32Measure/transformations/KM32Measure.atl", to: "/home/juri/MDEProfiler2/KM32Measure/KM32Measure/lib/QMOOD4KM3.atl"},
+		{from: "/home/juri/MDEProfiler2/KM32Measure/KM32Measure/transformations/KM32Measure.atl", to: "/home/juri/MDEProfiler2/KM32Measure/KM32Measure/example-Measure.ecore"},
+ 	]
+  );
+
+  // create a network
+  var container = document.getElementById('mynetwork');
+  var data = {
+    nodes: nodes,
+    edges: edges
+  };
+  var options = {
+    nodes: {borderWidth: 2},
+    interaction: {hover: true}
+  }
+  var network = new vis.Network(container, data, options);
+</script>
+</body>
+</html>

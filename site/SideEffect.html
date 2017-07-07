@@ -1,0 +1,95 @@
+<!doctype html>
+<html>
+<head>
+  <title>Network | Basic usage</title>
+
+  <script type="text/javascript" src="vis.js"></script>
+  <link href="vis-network.min.css" rel="stylesheet" type="text/css" />
+
+  <style type="text/css">
+    #mynetwork {
+      width: 600px;
+      height: 400px;
+      border: 1px solid lightgray;
+    }
+
+    p {
+      max-width:700px;
+    }
+  </style>
+</head>
+<body>
+
+<p>
+  	<h1>Project Name: SideEffect<br/></h1>
+	
+	
+</p>
+
+<div id="mynetwork"></div>
+
+<script type="text/javascript">
+  // create an array with nodes
+  var nodes = new vis.DataSet(
+     [
+	
+		{id: "/home/juri/MDEProfiler2/SideEffect/SideEffect/Metamodels/TypeA.ecore", label: 'TypeA.ecore', },
+		{id: "/home/juri/MDEProfiler2/SideEffect/SideEffect/Metamodels/TypeB.ecore", label: 'TypeB.ecore', },
+		{id: "/home/juri/MDEProfiler2/SideEffect/SideEffect/Transformations/TypeA2TypeB_v1.atl", label: 'TypeA2TypeB_v1.atl', color: '#7BE141' },
+		{id: "/home/juri/MDEProfiler2/SideEffect/SideEffect/Transformations/TypeA2TypeB_v2.atl", label: 'TypeA2TypeB_v2.atl', color: '#7BE141' },
+		{id: "/home/juri/MDEProfiler2/SideEffect/SideEffect/Transformations/TypeA2TypeB_v3_secondStep.atl", label: 'TypeA2TypeB_v3_secondStep.atl', color: '#7BE141' },
+		{id: "/home/juri/MDEProfiler2/SideEffect/SideEffect/Transformations/TypeA2TypeB_v3_firstStep.atl", label: 'TypeA2TypeB_v3_firstStep.atl', color: '#7BE141' },
+		{id: "/home/juri/MDEProfiler2/SideEffect/SideEffect/Metamodels/TypeB.km3", label: 'TypeB.km3', },
+		{id: "/home/juri/MDEProfiler2/SideEffect/SideEffect/Metamodels/TypeA.km3", label: 'TypeA.km3', },
+		{id: "/home/juri/MDEProfiler2/SideEffect/SideEffect/Transformations/SideEffect_2 build.xml.launch", label: 'SideEffect_2 build.xml.launch', color: 'rgb(255,168,7)' },
+		{id: "/home/juri/MDEProfiler2/SideEffect/SideEffect/Transformations/SideEffect_v1.launch", label: 'SideEffect_v1.launch', color: 'rgb(255,168,7)' },
+		{id: "/home/juri/MDEProfiler2/SideEffect/SideEffect/Transformations/SideEffect build.xml.launch", label: 'SideEffect build.xml.launch', color: 'rgb(255,168,7)' },
+		{id: "/home/juri/MDEProfiler2/SideEffect/SideEffect/Transformations/SideEffect_v2.launch", label: 'SideEffect_v2.launch', color: 'rgb(255,168,7)' },
+		{id: "/home/juri/MDEProfiler2/SideEffect/SideEffect/Transformations/build.xml", label: 'build.xml', color: 'rgb(200,68,170)' },
+		{id: "/home/juri/MDEProfiler2/SideEffect/SideEffect/Transformations/SideEffect/SampleModels/RootA.xmi", label: '/SideEffect/SampleModels/RootA.xmi', },
+		{id: "/home/juri/MDEProfiler2/SideEffect/SideEffect/Transformations/SideEffect/SampleModels/RootB.xmi", label: '/SideEffect/SampleModels/RootB.xmi', },
+	 ]	
+
+  );
+
+  // create an array with edges
+  var edges = new vis.DataSet(
+	 [
+		{from: "/home/juri/MDEProfiler2/SideEffect/SideEffect/Transformations/TypeA2TypeB_v1.atl", to: "/home/juri/MDEProfiler2/SideEffect/SideEffect/Metamodels/TypeA.ecore"},
+		{from: "/home/juri/MDEProfiler2/SideEffect/SideEffect/Transformations/TypeA2TypeB_v1.atl", to: "/home/juri/MDEProfiler2/SideEffect/SideEffect/Metamodels/TypeB.ecore"},
+		{from: "/home/juri/MDEProfiler2/SideEffect/SideEffect/Transformations/TypeA2TypeB_v2.atl", to: "/home/juri/MDEProfiler2/SideEffect/SideEffect/Metamodels/TypeA.ecore"},
+		{from: "/home/juri/MDEProfiler2/SideEffect/SideEffect/Transformations/TypeA2TypeB_v2.atl", to: "/home/juri/MDEProfiler2/SideEffect/SideEffect/Metamodels/TypeB.ecore"},
+		{from: "/home/juri/MDEProfiler2/SideEffect/SideEffect/Transformations/TypeA2TypeB_v3_secondStep.atl", to: "/home/juri/MDEProfiler2/SideEffect/SideEffect/Metamodels/TypeA.ecore"},
+		{from: "/home/juri/MDEProfiler2/SideEffect/SideEffect/Transformations/TypeA2TypeB_v3_secondStep.atl", to: "/home/juri/MDEProfiler2/SideEffect/SideEffect/Metamodels/TypeB.ecore"},
+		{from: "/home/juri/MDEProfiler2/SideEffect/SideEffect/Transformations/TypeA2TypeB_v3_secondStep.atl", to: "/home/juri/MDEProfiler2/SideEffect/SideEffect/Metamodels/TypeB.ecore"},
+		{from: "/home/juri/MDEProfiler2/SideEffect/SideEffect/Transformations/TypeA2TypeB_v3_firstStep.atl", to: "/home/juri/MDEProfiler2/SideEffect/SideEffect/Metamodels/TypeA.ecore"},
+		{from: "/home/juri/MDEProfiler2/SideEffect/SideEffect/Transformations/TypeA2TypeB_v3_firstStep.atl", to: "/home/juri/MDEProfiler2/SideEffect/SideEffect/Metamodels/TypeB.ecore"},
+		{from: "/home/juri/MDEProfiler2/SideEffect/SideEffect/Transformations/TypeA2TypeB_v1.atl", to: "/home/juri/MDEProfiler2/SideEffect/SideEffect/Metamodels/TypeA.ecore"},
+		{from: "/home/juri/MDEProfiler2/SideEffect/SideEffect/Transformations/SideEffect/SampleModels/RootA.xmi", to: "/home/juri/MDEProfiler2/SideEffect/SideEffect/Metamodels/TypeA.ecore"},
+		{from: "/home/juri/MDEProfiler2/SideEffect/SideEffect/Transformations/SideEffect/SampleModels/RootA.xmi", to: "/home/juri/MDEProfiler2/SideEffect/SideEffect/Transformations/TypeA2TypeB_v1.atl"},
+		{from: "/home/juri/MDEProfiler2/SideEffect/SideEffect/Transformations/TypeA2TypeB_v1.atl", to: "/home/juri/MDEProfiler2/SideEffect/SideEffect/Metamodels/TypeB.ecore"},
+		{from: "/home/juri/MDEProfiler2/SideEffect/SideEffect/Transformations/SideEffect/SampleModels/RootB.xmi", to: "/home/juri/MDEProfiler2/SideEffect/SideEffect/Transformations/TypeA2TypeB_v1.atl"},
+		{from: "/home/juri/MDEProfiler2/SideEffect/SideEffect/Transformations/SideEffect/SampleModels/RootB.xmi", to: "/home/juri/MDEProfiler2/SideEffect/SideEffect/Metamodels/TypeB.ecore"},
+		{from: "/home/juri/MDEProfiler2/SideEffect/SideEffect/Transformations/TypeA2TypeB_v2.atl", to: "/home/juri/MDEProfiler2/SideEffect/SideEffect/Metamodels/TypeA.ecore"},
+		{from: "/home/juri/MDEProfiler2/SideEffect/SideEffect/Transformations/SideEffect/SampleModels/RootA.xmi", to: "/home/juri/MDEProfiler2/SideEffect/SideEffect/Metamodels/TypeA.ecore"},
+		{from: "/home/juri/MDEProfiler2/SideEffect/SideEffect/Transformations/SideEffect/SampleModels/RootA.xmi", to: "/home/juri/MDEProfiler2/SideEffect/SideEffect/Transformations/TypeA2TypeB_v2.atl"},
+		{from: "/home/juri/MDEProfiler2/SideEffect/SideEffect/Transformations/TypeA2TypeB_v2.atl", to: "/home/juri/MDEProfiler2/SideEffect/SideEffect/Metamodels/TypeB.ecore"},
+		{from: "/home/juri/MDEProfiler2/SideEffect/SideEffect/Transformations/SideEffect/SampleModels/RootB.xmi", to: "/home/juri/MDEProfiler2/SideEffect/SideEffect/Transformations/TypeA2TypeB_v2.atl"},
+		{from: "/home/juri/MDEProfiler2/SideEffect/SideEffect/Transformations/SideEffect/SampleModels/RootB.xmi", to: "/home/juri/MDEProfiler2/SideEffect/SideEffect/Metamodels/TypeB.ecore"},
+ 	]
+  );
+
+  // create a network
+  var container = document.getElementById('mynetwork');
+  var data = {
+    nodes: nodes,
+    edges: edges
+  };
+  var options = {
+    nodes: {borderWidth: 2},
+    interaction: {hover: true}
+  }
+  var network = new vis.Network(container, data, options);
+</script>
+</body>
+</html>

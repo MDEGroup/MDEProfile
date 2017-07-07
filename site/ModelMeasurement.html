@@ -1,0 +1,96 @@
+<!doctype html>
+<html>
+<head>
+  <title>Network | Basic usage</title>
+
+  <script type="text/javascript" src="vis.js"></script>
+  <link href="vis-network.min.css" rel="stylesheet" type="text/css" />
+
+  <style type="text/css">
+    #mynetwork {
+      width: 600px;
+      height: 400px;
+      border: 1px solid lightgray;
+    }
+
+    p {
+      max-width:700px;
+    }
+  </style>
+</head>
+<body>
+
+<p>
+  	<h1>Project Name: ModelMeasurement<br/></h1>
+	
+	
+</p>
+
+<div id="mynetwork"></div>
+
+<script type="text/javascript">
+  // create an array with nodes
+  var nodes = new vis.DataSet(
+     [
+	
+		{id: "/home/juri/MDEProfiler2/ModelMeasurement/ModelsMeasurement/models/example-Measure.ecore", label: 'example-Measure.ecore', },
+		{id: "/home/juri/MDEProfiler2/ModelMeasurement/ModelsMeasurement/metamodels/Table.ecore", label: 'Table.ecore', },
+		{id: "/home/juri/MDEProfiler2/ModelMeasurement/ModelsMeasurement/metamodels/HTML.ecore", label: 'HTML.ecore', },
+		{id: "/home/juri/MDEProfiler2/ModelMeasurement/ModelsMeasurement/metamodels/XHTML.ecore", label: 'XHTML.ecore', },
+		{id: "/home/juri/MDEProfiler2/ModelMeasurement/ModelsMeasurement/metamodels/XML.ecore", label: 'XML.ecore', },
+		{id: "/home/juri/MDEProfiler2/ModelMeasurement/ModelsMeasurement/metamodels/SVG.ecore", label: 'SVG.ecore', },
+		{id: "/home/juri/MDEProfiler2/ModelMeasurement/ModelsMeasurement/metamodels/Measure.ecore", label: 'Measure.ecore', },
+		{id: "/home/juri/MDEProfiler2/ModelMeasurement/ModelsMeasurement/lib/MeasureHelpers.atl", label: 'MeasureHelpers.atl', color: '#7BE141' },
+		{id: "/home/juri/MDEProfiler2/ModelMeasurement/ModelsMeasurement/lib/TableHelpers.atl", label: 'TableHelpers.atl', color: '#7BE141' },
+		{id: "/home/juri/MDEProfiler2/ModelMeasurement/ModelsMeasurement/lib/FLAME4KM3.atl", label: 'FLAME4KM3.atl', color: '#7BE141' },
+		{id: "/home/juri/MDEProfiler2/ModelMeasurement/ModelsMeasurement/lib/QMOOD4UML2.atl", label: 'QMOOD4UML2.atl', color: '#7BE141' },
+		{id: "/home/juri/MDEProfiler2/ModelMeasurement/ModelsMeasurement/lib/FLAME4UML2.atl", label: 'FLAME4UML2.atl', color: '#7BE141' },
+		{id: "/home/juri/MDEProfiler2/ModelMeasurement/ModelsMeasurement/lib/MOOD4KM3.atl", label: 'MOOD4KM3.atl', color: '#7BE141' },
+		{id: "/home/juri/MDEProfiler2/ModelMeasurement/ModelsMeasurement/lib/EMOOSE4UML2.atl", label: 'EMOOSE4UML2.atl', color: '#7BE141' },
+		{id: "/home/juri/MDEProfiler2/ModelMeasurement/ModelsMeasurement/lib/EMOOSE4KM3.atl", label: 'EMOOSE4KM3.atl', color: '#7BE141' },
+		{id: "/home/juri/MDEProfiler2/ModelMeasurement/ModelsMeasurement/lib/MOOD4UML2.atl", label: 'MOOD4UML2.atl', color: '#7BE141' },
+		{id: "/home/juri/MDEProfiler2/ModelMeasurement/ModelsMeasurement/lib/QMOOD4KM3.atl", label: 'QMOOD4KM3.atl', color: '#7BE141' },
+		{id: "/home/juri/MDEProfiler2/ModelMeasurement/ModelsMeasurement/transformations/Measure2XHTML.atl", label: 'Measure2XHTML.atl', color: '#7BE141' },
+		{id: "/home/juri/MDEProfiler2/ModelMeasurement/ModelsMeasurement/transformations/Measure2Table.atl", label: 'Measure2Table.atl', color: '#7BE141' },
+		{id: "/home/juri/MDEProfiler2/ModelMeasurement/ModelsMeasurement/transformations/Table2TabularHTML.atl", label: 'Table2TabularHTML.atl', color: '#7BE141' },
+		{id: "/home/juri/MDEProfiler2/ModelMeasurement/ModelsMeasurement/transformations/Table2SVGPieChart.atl", label: 'Table2SVGPieChart.atl', color: '#7BE141' },
+		{id: "/home/juri/MDEProfiler2/ModelMeasurement/ModelsMeasurement/transformations/KM32Measure.atl", label: 'KM32Measure.atl', color: '#7BE141' },
+		{id: "/home/juri/MDEProfiler2/ModelMeasurement/ModelsMeasurement/transformations/Table2SVGBarChart.atl", label: 'Table2SVGBarChart.atl', color: '#7BE141' },
+		{id: "/home/juri/MDEProfiler2/ModelMeasurement/ModelsMeasurement/transformations/XHTML2XML.atl", label: 'XHTML2XML.atl', color: '#7BE141' },
+		{id: "/home/juri/MDEProfiler2/ModelMeasurement/ModelsMeasurement/transformations/SVG2XML.atl", label: 'SVG2XML.atl', color: '#7BE141' },
+		{id: "/home/juri/MDEProfiler2/ModelMeasurement/ModelsMeasurement/transformations/UML22Measure.atl", label: 'UML22Measure.atl', color: '#7BE141' },
+		{id: "/home/juri/MDEProfiler2/ModelMeasurement/ModelsMeasurement/transformations/HTML2XML.atl", label: 'HTML2XML.atl', color: '#7BE141' },
+		{id: "/home/juri/MDEProfiler2/ModelMeasurement/ModelsMeasurement/models/example.km3", label: 'example.km3', },
+		{id: "/home/juri/MDEProfiler2/ModelMeasurement/ModelsMeasurement/metamodels/SVG.km3", label: 'SVG.km3', },
+		{id: "/home/juri/MDEProfiler2/ModelMeasurement/ModelsMeasurement/metamodels/HTML.km3", label: 'HTML.km3', },
+		{id: "/home/juri/MDEProfiler2/ModelMeasurement/ModelsMeasurement/metamodels/Table.km3", label: 'Table.km3', },
+		{id: "/home/juri/MDEProfiler2/ModelMeasurement/ModelsMeasurement/metamodels/XHTML.km3", label: 'XHTML.km3', },
+		{id: "/home/juri/MDEProfiler2/ModelMeasurement/ModelsMeasurement/metamodels/Measure.km3", label: 'Measure.km3', },
+		{id: "/home/juri/MDEProfiler2/ModelMeasurement/ModelsMeasurement/metamodels/XML.km3", label: 'XML.km3', },
+		{id: "/home/juri/MDEProfiler2/ModelMeasurement/ModelsMeasurement/conf/ModelsMeasurement build.xml.launch", label: 'ModelsMeasurement build.xml.launch', color: 'rgb(255,168,7)' },
+		{id: "/home/juri/MDEProfiler2/ModelMeasurement/ModelsMeasurement/build.xml", label: 'build.xml', },
+	 ]	
+
+  );
+
+  // create an array with edges
+  var edges = new vis.DataSet(
+	 [
+		{from: "/home/juri/MDEProfiler2/ModelMeasurement/ModelsMeasurement/transformations/XHTML2XML.atl", to: "/home/juri/MDEProfiler2/ModelMeasurement/ModelsMeasurement/metamodels/XHTML.ecore"},
+ 	]
+  );
+
+  // create a network
+  var container = document.getElementById('mynetwork');
+  var data = {
+    nodes: nodes,
+    edges: edges
+  };
+  var options = {
+    nodes: {borderWidth: 2},
+    interaction: {hover: true}
+  }
+  var network = new vis.Network(container, data, options);
+</script>
+</body>
+</html>

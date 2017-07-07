@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="ASCII"?>
-<graph:Graph xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:graph="http://it.univaq.MDEProfiler/graph" name="/home/juri/MDEProfiler/Table2SVGBarChart/Table2SVGBarChart/"
-	xsi:schemaLocation="http://it.univaq.MDEProfiler/graph Graph.ecore">
+<graph:Graph xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:graph="http://it.univaq.MDEProfiler/graph" name="/home/juri/MDEProfiler/Table2SVGBarChart/Table2SVGBarChart/">
   <nodes name="example-Table.ecore" uri="/home/juri/MDEProfiler/Table2SVGBarChart/Table2SVGBarChart/models/example-Table.ecore">
     <type>NodeType.ECORE</type>
   </nodes>

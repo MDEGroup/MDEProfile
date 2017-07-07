@@ -22,7 +22,11 @@ import org.eclipse.emf.common.util.BasicMonitor;
 import org.eclipse.emf.common.util.Monitor;
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.EObject;
+import org.eclipse.emf.ecore.EPackage;
+import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.ResourceSet;
+
+import it.univaq.MDEProfiler.graph.model.graph.GraphPackage;
 
 /**
  * Entry point of the 'Generate' generation module.
@@ -163,6 +167,23 @@ public class Generate extends AbstractAcceleoGenerator {
             e.printStackTrace();
         }
     }
+    
+    public static void run(String modelUri, String outputFolder) {
+    	EPackage.Registry.INSTANCE.put(GraphPackage.eNS_URI, GraphPackage.eINSTANCE); 
+    	Resource.Factory.Registry.INSTANCE.getExtensionToFactoryMap().put("*", GraphPackage.eINSTANCE);
+        try {
+            
+                URI modelURI = URI.createFileURI(modelUri);
+                File folder = new File(outputFolder);
+                List<String> arguments = new ArrayList<String>();
+                Generate generator = new Generate(modelURI, folder, arguments);
+                generator.doGenerate(new BasicMonitor());
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+    
+    
 
     /**
      * Launches the generation described by this instance.

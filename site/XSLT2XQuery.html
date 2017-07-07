@@ -1,0 +1,92 @@
+<!doctype html>
+<html>
+<head>
+  <title>Network | Basic usage</title>
+
+  <script type="text/javascript" src="vis.js"></script>
+  <link href="vis-network.min.css" rel="stylesheet" type="text/css" />
+
+  <style type="text/css">
+    #mynetwork {
+      width: 600px;
+      height: 400px;
+      border: 1px solid lightgray;
+    }
+
+    p {
+      max-width:700px;
+    }
+  </style>
+</head>
+<body>
+
+<p>
+  	<h1>Project Name: XSLT2XQuery<br/></h1>
+	
+	
+</p>
+
+<div id="mynetwork"></div>
+
+<script type="text/javascript">
+  // create an array with nodes
+  var nodes = new vis.DataSet(
+     [
+	
+		{id: "/home/juri/MDEProfiler2/XSLT2XQuery/XSLT2XQuery/XSLT/XSLT.ecore", label: 'XSLT.ecore', },
+		{id: "/home/juri/MDEProfiler2/XSLT2XQuery/XSLT2XQuery/XML/XML.ecore", label: 'XML.ecore', },
+		{id: "/home/juri/MDEProfiler2/XSLT2XQuery/XSLT2XQuery/XQuery/XQuery.ecore", label: 'XQuery.ecore', },
+		{id: "/home/juri/MDEProfiler2/XSLT2XQuery/XSLT2XQuery/ATLFile/XML2XSLT.atl", label: 'XML2XSLT.atl', color: '#7BE141' },
+		{id: "/home/juri/MDEProfiler2/XSLT2XQuery/XSLT2XQuery/ATLFile/XSLT2XQuery.atl", label: 'XSLT2XQuery.atl', color: '#7BE141' },
+		{id: "/home/juri/MDEProfiler2/XSLT2XQuery/XSLT2XQuery/ATLFile/XQuery2Code.atl", label: 'XQuery2Code.atl', color: '#7BE141' },
+		{id: "/home/juri/MDEProfiler2/XSLT2XQuery/XSLT2XQuery/XSLT/XSLT.km3", label: 'XSLT.km3', },
+		{id: "/home/juri/MDEProfiler2/XSLT2XQuery/XSLT2XQuery/XQuery/XQuery.km3", label: 'XQuery.km3', },
+		{id: "/home/juri/MDEProfiler2/XSLT2XQuery/XSLT2XQuery/XQuery2Code.launch", label: 'XQuery2Code.launch', color: 'rgb(255,168,7)' },
+		{id: "/home/juri/MDEProfiler2/XSLT2XQuery/XSLT2XQuery/XSLT2XQuery.launch", label: 'XSLT2XQuery.launch', color: 'rgb(255,168,7)' },
+		{id: "/home/juri/MDEProfiler2/XSLT2XQuery/XSLT2XQuery/XML2XSLT.launch", label: 'XML2XSLT.launch', color: 'rgb(255,168,7)' },
+		{id: "/home/juri/MDEProfiler2/XSLT2XQuery/XSLT2XQuery/XSLT2XQuery/XQuery/test-XQuery.xmi", label: '/XSLT2XQuery/XQuery/test-XQuery.xmi', },
+		{id: "/home/juri/MDEProfiler2/XSLT2XQuery/XSLT2XQuery/XSLT2XQuery/XSLT/test-XSLT.xmi", label: '/XSLT2XQuery/XSLT/test-XSLT.xmi', },
+		{id: "/home/juri/MDEProfiler2/XSLT2XQuery/XSLT2XQuery/XSLT2XQuery/XML/tr.xsl-XML.xmi", label: '/XSLT2XQuery/XML/tr.xsl-XML.xmi', },
+	 ]	
+
+  );
+
+  // create an array with edges
+  var edges = new vis.DataSet(
+	 [
+		{from: "/home/juri/MDEProfiler2/XSLT2XQuery/XSLT2XQuery/ATLFile/XML2XSLT.atl", to: "/home/juri/MDEProfiler2/XSLT2XQuery/XSLT2XQuery/XML/XML.ecore"},
+		{from: "/home/juri/MDEProfiler2/XSLT2XQuery/XSLT2XQuery/ATLFile/XML2XSLT.atl", to: "/home/juri/MDEProfiler2/XSLT2XQuery/XSLT2XQuery/XSLT/XSLT.ecore"},
+		{from: "/home/juri/MDEProfiler2/XSLT2XQuery/XSLT2XQuery/ATLFile/XSLT2XQuery.atl", to: "/home/juri/MDEProfiler2/XSLT2XQuery/XSLT2XQuery/XSLT/XSLT.ecore"},
+		{from: "/home/juri/MDEProfiler2/XSLT2XQuery/XSLT2XQuery/ATLFile/XSLT2XQuery.atl", to: "/home/juri/MDEProfiler2/XSLT2XQuery/XSLT2XQuery/XQuery/XQuery.ecore"},
+		{from: "/home/juri/MDEProfiler2/XSLT2XQuery/XSLT2XQuery/ATLFile/XQuery2Code.atl", to: "/home/juri/MDEProfiler2/XSLT2XQuery/XSLT2XQuery/XQuery/XQuery.ecore"},
+		{from: "/home/juri/MDEProfiler2/XSLT2XQuery/XSLT2XQuery/XSLT2XQuery/XQuery/test-XQuery.xmi", to: "/home/juri/MDEProfiler2/XSLT2XQuery/XSLT2XQuery/XQuery/XQuery.ecore"},
+		{from: "/home/juri/MDEProfiler2/XSLT2XQuery/XSLT2XQuery/XSLT2XQuery/XQuery/test-XQuery.xmi", to: "/home/juri/MDEProfiler2/XSLT2XQuery/XSLT2XQuery/ATLFile/XQuery2Code.atl"},
+		{from: "/home/juri/MDEProfiler2/XSLT2XQuery/XSLT2XQuery/ATLFile/XSLT2XQuery.atl", to: "/home/juri/MDEProfiler2/XSLT2XQuery/XSLT2XQuery/XSLT/XSLT.ecore"},
+		{from: "/home/juri/MDEProfiler2/XSLT2XQuery/XSLT2XQuery/XSLT2XQuery/XSLT/test-XSLT.xmi", to: "/home/juri/MDEProfiler2/XSLT2XQuery/XSLT2XQuery/XSLT/XSLT.ecore"},
+		{from: "/home/juri/MDEProfiler2/XSLT2XQuery/XSLT2XQuery/XSLT2XQuery/XSLT/test-XSLT.xmi", to: "/home/juri/MDEProfiler2/XSLT2XQuery/XSLT2XQuery/ATLFile/XSLT2XQuery.atl"},
+		{from: "/home/juri/MDEProfiler2/XSLT2XQuery/XSLT2XQuery/ATLFile/XSLT2XQuery.atl", to: "/home/juri/MDEProfiler2/XSLT2XQuery/XSLT2XQuery/XQuery/XQuery.ecore"},
+		{from: "/home/juri/MDEProfiler2/XSLT2XQuery/XSLT2XQuery/XSLT2XQuery/XQuery/test-XQuery.xmi", to: "/home/juri/MDEProfiler2/XSLT2XQuery/XSLT2XQuery/ATLFile/XSLT2XQuery.atl"},
+		{from: "/home/juri/MDEProfiler2/XSLT2XQuery/XSLT2XQuery/XSLT2XQuery/XQuery/test-XQuery.xmi", to: "/home/juri/MDEProfiler2/XSLT2XQuery/XSLT2XQuery/XQuery/XQuery.ecore"},
+		{from: "/home/juri/MDEProfiler2/XSLT2XQuery/XSLT2XQuery/ATLFile/XML2XSLT.atl", to: "/home/juri/MDEProfiler2/XSLT2XQuery/XSLT2XQuery/XML/XML.ecore"},
+		{from: "/home/juri/MDEProfiler2/XSLT2XQuery/XSLT2XQuery/XSLT2XQuery/XML/tr.xsl-XML.xmi", to: "/home/juri/MDEProfiler2/XSLT2XQuery/XSLT2XQuery/XML/XML.ecore"},
+		{from: "/home/juri/MDEProfiler2/XSLT2XQuery/XSLT2XQuery/XSLT2XQuery/XML/tr.xsl-XML.xmi", to: "/home/juri/MDEProfiler2/XSLT2XQuery/XSLT2XQuery/ATLFile/XML2XSLT.atl"},
+		{from: "/home/juri/MDEProfiler2/XSLT2XQuery/XSLT2XQuery/ATLFile/XML2XSLT.atl", to: "/home/juri/MDEProfiler2/XSLT2XQuery/XSLT2XQuery/XSLT/XSLT.ecore"},
+		{from: "/home/juri/MDEProfiler2/XSLT2XQuery/XSLT2XQuery/XSLT2XQuery/XSLT/test-XSLT.xmi", to: "/home/juri/MDEProfiler2/XSLT2XQuery/XSLT2XQuery/ATLFile/XML2XSLT.atl"},
+		{from: "/home/juri/MDEProfiler2/XSLT2XQuery/XSLT2XQuery/XSLT2XQuery/XSLT/test-XSLT.xmi", to: "/home/juri/MDEProfiler2/XSLT2XQuery/XSLT2XQuery/XSLT/XSLT.ecore"},
+ 	]
+  );
+
+  // create a network
+  var container = document.getElementById('mynetwork');
+  var data = {
+    nodes: nodes,
+    edges: edges
+  };
+  var options = {
+    nodes: {borderWidth: 2},
+    interaction: {hover: true}
+  }
+  var network = new vis.Network(container, data, options);
+</script>
+</body>
+</html>
