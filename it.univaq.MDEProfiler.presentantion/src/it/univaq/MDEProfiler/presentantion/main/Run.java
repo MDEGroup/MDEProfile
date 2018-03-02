@@ -11,11 +11,11 @@ public class Run {
 	private static String resultsFolder = "/home/juri/MDEProfilerResults/";
 	private static String baseFolder = "/home/juri/MDEProfiler2";
 	private static String modelFolder = "/home/juri/modelResult/";
-	private static String outFolder = "/home/juri/graphResults2";
+	private static String outFolder = "./target/";
 	private static HeuristicManager heuristicManager = new HeuristicManager();  
 	public static void main (String[] args){
 //		runAnalysis();
-		File baseFolderFile = new File("/home/juri/modelResult");
+		File baseFolderFile = new File("./model/");
 		for (File file : baseFolderFile.listFiles()) {
 			System.out.println("<a href='" + file.getName().replace("xmi", "") + 
 								"html'>" + file.getName().substring(0, file.getName().length()-4) + "</a>");
@@ -23,6 +23,7 @@ public class Run {
 			
 		}
 	}
+	
 	private static void runAnalysis(){
 		File folder = new File(baseFolder);
 		for (File file : folder.listFiles()) {

@@ -1,0 +1,68 @@
+<!doctype html>
+<html>
+<head>
+  <title>Network | Basic usage</title>
+
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.js"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.css" rel="stylesheet" type="text/css" />
+
+  <style type="text/css">
+    #mynetwork {
+      width: 600px;
+      height: 400px;
+      border: 1px solid lightgray;
+    }
+
+    p {
+      max-width:700px;
+    }
+  </style>
+</head>
+<body>
+
+<p>
+  	<h1>Project Name: home/target/graph<br/></h1>
+	
+	
+</p>
+
+<div id="mynetwork"></div>
+
+<script type="text/javascript">
+  // create an array with nodes
+  var nodes = new vis.DataSet(
+     [
+	
+		{id: "c:/control-modeler/robmod/model/robmod.ecore", label: 'robmod.ecore', color: 'lime' },
+		{id: "c:/control-modeler/org.eclipse.acceleo.module.robmod/src/org/eclipse/acceleo/module/robmod/main/Deployment.java", label: 'Deployment.java', color: 'red' },
+		{id: "c:/control-modeler/org.eclipse.acceleo.module.robmod/src/org/eclipse/acceleo/module/robmod/main/Generate.java", label: 'Generate.java', color: 'red' },
+		{id: "c:/control-modeler/org.eclipse.acceleo.module.robmod/src/org/eclipse/acceleo/module/robmod/main/deployment.mtl", label: 'deployment.mtl', color: 'green' },
+		{id: "c:/control-modeler/org.eclipse.acceleo.module.robmod/src/org/eclipse/acceleo/module/robmod/main/generate.mtl", label: 'generate.mtl', color: 'green' },
+	 ]	
+
+  );
+
+  // create an array with edges
+  var edges = new vis.DataSet(
+	 [
+		{from: "c:/control-modeler/org.eclipse.acceleo.module.robmod/src/org/eclipse/acceleo/module/robmod/main/deployment.mtl", to: "c:/control-modeler/robmod/model/robmod.ecore"},
+		{from: "c:/control-modeler/org.eclipse.acceleo.module.robmod/src/org/eclipse/acceleo/module/robmod/main/generate.mtl", to: "c:/control-modeler/robmod/model/robmod.ecore"},
+		{from: "c:/control-modeler/org.eclipse.acceleo.module.robmod/src/org/eclipse/acceleo/module/robmod/main/deployment.mtl", to: "c:/control-modeler/org.eclipse.acceleo.module.robmod/src/org/eclipse/acceleo/module/robmod/main/Deployment.java"},
+		{from: "c:/control-modeler/org.eclipse.acceleo.module.robmod/src/org/eclipse/acceleo/module/robmod/main/generate.mtl", to: "c:/control-modeler/org.eclipse.acceleo.module.robmod/src/org/eclipse/acceleo/module/robmod/main/Generate.java"},
+ 	]
+  );
+
+  // create a network
+  var container = document.getElementById('mynetwork');
+  var data = {
+    nodes: nodes,
+    edges: edges
+  };
+  var options = {
+    nodes: {borderWidth: 2},
+    interaction: {hover: true}
+  }
+  var network = new vis.Network(container, data, options);
+</script>
+</body>
+</html>

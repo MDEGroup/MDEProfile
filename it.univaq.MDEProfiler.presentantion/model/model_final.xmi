@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="ASCII"?>
+<graph:Graph xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:graph="http://it.univaq.MDEProfiler/graph" name="home/target/graph">
+  <nodes name="robmod.ecore" uri="c:\control-modeler\robmod\model\robmod.ecore">
+    <type>NodeType.Ecore</type>
+  </nodes>
+  <nodes name="Deployment.java" uri="c:\control-modeler\org.eclipse.acceleo.module.robmod\src\org\eclipse\acceleo\module\robmod\main\Deployment.java">
+    <type>NodeType.java</type>
+  </nodes>
+  <nodes name="Generate.java" uri="c:\control-modeler\org.eclipse.acceleo.module.robmod\src\org\eclipse\acceleo\module\robmod\main\Generate.java">
+    <type>NodeType.java</type>
+  </nodes>
+  <nodes name="deployment.mtl" uri="c:\control-modeler\org.eclipse.acceleo.module.robmod\src\org\eclipse\acceleo\module\robmod\main\deployment.mtl">
+    <type>NodeType.mtl</type>
+  </nodes>
+  <nodes name="generate.mtl" uri="c:\control-modeler\org.eclipse.acceleo.module.robmod\src\org\eclipse\acceleo\module\robmod\main\generate.mtl">
+    <type>NodeType.mtl</type>
+  </nodes>
+  <edges source="//@nodes.3" target="//@nodes.0"/>
+  <edges source="//@nodes.4" target="//@nodes.0"/>
+  <edges source="//@nodes.3" target="//@nodes.1"/>
+  <edges source="//@nodes.4" target="//@nodes.2"/>
+</graph:Graph>

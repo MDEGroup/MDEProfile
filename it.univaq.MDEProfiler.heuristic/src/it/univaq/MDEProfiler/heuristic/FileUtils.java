@@ -29,6 +29,9 @@ public class FileUtils {
 	public static String launcherKind = "NodeType.LAUNCHER";
 	public static String launcherATLKind = "NodeType.LAUNCHER_ATL";
 	
+	public static String MTLKind = "NodeType.mtl";
+	public static String JavaKind = "NodeType.java";
+	public static String MavenKind = "NodeType.maven";
 	
 	public static String source = "SOURCE";
 	public static String target = "TARGET";
@@ -59,6 +62,29 @@ public class FileUtils {
 		}
 		return result;
 	}
+	
+	public static List<File> getFilesByNameValue(File rootFolder, String name) {
+		List<File> result = new ArrayList<File>();
+		if (rootFolder.isDirectory())
+			result.addAll(Arrays.asList(rootFolder.listFiles(new FilenameFilter() {
+				public boolean accept(File dir, String filename) {
+					File f = new File(dir.getAbsolutePath()+ "/" + filename);
+					return filename.toLowerCase().equals(name) && !f.isDirectory();
+				}
+			})));
+		List<File> listFolder = Arrays.asList(rootFolder.listFiles(new FilenameFilter() {
+			public boolean accept(File dir, String filename) {
+				File f = new File(dir.getAbsolutePath() + File.separator + filename);
+				return f.isDirectory();
+			}
+		}));
+		for (File file : listFolder) {
+			result.addAll(getFilesByNameValue(file, name));
+		}
+		return result;
+	}
+	
+	
 	public static String getRootFolder() {
 		java.util.Properties prop = new java.util.Properties();
 		String propFileName = "resources/properties.properties";

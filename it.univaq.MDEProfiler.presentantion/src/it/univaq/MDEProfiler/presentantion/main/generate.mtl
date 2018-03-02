@@ -10,8 +10,8 @@
 <head>
   <title>Network | Basic usage</title>
 
-  <script type="text/javascript" src="vis.js"></script>
-  <link href="vis-network.min.css" rel="stylesheet" type="text/css" />
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.js"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.css" rel="stylesheet" type="text/css" />
 
   <style type="text/css">
     #mynetwork {
@@ -41,7 +41,7 @@
      [ '[' /]
 	
 	[for (it : Node | aGraph.nodes)]
-		{id: "[it.uri/]", label: '[it.name/]', [if (it.type->includes('NodeType.ECORE'))]color: 'lime' [/if][if (it.type->includes('NodeType.ATL'))]color: '#7BE141' [/if][if (it.type->includes('NodeType.LAUNCHER'))]color: 'rgb(255,168,7)' [/if][if (it.type->includes('NodeType.ANT'))]color: 'rgb(200,68,170)' [/if]},
+		{id: "[it.uri.trim().substituteAll('\\', '/')/]", label: '[it.name/]', [if (it.type->includes('NodeType.java'))]color: 'red' [/if][if (it.type->includes('NodeType.mtl'))]color: 'green' [/if][if (it.type->includes('NodeType.maven'))]color: 'blue' [/if][if (it.type->includes('NodeType.Ecore'))]color: 'lime' [/if][if (it.type->includes('NodeType.ATL'))]color: '#7BE141' [/if][if (it.type->includes('NodeType.LAUNCHER'))]color: 'rgb(255,168,7)' [/if][if (it.type->includes('NodeType.ANT'))]color: 'rgb(200,68,170)' [/if]},
 	[/for]
 	 [ ']' /]	
 
@@ -51,7 +51,7 @@
   var edges = new vis.DataSet(
 	 [ '[' /]
 	[for(it : Edge | aGraph.edges)]
-		{from: "[it.source.uri/]", to: "[it.target.uri/]"},
+		{from: "[it.source.uri.trim().substituteAll('\\', '/')/]", to: "[it.target.uri.trim().substituteAll('\\', '/')/]"},
 	[/for]
  	[ ']' /]
   );

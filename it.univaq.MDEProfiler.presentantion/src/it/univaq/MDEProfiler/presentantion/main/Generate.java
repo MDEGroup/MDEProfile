@@ -169,14 +169,16 @@ public class Generate extends AbstractAcceleoGenerator {
     }
     
     public static void run(String modelUri, String outputFolder) {
+    	
     	EPackage.Registry.INSTANCE.put(GraphPackage.eNS_URI, GraphPackage.eINSTANCE); 
     	Resource.Factory.Registry.INSTANCE.getExtensionToFactoryMap().put("*", GraphPackage.eINSTANCE);
         try {
-            
+        	
                 URI modelURI = URI.createFileURI(modelUri);
                 File folder = new File(outputFolder);
                 List<String> arguments = new ArrayList<String>();
                 Generate generator = new Generate(modelURI, folder, arguments);
+                //System.out.println(arguments);
                 generator.doGenerate(new BasicMonitor());
         } catch (IOException e) {
             e.printStackTrace();

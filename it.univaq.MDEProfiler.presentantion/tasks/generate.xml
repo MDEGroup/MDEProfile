@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project default="generate" name="it.univaq.MDEProfiler.presentantion">
     <property name="ECLIPSE_HOME" value="../../../../eclipse/jee-neon/eclipse"/>
-    <property name="ECLIPSE_WORKSPACE" value="../.."/>
+    <property name="ECLIPSE_WORKSPACE" value="../../../../workspace_mdeproject"/>
 
     <!-- The classpath with only the dependencies used by the project -->
     <path id="it.univaq.MDEProfiler.presentantion.libraryclasspath">

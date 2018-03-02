@@ -107,6 +107,7 @@ public class HeuristicManager {
 	public Graph launcherEcore_ATL_ATLWithPathLaucher_LauncherATL_ANT_ANTWithATL(File file){
 		List<IHeuristic> heuristics = new ArrayList<IHeuristic>();
 		heuristics.add(new EcoreHeuristic());
+		heuristics.add(new JavaHeuristic());
 		heuristics.add(new ATLHeuristic());
 		heuristics.add(new KM3Heuristic());
 		heuristics.add(new LauncherHeuristic());
@@ -118,4 +119,19 @@ public class HeuristicManager {
 
 		return g;
 	}
+	
+	
+	public Graph launcherTest(File file){
+		List<IHeuristic> heuristics = new ArrayList<IHeuristic>();
+		heuristics.add(new EcoreHeuristic());
+		heuristics.add(new JavaHeuristic());
+		heuristics.add(new MTLHeuristic());
+		heuristics.add(new MavenHeuristic());
+		heuristics.add(new MTLWithJavaHeuristic());
+		heuristics.add(new MTLWithEcoreHeuristic());
+		heuristics.add(new MavenWithJavaHeuristic());
+		Graph g = harvestProject(file, heuristics);
+		return g;
+	}
+	
 }
