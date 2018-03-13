@@ -1,0 +1,35 @@
+<project name="UML2Ecore" default="UML2Ecore">
+
+	<target name="UML2Ecore" depends="loadModels">
+
+		<am3.loadModel modelHandler="EMF" name="sample-UML" metamodel="UML" path="../SampleUMLClassDiagram/sBook.uml">
+		</am3.loadModel>
+
+		<am3.atl path="UML2KM3.asm">
+			<inModel name="UML" model="UML"/>
+			<inModel name="IN" model="sample-UML"/>
+			<inModel name="KM3" model="KM3"/>
+			<outModel name="OUT" model="sample-KM3" metamodel="KM3"/>
+		</am3.atl>
+		
+		<am3.atl path="KM32EMF.asm">
+			<inModel name="IN" model="sample-KM3"/>
+			<inModel name="KM3" model="KM3"/>
+			<inModel name="MOF" model="%EMF"/>
+			<outModel name="OUT" model="sample-Ecore" metamodel="%EMF"/>
+		</am3.atl>
+
+		<am3.saveModel model="sample-Ecore" path="test.ecore">
+		</am3.saveModel>
+	</target>
+
+	<target name="loadModels">
+		
+		<!-- Load UML metamodel -->
+		<am3.loadModel modelHandler="EMF" name="UML" metamodel="MOF" nsUri="http://www.eclipse.org/uml2/2.0.0/UML"/>
+		
+		<!-- Load KM3 metamodel -->
+		<am3.loadModel modelHandler="EMF" name="KM3" metamodel="MOF" nsUri="http://www.eclipse.org/gmt/2005/KM3"/>
+
+	</target>	
+</project>

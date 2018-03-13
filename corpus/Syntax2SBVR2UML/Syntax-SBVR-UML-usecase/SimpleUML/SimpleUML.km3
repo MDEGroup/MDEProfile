@@ -1,0 +1,113 @@
+-- @nsURI simpleuml
+-- @nsPrefix simpleuml
+
+-- ******************************************************************************
+-- Copyright (c) 2009 INRIA. 
+-- All rights reserved. This program and the accompanying materials 
+-- are made available under the terms of the Eclipse Public License v1.0 
+-- which accompanies this distribution, and is available at
+-- http://www.eclipse.org/legal/epl-v10.html
+-- 
+-- Contributors: 
+-- 	INRIA - Initial implementation
+--  
+-- ******************************************************************************
+
+--@author Mathias Kleiner (mathias.kleiner@inria.fr)
+
+package SimpleUML {
+
+	-- Rooting
+	
+	class Root {
+	
+		reference elements[0-*] container : Element;
+	}
+	
+	class Element {
+		
+		attribute objectName : String;
+	}
+	
+	-- NamedElements & Features
+	
+	class NamedElement extends Element {
+	
+		attribute name : String;
+	}
+	
+	class TypedElement extends NamedElement { 
+	
+		reference type[0-1] : Type;
+	}
+	
+	class MultiplicityElement extends Element { 
+	
+		attribute lowerValue : Integer;
+		attribute upperValue : Integer;
+	}
+	
+	class StructuralFeature extends TypedElement, MultiplicityElement { }
+	
+	-- Classes & Associations
+	
+	class Type extends NamedElement {
+	
+	}
+	
+	class Classifier extends Type { 
+	
+		reference ownedAttribute[0-*] : Property oppositeOf classifier;
+	}
+	
+	class Class extends Classifier {
+		
+	}
+	
+	class Generalization extends Element {
+	
+		reference specific[0-1] : Classifier;
+		reference general[0-1] : Classifier;
+	}
+	
+	class Association extends Classifier {
+	
+		reference memberEnd[2-*] : Property oppositeOf association;
+		reference ownedEnd[0-*] : Property oppositeOf owningAssociation;
+	}
+	
+	-- DataTypes
+	
+	class DataType extends Classifier {}
+	
+	class PrimitiveType extends DataType { }
+	
+	-- Properties
+	
+	class Property extends StructuralFeature {
+	
+		attribute aggregation : Boolean;
+		reference classifier[0-1] : Classifier oppositeOf ownedAttribute;
+		reference association[0-1] : Association oppositeOf memberEnd;
+		reference owningAssociation[0-1] : Association oppositeOf ownedEnd;
+	}
+	
+	-- InstanceSpecifications
+	
+	class InstanceSpecification extends NamedElement {
+	
+		reference classifier[0-*] : Classifier;
+	}
+	
+
+}
+
+-- @nsURI ptype
+-- @nsPrefix ptype
+
+package PrimitiveTypes {
+
+	datatype String;
+	datatype Integer;
+	datatype Boolean;
+}

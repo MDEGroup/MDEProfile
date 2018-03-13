@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<Root xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="XML" startLine="1" startColumn="8" endLine="1" endColumn="91" name="model">
+  <children xsi:type="Element" startLine="1" startColumn="11" endLine="1" endColumn="48" name="A">
+    <children xsi:type="Element" startLine="1" startColumn="30" endLine="1" endColumn="44" name="B">
+      <children xsi:type="Attribute" name="model" value="example"/>
+      <children xsi:type="Element" startLine="1" startColumn="35" endLine="1" endColumn="35" name="b1"/>
+      <children xsi:type="Element" startLine="1" startColumn="40" endLine="1" endColumn="40" name="b2"/>
+    </children>
+  </children>
+  <children xsi:type="Element" startLine="1" startColumn="51" endLine="1" endColumn="83" name="B">
+    <children xsi:type="Element" startLine="1" startColumn="70" endLine="1" endColumn="79" name="A">
+      <children xsi:type="Attribute" name="model" value="example"/>
+      <children xsi:type="Element" startLine="1" startColumn="75" endLine="1" endColumn="75" name="a1"/>
+    </children>
+  </children>
+</Root>

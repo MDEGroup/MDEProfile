@@ -1,0 +1,94 @@
+Family MetaH_Family()=
+{/ * BEGIN STANDARD METAH DECLARATIONS * / 
+     ..............
+ / * BEGIN EXAMPLE SPECIFIC DECLARATIONS * / 
+
+  component type P1 extends MH_Process with{
+    port p1_input : MH_port
+      = { 
+      property MH_port_type=ANY_TYPE;
+      property MH_port_subclass=MH_in;}
+    ;
+    port update : MH_port
+      = { 
+      property MH_port_type=ANOTHER_TYPE;
+      property MH_port_subclass=MH_out;}
+    ;
+    port feedback : MH_port
+      = { 
+      property MH_port_type=ANOTHER_TYPE;
+      property MH_port_subclass=MH_in;}
+    ;
+  };
+
+  component type P1_EXAMPLE extends P1 with{
+    property MH_Period="25 ms";
+    property MH_SourceTime="2 ms";
+  };
+
+  component type P2 extends MH_Process with{
+    port p1_result : MH_port
+      = { 
+      property MH_port_type=ANY_TYPE;
+      property MH_port_subclass=MH_out;}
+    ;
+    port update : MH_port
+      = { 
+      property MH_port_type=ANOTHER_TYPE;
+      property MH_port_subclass=MH_out;}
+    ;
+    port feedback : MH_port
+      = { 
+      property MH_port_type=ANOTHER_TYPE;
+      property MH_port_subclass=MH_in;}
+    ;
+  };
+
+  component type P2_EXAMPLE extends P2 with{
+    property MH_Period="50 ms";
+    property MH_SourceTime="5 ms";
+  };
+
+  component type M extends MH_macro with{
+    port m_in : MH_port
+      = { 
+      property MH_port_type=ANY_TYPE;
+      property MH_port_subclass=MH_in;}
+    ;
+    port m_out : MH_port
+      = { 
+      property MH_port_type=ANY_TYPE;
+      property MH_port_subclass=MH_out;}
+    ;
+  };
+
+  component type EXAMPLE extends M with{
+    Representation{
+      system MH_little_system={
+        component P2=new p2_example extended with{
+          property MH_Process_subclass=MH_periodic;
+        };
+        component P1=new p1_example extended with{
+          property MH_Process_subclass=MH_periodic;
+        };
+        Connector p1_to_p2=new MH_connector extended with{};
+        Connector p2_to_p1=new MH_connector extended with{};
+        Attachments{
+          p2.feedback to p2_to_p1.MH_sink;
+          p1.feedback to p1_to_p2.MH_sink;
+          p2.update to p1_to_p2.MH_source;
+          p1.update to p2_to_p1.MH_source;
+        };
+      }
+        Bindings{
+          m_out to p2.p2_result;
+          p1.p1_input to m_in;
+        };
+      ;
+    };
+  };
+  
+};
+ 
+ system MH_system : MetaH_Family =
+  {component MH_component = new M_example;};

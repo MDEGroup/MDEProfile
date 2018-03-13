@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<ACMEFile xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="ACME">
+  <entries xsi:type="ComponentType" name="P1" extend="MH_Process">
+    <ports name="p1_input">
+      <property name="MH_port_type" val="ANY_TYPE"/>
+      <property name="MH_port_subclass" val="MH_in"/>
+    </ports>
+    <ports name="update">
+      <property name="MH_port_type" val="ANOTHER_TYPE"/>
+      <property name="MH_port_subclass" val="MH_out"/>
+    </ports>
+    <ports name="feedback">
+      <property name="MH_port_type" val="ANOTHER_TYPE"/>
+      <property name="MH_port_subclass" val="MH_in"/>
+    </ports>
+  </entries>
+  <entries xsi:type="ComponentType" name="P1_EXAMPLE" extend="P1">
+    <property name="MH_Period" val="25 ms"/>
+    <property name="MH_SourceTime" val="2 ms"/>
+  </entries>
+  <entries xsi:type="ComponentType" name="P2" extend="MH_Process">
+    <ports name="p1_result">
+      <property name="MH_port_type" val="ANY_TYPE"/>
+      <property name="MH_port_subclass" val="MH_out"/>
+    </ports>
+    <ports name="update">
+      <property name="MH_port_type" val="ANOTHER_TYPE"/>
+      <property name="MH_port_subclass" val="MH_out"/>
+    </ports>
+    <ports name="feedback">
+      <property name="MH_port_type" val="ANOTHER_TYPE"/>
+      <property name="MH_port_subclass" val="MH_in"/>
+    </ports>
+  </entries>
+  <entries xsi:type="ComponentType" name="P2_EXAMPLE" extend="P2">
+    <property name="MH_Period" val="50 ms"/>
+    <property name="MH_SourceTime" val="5 ms"/>
+  </entries>
+  <entries xsi:type="ComponentType" name="M" extend="MH_macro">
+    <ports name="m_in">
+      <property name="MH_port_type" val="ANY_TYPE"/>
+      <property name="MH_port_subclass" val="MH_in"/>
+    </ports>
+    <ports name="m_out">
+      <property name="MH_port_type" val="ANY_TYPE"/>
+      <property name="MH_port_subclass" val="MH_out"/>
+    </ports>
+  </entries>
+  <entries xsi:type="ComponentType" name="EXAMPLE" extend="M">
+    <representations>
+      <systems name="MH_little_System">
+        <componentDeclaration name="P2" instanceOf="p2_example">
+          <property name="MH_Process_subclass" val="MH_periodic"/>
+        </componentDeclaration>
+        <componentDeclaration name="P1" instanceOf="p1_example">
+          <property name="MH_Process_subclass" val="MH_periodic"/>
+        </componentDeclaration>
+        <connectorDeclaration name="p1_to_p2">
+          <roles name="MH_sink"/>
+          <roles name="MH_source"/>
+        </connectorDeclaration>
+        <connectorDeclaration name="p2_to_p1">
+          <roles name="MH_sink"/>
+          <roles name="MH_source"/>
+        </connectorDeclaration>
+        <attachments xsi:type="Attachment" comp="p2" port="feedback" con="p2_to_p1" role="MH_sink"/>
+        <attachments xsi:type="Attachment" comp="p1" port="feedback" con="p1_to_p2" role="MH_sink"/>
+        <attachments xsi:type="Attachment" comp="p2" port="update" con="p1_to_p2" role="MH_source"/>
+        <attachments xsi:type="Attachment" comp="p1" port="update" con="p2_to_p1" role="MH_source"/>
+        <bindings xsi:type="Binding" portSrc="m_out" compDest="p2" portDest="p2_result"/>
+        <bindings xsi:type="Binding" compSrc="p1" portSrc="p1_input" portDest="m_in"/>
+      </systems>
+    </representations>
+  </entries>
+</ACMEFile>

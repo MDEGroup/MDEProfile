@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<launchConfiguration type="org.atl.eclipse.adt.launching.atlTransformation">
+<stringAttribute key="ATL File Name" value="/UML2ClassDiagram_to_KM3/Transformations/UML2KM3.atl"/>
+<stringAttribute key="ATL VM" value="Regular VM (with debugger)"/>
+<booleanAttribute key="AllowInterModelReferences" value="false"/>
+<booleanAttribute key="ContinueAfterError" value="false"/>
+<mapAttribute key="Input">
+<mapEntry key="IN" value="UML"/>
+</mapAttribute>
+<mapAttribute key="Libs"/>
+<booleanAttribute key="Mode Debug" value="false"/>
+<mapAttribute key="Model Handler">
+<mapEntry key="UML" value="EMF"/>
+<mapEntry key="KM3" value="EMF"/>
+</mapAttribute>
+<mapAttribute key="ModelType">
+<mapEntry key="OUT" value="MODELOUTPUT"/>
+<mapEntry key="UML" value="METAMODELINPUT"/>
+<mapEntry key="KM3" value="METAMODELOUTPUT"/>
+<mapEntry key="IN" value="MODELINPUT"/>
+</mapAttribute>
+<mapAttribute key="Output">
+<mapEntry key="OUT" value="KM3"/>
+</mapAttribute>
+<mapAttribute key="Path">
+<mapEntry key="OUT" value="/UML2ClassDiagram_to_KM3/SampleKM3/out-KM3.ecore"/>
+<mapEntry key="UML" value="uri:http://www.eclipse.org/uml2/2.0.0/UML"/>
+<mapEntry key="KM3" value="uri:http://www.eclipse.org/gmt/2005/KM3"/>
+<mapEntry key="IN" value="/UML2ClassDiagram_to_KM3/SampleUMLClassDiagram/Book.uml"/>
+</mapAttribute>
+<stringAttribute key="Project Name" value="UML2ClassDiagram_to_KM3"/>
+<listAttribute key="Superimpose"/>
+<booleanAttribute key="continueAfterError" value="false"/>
+<booleanAttribute key="disableAttributeHelperCache" value="false"/>
+<booleanAttribute key="printExecutionTime" value="false"/>
+<booleanAttribute key="profile" value="false"/>
+<booleanAttribute key="showSummary" value="false"/>
+<booleanAttribute key="step" value="false"/>
+</launchConfiguration>

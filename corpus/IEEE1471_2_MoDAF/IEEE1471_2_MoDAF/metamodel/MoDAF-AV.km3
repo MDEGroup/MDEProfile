@@ -1,0 +1,329 @@
+--@name			MoDAF
+--@version		1.1	
+--@domains		Architecture Description, SoS (System of System), View, Viewpoint
+--@authors		Albin Jossic (jossic.albin <at> gmail.com) 
+--@date			2006/05/29	
+--@description	Metamodel of MoDAF (Ministry of Defense Architecture Framework) (UML profile) Architecture View
+--@see			http://modaf.modelfutures.com/m3/
+--@see 			"Recommended Practice for Architectural description of Softwrare-Intensive Systems", IEEE Std 1471-2000, IEEE, 2000.
+--@see			IEEE1471ConceptualModel.km3 and IEEE1471ViewpointM2.km3
+
+--@begin package MoDAF AV
+package MoDAF {
+
+	--@begin class Element
+	--@comment this class is not a part of the IEEE1471
+	abstract class Element {
+		attribute name : String;
+		attribute content[0-1] : String;
+	}
+	--@end class Element
+
+	--@begin class MoDAFModel
+	--@comment this class is not a part of the IEEE1471
+	--@comment it is used as the root element in the tree of the containement relationship 
+	class MoDAFModel extends Element {
+		reference enterprise container : Enterprise;
+		reference environment container : Environment;
+		reference operationalMissions[1-*] container : OperationalMission;
+		reference architectures[1-*] container : Architecture;
+		reference architecturalDescription[1-*] container : ArchitecturalDescription;
+		reference architecturalReferences[1-*] container : ArchitecturalReference;
+		reference architecturalFrameworks[1-*] container : ArchitecturalFramework;
+		reference architectureMetadatas[*] container : ArchitectureMetaData;
+		reference metaDatas[*] container : MetaData;
+		reference stakeholders[1-*] container : Stakeholder;
+		reference stakeholderHasConcerns[1-*] container : StakeholderHasConcern oppositeOf owner;
+	}
+	--@end class MoDAFModel
+	
+	
+	--@begin class Enterprise
+	--@comments IEEE1471:System
+	--@comments UML metaclass Kernel::Class with isAbstarct=false
+	class Enterprise extends Element {
+		reference inhabits : Environment oppositeOf influences;
+		reference fulfills [1-*] : OperationalMission;
+	}
+	--@end class Enterprise
+	
+	--@begin class Environment
+	--@comments UML metaclass UseCases::UseCase
+	class Environment extends ClassifiedElement {
+		reference influences : Enterprise oppositeOf inhabits;
+	}
+	--@end class Environment
+	
+	--@begin class Mission
+	--@comments UML metaclass BasicActivities::Activity
+	class OperationalMission extends Element {}
+	--@end class Mission
+	
+	--@begin class Architecture
+	--@comments UML metaclass Dependencies::Abstraction
+	class Architecture extends Element {
+		reference enterprise : Enterprise;
+		reference describedBy : ArchitecturalDescription;
+	}
+	--@end class Architecture 
+	
+	--@begin class ArchitectureDescription
+	--@comments UML metaclass Kernel::Package
+	class ArchitecturalDescription extends Element {
+		attribute approvialAuthority : String;
+		attribute architect : String;
+		attribute assumptionAndConstraints : String;
+		attribute creatingOrganisation : String;
+		attribute dateCompleted : String;
+		attribute purpose : String;
+		attribute recommendations : String;
+		attribute summaryOfFindings : String;
+		attribute tollsUsed : String;
+		reference viewpoints[1-*] : View;
+		reference products [1-*] container : ArchitecturalProduct;	
+		reference taxonomy : Taxonomy;
+	}
+	--@end class ArchitecturalDescription
+	
+	--@begin class ArchitecturalReference
+	--@comments UML metaclass Dependencies::Dependency
+	class ArchitecturalReference extends Element {
+		reference referred : ArchitecturalDescription;
+		reference referrer : ArchitecturalDescription;
+	}
+	--@end class ArchitecturalReference
+	
+	--@begin class ArchitecturalProduct
+	--@comments IEEE1471::View
+	--@comments UML metaclass Kernel::InstanceSpecification
+	class ArchitecturalProduct extends Element {
+		attribute description : String;
+		reference architecturalElements [1-*] container : Elements;
+		reference definingView : View;
+		reference addresses [0-*] : Concern oppositeOf adressedBy;
+	}
+	
+	class Elements extends Element {
+	}
+	--@end class ArchitecturalProduct
+	
+	--@begin class ArchitecturalFramework
+	--@comments UML metaclass Kernel::Package
+	class ArchitecturalFramework extends Element {
+		reference ownedMember [1-*] container : View oppositeOf definingFramework;
+	}
+	--@end class ArchitecturalFramework
+	
+	--@begin class View
+	--@comments IEEE1471::Viewpoint
+	--@comments UML metaclass Kernel::Class
+	class View extends Element {
+		attribute framework : String;
+		attribute frameworkWebsite : String;
+		attribute viewCode : String;
+		attribute viewDescription : String;
+		attribute viewName : String;
+		reference definingFramework : ArchitecturalFramework oppositeOf ownedMember;
+		reference usedToCover [0-*] container : Concern;
+	}
+	--@end class View
+	
+	--@begin class Concern
+	--@comments UML metaclass UseCAses::UseCase
+	class Concern extends Element {
+		reference adressedBy [0-*] : ArchitecturalProduct oppositeOf addresses;
+	}
+	--@end class Concern
+	
+	--@begin class StakeholderHasConcern
+	--@comments UML metaclass Dependencies::Dependency
+	class StakeholderHasConcern {
+		reference client : Stakeholder;
+		reference supplier : Concern;
+		reference owner : MoDAFModel oppositeOf stakeholderHasConcerns;
+	}
+	--@end class StakeholderHasConcern
+	
+	--@begin class Stakeholder
+	--@comments UML metaclass UseCases::Actor
+	class Stakeholder extends Element {}
+	--@end class Stakeholder
+	
+	--@begin MetaData
+	--@begin class MetaData
+	--@comment UML metaclass Kernel::Comment
+	class MetaData {
+		attribute dublinCoreElement : String;
+		attribute modMetaDataElement : String;
+		attribute name : String;
+		attribute body : String;
+	}
+	--@end MetaData
+	
+	--@begin class ArchitectureMetaData
+	class ArchitectureMetaData extends MetaData {
+		reference annotatedArchitecture : ArchitecturalDescription;
+	}
+	--@end class ArchitectureMetaData
+	--@end MetaData
+	
+	--@begin Taxonomy
+	--@begin class Taxonomy
+	--@comments UML metaclass Kernel::Package
+	class Taxonomy extends Element {
+		attribute date : String;
+		attribute url : String;
+		attribute version : String;
+		reference contents [0-*] container : ClassifiedElement oppositeOf taxonomy; 
+	}
+	--@end class Taxonomy
+	
+	--@begin Classiefied Element
+	--@begin clas ClassifiedElement
+	abstract class ClassifiedElement extends Element {
+		reference taxonomy : Taxonomy oppositeOf contents;
+	}
+	--@end clas ClassifiedElement
+	
+	--@begin class Standard
+	class Standard extends ClassifiedElement {
+		attribute identifier : String;
+		attribute publishedWebsite : String;
+		attribute publisher : String;
+		reference ratificationDate container : TimeExpression;
+		attribute version : String;
+		reference withdrawalDate container : TimeExpression;
+	}
+	--@begin class Standard
+	
+	--@begin class MeasurableProperty
+	class MeasurableProperty extends ClassifiedElement {
+		reference maxValue [0-1] container : LiteralSpecification;
+		reference minValue [0-1] container : LiteralSpecification;
+			
+	}
+	--@begin class MeasurableProperty
+	
+	--@begin class Strategic::CapabilityRequirement
+	class CapabilityRequirement extends ClassifiedElement {}
+	--@begin class Strategic::CapabilityRequirement
+	
+	--@begin class Strategic::Effect
+	class Effect extends ClassifiedElement {}
+	--@begin class Strategic::Effect
+	
+	--@begin class Strategic::EnduringTask
+	class EnduringTask extends ClassifiedElement {}
+	--@begin class Strategic::EnduringTask
+	
+	--@begin class Operational::OperationalConstraint
+	class OperationalConstraint extends ClassifiedElement {
+		reference nodeUsageContext [0-1] container : Property;
+	}
+	--@begin class Operational::OperationalConstraint
+		
+	--@begin class Operational::PostType
+	class PostType extends ClassifiedElement {}
+	--@begin class Operational::PostType
+	
+	--@begin class Operational::OrganisationType
+	class OrganisationType extends ClassifiedElement {}
+	--@begin class Operational::OrganisationType
+	
+	--@begin class Operational::RoleInOrganisation
+	class RoleInOrganisation extends ClassifiedElement {}
+	--@begin class Operational::RoleInOrganisation
+	
+	--@begin class Operational::LocationType
+	class LocationType extends ClassifiedElement {}
+	--@begin class Operational::LocationType
+	
+	--@begin class Operational::OperationalActivity
+	class OperationalActivity extends ClassifiedElement {}
+	--@begin class Operational::OperationalActivity
+	
+	--@begin class Operational::Node
+	class Node extends ClassifiedElement {}
+	--@begin class Operational::Node
+	
+	--@begin class Operational::InformationExchange
+	class InformationExchange extends ClassifiedElement {
+		attribute identifier : String;
+		attribute requirementText [0-1] : String;
+	}
+	--@begin class Operational::InformationExchange
+	
+	--@begin class Operational::Competence
+	class Competence extends ClassifiedElement {}
+	--@begin class Operational::Competence
+	
+	--@begin class Operational::InformationElement
+	class InformationElement extends ClassifiedElement {}
+	--@begin class Operational::InformationElement
+	
+	--@begin class Operational::NodeConnectionType
+	class NodeConnectionType extends ClassifiedElement {}
+	--@begin class Operational::NodeConnectionType
+	
+	--@begin class System::System
+	class System extends ClassifiedElement {}
+	--@begin class System::System
+	
+	--@begin class System::DataElement
+	class DataElement extends ClassifiedElement {}
+	--@begin class System::DataElement
+	
+	--@begin class System::SystemFunction
+	class SystemFunction extends ClassifiedElement {
+		reference systemUsageContext container : Property;
+	}
+	--@begin class System::SystemFunction
+	
+	--@begin class System::SystemConnectionSpecification
+	class SystemConnectionSpecification extends ClassifiedElement {}
+	--@begin class System::SystemConnectionSpecification
+	
+	--@begin class Acquisation::ProjectType
+	class ProjectType extends ClassifiedElement {}
+	--@begin class Acquisation::ProjectType
+	
+	--@begin class Service::Service
+	class Service extends ClassifiedElement {}
+	--@begin class Service::Service
+	
+	--@begin class SysML::Unit
+	class Unit extends ClassifiedElement {}
+	--@begin class SysML::Unit
+	
+	--@begin class SysML::Dimension
+	class Dimension extends ClassifiedElement {}
+	--@begin class SysML::Dimension
+	
+	--@begin class Acquisition::OrganisationProjectRelationship
+	class OrganisationProjectRelationship extends ClassifiedElement {}
+	--@begin class Acquisition::OrganisationProjectRelationship
+	
+	--@begin class Acquisition::ProjectThreadType
+	class ProjectThreadType extends ClassifiedElement {}
+	--@begin class Acquisition::ProjectThreadType
+	--@end Taxonomy
+	
+	--@begin interface class
+	class TimeExpression {
+		attribute value : String;
+	}
+	class LiteralSpecification {
+		attribute value : String;
+	}
+	class Property {
+		attribute value : String;
+	}
+	--@end interface class
+}
+--@end package MoDAF AV
+
+--@begin package Primitive Types 
+package PrimitiveTypes {
+	datatype String;
+}
+--@end package Primitive Types 

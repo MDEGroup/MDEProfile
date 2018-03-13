@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<launchConfiguration type="org.atl.eclipse.adt.launching.atlTransformation">
+<stringAttribute key="ATL File Name" value="/Tree2List/transformation/Tree2List_usingATLResolveAlgorithm.atl"/>
+<stringAttribute key="ATL VM" value="Regular VM (with debugger)"/>
+<booleanAttribute key="AllowInterModelReferences" value="false"/>
+<mapAttribute key="Input">
+<mapEntry key="aTree" value="MMTree"/>
+</mapAttribute>
+<mapAttribute key="Libs">
+<mapEntry key="Lib4MMTree" value="/Tree2List/transformation/Lib4MMTree.asm"/>
+</mapAttribute>
+<booleanAttribute key="Mode Debug" value="false"/>
+<mapAttribute key="Model Handler">
+<mapEntry key="MMElementList" value="EMF"/>
+<mapEntry key="MMTree" value="EMF"/>
+</mapAttribute>
+<mapAttribute key="ModelType">
+<mapEntry key="aTree" value="MODELINPUT"/>
+<mapEntry key="MMElementList" value="METAMODELOUTPUT"/>
+<mapEntry key="elmList" value="MODELOUTPUT"/>
+<mapEntry key="MMTree" value="METAMODELINPUT"/>
+</mapAttribute>
+<mapAttribute key="Output">
+<mapEntry key="elmList" value="MMElementList"/>
+</mapAttribute>
+<mapAttribute key="Path">
+<mapEntry key="aTree" value="/Tree2List/models/aTreeNode.xmi"/>
+<mapEntry key="MMElementList" value="/Tree2List/metamodels/MMElementList.ecore"/>
+<mapEntry key="elmList" value="/Tree2List/models/elmLst.xmi"/>
+<mapEntry key="MMTree" value="/Tree2List/metamodels/MMTree.ecore"/>
+</mapAttribute>
+<stringAttribute key="Project Name" value="Tree2List"/>
+<listAttribute key="Superimpose"/>
+<booleanAttribute key="continueAfterError" value="false"/>
+<booleanAttribute key="disableAttributeHelperCache" value="false"/>
+<booleanAttribute key="printExecutionTime" value="false"/>
+<booleanAttribute key="profile" value="false"/>
+<booleanAttribute key="showSummary" value="false"/>
+<booleanAttribute key="step" value="false"/>
+</launchConfiguration>

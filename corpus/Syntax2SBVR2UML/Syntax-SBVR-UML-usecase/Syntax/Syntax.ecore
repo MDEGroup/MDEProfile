@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore">
+  <ecore:EPackage name="Syntax" nsURI="syntax" nsPrefix="syntax">
+    <eClassifiers xsi:type="ecore:EClass" name="Root">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="elements" ordered="false" upperBound="-1" eType="/0/Element" containment="true"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Element">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="objectName" ordered="false" unique="false" lowerBound="1" eType="/1/String"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="SyntaxElement" eSuperTypes="/0/Element"/>
+    <eClassifiers xsi:type="ecore:EClass" name="SBVRElement" eSuperTypes="/0/Element">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="expressedBy" ordered="false" lowerBound="1" upperBound="-1" eType="/0/Cat" eOpposite="/0/Cat/expresses"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Designation" eSuperTypes="/0/Element">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="meaning" ordered="false" lowerBound="1" eType="/0/SBVRElement"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Text" eSuperTypes="/0/SyntaxElement">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="sentences" ordered="false" lowerBound="1" upperBound="-1" eType="/0/Sentence"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Sentence" eSuperTypes="/0/SyntaxElement">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="sentenceCat" ordered="false" lowerBound="1" eType="/0/SentenceCat"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="words" ordered="false" lowerBound="1" upperBound="-1" eType="/0/Word" eOpposite="/0/Word/sentence"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Word" eSuperTypes="/0/SyntaxElement">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="sentence" ordered="false" lowerBound="1" eType="/0/Sentence" eOpposite="/0/Sentence/words"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="wordCat" ordered="false" lowerBound="1" eType="/0/Cat" eOpposite="/0/Cat/word"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="baseDesignation" ordered="false" lowerBound="1" eType="/0/Designation"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Cat" eSuperTypes="/0/SyntaxElement">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="terminal" ordered="false" unique="false" lowerBound="1" eType="/1/Boolean"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="composedOf" ordered="false" upperBound="-1" eType="/0/Cat" eOpposite="/0/Cat/composes"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="composes" ordered="false" eType="/0/Cat" eOpposite="/0/Cat/composedOf"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="sentence" ordered="false" lowerBound="1" eType="/0/Sentence"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="word" ordered="false" eType="/0/Word" eOpposite="/0/Word/wordCat"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="expresses" ordered="false" eType="/0/SBVRElement" eOpposite="/0/SBVRElement/expressedBy"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="SentenceCat" eSuperTypes="/0/Cat">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="vp" ordered="false" lowerBound="1" eType="/0/VPCat"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="VPCat" eSuperTypes="/0/Cat">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="head" ordered="false" lowerBound="1" eType="/0/VCat" eOpposite="/0/VCat/vp"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="NPCat" eSuperTypes="/0/Cat">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="head" ordered="false" lowerBound="1" eType="/0/NCat" eOpposite="/0/NCat/np"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="determiner" ordered="false" eType="/0/DCat" eOpposite="/0/DCat/np"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="isSubjectOf" ordered="false" eType="/0/VCat" eOpposite="/0/VCat/subject"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="isDirectObjectOf" ordered="false" eType="/0/TVCat" eOpposite="/0/TVCat/directObject"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="VCat" eSuperTypes="/0/Cat">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="passive" ordered="false" unique="false" lowerBound="1" eType="/1/Boolean"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="subject" ordered="false" lowerBound="1" eType="/0/NPCat" eOpposite="/0/NPCat/isSubjectOf"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="vp" ordered="false" lowerBound="1" eType="/0/VPCat" eOpposite="/0/VPCat/head"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="TVCat" eSuperTypes="/0/VCat">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="directObject" ordered="false" eType="/0/NPCat" eOpposite="/0/NPCat/isDirectObjectOf"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="NCat" eSuperTypes="/0/Cat">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="np" ordered="false" lowerBound="1" eType="/0/NPCat" eOpposite="/0/NPCat/head"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="DCat" eSuperTypes="/0/Cat">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="np" ordered="false" lowerBound="1" eType="/0/NPCat" eOpposite="/0/NPCat/determiner"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="object" ordered="false" lowerBound="1" eType="/0/NCat"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="ADCat" eSuperTypes="/0/DCat"/>
+    <eClassifiers xsi:type="ecore:EClass" name="IADCat" eSuperTypes="/0/ADCat"/>
+    <eClassifiers xsi:type="ecore:EClass" name="DADCat" eSuperTypes="/0/ADCat"/>
+    <eClassifiers xsi:type="ecore:EClass" name="QCat" eSuperTypes="/0/DCat"/>
+    <eClassifiers xsi:type="ecore:EClass" name="QUnvaluedCat" eSuperTypes="/0/QCat"/>
+    <eClassifiers xsi:type="ecore:EClass" name="QValuedCat" eSuperTypes="/0/QCat">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="value" ordered="false" lowerBound="1" eType="/0/NumeralCat"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="NumeralCat" eSuperTypes="/0/Cat"/>
+    <eClassifiers xsi:type="ecore:EClass" name="Concept" eSuperTypes="/0/SBVRElement"/>
+    <eClassifiers xsi:type="ecore:EClass" name="NounConcept" eSuperTypes="/0/Concept"/>
+    <eClassifiers xsi:type="ecore:EClass" name="ObjectType" eSuperTypes="/0/NounConcept"/>
+    <eClassifiers xsi:type="ecore:EClass" name="Individual" eSuperTypes="/0/NounConcept"/>
+    <eClassifiers xsi:type="ecore:EClass" name="DataType" eSuperTypes="/0/NounConcept"/>
+    <eClassifiers xsi:type="ecore:EClass" name="NonNegativeInteger" eSuperTypes="/0/DataType"/>
+    <eClassifiers xsi:type="ecore:EClass" name="NonEmptyString" eSuperTypes="/0/DataType"/>
+    <eClassifiers xsi:type="ecore:EClass" name="FactType" eSuperTypes="/0/Concept"/>
+    <eClassifiers xsi:type="ecore:EClass" name="BinaryFactType" eSuperTypes="/0/FactType"/>
+    <eClassifiers xsi:type="ecore:EClass" name="IsPropertyOfFactType" eSuperTypes="/0/BinaryFactType"/>
+    <eClassifiers xsi:type="ecore:EClass" name="CategorizationFactType" eSuperTypes="/0/BinaryFactType"/>
+    <eClassifiers xsi:type="ecore:EClass" name="AssociativeFactType" eSuperTypes="/0/BinaryFactType"/>
+    <eClassifiers xsi:type="ecore:EClass" name="ObjectificationFactType" eSuperTypes="/0/BinaryFactType"/>
+    <eClassifiers xsi:type="ecore:EClass" name="LogicalFormulation" eSuperTypes="/0/SBVRElement"/>
+    <eClassifiers xsi:type="ecore:EClass" name="Quantification" eSuperTypes="/0/LogicalFormulation"/>
+    <eClassifiers xsi:type="ecore:EClass" name="UniversalQuantification" eSuperTypes="/0/Quantification"/>
+    <eClassifiers xsi:type="ecore:EClass" name="AtLeastNQuantification" eSuperTypes="/0/Quantification"/>
+    <eClassifiers xsi:type="ecore:EClass" name="ExactlyNQuantification" eSuperTypes="/0/Quantification"/>
+    <eClassifiers xsi:type="ecore:EClass" name="AtMostNQuantification" eSuperTypes="/0/Quantification"/>
+  </ecore:EPackage>
+  <ecore:EPackage name="PrimitiveTypes" nsURI="ptype" nsPrefix="ptype">
+    <eClassifiers xsi:type="ecore:EDataType" name="Boolean"/>
+    <eClassifiers xsi:type="ecore:EDataType" name="String"/>
+    <eClassifiers xsi:type="ecore:EDataType" name="Integer"/>
+  </ecore:EPackage>
+</xmi:XMI>

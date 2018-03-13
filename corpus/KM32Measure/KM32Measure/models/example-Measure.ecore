@@ -1,0 +1,466 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<RootMeasureSet xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="Measure">
+  <categories name="MOOD" desc="Metrics for Object-Oriented Design">
+    <metrics name="AIF" desc="Attributes Inheritance Factor" preferredValue="!=0"/>
+    <metrics name="RIF" desc="References Inheritance Factor" preferredValue="!=0"/>
+    <metrics name="CCF" desc="Class Coupling Factor" preferredValue="!=0"/>
+    <metrics name="ICF" desc="Internal Coupling Factor" preferredValue="!=0"/>
+  </categories>
+  <categories name="MOOD2" desc="Metrics for Object-Oriented Design 2">
+    <metrics name="IIF" desc="Internal Inheritance Factor" preferredValue="!=0"/>
+  </categories>
+  <categories name="MOOSE" desc="Metrics for Object-Oriented Software Engineering">
+    <metrics name="WRC" desc="Weighted References per Class" preferredValue="!=0"/>
+    <metrics name="DIT" desc="Depth of Inheritance Tree" preferredValue="!=0"/>
+    <metrics name="NOC" desc="Number of Children" preferredValue="!=0"/>
+    <metrics name="CBO" desc="Coupling Between Objects" preferredValue="!=0"/>
+  </categories>
+  <categories name="EMOOSE" desc="Extended MOOSE">
+    <metrics name="SIZE2" desc="Number of local Attributes and References defined in the Class" preferredValue="!=0"/>
+  </categories>
+  <categories name="QMOOD" desc="Quality Model for Object-Oriented Design">
+    <metrics name="DSC" desc="Design Size in Classes" preferredValue="!=0"/>
+    <metrics name="NOH" desc="Number of Hierarchies" preferredValue="!=0"/>
+    <metrics name="NIC" desc="Number of Independent Classes" preferredValue="!=0"/>
+    <metrics name="NSI" desc="Number of Single Inheritance" preferredValue="!=0"/>
+    <metrics name="NMI" desc="Number of Multiple Inheritance" preferredValue="!=0"/>
+    <metrics name="NNC" desc="Number of Internal Classes" preferredValue="!=0"/>
+    <metrics name="NAC" desc="Number of Abstract Classes" preferredValue="!=0"/>
+    <metrics name="NLC" desc="Number of Leaf Classes" preferredValue="!=0"/>
+    <metrics name="ADI" desc="Average Depth of Inheritance" preferredValue="!=0"/>
+    <metrics name="AWI" desc="Average Width of Inheritance" preferredValue="!=0"/>
+    <metrics name="ANA" desc="Average Number of Ancestors" preferredValue="!=0"/>
+    <metrics name="MAA" desc="Measure of Attribute Abstraction" preferredValue="!=0"/>
+    <metrics name="MRA" desc="Measure of Reference Abstraction" preferredValue="!=0"/>
+    <metrics name="MOA" desc="Measure of Aggregation" preferredValue="!=0"/>
+    <metrics name="MRM" desc="Modeled Relationship Measure" preferredValue="!=0"/>
+    <metrics name="NOA" desc="Number of Ancestors" preferredValue="!=0"/>
+    <metrics name="NOR" desc="Number of References" preferredValue="!=0"/>
+    <metrics name="NOD" desc="Number of Attributes" preferredValue="!=0"/>
+    <metrics name="NAD" desc="Number of Abstract Data Types" preferredValue="!=0"/>
+    <metrics name="CSM" desc="Class Size Metric" preferredValue="!=0"/>
+    <metrics name="DCC" desc="Direct Class Coupling" preferredValue="!=0"/>
+    <metrics name="MCC" desc="Maximum Class Coupling" preferredValue="!=0"/>
+    <metrics name="DAC" desc="Direct Attribute Based Coupling" preferredValue="!=0"/>
+    <metrics name="DRC" desc="Direct Reference Based Coupling" preferredValue="!=0"/>
+    <metrics name="CCD" desc="Class Complexity Based on Data" preferredValue="!=0"/>
+  </categories>
+  <measureSets elementName="DTD" elementType="package">
+    <measures xsi:type="PercentageMeasure" metric="//@categories.0/@metrics.0" value="0.5"/>
+    <measures xsi:type="PercentageMeasure" metric="//@categories.0/@metrics.1" value="0.3333333333333333"/>
+    <measures xsi:type="PercentageMeasure" metric="//@categories.0/@metrics.2" value="0.1209127083516686"/>
+    <measures xsi:type="PercentageMeasure" metric="//@categories.0/@metrics.3" value="0.5"/>
+    <measures xsi:type="PercentageMeasure" metric="//@categories.1/@metrics.0" value="0.5"/>
+    <measures xsi:type="IntegerMeasure" metric="//@categories.4/@metrics.0" value="19"/>
+    <measures xsi:type="IntegerMeasure" metric="//@categories.4/@metrics.1" value="15"/>
+    <measures xsi:type="IntegerMeasure" metric="//@categories.4/@metrics.2" value="13"/>
+    <measures xsi:type="IntegerMeasure" metric="//@categories.4/@metrics.3" value="15"/>
+    <measures xsi:type="IntegerMeasure" metric="//@categories.4/@metrics.4" value="0"/>
+    <measures xsi:type="IntegerMeasure" metric="//@categories.4/@metrics.5" value="15"/>
+    <measures xsi:type="IntegerMeasure" metric="//@categories.4/@metrics.6" value="6"/>
+    <measures xsi:type="IntegerMeasure" metric="//@categories.4/@metrics.7" value="13"/>
+    <measures xsi:type="DoubleMeasure" metric="//@categories.4/@metrics.8" value="0.0027862600442981355"/>
+    <measures xsi:type="DoubleMeasure" metric="//@categories.4/@metrics.9" value="1.4583635921737383E-4"/>
+    <measures xsi:type="DoubleMeasure" metric="//@categories.4/@metrics.10" value="0.3157894736842105"/>
+    <subsets elementName="TypeDescription" elementType="class">
+      <measures xsi:type="IntegerMeasure" metric="//@categories.2/@metrics.0" value="0"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.2/@metrics.1" value="0"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.2/@metrics.2" value="5"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.2/@metrics.3" value="0"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.3/@metrics.0" value="1"/>
+      <measures xsi:type="PercentageMeasure" metric="//@categories.4/@metrics.11" value="0.0"/>
+      <measures xsi:type="PercentageMeasure" metric="//@categories.4/@metrics.12" value="0.0"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.4/@metrics.13" value="0"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.4/@metrics.14" value="0"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.4/@metrics.15" value="0"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.4/@metrics.16" value="0"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.4/@metrics.17" value="1"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.4/@metrics.18" value="0"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.4/@metrics.19" value="1"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.4/@metrics.20" value="0"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.4/@metrics.21" value="0"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.4/@metrics.22" value="0"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.4/@metrics.23" value="0"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.4/@metrics.24" value="1"/>
+    </subsets>
+    <subsets elementName="Notation" elementType="class">
+      <measures xsi:type="IntegerMeasure" metric="//@categories.2/@metrics.0" value="0"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.2/@metrics.1" value="1"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.2/@metrics.2" value="0"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.2/@metrics.3" value="0"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.3/@metrics.0" value="1"/>
+      <measures xsi:type="PercentageMeasure" metric="//@categories.4/@metrics.11" value="0.5"/>
+      <measures xsi:type="PercentageMeasure" metric="//@categories.4/@metrics.12" value="0.0"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.4/@metrics.13" value="0"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.4/@metrics.14" value="0"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.4/@metrics.15" value="1"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.4/@metrics.16" value="0"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.4/@metrics.17" value="2"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.4/@metrics.18" value="0"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.4/@metrics.19" value="2"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.4/@metrics.20" value="0"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.4/@metrics.21" value="0"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.4/@metrics.22" value="0"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.4/@metrics.23" value="0"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.4/@metrics.24" value="2"/>
+    </subsets>
+    <subsets elementName="Entity" elementType="class">
+      <measures xsi:type="IntegerMeasure" metric="//@categories.2/@metrics.0" value="0"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.2/@metrics.1" value="1"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.2/@metrics.2" value="0"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.2/@metrics.3" value="0"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.3/@metrics.0" value="2"/>
+      <measures xsi:type="PercentageMeasure" metric="//@categories.4/@metrics.11" value="0.3333333333333333"/>
+      <measures xsi:type="PercentageMeasure" metric="//@categories.4/@metrics.12" value="0.0"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.4/@metrics.13" value="0"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.4/@metrics.14" value="0"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.4/@metrics.15" value="1"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.4/@metrics.16" value="0"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.4/@metrics.17" value="3"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.4/@metrics.18" value="0"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.4/@metrics.19" value="3"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.4/@metrics.20" value="0"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.4/@metrics.21" value="0"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.4/@metrics.22" value="0"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.4/@metrics.23" value="0"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.4/@metrics.24" value="3"/>
+    </subsets>
+    <subsets elementName="Element" elementType="class">
+      <measures xsi:type="IntegerMeasure" metric="//@categories.2/@metrics.0" value="0"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.2/@metrics.1" value="1"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.2/@metrics.2" value="2"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.2/@metrics.3" value="0"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.3/@metrics.0" value="0"/>
+      <measures xsi:type="PercentageMeasure" metric="//@categories.4/@metrics.11" value="1.0"/>
+      <measures xsi:type="PercentageMeasure" metric="//@categories.4/@metrics.12" value="0.0"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.4/@metrics.13" value="0"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.4/@metrics.14" value="0"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.4/@metrics.15" value="1"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.4/@metrics.16" value="0"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.4/@metrics.17" value="1"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.4/@metrics.18" value="0"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.4/@metrics.19" value="1"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.4/@metrics.20" value="0"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.4/@metrics.21" value="0"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.4/@metrics.22" value="0"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.4/@metrics.23" value="0"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.4/@metrics.24" value="1"/>
+    </subsets>
+    <subsets elementName="AnyElement" elementType="class">
+      <measures xsi:type="IntegerMeasure" metric="//@categories.2/@metrics.0" value="0"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.2/@metrics.1" value="2"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.2/@metrics.2" value="0"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.2/@metrics.3" value="0"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.3/@metrics.0" value="0"/>
+      <measures xsi:type="PercentageMeasure" metric="//@categories.4/@metrics.11" value="1.0"/>
+      <measures xsi:type="PercentageMeasure" metric="//@categories.4/@metrics.12" value="0.0"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.4/@metrics.13" value="0"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.4/@metrics.14" value="0"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.4/@metrics.15" value="2"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.4/@metrics.16" value="0"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.4/@metrics.17" value="1"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.4/@metrics.18" value="0"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.4/@metrics.19" value="1"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.4/@metrics.20" value="0"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.4/@metrics.21" value="0"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.4/@metrics.22" value="0"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.4/@metrics.23" value="0"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.4/@metrics.24" value="1"/>
+    </subsets>
+    <subsets elementName="RestrictedElement" elementType="class">
+      <measures xsi:type="IntegerMeasure" metric="//@categories.2/@metrics.0" value="0"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.2/@metrics.1" value="2"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.2/@metrics.2" value="0"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.2/@metrics.3" value="1"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.3/@metrics.0" value="1"/>
+      <measures xsi:type="PercentageMeasure" metric="//@categories.4/@metrics.11" value="0.5"/>
+      <measures xsi:type="PercentageMeasure" metric="//@categories.4/@metrics.12" value="0.0"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.4/@metrics.13" value="1"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.4/@metrics.14" value="2"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.4/@metrics.15" value="2"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.4/@metrics.16" value="0"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.4/@metrics.17" value="2"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.4/@metrics.18" value="1"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.4/@metrics.19" value="2"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.4/@metrics.20" value="1"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.4/@metrics.21" value="0"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.4/@metrics.22" value="1"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.4/@metrics.23" value="0"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.4/@metrics.24" value="2"/>
+    </subsets>
+    <subsets elementName="ElementContent" elementType="class">
+      <measures xsi:type="IntegerMeasure" metric="//@categories.2/@metrics.0" value="0"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.2/@metrics.1" value="0"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.2/@metrics.2" value="2"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.2/@metrics.3" value="0"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.3/@metrics.0" value="0"/>
+      <measures xsi:type="PercentageMeasure" metric="//@categories.4/@metrics.11" value="0.0"/>
+      <measures xsi:type="PercentageMeasure" metric="//@categories.4/@metrics.12" value="0.0"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.4/@metrics.13" value="0"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.4/@metrics.14" value="0"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.4/@metrics.15" value="0"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.4/@metrics.16" value="0"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.4/@metrics.17" value="0"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.4/@metrics.18" value="0"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.4/@metrics.19" value="0"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.4/@metrics.20" value="0"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.4/@metrics.21" value="0"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.4/@metrics.22" value="0"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.4/@metrics.23" value="0"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.4/@metrics.24" value="0"/>
+    </subsets>
+    <subsets elementName="Mixed" elementType="class">
+      <measures xsi:type="IntegerMeasure" metric="//@categories.2/@metrics.0" value="0"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.2/@metrics.1" value="1"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.2/@metrics.2" value="0"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.2/@metrics.3" value="0"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.3/@metrics.0" value="1"/>
+      <measures xsi:type="PercentageMeasure" metric="//@categories.4/@metrics.11" value="0.0"/>
+      <measures xsi:type="PercentageMeasure" metric="//@categories.4/@metrics.12" value="0.0"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.4/@metrics.13" value="0"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.4/@metrics.14" value="0"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.4/@metrics.15" value="1"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.4/@metrics.16" value="0"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.4/@metrics.17" value="1"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.4/@metrics.18" value="0"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.4/@metrics.19" value="1"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.4/@metrics.20" value="0"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.4/@metrics.21" value="0"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.4/@metrics.22" value="0"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.4/@metrics.23" value="0"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.4/@metrics.24" value="1"/>
+    </subsets>
+    <subsets elementName="Children" elementType="class">
+      <measures xsi:type="IntegerMeasure" metric="//@categories.2/@metrics.0" value="0"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.2/@metrics.1" value="1"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.2/@metrics.2" value="3"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.2/@metrics.3" value="0"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.3/@metrics.0" value="1"/>
+      <measures xsi:type="PercentageMeasure" metric="//@categories.4/@metrics.11" value="0.0"/>
+      <measures xsi:type="PercentageMeasure" metric="//@categories.4/@metrics.12" value="0.0"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.4/@metrics.13" value="0"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.4/@metrics.14" value="0"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.4/@metrics.15" value="1"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.4/@metrics.16" value="0"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.4/@metrics.17" value="1"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.4/@metrics.18" value="0"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.4/@metrics.19" value="1"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.4/@metrics.20" value="0"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.4/@metrics.21" value="0"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.4/@metrics.22" value="0"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.4/@metrics.23" value="0"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.4/@metrics.24" value="1"/>
+    </subsets>
+    <subsets elementName="Sequence" elementType="class">
+      <measures xsi:type="IntegerMeasure" metric="//@categories.2/@metrics.0" value="1"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.2/@metrics.1" value="2"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.2/@metrics.2" value="0"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.2/@metrics.3" value="1"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.3/@metrics.0" value="1"/>
+      <measures xsi:type="PercentageMeasure" metric="//@categories.4/@metrics.11" value="1.0"/>
+      <measures xsi:type="PercentageMeasure" metric="//@categories.4/@metrics.12" value="0.0"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.4/@metrics.13" value="1"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.4/@metrics.14" value="2"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.4/@metrics.15" value="2"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.4/@metrics.16" value="1"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.4/@metrics.17" value="1"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.4/@metrics.18" value="1"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.4/@metrics.19" value="2"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.4/@metrics.20" value="1"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.4/@metrics.21" value="1"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.4/@metrics.22" value="0"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.4/@metrics.23" value="1"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.4/@metrics.24" value="1"/>
+    </subsets>
+    <subsets elementName="Leaf" elementType="class">
+      <measures xsi:type="IntegerMeasure" metric="//@categories.2/@metrics.0" value="0"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.2/@metrics.1" value="2"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.2/@metrics.2" value="0"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.2/@metrics.3" value="0"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.3/@metrics.0" value="1"/>
+      <measures xsi:type="PercentageMeasure" metric="//@categories.4/@metrics.11" value="0.5"/>
+      <measures xsi:type="PercentageMeasure" metric="//@categories.4/@metrics.12" value="0.0"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.4/@metrics.13" value="0"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.4/@metrics.14" value="0"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.4/@metrics.15" value="2"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.4/@metrics.16" value="0"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.4/@metrics.17" value="2"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.4/@metrics.18" value="0"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.4/@metrics.19" value="2"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.4/@metrics.20" value="0"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.4/@metrics.21" value="0"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.4/@metrics.22" value="0"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.4/@metrics.23" value="0"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.4/@metrics.24" value="2"/>
+    </subsets>
+    <subsets elementName="Choice" elementType="class">
+      <measures xsi:type="IntegerMeasure" metric="//@categories.2/@metrics.0" value="1"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.2/@metrics.1" value="2"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.2/@metrics.2" value="0"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.2/@metrics.3" value="1"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.3/@metrics.0" value="1"/>
+      <measures xsi:type="PercentageMeasure" metric="//@categories.4/@metrics.11" value="1.0"/>
+      <measures xsi:type="PercentageMeasure" metric="//@categories.4/@metrics.12" value="0.0"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.4/@metrics.13" value="1"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.4/@metrics.14" value="2"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.4/@metrics.15" value="2"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.4/@metrics.16" value="1"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.4/@metrics.17" value="1"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.4/@metrics.18" value="1"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.4/@metrics.19" value="2"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.4/@metrics.20" value="1"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.4/@metrics.21" value="1"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.4/@metrics.22" value="0"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.4/@metrics.23" value="1"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.4/@metrics.24" value="1"/>
+    </subsets>
+    <subsets elementName="AttributeList" elementType="class">
+      <measures xsi:type="IntegerMeasure" metric="//@categories.2/@metrics.0" value="1"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.2/@metrics.1" value="1"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.2/@metrics.2" value="0"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.2/@metrics.3" value="1"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.3/@metrics.0" value="1"/>
+      <measures xsi:type="PercentageMeasure" metric="//@categories.4/@metrics.11" value="1.0"/>
+      <measures xsi:type="PercentageMeasure" metric="//@categories.4/@metrics.12" value="0.0"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.4/@metrics.13" value="1"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.4/@metrics.14" value="2"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.4/@metrics.15" value="1"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.4/@metrics.16" value="1"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.4/@metrics.17" value="1"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.4/@metrics.18" value="1"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.4/@metrics.19" value="2"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.4/@metrics.20" value="1"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.4/@metrics.21" value="2"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.4/@metrics.22" value="0"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.4/@metrics.23" value="1"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.4/@metrics.24" value="1"/>
+    </subsets>
+    <subsets elementName="AttributeDescription" elementType="class">
+      <measures xsi:type="IntegerMeasure" metric="//@categories.2/@metrics.0" value="1"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.2/@metrics.1" value="1"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.2/@metrics.2" value="2"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.2/@metrics.3" value="2"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.3/@metrics.0" value="2"/>
+      <measures xsi:type="PercentageMeasure" metric="//@categories.4/@metrics.11" value="0.5"/>
+      <measures xsi:type="PercentageMeasure" metric="//@categories.4/@metrics.12" value="0.0"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.4/@metrics.13" value="2"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.4/@metrics.14" value="4"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.4/@metrics.15" value="1"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.4/@metrics.16" value="1"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.4/@metrics.17" value="2"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.4/@metrics.18" value="2"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.4/@metrics.19" value="3"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.4/@metrics.20" value="2"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.4/@metrics.21" value="1"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.4/@metrics.22" value="1"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.4/@metrics.23" value="1"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.4/@metrics.24" value="2"/>
+    </subsets>
+    <subsets elementName="NoDefaultValue" elementType="class">
+      <measures xsi:type="IntegerMeasure" metric="//@categories.2/@metrics.0" value="1"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.2/@metrics.1" value="2"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.2/@metrics.2" value="0"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.2/@metrics.3" value="2"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.3/@metrics.0" value="1"/>
+      <measures xsi:type="PercentageMeasure" metric="//@categories.4/@metrics.11" value="0.6666666666666666"/>
+      <measures xsi:type="PercentageMeasure" metric="//@categories.4/@metrics.12" value="1.0"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.4/@metrics.13" value="2"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.4/@metrics.14" value="4"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.4/@metrics.15" value="2"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.4/@metrics.16" value="1"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.4/@metrics.17" value="3"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.4/@metrics.18" value="2"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.4/@metrics.19" value="4"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.4/@metrics.20" value="2"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.4/@metrics.21" value="1"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.4/@metrics.22" value="1"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.4/@metrics.23" value="1"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.4/@metrics.24" value="3"/>
+    </subsets>
+    <subsets elementName="DefaultValue" elementType="class">
+      <measures xsi:type="IntegerMeasure" metric="//@categories.2/@metrics.0" value="1"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.2/@metrics.1" value="2"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.2/@metrics.2" value="0"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.2/@metrics.3" value="2"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.3/@metrics.0" value="2"/>
+      <measures xsi:type="PercentageMeasure" metric="//@categories.4/@metrics.11" value="0.5"/>
+      <measures xsi:type="PercentageMeasure" metric="//@categories.4/@metrics.12" value="1.0"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.4/@metrics.13" value="2"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.4/@metrics.14" value="4"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.4/@metrics.15" value="2"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.4/@metrics.16" value="1"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.4/@metrics.17" value="4"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.4/@metrics.18" value="2"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.4/@metrics.19" value="5"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.4/@metrics.20" value="2"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.4/@metrics.21" value="1"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.4/@metrics.22" value="1"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.4/@metrics.23" value="1"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.4/@metrics.24" value="4"/>
+    </subsets>
+    <subsets elementName="AttributeType" elementType="class">
+      <measures xsi:type="IntegerMeasure" metric="//@categories.2/@metrics.0" value="0"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.2/@metrics.1" value="0"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.2/@metrics.2" value="1"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.2/@metrics.3" value="0"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.3/@metrics.0" value="0"/>
+      <measures xsi:type="PercentageMeasure" metric="//@categories.4/@metrics.11" value="0.0"/>
+      <measures xsi:type="PercentageMeasure" metric="//@categories.4/@metrics.12" value="0.0"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.4/@metrics.13" value="0"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.4/@metrics.14" value="0"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.4/@metrics.15" value="0"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.4/@metrics.16" value="0"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.4/@metrics.17" value="0"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.4/@metrics.18" value="0"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.4/@metrics.19" value="0"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.4/@metrics.20" value="0"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.4/@metrics.21" value="0"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.4/@metrics.22" value="0"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.4/@metrics.23" value="0"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.4/@metrics.24" value="0"/>
+    </subsets>
+    <subsets elementName="Enumeration" elementType="class">
+      <measures xsi:type="IntegerMeasure" metric="//@categories.2/@metrics.0" value="0"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.2/@metrics.1" value="1"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.2/@metrics.2" value="0"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.2/@metrics.3" value="0"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.3/@metrics.0" value="1"/>
+      <measures xsi:type="PercentageMeasure" metric="//@categories.4/@metrics.11" value="0.0"/>
+      <measures xsi:type="PercentageMeasure" metric="//@categories.4/@metrics.12" value="0.0"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.4/@metrics.13" value="0"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.4/@metrics.14" value="0"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.4/@metrics.15" value="1"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.4/@metrics.16" value="0"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.4/@metrics.17" value="1"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.4/@metrics.18" value="0"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.4/@metrics.19" value="1"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.4/@metrics.20" value="0"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.4/@metrics.21" value="0"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.4/@metrics.22" value="0"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.4/@metrics.23" value="0"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.4/@metrics.24" value="1"/>
+    </subsets>
+    <subsets elementName="OtherAttributeType" elementType="class">
+      <measures xsi:type="IntegerMeasure" metric="//@categories.2/@metrics.0" value="0"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.2/@metrics.1" value="0"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.2/@metrics.2" value="0"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.2/@metrics.3" value="0"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.3/@metrics.0" value="1"/>
+      <measures xsi:type="PercentageMeasure" metric="//@categories.4/@metrics.11" value="0.0"/>
+      <measures xsi:type="PercentageMeasure" metric="//@categories.4/@metrics.12" value="0.0"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.4/@metrics.13" value="0"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.4/@metrics.14" value="0"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.4/@metrics.15" value="0"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.4/@metrics.16" value="0"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.4/@metrics.17" value="1"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.4/@metrics.18" value="0"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.4/@metrics.19" value="1"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.4/@metrics.20" value="0"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.4/@metrics.21" value="0"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.4/@metrics.22" value="0"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.4/@metrics.23" value="0"/>
+      <measures xsi:type="IntegerMeasure" metric="//@categories.4/@metrics.24" value="1"/>
+    </subsets>
+  </measureSets>
+  <measureSets elementName="PrimitiveTypes" elementType="package"/>
+</RootMeasureSet>

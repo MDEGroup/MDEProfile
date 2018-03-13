@@ -1,0 +1,277 @@
+package PrimitiveTypes {
+
+	datatype Integer;
+
+	datatype Long;
+
+	datatype Float;
+
+	datatype Double;
+
+	datatype Boolean;
+
+	datatype String;
+}
+
+package RDM {
+
+	class DifferentFrom extends PredicateSymbol {
+		
+	}
+
+	class SameAs extends PredicateSymbol {
+		
+	}
+
+	class IndividualVariable extends Variable {
+		reference classRef[0-1] : Class;
+	}
+
+	class DataVariable extends Variable {
+		
+	}
+
+	class Constant extends Term {
+		
+	}
+
+	class Variable extends Term {
+		reference type[0-1] : Datatype;
+		attribute name : String;
+	}
+
+	abstract class Term {
+		
+	}
+
+	class BuiltIn extends PredicateSymbol {
+		attribute buildInID : String;
+	}
+
+	class PredicateSymbol {
+		
+	}
+
+	class Atom {
+		reference hasPredicateSymbol : PredicateSymbol;
+		reference terms[*] ordered : Term;
+		attribute name : String;
+	}
+
+	class Consequent {
+		reference containsAtom[*] : Atom;
+	}
+
+	class Antecedent {
+		reference containsAtom[*] : Atom;
+	}
+
+	class Rule extends OntologyElement {
+		reference hasAntecedent : Antecedent;
+		reference hasConsequent : Consequent;
+	}
+		
+	package ODM {
+
+		class MinCardinalityRestriction extends Restriction {
+			reference minCardinality : TypedLiteral;
+		}
+
+		class MaxCardinalityRestriction extends Restriction {
+			reference maxCardinality : TypedLiteral;
+		}
+
+		class CardinalityRestriction extends Restriction {
+			reference cardinality : TypedLiteral;
+		}
+
+		class TransitiveProperty extends ObjectProperty {
+			
+		}
+
+		class SymmetricProperty extends ObjectProperty {
+			
+		}
+
+		class InverseFunctionalProperty extends ObjectProperty {
+			
+		}
+
+		class FunctionalProperty extends Property {
+			
+		}
+
+		class PlainLiteral extends Literal {
+			attribute language : String;
+		}
+
+		class TypedLiteral extends Literal {
+			attribute theType : String;
+		}
+
+		abstract class Literal extends Datatype {
+			attribute lexicalForm : String;
+		}
+
+		abstract class Datatype extends OntologyElement {
+			
+		}
+
+		class DataRange extends Class {
+			reference "datatype"[0-1] : Datatype;
+			reference oneOf[*] : Literal;
+		}
+
+		class AllValuesFromRestriction extends Restriction {
+			reference allValuesFromRange[0-1] : DataRange;
+			reference allValuesFromClass[0-1] : Class;
+		}
+
+		class SomeValuesFromRestriction extends Restriction {
+			reference someValuesFromClass[0-1] : Class;
+			reference someValuesFromRange[0-1] : DataRange;
+		}
+
+		class OntologyPropertyValue extends OntologyProperty {
+			
+		}
+
+		class URI extends Annotation {
+			
+		}
+
+		abstract class Annotation {
+			
+		}
+
+		class AnnotationPropertyValue {
+			reference object : Annotation;
+			reference subject : AnnotatableElement;
+			reference type : AnnotationProperty;
+		}
+
+		class EnumeratedDatatype extends Datatype {
+			reference collectionOf[*] : DataValue;
+		}
+
+		class PrimitiveType extends Datatype {
+			
+		}
+
+		class HasValueRestriction extends Restriction {
+			reference hasLiteralValue[0-1] : Literal;
+			reference hasValue[0-1] : Individual;
+		}
+
+		abstract class Restriction extends Class {
+			reference onProperty[*] : Property;
+			reference toDatatype[0-1] : Datatype;
+		}
+
+		class AllDiferent extends Class {
+			reference distinctMembers[*] : Individual;
+		}
+
+		class DataValue extends Constant, Annotation {
+			reference type : Datatype;
+			attribute value : String;
+		}
+
+		class DatatypePropertyValue extends PropertyValue {
+			reference object : DataValue;
+		}
+
+		class ObjectPropertyValue extends PropertyValue {
+			reference object : Individual;
+		}
+
+		abstract class PropertyValue {
+			reference subject : Individual;
+		}
+
+		class UnionClass extends Class {
+			reference unionOf[*] : Class;
+		}
+
+		class IntersectionClass extends Class {
+			reference intersectionOf[*] : Class;
+		}
+
+		class ComplementClass extends Class {
+			reference complementOf : Class;
+		}
+
+		class EnumeratedClass extends Class {
+			reference oneOf[*] : Individual;
+		}
+
+		class Namespace {
+			reference members[*] container : NamedElement;
+			attribute name : String;
+			attribute uri : String;
+		}
+
+		class DatatypeProperty extends Property {
+			reference range[*] : DataRange;
+		}
+
+		class ObjectProperty extends Property {
+			reference range[*] : Class;
+			reference inverseOf[*] : ObjectProperty;
+			attribute transitive : Boolean;
+			attribute symmetric : Boolean;
+			attribute inverseFunctional : Boolean;
+			attribute complex : Boolean;
+		}
+
+		class Individual extends Constant, Annotation, Class {
+			reference sameAs[*] : Individual;
+			reference differentFrom[*] : Individual;
+			reference type : Class;
+		}
+
+		class Class extends PredicateSymbol, OntologyElement {
+			reference disjointWith[*] : Class;
+			reference subClassOf[*] : Class;
+			reference equivalentClass[*] : Class;
+		}
+
+		abstract class Property extends PredicateSymbol, OntologyElement {
+			reference domain[*] : Class;
+			reference equivalentProperty[*] : Property;
+			reference subPropertyOf[*] : Property;
+			attribute deprecated : Boolean;
+			attribute functional : Boolean;
+		}
+
+		class AnnotationProperty extends OntologyElement {
+			
+		}
+
+		abstract class OntologyProperty extends OntologyElement {
+			
+		}
+
+		class OntologyElement extends NamedElement, AnnotatableElement {
+			
+		}
+
+		class Ontology extends AnnotatableElement {
+			reference imports[*] : Ontology;
+			reference priorVersion[0-1] : Ontology;
+			reference elements[*] container : NamedElement;
+			reference incompatibleWith[*] : Ontology;
+			reference "reference"[*] : OntologyPropertyValue;
+		}
+
+		abstract class AnnotatableElement {
+			
+		}
+		
+		class NamedElement {
+			attribute uri : String;
+			attribute name : String;
+			attribute qualifiedName : String;
+		}
+	}
+}

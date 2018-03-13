@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<tpB:RootB xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:tpB="platform:/resource/ListMetamodelRefactoring/Metamodel/TypeB.ecore">
+  <elms name="B_la racine"/>
+  <elms name="B_elm1"/>
+  <elms name="B_elm2"/>
+</tpB:RootB>

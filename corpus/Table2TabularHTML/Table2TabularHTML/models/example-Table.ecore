@@ -1,0 +1,485 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns="Table">
+  <Table>
+    <rows>
+      <cells content="Package"/>
+      <cells content="MOOD2::IIF"/>
+      <cells content="MOOD::AIF"/>
+      <cells content="MOOD::CCF"/>
+      <cells content="MOOD::ICF"/>
+      <cells content="MOOD::RIF"/>
+      <cells content="QMOOD::ADI"/>
+      <cells content="QMOOD::ANA"/>
+      <cells content="QMOOD::AWI"/>
+      <cells content="QMOOD::DSC"/>
+      <cells content="QMOOD::NAC"/>
+      <cells content="QMOOD::NIC"/>
+      <cells content="QMOOD::NLC"/>
+      <cells content="QMOOD::NMI"/>
+      <cells content="QMOOD::NNC"/>
+      <cells content="QMOOD::NOH"/>
+      <cells content="QMOOD::NSI"/>
+    </rows>
+    <rows>
+      <cells content="DTD"/>
+      <cells content="50%"/>
+      <cells content="50%"/>
+      <cells content="12.0%"/>
+      <cells content="50%"/>
+      <cells content="33.3%"/>
+      <cells content="0.0"/>
+      <cells content="0.3"/>
+      <cells content="1.4"/>
+      <cells content="19"/>
+      <cells content="6"/>
+      <cells content="13"/>
+      <cells content="13"/>
+      <cells content="0"/>
+      <cells content="15"/>
+      <cells content="15"/>
+      <cells content="15"/>
+    </rows>
+  </Table>
+  <Table>
+    <rows>
+      <cells content="Class"/>
+      <cells content="EMOOSE::SIZE2"/>
+      <cells content="MOOSE::CBO"/>
+      <cells content="MOOSE::DIT"/>
+      <cells content="MOOSE::NOC"/>
+      <cells content="MOOSE::WRC"/>
+      <cells content="QMOOD::CCD"/>
+      <cells content="QMOOD::CSM"/>
+      <cells content="QMOOD::DAC"/>
+      <cells content="QMOOD::DCC"/>
+      <cells content="QMOOD::DRC"/>
+      <cells content="QMOOD::MAA"/>
+      <cells content="QMOOD::MCC"/>
+      <cells content="QMOOD::MOA"/>
+      <cells content="QMOOD::MRA"/>
+      <cells content="QMOOD::MRM"/>
+      <cells content="QMOOD::NAD"/>
+      <cells content="QMOOD::NOA"/>
+      <cells content="QMOOD::NOD"/>
+      <cells content="QMOOD::NOR"/>
+    </rows>
+    <rows>
+      <cells content="DTD.AnyElement"/>
+      <cells content="0"/>
+      <cells content="0"/>
+      <cells content="2"/>
+      <cells content="0"/>
+      <cells content="0"/>
+      <cells content="1"/>
+      <cells content="1"/>
+      <cells content="0"/>
+      <cells content="0"/>
+      <cells content="0"/>
+      <cells content="100%"/>
+      <cells content="0"/>
+      <cells content="0"/>
+      <cells content="0%"/>
+      <cells content="0"/>
+      <cells content="0"/>
+      <cells content="2"/>
+      <cells content="1"/>
+      <cells content="0"/>
+    </rows>
+    <rows>
+      <cells content="DTD.AttributeDescription"/>
+      <cells content="2"/>
+      <cells content="2"/>
+      <cells content="1"/>
+      <cells content="2"/>
+      <cells content="1"/>
+      <cells content="2"/>
+      <cells content="3"/>
+      <cells content="1"/>
+      <cells content="2"/>
+      <cells content="1"/>
+      <cells content="50%"/>
+      <cells content="1"/>
+      <cells content="2"/>
+      <cells content="0%"/>
+      <cells content="4"/>
+      <cells content="2"/>
+      <cells content="1"/>
+      <cells content="2"/>
+      <cells content="1"/>
+    </rows>
+    <rows>
+      <cells content="DTD.AttributeList"/>
+      <cells content="1"/>
+      <cells content="1"/>
+      <cells content="1"/>
+      <cells content="0"/>
+      <cells content="1"/>
+      <cells content="1"/>
+      <cells content="2"/>
+      <cells content="0"/>
+      <cells content="1"/>
+      <cells content="1"/>
+      <cells content="100%"/>
+      <cells content="2"/>
+      <cells content="1"/>
+      <cells content="0%"/>
+      <cells content="2"/>
+      <cells content="1"/>
+      <cells content="1"/>
+      <cells content="1"/>
+      <cells content="1"/>
+    </rows>
+    <rows>
+      <cells content="DTD.AttributeType"/>
+      <cells content="0"/>
+      <cells content="0"/>
+      <cells content="0"/>
+      <cells content="1"/>
+      <cells content="0"/>
+      <cells content="0"/>
+      <cells content="0"/>
+      <cells content="0"/>
+      <cells content="0"/>
+      <cells content="0"/>
+      <cells content="0%"/>
+      <cells content="0"/>
+      <cells content="0"/>
+      <cells content="0%"/>
+      <cells content="0"/>
+      <cells content="0"/>
+      <cells content="0"/>
+      <cells content="0"/>
+      <cells content="0"/>
+    </rows>
+    <rows>
+      <cells content="DTD.Children"/>
+      <cells content="1"/>
+      <cells content="0"/>
+      <cells content="1"/>
+      <cells content="3"/>
+      <cells content="0"/>
+      <cells content="1"/>
+      <cells content="1"/>
+      <cells content="0"/>
+      <cells content="0"/>
+      <cells content="0"/>
+      <cells content="0%"/>
+      <cells content="0"/>
+      <cells content="0"/>
+      <cells content="0%"/>
+      <cells content="0"/>
+      <cells content="0"/>
+      <cells content="1"/>
+      <cells content="1"/>
+      <cells content="0"/>
+    </rows>
+    <rows>
+      <cells content="DTD.Choice"/>
+      <cells content="1"/>
+      <cells content="1"/>
+      <cells content="2"/>
+      <cells content="0"/>
+      <cells content="1"/>
+      <cells content="1"/>
+      <cells content="2"/>
+      <cells content="0"/>
+      <cells content="1"/>
+      <cells content="1"/>
+      <cells content="100%"/>
+      <cells content="1"/>
+      <cells content="1"/>
+      <cells content="0%"/>
+      <cells content="2"/>
+      <cells content="1"/>
+      <cells content="2"/>
+      <cells content="1"/>
+      <cells content="1"/>
+    </rows>
+    <rows>
+      <cells content="DTD.DefaultValue"/>
+      <cells content="2"/>
+      <cells content="2"/>
+      <cells content="2"/>
+      <cells content="0"/>
+      <cells content="1"/>
+      <cells content="4"/>
+      <cells content="5"/>
+      <cells content="1"/>
+      <cells content="2"/>
+      <cells content="1"/>
+      <cells content="50%"/>
+      <cells content="1"/>
+      <cells content="2"/>
+      <cells content="100%"/>
+      <cells content="4"/>
+      <cells content="2"/>
+      <cells content="2"/>
+      <cells content="4"/>
+      <cells content="1"/>
+    </rows>
+    <rows>
+      <cells content="DTD.Element"/>
+      <cells content="0"/>
+      <cells content="0"/>
+      <cells content="1"/>
+      <cells content="2"/>
+      <cells content="0"/>
+      <cells content="1"/>
+      <cells content="1"/>
+      <cells content="0"/>
+      <cells content="0"/>
+      <cells content="0"/>
+      <cells content="100%"/>
+      <cells content="0"/>
+      <cells content="0"/>
+      <cells content="0%"/>
+      <cells content="0"/>
+      <cells content="0"/>
+      <cells content="1"/>
+      <cells content="1"/>
+      <cells content="0"/>
+    </rows>
+    <rows>
+      <cells content="DTD.ElementContent"/>
+      <cells content="0"/>
+      <cells content="0"/>
+      <cells content="0"/>
+      <cells content="2"/>
+      <cells content="0"/>
+      <cells content="0"/>
+      <cells content="0"/>
+      <cells content="0"/>
+      <cells content="0"/>
+      <cells content="0"/>
+      <cells content="0%"/>
+      <cells content="0"/>
+      <cells content="0"/>
+      <cells content="0%"/>
+      <cells content="0"/>
+      <cells content="0"/>
+      <cells content="0"/>
+      <cells content="0"/>
+      <cells content="0"/>
+    </rows>
+    <rows>
+      <cells content="DTD.Entity"/>
+      <cells content="2"/>
+      <cells content="0"/>
+      <cells content="1"/>
+      <cells content="0"/>
+      <cells content="0"/>
+      <cells content="3"/>
+      <cells content="3"/>
+      <cells content="0"/>
+      <cells content="0"/>
+      <cells content="0"/>
+      <cells content="33.3%"/>
+      <cells content="0"/>
+      <cells content="0"/>
+      <cells content="0%"/>
+      <cells content="0"/>
+      <cells content="0"/>
+      <cells content="1"/>
+      <cells content="3"/>
+      <cells content="0"/>
+    </rows>
+    <rows>
+      <cells content="DTD.Enumeration"/>
+      <cells content="1"/>
+      <cells content="0"/>
+      <cells content="1"/>
+      <cells content="0"/>
+      <cells content="0"/>
+      <cells content="1"/>
+      <cells content="1"/>
+      <cells content="0"/>
+      <cells content="0"/>
+      <cells content="0"/>
+      <cells content="0%"/>
+      <cells content="0"/>
+      <cells content="0"/>
+      <cells content="0%"/>
+      <cells content="0"/>
+      <cells content="0"/>
+      <cells content="1"/>
+      <cells content="1"/>
+      <cells content="0"/>
+    </rows>
+    <rows>
+      <cells content="DTD.Leaf"/>
+      <cells content="1"/>
+      <cells content="0"/>
+      <cells content="2"/>
+      <cells content="0"/>
+      <cells content="0"/>
+      <cells content="2"/>
+      <cells content="2"/>
+      <cells content="0"/>
+      <cells content="0"/>
+      <cells content="0"/>
+      <cells content="50%"/>
+      <cells content="0"/>
+      <cells content="0"/>
+      <cells content="0%"/>
+      <cells content="0"/>
+      <cells content="0"/>
+      <cells content="2"/>
+      <cells content="2"/>
+      <cells content="0"/>
+    </rows>
+    <rows>
+      <cells content="DTD.Mixed"/>
+      <cells content="1"/>
+      <cells content="0"/>
+      <cells content="1"/>
+      <cells content="0"/>
+      <cells content="0"/>
+      <cells content="1"/>
+      <cells content="1"/>
+      <cells content="0"/>
+      <cells content="0"/>
+      <cells content="0"/>
+      <cells content="0%"/>
+      <cells content="0"/>
+      <cells content="0"/>
+      <cells content="0%"/>
+      <cells content="0"/>
+      <cells content="0"/>
+      <cells content="1"/>
+      <cells content="1"/>
+      <cells content="0"/>
+    </rows>
+    <rows>
+      <cells content="DTD.NoDefaultValue"/>
+      <cells content="1"/>
+      <cells content="2"/>
+      <cells content="2"/>
+      <cells content="0"/>
+      <cells content="1"/>
+      <cells content="3"/>
+      <cells content="4"/>
+      <cells content="1"/>
+      <cells content="2"/>
+      <cells content="1"/>
+      <cells content="66.6%"/>
+      <cells content="1"/>
+      <cells content="2"/>
+      <cells content="100%"/>
+      <cells content="4"/>
+      <cells content="2"/>
+      <cells content="2"/>
+      <cells content="3"/>
+      <cells content="1"/>
+    </rows>
+    <rows>
+      <cells content="DTD.Notation"/>
+      <cells content="1"/>
+      <cells content="0"/>
+      <cells content="1"/>
+      <cells content="0"/>
+      <cells content="0"/>
+      <cells content="2"/>
+      <cells content="2"/>
+      <cells content="0"/>
+      <cells content="0"/>
+      <cells content="0"/>
+      <cells content="50%"/>
+      <cells content="0"/>
+      <cells content="0"/>
+      <cells content="0%"/>
+      <cells content="0"/>
+      <cells content="0"/>
+      <cells content="1"/>
+      <cells content="2"/>
+      <cells content="0"/>
+    </rows>
+    <rows>
+      <cells content="DTD.OtherAttributeType"/>
+      <cells content="1"/>
+      <cells content="0"/>
+      <cells content="0"/>
+      <cells content="0"/>
+      <cells content="0"/>
+      <cells content="1"/>
+      <cells content="1"/>
+      <cells content="0"/>
+      <cells content="0"/>
+      <cells content="0"/>
+      <cells content="0%"/>
+      <cells content="0"/>
+      <cells content="0"/>
+      <cells content="0%"/>
+      <cells content="0"/>
+      <cells content="0"/>
+      <cells content="0"/>
+      <cells content="1"/>
+      <cells content="0"/>
+    </rows>
+    <rows>
+      <cells content="DTD.RestrictedElement"/>
+      <cells content="1"/>
+      <cells content="1"/>
+      <cells content="2"/>
+      <cells content="0"/>
+      <cells content="0"/>
+      <cells content="2"/>
+      <cells content="2"/>
+      <cells content="1"/>
+      <cells content="1"/>
+      <cells content="0"/>
+      <cells content="50%"/>
+      <cells content="0"/>
+      <cells content="1"/>
+      <cells content="0%"/>
+      <cells content="2"/>
+      <cells content="1"/>
+      <cells content="2"/>
+      <cells content="2"/>
+      <cells content="0"/>
+    </rows>
+    <rows>
+      <cells content="DTD.Sequence"/>
+      <cells content="1"/>
+      <cells content="1"/>
+      <cells content="2"/>
+      <cells content="0"/>
+      <cells content="1"/>
+      <cells content="1"/>
+      <cells content="2"/>
+      <cells content="0"/>
+      <cells content="1"/>
+      <cells content="1"/>
+      <cells content="100%"/>
+      <cells content="1"/>
+      <cells content="1"/>
+      <cells content="0%"/>
+      <cells content="2"/>
+      <cells content="1"/>
+      <cells content="2"/>
+      <cells content="1"/>
+      <cells content="1"/>
+    </rows>
+    <rows>
+      <cells content="DTD.TypeDescription"/>
+      <cells content="1"/>
+      <cells content="0"/>
+      <cells content="0"/>
+      <cells content="5"/>
+      <cells content="0"/>
+      <cells content="1"/>
+      <cells content="1"/>
+      <cells content="0"/>
+      <cells content="0"/>
+      <cells content="0"/>
+      <cells content="0%"/>
+      <cells content="0"/>
+      <cells content="0"/>
+      <cells content="0%"/>
+      <cells content="0"/>
+      <cells content="0"/>
+      <cells content="0"/>
+      <cells content="1"/>
+      <cells content="0"/>
+    </rows>
+  </Table>
+</xmi:XMI>

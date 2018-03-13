@@ -1,0 +1,19 @@
+package example {
+	class A extends B,C,F {
+	}
+	
+	class B extends C,D,E {
+	}
+	
+	class C extends D,E {
+	}
+	
+	class D extends E {
+	}
+	
+	class F {
+	}
+	
+	class E {
+	}
+}

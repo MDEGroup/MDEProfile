@@ -1,0 +1,81 @@
+<project name="OCL2R2ML" default="transformAll">
+	<property name="oclPath" value="/OCL2R2ML/metamodels/ocl/"/>
+	<property name="samplesInputPath" value="/OCL2R2ML/models/ocl/"/>
+	<property name="samplesOutputPath" value="/OCL2R2ML/models/r2ml-xml/"/>
+
+	<property name="r2mlPath" value="/OCL2R2ML/metamodels/r2ml/"/>
+	
+	<!-- for OCL injection -->
+	<property name="metamodel.name" value="OCL"/>
+	<property name="model.name" value="m1"/>
+	<property name="model.suffix" value=".ocl"/>
+	
+	<property name="project.name" value="/OCL2R2ML/"/>
+	<property name="metamodel.dir" value="metamodels/${metamodel.name}/"/>
+	<property name="metamodel.path" value="${project.name}${metamodel.dir}"/>
+	<property name="ebnfinjector.name" value="ebnfinjector"/>
+	<property name="ebnfinjector.dir" value="${ebnfinjector.name}/"/>
+	<property name="metamodel.jar" value="${metamodel.name}-${ebnfinjector.name}.jar"/>
+	<property name="metamodel.uri" value="${metamodel.path}${metamodel.name}.xmi" />
+	<property name="model.uri" value="${project.name}models/ocl/${model.name}${model.suffix}" />
+	<property name="ebnfnjector.uri" value="${project.name}${metamodel.jar}" />
+	<property name="classname.prefix" value="${metamodel.name}" />
+	<property name="metamodel.path" value="${project.name}/metamodels/${metamodel.dir}"/>
+
+	<target name="transformAll" depends="loadModels">
+		<antcall target="transformOne" inheritall="true" inheritrefs="true">
+		</antcall>
+	</target>
+	
+	<!-- parameters: sample -->
+	<target name="transformOne">
+		
+		<property name="targetModel" value="${samplesOutputPath}R2MLRule.xml"/>
+
+		<echo message="Transforming ${model.name}${model.suffix}"/>
+		
+		<!-- Inject OCL file to OCL model -->
+		<am3.loadModel modelHandler="MDR" name="${model.name}" metamodel="${metamodel.name}" path="${model.uri}">
+			<injector name="ebnf">
+				<param name="name" value="${classname.prefix}"/>
+				<classpath>
+					<pathelement location="${ebnfnjector.uri}"/>
+				</classpath>
+			</injector>
+		</am3.loadModel>
+
+		<!-- Transform OCL model into R2ML model -->
+		<am3.atl path="/OCL2R2ML/transformations/OCL2R2ML/OCL2R2ML.atl">
+			<inModel name="IN" model="${model.name}"/>
+			<inModel name="OCL" model="OCL"/>
+			<inModel name="R2ML" model="R2ML"/>
+			<outModel name="OUT" model="r2mlModel" metamodel="R2ML"/>
+			<library name="strings" path="/OCL2R2ML/transformations/OCL2R2ML/strings.asm" />
+		</am3.atl>
+		
+		<!-- Transform R2ML model into XML model -->
+		<am3.atl path="/OCL2R2ML/transformations/R2ML2XML/R2ML2XML.atl">
+			<inModel name="IN" model="r2mlModel"/>
+			<inModel name="R2ML" model="R2ML"/>
+			<inModel name="XML" model="XML"/>
+			<outModel name="OUT" model="xmlModel" metamodel="XML"/>
+		</am3.atl>
+
+		<!-- Extract output model  -->
+		<am3.saveModel model="xmlModel" path="${targetModel}">
+			<extractor name="xml"/>
+		</am3.saveModel>
+	</target>
+
+	<target name="loadModels">
+		<!-- Load XML metamodel -->
+		<am3.loadModel modelHandler="MDR" name="XML" metamodel="MOF" path="/OCL2R2ML/metamodels/xml/XML.xmi" />
+
+		<!-- Load OCL metamodel -->
+		<am3.loadModel modelHandler="MDR" name="OCL" metamodel="MOF" path="${oclPath}OCL.xmi" />
+
+		<!-- Load R2ML metamodel -->
+		<am3.loadModel modelHandler="MDR" name="R2ML" metamodel="MOF" path="${r2mlPath}r2ml.xmi" />
+		
+	</target>	
+</project>

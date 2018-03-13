@@ -1,0 +1,25 @@
+We realize the transformation between IEEE1471-2000 and MoDAF-AV.
+The IEEE1471 committee precises a recommended practice for the design and the analysis of Architecture of Software Intensive Systems.
+It fixes a terminolgy for System, Architecture, Architectural Description, Stakeholder, Concerns, View ,and Viewpoints concepts.
+MoDAF (Ministry of Defense Architecture Framework) is based on the DoDAF (Departement of Defense Architecture Framework).
+DoDAF is a framework to design C4ISR systems. MoDAF-AV (Architecture View) used several concepts defined in the IEEE1471.
+It is the reason why we decide to make a transformation between IEEE1471 and MoDAF-AV.
+For this we realize metamodels in km3 that are interpretations of the IEEE1471 Conceptual Model and the MoDAF Architecture View.
+Now, we are implementing a ATL transformation between them.
+
+Source:
+
+-IEEE Std 1471-2000, Recommended Practice for Architectural Description of Software-Intensive Systems, IEEE Computer Society, 21 September 2000.
+   http://www.item.ntnu.no/fag/ttm4160/Artikler/ieee1471.pdf
+
+
+-MoDAF official site:
+   http://modaf.modelfutures.com/ 
+
+
+-KM3 Manual: 
+   http://www.eclipse.org/gmt/atl/doc/KernelMetaMetaModel%5Bv00.06%5D.pdf
+
+-ATL Manual: 
+   http://www.eclipse.org/gmt/atl/doc/ATL_User_Manual%5Bv0.7%5D.pdf
+ 

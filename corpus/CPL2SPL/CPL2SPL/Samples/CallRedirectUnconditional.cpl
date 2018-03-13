@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cpl		xmlns="urn:ietf:params:xml:ns:cpl"
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		xsi:schemaLocation="urn:ietf:params:xml:ns:cpl cpl.xsd ">
+	<incoming>
+		<location url="sip:smith@phone.example.com">
+			<redirect/>
+		</location>
+	</incoming>
+</cpl>
+

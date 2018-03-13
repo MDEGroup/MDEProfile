@@ -1,0 +1,284 @@
+syntax ACME {
+
+	primitiveTemplate identifier for String default using NAME:
+		value = "%token%";
+
+	primitiveTemplate stringSymbol for String using STRING:
+		value = "%token%",
+		serializer="'\'' + %value%.toCString() + '\''";
+		
+	primitiveTemplate integerSymbol for Integer default using INT:
+		value = "Integer.valueOf(%token%)";
+	
+--	primitiveTemplate bibSymbol for String using BibtexField:
+--		value = "%token%",
+--		serializer="'{' + %value%.toCString() + '}'";
+	
+	primitiveTemplate floatSymbol for Double default using FLOAT:
+		value = "Double.valueOf(%token%)";
+
+	primitiveTemplate booleanSymbol for Boolean default using BOOLEAN:
+		value = "Boolean.valueOf(%token%)";
+
+	--template  main context
+	
+	template ACMEFile main context
+		:	"Family MetaH_Family" "("")" "=" "\n"
+			"{""/""*" "BEGIN STANDARD METAH DECLARATIONS" "*""/""\n"
+			"    "".""."".""."".""."".""."".""."".""."".""." "\n"
+			"/""*" "BEGIN EXAMPLE SPECIFIC DECLARATIONS" "*""/""\n"[
+			[ entries ] {indentIncr = 0, nbNL = 2, startNL = false}
+			]"}" ";" "\n" "\n"
+			"system" "MH_system" ":" "MetaH_Family " "="
+			[ "{component MH_component = new M_example;};"]
+		;
+	
+	--@begin  ACME Entry
+		
+	template ACMEEntry abstract;
+	
+	 template ComponentType 
+		:	"component" "type" name
+			(isDefined(extend)? 
+				"extends" extend "with" "{")
+			[(isDefined(property)? 
+				property{separator = ";"}";")
+			(isDefined(ports)? 
+			ports{separator = ";"} ";")
+			(isDefined(representations)? 
+			representations{separator = ";"} ";")]
+			"}" ";"
+		;
+		
+	template System 
+		:	"system" "MH_little_system" "=" "{"
+			[(isDefined(componentDeclaration)? 
+			componentDeclaration{separator = ";"} ";")
+			(isDefined(connectorDeclaration)? 
+			connectorDeclaration{separator = ";"} ";")
+			(isDefined(attachments)? "Attachments" "{"[
+			attachments{separator = ";"} ";" ]
+			"}" ";")]
+			"}"
+			[(isDefined(bindings)? "Bindings" "{"[
+			bindings{separator = ";"} ";" ]
+			"}" ";")]
+		;
+		
+	--@end ACME Entry
+		 
+	--@begin ACME Attributes	
+	
+	template Port
+		:	"port" name ":" "MH_port" 
+			[ "= { " property{separator = ";"} 
+			";" "}"]
+			;
+			
+	template Property
+		:	"property"  name "=" val
+		;
+	
+	template Representation
+		:	"Representation" "{" [
+			(isDefined(systems)? 
+			systems{separator = ";"} ";")]
+			"}"	
+		;
+		
+	template ComponentInstance 
+		:	"component" name "=" "new" instanceOf "extended with" "{"
+			[(isDefined(property)? 
+				property{separator = ";"}";")]
+			"}"
+		;
+		
+	template Connector
+		: 	"Connector" name "=" 
+			"new" "MH_connector" "extended" "with" "{" "}"
+		;
+
+	template links abstract;
+	
+	template Binding 
+		: (isDefined(compSrc)? compSrc ".") portSrc "to" (isDefined(compDest)? compDest ".") portDest
+		;
+		
+	template Attachment 
+		: comp "." port "to" con "." role
+		;
+			
+ 	--@begin ACME Attributes	 
+    
+	symbols {
+		lparen		= "(";
+		rparen		= ")";
+		semi		= ";";
+		lcurly		= "{";
+		rcurly		= "}";
+		at			= "@";
+		coma		= ",";
+		dot 		= ".";
+		equal       = "=";
+		apos        = "\'";
+		inf			= "<"; 
+	}
+	
+--	token BibtexField	:	multiLine(start = "{", end = "}");
+	lexer = "
+class ACMELexer extends Lexer;
+
+options {
+	k = 2;
+	charVocabulary = '\\0' .. '\\u00FF';
+	testLiterals = false;
+}
+
+{
+
+	protected Token makeToken(int t) {
+		org.atl.engine.injectors.ebnf.LocationToken ret = null;
+
+		tokenObjectClass = org.atl.engine.injectors.ebnf.LocationToken.class;
+		ret = (org.atl.engine.injectors.ebnf.LocationToken)super.makeToken(t);
+		ret.setEndLine(getLine());
+		ret.setEndColumn(getColumn());
+
+		return ret;
+	}
+
+}
+
+//protected
+NL
+	:	(	'\\r' '\\n'
+		|	'\\n' '\\r'	//Improbable
+		|	'\\r'
+		|	'\\n'
+		)
+	{newline();}
+	;
+
+WS
+	:	(	' '
+		|	'\\t'
+//		|	NL
+		)
+//	{ $setType(Token.SKIP); }
+	;
+
+COMMENT
+	:	\"%%\"
+		(~(	'\\r'
+		|	'\\n'
+		))*
+//		({LA(1) != EOF_CHAR}? NL)?
+//	{ $setType(Token.SKIP); }
+	;
+
+protected
+DIGIT
+	:	'0'..'9'
+	;
+
+protected
+ALPHA
+	:	'a'..'z'
+	|	'A'..'Z'
+	|	'_'
+	|	'-'
+	|	':'
+	//For Unicode compatibility (from 0000 to 00ff)
+	|	'\\u00C0' .. '\\u00D6'
+	|	'\\u00D8' .. '\\u00F6'
+	|	'\\u00F8' .. '\\u00FF'
+	;
+
+protected
+SNAME
+options {
+	testLiterals = true;
+}
+	:	(ALPHA) (ALPHA | DIGIT)*
+;
+
+NAME
+	:	(	s:SNAME {if(s.getType() != SNAME) $setType(s.getType());}
+		|	'\"'!
+			(	ESC
+			|	'\\n' {newline();}
+			|	~('\\\\'|'\\\"'|'\\n')
+			)*
+			'\"'!
+		)
+	{
+	if($getText.equals(\"true\")) $setType(BOOLEAN);
+	if($getText.equals(\"false\")) $setType(BOOLEAN);
+	}
+	;
+
+INT
+	:	(DIGIT)+
+		(('.' DIGIT)=> '.' (DIGIT)+ {$setType(FLOAT);})?
+	;
+
+protected
+ESC
+	:	'\\\\'!
+		(	'n' {$setText(\"\\n\");}
+		|	'r' {$setText(\"\\r\");}
+		|	't' {$setText(\"\\t\");}
+		|	'b' {$setText(\"\\b\");}
+		|	'f' {$setText(\"\\f\");}
+		|	'\"' {$setText(\"\\\"\");}
+		|	'\\'' {$setText(\"\\'\");}
+		|	'\\\\' {$setText(\"\\\\\");}
+		|	(
+				('0'..'3')
+				(
+					options {
+						warnWhenFollowAmbig = false;
+					}
+				:	('0'..'7')
+					(
+						options {
+							warnWhenFollowAmbig = false;
+						}
+					:	'0'..'7'
+					)?
+				)?
+			|	('4'..'7')
+				(
+					options {
+						warnWhenFollowAmbig = false;
+					}
+				:	('0'..'7')
+				)?
+			)
+				{
+					String s = $getText;
+					int i;
+					int ret = 0;
+					String ans;
+					for (i=0; i<s.length(); ++i)
+						ret = ret*8 + s.charAt(i) - '0';
+					ans = String.valueOf((char) ret);
+					$setText(ans);
+				}
+		)
+	;
+
+STRING
+	:	'\\''!
+		(	ESC
+		|	'\\n' {newline();}
+		|	~('\\\\'|'\\''|'\\n')
+		)*
+		'\\''!
+	;
+
+	";
+
+}
+
+

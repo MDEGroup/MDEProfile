@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<km3:Metamodel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:km3="http://www.eclipse.org/gmt/2005/KM3" location="1:1-22:2">
+  <contents location="1:1-16:2" name="example">
+    <contents xsi:type="km3:Class" location="2:9-6:10" name="A">
+      <structuralFeatures xsi:type="km3:Attribute" location="3:17-3:40" name="t1" lower="1" upper="1" type="//@contents.1/@contents.1"/>
+      <structuralFeatures xsi:type="km3:Attribute" location="4:17-4:39" name="t2" lower="1" upper="1" type="//@contents.1/@contents.2"/>
+      <structuralFeatures xsi:type="km3:Reference" location="5:17-5:46" name="b" lower="1" upper="1" type="//@contents.0/@contents.1" opposite="//@contents.0/@contents.1/@structuralFeatures.0"/>
+    </contents>
+    <contents xsi:type="km3:Class" location="8:9-10:10" name="B">
+      <structuralFeatures xsi:type="km3:Reference" location="9:17-9:46" name="a" lower="1" upper="1" type="//@contents.0/@contents.0" opposite="//@contents.0/@contents.0/@structuralFeatures.2"/>
+    </contents>
+    <contents xsi:type="km3:Enumeration" location="12:9-15:10" name="Choice">
+      <literals location="13:17-13:29" name="yes"/>
+      <literals location="14:17-14:28" name="no"/>
+    </contents>
+  </contents>
+  <contents location="18:1-22:2" name="PrimitiveTypes">
+    <contents xsi:type="km3:DataType" location="19:9-19:26" name="Boolean"/>
+    <contents xsi:type="km3:DataType" location="20:9-20:26" name="Integer"/>
+    <contents xsi:type="km3:DataType" location="21:9-21:25" name="String"/>
+  </contents>
+</km3:Metamodel>

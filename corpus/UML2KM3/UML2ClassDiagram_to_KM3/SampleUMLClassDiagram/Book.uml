@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/2.1.0/UML" xmi:id="_EjpfwNcHEduIqoBh_Lx8Mw" name="Book">
+  <packageImport xmi:id="_EjpfwdcHEduIqoBh_Lx8Mw">
+    <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+  </packageImport>
+  <packagedElement xmi:type="uml:Package" xmi:id="_F9WdoNcHEduIqoBh_Lx8Mw" name="Book">
+    <packagedElement xmi:type="uml:Class" xmi:id="_Ia3B4NcHEduIqoBh_Lx8Mw" name="Book">
+      <generalization xmi:id="_0Do0oNcHEduIqoBh_Lx8Mw" general="_ss53oNcHEduIqoBh_Lx8Mw"/>
+      <ownedAttribute xmi:id="_b9EdQNcHEduIqoBh_Lx8Mw" name="year" isUnique="false">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_WQnbU9cIEduIqoBh_Lx8Mw" name="chapter" type="_JNhN4NcHEduIqoBh_Lx8Mw" isUnique="false" aggregation="composite" association="_WQdqUNcIEduIqoBh_Lx8Mw">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_WQxMUNcIEduIqoBh_Lx8Mw" value="*"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_WQxMUdcIEduIqoBh_Lx8Mw" value="1"/>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_JNhN4NcHEduIqoBh_Lx8Mw" name="Chapter">
+      <generalization xmi:id="_zertcNcHEduIqoBh_Lx8Mw" general="_ss53oNcHEduIqoBh_Lx8Mw"/>
+      <ownedAttribute xmi:id="_S_hTcNcHEduIqoBh_Lx8Mw" name="numberOfPages" isUnique="false">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_VflnANcIEduIqoBh_Lx8Mw" name="author" type="_Jtj_4NcHEduIqoBh_Lx8Mw" isUnique="false" association="_VfcdENcIEduIqoBh_Lx8Mw">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_VflnAdcIEduIqoBh_Lx8Mw" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_VflnAtcIEduIqoBh_Lx8Mw" value="1"/>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_Jtj_4NcHEduIqoBh_Lx8Mw" name="Author">
+      <ownedAttribute xmi:id="_Tw2CsNcHEduIqoBh_Lx8Mw" name="firstName" isUnique="false">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_UxzwcNcHEduIqoBh_Lx8Mw" name="lastName" isUnique="false">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_atC_0NcHEduIqoBh_Lx8Mw" name="gender" type="_ZUiUwNcHEduIqoBh_Lx8Mw" isUnique="false"/>
+      <ownedAttribute xmi:id="_VfcdEdcIEduIqoBh_Lx8Mw" name="chapter" type="_JNhN4NcHEduIqoBh_Lx8Mw" isUnique="false" association="_VfcdENcIEduIqoBh_Lx8Mw">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_VfcdE9cIEduIqoBh_Lx8Mw" value="*"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_VfcdEtcIEduIqoBh_Lx8Mw"/>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Enumeration" xmi:id="_ZUiUwNcHEduIqoBh_Lx8Mw" name="Gender">
+      <ownedLiteral xmi:id="_Zke1QNcHEduIqoBh_Lx8Mw" name="Male"/>
+      <ownedLiteral xmi:id="_ZsOcANcHEduIqoBh_Lx8Mw" name="Female"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_ss53oNcHEduIqoBh_Lx8Mw" name="NamedElement" isAbstract="true">
+      <ownedAttribute xmi:id="_v9OY4NcHEduIqoBh_Lx8Mw" name="title" isUnique="false">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+    </packagedElement>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_VfcdENcIEduIqoBh_Lx8Mw" name="Association_Author_Chapter" memberEnd="_VfcdEdcIEduIqoBh_Lx8Mw _VflnANcIEduIqoBh_Lx8Mw"/>
+  <packagedElement xmi:type="uml:Association" xmi:id="_WQdqUNcIEduIqoBh_Lx8Mw" name="Association_Chapter_Book" memberEnd="_WQnbUNcIEduIqoBh_Lx8Mw _WQnbU9cIEduIqoBh_Lx8Mw">
+    <ownedEnd xmi:id="_WQnbUNcIEduIqoBh_Lx8Mw" name="book" type="_Ia3B4NcHEduIqoBh_Lx8Mw" isUnique="false" association="_WQdqUNcIEduIqoBh_Lx8Mw">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_WQnbUtcIEduIqoBh_Lx8Mw" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_WQnbUdcIEduIqoBh_Lx8Mw" value="1"/>
+    </ownedEnd>
+  </packagedElement>
+  <profileApplication xmi:id="_EjpfwtcHEduIqoBh_Lx8Mw">
+    <eAnnotations xmi:id="_Ejpfw9cHEduIqoBh_Lx8Mw" source="http://www.eclipse.org/uml2/2.0.0/UML">
+      <references xmi:type="ecore:EPackage" href="pathmap://UML_PROFILES/Standard.profile.uml#_yzU58YinEdqtvbnfB2L_5w"/>
+    </eAnnotations>
+    <appliedProfile href="pathmap://UML_PROFILES/Standard.profile.uml#_0"/>
+  </profileApplication>
+</uml:Model>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:simplesbvr="simplesbvr">
+  <simplesbvr:ObjectType objectName="Product" representations="/5"/>
+  <simplesbvr:NonNegativeInteger objectName="One" representations="/11" value="1"/>
+  <simplesbvr:ObjectType objectName="Company" representations="/13"/>
+  <simplesbvr:Designation objectName="Each" meaning="/18" text="/4"/>
+  <simplesbvr:Text objectName="Each" value="Each"/>
+  <simplesbvr:Designation objectName="Product" meaning="/0" text="/6"/>
+  <simplesbvr:Text objectName="Product" value="Product"/>
+  <simplesbvr:Designation objectName="ToSell" meaning="/15" text="/8"/>
+  <simplesbvr:Text objectName="ToSell" value="ToSell"/>
+  <simplesbvr:Designation objectName="Exactly" text="/10"/>
+  <simplesbvr:Text objectName="Exactly" value="Exactly"/>
+  <simplesbvr:Designation objectName="1" meaning="/1" text="/12"/>
+  <simplesbvr:Text objectName="1" value="1"/>
+  <simplesbvr:Designation objectName="Company" meaning="/2" text="/14"/>
+  <simplesbvr:Text objectName="Company" value="Company"/>
+  <simplesbvr:AssociativeFactType objectName="ToSell" representations="/7" role1="/16" role2="/17"/>
+  <simplesbvr:FactTypeRole objectName="Company" nounConcept="/2"/>
+  <simplesbvr:FactTypeRole nounConcept="/0"/>
+  <simplesbvr:UniversalQuantification representations="/3" introducedVariable="/20" scopesOver="/21"/>
+  <simplesbvr:ExactlyNQuantification introducedVariable="/24" scopesOver="/21" cardinality="/1"/>
+  <simplesbvr:Variable rangesOver="/0"/>
+  <simplesbvr:BinaryAtomicFormulation isBasedOn="/15" roleBinding1="/22" roleBinding2="/23"/>
+  <simplesbvr:RoleBinding isOf="/16" bindsTo="/24"/>
+  <simplesbvr:RoleBinding isOf="/17" bindsTo="/20"/>
+  <simplesbvr:Variable rangesOver="/2"/>
+</xmi:XMI>

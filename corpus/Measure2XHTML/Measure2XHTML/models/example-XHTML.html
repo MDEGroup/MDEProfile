@@ -1,0 +1,1467 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+  "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns = 'http://www.w3.org/1999/xhtml' xml:lang = 'en-US'>
+  <head>
+    <title>Interactive metric report on a KM3 model</title>
+    <meta http-equiv = 'Content-Type' content = 'text/html; charset=utf-8'/>
+    <style type = 'text/css'>
+<!--/*--><![CDATA[/*><!--*/
+html
+{
+    font-family: arial,helvetica,sans-serif;
+    font-size: small;
+    font-style: normal;
+    font-weight: normal;
+    text-align: justify;
+}
+
+fieldset
+{
+    padding: 0px 10px 0px 10px;
+}
+
+legend
+{
+    font-weight: bold;
+}
+
+caption
+{
+    font-style: italic;
+    font-weight: bold;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 5px;
+}
+
+table
+{
+    border: none;
+    border-collapse: collapse;
+    margin: 5px auto 40px auto;
+}
+
+tr.bound, th.metric, th.element
+{
+    background: #c8c8ff;
+    text-align: center;
+}
+
+th
+{
+    border: 1px solid black;
+    padding: 1px 4px 4px 4px;
+    text-align: center;
+    white-space: nowrap;
+}
+
+th.empty
+{
+    border: none;
+}
+
+th.category
+{
+    background: #9696ff;
+}
+
+acronym
+{
+    border-bottom: 1px dotted;
+}
+
+input
+{
+    border: 1px solid gray;
+    padding-right: 2px;
+    text-align: right;
+}
+
+td
+{
+    background: #e5e5ef;
+    border: 1px solid black;
+    color: #0000ff;
+    font-family: courier,monospace;
+    padding: 2px 5px 2px 5px;
+    text-align: right;
+    white-space: nowrap;
+}
+
+td.first
+{
+    color: #000000;
+    font-family: arial,helvetica,sans-serif;
+    text-align: left;
+}
+
+td.ignoredValue
+{
+    background: #ffffff;
+    color: #adadad;
+    text-align: right;
+}
+
+a
+{
+    color: blue;
+    text-decoration: none;
+}
+
+a:hover
+{
+    text-decoration: underline;
+}
+/*]]>*/-->
+</style>
+    <script type = 'text/javascript'>
+<!--//--><![CDATA[//><!--
+function indexOf(node, item)
+{
+  var index = 0;
+  var current = first_child(node);
+  
+  while (current != null)
+  {
+    if (current == item)
+    {
+      return index;
+    }
+    else
+    {
+      current = node_after(current);
+      index++;
+    }
+  }
+  
+  return 0;
+}
+
+function at(node, index)
+{
+  var i = 0;
+  var current = first_child(node);
+  
+  while (current != null)
+  {
+    if (i == index)
+    {
+      return current;
+    }
+    else
+    {
+      current = node_after(current);
+      i++;
+    }
+  }
+  
+  return current;
+}
+
+function matchPreferredValue(rawValue, inputText)
+{    
+  var result = false;
+  var value = parseFloat(rawValue);
+  
+  if (inputText.value.substring(0,2) == "<=")
+  {
+    result = (value <= parseFloat(inputText.value.substring(2,inputText.value.length)));
+  }
+  else if (inputText.value.substring(0,2) == ">=")
+  {
+    result = (value >= parseFloat(inputText.value.substring(2,inputText.value.length)));
+  }
+  else if (inputText.value.substring(0,2) == "==")
+  {
+    result = (value == parseFloat(inputText.value.substring(2,inputText.value.length)));
+  }
+  else if (inputText.value.substring(0,2) == "!=")
+  {
+    result = (value != parseFloat(inputText.value.substring(2,inputText.value.length)));
+  }
+  else if (inputText.value.substring(0,1) == "<")
+  {
+    result = (value < parseFloat(inputText.value.substring(1,inputText.value.length)));
+  }
+  else if (inputText.value.substring(0,1) == ">")
+  {
+    result = (value > parseFloat(inputText.value.substring(1,inputText.value.length)));
+  }
+  else if (inputText.value.substring(0,1) == "=")
+  {
+    result = (value == parseFloat(inputText.value.substring(1,inputText.value.length)));
+  } 
+  else if (inputText.value.substring(0,1) == "!")
+  {
+    result = (value != parseFloat(inputText.value.substring(1,inputText.value.length)));
+    }
+  else
+  {
+    result = (value <= parseFloat(inputText.value));
+    if (inputText.value != "")
+    {
+      inputText.value = "<=" + inputText.value
+    }
+  }
+  
+  return result;
+}function changeStyleOnEnter(event, inputText)
+{
+  if (event.keyCode == 13)
+  {
+  	changeStyle(inputText);
+  }
+}
+
+function changeStyle(inputText)
+{
+  var tdInputText = inputText.parentNode;
+  var index = indexOf(tdInputText.parentNode,tdInputText);
+     
+  if (index != -1)
+  {
+    for (var trValue = node_after(tdInputText.parentNode); trValue != null; trValue = node_after(trValue))
+    {
+      var tdValue = at(trValue,index)
+    
+      if (matchPreferredValue(tdValue.innerHTML,inputText))
+      {
+        tdValue.className = "";
+      }
+      else
+      {
+        tdValue.className = "ignoredValue";
+      }
+    }
+  }
+}
+
+function is_all_ws(nod)
+{
+  return !(/[^\t\n\r ]/.test(nod.data));
+}
+
+function is_ignorable(nod)
+{
+  return (nod.nodeType == 8) ||
+         ((nod.nodeType == 3) && is_all_ws(nod));
+}
+function node_after(sib)
+{
+  while ((sib = sib.nextSibling)) {
+    if (!is_ignorable(sib)) return sib;
+  }
+  return null;
+}
+function first_child(par)
+{
+  var res=par.firstChild;
+  while (res) {
+    if (!is_ignorable(res)) return res;
+    res = res.nextSibling;
+  }
+  return null;
+}
+//--><!]]>
+</script>
+    <noscript>
+      <fieldset>
+        <legend>Warning</legend>
+        <p>In order to use the interactive features, you must enable JavaScript in your browser.</p>
+      </fieldset>
+    </noscript>
+  </head>
+  <body>
+    <div>
+      <fieldset>
+        <legend>How To</legend>
+        <p>A predicate can be set for each metric column (an operator followed by a number). The values for the metric that respect the given predicate are emphasized.</p>
+        <p>Operators for the predicate are among:</p>
+        <ul>
+          <li>lower than (&lt;)</li>
+          <li>lower or equal than (&lt;=)</li>
+          <li>equal to (= or ==)</li>
+          <li>not equal to (!= or !)</li>
+          <li>greater or equal than (&gt;)</li>
+          <li>greater than (&gt;=)</li>
+        </ul>
+        <p>Unit for percentage values are not necessary. If no operator is given, the operator lower or equal than (&lt;=) is used. If the predicate is incorrect, no value is emphasized.</p>
+        <p>Predicate samples:</p>
+        <ul>
+          <li>&gt;1</li>
+          <li>=33.3</li>
+        </ul>
+      </fieldset>
+      <br/>
+      <br/>
+      <table>
+        <caption>Metrics for Object-Oriented Design on Package elements</caption>
+        <thead>
+          <tr>
+            <th class = 'empty'/>
+            <th class = 'category' colspan = '4'>
+              <a href = 'http://www.mdworkbench.com/measurement/metrics/definition.htm#MOOD4KM3' onclick = 'window.open(this.href,"_blank"); return false;'>
+                <acronym title = 'Metrics for Object-Oriented Design'>MOOD</acronym>
+              </a>
+            </th>
+          </tr>
+          <tr>
+            <th class = 'element'>Package</th>
+            <th class = 'metric'>
+              <a href = 'http://www.mdworkbench.com/measurement/metrics/definition.htm#MOOD4KM3::AIF' onclick = 'window.open(this.href,"_blank"); return false;'>
+                <acronym title = 'Attributes Inheritance Factor'>AIF</acronym>
+              </a>
+            </th>
+            <th class = 'metric'>
+              <a href = 'http://www.mdworkbench.com/measurement/metrics/definition.htm#MOOD4KM3::RIF' onclick = 'window.open(this.href,"_blank"); return false;'>
+                <acronym title = 'References Inheritance Factor'>RIF</acronym>
+              </a>
+            </th>
+            <th class = 'metric'>
+              <a href = 'http://www.mdworkbench.com/measurement/metrics/definition.htm#MOOD4KM3::CCF' onclick = 'window.open(this.href,"_blank"); return false;'>
+                <acronym title = 'Class Coupling Factor'>CCF</acronym>
+              </a>
+            </th>
+            <th class = 'metric'>
+              <a href = 'http://www.mdworkbench.com/measurement/metrics/definition.htm#MOOD4KM3::ICF' onclick = 'window.open(this.href,"_blank"); return false;'>
+                <acronym title = 'Internal Coupling Factor'>ICF</acronym>
+              </a>
+            </th>
+          </tr>
+        </thead>
+        <tfoot>
+          <tr>
+            <th class = 'element'>Package</th>
+            <th class = 'metric'>
+              <a href = 'http://www.mdworkbench.com/measurement/metrics/definition.htm#MOOD4KM3::AIF' onclick = 'window.open(this.href,"_blank"); return false;'>
+                <acronym title = 'Attributes Inheritance Factor'>AIF</acronym>
+              </a>
+            </th>
+            <th class = 'metric'>
+              <a href = 'http://www.mdworkbench.com/measurement/metrics/definition.htm#MOOD4KM3::RIF' onclick = 'window.open(this.href,"_blank"); return false;'>
+                <acronym title = 'References Inheritance Factor'>RIF</acronym>
+              </a>
+            </th>
+            <th class = 'metric'>
+              <a href = 'http://www.mdworkbench.com/measurement/metrics/definition.htm#MOOD4KM3::CCF' onclick = 'window.open(this.href,"_blank"); return false;'>
+                <acronym title = 'Class Coupling Factor'>CCF</acronym>
+              </a>
+            </th>
+            <th class = 'metric'>
+              <a href = 'http://www.mdworkbench.com/measurement/metrics/definition.htm#MOOD4KM3::ICF' onclick = 'window.open(this.href,"_blank"); return false;'>
+                <acronym title = 'Internal Coupling Factor'>ICF</acronym>
+              </a>
+            </th>
+          </tr>
+        </tfoot>
+        <tbody>
+          <tr class = 'bound'>
+            <th/>
+            <th>
+              <input value = '!=0' size = '3' maxlength = '7' onchange = 'changeStyle(this);' onkeypress = 'changeStyleOnEnter(event,this);'/>
+            </th>
+            <th>
+              <input value = '!=0' size = '3' maxlength = '7' onchange = 'changeStyle(this);' onkeypress = 'changeStyleOnEnter(event,this);'/>
+            </th>
+            <th>
+              <input value = '!=0' size = '3' maxlength = '7' onchange = 'changeStyle(this);' onkeypress = 'changeStyleOnEnter(event,this);'/>
+            </th>
+            <th>
+              <input value = '!=0' size = '3' maxlength = '7' onchange = 'changeStyle(this);' onkeypress = 'changeStyleOnEnter(event,this);'/>
+            </th>
+          </tr>
+          <tr>
+            <td class = 'first'>DTD</td>
+            <td>50%</td>
+            <td>33.3%</td>
+            <td>12.0%</td>
+            <td>50%</td>
+          </tr>
+        </tbody>
+      </table>
+      <table>
+        <caption>Metrics for Object-Oriented Design 2 on Package elements</caption>
+        <thead>
+          <tr>
+            <th class = 'empty'/>
+            <th class = 'category' colspan = '1'>
+              <a href = 'http://www.mdworkbench.com/measurement/metrics/definition.htm#MOOD24KM3' onclick = 'window.open(this.href,"_blank"); return false;'>
+                <acronym title = 'Metrics for Object-Oriented Design 2'>MOOD2</acronym>
+              </a>
+            </th>
+          </tr>
+          <tr>
+            <th class = 'element'>Package</th>
+            <th class = 'metric'>
+              <a href = 'http://www.mdworkbench.com/measurement/metrics/definition.htm#MOOD24KM3::IIF' onclick = 'window.open(this.href,"_blank"); return false;'>
+                <acronym title = 'Internal Inheritance Factor'>IIF</acronym>
+              </a>
+            </th>
+          </tr>
+        </thead>
+        <tfoot>
+          <tr>
+            <th class = 'element'>Package</th>
+            <th class = 'metric'>
+              <a href = 'http://www.mdworkbench.com/measurement/metrics/definition.htm#MOOD24KM3::IIF' onclick = 'window.open(this.href,"_blank"); return false;'>
+                <acronym title = 'Internal Inheritance Factor'>IIF</acronym>
+              </a>
+            </th>
+          </tr>
+        </tfoot>
+        <tbody>
+          <tr class = 'bound'>
+            <th/>
+            <th>
+              <input value = '!=0' size = '3' maxlength = '7' onchange = 'changeStyle(this);' onkeypress = 'changeStyleOnEnter(event,this);'/>
+            </th>
+          </tr>
+          <tr>
+            <td class = 'first'>DTD</td>
+            <td>50%</td>
+          </tr>
+        </tbody>
+      </table>
+      <table>
+        <caption>Metrics for Object-Oriented Software Engineering on Class elements</caption>
+        <thead>
+          <tr>
+            <th class = 'empty'/>
+            <th class = 'category' colspan = '4'>
+              <a href = 'http://www.mdworkbench.com/measurement/metrics/definition.htm#MOOSE4KM3' onclick = 'window.open(this.href,"_blank"); return false;'>
+                <acronym title = 'Metrics for Object-Oriented Software Engineering'>MOOSE</acronym>
+              </a>
+            </th>
+          </tr>
+          <tr>
+            <th class = 'element'>Class</th>
+            <th class = 'metric'>
+              <a href = 'http://www.mdworkbench.com/measurement/metrics/definition.htm#MOOSE4KM3::WRC' onclick = 'window.open(this.href,"_blank"); return false;'>
+                <acronym title = 'Weighted References per Class'>WRC</acronym>
+              </a>
+            </th>
+            <th class = 'metric'>
+              <a href = 'http://www.mdworkbench.com/measurement/metrics/definition.htm#MOOSE4KM3::DIT' onclick = 'window.open(this.href,"_blank"); return false;'>
+                <acronym title = 'Depth of Inheritance Tree'>DIT</acronym>
+              </a>
+            </th>
+            <th class = 'metric'>
+              <a href = 'http://www.mdworkbench.com/measurement/metrics/definition.htm#MOOSE4KM3::NOC' onclick = 'window.open(this.href,"_blank"); return false;'>
+                <acronym title = 'Number of Children'>NOC</acronym>
+              </a>
+            </th>
+            <th class = 'metric'>
+              <a href = 'http://www.mdworkbench.com/measurement/metrics/definition.htm#MOOSE4KM3::CBO' onclick = 'window.open(this.href,"_blank"); return false;'>
+                <acronym title = 'Coupling Between Objects'>CBO</acronym>
+              </a>
+            </th>
+          </tr>
+        </thead>
+        <tfoot>
+          <tr>
+            <th class = 'element'>Class</th>
+            <th class = 'metric'>
+              <a href = 'http://www.mdworkbench.com/measurement/metrics/definition.htm#MOOSE4KM3::WRC' onclick = 'window.open(this.href,"_blank"); return false;'>
+                <acronym title = 'Weighted References per Class'>WRC</acronym>
+              </a>
+            </th>
+            <th class = 'metric'>
+              <a href = 'http://www.mdworkbench.com/measurement/metrics/definition.htm#MOOSE4KM3::DIT' onclick = 'window.open(this.href,"_blank"); return false;'>
+                <acronym title = 'Depth of Inheritance Tree'>DIT</acronym>
+              </a>
+            </th>
+            <th class = 'metric'>
+              <a href = 'http://www.mdworkbench.com/measurement/metrics/definition.htm#MOOSE4KM3::NOC' onclick = 'window.open(this.href,"_blank"); return false;'>
+                <acronym title = 'Number of Children'>NOC</acronym>
+              </a>
+            </th>
+            <th class = 'metric'>
+              <a href = 'http://www.mdworkbench.com/measurement/metrics/definition.htm#MOOSE4KM3::CBO' onclick = 'window.open(this.href,"_blank"); return false;'>
+                <acronym title = 'Coupling Between Objects'>CBO</acronym>
+              </a>
+            </th>
+          </tr>
+        </tfoot>
+        <tbody>
+          <tr class = 'bound'>
+            <th/>
+            <th>
+              <input value = '!=0' size = '3' maxlength = '7' onchange = 'changeStyle(this);' onkeypress = 'changeStyleOnEnter(event,this);'/>
+            </th>
+            <th>
+              <input value = '!=0' size = '3' maxlength = '7' onchange = 'changeStyle(this);' onkeypress = 'changeStyleOnEnter(event,this);'/>
+            </th>
+            <th>
+              <input value = '!=0' size = '3' maxlength = '7' onchange = 'changeStyle(this);' onkeypress = 'changeStyleOnEnter(event,this);'/>
+            </th>
+            <th>
+              <input value = '!=0' size = '3' maxlength = '7' onchange = 'changeStyle(this);' onkeypress = 'changeStyleOnEnter(event,this);'/>
+            </th>
+          </tr>
+          <tr>
+            <td class = 'first'>DTD.AnyElement</td>
+            <td class = 'ignoredValue'>0</td>
+            <td>2</td>
+            <td class = 'ignoredValue'>0</td>
+            <td class = 'ignoredValue'>0</td>
+          </tr>
+          <tr>
+            <td class = 'first'>DTD.AttributeDescription</td>
+            <td>1</td>
+            <td>1</td>
+            <td>2</td>
+            <td>2</td>
+          </tr>
+          <tr>
+            <td class = 'first'>DTD.AttributeList</td>
+            <td>1</td>
+            <td>1</td>
+            <td class = 'ignoredValue'>0</td>
+            <td>1</td>
+          </tr>
+          <tr>
+            <td class = 'first'>DTD.AttributeType</td>
+            <td class = 'ignoredValue'>0</td>
+            <td class = 'ignoredValue'>0</td>
+            <td>1</td>
+            <td class = 'ignoredValue'>0</td>
+          </tr>
+          <tr>
+            <td class = 'first'>DTD.Children</td>
+            <td class = 'ignoredValue'>0</td>
+            <td>1</td>
+            <td>3</td>
+            <td class = 'ignoredValue'>0</td>
+          </tr>
+          <tr>
+            <td class = 'first'>DTD.Choice</td>
+            <td>1</td>
+            <td>2</td>
+            <td class = 'ignoredValue'>0</td>
+            <td>1</td>
+          </tr>
+          <tr>
+            <td class = 'first'>DTD.DefaultValue</td>
+            <td>1</td>
+            <td>2</td>
+            <td class = 'ignoredValue'>0</td>
+            <td>2</td>
+          </tr>
+          <tr>
+            <td class = 'first'>DTD.Element</td>
+            <td class = 'ignoredValue'>0</td>
+            <td>1</td>
+            <td>2</td>
+            <td class = 'ignoredValue'>0</td>
+          </tr>
+          <tr>
+            <td class = 'first'>DTD.ElementContent</td>
+            <td class = 'ignoredValue'>0</td>
+            <td class = 'ignoredValue'>0</td>
+            <td>2</td>
+            <td class = 'ignoredValue'>0</td>
+          </tr>
+          <tr>
+            <td class = 'first'>DTD.Entity</td>
+            <td class = 'ignoredValue'>0</td>
+            <td>1</td>
+            <td class = 'ignoredValue'>0</td>
+            <td class = 'ignoredValue'>0</td>
+          </tr>
+          <tr>
+            <td class = 'first'>DTD.Enumeration</td>
+            <td class = 'ignoredValue'>0</td>
+            <td>1</td>
+            <td class = 'ignoredValue'>0</td>
+            <td class = 'ignoredValue'>0</td>
+          </tr>
+          <tr>
+            <td class = 'first'>DTD.Leaf</td>
+            <td class = 'ignoredValue'>0</td>
+            <td>2</td>
+            <td class = 'ignoredValue'>0</td>
+            <td class = 'ignoredValue'>0</td>
+          </tr>
+          <tr>
+            <td class = 'first'>DTD.Mixed</td>
+            <td class = 'ignoredValue'>0</td>
+            <td>1</td>
+            <td class = 'ignoredValue'>0</td>
+            <td class = 'ignoredValue'>0</td>
+          </tr>
+          <tr>
+            <td class = 'first'>DTD.NoDefaultValue</td>
+            <td>1</td>
+            <td>2</td>
+            <td class = 'ignoredValue'>0</td>
+            <td>2</td>
+          </tr>
+          <tr>
+            <td class = 'first'>DTD.Notation</td>
+            <td class = 'ignoredValue'>0</td>
+            <td>1</td>
+            <td class = 'ignoredValue'>0</td>
+            <td class = 'ignoredValue'>0</td>
+          </tr>
+          <tr>
+            <td class = 'first'>DTD.OtherAttributeType</td>
+            <td class = 'ignoredValue'>0</td>
+            <td class = 'ignoredValue'>0</td>
+            <td class = 'ignoredValue'>0</td>
+            <td class = 'ignoredValue'>0</td>
+          </tr>
+          <tr>
+            <td class = 'first'>DTD.RestrictedElement</td>
+            <td class = 'ignoredValue'>0</td>
+            <td>2</td>
+            <td class = 'ignoredValue'>0</td>
+            <td>1</td>
+          </tr>
+          <tr>
+            <td class = 'first'>DTD.Sequence</td>
+            <td>1</td>
+            <td>2</td>
+            <td class = 'ignoredValue'>0</td>
+            <td>1</td>
+          </tr>
+          <tr>
+            <td class = 'first'>DTD.TypeDescription</td>
+            <td class = 'ignoredValue'>0</td>
+            <td class = 'ignoredValue'>0</td>
+            <td>5</td>
+            <td class = 'ignoredValue'>0</td>
+          </tr>
+        </tbody>
+      </table>
+      <table>
+        <caption>Extended MOOSE on Class elements</caption>
+        <thead>
+          <tr>
+            <th class = 'empty'/>
+            <th class = 'category' colspan = '1'>
+              <a href = 'http://www.mdworkbench.com/measurement/metrics/definition.htm#EMOOSE4KM3' onclick = 'window.open(this.href,"_blank"); return false;'>
+                <acronym title = 'Extended MOOSE'>EMOOSE</acronym>
+              </a>
+            </th>
+          </tr>
+          <tr>
+            <th class = 'element'>Class</th>
+            <th class = 'metric'>
+              <a href = 'http://www.mdworkbench.com/measurement/metrics/definition.htm#EMOOSE4KM3::SIZE2' onclick = 'window.open(this.href,"_blank"); return false;'>
+                <acronym title = 'Number of local Attributes and References defined in the Class'>SIZE2</acronym>
+              </a>
+            </th>
+          </tr>
+        </thead>
+        <tfoot>
+          <tr>
+            <th class = 'element'>Class</th>
+            <th class = 'metric'>
+              <a href = 'http://www.mdworkbench.com/measurement/metrics/definition.htm#EMOOSE4KM3::SIZE2' onclick = 'window.open(this.href,"_blank"); return false;'>
+                <acronym title = 'Number of local Attributes and References defined in the Class'>SIZE2</acronym>
+              </a>
+            </th>
+          </tr>
+        </tfoot>
+        <tbody>
+          <tr class = 'bound'>
+            <th/>
+            <th>
+              <input value = '!=0' size = '3' maxlength = '7' onchange = 'changeStyle(this);' onkeypress = 'changeStyleOnEnter(event,this);'/>
+            </th>
+          </tr>
+          <tr>
+            <td class = 'first'>DTD.AnyElement</td>
+            <td class = 'ignoredValue'>0</td>
+          </tr>
+          <tr>
+            <td class = 'first'>DTD.AttributeDescription</td>
+            <td>2</td>
+          </tr>
+          <tr>
+            <td class = 'first'>DTD.AttributeList</td>
+            <td>1</td>
+          </tr>
+          <tr>
+            <td class = 'first'>DTD.AttributeType</td>
+            <td class = 'ignoredValue'>0</td>
+          </tr>
+          <tr>
+            <td class = 'first'>DTD.Children</td>
+            <td>1</td>
+          </tr>
+          <tr>
+            <td class = 'first'>DTD.Choice</td>
+            <td>1</td>
+          </tr>
+          <tr>
+            <td class = 'first'>DTD.DefaultValue</td>
+            <td>2</td>
+          </tr>
+          <tr>
+            <td class = 'first'>DTD.Element</td>
+            <td class = 'ignoredValue'>0</td>
+          </tr>
+          <tr>
+            <td class = 'first'>DTD.ElementContent</td>
+            <td class = 'ignoredValue'>0</td>
+          </tr>
+          <tr>
+            <td class = 'first'>DTD.Entity</td>
+            <td>2</td>
+          </tr>
+          <tr>
+            <td class = 'first'>DTD.Enumeration</td>
+            <td>1</td>
+          </tr>
+          <tr>
+            <td class = 'first'>DTD.Leaf</td>
+            <td>1</td>
+          </tr>
+          <tr>
+            <td class = 'first'>DTD.Mixed</td>
+            <td>1</td>
+          </tr>
+          <tr>
+            <td class = 'first'>DTD.NoDefaultValue</td>
+            <td>1</td>
+          </tr>
+          <tr>
+            <td class = 'first'>DTD.Notation</td>
+            <td>1</td>
+          </tr>
+          <tr>
+            <td class = 'first'>DTD.OtherAttributeType</td>
+            <td>1</td>
+          </tr>
+          <tr>
+            <td class = 'first'>DTD.RestrictedElement</td>
+            <td>1</td>
+          </tr>
+          <tr>
+            <td class = 'first'>DTD.Sequence</td>
+            <td>1</td>
+          </tr>
+          <tr>
+            <td class = 'first'>DTD.TypeDescription</td>
+            <td>1</td>
+          </tr>
+        </tbody>
+      </table>
+      <table>
+        <caption>Quality Model for Object-Oriented Design on Package elements</caption>
+        <thead>
+          <tr>
+            <th class = 'empty'/>
+            <th class = 'category' colspan = '11'>
+              <a href = 'http://www.mdworkbench.com/measurement/metrics/definition.htm#QMOOD4KM3' onclick = 'window.open(this.href,"_blank"); return false;'>
+                <acronym title = 'Quality Model for Object-Oriented Design'>QMOOD</acronym>
+              </a>
+            </th>
+          </tr>
+          <tr>
+            <th class = 'element'>Package</th>
+            <th class = 'metric'>
+              <a href = 'http://www.mdworkbench.com/measurement/metrics/definition.htm#QMOOD4KM3::DSC' onclick = 'window.open(this.href,"_blank"); return false;'>
+                <acronym title = 'Design Size in Classes'>DSC</acronym>
+              </a>
+            </th>
+            <th class = 'metric'>
+              <a href = 'http://www.mdworkbench.com/measurement/metrics/definition.htm#QMOOD4KM3::NOH' onclick = 'window.open(this.href,"_blank"); return false;'>
+                <acronym title = 'Number of Hierarchies'>NOH</acronym>
+              </a>
+            </th>
+            <th class = 'metric'>
+              <a href = 'http://www.mdworkbench.com/measurement/metrics/definition.htm#QMOOD4KM3::NIC' onclick = 'window.open(this.href,"_blank"); return false;'>
+                <acronym title = 'Number of Independent Classes'>NIC</acronym>
+              </a>
+            </th>
+            <th class = 'metric'>
+              <a href = 'http://www.mdworkbench.com/measurement/metrics/definition.htm#QMOOD4KM3::NSI' onclick = 'window.open(this.href,"_blank"); return false;'>
+                <acronym title = 'Number of Single Inheritance'>NSI</acronym>
+              </a>
+            </th>
+            <th class = 'metric'>
+              <a href = 'http://www.mdworkbench.com/measurement/metrics/definition.htm#QMOOD4KM3::NMI' onclick = 'window.open(this.href,"_blank"); return false;'>
+                <acronym title = 'Number of Multiple Inheritance'>NMI</acronym>
+              </a>
+            </th>
+            <th class = 'metric'>
+              <a href = 'http://www.mdworkbench.com/measurement/metrics/definition.htm#QMOOD4KM3::NNC' onclick = 'window.open(this.href,"_blank"); return false;'>
+                <acronym title = 'Number of Internal Classes'>NNC</acronym>
+              </a>
+            </th>
+            <th class = 'metric'>
+              <a href = 'http://www.mdworkbench.com/measurement/metrics/definition.htm#QMOOD4KM3::NAC' onclick = 'window.open(this.href,"_blank"); return false;'>
+                <acronym title = 'Number of Abstract Classes'>NAC</acronym>
+              </a>
+            </th>
+            <th class = 'metric'>
+              <a href = 'http://www.mdworkbench.com/measurement/metrics/definition.htm#QMOOD4KM3::NLC' onclick = 'window.open(this.href,"_blank"); return false;'>
+                <acronym title = 'Number of Leaf Classes'>NLC</acronym>
+              </a>
+            </th>
+            <th class = 'metric'>
+              <a href = 'http://www.mdworkbench.com/measurement/metrics/definition.htm#QMOOD4KM3::ADI' onclick = 'window.open(this.href,"_blank"); return false;'>
+                <acronym title = 'Average Depth of Inheritance'>ADI</acronym>
+              </a>
+            </th>
+            <th class = 'metric'>
+              <a href = 'http://www.mdworkbench.com/measurement/metrics/definition.htm#QMOOD4KM3::AWI' onclick = 'window.open(this.href,"_blank"); return false;'>
+                <acronym title = 'Average Width of Inheritance'>AWI</acronym>
+              </a>
+            </th>
+            <th class = 'metric'>
+              <a href = 'http://www.mdworkbench.com/measurement/metrics/definition.htm#QMOOD4KM3::ANA' onclick = 'window.open(this.href,"_blank"); return false;'>
+                <acronym title = 'Average Number of Ancestors'>ANA</acronym>
+              </a>
+            </th>
+          </tr>
+        </thead>
+        <tfoot>
+          <tr>
+            <th class = 'element'>Package</th>
+            <th class = 'metric'>
+              <a href = 'http://www.mdworkbench.com/measurement/metrics/definition.htm#QMOOD4KM3::DSC' onclick = 'window.open(this.href,"_blank"); return false;'>
+                <acronym title = 'Design Size in Classes'>DSC</acronym>
+              </a>
+            </th>
+            <th class = 'metric'>
+              <a href = 'http://www.mdworkbench.com/measurement/metrics/definition.htm#QMOOD4KM3::NOH' onclick = 'window.open(this.href,"_blank"); return false;'>
+                <acronym title = 'Number of Hierarchies'>NOH</acronym>
+              </a>
+            </th>
+            <th class = 'metric'>
+              <a href = 'http://www.mdworkbench.com/measurement/metrics/definition.htm#QMOOD4KM3::NIC' onclick = 'window.open(this.href,"_blank"); return false;'>
+                <acronym title = 'Number of Independent Classes'>NIC</acronym>
+              </a>
+            </th>
+            <th class = 'metric'>
+              <a href = 'http://www.mdworkbench.com/measurement/metrics/definition.htm#QMOOD4KM3::NSI' onclick = 'window.open(this.href,"_blank"); return false;'>
+                <acronym title = 'Number of Single Inheritance'>NSI</acronym>
+              </a>
+            </th>
+            <th class = 'metric'>
+              <a href = 'http://www.mdworkbench.com/measurement/metrics/definition.htm#QMOOD4KM3::NMI' onclick = 'window.open(this.href,"_blank"); return false;'>
+                <acronym title = 'Number of Multiple Inheritance'>NMI</acronym>
+              </a>
+            </th>
+            <th class = 'metric'>
+              <a href = 'http://www.mdworkbench.com/measurement/metrics/definition.htm#QMOOD4KM3::NNC' onclick = 'window.open(this.href,"_blank"); return false;'>
+                <acronym title = 'Number of Internal Classes'>NNC</acronym>
+              </a>
+            </th>
+            <th class = 'metric'>
+              <a href = 'http://www.mdworkbench.com/measurement/metrics/definition.htm#QMOOD4KM3::NAC' onclick = 'window.open(this.href,"_blank"); return false;'>
+                <acronym title = 'Number of Abstract Classes'>NAC</acronym>
+              </a>
+            </th>
+            <th class = 'metric'>
+              <a href = 'http://www.mdworkbench.com/measurement/metrics/definition.htm#QMOOD4KM3::NLC' onclick = 'window.open(this.href,"_blank"); return false;'>
+                <acronym title = 'Number of Leaf Classes'>NLC</acronym>
+              </a>
+            </th>
+            <th class = 'metric'>
+              <a href = 'http://www.mdworkbench.com/measurement/metrics/definition.htm#QMOOD4KM3::ADI' onclick = 'window.open(this.href,"_blank"); return false;'>
+                <acronym title = 'Average Depth of Inheritance'>ADI</acronym>
+              </a>
+            </th>
+            <th class = 'metric'>
+              <a href = 'http://www.mdworkbench.com/measurement/metrics/definition.htm#QMOOD4KM3::AWI' onclick = 'window.open(this.href,"_blank"); return false;'>
+                <acronym title = 'Average Width of Inheritance'>AWI</acronym>
+              </a>
+            </th>
+            <th class = 'metric'>
+              <a href = 'http://www.mdworkbench.com/measurement/metrics/definition.htm#QMOOD4KM3::ANA' onclick = 'window.open(this.href,"_blank"); return false;'>
+                <acronym title = 'Average Number of Ancestors'>ANA</acronym>
+              </a>
+            </th>
+          </tr>
+        </tfoot>
+        <tbody>
+          <tr class = 'bound'>
+            <th/>
+            <th>
+              <input value = '!=0' size = '3' maxlength = '7' onchange = 'changeStyle(this);' onkeypress = 'changeStyleOnEnter(event,this);'/>
+            </th>
+            <th>
+              <input value = '!=0' size = '3' maxlength = '7' onchange = 'changeStyle(this);' onkeypress = 'changeStyleOnEnter(event,this);'/>
+            </th>
+            <th>
+              <input value = '!=0' size = '3' maxlength = '7' onchange = 'changeStyle(this);' onkeypress = 'changeStyleOnEnter(event,this);'/>
+            </th>
+            <th>
+              <input value = '!=0' size = '3' maxlength = '7' onchange = 'changeStyle(this);' onkeypress = 'changeStyleOnEnter(event,this);'/>
+            </th>
+            <th>
+              <input value = '!=0' size = '3' maxlength = '7' onchange = 'changeStyle(this);' onkeypress = 'changeStyleOnEnter(event,this);'/>
+            </th>
+            <th>
+              <input value = '!=0' size = '3' maxlength = '7' onchange = 'changeStyle(this);' onkeypress = 'changeStyleOnEnter(event,this);'/>
+            </th>
+            <th>
+              <input value = '!=0' size = '3' maxlength = '7' onchange = 'changeStyle(this);' onkeypress = 'changeStyleOnEnter(event,this);'/>
+            </th>
+            <th>
+              <input value = '!=0' size = '3' maxlength = '7' onchange = 'changeStyle(this);' onkeypress = 'changeStyleOnEnter(event,this);'/>
+            </th>
+            <th>
+              <input value = '!=0' size = '3' maxlength = '7' onchange = 'changeStyle(this);' onkeypress = 'changeStyleOnEnter(event,this);'/>
+            </th>
+            <th>
+              <input value = '!=0' size = '3' maxlength = '7' onchange = 'changeStyle(this);' onkeypress = 'changeStyleOnEnter(event,this);'/>
+            </th>
+            <th>
+              <input value = '!=0' size = '3' maxlength = '7' onchange = 'changeStyle(this);' onkeypress = 'changeStyleOnEnter(event,this);'/>
+            </th>
+          </tr>
+          <tr>
+            <td class = 'first'>DTD</td>
+            <td>19</td>
+            <td>15</td>
+            <td>13</td>
+            <td>15</td>
+            <td class = 'ignoredValue'>0</td>
+            <td>15</td>
+            <td>6</td>
+            <td>13</td>
+            <td class = 'ignoredValue'>0.0</td>
+            <td>1.4</td>
+            <td>0.3</td>
+          </tr>
+        </tbody>
+      </table>
+      <table>
+        <caption>Quality Model for Object-Oriented Design on Class elements</caption>
+        <thead>
+          <tr>
+            <th class = 'empty'/>
+            <th class = 'category' colspan = '14'>
+              <a href = 'http://www.mdworkbench.com/measurement/metrics/definition.htm#QMOOD4KM3' onclick = 'window.open(this.href,"_blank"); return false;'>
+                <acronym title = 'Quality Model for Object-Oriented Design'>QMOOD</acronym>
+              </a>
+            </th>
+          </tr>
+          <tr>
+            <th class = 'element'>Class</th>
+            <th class = 'metric'>
+              <a href = 'http://www.mdworkbench.com/measurement/metrics/definition.htm#QMOOD4KM3::MAA' onclick = 'window.open(this.href,"_blank"); return false;'>
+                <acronym title = 'Measure of Attribute Abstraction'>MAA</acronym>
+              </a>
+            </th>
+            <th class = 'metric'>
+              <a href = 'http://www.mdworkbench.com/measurement/metrics/definition.htm#QMOOD4KM3::MRA' onclick = 'window.open(this.href,"_blank"); return false;'>
+                <acronym title = 'Measure of Reference Abstraction'>MRA</acronym>
+              </a>
+            </th>
+            <th class = 'metric'>
+              <a href = 'http://www.mdworkbench.com/measurement/metrics/definition.htm#QMOOD4KM3::MOA' onclick = 'window.open(this.href,"_blank"); return false;'>
+                <acronym title = 'Measure of Aggregation'>MOA</acronym>
+              </a>
+            </th>
+            <th class = 'metric'>
+              <a href = 'http://www.mdworkbench.com/measurement/metrics/definition.htm#QMOOD4KM3::MRM' onclick = 'window.open(this.href,"_blank"); return false;'>
+                <acronym title = 'Modeled Relationship Measure'>MRM</acronym>
+              </a>
+            </th>
+            <th class = 'metric'>
+              <a href = 'http://www.mdworkbench.com/measurement/metrics/definition.htm#QMOOD4KM3::NOA' onclick = 'window.open(this.href,"_blank"); return false;'>
+                <acronym title = 'Number of Ancestors'>NOA</acronym>
+              </a>
+            </th>
+            <th class = 'metric'>
+              <a href = 'http://www.mdworkbench.com/measurement/metrics/definition.htm#QMOOD4KM3::NOR' onclick = 'window.open(this.href,"_blank"); return false;'>
+                <acronym title = 'Number of References'>NOR</acronym>
+              </a>
+            </th>
+            <th class = 'metric'>
+              <a href = 'http://www.mdworkbench.com/measurement/metrics/definition.htm#QMOOD4KM3::NOD' onclick = 'window.open(this.href,"_blank"); return false;'>
+                <acronym title = 'Number of Attributes'>NOD</acronym>
+              </a>
+            </th>
+            <th class = 'metric'>
+              <a href = 'http://www.mdworkbench.com/measurement/metrics/definition.htm#QMOOD4KM3::NAD' onclick = 'window.open(this.href,"_blank"); return false;'>
+                <acronym title = 'Number of Abstract Data Types'>NAD</acronym>
+              </a>
+            </th>
+            <th class = 'metric'>
+              <a href = 'http://www.mdworkbench.com/measurement/metrics/definition.htm#QMOOD4KM3::CSM' onclick = 'window.open(this.href,"_blank"); return false;'>
+                <acronym title = 'Class Size Metric'>CSM</acronym>
+              </a>
+            </th>
+            <th class = 'metric'>
+              <a href = 'http://www.mdworkbench.com/measurement/metrics/definition.htm#QMOOD4KM3::DCC' onclick = 'window.open(this.href,"_blank"); return false;'>
+                <acronym title = 'Direct Class Coupling'>DCC</acronym>
+              </a>
+            </th>
+            <th class = 'metric'>
+              <a href = 'http://www.mdworkbench.com/measurement/metrics/definition.htm#QMOOD4KM3::MCC' onclick = 'window.open(this.href,"_blank"); return false;'>
+                <acronym title = 'Maximum Class Coupling'>MCC</acronym>
+              </a>
+            </th>
+            <th class = 'metric'>
+              <a href = 'http://www.mdworkbench.com/measurement/metrics/definition.htm#QMOOD4KM3::DAC' onclick = 'window.open(this.href,"_blank"); return false;'>
+                <acronym title = 'Direct Attribute Based Coupling'>DAC</acronym>
+              </a>
+            </th>
+            <th class = 'metric'>
+              <a href = 'http://www.mdworkbench.com/measurement/metrics/definition.htm#QMOOD4KM3::DRC' onclick = 'window.open(this.href,"_blank"); return false;'>
+                <acronym title = 'Direct Reference Based Coupling'>DRC</acronym>
+              </a>
+            </th>
+            <th class = 'metric'>
+              <a href = 'http://www.mdworkbench.com/measurement/metrics/definition.htm#QMOOD4KM3::CCD' onclick = 'window.open(this.href,"_blank"); return false;'>
+                <acronym title = 'Class Complexity Based on Data'>CCD</acronym>
+              </a>
+            </th>
+          </tr>
+        </thead>
+        <tfoot>
+          <tr>
+            <th class = 'element'>Class</th>
+            <th class = 'metric'>
+              <a href = 'http://www.mdworkbench.com/measurement/metrics/definition.htm#QMOOD4KM3::MAA' onclick = 'window.open(this.href,"_blank"); return false;'>
+                <acronym title = 'Measure of Attribute Abstraction'>MAA</acronym>
+              </a>
+            </th>
+            <th class = 'metric'>
+              <a href = 'http://www.mdworkbench.com/measurement/metrics/definition.htm#QMOOD4KM3::MRA' onclick = 'window.open(this.href,"_blank"); return false;'>
+                <acronym title = 'Measure of Reference Abstraction'>MRA</acronym>
+              </a>
+            </th>
+            <th class = 'metric'>
+              <a href = 'http://www.mdworkbench.com/measurement/metrics/definition.htm#QMOOD4KM3::MOA' onclick = 'window.open(this.href,"_blank"); return false;'>
+                <acronym title = 'Measure of Aggregation'>MOA</acronym>
+              </a>
+            </th>
+            <th class = 'metric'>
+              <a href = 'http://www.mdworkbench.com/measurement/metrics/definition.htm#QMOOD4KM3::MRM' onclick = 'window.open(this.href,"_blank"); return false;'>
+                <acronym title = 'Modeled Relationship Measure'>MRM</acronym>
+              </a>
+            </th>
+            <th class = 'metric'>
+              <a href = 'http://www.mdworkbench.com/measurement/metrics/definition.htm#QMOOD4KM3::NOA' onclick = 'window.open(this.href,"_blank"); return false;'>
+                <acronym title = 'Number of Ancestors'>NOA</acronym>
+              </a>
+            </th>
+            <th class = 'metric'>
+              <a href = 'http://www.mdworkbench.com/measurement/metrics/definition.htm#QMOOD4KM3::NOR' onclick = 'window.open(this.href,"_blank"); return false;'>
+                <acronym title = 'Number of References'>NOR</acronym>
+              </a>
+            </th>
+            <th class = 'metric'>
+              <a href = 'http://www.mdworkbench.com/measurement/metrics/definition.htm#QMOOD4KM3::NOD' onclick = 'window.open(this.href,"_blank"); return false;'>
+                <acronym title = 'Number of Attributes'>NOD</acronym>
+              </a>
+            </th>
+            <th class = 'metric'>
+              <a href = 'http://www.mdworkbench.com/measurement/metrics/definition.htm#QMOOD4KM3::NAD' onclick = 'window.open(this.href,"_blank"); return false;'>
+                <acronym title = 'Number of Abstract Data Types'>NAD</acronym>
+              </a>
+            </th>
+            <th class = 'metric'>
+              <a href = 'http://www.mdworkbench.com/measurement/metrics/definition.htm#QMOOD4KM3::CSM' onclick = 'window.open(this.href,"_blank"); return false;'>
+                <acronym title = 'Class Size Metric'>CSM</acronym>
+              </a>
+            </th>
+            <th class = 'metric'>
+              <a href = 'http://www.mdworkbench.com/measurement/metrics/definition.htm#QMOOD4KM3::DCC' onclick = 'window.open(this.href,"_blank"); return false;'>
+                <acronym title = 'Direct Class Coupling'>DCC</acronym>
+              </a>
+            </th>
+            <th class = 'metric'>
+              <a href = 'http://www.mdworkbench.com/measurement/metrics/definition.htm#QMOOD4KM3::MCC' onclick = 'window.open(this.href,"_blank"); return false;'>
+                <acronym title = 'Maximum Class Coupling'>MCC</acronym>
+              </a>
+            </th>
+            <th class = 'metric'>
+              <a href = 'http://www.mdworkbench.com/measurement/metrics/definition.htm#QMOOD4KM3::DAC' onclick = 'window.open(this.href,"_blank"); return false;'>
+                <acronym title = 'Direct Attribute Based Coupling'>DAC</acronym>
+              </a>
+            </th>
+            <th class = 'metric'>
+              <a href = 'http://www.mdworkbench.com/measurement/metrics/definition.htm#QMOOD4KM3::DRC' onclick = 'window.open(this.href,"_blank"); return false;'>
+                <acronym title = 'Direct Reference Based Coupling'>DRC</acronym>
+              </a>
+            </th>
+            <th class = 'metric'>
+              <a href = 'http://www.mdworkbench.com/measurement/metrics/definition.htm#QMOOD4KM3::CCD' onclick = 'window.open(this.href,"_blank"); return false;'>
+                <acronym title = 'Class Complexity Based on Data'>CCD</acronym>
+              </a>
+            </th>
+          </tr>
+        </tfoot>
+        <tbody>
+          <tr class = 'bound'>
+            <th/>
+            <th>
+              <input value = '!=0' size = '3' maxlength = '7' onchange = 'changeStyle(this);' onkeypress = 'changeStyleOnEnter(event,this);'/>
+            </th>
+            <th>
+              <input value = '!=0' size = '3' maxlength = '7' onchange = 'changeStyle(this);' onkeypress = 'changeStyleOnEnter(event,this);'/>
+            </th>
+            <th>
+              <input value = '!=0' size = '3' maxlength = '7' onchange = 'changeStyle(this);' onkeypress = 'changeStyleOnEnter(event,this);'/>
+            </th>
+            <th>
+              <input value = '!=0' size = '3' maxlength = '7' onchange = 'changeStyle(this);' onkeypress = 'changeStyleOnEnter(event,this);'/>
+            </th>
+            <th>
+              <input value = '!=0' size = '3' maxlength = '7' onchange = 'changeStyle(this);' onkeypress = 'changeStyleOnEnter(event,this);'/>
+            </th>
+            <th>
+              <input value = '!=0' size = '3' maxlength = '7' onchange = 'changeStyle(this);' onkeypress = 'changeStyleOnEnter(event,this);'/>
+            </th>
+            <th>
+              <input value = '!=0' size = '3' maxlength = '7' onchange = 'changeStyle(this);' onkeypress = 'changeStyleOnEnter(event,this);'/>
+            </th>
+            <th>
+              <input value = '!=0' size = '3' maxlength = '7' onchange = 'changeStyle(this);' onkeypress = 'changeStyleOnEnter(event,this);'/>
+            </th>
+            <th>
+              <input value = '!=0' size = '3' maxlength = '7' onchange = 'changeStyle(this);' onkeypress = 'changeStyleOnEnter(event,this);'/>
+            </th>
+            <th>
+              <input value = '!=0' size = '3' maxlength = '7' onchange = 'changeStyle(this);' onkeypress = 'changeStyleOnEnter(event,this);'/>
+            </th>
+            <th>
+              <input value = '!=0' size = '3' maxlength = '7' onchange = 'changeStyle(this);' onkeypress = 'changeStyleOnEnter(event,this);'/>
+            </th>
+            <th>
+              <input value = '!=0' size = '3' maxlength = '7' onchange = 'changeStyle(this);' onkeypress = 'changeStyleOnEnter(event,this);'/>
+            </th>
+            <th>
+              <input value = '!=0' size = '3' maxlength = '7' onchange = 'changeStyle(this);' onkeypress = 'changeStyleOnEnter(event,this);'/>
+            </th>
+            <th>
+              <input value = '!=0' size = '3' maxlength = '7' onchange = 'changeStyle(this);' onkeypress = 'changeStyleOnEnter(event,this);'/>
+            </th>
+          </tr>
+          <tr>
+            <td class = 'first'>DTD.AnyElement</td>
+            <td>100%</td>
+            <td class = 'ignoredValue'>0%</td>
+            <td class = 'ignoredValue'>0</td>
+            <td class = 'ignoredValue'>0</td>
+            <td>2</td>
+            <td class = 'ignoredValue'>0</td>
+            <td>1</td>
+            <td class = 'ignoredValue'>0</td>
+            <td>1</td>
+            <td class = 'ignoredValue'>0</td>
+            <td class = 'ignoredValue'>0</td>
+            <td class = 'ignoredValue'>0</td>
+            <td class = 'ignoredValue'>0</td>
+            <td>1</td>
+          </tr>
+          <tr>
+            <td class = 'first'>DTD.AttributeDescription</td>
+            <td>50%</td>
+            <td class = 'ignoredValue'>0%</td>
+            <td>2</td>
+            <td>4</td>
+            <td>1</td>
+            <td>1</td>
+            <td>2</td>
+            <td>2</td>
+            <td>3</td>
+            <td>2</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>2</td>
+          </tr>
+          <tr>
+            <td class = 'first'>DTD.AttributeList</td>
+            <td>100%</td>
+            <td class = 'ignoredValue'>0%</td>
+            <td>1</td>
+            <td>2</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>2</td>
+            <td>1</td>
+            <td>2</td>
+            <td class = 'ignoredValue'>0</td>
+            <td>1</td>
+            <td>1</td>
+          </tr>
+          <tr>
+            <td class = 'first'>DTD.AttributeType</td>
+            <td class = 'ignoredValue'>0%</td>
+            <td class = 'ignoredValue'>0%</td>
+            <td class = 'ignoredValue'>0</td>
+            <td class = 'ignoredValue'>0</td>
+            <td class = 'ignoredValue'>0</td>
+            <td class = 'ignoredValue'>0</td>
+            <td class = 'ignoredValue'>0</td>
+            <td class = 'ignoredValue'>0</td>
+            <td class = 'ignoredValue'>0</td>
+            <td class = 'ignoredValue'>0</td>
+            <td class = 'ignoredValue'>0</td>
+            <td class = 'ignoredValue'>0</td>
+            <td class = 'ignoredValue'>0</td>
+            <td class = 'ignoredValue'>0</td>
+          </tr>
+          <tr>
+            <td class = 'first'>DTD.Children</td>
+            <td class = 'ignoredValue'>0%</td>
+            <td class = 'ignoredValue'>0%</td>
+            <td class = 'ignoredValue'>0</td>
+            <td class = 'ignoredValue'>0</td>
+            <td>1</td>
+            <td class = 'ignoredValue'>0</td>
+            <td>1</td>
+            <td class = 'ignoredValue'>0</td>
+            <td>1</td>
+            <td class = 'ignoredValue'>0</td>
+            <td class = 'ignoredValue'>0</td>
+            <td class = 'ignoredValue'>0</td>
+            <td class = 'ignoredValue'>0</td>
+            <td>1</td>
+          </tr>
+          <tr>
+            <td class = 'first'>DTD.Choice</td>
+            <td>100%</td>
+            <td class = 'ignoredValue'>0%</td>
+            <td>1</td>
+            <td>2</td>
+            <td>2</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>2</td>
+            <td>1</td>
+            <td>1</td>
+            <td class = 'ignoredValue'>0</td>
+            <td>1</td>
+            <td>1</td>
+          </tr>
+          <tr>
+            <td class = 'first'>DTD.DefaultValue</td>
+            <td>50%</td>
+            <td>100%</td>
+            <td>2</td>
+            <td>4</td>
+            <td>2</td>
+            <td>1</td>
+            <td>4</td>
+            <td>2</td>
+            <td>5</td>
+            <td>2</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>4</td>
+          </tr>
+          <tr>
+            <td class = 'first'>DTD.Element</td>
+            <td>100%</td>
+            <td class = 'ignoredValue'>0%</td>
+            <td class = 'ignoredValue'>0</td>
+            <td class = 'ignoredValue'>0</td>
+            <td>1</td>
+            <td class = 'ignoredValue'>0</td>
+            <td>1</td>
+            <td class = 'ignoredValue'>0</td>
+            <td>1</td>
+            <td class = 'ignoredValue'>0</td>
+            <td class = 'ignoredValue'>0</td>
+            <td class = 'ignoredValue'>0</td>
+            <td class = 'ignoredValue'>0</td>
+            <td>1</td>
+          </tr>
+          <tr>
+            <td class = 'first'>DTD.ElementContent</td>
+            <td class = 'ignoredValue'>0%</td>
+            <td class = 'ignoredValue'>0%</td>
+            <td class = 'ignoredValue'>0</td>
+            <td class = 'ignoredValue'>0</td>
+            <td class = 'ignoredValue'>0</td>
+            <td class = 'ignoredValue'>0</td>
+            <td class = 'ignoredValue'>0</td>
+            <td class = 'ignoredValue'>0</td>
+            <td class = 'ignoredValue'>0</td>
+            <td class = 'ignoredValue'>0</td>
+            <td class = 'ignoredValue'>0</td>
+            <td class = 'ignoredValue'>0</td>
+            <td class = 'ignoredValue'>0</td>
+            <td class = 'ignoredValue'>0</td>
+          </tr>
+          <tr>
+            <td class = 'first'>DTD.Entity</td>
+            <td>33.3%</td>
+            <td class = 'ignoredValue'>0%</td>
+            <td class = 'ignoredValue'>0</td>
+            <td class = 'ignoredValue'>0</td>
+            <td>1</td>
+            <td class = 'ignoredValue'>0</td>
+            <td>3</td>
+            <td class = 'ignoredValue'>0</td>
+            <td>3</td>
+            <td class = 'ignoredValue'>0</td>
+            <td class = 'ignoredValue'>0</td>
+            <td class = 'ignoredValue'>0</td>
+            <td class = 'ignoredValue'>0</td>
+            <td>3</td>
+          </tr>
+          <tr>
+            <td class = 'first'>DTD.Enumeration</td>
+            <td class = 'ignoredValue'>0%</td>
+            <td class = 'ignoredValue'>0%</td>
+            <td class = 'ignoredValue'>0</td>
+            <td class = 'ignoredValue'>0</td>
+            <td>1</td>
+            <td class = 'ignoredValue'>0</td>
+            <td>1</td>
+            <td class = 'ignoredValue'>0</td>
+            <td>1</td>
+            <td class = 'ignoredValue'>0</td>
+            <td class = 'ignoredValue'>0</td>
+            <td class = 'ignoredValue'>0</td>
+            <td class = 'ignoredValue'>0</td>
+            <td>1</td>
+          </tr>
+          <tr>
+            <td class = 'first'>DTD.Leaf</td>
+            <td>50%</td>
+            <td class = 'ignoredValue'>0%</td>
+            <td class = 'ignoredValue'>0</td>
+            <td class = 'ignoredValue'>0</td>
+            <td>2</td>
+            <td class = 'ignoredValue'>0</td>
+            <td>2</td>
+            <td class = 'ignoredValue'>0</td>
+            <td>2</td>
+            <td class = 'ignoredValue'>0</td>
+            <td class = 'ignoredValue'>0</td>
+            <td class = 'ignoredValue'>0</td>
+            <td class = 'ignoredValue'>0</td>
+            <td>2</td>
+          </tr>
+          <tr>
+            <td class = 'first'>DTD.Mixed</td>
+            <td class = 'ignoredValue'>0%</td>
+            <td class = 'ignoredValue'>0%</td>
+            <td class = 'ignoredValue'>0</td>
+            <td class = 'ignoredValue'>0</td>
+            <td>1</td>
+            <td class = 'ignoredValue'>0</td>
+            <td>1</td>
+            <td class = 'ignoredValue'>0</td>
+            <td>1</td>
+            <td class = 'ignoredValue'>0</td>
+            <td class = 'ignoredValue'>0</td>
+            <td class = 'ignoredValue'>0</td>
+            <td class = 'ignoredValue'>0</td>
+            <td>1</td>
+          </tr>
+          <tr>
+            <td class = 'first'>DTD.NoDefaultValue</td>
+            <td>66.6%</td>
+            <td>100%</td>
+            <td>2</td>
+            <td>4</td>
+            <td>2</td>
+            <td>1</td>
+            <td>3</td>
+            <td>2</td>
+            <td>4</td>
+            <td>2</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>3</td>
+          </tr>
+          <tr>
+            <td class = 'first'>DTD.Notation</td>
+            <td>50%</td>
+            <td class = 'ignoredValue'>0%</td>
+            <td class = 'ignoredValue'>0</td>
+            <td class = 'ignoredValue'>0</td>
+            <td>1</td>
+            <td class = 'ignoredValue'>0</td>
+            <td>2</td>
+            <td class = 'ignoredValue'>0</td>
+            <td>2</td>
+            <td class = 'ignoredValue'>0</td>
+            <td class = 'ignoredValue'>0</td>
+            <td class = 'ignoredValue'>0</td>
+            <td class = 'ignoredValue'>0</td>
+            <td>2</td>
+          </tr>
+          <tr>
+            <td class = 'first'>DTD.OtherAttributeType</td>
+            <td class = 'ignoredValue'>0%</td>
+            <td class = 'ignoredValue'>0%</td>
+            <td class = 'ignoredValue'>0</td>
+            <td class = 'ignoredValue'>0</td>
+            <td class = 'ignoredValue'>0</td>
+            <td class = 'ignoredValue'>0</td>
+            <td>1</td>
+            <td class = 'ignoredValue'>0</td>
+            <td>1</td>
+            <td class = 'ignoredValue'>0</td>
+            <td class = 'ignoredValue'>0</td>
+            <td class = 'ignoredValue'>0</td>
+            <td class = 'ignoredValue'>0</td>
+            <td>1</td>
+          </tr>
+          <tr>
+            <td class = 'first'>DTD.RestrictedElement</td>
+            <td>50%</td>
+            <td class = 'ignoredValue'>0%</td>
+            <td>1</td>
+            <td>2</td>
+            <td>2</td>
+            <td class = 'ignoredValue'>0</td>
+            <td>2</td>
+            <td>1</td>
+            <td>2</td>
+            <td>1</td>
+            <td class = 'ignoredValue'>0</td>
+            <td>1</td>
+            <td class = 'ignoredValue'>0</td>
+            <td>2</td>
+          </tr>
+          <tr>
+            <td class = 'first'>DTD.Sequence</td>
+            <td>100%</td>
+            <td class = 'ignoredValue'>0%</td>
+            <td>1</td>
+            <td>2</td>
+            <td>2</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>2</td>
+            <td>1</td>
+            <td>1</td>
+            <td class = 'ignoredValue'>0</td>
+            <td>1</td>
+            <td>1</td>
+          </tr>
+          <tr>
+            <td class = 'first'>DTD.TypeDescription</td>
+            <td class = 'ignoredValue'>0%</td>
+            <td class = 'ignoredValue'>0%</td>
+            <td class = 'ignoredValue'>0</td>
+            <td class = 'ignoredValue'>0</td>
+            <td class = 'ignoredValue'>0</td>
+            <td class = 'ignoredValue'>0</td>
+            <td>1</td>
+            <td class = 'ignoredValue'>0</td>
+            <td>1</td>
+            <td class = 'ignoredValue'>0</td>
+            <td class = 'ignoredValue'>0</td>
+            <td class = 'ignoredValue'>0</td>
+            <td class = 'ignoredValue'>0</td>
+            <td>1</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </body>
+</html>

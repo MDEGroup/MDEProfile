@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<uml:Model xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:uml="http://www.eclipse.org/uml2/1.0.0/UML" name="Example">
+  <ownedMember xsi:type="uml:Class" name="A_B">
+    <ownedAttribute name="att" type="//@ownedMember.1"/>
+  </ownedMember>
+  <ownedMember xsi:type="uml:DataType" name="Integer"/>
+  <ownedMember xsi:type="uml:Class" name="A"/>
+  <ownedMember xsi:type="uml:Class" name="B"/>
+  <ownedMember xsi:type="uml:Association" memberEnd="//@ownedMember.4/@ownedEnd.0 //@ownedMember.4/@ownedEnd.1">
+    <ownedEnd name="ar" association="//@ownedMember.4">
+      <upperValue xsi:type="uml:LiteralUnlimitedNatural"/>
+      <lowerValue xsi:type="uml:LiteralNull"/>
+    </ownedEnd>
+    <ownedEnd name="b" association="//@ownedMember.4">
+      <defaultValue xsi:type="uml:LiteralInteger" value="1"/>
+    </ownedEnd>
+  </ownedMember>
+  <ownedMember xsi:type="uml:Association" memberEnd="//@ownedMember.5/@ownedEnd.0 //@ownedMember.5/@ownedEnd.1">
+    <ownedEnd name="br" association="//@ownedMember.5">
+      <defaultValue xsi:type="uml:LiteralInteger" value="1"/>
+    </ownedEnd>
+    <ownedEnd name="a" association="//@ownedMember.5">
+      <defaultValue xsi:type="uml:LiteralInteger" value="1"/>
+    </ownedEnd>
+  </ownedMember>
+</uml:Model>

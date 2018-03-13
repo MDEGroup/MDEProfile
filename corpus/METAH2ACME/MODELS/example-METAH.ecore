@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<METAHFile xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="MetaH">
+  <entries xsi:type="Package" packName="PORT_TYPES">
+    <data dataName="ANOTHER_TYPE"/>
+    <data dataName="ANY_TYPE"/>
+  </entries>
+  <entries xsi:type="PackageImplementation" implementationName="I80960MC" implements="PORT_TYPES">
+    <attributes attName="SourceDataSize" attValue="16" attValueType="B" attType="ANY_TYPE"/>
+    <attributes attName="SourceDataSize" attValue="32" attValueType="B" attType="ANOTHER_TYPE"/>
+  </entries>
+  <entries xsi:type="ProcessDeclaration" procDecName="P1">
+    <ports portName="p1_input" portCom="in" portPackage="PORT_TYPE" portType="ANY_TYPE"/>
+    <ports portName="update" portCom="out" portPackage="PORT_TYPE" portType="ANOTHER_TYPE"/>
+    <ports portName="feedback" portCom="in" portPackage="PORT_TYPE" portType="ANOTHER_TYPE"/>
+  </entries>
+  <entries xsi:type="ProcessImplementation" procImpName="EXAMPLE" declaration="P1">
+    <processAttributes attName="Period" attValue="25" attValueType="ms"/>
+    <processAttributes attName="SourceTime" attValue="2" attValueType="ms"/>
+  </entries>
+  <entries xsi:type="ProcessDeclaration" procDecName="P2">
+    <ports portName="p1_result" portCom="out" portPackage="PORT_TYPE" portType="ANY_TYPE"/>
+    <ports portName="update" portCom="out" portPackage="PORT_TYPE" portType="ANOTHER_TYPE"/>
+    <ports portName="feedback" portCom="in" portPackage="PORT_TYPE" portType="ANOTHER_TYPE"/>
+  </entries>
+  <entries xsi:type="ProcessImplementation" procImpName="EXAMPLE" declaration="P2">
+    <processAttributes attName="Period" attValue="50" attValueType="ms"/>
+    <processAttributes attName="SourceTime" attValue="5" attValueType="ms"/>
+  </entries>
+  <entries xsi:type="MacroDeclaration" name="M">
+    <ports portName="m_in" portCom="in" portPackage="PORT_TYPE" portType="ANY_TYPE"/>
+    <ports portName="m_out" portCom="out" portPackage="PORT_TYPE" portType="ANY_TYPE"/>
+  </entries>
+  <entries xsi:type="MacroImplementation" macroImpName="EXAMPLE" declaration="M">
+    <process procName="P2" periodic="periodic" declaration="p2" implementation="example"/>
+    <process procName="P1" periodic="periodic" declaration="p1" implementation="example"/>
+    <connections compSrc="p2" portSrc="feedback" compDest="p1" portDest="update"/>
+    <connections compSrc="p1" portSrc="feedback" compDest="p2" portDest="update"/>
+    <connections portSrc="m_out" compDest="p2" portDest="p2_result"/>
+    <connections compSrc="p1" portSrc="p1_input" portDest="m_in"/>
+  </entries>
+</METAHFile>

@@ -1,0 +1,31 @@
+<project name="UMLClassDiagram_to_UMLProfile" default="generateModel">
+
+	<property name="InModelName" value="Book" />
+	
+	<target name="generateModel" depends="loadMetamodels">
+
+		<am3.loadModel modelHandler="EMF" name="InModel" metamodel="UML2" path="../InputModel/${InModelName}.uml" />
+		<am3.loadModel modelHandler="EMF" name="UMLCD" metamodel="UML2" path="../ParamModels/UML.uml"/>
+		<am3.loadModel modelHandler="EMF" name="PRO_STD" metamodel="UML2" path="../ParamModels/Standard.profile.uml"/>
+
+		<am3.atl path="UML2Copy.asm" allowInterModelReferences="true">
+			<inModel name="IN" model="InModel"/>
+			<inModel name="PRO_STD" model="PRO_STD"/>
+			<inModel name="UMLCD" model="UMLCD"/>
+			<inModel name="UML2" model="UML2"/>
+			<outModel name="OUT" model="GeneratedProfile" metamodel="UML2" path="XXX.uml"/>
+			<superimpose path="UMLCD2UMLProfile.asm"/>
+		</am3.atl>
+		
+		<am3.saveModel model="GeneratedProfile" path="../OutputModel/${InModelName}.profile.uml"/>
+		
+	</target>
+	
+	<target name="loadMetamodels">
+
+		<!-- Load UML metamodel -->
+		<am3.loadModel modelHandler="EMF" name="UML2" metamodel="MOF" nsUri="http://www.eclipse.org/uml2/2.1.0/UML"/>
+		
+	</target>
+	
+</project>

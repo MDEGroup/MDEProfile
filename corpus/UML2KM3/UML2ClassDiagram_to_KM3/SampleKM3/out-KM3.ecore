@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<xmi:XMI xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:km3="http://www.eclipse.org/gmt/2005/KM3">
+  <km3:Metamodel>
+    <contents name="Book">
+      <contents xsi:type="km3:Class" name="Book" supertypes="/0/@contents.0/@contents.4">
+        <structuralFeatures xsi:type="km3:Attribute" name="year" lower="1" upper="1"
+            type="/0/@contents.1/@contents.0"/>
+        <structuralFeatures xsi:type="km3:Reference" name="chapter" lower="1" upper="-1"
+            type="/0/@contents.0/@contents.1" isContainer="true"/>
+      </contents>
+      <contents xsi:type="km3:Class" name="Chapter" supertypes="/0/@contents.0/@contents.4">
+        <structuralFeatures xsi:type="km3:Attribute" name="numberOfPages" lower="1"
+            upper="1" type="/0/@contents.1/@contents.0"/>
+        <structuralFeatures xsi:type="km3:Reference" name="author" lower="1" upper="1"
+            type="/0/@contents.0/@contents.2" opposite="/0/@contents.0/@contents.2/@structuralFeatures.3"/>
+      </contents>
+      <contents xsi:type="km3:Class" name="Author">
+        <structuralFeatures xsi:type="km3:Attribute" name="firstName" lower="1" upper="1"
+            type="/0/@contents.1/@contents.1"/>
+        <structuralFeatures xsi:type="km3:Attribute" name="lastName" lower="1" upper="1"
+            type="/0/@contents.1/@contents.1"/>
+        <structuralFeatures xsi:type="km3:Attribute" name="gender" lower="1" upper="1"
+            type="/0/@contents.0/@contents.3"/>
+        <structuralFeatures xsi:type="km3:Reference" name="chapter" lower="0" upper="-1"
+            type="/0/@contents.0/@contents.1" opposite="/0/@contents.0/@contents.1/@structuralFeatures.1"/>
+      </contents>
+      <contents xsi:type="km3:Enumeration" name="Gender">
+        <literals name="Male"/>
+        <literals name="Female"/>
+      </contents>
+      <contents xsi:type="km3:Class" name="NamedElement" isAbstract="true">
+        <structuralFeatures xsi:type="km3:Attribute" name="title" lower="1" upper="1"
+            type="/0/@contents.1/@contents.1"/>
+      </contents>
+    </contents>
+    <contents name="PrimitiveType">
+      <contents xsi:type="km3:DataType" name="Integer"/>
+      <contents xsi:type="km3:DataType" name="String"/>
+    </contents>
+  </km3:Metamodel>
+  <km3:Reference name="book" lower="1" upper="1" type="/0/@contents.0/@contents.0"
+      opposite="/0/@contents.0/@contents.0/@structuralFeatures.1"/>
+</xmi:XMI>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<launchConfiguration type="org.atl.eclipse.adt.launching.atlTransformation">
+<booleanAttribute key="org.eclipse.debug.ui.ATTR_LAUNCH_IN_BACKGROUND" value="false"/>
+<mapAttribute key="Model Handler">
+<mapEntry key="MoDAF" value="EMF"/>
+<mapEntry key="OUT" value=""/>
+<mapEntry key="IEEE1471" value="EMF"/>
+<mapEntry key="IN" value=""/>
+</mapAttribute>
+<stringAttribute key="ATL File Name" value="/IEEE1471_2_MoDAF/transformation/IEEE1471_2_MoDAF.atl"/>
+<mapAttribute key="Libs"/>
+<booleanAttribute key="Mode Debug" value="false"/>
+<mapAttribute key="ModelType">
+<mapEntry key="MoDAF" value="METAMODELOUTPUT"/>
+<mapEntry key="OUT" value="MODELOUTPUT"/>
+<mapEntry key="IEEE1471" value="METAMODELINPUT"/>
+<mapEntry key="IN" value="MODELINPUT"/>
+</mapAttribute>
+<mapAttribute key="Path">
+<mapEntry key="MoDAF" value="/IEEE1471_2_MoDAF/metamodel/MoDAF-AV.ecore"/>
+<mapEntry key="OUT" value="/IEEE1471_2_MoDAF/example/sample-MoDAF.ecore"/>
+<mapEntry key="IEEE1471" value="/IEEE1471_2_MoDAF/metamodel/IEEE1471ConceptualModel.ecore"/>
+<mapEntry key="IN" value="/IEEE1471_2_MoDAF/example/sample-IEEE1471.ecore"/>
+</mapAttribute>
+<stringAttribute key="Project Name" value="IEEE1471_2_MoDAF"/>
+<mapAttribute key="Output">
+<mapEntry key="OUT" value="MoDAF"/>
+</mapAttribute>
+<mapAttribute key="Input">
+<mapEntry key="IN" value="IEEE1471"/>
+</mapAttribute>
+<booleanAttribute key="AllowInterModelReferences" value="false"/>
+</launchConfiguration>

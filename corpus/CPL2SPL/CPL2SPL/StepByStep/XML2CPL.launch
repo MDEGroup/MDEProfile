@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<launchConfiguration type="org.atl.eclipse.adt.launching.atlTransformation">
+<mapAttribute key="Model Handler">
+<mapEntry key="OUT" value=""/>
+<mapEntry key="CPL" value="EMF"/>
+<mapEntry key="XML" value="EMF"/>
+<mapEntry key="IN" value=""/>
+</mapAttribute>
+<stringAttribute key="ATL File Name" value="/CPL2SPL/CPL/XMLSyntax/XML2CPL.atl"/>
+<mapAttribute key="Libs">
+<mapEntry key="XMLHelpers" value="/CPL2SPL/CPL/XMLSyntax/XMLHelpers.asm"/>
+</mapAttribute>
+<booleanAttribute key="Mode Debug" value="false"/>
+<mapAttribute key="ModelType">
+<mapEntry key="OUT" value="MODELOUTPUT"/>
+<mapEntry key="CPL" value="METAMODELOUTPUT"/>
+<mapEntry key="XML" value="METAMODELINPUT"/>
+<mapEntry key="IN" value="MODELINPUT"/>
+</mapAttribute>
+<mapAttribute key="Path">
+<mapEntry key="OUT" value="/CPL2SPL/StepByStep/AComplexExample.cpl-CPL.ecore"/>
+<mapEntry key="CPL" value="/CPL2SPL/CPL/CPL.ecore"/>
+<mapEntry key="XML" value="/CPL2SPL/AMMACore/XML.ecore"/>
+<mapEntry key="IN" value="/CPL2SPL/StepByStep/AComplexExample.cpl-XML.ecore"/>
+</mapAttribute>
+<stringAttribute key="Project Name" value="CPL2SPL"/>
+<mapAttribute key="Output">
+<mapEntry key="OUT" value="CPL"/>
+</mapAttribute>
+<mapAttribute key="Input">
+<mapEntry key="IN" value="XML"/>
+</mapAttribute>
+<booleanAttribute key="AllowInterModelReferences" value="false"/>
+</launchConfiguration>

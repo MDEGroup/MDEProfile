@@ -1,0 +1,106 @@
+html
+{
+    font-family: arial,helvetica,sans-serif;
+    font-size: small;
+    font-style: normal;
+    font-weight: normal;
+    text-align: justify;
+}
+
+fieldset
+{
+    padding: 0px 10px 0px 10px;
+}
+
+legend
+{
+    font-weight: bold;
+}
+
+caption
+{
+    font-style: italic;
+    font-weight: bold;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 5px;
+}
+
+table
+{
+    border: none;
+    border-collapse: collapse;
+    margin: 5px auto 40px auto;
+}
+
+tr.bound, th.metric, th.element
+{
+    background: #c8c8ff;
+    text-align: center;
+}
+
+th
+{
+    border: 1px solid black;
+    padding: 1px 4px 4px 4px;
+    text-align: center;
+    white-space: nowrap;
+}
+
+th.empty
+{
+    border: none;
+}
+
+th.category
+{
+    background: #9696ff;
+}
+
+acronym
+{
+    border-bottom: 1px dotted;
+}
+
+input
+{
+    border: 1px solid gray;
+    padding-right: 2px;
+    text-align: right;
+}
+
+td
+{
+    background: #e5e5ef;
+    border: 1px solid black;
+    color: #0000ff;
+    font-family: courier,monospace;
+    padding: 2px 5px 2px 5px;
+    text-align: right;
+    white-space: nowrap;
+}
+
+td.first
+{
+    color: #000000;
+    font-family: arial,helvetica,sans-serif;
+    text-align: left;
+}
+
+td.ignoredValue
+{
+    background: #ffffff;
+    color: #adadad;
+    text-align: right;
+}
+
+a
+{
+    color: blue;
+    text-decoration: none;
+}
+
+a:hover
+{
+    text-decoration: underline;
+}

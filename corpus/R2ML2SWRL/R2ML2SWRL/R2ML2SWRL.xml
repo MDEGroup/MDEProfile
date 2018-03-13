@@ -1,0 +1,71 @@
+<project name="R2ML2SWRL" default="transformAll">
+	<property name="rdmPath" value="/R2ML2SWRL/metamodels/rdm/"/>
+	<property name="samplesInputPath" value="/R2ML2SWRL/models/r2ml-xml/"/>
+	<property name="samplesOutputPath" value="/R2ML2SWRL/models/swrl-xml/"/>
+
+	<property name="r2mlPath" value="/R2ML2SWRL/metamodels/r2ml/"/>
+	<property name="r2mlXcsPath" value="/R2ML2SWRL/transformations/XML2R2ML/"/>
+
+	<target name="transformAll" depends="loadModels">
+		<antcall target="transformOne" inheritall="true" inheritrefs="true">
+			<param name="sample" value="R2MLRule"/>
+		</antcall>
+	</target>
+	
+	<!-- parameters: sample -->
+	<target name="transformOne">
+		<property name="sourceModel" value="${samplesInputPath}${sample}.xml"/>
+		<property name="targetModel" value="${samplesOutputPath}SWRLRule.xml"/>
+
+		<echo message="Transforming ${sample}.xml"/>
+		
+		<!-- Inject source model -->
+		<am3.loadModel modelHandler="MDR" name="xmlModel" metamodel="XML" path="${sourceModel}">
+			<injector name="xml"/>
+		</am3.loadModel>
+
+		<!-- Transform XML model into R2ML model -->
+		<am3.atl path="${r2mlXcsPath}XML2R2ML.atl">
+			<inModel name="IN" model="xmlModel"/>
+			<inModel name="XML" model="XML"/>
+			<inModel name="R2ML" model="R2ML"/>
+			<outModel name="OUT" model="r2mlModel" metamodel="R2ML"/>
+			<library name="XMLHelpers" path="${r2mlXcsPath}XMLHelpers.asm" />
+			<library name="strings" path="${r2mlXcsPath}strings.asm" />
+		</am3.atl>
+		
+		<!-- Transform R2ML model into RDM model -->
+		<am3.atl path="/R2ML2SWRL/transformations/R2ML2RDM/R2ML2RDM.atl">
+			<inModel name="IN" model="r2mlModel"/>
+			<inModel name="R2ML" model="R2ML"/>
+			<inModel name="RDM" model="RDM"/>
+			<outModel name="OUT" model="rdmModel" metamodel="RDM"/>
+			<library name="strings" path="/R2ML2SWRL/transformations/R2ML2RDM/strings.asm" />
+		</am3.atl>
+
+		<!-- Transform RDM model into XML model -->
+		<am3.atl path="/R2ML2SWRL/transformations/RDM2XML/RDM2XML.atl">
+			<inModel name="IN" model="rdmModel"/>
+			<inModel name="RDM" model="RDM"/>
+			<inModel name="XML" model="XML"/>
+			<outModel name="OUT" model="xmlModel" metamodel="XML"/>
+		</am3.atl>
+
+		<!-- Extract output model  -->
+		<am3.saveModel model="xmlModel" path="${targetModel}">
+			<extractor name="xml"/>
+		</am3.saveModel>
+	</target>
+
+	<target name="loadModels">
+		<!-- Load XML metamodel -->
+		<am3.loadModel modelHandler="MDR" name="XML" metamodel="MOF" path="/R2ML2SWRL/metamodels/xml/XML.xmi" />
+
+		<!-- Load RDM metamodel -->
+		<am3.loadModel modelHandler="MDR" name="RDM" metamodel="MOF" path="${rdmPath}rdm.xmi" />
+
+		<!-- Load R2ML metamodel -->
+		<am3.loadModel modelHandler="MDR" name="R2ML" metamodel="MOF" path="${r2mlPath}r2ml.xmi" />
+		
+	</target>	
+</project>

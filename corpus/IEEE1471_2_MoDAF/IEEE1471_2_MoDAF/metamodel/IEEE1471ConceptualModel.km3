@@ -1,0 +1,115 @@
+--@name			Conceptual model 
+--@version		1.1	
+--@domains		SoS
+--@authors		Albin Jossic (jossic.albin<at>gmail.com) 
+--@date			2006/05/6	
+--@description	Metamodel of IEEE 1471-2000  
+--@see			IEEE1471ViewpointM2.km3
+--@see 			"IEEE Std 1471 and Beyond" Rich Hilliard, ConsentCache, January 1 2001
+--@see			"ANSI/IEEE 1471 and Systems Engineering", Mark W. Maier David, Emery Rich Hilliard
+--@see			"Recommended Practice for Architectural description of Softwrare-Intensive Systems", IEEE Std 1471-2000, IEEE, 2000.
+
+--@begin IEEE1471 Conceptual Model
+package IEEE1471 {
+
+	--@begin class Element
+	--@comment this class is not a part of the IEEE1471
+	abstract class Element {
+		attribute name : String;
+		attribute content[0-1] : String;
+	}
+	--@end class Element
+
+	--@begin class IEEE1471Model
+	--@comment this class is not a part of the IEEE1471
+	--@comment it is used as the root element in the tree of the containement relationship 
+	class IEEE1471Model extends Element {
+		reference system container : System;
+		reference environment container : Environment;
+		reference missions[0-*] container : Mission;
+		reference architecture container : Architecture;
+		reference stakeholders[0-*] container : Stakeholder;
+		reference concerns[0-*] container : Concern;
+		reference viewpoints[0-*] container : Viewpoint ;
+		reference libraryViewpoints[*] container : LibraryViewpoint;
+		reference architecturalDescription container : ArchitecturalDescription;
+		reference rationale container : Rationale;
+	}
+	--@end class IEEE1471Model
+	
+	
+	--@begin System
+	class System extends Element {
+		reference fulfills[1-*] : Mission;
+		reference inhabits : Environment oppositeOf influences;
+		reference hasAn : Architecture;
+		reference has[1-*] : Stakeholder;
+	}
+	
+	class Mission extends Element {}
+
+	class Environment extends Element {
+		reference influences : System oppositeOf inhabits;
+	}
+	--@end System
+	
+	--@begin Architecture
+	class Architecture extends Element {
+		reference describedBy : ArchitecturalDescription;
+	}
+	
+	class Rationale extends Element {
+		reference provides : ArchitecturalDescription;
+	}
+	
+	class ArchitecturalDescription extends Element {
+		reference identifiesS[1-*] : Stakeholder;
+		reference identifiesC[1-*] : Concern;
+		reference selects[1-*] : Viewpoint;
+		reference organizedBy[1-*] container : View;
+		reference aggregates[1-*] container : Model oppositeOf participatesInAD; 
+	}
+	
+	class View extends Element {
+		reference conformsTo : Viewpoint;
+		reference consitsOf[1-*] :  Model oppositeOf participatesInV;	
+	}
+	
+	class Model extends Element {
+		reference participatesInV[1-*] : View oppositeOf consitsOf;
+		reference participatesInAD : ArchitecturalDescription oppositeOf aggregates;
+	}
+	--@end  Architecture
+	
+	--@begin Stakeholder
+	class Stakeholder extends Element {
+		reference has[1-*] : Concern oppositeOf isImportantTo;
+	}
+	--@end Stakeholder
+
+	
+	--@begin Concern  link between Stakeholder, ArchitecturalDescription and Viewpoint 
+	class Concern extends Element {
+		reference isImportantTo[1-*] : Stakeholder oppositeOf has;
+	}
+	--@end Concern  link between Stakeholder, ArchitecturalDescription and Viewpoint 
+
+	--@begin Viewpoint 
+	class Viewpoint extends Element {
+		reference hasSource[0-1] : LibraryViewpoint;
+		reference usedToCover[1-*] : Concern;
+		reference establishesMethodsFor[1-*] : Model;
+	}
+	
+	class LibraryViewpoint extends Element {}
+	--@end Viewpoint 
+
+}
+ 
+--@end IEEE1471 Conceptual Model
+
+--@begin package Primitive Types 
+package PrimitiveTypes {
+	datatype String;
+}
+--@end package Primitive Types 

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<elmLst:RootElement xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:elmLst="platform:/resource/Tree2List/metamodels/MMElementList.ecore" name="T3h main node">
+  <elements name="BIG another leaf in main node"/>
+  <elements name="SUB MEDIUM azdzere"/>
+  <elements name="MEDIUM a leaf in main node"/>
+  <elements name="SUB2 MEDIUM"/>
+  <elements name="SUB SMALL fdfsdf"/>
+  <elements name="SUB SMALL aaaaaaa"/>
+  <elements name="SMALL leaf in main node"/>
+  <elements name="SUB2 SMALL2"/>
+  <elements name="SUB2 SMALL"/>
+</elmLst:RootElement>

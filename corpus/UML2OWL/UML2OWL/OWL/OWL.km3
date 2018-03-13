@@ -1,0 +1,336 @@
+-- @name		OWL
+-- @version		1
+-- @domains		owl, rdfs, rdf
+-- @authors		Guillaume Hillairet (g.hillairet@gmail.com)
+-- @date		2007/02/14
+-- @description	This metamodel describes OWL (Ontology Web Language) Ontology Language based on the OMG ODM (Ontology Definition Metamodel) specification.
+-- @see		http://www.omg.org/docs/ptc/06-10-11.pdf
+
+package OWL {
+
+	--@begin OWLOntology
+	class OWLOntology extends RDFSResource {
+		reference owlUniverse[*] : OWLUniverse oppositeOf ontology;
+		reference OWLPriorVersion[*] : OWLOntology oppositeOf newerOntology;
+		reference newerOntology[*] : OWLOntology oppositeOf OWLPriorVersion;
+		reference OWLIncompatibleWith[*] : OWLOntology oppositeOf incompatibleOntology;
+		reference incompatibleOntology[*] : OWLOntology oppositeOf OWLIncompatibleWith;
+		reference OWLImports[*] : OWLOntology oppositeOf importingOntology;
+		reference importingOntology[*] : OWLOntology oppositeOf OWLImports;
+		reference owlGraph[1-*] : OWLGraph oppositeOf ontology;
+		reference owlStatement[1-*] : OWLStatement oppositeOf ontology;
+		reference versionInfo[*] container : RDFSLiteral;
+	}
+	--@end OWLOntology	
+	
+	--@begin OWLGraph
+	class OWLGraph extends RDFGraph {
+		reference ontology[*] : OWLOntology oppositeOf owlGraph;
+		reference owlStatement[1-*] ordered : OWLStatement oppositeOf owlGraph;
+	}
+	--@end OWLGraph
+	
+	--@begin OWLStatement
+	class OWLStatement extends RDFStatement {
+		reference ontology[*] ordered : OWLOntology oppositeOf owlStatement;
+		reference owlGraph[1-*] : OWLGraph oppositeOf owlStatement;
+	}
+	--@end OWLStatement
+	
+	--@begin OWL Universe
+	class OWLUniverse extends RDFSResource {
+		reference ontology[1-*] : OWLOntology oppositeOf owlUniverse;
+	}
+	
+	--@begin OWLClass
+	class OWLClass extends RDFSClass, OWLUniverse {
+		attribute isDeprecated[0-1] : Boolean;
+		reference OWLequivalentClass[*] : OWLClass oppositeOf equivalentClass;
+		reference equivalentClass[*] : OWLClass oppositeOf OWLequivalentClass;
+		reference OWLdisjointWith[*] : OWLClass oppositeOf disjointClass;
+		reference disjointClass[*] : OWLClass oppositeOf OWLdisjointWith;
+		reference intersectionClass[*] : IntersectionClass oppositeOf OWLIntersectionOf;
+		reference unionClass[*] : UnionClass oppositeOf OWLUnionOf;
+		reference complementClass[*] : ComplementClass oppositeOf OWLComplementOf;
+		reference allValuesFromRestrictionClass[*] : AllValuesFromRestriction oppositeOf OWLAllValuesFromClass;
+		reference someValuesFromRestrictionClass[*] : SomeValuesFromRestriction oppositeOf OWLSomeValuesFromClass;
+	}
+	
+	class IntersectionClass extends OWLClass {
+		reference OWLIntersectionOf[*] : OWLClass oppositeOf intersectionClass;
+	}
+	
+	class UnionClass extends OWLClass {
+		reference OWLUnionOf[*] : OWLClass oppositeOf unionClass;
+	}
+	
+	class ComplementClass extends OWLClass {
+		reference OWLComplementOf[*] : OWLClass oppositeOf complementClass;
+	}
+	
+	class EnumeratedClass extends OWLClass {
+		reference OWLOneOf[*] : Individual oppositeOf enumeratedClass;
+	}
+	--@end OWLClass
+	
+	class OWLRestriction extends OWLClass {
+		reference OWLOnProperty : RDFProperty oppositeOf propertyRestriction;
+	}
+	
+	class HasValueRestriction extends OWLRestriction {
+		reference OWLHasLiteralValue[0-1] : RDFSLiteral oppositeOf restrictionClass;
+		reference OWLHasIndividualValue[0-1] : Individual oppositeOf restrictionClass;
+	}
+	
+	class AllValuesFromRestriction extends OWLRestriction {
+		reference OWLAllValuesFromDataRange[0-1] : OWLDataRange oppositeOf allValuesFromRestrictionClass;
+		reference OWLAllValuesFromClass[0-1] : OWLClass oppositeOf allValuesFromRestrictionClass;
+	}
+	
+	class SomeValuesFromRestriction extends OWLRestriction {
+		reference OWLSomeValuesFromClass[0-1] : OWLClass oppositeOf someValuesFromRestrictionClass;
+		reference OWLSomeValuesFromDataRange[0-1] : OWLDataRange oppositeOf someValuesFromRestrictionClass;
+	}
+	
+	class CardinalityRestriction extends OWLRestriction {
+		reference OWLCardinality : TypedLiteral oppositeOf cardinalityRestriction;
+	}
+	
+	class MaxCardinalityRestriction extends OWLRestriction {
+		reference OWLMaxCardinality : TypedLiteral oppositeOf maxCardinalityRestriction;
+	}
+	
+	class MinCardinalityRestriction extends OWLRestriction {
+		reference OWLMinCardinality : TypedLiteral oppositeOf minCardinalityRestriction;
+	}
+	--@end Restriction
+	--@begin Restriction
+	
+	--@begin OWLProperty
+	class OWLAnnotationProperty extends RDFProperty, OWLUniverse {
+	}
+	
+	class OWLOntologyProperty extends RDFProperty, OWLUniverse {
+	}
+	
+	abstract class Property extends RDFProperty, OWLUniverse {
+		attribute isDeprecated[0-1] : Boolean;
+		reference OWLEquivalentProperty[*] : Property oppositeOf equivalentProperty;
+		reference equivalentProperty[*] : Property oppositeOf OWLEquivalentProperty;
+	}
+	
+	class FunctionalProperty extends Property {
+	}
+	
+	class OWLDatatypeProperty extends Property {
+	}
+	
+	class OWLObjectProperty extends Property {
+		reference OWLInverseOf[0-1] : OWLObjectProperty oppositeOf inverseProperty;
+		reference inverseProperty[*] : OWLObjectProperty oppositeOf OWLInverseOf;
+	}
+	
+	class InverseFunctionalProperty extends OWLObjectProperty {
+	}
+	
+	class SymmetricProperty extends OWLObjectProperty {
+	}
+	
+	class TransitiveProperty extends OWLObjectProperty {
+	}	
+	--@end OWLProperty
+	
+	--@begin OWL Individual	
+	class Individual extends RDFSResource, OWLUniverse {
+		reference OWLDifferentFrom[*] : Individual oppositeOf differentIndividual;
+		reference differentIndividual[*] : Individual oppositeOf OWLDifferentFrom;
+		reference OWLSameAs[*] : Individual oppositeOf sameIndividual;
+		reference sameIndividual[*] : Individual oppositeOf OWLSameAs;
+		reference allDifferent[*] : OWLAllDifferent oppositeOf OWLDistinctMembers;
+		reference enumeratedClass[*] : EnumeratedClass oppositeOf OWLOneOf;
+		reference restrictionClass[*] : HasValueRestriction oppositeOf OWLHasIndividualValue;
+	}
+	
+	class OWLAllDifferent extends OWLClass {
+		reference OWLDistinctMembers[2-*] : Individual oppositeOf allDifferent;
+	}
+	--@end OWL Individual	
+	
+	--@begin OWL DataRange
+	class OWLDataRange extends RDFSClass, OWLUniverse {
+		reference "datatype"[0-1] : RDFSDataType oppositeOf dataRange;
+		reference OWLOneOf[*] : RDFSLiteral oppositeOf dataRange;
+		reference someValuesFromRestrictionClass[0-1] : SomeValuesFromRestriction oppositeOf OWLSomeValuesFromDataRange;
+		reference allValuesFromRestrictionClass[0-1] : AllValuesFromRestriction oppositeOf OWLAllValuesFromDataRange;
+	}
+	--@end OWL DataRange
+	--@end OWLUniverse
+}
+
+package RDFS {
+	
+	--@begin RDF Document
+	class Document extends RDFSResource {
+		reference localName[*] container : LocalName oppositeOf document;
+		reference xmlBase [*] : Namespace oppositeOf document;
+		reference namespaceDefinition[*] container : NamespaceDefinition oppositeOf document;
+		reference statement[1-*] ordered : RDFStatement oppositeOf document;
+	}
+	
+	class LocalName {
+		attribute name : String;
+		reference document : Document oppositeOf localName;
+		reference uriRef[*] : URIReference oppositeOf fragmentIdentifier;
+	}
+	
+	class Namespace {
+		reference document[1-*] : Document oppositeOf xmlBase;
+		reference namespaceURIRef : URIReference oppositeOf namespace;
+		reference namespaceDefinition[*] : NamespaceDefinition oppositeOf namespace;
+	}
+	
+	class NamespaceDefinition {
+		attribute namespacePrefix : String;
+		reference document : Document oppositeOf namespaceDefinition;
+		reference namespace : Namespace oppositeOf namespaceDefinition;
+	}
+	--@end RDF Document	
+	
+	--@begin RDFS Resource
+	class RDFSResource {
+		reference uriRef[*] container : URIReference oppositeOf resource;
+		
+		reference subjectStatement[*] : RDFStatement oppositeOf RDFsubject;
+		reference objectStatement[*] : RDFStatement oppositeOf RDFobject;
+			
+		reference label[*] container : PlainLiteral oppositeOf labeledResource;
+		reference type[1-*] : RDFSClass oppositeOf typedResource;
+			
+		reference comment[*] container : PlainLiteral oppositeOf commentedResource;
+		reference seeAlso[*] : RDFSResource oppositeOf referringResource;
+		reference referringResource[*] : RDFSResource oppositeOf seeAlso;
+		reference isDefinedBy[*] : RDFSResource oppositeOf definedResource;
+		reference definedResource[*] : RDFSResource oppositeOf isDefinedBy;
+					
+		reference member[*] : RDFSResource oppositeOf "container";
+		reference "container"[*] : RDFSResource oppositeOf member;
+		reference list[*] : List oppositeOf first;
+	}
+		
+	class RDFGraph extends RDFSResource {
+		reference graphName[0-1] container : URIReference oppositeOf namedGraph;
+		reference statement[1-*] ordered : RDFStatement oppositeOf graph;
+	}
+		
+	--@begin RDFS Container
+	class List extends RDFSResource {
+		reference first[0-1] : RDFSResource oppositeOf list;
+		reference rest[0-1] : List oppositeOf originalList;
+		reference originalList[*] : List oppositeOf rest;
+	}
+	
+	class Container extends RDFSResource {}
+	class Alt extends Container {}
+	class Bag extends Container {}
+	class Seq extends Container {}	
+	--@end RDFS Container
+		
+	--@begin RDF RDFProperty
+	class RDFProperty extends RDFSResource {
+		reference predicateStatement[*] : RDFStatement oppositeOf RDFpredicate;
+		reference subPropertyOf[*] : RDFProperty oppositeOf superProperty;
+		reference superProperty[*] : RDFProperty oppositeOf subPropertyOf;
+		reference domain[*] : RDFSClass oppositeOf propertyForDomain;
+		reference range[*] : RDFSClass oppositeOf propertyForRange;
+		reference propertyRestriction[*] : OWLRestriction oppositeOf OWLOnProperty;
+	}
+		
+	class ContainerMembershipProperty{}
+	--@end RDF RDFProperty	
+		
+	class RDFStatement extends RDFSResource {
+		attribute reificationKind : ReificationKind;
+		reference graph[1-*] : RDFGraph oppositeOf statement;
+		
+		reference RDFpredicate[0-1] : RDFProperty oppositeOf predicateStatement;
+		reference RDFobject : RDFSResource oppositeOf objectStatement;
+		reference RDFsubject : RDFSResource oppositeOf subjectStatement;
+		
+		reference nameForReification[*] : URIReference oppositeOf reifiedStatement;		
+		reference document[1-*] : Document oppositeOf statement;
+	}
+		
+	enumeration ReificationKind {
+		literal "none";
+		literal "reifiedOnly";
+		literal "reified";		
+	}
+	
+	class URIReferenceNode extends RDFSResource {}
+		
+	class BlankNode extends RDFSResource {
+		attribute nodeId[0-1] : String;
+	}
+		
+	--@begin RDFS RDFSClass
+	class RDFSClass extends RDFSResource {
+		reference subClassOf[*] : RDFSClass oppositeOf superClass;
+		reference superClass[*] : RDFSClass oppositeOf subClassOf;
+		reference typedResource[*] : RDFSResource oppositeOf type;		
+		reference propertyForDomain[*] : RDFProperty oppositeOf domain;
+		reference propertyForRange[*] : RDFProperty oppositeOf range;
+	}
+		
+	class RDFSDataType extends RDFSClass {
+		reference dataRange[*] : OWLDataRange oppositeOf "datatype";
+	}
+	--@end RDFS RDFSClass
+		
+	--@begin RDFS RDFSLiteral
+	class RDFSLiteral extends RDFSResource {
+		attribute lexicalForm : String;
+		reference restrictionClass[*] : HasValueRestriction oppositeOf OWLHasLiteralValue;
+		reference dataRange[*] : OWLDataRange oppositeOf OWLOneOf;
+	}
+		
+	class PlainLiteral extends RDFSLiteral {
+		attribute language[0-1] : String;
+		reference labeledResource : RDFSResource oppositeOf label;
+		reference commentedResource : RDFSResource oppositeOf comment;
+	}
+	
+	class TypedLiteral extends RDFSLiteral {
+		reference datatypeURI : URIReference oppositeOf "literal";
+		reference cardinalityRestriction[*] : CardinalityRestriction oppositeOf OWLCardinality;
+		reference minCardinalityRestriction[*] : MinCardinalityRestriction oppositeOf OWLMinCardinality;
+		reference maxCardinalityRestriction[*] : MaxCardinalityRestriction oppositeOf OWLMaxCardinality;
+	}
+		
+	class XMLLiteral extends TypedLiteral {}
+	--@end RDFS RDFSLiteral	
+	--@end RDFS Resource	
+		
+	--@begin URI Reference
+	class URIReference {
+		reference uri[0-1] : UniformResourceIdentifier oppositeOf uriRef;
+		reference resource[0-1] : RDFSResource oppositeOf uriRef;
+		reference "literal"[*] : TypedLiteral oppositeOf datatypeURI;
+		reference namedGraph[0-1] : RDFGraph oppositeOf graphName;	
+		reference reifiedStatement[*] : RDFStatement oppositeOf nameForReification;
+		reference fragmentIdentifier[0-1] : LocalName oppositeOf uriRef;
+		reference namespace[0-1] : Namespace oppositeOf namespaceURIRef;
+	}
+		
+	class UniformResourceIdentifier extends URIReference {
+		attribute name : String;
+		reference uriRef[*] : URIReference oppositeOf uri;
+	}
+	--@end URI Reference
+}
+
+package PrimitiveTypes {
+	datatype Boolean;
+	datatype Integer;
+	datatype String;
+}
+

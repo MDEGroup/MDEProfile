@@ -1,0 +1,290 @@
+syntax METAH {
+
+	primitiveTemplate identifier for String default using NAME:
+		value = "%token%";
+
+--	primitiveTemplate stringSymbol for String using STRING:
+--		value = "%token%",
+--		serializer="'\'' + %value%.toCString() + '\''";
+
+	primitiveTemplate integerSymbol for Integer default using INT:
+		value = "Integer.valueOf(%token%)";
+	
+	primitiveTemplate floatSymbol for Double default using FLOAT:
+		value = "Double.valueOf(%token%)";
+
+	primitiveTemplate booleanSymbol for Boolean default using BOOLEAN:
+		value = "Boolean.valueOf(%token%)";
+
+	--template  main context
+	
+	template METAHFile main context
+		:	[ entries ] {indentIncr = 0, nbNL = 2, startNL = false}
+		;
+	
+	--@begin  METAH Entry
+		
+	template METAHEntry abstract;
+	
+	template MacroDeclaration 
+		: "macro" name "is"[
+			(isDefined(ports)?
+			ports{separator = ";"}
+			";")
+			]
+		"end" name ";"
+		;
+		
+	template MacroImplementation 
+		: "macro" "implementation" declaration"."macroImpName "is" [
+			(isDefined(process)?
+			process{separator = ";"}
+			";")
+			]
+			[
+			(isDefined(connections)?
+			"connections"
+			connections{separator = ";"}
+			";")
+			]
+			"end" declaration"."macroImpName ";"
+			;
+
+	template ProcessDeclaration
+		:  "process" procDecName "is" [
+			(isDefined(ports)?
+			ports{separator = ";"}
+			";")
+			]
+		"end" procDecName  ";"
+		;
+	
+	template ProcessImplementation
+		:  "process" "implementation" declaration"."procImpName "is" [
+			(isDefined(processAttributes)?
+			"attributes" 
+			processAttributes{separator = ";"}
+			";") 
+			]	
+		"end" declaration"."procImpName  ";"
+		;
+		
+	template Package
+		:	"type" "package" packName "is" 
+			[(isDefined(data)?
+			data{separator = ";"}
+			";") 
+			]
+			"end" packName ";"
+			;
+			
+	template PackageImplementation
+		:	"type" "package" "implementation" implements "." implementationName "is"
+		 	[(isDefined(attributes)?"attributes"
+		 	attributes{separator = ";"}
+			";")
+			]
+			"end" implements "." implementationName ";"	
+		;
+		
+	--@end METAH Entry
+	
+	--@begin METAH Attributes
+		 
+	template Attribute
+		: attType "'" attName ":" "=" attValue attValueType 
+		;
+	
+	template ProcessAttribute 
+		: "self" "'" attName ":" "=" attValue attValueType 
+		;
+		
+	template Port 
+		: portName ":" portCom "port" portPackage "." portType
+		;
+		
+	template Process
+		: procName ":" periodic "process" declaration "." implementation
+		;
+		
+	template Connection 
+		:  (isDefined(compSrc)? compSrc ".") portSrc "<" "-" (isDefined(compDest)? compDest ".") portDest
+		;
+		
+	template Data
+		:	dataName ":" "type"
+		;
+
+	--@end METAH Attributes	
+    
+	symbols {
+		lparen		= "(";
+		rparen		= ")";
+		semi		= ";";
+		lcurly		= "{";
+		rcurly		= "}";
+		at			= "@";
+		coma		= ",";
+		dot 		= ".";
+		equal       = "=";
+		apos        = "'";
+		inf			= "<"; 
+	}
+--	token METAHField	:	multiLine(start = "{", end = "}");
+	lexer = "
+class METAHLexer extends Lexer;
+
+options {
+	k = 2;
+	charVocabulary = '\\0' .. '\\u00FF';
+	testLiterals = false;
+}
+
+{
+
+	protected Token makeToken(int t) {
+		org.atl.engine.injectors.ebnf.LocationToken ret = null;
+
+		tokenObjectClass = org.atl.engine.injectors.ebnf.LocationToken.class;
+		ret = (org.atl.engine.injectors.ebnf.LocationToken)super.makeToken(t);
+		ret.setEndLine(getLine());
+		ret.setEndColumn(getColumn());
+
+		return ret;
+	}
+
+}
+
+//protected
+NL
+	:	(	'\\r' '\\n'
+		|	'\\n' '\\r'	//Improbable
+		|	'\\r'
+		|	'\\n'
+		)
+	{newline();}
+	;
+
+WS
+	:	(	' '
+		|	'\\t'
+//		|	NL
+		)
+//	{ $setType(Token.SKIP); }
+	;
+
+COMMENT
+	:	\"%%\"
+		(~(	'\\r'
+		|	'\\n'
+		))*
+//		({LA(1) != EOF_CHAR}? NL)?
+//	{ $setType(Token.SKIP); }
+	;
+
+protected
+DIGIT
+	:	'0'..'9'
+	;
+
+protected
+ALPHA
+	:	'a'..'z'
+	|	'A'..'Z'
+	|	'_'
+	|	'-'
+	|	':'
+	//For Unicode compatibility (from 0000 to 00ff)
+	|	'\\u00C0' .. '\\u00D6'
+	|	'\\u00D8' .. '\\u00F6'
+	|	'\\u00F8' .. '\\u00FF'
+	;
+
+protected
+SNAME
+options {
+	testLiterals = true;
+}
+	:	(ALPHA) (ALPHA | DIGIT)*
+;
+
+NAME
+	:	(	s:SNAME {if(s.getType() != SNAME) $setType(s.getType());}
+		|	'\"'!
+			(	ESC
+			|	'\\n' {newline();}
+			|	~('\\\\'|'\\\"'|'\\n')
+			)*
+			'\"'!
+		)
+	{
+	if($getText.equals(\"true\")) $setType(BOOLEAN);
+	if($getText.equals(\"false\")) $setType(BOOLEAN);
+	}
+	;
+
+INT
+	:	(DIGIT)+
+		(('.' DIGIT)=> '.' (DIGIT)+ {$setType(FLOAT);})?
+	;
+
+protected
+ESC
+	:	'\\\\'!
+		(	'n' {$setText(\"\\n\");}
+		|	'r' {$setText(\"\\r\");}
+		|	't' {$setText(\"\\t\");}
+		|	'b' {$setText(\"\\b\");}
+		|	'f' {$setText(\"\\f\");}
+		|	'\"' {$setText(\"\\\"\");}
+		|	'\\'' {$setText(\"\\'\");}
+		|	'\\\\' {$setText(\"\\\\\");}
+		|	(
+				('0'..'3')
+				(
+					options {
+						warnWhenFollowAmbig = false;
+					}
+				:	('0'..'7')
+					(
+						options {
+							warnWhenFollowAmbig = false;
+						}
+					:	'0'..'7'
+					)?
+				)?
+			|	('4'..'7')
+				(
+					options {
+						warnWhenFollowAmbig = false;
+					}
+				:	('0'..'7')
+				)?
+			)
+				{
+					String s = $getText;
+					int i;
+					int ret = 0;
+					String ans;
+					for (i=0; i<s.length(); ++i)
+						ret = ret*8 + s.charAt(i) - '0';
+					ans = String.valueOf((char) ret);
+					$setText(ans);
+				}
+		)
+	;
+
+//STRING
+//	:	'\\''!
+//		(	ESC
+//		|	'\\n' {newline();}
+//		|	~('\\\\'|'\\''|'\\n')
+//		)*
+//		'\\''!
+//	;
+
+	";
+
+}
+
+

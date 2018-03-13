@@ -1,0 +1,28 @@
+package example {
+
+ class A {
+  attribute t1 : Integer;
+  attribute t2 : String;
+  reference b : B oppositeOf a;
+  attribute aKey : Integer;
+ }
+
+ class B {
+  reference a : A oppositeOf b;
+  attribute bKey : Integer;
+ }
+
+ enumeration Choice {
+  literal no;
+  literal yes;
+ }
+}
+
+package PrimitiveTypes {
+
+ datatype Boolean;
+
+ datatype Integer;
+
+ datatype String;
+}

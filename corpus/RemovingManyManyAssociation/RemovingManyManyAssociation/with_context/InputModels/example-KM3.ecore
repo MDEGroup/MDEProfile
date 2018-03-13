@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<km3:Metamodel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:km3="http://www.eclipse.org/gmt/2005/KM3" location="1:1-20:2">
+  <contents location="1:1-16:2" name="example">
+    <contents xsi:type="km3:Class" location="3:2-6:3" name="A">
+      <structuralFeatures xsi:type="km3:Attribute" location="4:9-4:30" name="a" lower="1" upper="1" type="//@contents.1/@contents.0"/>
+      <structuralFeatures xsi:type="km3:Reference" location="5:9-5:43" name="br" lower="0" upper="-1" type="//@contents.0/@contents.1" opposite="//@contents.0/@contents.1/@structuralFeatures.0"/>
+    </contents>
+    <contents xsi:type="km3:Class" location="8:2-10:3" name="B">
+      <structuralFeatures xsi:type="km3:Reference" location="9:9-9:43" name="ar" lower="0" upper="-1" type="//@contents.0/@contents.0" opposite="//@contents.0/@contents.0/@structuralFeatures.1"/>
+    </contents>
+    <contents xsi:type="km3:Class" location="12:2-14:3" name="C">
+      <structuralFeatures xsi:type="km3:Attribute" location="13:9-13:30" name="a" lower="1" upper="1" type="//@contents.1/@contents.0"/>
+    </contents>
+  </contents>
+  <contents location="18:1-20:2" name="PrimitiveTypes">
+    <contents xsi:type="km3:DataType" location="19:1-19:17" name="String"/>
+  </contents>
+</km3:Metamodel>

@@ -1,0 +1,14 @@
+package example {
+ 
+ class A {
+ 	reference br[*] : B oppositeOf ar;
+ }
+ 
+ class B {
+ 	reference ar[*] : A oppositeOf br;
+ } 
+ 
+ class C {
+  }
+ 
+}

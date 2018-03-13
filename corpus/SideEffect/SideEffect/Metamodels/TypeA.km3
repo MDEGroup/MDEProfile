@@ -1,0 +1,12 @@
+package typeA {
+
+	class RootA {
+		reference elms[*] ordered container : ElementA;
+	}
+
+	class ElementA {
+		attribute name[0-1] : String;
+	}
+	
+	datatype String;
+}

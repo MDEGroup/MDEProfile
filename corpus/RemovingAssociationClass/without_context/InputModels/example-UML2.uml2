@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:uml="http://www.eclipse.org/uml2/1.0.0/UML" xmi:id="_4wM00CF1EduhBbcwhrlElw" name="Example">
+  <ownedMember xmi:type="uml:AssociationClass" xmi:id="_30FLwCIuEduk6OILGgmDHA" name="A_B" memberEnd="_30FLwSIuEduk6OILGgmDHA _30FLxSIuEduk6OILGgmDHA">
+    <ownedAttribute xmi:id="_30FLxCIuEduk6OILGgmDHA" name="att" type="_30FLyCIuEduk6OILGgmDHA"/>
+    <ownedEnd xmi:id="_30FLxSIuEduk6OILGgmDHA" name="br" type="_30FLyiIuEduk6OILGgmDHA" association="_30FLwCIuEduk6OILGgmDHA">
+      <defaultValue xmi:type="uml:LiteralInteger" xmi:id="_GO92ECIxEduk6OILGgmDHA" value="1"/>
+    </ownedEnd>
+    <ownedEnd xmi:id="_30FLwSIuEduk6OILGgmDHA" name="ar" type="_30FLySIuEduk6OILGgmDHA" association="_30FLwCIuEduk6OILGgmDHA">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_30FLwiIuEduk6OILGgmDHA"/>
+      <lowerValue xmi:type="uml:LiteralNull" xmi:id="_30FLwyIuEduk6OILGgmDHA"/>
+    </ownedEnd>
+  </ownedMember>
+  <ownedMember xmi:type="uml:DataType" xmi:id="_30FLyCIuEduk6OILGgmDHA" name="Integer"/>
+  <ownedMember xmi:type="uml:Class" xmi:id="_30FLySIuEduk6OILGgmDHA" name="A"/>
+  <ownedMember xmi:type="uml:Class" xmi:id="_30FLyiIuEduk6OILGgmDHA" name="B"/>
+</uml:Model>

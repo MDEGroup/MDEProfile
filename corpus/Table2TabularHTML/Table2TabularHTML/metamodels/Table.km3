@@ -1,0 +1,25 @@
+-- @name	Table
+-- @version	1.1
+-- @domains	spreadsheet
+-- @authors	David Touzet (david.touzet@univ-nantes.fr)
+-- @date	2005/04/12
+-- @description	 This is a very basic abstract Table metamodel, which may be easily mapped to existing table representations (XHTML, ExcelML etc). Within this metamodel, a Table is associated with a Table element. Such an element is composed of several Rows that, in their turn, are composed of several Cells.
+ 
+package Table {
+
+	class Table {
+		reference rows[1-*] ordered container : Row;
+	}
+	
+	class Row {
+		reference cells[1-*] ordered container : Cell;
+	}
+	
+	class Cell {
+		attribute content : String;
+	}
+}
+
+package PrimitiveTypes {
+  	datatype String;
+}

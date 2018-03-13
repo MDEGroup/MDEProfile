@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<launchConfiguration type="org.atl.eclipse.adt.launching.atlTransformation">
+<mapAttribute key="Model Handler">
+<mapEntry key="OUT" value=""/>
+<mapEntry key="TT" value="EMF"/>
+<mapEntry key="BDD" value="EMF"/>
+<mapEntry key="IN" value=""/>
+</mapAttribute>
+<stringAttribute key="ATL File Name" value="/TT2BDD/TT2BDD/TT2BDD.atl"/>
+<mapAttribute key="Libs"/>
+<booleanAttribute key="Mode Debug" value="false"/>
+<mapAttribute key="ModelType">
+<mapEntry key="OUT" value="MODELOUTPUT"/>
+<mapEntry key="TT" value="METAMODELINPUT"/>
+<mapEntry key="BDD" value="METAMODELOUTPUT"/>
+<mapEntry key="IN" value="MODELINPUT"/>
+</mapAttribute>
+<mapAttribute key="Path">
+<mapEntry key="OUT" value="/TT2BDD/BDD/examples/OUT.bddmodel"/>
+<mapEntry key="TT" value="/TT2BDD/TT/TT.ecore"/>
+<mapEntry key="BDD" value="/TT2BDD/BDD/BDD.ecore"/>
+<mapEntry key="IN" value="/TT2BDD/TT/examples/Test.ttmodel"/>
+</mapAttribute>
+<stringAttribute key="Project Name" value="TT2BDD"/>
+<mapAttribute key="Output">
+<mapEntry key="OUT" value="BDD"/>
+</mapAttribute>
+<mapAttribute key="Input">
+<mapEntry key="IN" value="TT"/>
+</mapAttribute>
+<booleanAttribute key="AllowInterModelReferences" value="false"/>
+</launchConfiguration>

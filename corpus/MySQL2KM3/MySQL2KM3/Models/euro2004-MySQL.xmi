@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<DataBase xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="MySQL" name="euro2004">
+  <tables name="cities">
+    <columns xsi:type="IntegerColumn" name="city_id" type="tinyint" isPrimaryKey="true" defaultValue="" comment="" isAutoIncrement="true"/>
+    <columns name="name" type="varchar" null="true" defaultValue="" comment=""/>
+  </tables>
+  <tables name="clubs">
+    <columns xsi:type="IntegerColumn" name="club_id" type="tinyint" isPrimaryKey="true" defaultValue="" comment="" isAutoIncrement="true"/>
+    <columns name="name" type="varchar" null="true" defaultValue="" comment=""/>
+  </tables>
+  <tables name="coaches">
+    <columns xsi:type="IntegerColumn" name="coach_id" type="tinyint" isPrimaryKey="true" defaultValue="" comment="" isAutoIncrement="true"/>
+    <columns xsi:type="IntegerColumn" name="team" type="tinyint" defaultValue="0" comment="teams:team_id"/>
+    <columns name="name" type="varchar" null="true" defaultValue="" comment=""/>
+    <columns name="birth_date" type="date" null="true" defaultValue="" comment=""/>
+    <columns name="photo" type="longblob" null="true" defaultValue="" comment=""/>
+  </tables>
+  <tables name="countries">
+    <columns xsi:type="IntegerColumn" name="country_id" type="tinyint" isPrimaryKey="true" defaultValue="" comment="" isAutoIncrement="true"/>
+    <columns name="name" type="varchar" null="true" defaultValue="" comment=""/>
+    <columns name="flag" type="blob" null="true" defaultValue="" comment=""/>
+  </tables>
+  <tables name="goals">
+    <columns xsi:type="IntegerColumn" name="match" type="tinyint" defaultValue="0" comment="matches:match_id"/>
+    <columns xsi:type="IntegerColumn" name="time" type="tinyint" defaultValue="0" comment=""/>
+    <columns xsi:type="IntegerColumn" name="added_time" type="tinyint" defaultValue="0" comment=""/>
+    <columns xsi:type="IntegerColumn" name="extra_time" type="tinyint" defaultValue="0" comment=""/>
+    <columns xsi:type="IntegerColumn" name="goal_id" type="int" isPrimaryKey="true" defaultValue="" comment="" isAutoIncrement="true"/>
+    <columns xsi:type="IntegerColumn" name="player" type="int" defaultValue="0" comment="players:player_id"/>
+    <columns xsi:type="EnumColumn" name="own_goal" type="enum" null="true" defaultValue="n" comment="">
+      <enumSet>
+        <enumItems name="n"/>
+        <enumItems name="y"/>
+      </enumSet>
+    </columns>
+    <columns xsi:type="EnumColumn" name="penalty" type="enum" null="true" defaultValue="n" comment="">
+      <enumSet>
+        <enumItems name="n"/>
+        <enumItems name="y"/>
+      </enumSet>
+    </columns>
+  </tables>
+  <tables name="matches">
+    <columns xsi:type="IntegerColumn" name="match_id" type="tinyint" isPrimaryKey="true" defaultValue="" comment="" isAutoIncrement="true"/>
+    <columns xsi:type="IntegerColumn" name="team_1" type="tinyint" defaultValue="0" comment="teams:team_id"/>
+    <columns xsi:type="IntegerColumn" name="team_2" type="tinyint" defaultValue="0" comment="teams:team_id"/>
+    <columns xsi:type="IntegerColumn" name="referee" type="tinyint" defaultValue="0" comment="referees:referee_id"/>
+    <columns xsi:type="IntegerColumn" name="stadium" type="tinyint" defaultValue="0" comment="stadiums:stadium_id"/>
+    <columns xsi:type="IntegerColumn" name="man_of_the_match" type="int" defaultValue="0" comment="players:player_id"/>
+    <columns xsi:type="EnumColumn" name="stage" type="enum" null="true" defaultValue="" comment="">
+      <enumSet>
+        <enumItems name="Group"/>
+        <enumItems name="Quarter-final"/>
+        <enumItems name="Semi-final"/>
+        <enumItems name="Final"/>
+      </enumSet>
+    </columns>
+    <columns name="date" type="date" null="true" defaultValue="" comment=""/>
+  </tables>
+  <tables name="players">
+    <columns xsi:type="IntegerColumn" name="team" type="tinyint" defaultValue="0" comment="teams:team_id"/>
+    <columns xsi:type="IntegerColumn" name="num_in_team" type="tinyint" null="true" defaultValue="" comment=""/>
+    <columns xsi:type="IntegerColumn" name="current_club" type="tinyint" defaultValue="0" comment="clubs:club_id"/>
+    <columns xsi:type="IntegerColumn" name="player_id" type="int" isPrimaryKey="true" defaultValue="" comment="" isAutoIncrement="true"/>
+    <columns xsi:type="EnumColumn" name="position" type="enum" null="true" defaultValue="" comment="">
+      <enumSet>
+        <enumItems name="GK"/>
+        <enumItems name="DF"/>
+        <enumItems name="MD"/>
+        <enumItems name="FW"/>
+      </enumSet>
+    </columns>
+    <columns name="name" type="varchar" null="true" defaultValue="" comment=""/>
+    <columns name="birth_date" type="date" null="true" defaultValue="" comment=""/>
+    <columns name="photo" type="blob" null="true" defaultValue="" comment=""/>
+  </tables>
+  <tables name="referees">
+    <columns xsi:type="IntegerColumn" name="referee_id" type="tinyint" isPrimaryKey="true" defaultValue="" comment="" isAutoIncrement="true"/>
+    <columns xsi:type="IntegerColumn" name="country" type="tinyint" defaultValue="0" comment="countries:country_id"/>
+    <columns name="name" type="varchar" null="true" defaultValue="" comment=""/>
+    <columns name="birth_date" type="date" null="true" defaultValue="" comment=""/>
+    <columns name="profession" type="varchar" null="true" defaultValue="" comment=""/>
+    <columns name="photo" type="blob" null="true" defaultValue="" comment=""/>
+  </tables>
+  <tables name="stadiums">
+    <columns xsi:type="IntegerColumn" name="stadium_id" type="tinyint" isPrimaryKey="true" defaultValue="" comment="" isAutoIncrement="true"/>
+    <columns xsi:type="IntegerColumn" name="capacity" type="int" defaultValue="0" comment=""/>
+    <columns name="name" type="varchar" null="true" defaultValue="" comment=""/>
+    <columns name="owner" type="varchar" null="true" defaultValue="" comment=""/>
+    <columns name="architect" type="varchar" null="true" defaultValue="" comment=""/>
+    <columns name="opened" type="date" null="true" defaultValue="" comment=""/>
+    <columns name="photo" type="blob" null="true" defaultValue="" comment=""/>
+  </tables>
+  <tables name="stadiums_cities">
+    <columns xsi:type="IntegerColumn" name="stadium_id" type="tinyint" isPrimaryKey="true" defaultValue="0" comment="stadiums:stadium_id"/>
+    <columns xsi:type="IntegerColumn" name="city_id" type="tinyint" isPrimaryKey="true" defaultValue="0" comment="cities:city_id"/>
+  </tables>
+  <tables name="teams">
+    <columns xsi:type="IntegerColumn" name="team_id" type="tinyint" isPrimaryKey="true" defaultValue="" comment="" isAutoIncrement="true"/>
+    <columns xsi:type="IntegerColumn" name="country" type="tinyint" defaultValue="0" comment="countries:country_id"/>
+    <columns xsi:type="EnumColumn" name="group" type="enum" defaultValue="A" comment="">
+      <enumSet>
+        <enumItems name="A"/>
+        <enumItems name="B"/>
+        <enumItems name="C"/>
+        <enumItems name="D"/>
+      </enumSet>
+    </columns>
+    <columns name="photo" type="blob" null="true" defaultValue="" comment=""/>
+  </tables>
+  <tables name="tests">
+    <columns xsi:type="IntegerColumn" name="team_id" type="tinyint" isPrimaryKey="true" defaultValue="" comment="teams:team_id" isAutoIncrement="true"/>
+    <columns xsi:type="IntegerColumn" name="country" type="tinyint" isPrimaryKey="true" defaultValue="0" comment="countries:country_id"/>
+    <columns xsi:type="IntegerColumn" name="player" type="tinyint" isPrimaryKey="true" defaultValue="" comment="players:player_id"/>
+  </tables>
+</DataBase>

@@ -1,0 +1,532 @@
+-- @name		SPL
+-- @version		1.0
+-- @domains
+-- @authors		David Touzet (david.touzet@univ-nantes.fr)
+-- @date		2006/01/18
+-- @description		This metamodel describes SPL (Session Processing Language). The goal of SPL is to ease the development of telephony services. SPL relies on a Service Logic Execution Environment for SIP (SIP-SLEE). SPL guaranties critical properties by introducing domain-specific concepts and semantic restrictions.
+-- @see			http://phoenix.labri.fr/software/spl/
+package SPL {
+
+	abstract class LocatedElement {
+		attribute location : String;
+		attribute commentsBefore[*] ordered : String;
+		attribute commentsAfter[*] ordered : String;
+	}
+
+	class Program extends LocatedElement {
+		reference service container : Service;
+	}
+
+	class Service extends LocatedElement {
+		attribute name : String;
+		reference declarations[*] ordered container : Declaration;
+		reference sessions[*] ordered container : Session;
+	}
+
+-- @begin Sessions
+	abstract class Session extends LocatedElement {
+	}
+
+	class Registration extends Session {
+		reference declarations[*] ordered container : Declaration;
+		reference sessions[*] ordered container : Session;
+	}
+
+	class Dialog extends Session {
+		reference declarations[*] ordered container : Declaration;
+		reference methods[1-*] ordered container : Method;
+	}
+
+	class Event extends Session {
+		attribute eventId : String;
+		reference declarations[*] ordered container : Declaration;
+		reference methods[1-*] ordered container : Method;
+	}
+
+-- @begin Methods
+	class Method extends Session {
+		reference type container : TypeExpression;
+		attribute direction : Direction;
+		reference methodName container : MethodName;
+		reference arguments[*] ordered container : Argument;
+
+	-- Here instead of in SimpleMethod and ComposedMethod because TCS does not do left factoring yet
+		reference statements[1-*] ordered container : Statement;
+		reference branches[1-*] ordered container : Branch;
+	}
+
+--	class SimpleMethod extends Method {
+--		reference statements[1-*] ordered container : Statement;
+--	}
+--
+--	class ComposedMethod extends Method {
+--		reference branches[1-*] ordered container : DefaultBranch;
+--	}
+
+	-- no initExp allowed
+	class Argument extends VariableDeclaration {
+	}
+
+-- @begin Method Names
+	abstract class MethodName extends LocatedElement {
+	}
+
+	class SIPMethodName extends MethodName {
+		attribute name : SIPMethod;
+	}
+
+	class ControlMethodName extends MethodName {
+		attribute name : ControlMethod;
+	}
+-- @end Method Names
+-- @end Methods
+-- @end Sessions
+
+-- @begin Branches
+	class Branch extends LocatedElement {
+		reference statements[1-*] ordered container : Statement;
+	}
+
+	class DefaultBranch extends Branch {
+	}
+
+	class NamedBranch extends Branch {
+		attribute name[1-*] ordered : String;
+	}
+-- @end Branches
+
+
+-- @begin Types
+	abstract class TypeExpression extends LocatedElement {
+	}
+
+	class SimpleType extends TypeExpression {
+		attribute type : PrimitiveType;
+	}
+
+	class SequenceType extends TypeExpression {
+		attribute modifier[0-1] : Modifier;
+--		reference type container : SimpleType;
+		attribute type : PrimitiveType;
+		attribute size[0-1] : Integer;
+	}
+
+	class DefinedType extends TypeExpression {
+		attribute typeName : String;
+	}
+-- @end Types
+
+-- @begin Declarations
+	abstract class Declaration extends LocatedElement {
+		attribute name : String;
+	}
+
+	class VariableDeclaration extends Declaration {
+		reference type container : TypeExpression;
+		reference initExp[0-1] container : Expression;
+	}
+
+-- @begin FunctionDeclarations
+	abstract class FunctionDeclaration extends Declaration {
+		reference returnType container : TypeExpression;
+		reference arguments[*] ordered container : Argument;
+	}
+
+	class RemoteFunctionDeclaration extends FunctionDeclaration {
+		attribute functionLocation : FunctionLocation;
+	}
+
+	class LocalFunctionDeclaration extends FunctionDeclaration {
+		reference statements[1-*] ordered container : Statement;
+	}
+-- @end FunctionDeclarations
+
+-- @begin StructureDeclarations
+	class StructureDeclaration extends Declaration {
+		reference properties[1-*] ordered container : Argument;
+	}
+
+	class StructureProperty extends LocatedElement {
+		attribute name : String;
+		reference type container : TypeExpression;
+	}
+-- @end StructureDeclarations
+-- @end Declarations
+
+	class FunctionCall extends LocatedElement {
+		reference function : FunctionDeclaration;
+		reference parameters[*] ordered container : Expression;
+	}
+
+-- @begin Statements
+	abstract class Statement extends LocatedElement {
+	}
+
+	class CompoundStat extends Statement {
+		reference statements[1-*] container : Statement;
+	}
+
+	class SetStat extends Statement {
+		reference target container : Place;
+		reference setValue container : Expression;
+	}
+
+	class DeclarationStat extends Statement {
+		reference declaration container : Declaration;
+	}
+
+	class ReturnStat extends Statement {
+		reference returnedValue[0-1] container : Expression;
+		reference branch[0-1] : NamedBranch;
+	}
+
+	class IfStat extends Statement {
+		reference condition container : Expression;
+		reference thenStatements[1-*] ordered container : Statement;
+		reference elseStatements[*] ordered container : Statement;
+	}
+
+	class WhenStat extends Statement {
+		reference idExp container : Variable;
+		reference whenHeaders[1-*] ordered container : WhenHeader;
+		reference statements[1-*] ordered container : Statement;
+		reference elseStatements[0-*] ordered container : Statement;
+	}
+
+	class ForeachStat extends Statement {
+		attribute iteratorName : String;
+		reference sequenceExp container : Expression;
+		reference statements[1-*] ordered container : Statement;
+	}
+
+	class SelectStat extends Statement {
+		reference matchedExp container : Expression;
+		reference selectCases[*] ordered container : SelectCase;
+		reference selectDefault[0-1] container : SelectDefault;
+	}
+
+	class FunctionCallStat extends Statement {
+		reference functionCall container : FunctionCall;
+	}
+
+	class ContinueStat extends Statement {
+	}
+
+	class BreakStat extends Statement {
+	}
+
+	class PushStat extends Statement {
+		reference target container : Place;
+		reference pushedValue container : Expression;
+	}
+-- @end Statements
+
+	-- no initExp allowed
+	class WhenHeader extends VariableDeclaration {
+		attribute headerId : String;
+		reference value[0-1] container : Constant;
+	}
+
+	abstract class SelectMember extends LocatedElement {
+		reference statements[*] ordered container : Statement;
+	}
+
+	class SelectDefault extends SelectMember {
+	}
+
+	class SelectCase extends SelectMember {
+		reference values[1-*] ordered container : Constant;
+	}
+
+-- @begin Expressions
+	abstract class Expression extends LocatedElement {
+	}
+
+	class ConstantExp extends Expression {
+		reference value container : Constant;
+	}
+
+	class OperatorExp extends Expression {
+		attribute opName : String;
+		reference leftExp container : Expression;
+		reference rightExp[0-1] container : Expression;
+	}
+
+	class ForwardExp extends Expression {
+		attribute isParallel : Boolean;
+		reference exp[0-1] container : Expression;
+	}
+
+	class WithExp extends Expression {
+		reference exp container : Expression;
+		reference msgFields[1-*] ordered container : MessageField;
+	}
+
+	class BlockExp extends Expression {
+		reference exp container : Expression;
+	}
+
+	class ReasonExp extends Expression {
+	}
+
+	class BODYExp extends Expression {
+	}
+
+	class RequestURIExp extends Expression {
+	}
+
+	class PopExp extends Expression {
+		reference source container : Place;
+	}
+
+	class FunctionCallExp extends Expression {
+		reference functionCall container : FunctionCall;
+	}
+
+-- @begin Places
+	abstract class Place extends Expression {
+	}
+
+	class SIPHeaderPlace extends Place {
+		attribute header : SIPHeader;
+	}
+
+	abstract class VariablePlace extends Place {
+	}
+
+	class PropertyCallPlace extends VariablePlace {
+		attribute propName : String;
+		reference source container : VariablePlace;
+	}
+
+	class Variable extends VariablePlace {
+		reference source : Declaration;
+	}
+-- @end Places
+
+	abstract class MessageField extends LocatedElement {
+		reference exp container : Expression;
+	}
+
+	class ReasonMessageField extends MessageField {
+	}
+
+	class HeadedMessageField extends MessageField {
+		attribute headerId : String;
+	}
+-- @end Expressions
+
+-- @begin Constants
+	abstract class Constant extends LocatedElement {
+	}
+
+	class BooleanConstant extends Constant {
+		attribute value : Boolean;
+	}
+
+	class IntegerConstant extends Constant {
+		attribute value : Integer;
+	}
+
+	class StringConstant extends Constant {
+		attribute value : String;
+	}
+
+	class URIConstant extends Constant {
+		attribute uri : String;
+	}
+
+	class SequenceConstant extends Constant {
+		reference values[*] ordered container : Constant;
+	}
+
+	class ResponseConstant extends Constant {
+		reference response container : Response;
+	}
+-- @end Constants
+
+-- @begin Responses
+	abstract class Response extends LocatedElement {
+	}
+
+	class SuccessResponse extends Response {
+		attribute successKind : SuccessKind;
+	}
+	
+	class ErrorResponse extends Response {
+	}
+
+	class ClientErrorResponse extends ErrorResponse {
+		attribute errorKind[0-1] : ClientErrorKind;
+	}
+
+	class GlobalErrorResponse extends ErrorResponse {
+		attribute errorKind[0-1] : GlobalErrorKind;
+	}
+
+	class RedirectionErrorResponse extends ErrorResponse {
+		attribute errorKind[0-1] : RedirectionErrorKind;
+	}
+
+	class ServerErrorResponse extends ErrorResponse {
+		attribute errorKind[0-1] : ServerErrorKind;
+	}
+-- @end Responses
+}
+
+
+package Enum {
+
+	enumeration Direction {
+		literal inout;
+		literal in;
+		literal out;
+	}
+
+	enumeration SIPMethod {
+		literal ACK;
+		literal BYE;
+		literal CANCEL;
+		literal INVITE;
+		literal NOTIFY;
+		literal OPTIONS;
+		literal REACK;
+		literal REGISTER;
+		literal REINVITE;
+		literal REREGISTER;
+		literal RESUBSCRIBE;
+		literal SUBSCRIBE;
+	}
+
+	enumeration ControlMethod {
+		literal deploy;
+		literal undeploy;
+		literal uninvite;
+		literal unregister;
+		literal unsubscribe;
+	}
+
+	enumeration PrimitiveType {
+		literal void;
+		literal bool;
+		literal int;
+		literal request;
+		literal response;
+		literal string;
+		literal time;
+		literal uri;
+	}
+
+	enumeration Modifier {
+		literal LIFO;
+		literal FIFO;
+	}
+
+	enumeration FunctionLocation {
+		literal remote;
+		literal local;
+	}
+
+	enumeration SIPHeader {
+		literal CALL_ID;
+		literal CONTACT;
+		literal CSEQ;
+		literal EVENT;
+		literal FROM;
+		literal MAX_FORWARDS;
+		literal SUBSCRIPTION_STATE;
+		literal TO;
+		literal VIA;
+	}
+
+	enumeration SuccessKind {
+		literal OK;
+		literal ACCEPTED;
+	}
+
+	enumeration ClientErrorKind {
+		literal ADDRESS_INCOMPLETE;
+		literal AMBIGUOUS;
+		literal BAD_EXTENSION;
+		literal BAD_REQUEST;
+		literal BUSY_HERE;
+		literal CALL_OR_TRANSACTION_DOES_NOT_EXIST;
+		literal EXTENSION_REQUIRED;
+		literal FORBIDDEN;
+		literal GONE;
+		literal INTERVAL_TOO_BRIEF;
+		literal LOOP_DETECTED;
+		literal METHOD_NOT_ALLOWED;
+		literal NOT_ACCEPTABLE_HERE;
+		literal NOT_ACCEPTABLE;
+		literal NOT_FOUND;
+		literal PAYMENT_REQUIRED;
+		literal PROXY_AUTHENTICATION_REQUIRED;
+		literal REQUESTURI_TOO_LONG;
+		literal REQUEST_ENTITY_TOO_LARGE;
+		literal REQUEST_PENDING;
+		literal REQUEST_TERMINATED;
+		literal REQUEST_TIMEOUT;
+		literal TEMPORARILY_UNAVAILABLE;
+		literal TOO_MANY_HOPS;
+		literal UNAUTHORIZED;
+		literal UNDECIPHERABLE;
+		literal UNSUPPORTED_MEDIA_TYPE;
+		literal UNSUPPORTED_URI_SCHEME;
+	}
+
+	enumeration GlobalErrorKind {
+		literal BUSY_EVERYWHERE;
+		literal DECLINE;
+		literal DOES_NOT_EXIST_ANYWHERE;
+		literal NOT_ACCEPTABLE;
+	}
+
+	enumeration RedirectionErrorKind {
+		literal ALTERNATIVE_SERVICE;
+		literal MOVED_PERMANENTLY;
+		literal MOVED_TEMPORARILY;
+		literal MULTIPLE_CHOICES;
+		literal USE_PROXY;
+	}
+
+	enumeration ServerErrorKind {
+		literal BAD_GATEWAY;
+		literal MESSAGE_TOO_LARGE;
+		literal NOT_IMPLEMENTED;
+		literal SERVER_INTERNAL_ERROR;
+		literal SERVER_TIMEOUT;
+		literal SERVICE_UNAVAILABLE;
+		literal VERSION_NOT_SUPPORTED;
+	}
+
+--	enumeration UnaryOperator {
+--		literal "!";
+--		literal "-";
+--	}
+
+--	enumeration BinaryOperator {
+--		literal "+";
+--		literal "-";
+--		literal "*";
+--		literal "/";
+--		literal "<";
+--		literal ">";
+--		literal "==";
+--		literal "!=";
+--		literal "<=";
+--		literal ">=";
+--		literal "&&";
+--		literal "||";
+--		literal match;
+--		literal nomatch;
+--	}
+}
+
+
+package PrimitiveTypes {
+	datatype String;
+	datatype Integer;
+	datatype Boolean;
+}
+

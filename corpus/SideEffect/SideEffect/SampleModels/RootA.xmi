@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="ASCII"?>
+<tpA:RootA xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:tpA="platform:/resource/SideEffect/Metamodels/TypeA.ecore">
+  <elms name="add"/>
+  <elms name="mul"/>
+  <elms name="mul"/>
+  <elms name="add"/>
+</tpA:RootA>

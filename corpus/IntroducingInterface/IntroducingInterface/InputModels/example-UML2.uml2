@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:uml="http://www.eclipse.org/uml2/1.0.0/UML" xmi:id="_X9eLACLoEdu1mvwQJ-oGyA" name="example">
+  <ownedMember xmi:type="uml:Class" xmi:id="_Y1DTQCLoEdu1mvwQJ-oGyA" name="A">
+    <ownedOperation xmi:id="_-TEVcCL_EduEosgGgBeVKg" name="a1"/>
+    <ownedOperation xmi:id="__ovu8CL_EduEosgGgBeVKg" name="a2"/>
+  </ownedMember>
+  <ownedMember xmi:type="uml:Class" xmi:id="_ZS_zgCLoEdu1mvwQJ-oGyA" name="B">
+    <ownedOperation xmi:id="_y_HIMCLvEdu1mvwQJ-oGyA" name="b1"/>
+    <ownedOperation xmi:id="_0GC7ECLvEdu1mvwQJ-oGyA" name="b2"/>
+    <ownedOperation xmi:id="_0dJMcCLvEdu1mvwQJ-oGyA" name="b3"/>
+  </ownedMember>
+  <ownedMember xmi:type="uml:Association" xmi:id="_bntoICLoEdu1mvwQJ-oGyA" name="A_B" memberEnd="_cPNF8CLoEdu1mvwQJ-oGyA _etmbACLoEdu1mvwQJ-oGyA">
+    <ownedEnd xmi:id="_etmbACLoEdu1mvwQJ-oGyA" name="b" type="_ZS_zgCLoEdu1mvwQJ-oGyA" association="_bntoICLoEdu1mvwQJ-oGyA">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_qFYLkCLoEdu1mvwQJ-oGyA" name="upper"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_nDg9ECLoEdu1mvwQJ-oGyA" name="lower"/>
+    </ownedEnd>
+    <ownedEnd xmi:id="_cPNF8CLoEdu1mvwQJ-oGyA" name="a" type="_Y1DTQCLoEdu1mvwQJ-oGyA" association="_bntoICLoEdu1mvwQJ-oGyA">
+      <upperValue xmi:type="uml:LiteralInteger" xmi:id="_lf-GsCLoEdu1mvwQJ-oGyA" name="upper" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_jbftgCLoEdu1mvwQJ-oGyA" name="lower" value="1"/>
+    </ownedEnd>
+  </ownedMember>
+</uml:Model>

@@ -1,0 +1,38 @@
+package example {
+
+ class A {
+  reference childrenC : C oppositeOf inheritA;
+  reference childrenB : B oppositeOf inheritA;
+  attribute t2 : String;
+  attribute t1 : Integer;
+  reference b : B oppositeOf a;
+ }
+
+ class B {
+  reference childrenD : D oppositeOf inheritB;
+  reference inheritA : A oppositeOf childrenB;
+  reference a : A oppositeOf b;
+ }
+
+ class C {
+  reference inheritA : A oppositeOf childrenC;
+ }
+
+ class D {
+  reference inheritB : B oppositeOf childrenD;
+ }
+
+ enumeration Choice {
+  literal no;
+  literal yes;
+ }
+}
+
+package PrimitiveTypes {
+
+ datatype Boolean;
+
+ datatype Integer;
+
+ datatype String;
+}

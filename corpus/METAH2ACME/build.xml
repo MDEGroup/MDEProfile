@@ -1,0 +1,84 @@
+<!--
+ How to configure this ant script:
+	Run as->Ant Build...
+		Set:
+			- Run in same JRE
+-->
+<!-- Transform EBNF grammar into KM3 metamodel -->
+		
+<project name="METAH2ACME" default="transfo">
+	<property name="sourcePath" value="/METAH2ACME/"/>
+	<property name="metamodelPath" value="${sourcePath}METAMODELS/"/>
+	<property name="sample" value="example"/>
+	<property name="targetPath" value="${sourcePath}MODELS/"/>
+	<property name="paramPath" value="${sourcePath}PARAMETERS/"/>
+	
+	<target name="transfo" depends="loadModels">
+		<basename property="name" file="${sample}" suffix=".metah"/>
+		<property name="sourceModel" value="${targetPath}${name}.metah"/>
+		<property name="targetModel" value="${targetPath}${name}.acme"/>
+		<echo message="Transforming ${name}"/>
+
+		<!-- Inject METAH model -->
+		<am3.loadModel name="sourceModel" metamodel="METAH" path="${sourceModel}">
+			<injector name="ebnf">
+				<param name="name" value="METAH"/>
+				<classpath>
+					<pathelement location="PARAMETERS/METAH-importer.jar"/>
+				</classpath> 
+			</injector>
+		</am3.loadModel>
+					
+		<!--  Extract and save METAH model  --> 
+		<am3.saveModel model="sourceModel" path="${targetPath}${name}-METAH.ecore"/>
+		
+		<!-- Transform Metah model to Acme model -->
+		<am3.atl path="${sourcePath}METAH2ACME.atl">
+		  <inModel name="IN" model="sourceModel" /> 
+		  <inModel name="METAH" model="METAH" /> 
+		  <inModel name="ACME" model="ACME" /> 
+		  <outModel name="OUT" model="targetModel" metamodel="ACME" /> 
+	  	</am3.atl>
+		
+
+		<!--  Extract and save ACME model  --> 
+		<am3.saveModel model="targetModel" path="${targetPath}${name}-ACME.ecore" /> 
+	
+		<!-- Extract ACME Model -->
+		<property name="source" value="${targetPath}/example-ACME.ecore"/>
+		<property name="target" value="${targetPath}/example.acme"/>
+		
+		<am3.loadModel modelHandler="EMF" name="ACMEModel" metamodel="ACME" path="${source}"/>
+		
+		<am3.loadModel modelHandler="EMF" name="ACME.tcs" metamodel="TCS" path="${paramPath}ACME.tcs">
+			<injector name="ebnf">
+				<param name="name" value="TCS"/>
+			</injector>
+		</am3.loadModel>
+			
+		<am3.saveModel model="ACMEModel" path="${target}">
+			<extractor name="ebnf">
+				<param name="format" value="ACME.tcs"/>
+			</extractor>
+		</am3.saveModel>
+	</target>
+	
+	<target name="loadModels">
+		<!-- Load METAH metamodel-->
+		<am3.loadModel modelHandler="EMF" name="METAH" metamodel="MOF" path="${metamodelPath}/METAH.ecore"/>
+		
+		<!-- Load ACME metamodel-->
+		<am3.loadModel modelHandler="EMF" name="ACME" metamodel="MOF" path="${metamodelPath}/ACME.ecore"/>
+		
+		<!-- Load TCS metamodel-->
+		<am3.loadModel modelHandler="EMF" name="TCS" metamodel="MOF" path="/AMMACore/KM3/TCS/TCS.ecore"/>
+		
+		<!-- Load METAH-TCS model-->
+		<am3.loadModel modelHandler="EMF" name="METAH.tcs" metamodel="TCS" path="${paramPath}METAH.tcs">
+			<injector name="ebnf">
+				<param name="name" value="TCS"/>
+			</injector>
+		</am3.loadModel>
+	</target>
+
+</project>

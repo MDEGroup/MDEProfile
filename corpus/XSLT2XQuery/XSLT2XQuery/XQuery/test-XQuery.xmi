@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<XQueryProgram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="XQuery">
+  <expressions xsi:type="FLWOR">
+    <for var="$var">
+      <expression value="document(&quot;xmlFile.xml&quot;)/*"/>
+    </for>
+    <return>
+      <expressions xsi:type="ElementNode" name="emps">
+        <nodes xsi:type="FunctionCall" name="fctemployee">
+          <parameters value="$var/employee"/>
+        </nodes>
+      </expressions>
+    </return>
+  </expressions>
+  <expressions xsi:type="FunctionDeclaration" name="fctemployee">
+    <expression xsi:type="FLWOR">
+      <for var="$var">
+        <expression value="$paramVar"/>
+      </for>
+      <return>
+        <expressions xsi:type="FLWOR">
+          <let var="$var">
+            <expression value="$var"/>
+          </let>
+          <where>
+            <expression value="$var/salary>2000"/>
+          </where>
+          <return>
+            <expressions xsi:type="ElementNode" name="emp">
+              <nodes xsi:type="ReturnXPath" value="$var/name"/>
+              <nodes xsi:type="ReturnXPath" value="$var/firstname"/>
+            </expressions>
+          </return>
+        </expressions>
+      </return>
+    </expression>
+  </expressions>
+</XQueryProgram>

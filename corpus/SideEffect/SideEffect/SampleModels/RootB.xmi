@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<tpB:RootB xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:tpB="platform:/resource/SideEffect/Metamodels/TypeB.ecore">
+  <elms definition="//@defs.0"/>
+  <elms definition="//@defs.1"/>
+  <elms definition="//@defs.1"/>
+  <elms definition="//@defs.0"/>
+  <defs name="add"/>
+  <defs name="mul"/>
+</tpB:RootB>

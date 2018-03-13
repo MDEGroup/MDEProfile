@@ -1,0 +1,49 @@
+type package PORT_TYPES is
+	ANOTHER_TYPE : type;
+	ANY_TYPE : type;
+end PORT_TYPES;
+
+type package implementation PORT_TYPES.I80960MC is
+attributes
+	ANY_TYPE'SourceDataSize := 16 B;
+	ANOTHER_TYPE'SourceDataSize := 32 B;
+end PORT_TYPES.I80960MC;
+
+process P1 is
+	p1_input : in port PORT_TYPE.ANY_TYPE;
+	update : out port PORT_TYPE.ANOTHER_TYPE;
+	feedback : in port PORT_TYPE.ANOTHER_TYPE;
+end P1;
+
+process implementation P1.EXAMPLE is
+attributes
+	self'Period := 25 ms;
+	self'SourceTime := 2 ms;
+end P1.EXAMPLE;
+
+process P2 is
+	p1_result : out port PORT_TYPE.ANY_TYPE;
+	update : out port PORT_TYPE.ANOTHER_TYPE;
+	feedback : in port PORT_TYPE.ANOTHER_TYPE;
+end P2;
+
+process implementation P2.EXAMPLE is
+attributes
+	self'Period := 50 ms;
+	self'SourceTime := 5 ms;
+end P2.EXAMPLE;
+
+macro M is
+	m_in : in port PORT_TYPE.ANY_TYPE;
+	m_out : out port PORT_TYPE.ANY_TYPE;
+end M;
+
+macro implementation M.EXAMPLE is
+	P2 : periodic process p2.example;
+	P1 : periodic process p1.example;
+connections
+	p2.feedback <- p1.update;
+	p1.feedback <- p2.update;
+	m_out <- p2.p2_result;
+	p1.p1_input <- m_in;
+end M.EXAMPLE;	

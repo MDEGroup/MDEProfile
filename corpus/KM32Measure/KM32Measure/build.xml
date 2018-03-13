@@ -1,0 +1,36 @@
+<!--
+  How to configure this ANT script:
+    - See the build.properties property file.
+    - The example file name can be set there (default to "example").
+-->
+<project name="KM32Measure" default="transfo">
+	<!-- Project properties -->
+	<property file="build.properties" />
+
+	<!-- Launches the transformations -->
+	<target name="transfo" depends="loadModels">
+		<am3.atl path="${transformations.dir}${source.metamodel.name}2${target.metamodel.name}.asm">
+			<inModel name="${source.metamodel.name}" model="${source.metamodel.name}" />
+			<inModel name="IN" model="${source.model.file}" />
+			<library name="FLAME4${source.metamodel.name}" path="${lib.dir}FLAME4${source.metamodel.name}.asm" />
+			<library name="MOOD4${source.metamodel.name}" path="${lib.dir}MOOD4${source.metamodel.name}.asm" />
+			<library name="EMOOSE4${source.metamodel.name}" path="${lib.dir}EMOOSE4${source.metamodel.name}.asm" />
+			<library name="QMOOD4${source.metamodel.name}" path="${lib.dir}QMOOD4${source.metamodel.name}.asm" />
+			<inModel name="${target.metamodel.name}" model="${target.metamodel.name}" />
+			<outModel name="OUT" model="${target.model.file}" metamodel="${target.metamodel.name}" />
+		</am3.atl>
+		<am3.saveModel model="${target.model.file}" path="${models.dir}${target.model.file}" />
+	</target>
+
+	<!-- Loads the metamodels and the source file -->
+	<target name="loadModels">
+		<am3.loadModel name="${source.metamodel.name}" metamodel="MOF" nsUri="${source.metamodel.uri}" />
+		<am3.loadModel name="${target.metamodel.name}" metamodel="MOF" path="${metamodels.dir}${target.metamodel.name}.ecore" />
+
+		<am3.loadModel name="${source.model.file}" metamodel="${source.metamodel.name}" path="${models.dir}${source.file}">
+			<injector name="ebnf">
+				<param name="name" value="${source.metamodel.name}" />
+			</injector>
+		</am3.loadModel>
+	</target>
+</project>

@@ -1,0 +1,233 @@
+<?xml version = '1.0' encoding = 'ISO-8859-1' ?>
+<rdf:RDF xmlns:rdf = 'http://www.w3.org/1999/02/22-rdf-syntax-ns#' xmlns:rdfs = 'http://www.w3.org/2000/01/rdf-schema#' xmlns:xsd = 'http://www.w3.org/2001/XMLSchema#' xmlns:owl = 'http://www.w3.org/2002/07/owl#' xmlns = 'http://example.org/Museum#' xml:base = 'http://example.org/Museum'>
+  <owl:Ontology rdf:about = 'Museum'/>
+  <owl:Class rdf:ID = 'Painter'>
+    <rdfs:label>Painter</rdfs:label>
+    <rdfs:subClassOf rdf:resource = '#Artist'/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource = '#Painter.paints'/>
+        <owl:minCardinality  rdf:datatype = 'http://www.w3.org/2001/XMLSchema#nonNegativeInteger'>0</owl:minCardinality >
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID = 'Sculpture'>
+    <rdfs:label>Sculpture</rdfs:label>
+    <rdfs:subClassOf rdf:resource = '#Artefact'/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource = '#Sculpture.material'/>
+        <owl:cardinality  rdf:datatype = 'http://www.w3.org/2001/XMLSchema#nonNegativeInteger'>1</owl:cardinality >
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource = '#Sculpture.hasSculptor'/>
+        <owl:cardinality  rdf:datatype = 'http://www.w3.org/2001/XMLSchema#nonNegativeInteger'>1</owl:cardinality >
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID = 'Painting'>
+    <rdfs:label>Painting</rdfs:label>
+    <rdfs:subClassOf rdf:resource = '#Artefact'/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource = '#Painting.technique'/>
+        <owl:cardinality  rdf:datatype = 'http://www.w3.org/2001/XMLSchema#nonNegativeInteger'>1</owl:cardinality >
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource = '#Painting.hasPainter'/>
+        <owl:cardinality  rdf:datatype = 'http://www.w3.org/2001/XMLSchema#nonNegativeInteger'>1</owl:cardinality >
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID = 'Sculptor'>
+    <rdfs:label>Sculptor</rdfs:label>
+    <rdfs:subClassOf rdf:resource = '#Artist'/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource = '#Sculptor.sculpts'/>
+        <owl:minCardinality  rdf:datatype = 'http://www.w3.org/2001/XMLSchema#nonNegativeInteger'>0</owl:minCardinality >
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID = 'Artefact'>
+    <rdfs:label>Artefact</rdfs:label>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource = '#Artefact.year'/>
+        <owl:cardinality  rdf:datatype = 'http://www.w3.org/2001/XMLSchema#nonNegativeInteger'>1</owl:cardinality >
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource = '#Artefact.title'/>
+        <owl:cardinality  rdf:datatype = 'http://www.w3.org/2001/XMLSchema#nonNegativeInteger'>1</owl:cardinality >
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource = '#Artefact.hasArtist'/>
+        <owl:cardinality  rdf:datatype = 'http://www.w3.org/2001/XMLSchema#nonNegativeInteger'>1</owl:cardinality >
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource = '#Artefact.exhibited'/>
+        <owl:cardinality  rdf:datatype = 'http://www.w3.org/2001/XMLSchema#nonNegativeInteger'>1</owl:cardinality >
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID = 'Museum'>
+    <rdfs:label>Museum</rdfs:label>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource = '#Museum.city'/>
+        <owl:cardinality  rdf:datatype = 'http://www.w3.org/2001/XMLSchema#nonNegativeInteger'>1</owl:cardinality >
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource = '#Museum.name'/>
+        <owl:cardinality  rdf:datatype = 'http://www.w3.org/2001/XMLSchema#nonNegativeInteger'>1</owl:cardinality >
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource = '#Museum.exhibites'/>
+        <owl:minCardinality  rdf:datatype = 'http://www.w3.org/2001/XMLSchema#nonNegativeInteger'>1</owl:minCardinality >
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID = 'Artist'>
+    <rdfs:label>Artist</rdfs:label>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource = '#Artist.firstName'/>
+        <owl:cardinality  rdf:datatype = 'http://www.w3.org/2001/XMLSchema#nonNegativeInteger'>1</owl:cardinality >
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource = '#Artist.lastName'/>
+        <owl:cardinality  rdf:datatype = 'http://www.w3.org/2001/XMLSchema#nonNegativeInteger'>1</owl:cardinality >
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource = '#Artist.creates'/>
+        <owl:minCardinality  rdf:datatype = 'http://www.w3.org/2001/XMLSchema#nonNegativeInteger'>0</owl:minCardinality >
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:DatatypeProperty rdf:ID = 'Museum.name'>
+    <rdfs:domain rdf:resource = '#Museum'/>
+    <rdfs:range rdf:resource = 'http://www.w3.org/2001/XMLSchema#string'/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID = 'Painting.technique'>
+    <rdfs:domain rdf:resource = '#Painting'/>
+    <rdfs:range rdf:resource = 'http://www.w3.org/2001/XMLSchema#string'/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID = 'Artefact.year'>
+    <rdfs:domain rdf:resource = '#Artefact'/>
+    <rdfs:range rdf:resource = 'http://www.w3.org/2001/XMLSchema#string'/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID = 'Artefact.title'>
+    <rdfs:domain rdf:resource = '#Artefact'/>
+    <rdfs:range rdf:resource = 'http://www.w3.org/2001/XMLSchema#string'/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID = 'Sculpture.material'>
+    <rdfs:domain rdf:resource = '#Sculpture'/>
+    <rdfs:range rdf:resource = 'http://www.w3.org/2001/XMLSchema#string'/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID = 'Artist.firstName'>
+    <rdfs:domain rdf:resource = '#Artist'/>
+    <rdfs:range rdf:resource = 'http://www.w3.org/2001/XMLSchema#string'/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID = 'Museum.city'>
+    <rdfs:domain rdf:resource = '#Museum'/>
+    <rdfs:range rdf:resource = 'http://www.w3.org/2001/XMLSchema#string'/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID = 'Artist.lastName'>
+    <rdfs:domain rdf:resource = '#Artist'/>
+    <rdfs:range rdf:resource = 'http://www.w3.org/2001/XMLSchema#string'/>
+  </owl:DatatypeProperty>
+  <owl:ObjectProperty rdf:ID = 'Artefact.hasArtist'>
+    <rdfs:domain rdf:resource = '#Artefact'/>
+    <rdfs:range rdf:resource = '#Artist'/>
+    <owl:inverseOf rdf:resource = '#Artist.creates'/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID = 'Artefact.exhibited'>
+    <rdfs:domain rdf:resource = '#Artefact'/>
+    <rdfs:range rdf:resource = '#Museum'/>
+    <owl:inverseOf rdf:resource = '#Museum.exhibites'/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID = 'Painting.hasPainter'>
+    <rdfs:domain rdf:resource = '#Painting'/>
+    <rdfs:range rdf:resource = '#Painter'/>
+    <owl:inverseOf rdf:resource = '#Painter.paints'/>
+    <rdfs:subPropertyOf rdf:resource = '#Artefact.hasArtist'/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID = 'Sculpture.hasSculptor'>
+    <rdfs:domain rdf:resource = '#Sculpture'/>
+    <rdfs:range rdf:resource = '#Sculptor'/>
+    <owl:inverseOf rdf:resource = '#Sculptor.sculpts'/>
+    <rdfs:subPropertyOf rdf:resource = '#Artefact.hasArtist'/>
+  </owl:ObjectProperty>
+  <owl:InverseFunctionalProperty rdf:ID = 'Artist.creates'>
+    <rdfs:domain rdf:resource = '#Artist'/>
+    <rdfs:range rdf:resource = '#Artefact'/>
+    <owl:inverseOf rdf:resource = '#Artefact.hasArtist'/>
+  </owl:InverseFunctionalProperty>
+  <owl:InverseFunctionalProperty rdf:ID = 'Painter.paints'>
+    <rdfs:domain rdf:resource = '#Painter'/>
+    <rdfs:range rdf:resource = '#Painting'/>
+    <owl:inverseOf rdf:resource = '#Painting.hasPainter'/>
+    <rdfs:subPropertyOf rdf:resource = '#Artist.creates'/>
+  </owl:InverseFunctionalProperty>
+  <owl:InverseFunctionalProperty rdf:ID = 'Sculptor.sculpts'>
+    <rdfs:domain rdf:resource = '#Sculptor'/>
+    <rdfs:range rdf:resource = '#Sculpture'/>
+    <owl:inverseOf rdf:resource = '#Sculpture.hasSculptor'/>
+    <rdfs:subPropertyOf rdf:resource = '#Artist.creates'/>
+  </owl:InverseFunctionalProperty>
+  <owl:InverseFunctionalProperty rdf:ID = 'Museum.exhibites'>
+    <rdfs:domain rdf:resource = '#Museum'/>
+    <rdfs:range rdf:resource = '#Artefact'/>
+    <owl:inverseOf rdf:resource = '#Artefact.exhibited'/>
+  </owl:InverseFunctionalProperty>
+  <owl:FunctionalProperty rdf:about = '#Painting.hasPainter'/>
+  <owl:FunctionalProperty rdf:about = '#Artefact.exhibited'/>
+  <owl:FunctionalProperty rdf:about = '#Sculpture.hasSculptor'/>
+  <owl:FunctionalProperty rdf:about = '#Artefact.hasArtist'/>
+  <Museum rdf:ID = 'MuseePicasso'>
+    <Museum.name rdf:datatype = 'http://www.w3.org/2001/XMLSchema#string'>Musée Picasso</Museum.name>
+    <Museum.city rdf:datatype = 'http://www.w3.org/2001/XMLSchema#string'>Barcelone</Museum.city>
+    <Museum.exhibites rdf:resource = '#Autoportrait'/>
+  </Museum>
+  <Painter rdf:ID = 'PabloPicasso'>
+    <Artist.firstName rdf:datatype = 'http://www.w3.org/2001/XMLSchema#string'>Pablo</Artist.firstName>
+    <Artist.lastName rdf:datatype = 'http://www.w3.org/2001/XMLSchema#string'>Picasso</Artist.lastName>
+    <Painter.paints rdf:resource = '#Guernica'/>
+    <Painter.paints rdf:resource = '#Autoportrait'/>
+  </Painter>
+  <Painting rdf:ID = 'Autoportrait'>
+    <Artefact.title rdf:datatype = 'http://www.w3.org/2001/XMLSchema#string'>Autoportrait mal coiffé</Artefact.title>
+    <Artefact.year rdf:datatype = 'http://www.w3.org/2001/XMLSchema#string'>1896</Artefact.year>
+    <Artefact.exhibited rdf:resource = '#MuseePicasso'/>
+    <Painting.hasPainter rdf:resource = '#PabloPicasso'/>
+  </Painting>
+  <Painting rdf:ID = 'Guernica'>
+    <Artefact.title rdf:datatype = 'http://www.w3.org/2001/XMLSchema#string'>Guernica</Artefact.title>
+    <Artefact.year rdf:datatype = 'http://www.w3.org/2001/XMLSchema#string'>1937</Artefact.year>
+    <Painting.hasPainter rdf:resource = '#PabloPicasso'/>
+    <Artefact.exhibited rdf:resource = '#MuseeReineSofia'/>
+  </Painting>
+  <Museum rdf:ID = 'MuseeReineSofia'>
+    <Museum.city rdf:datatype = 'http://www.w3.org/2001/XMLSchema#string'>Madrid</Museum.city>
+    <Museum.name rdf:datatype = 'http://www.w3.org/2001/XMLSchema#string'>Musee de la Reine Sofia</Museum.name>
+    <Museum.exhibites rdf:resource = '#Guernica'/>
+  </Museum>
+</rdf:RDF>

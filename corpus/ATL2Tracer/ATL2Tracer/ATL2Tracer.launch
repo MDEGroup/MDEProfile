@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<launchConfiguration type="org.atl.eclipse.adt.launching.atlTransformation">
+<mapAttribute key="Model Handler">
+<mapEntry key="OUT" value=""/>
+<mapEntry key="ATL" value="EMF"/>
+<mapEntry key="IN" value=""/>
+</mapAttribute>
+<stringAttribute key="ATL File Name" value="/ATL2Tracer/ATL2Tracer/ATL2Tracer.atl"/>
+<mapAttribute key="Libs"/>
+<booleanAttribute key="Mode Debug" value="false"/>
+<mapAttribute key="ModelType">
+<mapEntry key="OUT" value="MODELOUTPUT"/>
+<mapEntry key="ATL" value="METAMODELINPUT"/>
+<mapEntry key="IN" value="MODELINPUT"/>
+</mapAttribute>
+<mapAttribute key="Path">
+<mapEntry key="OUT" value="/ATL2Tracer/TracerTest/Input/sample-ATL-0.2-Tracer.ecore"/>
+<mapEntry key="ATL" value="uri:http://www.eclipse.org/gmt/2005/ATL"/>
+<mapEntry key="IN" value="/ATL2Tracer/ATL2Tracer/sample-ATL-0.2.ecore"/>
+</mapAttribute>
+<stringAttribute key="Project Name" value="ATL2Tracer"/>
+<mapAttribute key="Output">
+<mapEntry key="OUT" value="ATL"/>
+</mapAttribute>
+<mapAttribute key="Input">
+<mapEntry key="IN" value="ATL"/>
+</mapAttribute>
+<booleanAttribute key="AllowInterModelReferences" value="false"/>
+</launchConfiguration>

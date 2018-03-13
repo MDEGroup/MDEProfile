@@ -1,0 +1,314 @@
+syntax KM3(k = 4) {
+
+	primitiveTemplate identifier for String default using NAME:
+		value = "%token%";
+
+	primitiveTemplate stringSymbol for String using STRING:
+		value = "%token%",
+		serializer="'\'' + %value%.toCString() + '\''";
+
+	primitiveTemplate integerSymbol for Integer default using INT:
+		value = "Integer.valueOf(%token%)";
+
+	primitiveTemplate floatSymbol for Double default using FLOAT:
+		value = "Double.valueOf(%token%)";
+
+	primitiveTemplate booleanSymbol for Boolean default using BOOLEAN:
+		value = "Boolean.valueOf(%token%)";
+
+--	productionRule main
+--		:	imports package*
+--		;
+--
+--	productionRule imports
+--		:	"import" NAME{} ";"
+--		;
+
+	template Metamodel main context
+		:	[ contents ] {indentIncr = 0, nbNL = 2, startNL = false}
+		;
+
+	template ModelElement abstract;
+
+	template Classifier abstract addToContext;
+
+	template Package
+		:	"package" name <before_block_bracket> "{" [
+				contents
+			] {nbNL = 2} "}"
+		;
+
+	template DataType
+		:	"datatype" name ";"
+		;
+
+-- WARNING ONLY FOR OCL Standard Library
+	template TemplateParameter addToContext
+		:	name
+		;
+-- End WARNING
+
+	template Class context
+		:	(isAbstract ? "abstract") "class" name 
+-- WARNING ONLY FOR OCL Standard Library
+--			(isDefined(parameters) ? "<" parameters{separator = ","} ">")
+-- End WARNING
+			(isDefined(supertypes) ?  "extends" supertypes{refersTo = name, separator = "," <after_supertypes_coma>, autoCreate = never, importContext})	-- pathProperty = package, pathSeparator = colons
+-- add declaration: java.lang.String lookIn = "";
+-- after: (("extends" ((temp=identifier
+-- add: (COLONS{lookIn = lookIn + ((lookIn.length() > 0) ? "." : "") + "package[" + temp + "]";} temp=identifier)* {System.out.println("look for " + temp + " in " + lookIn);
+-- until: ei.setRef(ret, "supertypes", "Class", "name", temp, lookIn, false);}
+
+			"{" [
+				structuralFeatures
+				operations
+			] "}"
+		;
+
+	template StructuralFeature abstract;
+
+	template Reference addToContext
+		:	"reference" name
+			$multiplicity
+			(isContainer ? "container")
+			(isDefined(subsetOf) ? "subsets" subsetOf{refersTo = name, separator = ","})
+			":" type{refersTo = name, autoCreate = never}
+			(isDefined(opposite) ?
+				"oppositeOf"
+				opposite{refersTo = name, lookIn = type, autoCreate = never}
+			)
+			";"
+		;
+
+	template Attribute
+		:	"attribute" name
+			$multiplicity
+			":" type{refersTo = name, autoCreate = never} ";"
+		;
+
+	template Operation
+		:	"operation" name "(" parameters{separator = ","} ")"
+			(isDefined(type) ?
+				":" type{refersTo = name, autoCreate = never}
+			) ";"
+		;
+
+	template Parameter
+		:	name ":" type{refersTo = name, autoCreate = never}
+		;
+
+	template Enumeration
+		:	"enumeration" name "{" [
+				literals
+			] "}"
+		;
+
+	template EnumLiteral
+		:	"literal" name ";"
+		;
+		
+	function multiplicity(StructuralFeature)
+		:
+			(lower = 1 and upper = 1 ?
+
+				:
+					(lower = 0 and upper = -1 ?
+							"[" "*" "]"
+						:
+							(upper = -1 ?
+									"[" lower "-" "*" "]"
+								:
+									"[" lower "-" upper "]"
+							)
+					)
+			)
+			(isOrdered ? "ordered")
+		;
+
+	symbols {
+		lsquare		= "[";
+		rsquare		= "]"	: rightSpace;
+		excl		= "!";
+		coma		= ",";
+		lparen		= "(";
+		rparen		= ")";
+		lcurly		= "{"	: leftSpace;
+		rcurly		= "}";
+		semi		= ";";
+		colon		= ":"	: leftSpace, rightSpace;
+		colons		= "::";
+		pipe		= "|";
+		sharp		= "#";
+		qmark		= "?";
+
+		-- operator symbols
+		point		= ".";
+		rarrow		= "->";
+		minus		= "-";
+		star		= "*";
+		slash		= "/";
+		plus		= "+";
+		eq		= "=";
+		gt		= ">";
+		lt		= "<";
+		ge		= ">=";
+		le		= "<=";
+		ne		= "<>";
+		larrow		= "<-";
+	}
+
+	lexer = "
+class KM3Lexer extends Lexer;
+
+options {
+	k = 2;
+	charVocabulary = '\\0' .. '\\u00FF';
+	testLiterals = false;
+}
+
+{
+
+	protected Token makeToken(int t) {
+		org.atl.engine.injectors.ebnf.LocationToken ret = null;
+
+		tokenObjectClass = org.atl.engine.injectors.ebnf.LocationToken.class;
+		ret = (org.atl.engine.injectors.ebnf.LocationToken)super.makeToken(t);
+		ret.setEndLine(getLine());
+		ret.setEndColumn(getColumn());
+
+		return ret;
+	}
+
+}
+
+
+protected
+NL
+	:	(	'\\r' '\\n'
+		|	'\\n' '\\r'	//Improbable
+		|	'\\r'
+		|	'\\n'
+		)
+	{newline();}
+	;
+
+WS
+	:	(	' '
+		|	'\\t'
+		|	NL
+		)
+	{ $setType(Token.SKIP); }
+	;
+
+COMMENT
+	:	\"--\"
+		(~(	'\\r'
+		|	'\\n'
+		))*
+		({LA(1) != EOF_CHAR}? NL)?
+	{ $setType(Token.SKIP); }
+	;
+
+protected
+DIGIT
+	:	'0'..'9'
+	;
+
+protected
+ALPHA
+	:	'a'..'z'
+	|	'A'..'Z'
+	|	'_'
+	//For Unicode compatibility (from 0000 to 00ff)
+	|	'\\u00C0' .. '\\u00D6'
+	|	'\\u00D8' .. '\\u00F6'
+	|	'\\u00F8' .. '\\u00FF'
+	;
+
+protected
+SNAME
+options {
+	testLiterals = true;
+}
+	:	(ALPHA) (ALPHA | DIGIT)*
+;
+
+NAME
+	:	(	s:SNAME {if(s.getType() != SNAME) $setType(s.getType());}
+		|	'\"'!
+			(	ESC
+			|	'\\n' {newline();}
+			|	~('\\\\'|'\\\"'|'\\n')
+			)*
+			'\"'!
+		)
+	{
+	if($getText.equals(\"true\")) $setType(BOOLEAN);
+	if($getText.equals(\"false\")) $setType(BOOLEAN);
+	}
+	;
+
+INT
+	:	(DIGIT)+
+		(('.' DIGIT)=> '.' (DIGIT)+ {$setType(FLOAT);})?
+	;
+
+protected
+ESC
+	:	'\\\\'!
+		(	'n' {$setText(\"\\n\");}
+		|	'r' {$setText(\"\\r\");}
+		|	't' {$setText(\"\\t\");}
+		|	'b' {$setText(\"\\b\");}
+		|	'f' {$setText(\"\\f\");}
+		|	'\"' {$setText(\"\\\"\");}
+		|	'\\'' {$setText(\"\\'\");}
+		|	'\\\\' {$setText(\"\\\\\");}
+		|	(
+				('0'..'3')
+				(
+					options {
+						warnWhenFollowAmbig = false;
+					}
+				:	('0'..'7')
+					(
+						options {
+							warnWhenFollowAmbig = false;
+						}
+					:	'0'..'7'
+					)?
+				)?
+			|	('4'..'7')
+				(
+					options {
+						warnWhenFollowAmbig = false;
+					}
+				:	('0'..'7')
+				)?
+			)
+				{
+					String s = $getText;
+					int i;
+					int ret = 0;
+					String ans;
+					for (i=0; i<s.length(); ++i)
+						ret = ret*8 + s.charAt(i) - '0';
+					ans = String.valueOf((char) ret);
+					$setText(ans);
+				}
+		)
+	;
+
+STRING
+	:	'\\''!
+		(	ESC
+		|	'\\n' {newline();}
+		|	~('\\\\'|'\\''|'\\n')
+		)*
+		'\\''!
+	;
+
+	";
+
+}
+

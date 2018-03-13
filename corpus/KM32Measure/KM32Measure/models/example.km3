@@ -1,0 +1,122 @@
+-- @name		DTD
+-- @version		1.0
+-- @domains		XML
+-- @authors		Pierrick Guyard (pierrick.guyard@gmail.com)
+-- @date		2005/06/20
+-- @description	This metamodel describes external DTD (Document Type Definition). The purpose of a DTD is to define the legal building blocks of an XML document. It defines the document structure with a list of legal elements. A DTD can be declared inline in your XML document, or as an external reference.
+-- @see			
+
+package DTD {
+
+	-- @begin definition of types
+	
+	enumeration Occurence {
+		literal zeroOrOne;
+		literal zeroOrMore;
+		literal oneOrMore;
+		literal one;
+	}
+
+	enumeration OtherAttributeTypeEnum {
+		literal cdata;
+		literal id;
+		literal idref;
+		literal entityType;
+		literal entities;
+		literal nmtoken;
+		literal nmtakens;
+	}
+	
+	-- @end definition of type
+	
+	-- @comment top element of the hierachie
+	abstract class TypeDescription {
+		attribute name : String;
+	}
+	
+	class Notation extends TypeDescription {
+		attribute content : String;	
+	}
+	
+	class Entity extends TypeDescription {
+		attribute content : String;
+		attribute isInternal : Boolean; --@comment and isExternal
+	}
+	
+	-- @begin element description
+	
+	abstract class Element extends TypeDescription {
+	}
+	
+	-- @comment represent ANY
+	class AnyElement extends Element {
+	}
+	
+	class RestrictedElement extends Element {
+		reference content[0-1] container : ElementContent;
+	}
+	
+		-- @begin content of element
+	abstract class ElementContent {}
+	
+	class Mixed extends ElementContent {
+		attribute elements : String;
+	}
+	
+	abstract class Children extends ElementContent {
+		attribute occ : Occurence;
+	}
+	
+	class Sequence extends Children {
+		reference children[2-*] ordered : Children;
+	}
+	
+	class Leaf extends Children  {
+		attribute elementName : String;
+	}
+	
+	class Choice extends Children {
+		reference childrenChoice[2-*] : Children;
+	}
+		-- @end content of element			
+	-- @end element description	
+	
+	class AttributeList extends TypeDescription {
+		reference containsAttributes[1-*] : AttributeDescription oppositeOf attributeList;
+	}
+	
+	-- @begin attribute description
+	abstract class AttributeDescription extends TypeDescription {
+		reference attributeList : AttributeList oppositeOf containsAttributes;
+		reference type container : AttributeType;
+	}
+	
+	class NoDefaultValue extends AttributeDescription {
+		attribute isRequired : Boolean; -- @ comment and isImplied
+	}
+	
+	class DefaultValue extends AttributeDescription {
+		attribute value : String;
+		attribute isFixed : Boolean;
+	}
+	
+		-- @begin type of attributes
+	abstract class AttributeType {
+	}
+	
+	class Enumeration extends AttributeType	{	
+		attribute values : String;
+	}
+	
+	class OtherAttributeType{
+		attribute type : OtherAttributeTypeEnum;
+	}
+		-- @end type of attributes
+	-- @end attribute description
+	
+}
+
+package PrimitiveTypes {
+	datatype String;
+	datatype Boolean;
+}

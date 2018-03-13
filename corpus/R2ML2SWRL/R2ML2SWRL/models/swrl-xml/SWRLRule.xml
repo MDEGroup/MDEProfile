@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ruleml:imp xmlns:owlx="http://www.w3.org/2003/05/owl-xml" xmlns:swrlx="http://www.w3.org/2003/11/swrlx" xmlns:ruleml="http://www.w3.org/2003/11/ruleml">
+	<ruleml:_body>
+		<swrlx:individualPropertyAtom swrlx:property="hasParent">
+			<ruleml:var>x1</ruleml:var>
+			<ruleml:var>x2</ruleml:var>
+		</swrlx:individualPropertyAtom>
+		<swrlx:individualPropertyAtom swrlx:property="hasBrother">
+			<ruleml:var>x2</ruleml:var>
+			<ruleml:var>x3</ruleml:var>
+		</swrlx:individualPropertyAtom>
+	</ruleml:_body>
+	<ruleml:_head>
+		<swrlx:individualPropertyAtom swrlx:property="hasUncle">
+			<ruleml:var>x1</ruleml:var>
+			<ruleml:var>x3</ruleml:var>
+		</swrlx:individualPropertyAtom>
+	</ruleml:_head>
+</ruleml:imp>

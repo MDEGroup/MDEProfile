@@ -1,0 +1,1736 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<Root xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="XML" startLine="2" endLine="955" name="WINDEV_DATABASE">
+  <children xsi:type="Attribute" name="name" value="euro2004"/>
+  <children xsi:type="Element" startLine="3" endLine="36" name="WINDEV_TABLE">
+    <children xsi:type="Attribute" name="name" value="cities"/>
+    <children xsi:type="Element" startLine="4" endLine="19" name="TableInfoTable">
+      <children xsi:type="Element" startLine="5" endLine="5" name="Field">
+        <children xsi:type="Text" startLine="5" name="#text" value="city_id"/>
+      </children>
+      <children xsi:type="Element" startLine="6" endLine="6" name="Type">
+        <children xsi:type="Text" startLine="6" name="#text" value="tinyint(4) unsigned"/>
+      </children>
+      <children xsi:type="Element" startLine="7" endLine="7" name="Null"/>
+      <children xsi:type="Element" startLine="8" endLine="8" name="Key">
+        <children xsi:type="Text" startLine="8" name="#text" value="PRI"/>
+      </children>
+      <children xsi:type="Element" startLine="9" endLine="9" name="Default"/>
+      <children xsi:type="Element" startLine="10" endLine="10" name="Extra">
+        <children xsi:type="Text" startLine="10" name="#text" value="auto_increment"/>
+      </children>
+      <children xsi:type="Element" startLine="11" endLine="11" name="Index_length">
+        <children xsi:type="Text" startLine="11" name="#text" value="0"/>
+      </children>
+      <children xsi:type="Element" startLine="12" endLine="12" name="Data_free">
+        <children xsi:type="Text" startLine="12" name="#text" value="0"/>
+      </children>
+      <children xsi:type="Element" startLine="13" endLine="13" name="Auto_increment">
+        <children xsi:type="Text" startLine="13" name="#text" value="0"/>
+      </children>
+      <children xsi:type="Element" startLine="14" endLine="14" name="Create_time"/>
+      <children xsi:type="Element" startLine="15" endLine="15" name="Update_time"/>
+      <children xsi:type="Element" startLine="16" endLine="16" name="Check_time"/>
+      <children xsi:type="Element" startLine="17" endLine="17" name="Create_options"/>
+      <children xsi:type="Element" startLine="18" endLine="18" name="Comment"/>
+    </children>
+    <children xsi:type="Element" startLine="20" endLine="35" name="TableInfoTable">
+      <children xsi:type="Element" startLine="21" endLine="21" name="Field">
+        <children xsi:type="Text" startLine="21" name="#text" value="name"/>
+      </children>
+      <children xsi:type="Element" startLine="22" endLine="22" name="Type">
+        <children xsi:type="Text" startLine="22" name="#text" value="varchar(25)"/>
+      </children>
+      <children xsi:type="Element" startLine="23" endLine="23" name="Null">
+        <children xsi:type="Text" startLine="23" name="#text" value="YES"/>
+      </children>
+      <children xsi:type="Element" startLine="24" endLine="24" name="Key"/>
+      <children xsi:type="Element" startLine="25" endLine="25" name="Default"/>
+      <children xsi:type="Element" startLine="26" endLine="26" name="Extra"/>
+      <children xsi:type="Element" startLine="27" endLine="27" name="Index_length">
+        <children xsi:type="Text" startLine="27" name="#text" value="0"/>
+      </children>
+      <children xsi:type="Element" startLine="28" endLine="28" name="Data_free">
+        <children xsi:type="Text" startLine="28" name="#text" value="0"/>
+      </children>
+      <children xsi:type="Element" startLine="29" endLine="29" name="Auto_increment">
+        <children xsi:type="Text" startLine="29" name="#text" value="0"/>
+      </children>
+      <children xsi:type="Element" startLine="30" endLine="30" name="Create_time"/>
+      <children xsi:type="Element" startLine="31" endLine="31" name="Update_time"/>
+      <children xsi:type="Element" startLine="32" endLine="32" name="Check_time"/>
+      <children xsi:type="Element" startLine="33" endLine="33" name="Create_options"/>
+      <children xsi:type="Element" startLine="34" endLine="34" name="Comment"/>
+    </children>
+  </children>
+  <children xsi:type="Element" startLine="37" endLine="70" name="WINDEV_TABLE">
+    <children xsi:type="Attribute" name="name" value="clubs"/>
+    <children xsi:type="Element" startLine="38" endLine="53" name="TableInfoTable">
+      <children xsi:type="Element" startLine="39" endLine="39" name="Field">
+        <children xsi:type="Text" startLine="39" name="#text" value="club_id"/>
+      </children>
+      <children xsi:type="Element" startLine="40" endLine="40" name="Type">
+        <children xsi:type="Text" startLine="40" name="#text" value="tinyint(4) unsigned"/>
+      </children>
+      <children xsi:type="Element" startLine="41" endLine="41" name="Null"/>
+      <children xsi:type="Element" startLine="42" endLine="42" name="Key">
+        <children xsi:type="Text" startLine="42" name="#text" value="PRI"/>
+      </children>
+      <children xsi:type="Element" startLine="43" endLine="43" name="Default"/>
+      <children xsi:type="Element" startLine="44" endLine="44" name="Extra">
+        <children xsi:type="Text" startLine="44" name="#text" value="auto_increment"/>
+      </children>
+      <children xsi:type="Element" startLine="45" endLine="45" name="Index_length">
+        <children xsi:type="Text" startLine="45" name="#text" value="0"/>
+      </children>
+      <children xsi:type="Element" startLine="46" endLine="46" name="Data_free">
+        <children xsi:type="Text" startLine="46" name="#text" value="0"/>
+      </children>
+      <children xsi:type="Element" startLine="47" endLine="47" name="Auto_increment">
+        <children xsi:type="Text" startLine="47" name="#text" value="0"/>
+      </children>
+      <children xsi:type="Element" startLine="48" endLine="48" name="Create_time"/>
+      <children xsi:type="Element" startLine="49" endLine="49" name="Update_time"/>
+      <children xsi:type="Element" startLine="50" endLine="50" name="Check_time"/>
+      <children xsi:type="Element" startLine="51" endLine="51" name="Create_options"/>
+      <children xsi:type="Element" startLine="52" endLine="52" name="Comment"/>
+    </children>
+    <children xsi:type="Element" startLine="54" endLine="69" name="TableInfoTable">
+      <children xsi:type="Element" startLine="55" endLine="55" name="Field">
+        <children xsi:type="Text" startLine="55" name="#text" value="name"/>
+      </children>
+      <children xsi:type="Element" startLine="56" endLine="56" name="Type">
+        <children xsi:type="Text" startLine="56" name="#text" value="varchar(30)"/>
+      </children>
+      <children xsi:type="Element" startLine="57" endLine="57" name="Null">
+        <children xsi:type="Text" startLine="57" name="#text" value="YES"/>
+      </children>
+      <children xsi:type="Element" startLine="58" endLine="58" name="Key">
+        <children xsi:type="Text" startLine="58" name="#text" value="MUL"/>
+      </children>
+      <children xsi:type="Element" startLine="59" endLine="59" name="Default"/>
+      <children xsi:type="Element" startLine="60" endLine="60" name="Extra"/>
+      <children xsi:type="Element" startLine="61" endLine="61" name="Index_length">
+        <children xsi:type="Text" startLine="61" name="#text" value="0"/>
+      </children>
+      <children xsi:type="Element" startLine="62" endLine="62" name="Data_free">
+        <children xsi:type="Text" startLine="62" name="#text" value="0"/>
+      </children>
+      <children xsi:type="Element" startLine="63" endLine="63" name="Auto_increment">
+        <children xsi:type="Text" startLine="63" name="#text" value="0"/>
+      </children>
+      <children xsi:type="Element" startLine="64" endLine="64" name="Create_time"/>
+      <children xsi:type="Element" startLine="65" endLine="65" name="Update_time"/>
+      <children xsi:type="Element" startLine="66" endLine="66" name="Check_time"/>
+      <children xsi:type="Element" startLine="67" endLine="67" name="Create_options"/>
+      <children xsi:type="Element" startLine="68" endLine="68" name="Comment"/>
+    </children>
+  </children>
+  <children xsi:type="Element" startLine="71" endLine="152" name="WINDEV_TABLE">
+    <children xsi:type="Attribute" name="name" value="coaches"/>
+    <children xsi:type="Element" startLine="72" endLine="87" name="TableInfoTable">
+      <children xsi:type="Element" startLine="73" endLine="73" name="Field">
+        <children xsi:type="Text" startLine="73" name="#text" value="coach_id"/>
+      </children>
+      <children xsi:type="Element" startLine="74" endLine="74" name="Type">
+        <children xsi:type="Text" startLine="74" name="#text" value="tinyint(4) unsigned"/>
+      </children>
+      <children xsi:type="Element" startLine="75" endLine="75" name="Null"/>
+      <children xsi:type="Element" startLine="76" endLine="76" name="Key">
+        <children xsi:type="Text" startLine="76" name="#text" value="PRI"/>
+      </children>
+      <children xsi:type="Element" startLine="77" endLine="77" name="Default"/>
+      <children xsi:type="Element" startLine="78" endLine="78" name="Extra">
+        <children xsi:type="Text" startLine="78" name="#text" value="auto_increment"/>
+      </children>
+      <children xsi:type="Element" startLine="79" endLine="79" name="Index_length">
+        <children xsi:type="Text" startLine="79" name="#text" value="0"/>
+      </children>
+      <children xsi:type="Element" startLine="80" endLine="80" name="Data_free">
+        <children xsi:type="Text" startLine="80" name="#text" value="0"/>
+      </children>
+      <children xsi:type="Element" startLine="81" endLine="81" name="Auto_increment">
+        <children xsi:type="Text" startLine="81" name="#text" value="0"/>
+      </children>
+      <children xsi:type="Element" startLine="82" endLine="82" name="Create_time"/>
+      <children xsi:type="Element" startLine="83" endLine="83" name="Update_time"/>
+      <children xsi:type="Element" startLine="84" endLine="84" name="Check_time"/>
+      <children xsi:type="Element" startLine="85" endLine="85" name="Create_options"/>
+      <children xsi:type="Element" startLine="86" endLine="86" name="Comment"/>
+    </children>
+    <children xsi:type="Element" startLine="88" endLine="103" name="TableInfoTable">
+      <children xsi:type="Element" startLine="89" endLine="89" name="Field">
+        <children xsi:type="Text" startLine="89" name="#text" value="name"/>
+      </children>
+      <children xsi:type="Element" startLine="90" endLine="90" name="Type">
+        <children xsi:type="Text" startLine="90" name="#text" value="varchar(20)"/>
+      </children>
+      <children xsi:type="Element" startLine="91" endLine="91" name="Null">
+        <children xsi:type="Text" startLine="91" name="#text" value="YES"/>
+      </children>
+      <children xsi:type="Element" startLine="92" endLine="92" name="Key"/>
+      <children xsi:type="Element" startLine="93" endLine="93" name="Default"/>
+      <children xsi:type="Element" startLine="94" endLine="94" name="Extra"/>
+      <children xsi:type="Element" startLine="95" endLine="95" name="Index_length">
+        <children xsi:type="Text" startLine="95" name="#text" value="0"/>
+      </children>
+      <children xsi:type="Element" startLine="96" endLine="96" name="Data_free">
+        <children xsi:type="Text" startLine="96" name="#text" value="0"/>
+      </children>
+      <children xsi:type="Element" startLine="97" endLine="97" name="Auto_increment">
+        <children xsi:type="Text" startLine="97" name="#text" value="0"/>
+      </children>
+      <children xsi:type="Element" startLine="98" endLine="98" name="Create_time"/>
+      <children xsi:type="Element" startLine="99" endLine="99" name="Update_time"/>
+      <children xsi:type="Element" startLine="100" endLine="100" name="Check_time"/>
+      <children xsi:type="Element" startLine="101" endLine="101" name="Create_options"/>
+      <children xsi:type="Element" startLine="102" endLine="102" name="Comment"/>
+    </children>
+    <children xsi:type="Element" startLine="104" endLine="119" name="TableInfoTable">
+      <children xsi:type="Element" startLine="105" endLine="105" name="Field">
+        <children xsi:type="Text" startLine="105" name="#text" value="birth_date"/>
+      </children>
+      <children xsi:type="Element" startLine="106" endLine="106" name="Type">
+        <children xsi:type="Text" startLine="106" name="#text" value="date"/>
+      </children>
+      <children xsi:type="Element" startLine="107" endLine="107" name="Null">
+        <children xsi:type="Text" startLine="107" name="#text" value="YES"/>
+      </children>
+      <children xsi:type="Element" startLine="108" endLine="108" name="Key"/>
+      <children xsi:type="Element" startLine="109" endLine="109" name="Default"/>
+      <children xsi:type="Element" startLine="110" endLine="110" name="Extra"/>
+      <children xsi:type="Element" startLine="111" endLine="111" name="Index_length">
+        <children xsi:type="Text" startLine="111" name="#text" value="0"/>
+      </children>
+      <children xsi:type="Element" startLine="112" endLine="112" name="Data_free">
+        <children xsi:type="Text" startLine="112" name="#text" value="0"/>
+      </children>
+      <children xsi:type="Element" startLine="113" endLine="113" name="Auto_increment">
+        <children xsi:type="Text" startLine="113" name="#text" value="0"/>
+      </children>
+      <children xsi:type="Element" startLine="114" endLine="114" name="Create_time"/>
+      <children xsi:type="Element" startLine="115" endLine="115" name="Update_time"/>
+      <children xsi:type="Element" startLine="116" endLine="116" name="Check_time"/>
+      <children xsi:type="Element" startLine="117" endLine="117" name="Create_options"/>
+      <children xsi:type="Element" startLine="118" endLine="118" name="Comment"/>
+    </children>
+    <children xsi:type="Element" startLine="120" endLine="135" name="TableInfoTable">
+      <children xsi:type="Element" startLine="121" endLine="121" name="Field">
+        <children xsi:type="Text" startLine="121" name="#text" value="photo"/>
+      </children>
+      <children xsi:type="Element" startLine="122" endLine="122" name="Type">
+        <children xsi:type="Text" startLine="122" name="#text" value="longblob"/>
+      </children>
+      <children xsi:type="Element" startLine="123" endLine="123" name="Null">
+        <children xsi:type="Text" startLine="123" name="#text" value="YES"/>
+      </children>
+      <children xsi:type="Element" startLine="124" endLine="124" name="Key"/>
+      <children xsi:type="Element" startLine="125" endLine="125" name="Default"/>
+      <children xsi:type="Element" startLine="126" endLine="126" name="Extra"/>
+      <children xsi:type="Element" startLine="127" endLine="127" name="Index_length">
+        <children xsi:type="Text" startLine="127" name="#text" value="0"/>
+      </children>
+      <children xsi:type="Element" startLine="128" endLine="128" name="Data_free">
+        <children xsi:type="Text" startLine="128" name="#text" value="0"/>
+      </children>
+      <children xsi:type="Element" startLine="129" endLine="129" name="Auto_increment">
+        <children xsi:type="Text" startLine="129" name="#text" value="0"/>
+      </children>
+      <children xsi:type="Element" startLine="130" endLine="130" name="Create_time"/>
+      <children xsi:type="Element" startLine="131" endLine="131" name="Update_time"/>
+      <children xsi:type="Element" startLine="132" endLine="132" name="Check_time"/>
+      <children xsi:type="Element" startLine="133" endLine="133" name="Create_options"/>
+      <children xsi:type="Element" startLine="134" endLine="134" name="Comment"/>
+    </children>
+    <children xsi:type="Element" startLine="136" endLine="151" name="TableInfoTable">
+      <children xsi:type="Element" startLine="137" endLine="137" name="Field">
+        <children xsi:type="Text" startLine="137" name="#text" value="team"/>
+      </children>
+      <children xsi:type="Element" startLine="138" endLine="138" name="Type">
+        <children xsi:type="Text" startLine="138" name="#text" value="tinyint(2) unsigned"/>
+      </children>
+      <children xsi:type="Element" startLine="139" endLine="139" name="Null"/>
+      <children xsi:type="Element" startLine="140" endLine="140" name="Key"/>
+      <children xsi:type="Element" startLine="141" endLine="141" name="Default">
+        <children xsi:type="Text" startLine="141" name="#text" value="0"/>
+      </children>
+      <children xsi:type="Element" startLine="142" endLine="142" name="Extra"/>
+      <children xsi:type="Element" startLine="143" endLine="143" name="Index_length">
+        <children xsi:type="Text" startLine="143" name="#text" value="0"/>
+      </children>
+      <children xsi:type="Element" startLine="144" endLine="144" name="Data_free">
+        <children xsi:type="Text" startLine="144" name="#text" value="0"/>
+      </children>
+      <children xsi:type="Element" startLine="145" endLine="145" name="Auto_increment">
+        <children xsi:type="Text" startLine="145" name="#text" value="0"/>
+      </children>
+      <children xsi:type="Element" startLine="146" endLine="146" name="Create_time"/>
+      <children xsi:type="Element" startLine="147" endLine="147" name="Update_time"/>
+      <children xsi:type="Element" startLine="148" endLine="148" name="Check_time"/>
+      <children xsi:type="Element" startLine="149" endLine="149" name="Create_options"/>
+      <children xsi:type="Element" startLine="150" endLine="150" name="Comment">
+        <children xsi:type="Text" startLine="150" name="#text" value="teams:team_id"/>
+      </children>
+    </children>
+  </children>
+  <children xsi:type="Element" startLine="153" endLine="202" name="WINDEV_TABLE">
+    <children xsi:type="Attribute" name="name" value="countries"/>
+    <children xsi:type="Element" startLine="154" endLine="169" name="TableInfoTable">
+      <children xsi:type="Element" startLine="155" endLine="155" name="Field">
+        <children xsi:type="Text" startLine="155" name="#text" value="country_id"/>
+      </children>
+      <children xsi:type="Element" startLine="156" endLine="156" name="Type">
+        <children xsi:type="Text" startLine="156" name="#text" value="tinyint(4) unsigned"/>
+      </children>
+      <children xsi:type="Element" startLine="157" endLine="157" name="Null"/>
+      <children xsi:type="Element" startLine="158" endLine="158" name="Key">
+        <children xsi:type="Text" startLine="158" name="#text" value="PRI"/>
+      </children>
+      <children xsi:type="Element" startLine="159" endLine="159" name="Default"/>
+      <children xsi:type="Element" startLine="160" endLine="160" name="Extra">
+        <children xsi:type="Text" startLine="160" name="#text" value="auto_increment"/>
+      </children>
+      <children xsi:type="Element" startLine="161" endLine="161" name="Index_length">
+        <children xsi:type="Text" startLine="161" name="#text" value="0"/>
+      </children>
+      <children xsi:type="Element" startLine="162" endLine="162" name="Data_free">
+        <children xsi:type="Text" startLine="162" name="#text" value="0"/>
+      </children>
+      <children xsi:type="Element" startLine="163" endLine="163" name="Auto_increment">
+        <children xsi:type="Text" startLine="163" name="#text" value="0"/>
+      </children>
+      <children xsi:type="Element" startLine="164" endLine="164" name="Create_time"/>
+      <children xsi:type="Element" startLine="165" endLine="165" name="Update_time"/>
+      <children xsi:type="Element" startLine="166" endLine="166" name="Check_time"/>
+      <children xsi:type="Element" startLine="167" endLine="167" name="Create_options"/>
+      <children xsi:type="Element" startLine="168" endLine="168" name="Comment"/>
+    </children>
+    <children xsi:type="Element" startLine="170" endLine="185" name="TableInfoTable">
+      <children xsi:type="Element" startLine="171" endLine="171" name="Field">
+        <children xsi:type="Text" startLine="171" name="#text" value="name"/>
+      </children>
+      <children xsi:type="Element" startLine="172" endLine="172" name="Type">
+        <children xsi:type="Text" startLine="172" name="#text" value="varchar(25)"/>
+      </children>
+      <children xsi:type="Element" startLine="173" endLine="173" name="Null">
+        <children xsi:type="Text" startLine="173" name="#text" value="YES"/>
+      </children>
+      <children xsi:type="Element" startLine="174" endLine="174" name="Key">
+        <children xsi:type="Text" startLine="174" name="#text" value="MUL"/>
+      </children>
+      <children xsi:type="Element" startLine="175" endLine="175" name="Default"/>
+      <children xsi:type="Element" startLine="176" endLine="176" name="Extra"/>
+      <children xsi:type="Element" startLine="177" endLine="177" name="Index_length">
+        <children xsi:type="Text" startLine="177" name="#text" value="0"/>
+      </children>
+      <children xsi:type="Element" startLine="178" endLine="178" name="Data_free">
+        <children xsi:type="Text" startLine="178" name="#text" value="0"/>
+      </children>
+      <children xsi:type="Element" startLine="179" endLine="179" name="Auto_increment">
+        <children xsi:type="Text" startLine="179" name="#text" value="0"/>
+      </children>
+      <children xsi:type="Element" startLine="180" endLine="180" name="Create_time"/>
+      <children xsi:type="Element" startLine="181" endLine="181" name="Update_time"/>
+      <children xsi:type="Element" startLine="182" endLine="182" name="Check_time"/>
+      <children xsi:type="Element" startLine="183" endLine="183" name="Create_options"/>
+      <children xsi:type="Element" startLine="184" endLine="184" name="Comment"/>
+    </children>
+    <children xsi:type="Element" startLine="186" endLine="201" name="TableInfoTable">
+      <children xsi:type="Element" startLine="187" endLine="187" name="Field">
+        <children xsi:type="Text" startLine="187" name="#text" value="flag"/>
+      </children>
+      <children xsi:type="Element" startLine="188" endLine="188" name="Type">
+        <children xsi:type="Text" startLine="188" name="#text" value="blob"/>
+      </children>
+      <children xsi:type="Element" startLine="189" endLine="189" name="Null">
+        <children xsi:type="Text" startLine="189" name="#text" value="YES"/>
+      </children>
+      <children xsi:type="Element" startLine="190" endLine="190" name="Key"/>
+      <children xsi:type="Element" startLine="191" endLine="191" name="Default"/>
+      <children xsi:type="Element" startLine="192" endLine="192" name="Extra"/>
+      <children xsi:type="Element" startLine="193" endLine="193" name="Index_length">
+        <children xsi:type="Text" startLine="193" name="#text" value="0"/>
+      </children>
+      <children xsi:type="Element" startLine="194" endLine="194" name="Data_free">
+        <children xsi:type="Text" startLine="194" name="#text" value="0"/>
+      </children>
+      <children xsi:type="Element" startLine="195" endLine="195" name="Auto_increment">
+        <children xsi:type="Text" startLine="195" name="#text" value="0"/>
+      </children>
+      <children xsi:type="Element" startLine="196" endLine="196" name="Create_time"/>
+      <children xsi:type="Element" startLine="197" endLine="197" name="Update_time"/>
+      <children xsi:type="Element" startLine="198" endLine="198" name="Check_time"/>
+      <children xsi:type="Element" startLine="199" endLine="199" name="Create_options"/>
+      <children xsi:type="Element" startLine="200" endLine="200" name="Comment"/>
+    </children>
+  </children>
+  <children xsi:type="Element" startLine="203" endLine="332" name="WINDEV_TABLE">
+    <children xsi:type="Attribute" name="name" value="goals"/>
+    <children xsi:type="Element" startLine="204" endLine="219" name="TableInfoTable">
+      <children xsi:type="Element" startLine="205" endLine="205" name="Field">
+        <children xsi:type="Text" startLine="205" name="#text" value="goal_id"/>
+      </children>
+      <children xsi:type="Element" startLine="206" endLine="206" name="Type">
+        <children xsi:type="Text" startLine="206" name="#text" value="int(4) unsigned"/>
+      </children>
+      <children xsi:type="Element" startLine="207" endLine="207" name="Null"/>
+      <children xsi:type="Element" startLine="208" endLine="208" name="Key">
+        <children xsi:type="Text" startLine="208" name="#text" value="PRI"/>
+      </children>
+      <children xsi:type="Element" startLine="209" endLine="209" name="Default"/>
+      <children xsi:type="Element" startLine="210" endLine="210" name="Extra">
+        <children xsi:type="Text" startLine="210" name="#text" value="auto_increment"/>
+      </children>
+      <children xsi:type="Element" startLine="211" endLine="211" name="Index_length">
+        <children xsi:type="Text" startLine="211" name="#text" value="0"/>
+      </children>
+      <children xsi:type="Element" startLine="212" endLine="212" name="Data_free">
+        <children xsi:type="Text" startLine="212" name="#text" value="0"/>
+      </children>
+      <children xsi:type="Element" startLine="213" endLine="213" name="Auto_increment">
+        <children xsi:type="Text" startLine="213" name="#text" value="0"/>
+      </children>
+      <children xsi:type="Element" startLine="214" endLine="214" name="Create_time"/>
+      <children xsi:type="Element" startLine="215" endLine="215" name="Update_time"/>
+      <children xsi:type="Element" startLine="216" endLine="216" name="Check_time"/>
+      <children xsi:type="Element" startLine="217" endLine="217" name="Create_options"/>
+      <children xsi:type="Element" startLine="218" endLine="218" name="Comment"/>
+    </children>
+    <children xsi:type="Element" startLine="220" endLine="235" name="TableInfoTable">
+      <children xsi:type="Element" startLine="221" endLine="221" name="Field">
+        <children xsi:type="Text" startLine="221" name="#text" value="match"/>
+      </children>
+      <children xsi:type="Element" startLine="222" endLine="222" name="Type">
+        <children xsi:type="Text" startLine="222" name="#text" value="tinyint(4) unsigned"/>
+      </children>
+      <children xsi:type="Element" startLine="223" endLine="223" name="Null"/>
+      <children xsi:type="Element" startLine="224" endLine="224" name="Key"/>
+      <children xsi:type="Element" startLine="225" endLine="225" name="Default">
+        <children xsi:type="Text" startLine="225" name="#text" value="0"/>
+      </children>
+      <children xsi:type="Element" startLine="226" endLine="226" name="Extra"/>
+      <children xsi:type="Element" startLine="227" endLine="227" name="Index_length">
+        <children xsi:type="Text" startLine="227" name="#text" value="0"/>
+      </children>
+      <children xsi:type="Element" startLine="228" endLine="228" name="Data_free">
+        <children xsi:type="Text" startLine="228" name="#text" value="0"/>
+      </children>
+      <children xsi:type="Element" startLine="229" endLine="229" name="Auto_increment">
+        <children xsi:type="Text" startLine="229" name="#text" value="0"/>
+      </children>
+      <children xsi:type="Element" startLine="230" endLine="230" name="Create_time"/>
+      <children xsi:type="Element" startLine="231" endLine="231" name="Update_time"/>
+      <children xsi:type="Element" startLine="232" endLine="232" name="Check_time"/>
+      <children xsi:type="Element" startLine="233" endLine="233" name="Create_options"/>
+      <children xsi:type="Element" startLine="234" endLine="234" name="Comment">
+        <children xsi:type="Text" startLine="234" name="#text" value="matches:match_id"/>
+      </children>
+    </children>
+    <children xsi:type="Element" startLine="236" endLine="251" name="TableInfoTable">
+      <children xsi:type="Element" startLine="237" endLine="237" name="Field">
+        <children xsi:type="Text" startLine="237" name="#text" value="player"/>
+      </children>
+      <children xsi:type="Element" startLine="238" endLine="238" name="Type">
+        <children xsi:type="Text" startLine="238" name="#text" value="int(4) unsigned"/>
+      </children>
+      <children xsi:type="Element" startLine="239" endLine="239" name="Null"/>
+      <children xsi:type="Element" startLine="240" endLine="240" name="Key"/>
+      <children xsi:type="Element" startLine="241" endLine="241" name="Default">
+        <children xsi:type="Text" startLine="241" name="#text" value="0"/>
+      </children>
+      <children xsi:type="Element" startLine="242" endLine="242" name="Extra"/>
+      <children xsi:type="Element" startLine="243" endLine="243" name="Index_length">
+        <children xsi:type="Text" startLine="243" name="#text" value="0"/>
+      </children>
+      <children xsi:type="Element" startLine="244" endLine="244" name="Data_free">
+        <children xsi:type="Text" startLine="244" name="#text" value="0"/>
+      </children>
+      <children xsi:type="Element" startLine="245" endLine="245" name="Auto_increment">
+        <children xsi:type="Text" startLine="245" name="#text" value="0"/>
+      </children>
+      <children xsi:type="Element" startLine="246" endLine="246" name="Create_time"/>
+      <children xsi:type="Element" startLine="247" endLine="247" name="Update_time"/>
+      <children xsi:type="Element" startLine="248" endLine="248" name="Check_time"/>
+      <children xsi:type="Element" startLine="249" endLine="249" name="Create_options"/>
+      <children xsi:type="Element" startLine="250" endLine="250" name="Comment">
+        <children xsi:type="Text" startLine="250" name="#text" value="players:player_id"/>
+      </children>
+    </children>
+    <children xsi:type="Element" startLine="252" endLine="267" name="TableInfoTable">
+      <children xsi:type="Element" startLine="253" endLine="253" name="Field">
+        <children xsi:type="Text" startLine="253" name="#text" value="time"/>
+      </children>
+      <children xsi:type="Element" startLine="254" endLine="254" name="Type">
+        <children xsi:type="Text" startLine="254" name="#text" value="tinyint(2) unsigned"/>
+      </children>
+      <children xsi:type="Element" startLine="255" endLine="255" name="Null"/>
+      <children xsi:type="Element" startLine="256" endLine="256" name="Key"/>
+      <children xsi:type="Element" startLine="257" endLine="257" name="Default">
+        <children xsi:type="Text" startLine="257" name="#text" value="0"/>
+      </children>
+      <children xsi:type="Element" startLine="258" endLine="258" name="Extra"/>
+      <children xsi:type="Element" startLine="259" endLine="259" name="Index_length">
+        <children xsi:type="Text" startLine="259" name="#text" value="0"/>
+      </children>
+      <children xsi:type="Element" startLine="260" endLine="260" name="Data_free">
+        <children xsi:type="Text" startLine="260" name="#text" value="0"/>
+      </children>
+      <children xsi:type="Element" startLine="261" endLine="261" name="Auto_increment">
+        <children xsi:type="Text" startLine="261" name="#text" value="0"/>
+      </children>
+      <children xsi:type="Element" startLine="262" endLine="262" name="Create_time"/>
+      <children xsi:type="Element" startLine="263" endLine="263" name="Update_time"/>
+      <children xsi:type="Element" startLine="264" endLine="264" name="Check_time"/>
+      <children xsi:type="Element" startLine="265" endLine="265" name="Create_options"/>
+      <children xsi:type="Element" startLine="266" endLine="266" name="Comment"/>
+    </children>
+    <children xsi:type="Element" startLine="268" endLine="283" name="TableInfoTable">
+      <children xsi:type="Element" startLine="269" endLine="269" name="Field">
+        <children xsi:type="Text" startLine="269" name="#text" value="added_time"/>
+      </children>
+      <children xsi:type="Element" startLine="270" endLine="270" name="Type">
+        <children xsi:type="Text" startLine="270" name="#text" value="tinyint(2) unsigned"/>
+      </children>
+      <children xsi:type="Element" startLine="271" endLine="271" name="Null"/>
+      <children xsi:type="Element" startLine="272" endLine="272" name="Key"/>
+      <children xsi:type="Element" startLine="273" endLine="273" name="Default">
+        <children xsi:type="Text" startLine="273" name="#text" value="0"/>
+      </children>
+      <children xsi:type="Element" startLine="274" endLine="274" name="Extra"/>
+      <children xsi:type="Element" startLine="275" endLine="275" name="Index_length">
+        <children xsi:type="Text" startLine="275" name="#text" value="0"/>
+      </children>
+      <children xsi:type="Element" startLine="276" endLine="276" name="Data_free">
+        <children xsi:type="Text" startLine="276" name="#text" value="0"/>
+      </children>
+      <children xsi:type="Element" startLine="277" endLine="277" name="Auto_increment">
+        <children xsi:type="Text" startLine="277" name="#text" value="0"/>
+      </children>
+      <children xsi:type="Element" startLine="278" endLine="278" name="Create_time"/>
+      <children xsi:type="Element" startLine="279" endLine="279" name="Update_time"/>
+      <children xsi:type="Element" startLine="280" endLine="280" name="Check_time"/>
+      <children xsi:type="Element" startLine="281" endLine="281" name="Create_options"/>
+      <children xsi:type="Element" startLine="282" endLine="282" name="Comment"/>
+    </children>
+    <children xsi:type="Element" startLine="284" endLine="299" name="TableInfoTable">
+      <children xsi:type="Element" startLine="285" endLine="285" name="Field">
+        <children xsi:type="Text" startLine="285" name="#text" value="extra_time"/>
+      </children>
+      <children xsi:type="Element" startLine="286" endLine="286" name="Type">
+        <children xsi:type="Text" startLine="286" name="#text" value="tinyint(2) unsigned"/>
+      </children>
+      <children xsi:type="Element" startLine="287" endLine="287" name="Null"/>
+      <children xsi:type="Element" startLine="288" endLine="288" name="Key"/>
+      <children xsi:type="Element" startLine="289" endLine="289" name="Default">
+        <children xsi:type="Text" startLine="289" name="#text" value="0"/>
+      </children>
+      <children xsi:type="Element" startLine="290" endLine="290" name="Extra"/>
+      <children xsi:type="Element" startLine="291" endLine="291" name="Index_length">
+        <children xsi:type="Text" startLine="291" name="#text" value="0"/>
+      </children>
+      <children xsi:type="Element" startLine="292" endLine="292" name="Data_free">
+        <children xsi:type="Text" startLine="292" name="#text" value="0"/>
+      </children>
+      <children xsi:type="Element" startLine="293" endLine="293" name="Auto_increment">
+        <children xsi:type="Text" startLine="293" name="#text" value="0"/>
+      </children>
+      <children xsi:type="Element" startLine="294" endLine="294" name="Create_time"/>
+      <children xsi:type="Element" startLine="295" endLine="295" name="Update_time"/>
+      <children xsi:type="Element" startLine="296" endLine="296" name="Check_time"/>
+      <children xsi:type="Element" startLine="297" endLine="297" name="Create_options"/>
+      <children xsi:type="Element" startLine="298" endLine="298" name="Comment"/>
+    </children>
+    <children xsi:type="Element" startLine="300" endLine="315" name="TableInfoTable">
+      <children xsi:type="Element" startLine="301" endLine="301" name="Field">
+        <children xsi:type="Text" startLine="301" name="#text" value="own_goal"/>
+      </children>
+      <children xsi:type="Element" startLine="302" endLine="302" name="Type">
+        <children xsi:type="Text" startLine="302" name="#text" value="enum('n','y')"/>
+      </children>
+      <children xsi:type="Element" startLine="303" endLine="303" name="Null">
+        <children xsi:type="Text" startLine="303" name="#text" value="YES"/>
+      </children>
+      <children xsi:type="Element" startLine="304" endLine="304" name="Key"/>
+      <children xsi:type="Element" startLine="305" endLine="305" name="Default">
+        <children xsi:type="Text" startLine="305" name="#text" value="n"/>
+      </children>
+      <children xsi:type="Element" startLine="306" endLine="306" name="Extra"/>
+      <children xsi:type="Element" startLine="307" endLine="307" name="Index_length">
+        <children xsi:type="Text" startLine="307" name="#text" value="0"/>
+      </children>
+      <children xsi:type="Element" startLine="308" endLine="308" name="Data_free">
+        <children xsi:type="Text" startLine="308" name="#text" value="0"/>
+      </children>
+      <children xsi:type="Element" startLine="309" endLine="309" name="Auto_increment">
+        <children xsi:type="Text" startLine="309" name="#text" value="0"/>
+      </children>
+      <children xsi:type="Element" startLine="310" endLine="310" name="Create_time"/>
+      <children xsi:type="Element" startLine="311" endLine="311" name="Update_time"/>
+      <children xsi:type="Element" startLine="312" endLine="312" name="Check_time"/>
+      <children xsi:type="Element" startLine="313" endLine="313" name="Create_options"/>
+      <children xsi:type="Element" startLine="314" endLine="314" name="Comment"/>
+    </children>
+    <children xsi:type="Element" startLine="316" endLine="331" name="TableInfoTable">
+      <children xsi:type="Element" startLine="317" endLine="317" name="Field">
+        <children xsi:type="Text" startLine="317" name="#text" value="penalty"/>
+      </children>
+      <children xsi:type="Element" startLine="318" endLine="318" name="Type">
+        <children xsi:type="Text" startLine="318" name="#text" value="enum('n','y')"/>
+      </children>
+      <children xsi:type="Element" startLine="319" endLine="319" name="Null">
+        <children xsi:type="Text" startLine="319" name="#text" value="YES"/>
+      </children>
+      <children xsi:type="Element" startLine="320" endLine="320" name="Key"/>
+      <children xsi:type="Element" startLine="321" endLine="321" name="Default">
+        <children xsi:type="Text" startLine="321" name="#text" value="n"/>
+      </children>
+      <children xsi:type="Element" startLine="322" endLine="322" name="Extra"/>
+      <children xsi:type="Element" startLine="323" endLine="323" name="Index_length">
+        <children xsi:type="Text" startLine="323" name="#text" value="0"/>
+      </children>
+      <children xsi:type="Element" startLine="324" endLine="324" name="Data_free">
+        <children xsi:type="Text" startLine="324" name="#text" value="0"/>
+      </children>
+      <children xsi:type="Element" startLine="325" endLine="325" name="Auto_increment">
+        <children xsi:type="Text" startLine="325" name="#text" value="0"/>
+      </children>
+      <children xsi:type="Element" startLine="326" endLine="326" name="Create_time"/>
+      <children xsi:type="Element" startLine="327" endLine="327" name="Update_time"/>
+      <children xsi:type="Element" startLine="328" endLine="328" name="Check_time"/>
+      <children xsi:type="Element" startLine="329" endLine="329" name="Create_options"/>
+      <children xsi:type="Element" startLine="330" endLine="330" name="Comment"/>
+    </children>
+  </children>
+  <children xsi:type="Element" startLine="333" endLine="462" name="WINDEV_TABLE">
+    <children xsi:type="Attribute" name="name" value="matches"/>
+    <children xsi:type="Element" startLine="334" endLine="349" name="TableInfoTable">
+      <children xsi:type="Element" startLine="335" endLine="335" name="Field">
+        <children xsi:type="Text" startLine="335" name="#text" value="match_id"/>
+      </children>
+      <children xsi:type="Element" startLine="336" endLine="336" name="Type">
+        <children xsi:type="Text" startLine="336" name="#text" value="tinyint(4) unsigned"/>
+      </children>
+      <children xsi:type="Element" startLine="337" endLine="337" name="Null"/>
+      <children xsi:type="Element" startLine="338" endLine="338" name="Key">
+        <children xsi:type="Text" startLine="338" name="#text" value="PRI"/>
+      </children>
+      <children xsi:type="Element" startLine="339" endLine="339" name="Default"/>
+      <children xsi:type="Element" startLine="340" endLine="340" name="Extra">
+        <children xsi:type="Text" startLine="340" name="#text" value="auto_increment"/>
+      </children>
+      <children xsi:type="Element" startLine="341" endLine="341" name="Index_length">
+        <children xsi:type="Text" startLine="341" name="#text" value="0"/>
+      </children>
+      <children xsi:type="Element" startLine="342" endLine="342" name="Data_free">
+        <children xsi:type="Text" startLine="342" name="#text" value="0"/>
+      </children>
+      <children xsi:type="Element" startLine="343" endLine="343" name="Auto_increment">
+        <children xsi:type="Text" startLine="343" name="#text" value="0"/>
+      </children>
+      <children xsi:type="Element" startLine="344" endLine="344" name="Create_time"/>
+      <children xsi:type="Element" startLine="345" endLine="345" name="Update_time"/>
+      <children xsi:type="Element" startLine="346" endLine="346" name="Check_time"/>
+      <children xsi:type="Element" startLine="347" endLine="347" name="Create_options"/>
+      <children xsi:type="Element" startLine="348" endLine="348" name="Comment"/>
+    </children>
+    <children xsi:type="Element" startLine="350" endLine="365" name="TableInfoTable">
+      <children xsi:type="Element" startLine="351" endLine="351" name="Field">
+        <children xsi:type="Text" startLine="351" name="#text" value="date"/>
+      </children>
+      <children xsi:type="Element" startLine="352" endLine="352" name="Type">
+        <children xsi:type="Text" startLine="352" name="#text" value="date"/>
+      </children>
+      <children xsi:type="Element" startLine="353" endLine="353" name="Null">
+        <children xsi:type="Text" startLine="353" name="#text" value="YES"/>
+      </children>
+      <children xsi:type="Element" startLine="354" endLine="354" name="Key"/>
+      <children xsi:type="Element" startLine="355" endLine="355" name="Default"/>
+      <children xsi:type="Element" startLine="356" endLine="356" name="Extra"/>
+      <children xsi:type="Element" startLine="357" endLine="357" name="Index_length">
+        <children xsi:type="Text" startLine="357" name="#text" value="0"/>
+      </children>
+      <children xsi:type="Element" startLine="358" endLine="358" name="Data_free">
+        <children xsi:type="Text" startLine="358" name="#text" value="0"/>
+      </children>
+      <children xsi:type="Element" startLine="359" endLine="359" name="Auto_increment">
+        <children xsi:type="Text" startLine="359" name="#text" value="0"/>
+      </children>
+      <children xsi:type="Element" startLine="360" endLine="360" name="Create_time"/>
+      <children xsi:type="Element" startLine="361" endLine="361" name="Update_time"/>
+      <children xsi:type="Element" startLine="362" endLine="362" name="Check_time"/>
+      <children xsi:type="Element" startLine="363" endLine="363" name="Create_options"/>
+      <children xsi:type="Element" startLine="364" endLine="364" name="Comment"/>
+    </children>
+    <children xsi:type="Element" startLine="366" endLine="381" name="TableInfoTable">
+      <children xsi:type="Element" startLine="367" endLine="367" name="Field">
+        <children xsi:type="Text" startLine="367" name="#text" value="team_1"/>
+      </children>
+      <children xsi:type="Element" startLine="368" endLine="368" name="Type">
+        <children xsi:type="Text" startLine="368" name="#text" value="tinyint(2) unsigned"/>
+      </children>
+      <children xsi:type="Element" startLine="369" endLine="369" name="Null"/>
+      <children xsi:type="Element" startLine="370" endLine="370" name="Key"/>
+      <children xsi:type="Element" startLine="371" endLine="371" name="Default">
+        <children xsi:type="Text" startLine="371" name="#text" value="0"/>
+      </children>
+      <children xsi:type="Element" startLine="372" endLine="372" name="Extra"/>
+      <children xsi:type="Element" startLine="373" endLine="373" name="Index_length">
+        <children xsi:type="Text" startLine="373" name="#text" value="0"/>
+      </children>
+      <children xsi:type="Element" startLine="374" endLine="374" name="Data_free">
+        <children xsi:type="Text" startLine="374" name="#text" value="0"/>
+      </children>
+      <children xsi:type="Element" startLine="375" endLine="375" name="Auto_increment">
+        <children xsi:type="Text" startLine="375" name="#text" value="0"/>
+      </children>
+      <children xsi:type="Element" startLine="376" endLine="376" name="Create_time"/>
+      <children xsi:type="Element" startLine="377" endLine="377" name="Update_time"/>
+      <children xsi:type="Element" startLine="378" endLine="378" name="Check_time"/>
+      <children xsi:type="Element" startLine="379" endLine="379" name="Create_options"/>
+      <children xsi:type="Element" startLine="380" endLine="380" name="Comment">
+        <children xsi:type="Text" startLine="380" name="#text" value="teams:team_id"/>
+      </children>
+    </children>
+    <children xsi:type="Element" startLine="382" endLine="397" name="TableInfoTable">
+      <children xsi:type="Element" startLine="383" endLine="383" name="Field">
+        <children xsi:type="Text" startLine="383" name="#text" value="team_2"/>
+      </children>
+      <children xsi:type="Element" startLine="384" endLine="384" name="Type">
+        <children xsi:type="Text" startLine="384" name="#text" value="tinyint(2) unsigned"/>
+      </children>
+      <children xsi:type="Element" startLine="385" endLine="385" name="Null"/>
+      <children xsi:type="Element" startLine="386" endLine="386" name="Key"/>
+      <children xsi:type="Element" startLine="387" endLine="387" name="Default">
+        <children xsi:type="Text" startLine="387" name="#text" value="0"/>
+      </children>
+      <children xsi:type="Element" startLine="388" endLine="388" name="Extra"/>
+      <children xsi:type="Element" startLine="389" endLine="389" name="Index_length">
+        <children xsi:type="Text" startLine="389" name="#text" value="0"/>
+      </children>
+      <children xsi:type="Element" startLine="390" endLine="390" name="Data_free">
+        <children xsi:type="Text" startLine="390" name="#text" value="0"/>
+      </children>
+      <children xsi:type="Element" startLine="391" endLine="391" name="Auto_increment">
+        <children xsi:type="Text" startLine="391" name="#text" value="0"/>
+      </children>
+      <children xsi:type="Element" startLine="392" endLine="392" name="Create_time"/>
+      <children xsi:type="Element" startLine="393" endLine="393" name="Update_time"/>
+      <children xsi:type="Element" startLine="394" endLine="394" name="Check_time"/>
+      <children xsi:type="Element" startLine="395" endLine="395" name="Create_options"/>
+      <children xsi:type="Element" startLine="396" endLine="396" name="Comment">
+        <children xsi:type="Text" startLine="396" name="#text" value="teams:team_id"/>
+      </children>
+    </children>
+    <children xsi:type="Element" startLine="398" endLine="413" name="TableInfoTable">
+      <children xsi:type="Element" startLine="399" endLine="399" name="Field">
+        <children xsi:type="Text" startLine="399" name="#text" value="stage"/>
+      </children>
+      <children xsi:type="Element" startLine="400" endLine="400" name="Type">
+        <children xsi:type="Text" startLine="400" name="#text" value="enum('Group','Quarter-final','Semi-final','Final')"/>
+      </children>
+      <children xsi:type="Element" startLine="401" endLine="401" name="Null">
+        <children xsi:type="Text" startLine="401" name="#text" value="YES"/>
+      </children>
+      <children xsi:type="Element" startLine="402" endLine="402" name="Key"/>
+      <children xsi:type="Element" startLine="403" endLine="403" name="Default"/>
+      <children xsi:type="Element" startLine="404" endLine="404" name="Extra"/>
+      <children xsi:type="Element" startLine="405" endLine="405" name="Index_length">
+        <children xsi:type="Text" startLine="405" name="#text" value="0"/>
+      </children>
+      <children xsi:type="Element" startLine="406" endLine="406" name="Data_free">
+        <children xsi:type="Text" startLine="406" name="#text" value="0"/>
+      </children>
+      <children xsi:type="Element" startLine="407" endLine="407" name="Auto_increment">
+        <children xsi:type="Text" startLine="407" name="#text" value="0"/>
+      </children>
+      <children xsi:type="Element" startLine="408" endLine="408" name="Create_time"/>
+      <children xsi:type="Element" startLine="409" endLine="409" name="Update_time"/>
+      <children xsi:type="Element" startLine="410" endLine="410" name="Check_time"/>
+      <children xsi:type="Element" startLine="411" endLine="411" name="Create_options"/>
+      <children xsi:type="Element" startLine="412" endLine="412" name="Comment"/>
+    </children>
+    <children xsi:type="Element" startLine="414" endLine="429" name="TableInfoTable">
+      <children xsi:type="Element" startLine="415" endLine="415" name="Field">
+        <children xsi:type="Text" startLine="415" name="#text" value="referee"/>
+      </children>
+      <children xsi:type="Element" startLine="416" endLine="416" name="Type">
+        <children xsi:type="Text" startLine="416" name="#text" value="tinyint(4) unsigned"/>
+      </children>
+      <children xsi:type="Element" startLine="417" endLine="417" name="Null"/>
+      <children xsi:type="Element" startLine="418" endLine="418" name="Key"/>
+      <children xsi:type="Element" startLine="419" endLine="419" name="Default">
+        <children xsi:type="Text" startLine="419" name="#text" value="0"/>
+      </children>
+      <children xsi:type="Element" startLine="420" endLine="420" name="Extra"/>
+      <children xsi:type="Element" startLine="421" endLine="421" name="Index_length">
+        <children xsi:type="Text" startLine="421" name="#text" value="0"/>
+      </children>
+      <children xsi:type="Element" startLine="422" endLine="422" name="Data_free">
+        <children xsi:type="Text" startLine="422" name="#text" value="0"/>
+      </children>
+      <children xsi:type="Element" startLine="423" endLine="423" name="Auto_increment">
+        <children xsi:type="Text" startLine="423" name="#text" value="0"/>
+      </children>
+      <children xsi:type="Element" startLine="424" endLine="424" name="Create_time"/>
+      <children xsi:type="Element" startLine="425" endLine="425" name="Update_time"/>
+      <children xsi:type="Element" startLine="426" endLine="426" name="Check_time"/>
+      <children xsi:type="Element" startLine="427" endLine="427" name="Create_options"/>
+      <children xsi:type="Element" startLine="428" endLine="428" name="Comment">
+        <children xsi:type="Text" startLine="428" name="#text" value="referees:referee_id"/>
+      </children>
+    </children>
+    <children xsi:type="Element" startLine="430" endLine="445" name="TableInfoTable">
+      <children xsi:type="Element" startLine="431" endLine="431" name="Field">
+        <children xsi:type="Text" startLine="431" name="#text" value="stadium"/>
+      </children>
+      <children xsi:type="Element" startLine="432" endLine="432" name="Type">
+        <children xsi:type="Text" startLine="432" name="#text" value="tinyint(4) unsigned"/>
+      </children>
+      <children xsi:type="Element" startLine="433" endLine="433" name="Null"/>
+      <children xsi:type="Element" startLine="434" endLine="434" name="Key"/>
+      <children xsi:type="Element" startLine="435" endLine="435" name="Default">
+        <children xsi:type="Text" startLine="435" name="#text" value="0"/>
+      </children>
+      <children xsi:type="Element" startLine="436" endLine="436" name="Extra"/>
+      <children xsi:type="Element" startLine="437" endLine="437" name="Index_length">
+        <children xsi:type="Text" startLine="437" name="#text" value="0"/>
+      </children>
+      <children xsi:type="Element" startLine="438" endLine="438" name="Data_free">
+        <children xsi:type="Text" startLine="438" name="#text" value="0"/>
+      </children>
+      <children xsi:type="Element" startLine="439" endLine="439" name="Auto_increment">
+        <children xsi:type="Text" startLine="439" name="#text" value="0"/>
+      </children>
+      <children xsi:type="Element" startLine="440" endLine="440" name="Create_time"/>
+      <children xsi:type="Element" startLine="441" endLine="441" name="Update_time"/>
+      <children xsi:type="Element" startLine="442" endLine="442" name="Check_time"/>
+      <children xsi:type="Element" startLine="443" endLine="443" name="Create_options"/>
+      <children xsi:type="Element" startLine="444" endLine="444" name="Comment">
+        <children xsi:type="Text" startLine="444" name="#text" value="stadiums:stadium_id"/>
+      </children>
+    </children>
+    <children xsi:type="Element" startLine="446" endLine="461" name="TableInfoTable">
+      <children xsi:type="Element" startLine="447" endLine="447" name="Field">
+        <children xsi:type="Text" startLine="447" name="#text" value="man_of_the_match"/>
+      </children>
+      <children xsi:type="Element" startLine="448" endLine="448" name="Type">
+        <children xsi:type="Text" startLine="448" name="#text" value="int(4) unsigned"/>
+      </children>
+      <children xsi:type="Element" startLine="449" endLine="449" name="Null"/>
+      <children xsi:type="Element" startLine="450" endLine="450" name="Key"/>
+      <children xsi:type="Element" startLine="451" endLine="451" name="Default">
+        <children xsi:type="Text" startLine="451" name="#text" value="0"/>
+      </children>
+      <children xsi:type="Element" startLine="452" endLine="452" name="Extra"/>
+      <children xsi:type="Element" startLine="453" endLine="453" name="Index_length">
+        <children xsi:type="Text" startLine="453" name="#text" value="0"/>
+      </children>
+      <children xsi:type="Element" startLine="454" endLine="454" name="Data_free">
+        <children xsi:type="Text" startLine="454" name="#text" value="0"/>
+      </children>
+      <children xsi:type="Element" startLine="455" endLine="455" name="Auto_increment">
+        <children xsi:type="Text" startLine="455" name="#text" value="0"/>
+      </children>
+      <children xsi:type="Element" startLine="456" endLine="456" name="Create_time"/>
+      <children xsi:type="Element" startLine="457" endLine="457" name="Update_time"/>
+      <children xsi:type="Element" startLine="458" endLine="458" name="Check_time"/>
+      <children xsi:type="Element" startLine="459" endLine="459" name="Create_options"/>
+      <children xsi:type="Element" startLine="460" endLine="460" name="Comment">
+        <children xsi:type="Text" startLine="460" name="#text" value="players:player_id"/>
+      </children>
+    </children>
+  </children>
+  <children xsi:type="Element" startLine="463" endLine="592" name="WINDEV_TABLE">
+    <children xsi:type="Attribute" name="name" value="players"/>
+    <children xsi:type="Element" startLine="464" endLine="479" name="TableInfoTable">
+      <children xsi:type="Element" startLine="465" endLine="465" name="Field">
+        <children xsi:type="Text" startLine="465" name="#text" value="player_id"/>
+      </children>
+      <children xsi:type="Element" startLine="466" endLine="466" name="Type">
+        <children xsi:type="Text" startLine="466" name="#text" value="int(4) unsigned"/>
+      </children>
+      <children xsi:type="Element" startLine="467" endLine="467" name="Null"/>
+      <children xsi:type="Element" startLine="468" endLine="468" name="Key">
+        <children xsi:type="Text" startLine="468" name="#text" value="PRI"/>
+      </children>
+      <children xsi:type="Element" startLine="469" endLine="469" name="Default"/>
+      <children xsi:type="Element" startLine="470" endLine="470" name="Extra">
+        <children xsi:type="Text" startLine="470" name="#text" value="auto_increment"/>
+      </children>
+      <children xsi:type="Element" startLine="471" endLine="471" name="Index_length">
+        <children xsi:type="Text" startLine="471" name="#text" value="0"/>
+      </children>
+      <children xsi:type="Element" startLine="472" endLine="472" name="Data_free">
+        <children xsi:type="Text" startLine="472" name="#text" value="0"/>
+      </children>
+      <children xsi:type="Element" startLine="473" endLine="473" name="Auto_increment">
+        <children xsi:type="Text" startLine="473" name="#text" value="0"/>
+      </children>
+      <children xsi:type="Element" startLine="474" endLine="474" name="Create_time"/>
+      <children xsi:type="Element" startLine="475" endLine="475" name="Update_time"/>
+      <children xsi:type="Element" startLine="476" endLine="476" name="Check_time"/>
+      <children xsi:type="Element" startLine="477" endLine="477" name="Create_options"/>
+      <children xsi:type="Element" startLine="478" endLine="478" name="Comment"/>
+    </children>
+    <children xsi:type="Element" startLine="480" endLine="495" name="TableInfoTable">
+      <children xsi:type="Element" startLine="481" endLine="481" name="Field">
+        <children xsi:type="Text" startLine="481" name="#text" value="name"/>
+      </children>
+      <children xsi:type="Element" startLine="482" endLine="482" name="Type">
+        <children xsi:type="Text" startLine="482" name="#text" value="varchar(25)"/>
+      </children>
+      <children xsi:type="Element" startLine="483" endLine="483" name="Null">
+        <children xsi:type="Text" startLine="483" name="#text" value="YES"/>
+      </children>
+      <children xsi:type="Element" startLine="484" endLine="484" name="Key"/>
+      <children xsi:type="Element" startLine="485" endLine="485" name="Default"/>
+      <children xsi:type="Element" startLine="486" endLine="486" name="Extra"/>
+      <children xsi:type="Element" startLine="487" endLine="487" name="Index_length">
+        <children xsi:type="Text" startLine="487" name="#text" value="0"/>
+      </children>
+      <children xsi:type="Element" startLine="488" endLine="488" name="Data_free">
+        <children xsi:type="Text" startLine="488" name="#text" value="0"/>
+      </children>
+      <children xsi:type="Element" startLine="489" endLine="489" name="Auto_increment">
+        <children xsi:type="Text" startLine="489" name="#text" value="0"/>
+      </children>
+      <children xsi:type="Element" startLine="490" endLine="490" name="Create_time"/>
+      <children xsi:type="Element" startLine="491" endLine="491" name="Update_time"/>
+      <children xsi:type="Element" startLine="492" endLine="492" name="Check_time"/>
+      <children xsi:type="Element" startLine="493" endLine="493" name="Create_options"/>
+      <children xsi:type="Element" startLine="494" endLine="494" name="Comment"/>
+    </children>
+    <children xsi:type="Element" startLine="496" endLine="511" name="TableInfoTable">
+      <children xsi:type="Element" startLine="497" endLine="497" name="Field">
+        <children xsi:type="Text" startLine="497" name="#text" value="team"/>
+      </children>
+      <children xsi:type="Element" startLine="498" endLine="498" name="Type">
+        <children xsi:type="Text" startLine="498" name="#text" value="tinyint(2) unsigned"/>
+      </children>
+      <children xsi:type="Element" startLine="499" endLine="499" name="Null"/>
+      <children xsi:type="Element" startLine="500" endLine="500" name="Key">
+        <children xsi:type="Text" startLine="500" name="#text" value="MUL"/>
+      </children>
+      <children xsi:type="Element" startLine="501" endLine="501" name="Default">
+        <children xsi:type="Text" startLine="501" name="#text" value="0"/>
+      </children>
+      <children xsi:type="Element" startLine="502" endLine="502" name="Extra"/>
+      <children xsi:type="Element" startLine="503" endLine="503" name="Index_length">
+        <children xsi:type="Text" startLine="503" name="#text" value="0"/>
+      </children>
+      <children xsi:type="Element" startLine="504" endLine="504" name="Data_free">
+        <children xsi:type="Text" startLine="504" name="#text" value="0"/>
+      </children>
+      <children xsi:type="Element" startLine="505" endLine="505" name="Auto_increment">
+        <children xsi:type="Text" startLine="505" name="#text" value="0"/>
+      </children>
+      <children xsi:type="Element" startLine="506" endLine="506" name="Create_time"/>
+      <children xsi:type="Element" startLine="507" endLine="507" name="Update_time"/>
+      <children xsi:type="Element" startLine="508" endLine="508" name="Check_time"/>
+      <children xsi:type="Element" startLine="509" endLine="509" name="Create_options"/>
+      <children xsi:type="Element" startLine="510" endLine="510" name="Comment">
+        <children xsi:type="Text" startLine="510" name="#text" value="teams:team_id"/>
+      </children>
+    </children>
+    <children xsi:type="Element" startLine="512" endLine="527" name="TableInfoTable">
+      <children xsi:type="Element" startLine="513" endLine="513" name="Field">
+        <children xsi:type="Text" startLine="513" name="#text" value="num_in_team"/>
+      </children>
+      <children xsi:type="Element" startLine="514" endLine="514" name="Type">
+        <children xsi:type="Text" startLine="514" name="#text" value="tinyint(2)"/>
+      </children>
+      <children xsi:type="Element" startLine="515" endLine="515" name="Null">
+        <children xsi:type="Text" startLine="515" name="#text" value="YES"/>
+      </children>
+      <children xsi:type="Element" startLine="516" endLine="516" name="Key"/>
+      <children xsi:type="Element" startLine="517" endLine="517" name="Default"/>
+      <children xsi:type="Element" startLine="518" endLine="518" name="Extra"/>
+      <children xsi:type="Element" startLine="519" endLine="519" name="Index_length">
+        <children xsi:type="Text" startLine="519" name="#text" value="0"/>
+      </children>
+      <children xsi:type="Element" startLine="520" endLine="520" name="Data_free">
+        <children xsi:type="Text" startLine="520" name="#text" value="0"/>
+      </children>
+      <children xsi:type="Element" startLine="521" endLine="521" name="Auto_increment">
+        <children xsi:type="Text" startLine="521" name="#text" value="0"/>
+      </children>
+      <children xsi:type="Element" startLine="522" endLine="522" name="Create_time"/>
+      <children xsi:type="Element" startLine="523" endLine="523" name="Update_time"/>
+      <children xsi:type="Element" startLine="524" endLine="524" name="Check_time"/>
+      <children xsi:type="Element" startLine="525" endLine="525" name="Create_options"/>
+      <children xsi:type="Element" startLine="526" endLine="526" name="Comment"/>
+    </children>
+    <children xsi:type="Element" startLine="528" endLine="543" name="TableInfoTable">
+      <children xsi:type="Element" startLine="529" endLine="529" name="Field">
+        <children xsi:type="Text" startLine="529" name="#text" value="position"/>
+      </children>
+      <children xsi:type="Element" startLine="530" endLine="530" name="Type">
+        <children xsi:type="Text" startLine="530" name="#text" value="enum('GK','DF','MD','FW')"/>
+      </children>
+      <children xsi:type="Element" startLine="531" endLine="531" name="Null">
+        <children xsi:type="Text" startLine="531" name="#text" value="YES"/>
+      </children>
+      <children xsi:type="Element" startLine="532" endLine="532" name="Key"/>
+      <children xsi:type="Element" startLine="533" endLine="533" name="Default"/>
+      <children xsi:type="Element" startLine="534" endLine="534" name="Extra"/>
+      <children xsi:type="Element" startLine="535" endLine="535" name="Index_length">
+        <children xsi:type="Text" startLine="535" name="#text" value="0"/>
+      </children>
+      <children xsi:type="Element" startLine="536" endLine="536" name="Data_free">
+        <children xsi:type="Text" startLine="536" name="#text" value="0"/>
+      </children>
+      <children xsi:type="Element" startLine="537" endLine="537" name="Auto_increment">
+        <children xsi:type="Text" startLine="537" name="#text" value="0"/>
+      </children>
+      <children xsi:type="Element" startLine="538" endLine="538" name="Create_time"/>
+      <children xsi:type="Element" startLine="539" endLine="539" name="Update_time"/>
+      <children xsi:type="Element" startLine="540" endLine="540" name="Check_time"/>
+      <children xsi:type="Element" startLine="541" endLine="541" name="Create_options"/>
+      <children xsi:type="Element" startLine="542" endLine="542" name="Comment"/>
+    </children>
+    <children xsi:type="Element" startLine="544" endLine="559" name="TableInfoTable">
+      <children xsi:type="Element" startLine="545" endLine="545" name="Field">
+        <children xsi:type="Text" startLine="545" name="#text" value="birth_date"/>
+      </children>
+      <children xsi:type="Element" startLine="546" endLine="546" name="Type">
+        <children xsi:type="Text" startLine="546" name="#text" value="date"/>
+      </children>
+      <children xsi:type="Element" startLine="547" endLine="547" name="Null">
+        <children xsi:type="Text" startLine="547" name="#text" value="YES"/>
+      </children>
+      <children xsi:type="Element" startLine="548" endLine="548" name="Key"/>
+      <children xsi:type="Element" startLine="549" endLine="549" name="Default"/>
+      <children xsi:type="Element" startLine="550" endLine="550" name="Extra"/>
+      <children xsi:type="Element" startLine="551" endLine="551" name="Index_length">
+        <children xsi:type="Text" startLine="551" name="#text" value="0"/>
+      </children>
+      <children xsi:type="Element" startLine="552" endLine="552" name="Data_free">
+        <children xsi:type="Text" startLine="552" name="#text" value="0"/>
+      </children>
+      <children xsi:type="Element" startLine="553" endLine="553" name="Auto_increment">
+        <children xsi:type="Text" startLine="553" name="#text" value="0"/>
+      </children>
+      <children xsi:type="Element" startLine="554" endLine="554" name="Create_time"/>
+      <children xsi:type="Element" startLine="555" endLine="555" name="Update_time"/>
+      <children xsi:type="Element" startLine="556" endLine="556" name="Check_time"/>
+      <children xsi:type="Element" startLine="557" endLine="557" name="Create_options"/>
+      <children xsi:type="Element" startLine="558" endLine="558" name="Comment"/>
+    </children>
+    <children xsi:type="Element" startLine="560" endLine="575" name="TableInfoTable">
+      <children xsi:type="Element" startLine="561" endLine="561" name="Field">
+        <children xsi:type="Text" startLine="561" name="#text" value="current_club"/>
+      </children>
+      <children xsi:type="Element" startLine="562" endLine="562" name="Type">
+        <children xsi:type="Text" startLine="562" name="#text" value="tinyint(4) unsigned"/>
+      </children>
+      <children xsi:type="Element" startLine="563" endLine="563" name="Null"/>
+      <children xsi:type="Element" startLine="564" endLine="564" name="Key"/>
+      <children xsi:type="Element" startLine="565" endLine="565" name="Default">
+        <children xsi:type="Text" startLine="565" name="#text" value="0"/>
+      </children>
+      <children xsi:type="Element" startLine="566" endLine="566" name="Extra"/>
+      <children xsi:type="Element" startLine="567" endLine="567" name="Index_length">
+        <children xsi:type="Text" startLine="567" name="#text" value="0"/>
+      </children>
+      <children xsi:type="Element" startLine="568" endLine="568" name="Data_free">
+        <children xsi:type="Text" startLine="568" name="#text" value="0"/>
+      </children>
+      <children xsi:type="Element" startLine="569" endLine="569" name="Auto_increment">
+        <children xsi:type="Text" startLine="569" name="#text" value="0"/>
+      </children>
+      <children xsi:type="Element" startLine="570" endLine="570" name="Create_time"/>
+      <children xsi:type="Element" startLine="571" endLine="571" name="Update_time"/>
+      <children xsi:type="Element" startLine="572" endLine="572" name="Check_time"/>
+      <children xsi:type="Element" startLine="573" endLine="573" name="Create_options"/>
+      <children xsi:type="Element" startLine="574" endLine="574" name="Comment">
+        <children xsi:type="Text" startLine="574" name="#text" value="clubs:club_id"/>
+      </children>
+    </children>
+    <children xsi:type="Element" startLine="576" endLine="591" name="TableInfoTable">
+      <children xsi:type="Element" startLine="577" endLine="577" name="Field">
+        <children xsi:type="Text" startLine="577" name="#text" value="photo"/>
+      </children>
+      <children xsi:type="Element" startLine="578" endLine="578" name="Type">
+        <children xsi:type="Text" startLine="578" name="#text" value="blob"/>
+      </children>
+      <children xsi:type="Element" startLine="579" endLine="579" name="Null">
+        <children xsi:type="Text" startLine="579" name="#text" value="YES"/>
+      </children>
+      <children xsi:type="Element" startLine="580" endLine="580" name="Key"/>
+      <children xsi:type="Element" startLine="581" endLine="581" name="Default"/>
+      <children xsi:type="Element" startLine="582" endLine="582" name="Extra"/>
+      <children xsi:type="Element" startLine="583" endLine="583" name="Index_length">
+        <children xsi:type="Text" startLine="583" name="#text" value="0"/>
+      </children>
+      <children xsi:type="Element" startLine="584" endLine="584" name="Data_free">
+        <children xsi:type="Text" startLine="584" name="#text" value="0"/>
+      </children>
+      <children xsi:type="Element" startLine="585" endLine="585" name="Auto_increment">
+        <children xsi:type="Text" startLine="585" name="#text" value="0"/>
+      </children>
+      <children xsi:type="Element" startLine="586" endLine="586" name="Create_time"/>
+      <children xsi:type="Element" startLine="587" endLine="587" name="Update_time"/>
+      <children xsi:type="Element" startLine="588" endLine="588" name="Check_time"/>
+      <children xsi:type="Element" startLine="589" endLine="589" name="Create_options"/>
+      <children xsi:type="Element" startLine="590" endLine="590" name="Comment"/>
+    </children>
+  </children>
+  <children xsi:type="Element" startLine="593" endLine="690" name="WINDEV_TABLE">
+    <children xsi:type="Attribute" name="name" value="referees"/>
+    <children xsi:type="Element" startLine="594" endLine="609" name="TableInfoTable">
+      <children xsi:type="Element" startLine="595" endLine="595" name="Field">
+        <children xsi:type="Text" startLine="595" name="#text" value="referee_id"/>
+      </children>
+      <children xsi:type="Element" startLine="596" endLine="596" name="Type">
+        <children xsi:type="Text" startLine="596" name="#text" value="tinyint(4) unsigned"/>
+      </children>
+      <children xsi:type="Element" startLine="597" endLine="597" name="Null"/>
+      <children xsi:type="Element" startLine="598" endLine="598" name="Key">
+        <children xsi:type="Text" startLine="598" name="#text" value="PRI"/>
+      </children>
+      <children xsi:type="Element" startLine="599" endLine="599" name="Default"/>
+      <children xsi:type="Element" startLine="600" endLine="600" name="Extra">
+        <children xsi:type="Text" startLine="600" name="#text" value="auto_increment"/>
+      </children>
+      <children xsi:type="Element" startLine="601" endLine="601" name="Index_length">
+        <children xsi:type="Text" startLine="601" name="#text" value="0"/>
+      </children>
+      <children xsi:type="Element" startLine="602" endLine="602" name="Data_free">
+        <children xsi:type="Text" startLine="602" name="#text" value="0"/>
+      </children>
+      <children xsi:type="Element" startLine="603" endLine="603" name="Auto_increment">
+        <children xsi:type="Text" startLine="603" name="#text" value="0"/>
+      </children>
+      <children xsi:type="Element" startLine="604" endLine="604" name="Create_time"/>
+      <children xsi:type="Element" startLine="605" endLine="605" name="Update_time"/>
+      <children xsi:type="Element" startLine="606" endLine="606" name="Check_time"/>
+      <children xsi:type="Element" startLine="607" endLine="607" name="Create_options"/>
+      <children xsi:type="Element" startLine="608" endLine="608" name="Comment"/>
+    </children>
+    <children xsi:type="Element" startLine="610" endLine="625" name="TableInfoTable">
+      <children xsi:type="Element" startLine="611" endLine="611" name="Field">
+        <children xsi:type="Text" startLine="611" name="#text" value="name"/>
+      </children>
+      <children xsi:type="Element" startLine="612" endLine="612" name="Type">
+        <children xsi:type="Text" startLine="612" name="#text" value="varchar(25)"/>
+      </children>
+      <children xsi:type="Element" startLine="613" endLine="613" name="Null">
+        <children xsi:type="Text" startLine="613" name="#text" value="YES"/>
+      </children>
+      <children xsi:type="Element" startLine="614" endLine="614" name="Key"/>
+      <children xsi:type="Element" startLine="615" endLine="615" name="Default"/>
+      <children xsi:type="Element" startLine="616" endLine="616" name="Extra"/>
+      <children xsi:type="Element" startLine="617" endLine="617" name="Index_length">
+        <children xsi:type="Text" startLine="617" name="#text" value="0"/>
+      </children>
+      <children xsi:type="Element" startLine="618" endLine="618" name="Data_free">
+        <children xsi:type="Text" startLine="618" name="#text" value="0"/>
+      </children>
+      <children xsi:type="Element" startLine="619" endLine="619" name="Auto_increment">
+        <children xsi:type="Text" startLine="619" name="#text" value="0"/>
+      </children>
+      <children xsi:type="Element" startLine="620" endLine="620" name="Create_time"/>
+      <children xsi:type="Element" startLine="621" endLine="621" name="Update_time"/>
+      <children xsi:type="Element" startLine="622" endLine="622" name="Check_time"/>
+      <children xsi:type="Element" startLine="623" endLine="623" name="Create_options"/>
+      <children xsi:type="Element" startLine="624" endLine="624" name="Comment"/>
+    </children>
+    <children xsi:type="Element" startLine="626" endLine="641" name="TableInfoTable">
+      <children xsi:type="Element" startLine="627" endLine="627" name="Field">
+        <children xsi:type="Text" startLine="627" name="#text" value="country"/>
+      </children>
+      <children xsi:type="Element" startLine="628" endLine="628" name="Type">
+        <children xsi:type="Text" startLine="628" name="#text" value="tinyint(4) unsigned"/>
+      </children>
+      <children xsi:type="Element" startLine="629" endLine="629" name="Null"/>
+      <children xsi:type="Element" startLine="630" endLine="630" name="Key"/>
+      <children xsi:type="Element" startLine="631" endLine="631" name="Default">
+        <children xsi:type="Text" startLine="631" name="#text" value="0"/>
+      </children>
+      <children xsi:type="Element" startLine="632" endLine="632" name="Extra"/>
+      <children xsi:type="Element" startLine="633" endLine="633" name="Index_length">
+        <children xsi:type="Text" startLine="633" name="#text" value="0"/>
+      </children>
+      <children xsi:type="Element" startLine="634" endLine="634" name="Data_free">
+        <children xsi:type="Text" startLine="634" name="#text" value="0"/>
+      </children>
+      <children xsi:type="Element" startLine="635" endLine="635" name="Auto_increment">
+        <children xsi:type="Text" startLine="635" name="#text" value="0"/>
+      </children>
+      <children xsi:type="Element" startLine="636" endLine="636" name="Create_time"/>
+      <children xsi:type="Element" startLine="637" endLine="637" name="Update_time"/>
+      <children xsi:type="Element" startLine="638" endLine="638" name="Check_time"/>
+      <children xsi:type="Element" startLine="639" endLine="639" name="Create_options"/>
+      <children xsi:type="Element" startLine="640" endLine="640" name="Comment">
+        <children xsi:type="Text" startLine="640" name="#text" value="countries:country_id"/>
+      </children>
+    </children>
+    <children xsi:type="Element" startLine="642" endLine="657" name="TableInfoTable">
+      <children xsi:type="Element" startLine="643" endLine="643" name="Field">
+        <children xsi:type="Text" startLine="643" name="#text" value="birth_date"/>
+      </children>
+      <children xsi:type="Element" startLine="644" endLine="644" name="Type">
+        <children xsi:type="Text" startLine="644" name="#text" value="date"/>
+      </children>
+      <children xsi:type="Element" startLine="645" endLine="645" name="Null">
+        <children xsi:type="Text" startLine="645" name="#text" value="YES"/>
+      </children>
+      <children xsi:type="Element" startLine="646" endLine="646" name="Key"/>
+      <children xsi:type="Element" startLine="647" endLine="647" name="Default"/>
+      <children xsi:type="Element" startLine="648" endLine="648" name="Extra"/>
+      <children xsi:type="Element" startLine="649" endLine="649" name="Index_length">
+        <children xsi:type="Text" startLine="649" name="#text" value="0"/>
+      </children>
+      <children xsi:type="Element" startLine="650" endLine="650" name="Data_free">
+        <children xsi:type="Text" startLine="650" name="#text" value="0"/>
+      </children>
+      <children xsi:type="Element" startLine="651" endLine="651" name="Auto_increment">
+        <children xsi:type="Text" startLine="651" name="#text" value="0"/>
+      </children>
+      <children xsi:type="Element" startLine="652" endLine="652" name="Create_time"/>
+      <children xsi:type="Element" startLine="653" endLine="653" name="Update_time"/>
+      <children xsi:type="Element" startLine="654" endLine="654" name="Check_time"/>
+      <children xsi:type="Element" startLine="655" endLine="655" name="Create_options"/>
+      <children xsi:type="Element" startLine="656" endLine="656" name="Comment"/>
+    </children>
+    <children xsi:type="Element" startLine="658" endLine="673" name="TableInfoTable">
+      <children xsi:type="Element" startLine="659" endLine="659" name="Field">
+        <children xsi:type="Text" startLine="659" name="#text" value="profession"/>
+      </children>
+      <children xsi:type="Element" startLine="660" endLine="660" name="Type">
+        <children xsi:type="Text" startLine="660" name="#text" value="varchar(30)"/>
+      </children>
+      <children xsi:type="Element" startLine="661" endLine="661" name="Null">
+        <children xsi:type="Text" startLine="661" name="#text" value="YES"/>
+      </children>
+      <children xsi:type="Element" startLine="662" endLine="662" name="Key"/>
+      <children xsi:type="Element" startLine="663" endLine="663" name="Default"/>
+      <children xsi:type="Element" startLine="664" endLine="664" name="Extra"/>
+      <children xsi:type="Element" startLine="665" endLine="665" name="Index_length">
+        <children xsi:type="Text" startLine="665" name="#text" value="0"/>
+      </children>
+      <children xsi:type="Element" startLine="666" endLine="666" name="Data_free">
+        <children xsi:type="Text" startLine="666" name="#text" value="0"/>
+      </children>
+      <children xsi:type="Element" startLine="667" endLine="667" name="Auto_increment">
+        <children xsi:type="Text" startLine="667" name="#text" value="0"/>
+      </children>
+      <children xsi:type="Element" startLine="668" endLine="668" name="Create_time"/>
+      <children xsi:type="Element" startLine="669" endLine="669" name="Update_time"/>
+      <children xsi:type="Element" startLine="670" endLine="670" name="Check_time"/>
+      <children xsi:type="Element" startLine="671" endLine="671" name="Create_options"/>
+      <children xsi:type="Element" startLine="672" endLine="672" name="Comment"/>
+    </children>
+    <children xsi:type="Element" startLine="674" endLine="689" name="TableInfoTable">
+      <children xsi:type="Element" startLine="675" endLine="675" name="Field">
+        <children xsi:type="Text" startLine="675" name="#text" value="photo"/>
+      </children>
+      <children xsi:type="Element" startLine="676" endLine="676" name="Type">
+        <children xsi:type="Text" startLine="676" name="#text" value="blob"/>
+      </children>
+      <children xsi:type="Element" startLine="677" endLine="677" name="Null">
+        <children xsi:type="Text" startLine="677" name="#text" value="YES"/>
+      </children>
+      <children xsi:type="Element" startLine="678" endLine="678" name="Key"/>
+      <children xsi:type="Element" startLine="679" endLine="679" name="Default"/>
+      <children xsi:type="Element" startLine="680" endLine="680" name="Extra"/>
+      <children xsi:type="Element" startLine="681" endLine="681" name="Index_length">
+        <children xsi:type="Text" startLine="681" name="#text" value="0"/>
+      </children>
+      <children xsi:type="Element" startLine="682" endLine="682" name="Data_free">
+        <children xsi:type="Text" startLine="682" name="#text" value="0"/>
+      </children>
+      <children xsi:type="Element" startLine="683" endLine="683" name="Auto_increment">
+        <children xsi:type="Text" startLine="683" name="#text" value="0"/>
+      </children>
+      <children xsi:type="Element" startLine="684" endLine="684" name="Create_time"/>
+      <children xsi:type="Element" startLine="685" endLine="685" name="Update_time"/>
+      <children xsi:type="Element" startLine="686" endLine="686" name="Check_time"/>
+      <children xsi:type="Element" startLine="687" endLine="687" name="Create_options"/>
+      <children xsi:type="Element" startLine="688" endLine="688" name="Comment"/>
+    </children>
+  </children>
+  <children xsi:type="Element" startLine="691" endLine="804" name="WINDEV_TABLE">
+    <children xsi:type="Attribute" name="name" value="stadiums"/>
+    <children xsi:type="Element" startLine="692" endLine="707" name="TableInfoTable">
+      <children xsi:type="Element" startLine="693" endLine="693" name="Field">
+        <children xsi:type="Text" startLine="693" name="#text" value="stadium_id"/>
+      </children>
+      <children xsi:type="Element" startLine="694" endLine="694" name="Type">
+        <children xsi:type="Text" startLine="694" name="#text" value="tinyint(4) unsigned"/>
+      </children>
+      <children xsi:type="Element" startLine="695" endLine="695" name="Null"/>
+      <children xsi:type="Element" startLine="696" endLine="696" name="Key">
+        <children xsi:type="Text" startLine="696" name="#text" value="PRI"/>
+      </children>
+      <children xsi:type="Element" startLine="697" endLine="697" name="Default"/>
+      <children xsi:type="Element" startLine="698" endLine="698" name="Extra">
+        <children xsi:type="Text" startLine="698" name="#text" value="auto_increment"/>
+      </children>
+      <children xsi:type="Element" startLine="699" endLine="699" name="Index_length">
+        <children xsi:type="Text" startLine="699" name="#text" value="0"/>
+      </children>
+      <children xsi:type="Element" startLine="700" endLine="700" name="Data_free">
+        <children xsi:type="Text" startLine="700" name="#text" value="0"/>
+      </children>
+      <children xsi:type="Element" startLine="701" endLine="701" name="Auto_increment">
+        <children xsi:type="Text" startLine="701" name="#text" value="0"/>
+      </children>
+      <children xsi:type="Element" startLine="702" endLine="702" name="Create_time"/>
+      <children xsi:type="Element" startLine="703" endLine="703" name="Update_time"/>
+      <children xsi:type="Element" startLine="704" endLine="704" name="Check_time"/>
+      <children xsi:type="Element" startLine="705" endLine="705" name="Create_options"/>
+      <children xsi:type="Element" startLine="706" endLine="706" name="Comment"/>
+    </children>
+    <children xsi:type="Element" startLine="708" endLine="723" name="TableInfoTable">
+      <children xsi:type="Element" startLine="709" endLine="709" name="Field">
+        <children xsi:type="Text" startLine="709" name="#text" value="name"/>
+      </children>
+      <children xsi:type="Element" startLine="710" endLine="710" name="Type">
+        <children xsi:type="Text" startLine="710" name="#text" value="varchar(30)"/>
+      </children>
+      <children xsi:type="Element" startLine="711" endLine="711" name="Null">
+        <children xsi:type="Text" startLine="711" name="#text" value="YES"/>
+      </children>
+      <children xsi:type="Element" startLine="712" endLine="712" name="Key"/>
+      <children xsi:type="Element" startLine="713" endLine="713" name="Default"/>
+      <children xsi:type="Element" startLine="714" endLine="714" name="Extra"/>
+      <children xsi:type="Element" startLine="715" endLine="715" name="Index_length">
+        <children xsi:type="Text" startLine="715" name="#text" value="0"/>
+      </children>
+      <children xsi:type="Element" startLine="716" endLine="716" name="Data_free">
+        <children xsi:type="Text" startLine="716" name="#text" value="0"/>
+      </children>
+      <children xsi:type="Element" startLine="717" endLine="717" name="Auto_increment">
+        <children xsi:type="Text" startLine="717" name="#text" value="0"/>
+      </children>
+      <children xsi:type="Element" startLine="718" endLine="718" name="Create_time"/>
+      <children xsi:type="Element" startLine="719" endLine="719" name="Update_time"/>
+      <children xsi:type="Element" startLine="720" endLine="720" name="Check_time"/>
+      <children xsi:type="Element" startLine="721" endLine="721" name="Create_options"/>
+      <children xsi:type="Element" startLine="722" endLine="722" name="Comment"/>
+    </children>
+    <children xsi:type="Element" startLine="724" endLine="739" name="TableInfoTable">
+      <children xsi:type="Element" startLine="725" endLine="725" name="Field">
+        <children xsi:type="Text" startLine="725" name="#text" value="owner"/>
+      </children>
+      <children xsi:type="Element" startLine="726" endLine="726" name="Type">
+        <children xsi:type="Text" startLine="726" name="#text" value="varchar(45)"/>
+      </children>
+      <children xsi:type="Element" startLine="727" endLine="727" name="Null">
+        <children xsi:type="Text" startLine="727" name="#text" value="YES"/>
+      </children>
+      <children xsi:type="Element" startLine="728" endLine="728" name="Key"/>
+      <children xsi:type="Element" startLine="729" endLine="729" name="Default"/>
+      <children xsi:type="Element" startLine="730" endLine="730" name="Extra"/>
+      <children xsi:type="Element" startLine="731" endLine="731" name="Index_length">
+        <children xsi:type="Text" startLine="731" name="#text" value="0"/>
+      </children>
+      <children xsi:type="Element" startLine="732" endLine="732" name="Data_free">
+        <children xsi:type="Text" startLine="732" name="#text" value="0"/>
+      </children>
+      <children xsi:type="Element" startLine="733" endLine="733" name="Auto_increment">
+        <children xsi:type="Text" startLine="733" name="#text" value="0"/>
+      </children>
+      <children xsi:type="Element" startLine="734" endLine="734" name="Create_time"/>
+      <children xsi:type="Element" startLine="735" endLine="735" name="Update_time"/>
+      <children xsi:type="Element" startLine="736" endLine="736" name="Check_time"/>
+      <children xsi:type="Element" startLine="737" endLine="737" name="Create_options"/>
+      <children xsi:type="Element" startLine="738" endLine="738" name="Comment"/>
+    </children>
+    <children xsi:type="Element" startLine="740" endLine="755" name="TableInfoTable">
+      <children xsi:type="Element" startLine="741" endLine="741" name="Field">
+        <children xsi:type="Text" startLine="741" name="#text" value="capacity"/>
+      </children>
+      <children xsi:type="Element" startLine="742" endLine="742" name="Type">
+        <children xsi:type="Text" startLine="742" name="#text" value="int(5) unsigned"/>
+      </children>
+      <children xsi:type="Element" startLine="743" endLine="743" name="Null"/>
+      <children xsi:type="Element" startLine="744" endLine="744" name="Key"/>
+      <children xsi:type="Element" startLine="745" endLine="745" name="Default">
+        <children xsi:type="Text" startLine="745" name="#text" value="0"/>
+      </children>
+      <children xsi:type="Element" startLine="746" endLine="746" name="Extra"/>
+      <children xsi:type="Element" startLine="747" endLine="747" name="Index_length">
+        <children xsi:type="Text" startLine="747" name="#text" value="0"/>
+      </children>
+      <children xsi:type="Element" startLine="748" endLine="748" name="Data_free">
+        <children xsi:type="Text" startLine="748" name="#text" value="0"/>
+      </children>
+      <children xsi:type="Element" startLine="749" endLine="749" name="Auto_increment">
+        <children xsi:type="Text" startLine="749" name="#text" value="0"/>
+      </children>
+      <children xsi:type="Element" startLine="750" endLine="750" name="Create_time"/>
+      <children xsi:type="Element" startLine="751" endLine="751" name="Update_time"/>
+      <children xsi:type="Element" startLine="752" endLine="752" name="Check_time"/>
+      <children xsi:type="Element" startLine="753" endLine="753" name="Create_options"/>
+      <children xsi:type="Element" startLine="754" endLine="754" name="Comment"/>
+    </children>
+    <children xsi:type="Element" startLine="756" endLine="771" name="TableInfoTable">
+      <children xsi:type="Element" startLine="757" endLine="757" name="Field">
+        <children xsi:type="Text" startLine="757" name="#text" value="architect"/>
+      </children>
+      <children xsi:type="Element" startLine="758" endLine="758" name="Type">
+        <children xsi:type="Text" startLine="758" name="#text" value="varchar(35)"/>
+      </children>
+      <children xsi:type="Element" startLine="759" endLine="759" name="Null">
+        <children xsi:type="Text" startLine="759" name="#text" value="YES"/>
+      </children>
+      <children xsi:type="Element" startLine="760" endLine="760" name="Key"/>
+      <children xsi:type="Element" startLine="761" endLine="761" name="Default"/>
+      <children xsi:type="Element" startLine="762" endLine="762" name="Extra"/>
+      <children xsi:type="Element" startLine="763" endLine="763" name="Index_length">
+        <children xsi:type="Text" startLine="763" name="#text" value="0"/>
+      </children>
+      <children xsi:type="Element" startLine="764" endLine="764" name="Data_free">
+        <children xsi:type="Text" startLine="764" name="#text" value="0"/>
+      </children>
+      <children xsi:type="Element" startLine="765" endLine="765" name="Auto_increment">
+        <children xsi:type="Text" startLine="765" name="#text" value="0"/>
+      </children>
+      <children xsi:type="Element" startLine="766" endLine="766" name="Create_time"/>
+      <children xsi:type="Element" startLine="767" endLine="767" name="Update_time"/>
+      <children xsi:type="Element" startLine="768" endLine="768" name="Check_time"/>
+      <children xsi:type="Element" startLine="769" endLine="769" name="Create_options"/>
+      <children xsi:type="Element" startLine="770" endLine="770" name="Comment"/>
+    </children>
+    <children xsi:type="Element" startLine="772" endLine="787" name="TableInfoTable">
+      <children xsi:type="Element" startLine="773" endLine="773" name="Field">
+        <children xsi:type="Text" startLine="773" name="#text" value="opened"/>
+      </children>
+      <children xsi:type="Element" startLine="774" endLine="774" name="Type">
+        <children xsi:type="Text" startLine="774" name="#text" value="date"/>
+      </children>
+      <children xsi:type="Element" startLine="775" endLine="775" name="Null">
+        <children xsi:type="Text" startLine="775" name="#text" value="YES"/>
+      </children>
+      <children xsi:type="Element" startLine="776" endLine="776" name="Key"/>
+      <children xsi:type="Element" startLine="777" endLine="777" name="Default"/>
+      <children xsi:type="Element" startLine="778" endLine="778" name="Extra"/>
+      <children xsi:type="Element" startLine="779" endLine="779" name="Index_length">
+        <children xsi:type="Text" startLine="779" name="#text" value="0"/>
+      </children>
+      <children xsi:type="Element" startLine="780" endLine="780" name="Data_free">
+        <children xsi:type="Text" startLine="780" name="#text" value="0"/>
+      </children>
+      <children xsi:type="Element" startLine="781" endLine="781" name="Auto_increment">
+        <children xsi:type="Text" startLine="781" name="#text" value="0"/>
+      </children>
+      <children xsi:type="Element" startLine="782" endLine="782" name="Create_time"/>
+      <children xsi:type="Element" startLine="783" endLine="783" name="Update_time"/>
+      <children xsi:type="Element" startLine="784" endLine="784" name="Check_time"/>
+      <children xsi:type="Element" startLine="785" endLine="785" name="Create_options"/>
+      <children xsi:type="Element" startLine="786" endLine="786" name="Comment"/>
+    </children>
+    <children xsi:type="Element" startLine="788" endLine="803" name="TableInfoTable">
+      <children xsi:type="Element" startLine="789" endLine="789" name="Field">
+        <children xsi:type="Text" startLine="789" name="#text" value="photo"/>
+      </children>
+      <children xsi:type="Element" startLine="790" endLine="790" name="Type">
+        <children xsi:type="Text" startLine="790" name="#text" value="blob"/>
+      </children>
+      <children xsi:type="Element" startLine="791" endLine="791" name="Null">
+        <children xsi:type="Text" startLine="791" name="#text" value="YES"/>
+      </children>
+      <children xsi:type="Element" startLine="792" endLine="792" name="Key"/>
+      <children xsi:type="Element" startLine="793" endLine="793" name="Default"/>
+      <children xsi:type="Element" startLine="794" endLine="794" name="Extra"/>
+      <children xsi:type="Element" startLine="795" endLine="795" name="Index_length">
+        <children xsi:type="Text" startLine="795" name="#text" value="0"/>
+      </children>
+      <children xsi:type="Element" startLine="796" endLine="796" name="Data_free">
+        <children xsi:type="Text" startLine="796" name="#text" value="0"/>
+      </children>
+      <children xsi:type="Element" startLine="797" endLine="797" name="Auto_increment">
+        <children xsi:type="Text" startLine="797" name="#text" value="0"/>
+      </children>
+      <children xsi:type="Element" startLine="798" endLine="798" name="Create_time"/>
+      <children xsi:type="Element" startLine="799" endLine="799" name="Update_time"/>
+      <children xsi:type="Element" startLine="800" endLine="800" name="Check_time"/>
+      <children xsi:type="Element" startLine="801" endLine="801" name="Create_options"/>
+      <children xsi:type="Element" startLine="802" endLine="802" name="Comment"/>
+    </children>
+  </children>
+  <children xsi:type="Element" startLine="805" endLine="838" name="WINDEV_TABLE">
+    <children xsi:type="Attribute" name="name" value="stadiums_cities"/>
+    <children xsi:type="Element" startLine="806" endLine="821" name="TableInfoTable">
+      <children xsi:type="Element" startLine="807" endLine="807" name="Field">
+        <children xsi:type="Text" startLine="807" name="#text" value="stadium_id"/>
+      </children>
+      <children xsi:type="Element" startLine="808" endLine="808" name="Type">
+        <children xsi:type="Text" startLine="808" name="#text" value="tinyint(4) unsigned"/>
+      </children>
+      <children xsi:type="Element" startLine="809" endLine="809" name="Null"/>
+      <children xsi:type="Element" startLine="810" endLine="810" name="Key">
+        <children xsi:type="Text" startLine="810" name="#text" value="PRI"/>
+      </children>
+      <children xsi:type="Element" startLine="811" endLine="811" name="Default">
+        <children xsi:type="Text" startLine="811" name="#text" value="0"/>
+      </children>
+      <children xsi:type="Element" startLine="812" endLine="812" name="Extra"/>
+      <children xsi:type="Element" startLine="813" endLine="813" name="Index_length">
+        <children xsi:type="Text" startLine="813" name="#text" value="0"/>
+      </children>
+      <children xsi:type="Element" startLine="814" endLine="814" name="Data_free">
+        <children xsi:type="Text" startLine="814" name="#text" value="0"/>
+      </children>
+      <children xsi:type="Element" startLine="815" endLine="815" name="Auto_increment">
+        <children xsi:type="Text" startLine="815" name="#text" value="0"/>
+      </children>
+      <children xsi:type="Element" startLine="816" endLine="816" name="Create_time"/>
+      <children xsi:type="Element" startLine="817" endLine="817" name="Update_time"/>
+      <children xsi:type="Element" startLine="818" endLine="818" name="Check_time"/>
+      <children xsi:type="Element" startLine="819" endLine="819" name="Create_options"/>
+      <children xsi:type="Element" startLine="820" endLine="820" name="Comment">
+        <children xsi:type="Text" startLine="820" name="#text" value="stadiums:stadium_id"/>
+      </children>
+    </children>
+    <children xsi:type="Element" startLine="822" endLine="837" name="TableInfoTable">
+      <children xsi:type="Element" startLine="823" endLine="823" name="Field">
+        <children xsi:type="Text" startLine="823" name="#text" value="city_id"/>
+      </children>
+      <children xsi:type="Element" startLine="824" endLine="824" name="Type">
+        <children xsi:type="Text" startLine="824" name="#text" value="tinyint(4) unsigned"/>
+      </children>
+      <children xsi:type="Element" startLine="825" endLine="825" name="Null"/>
+      <children xsi:type="Element" startLine="826" endLine="826" name="Key">
+        <children xsi:type="Text" startLine="826" name="#text" value="PRI"/>
+      </children>
+      <children xsi:type="Element" startLine="827" endLine="827" name="Default">
+        <children xsi:type="Text" startLine="827" name="#text" value="0"/>
+      </children>
+      <children xsi:type="Element" startLine="828" endLine="828" name="Extra"/>
+      <children xsi:type="Element" startLine="829" endLine="829" name="Index_length">
+        <children xsi:type="Text" startLine="829" name="#text" value="0"/>
+      </children>
+      <children xsi:type="Element" startLine="830" endLine="830" name="Data_free">
+        <children xsi:type="Text" startLine="830" name="#text" value="0"/>
+      </children>
+      <children xsi:type="Element" startLine="831" endLine="831" name="Auto_increment">
+        <children xsi:type="Text" startLine="831" name="#text" value="0"/>
+      </children>
+      <children xsi:type="Element" startLine="832" endLine="832" name="Create_time"/>
+      <children xsi:type="Element" startLine="833" endLine="833" name="Update_time"/>
+      <children xsi:type="Element" startLine="834" endLine="834" name="Check_time"/>
+      <children xsi:type="Element" startLine="835" endLine="835" name="Create_options"/>
+      <children xsi:type="Element" startLine="836" endLine="836" name="Comment">
+        <children xsi:type="Text" startLine="836" name="#text" value="cities:city_id"/>
+      </children>
+    </children>
+  </children>
+  <children xsi:type="Element" startLine="839" endLine="904" name="WINDEV_TABLE">
+    <children xsi:type="Attribute" name="name" value="teams"/>
+    <children xsi:type="Element" startLine="840" endLine="855" name="TableInfoTable">
+      <children xsi:type="Element" startLine="841" endLine="841" name="Field">
+        <children xsi:type="Text" startLine="841" name="#text" value="team_id"/>
+      </children>
+      <children xsi:type="Element" startLine="842" endLine="842" name="Type">
+        <children xsi:type="Text" startLine="842" name="#text" value="tinyint(2) unsigned"/>
+      </children>
+      <children xsi:type="Element" startLine="843" endLine="843" name="Null"/>
+      <children xsi:type="Element" startLine="844" endLine="844" name="Key">
+        <children xsi:type="Text" startLine="844" name="#text" value="PRI"/>
+      </children>
+      <children xsi:type="Element" startLine="845" endLine="845" name="Default"/>
+      <children xsi:type="Element" startLine="846" endLine="846" name="Extra">
+        <children xsi:type="Text" startLine="846" name="#text" value="auto_increment"/>
+      </children>
+      <children xsi:type="Element" startLine="847" endLine="847" name="Index_length">
+        <children xsi:type="Text" startLine="847" name="#text" value="0"/>
+      </children>
+      <children xsi:type="Element" startLine="848" endLine="848" name="Data_free">
+        <children xsi:type="Text" startLine="848" name="#text" value="0"/>
+      </children>
+      <children xsi:type="Element" startLine="849" endLine="849" name="Auto_increment">
+        <children xsi:type="Text" startLine="849" name="#text" value="0"/>
+      </children>
+      <children xsi:type="Element" startLine="850" endLine="850" name="Create_time"/>
+      <children xsi:type="Element" startLine="851" endLine="851" name="Update_time"/>
+      <children xsi:type="Element" startLine="852" endLine="852" name="Check_time"/>
+      <children xsi:type="Element" startLine="853" endLine="853" name="Create_options"/>
+      <children xsi:type="Element" startLine="854" endLine="854" name="Comment"/>
+    </children>
+    <children xsi:type="Element" startLine="856" endLine="871" name="TableInfoTable">
+      <children xsi:type="Element" startLine="857" endLine="857" name="Field">
+        <children xsi:type="Text" startLine="857" name="#text" value="country"/>
+      </children>
+      <children xsi:type="Element" startLine="858" endLine="858" name="Type">
+        <children xsi:type="Text" startLine="858" name="#text" value="tinyint(4) unsigned"/>
+      </children>
+      <children xsi:type="Element" startLine="859" endLine="859" name="Null"/>
+      <children xsi:type="Element" startLine="860" endLine="860" name="Key"/>
+      <children xsi:type="Element" startLine="861" endLine="861" name="Default">
+        <children xsi:type="Text" startLine="861" name="#text" value="0"/>
+      </children>
+      <children xsi:type="Element" startLine="862" endLine="862" name="Extra"/>
+      <children xsi:type="Element" startLine="863" endLine="863" name="Index_length">
+        <children xsi:type="Text" startLine="863" name="#text" value="0"/>
+      </children>
+      <children xsi:type="Element" startLine="864" endLine="864" name="Data_free">
+        <children xsi:type="Text" startLine="864" name="#text" value="0"/>
+      </children>
+      <children xsi:type="Element" startLine="865" endLine="865" name="Auto_increment">
+        <children xsi:type="Text" startLine="865" name="#text" value="0"/>
+      </children>
+      <children xsi:type="Element" startLine="866" endLine="866" name="Create_time"/>
+      <children xsi:type="Element" startLine="867" endLine="867" name="Update_time"/>
+      <children xsi:type="Element" startLine="868" endLine="868" name="Check_time"/>
+      <children xsi:type="Element" startLine="869" endLine="869" name="Create_options"/>
+      <children xsi:type="Element" startLine="870" endLine="870" name="Comment">
+        <children xsi:type="Text" startLine="870" name="#text" value="countries:country_id"/>
+      </children>
+    </children>
+    <children xsi:type="Element" startLine="872" endLine="887" name="TableInfoTable">
+      <children xsi:type="Element" startLine="873" endLine="873" name="Field">
+        <children xsi:type="Text" startLine="873" name="#text" value="photo"/>
+      </children>
+      <children xsi:type="Element" startLine="874" endLine="874" name="Type">
+        <children xsi:type="Text" startLine="874" name="#text" value="blob"/>
+      </children>
+      <children xsi:type="Element" startLine="875" endLine="875" name="Null">
+        <children xsi:type="Text" startLine="875" name="#text" value="YES"/>
+      </children>
+      <children xsi:type="Element" startLine="876" endLine="876" name="Key"/>
+      <children xsi:type="Element" startLine="877" endLine="877" name="Default"/>
+      <children xsi:type="Element" startLine="878" endLine="878" name="Extra"/>
+      <children xsi:type="Element" startLine="879" endLine="879" name="Index_length">
+        <children xsi:type="Text" startLine="879" name="#text" value="0"/>
+      </children>
+      <children xsi:type="Element" startLine="880" endLine="880" name="Data_free">
+        <children xsi:type="Text" startLine="880" name="#text" value="0"/>
+      </children>
+      <children xsi:type="Element" startLine="881" endLine="881" name="Auto_increment">
+        <children xsi:type="Text" startLine="881" name="#text" value="0"/>
+      </children>
+      <children xsi:type="Element" startLine="882" endLine="882" name="Create_time"/>
+      <children xsi:type="Element" startLine="883" endLine="883" name="Update_time"/>
+      <children xsi:type="Element" startLine="884" endLine="884" name="Check_time"/>
+      <children xsi:type="Element" startLine="885" endLine="885" name="Create_options"/>
+      <children xsi:type="Element" startLine="886" endLine="886" name="Comment"/>
+    </children>
+    <children xsi:type="Element" startLine="888" endLine="903" name="TableInfoTable">
+      <children xsi:type="Element" startLine="889" endLine="889" name="Field">
+        <children xsi:type="Text" startLine="889" name="#text" value="group"/>
+      </children>
+      <children xsi:type="Element" startLine="890" endLine="890" name="Type">
+        <children xsi:type="Text" startLine="890" name="#text" value="enum('A','B','C','D')"/>
+      </children>
+      <children xsi:type="Element" startLine="891" endLine="891" name="Null"/>
+      <children xsi:type="Element" startLine="892" endLine="892" name="Key"/>
+      <children xsi:type="Element" startLine="893" endLine="893" name="Default">
+        <children xsi:type="Text" startLine="893" name="#text" value="A"/>
+      </children>
+      <children xsi:type="Element" startLine="894" endLine="894" name="Extra"/>
+      <children xsi:type="Element" startLine="895" endLine="895" name="Index_length">
+        <children xsi:type="Text" startLine="895" name="#text" value="0"/>
+      </children>
+      <children xsi:type="Element" startLine="896" endLine="896" name="Data_free">
+        <children xsi:type="Text" startLine="896" name="#text" value="0"/>
+      </children>
+      <children xsi:type="Element" startLine="897" endLine="897" name="Auto_increment">
+        <children xsi:type="Text" startLine="897" name="#text" value="0"/>
+      </children>
+      <children xsi:type="Element" startLine="898" endLine="898" name="Create_time"/>
+      <children xsi:type="Element" startLine="899" endLine="899" name="Update_time"/>
+      <children xsi:type="Element" startLine="900" endLine="900" name="Check_time"/>
+      <children xsi:type="Element" startLine="901" endLine="901" name="Create_options"/>
+      <children xsi:type="Element" startLine="902" endLine="902" name="Comment"/>
+    </children>
+  </children>
+  <children xsi:type="Element" startLine="905" endLine="954" name="WINDEV_TABLE">
+    <children xsi:type="Attribute" name="name" value="tests"/>
+    <children xsi:type="Element" startLine="906" endLine="921" name="TableInfoTable">
+      <children xsi:type="Element" startLine="907" endLine="907" name="Field">
+        <children xsi:type="Text" startLine="907" name="#text" value="team_id"/>
+      </children>
+      <children xsi:type="Element" startLine="908" endLine="908" name="Type">
+        <children xsi:type="Text" startLine="908" name="#text" value="tinyint(2) unsigned"/>
+      </children>
+      <children xsi:type="Element" startLine="909" endLine="909" name="Null"/>
+      <children xsi:type="Element" startLine="910" endLine="910" name="Key">
+        <children xsi:type="Text" startLine="910" name="#text" value="PRI"/>
+      </children>
+      <children xsi:type="Element" startLine="911" endLine="911" name="Default"/>
+      <children xsi:type="Element" startLine="912" endLine="912" name="Extra">
+        <children xsi:type="Text" startLine="912" name="#text" value="auto_increment"/>
+      </children>
+      <children xsi:type="Element" startLine="913" endLine="913" name="Index_length">
+        <children xsi:type="Text" startLine="913" name="#text" value="0"/>
+      </children>
+      <children xsi:type="Element" startLine="914" endLine="914" name="Data_free">
+        <children xsi:type="Text" startLine="914" name="#text" value="0"/>
+      </children>
+      <children xsi:type="Element" startLine="915" endLine="915" name="Auto_increment">
+        <children xsi:type="Text" startLine="915" name="#text" value="0"/>
+      </children>
+      <children xsi:type="Element" startLine="916" endLine="916" name="Create_time"/>
+      <children xsi:type="Element" startLine="917" endLine="917" name="Update_time"/>
+      <children xsi:type="Element" startLine="918" endLine="918" name="Check_time"/>
+      <children xsi:type="Element" startLine="919" endLine="919" name="Create_options"/>
+      <children xsi:type="Element" startLine="920" endLine="920" name="Comment">
+        <children xsi:type="Text" startLine="920" name="#text" value="teams:team_id"/>
+      </children>
+    </children>
+    <children xsi:type="Element" startLine="922" endLine="937" name="TableInfoTable">
+      <children xsi:type="Element" startLine="923" endLine="923" name="Field">
+        <children xsi:type="Text" startLine="923" name="#text" value="country"/>
+      </children>
+      <children xsi:type="Element" startLine="924" endLine="924" name="Type">
+        <children xsi:type="Text" startLine="924" name="#text" value="tinyint(4) unsigned"/>
+      </children>
+      <children xsi:type="Element" startLine="925" endLine="925" name="Null"/>
+      <children xsi:type="Element" startLine="926" endLine="926" name="Key">
+        <children xsi:type="Text" startLine="926" name="#text" value="PRI"/>
+      </children>
+      <children xsi:type="Element" startLine="927" endLine="927" name="Default">
+        <children xsi:type="Text" startLine="927" name="#text" value="0"/>
+      </children>
+      <children xsi:type="Element" startLine="928" endLine="928" name="Extra"/>
+      <children xsi:type="Element" startLine="929" endLine="929" name="Index_length">
+        <children xsi:type="Text" startLine="929" name="#text" value="0"/>
+      </children>
+      <children xsi:type="Element" startLine="930" endLine="930" name="Data_free">
+        <children xsi:type="Text" startLine="930" name="#text" value="0"/>
+      </children>
+      <children xsi:type="Element" startLine="931" endLine="931" name="Auto_increment">
+        <children xsi:type="Text" startLine="931" name="#text" value="0"/>
+      </children>
+      <children xsi:type="Element" startLine="932" endLine="932" name="Create_time"/>
+      <children xsi:type="Element" startLine="933" endLine="933" name="Update_time"/>
+      <children xsi:type="Element" startLine="934" endLine="934" name="Check_time"/>
+      <children xsi:type="Element" startLine="935" endLine="935" name="Create_options"/>
+      <children xsi:type="Element" startLine="936" endLine="936" name="Comment">
+        <children xsi:type="Text" startLine="936" name="#text" value="countries:country_id"/>
+      </children>
+    </children>
+    <children xsi:type="Element" startLine="938" endLine="953" name="TableInfoTable">
+      <children xsi:type="Element" startLine="939" endLine="939" name="Field">
+        <children xsi:type="Text" startLine="939" name="#text" value="player"/>
+      </children>
+      <children xsi:type="Element" startLine="940" endLine="940" name="Type">
+        <children xsi:type="Text" startLine="940" name="#text" value="tinyint(4) unsigned"/>
+      </children>
+      <children xsi:type="Element" startLine="941" endLine="941" name="Null"/>
+      <children xsi:type="Element" startLine="942" endLine="942" name="Key">
+        <children xsi:type="Text" startLine="942" name="#text" value="PRI"/>
+      </children>
+      <children xsi:type="Element" startLine="943" endLine="943" name="Default"/>
+      <children xsi:type="Element" startLine="944" endLine="944" name="Extra"/>
+      <children xsi:type="Element" startLine="945" endLine="945" name="Index_length">
+        <children xsi:type="Text" startLine="945" name="#text" value="0"/>
+      </children>
+      <children xsi:type="Element" startLine="946" endLine="946" name="Data_free">
+        <children xsi:type="Text" startLine="946" name="#text" value="0"/>
+      </children>
+      <children xsi:type="Element" startLine="947" endLine="947" name="Auto_increment">
+        <children xsi:type="Text" startLine="947" name="#text" value="0"/>
+      </children>
+      <children xsi:type="Element" startLine="948" endLine="948" name="Create_time"/>
+      <children xsi:type="Element" startLine="949" endLine="949" name="Update_time"/>
+      <children xsi:type="Element" startLine="950" endLine="950" name="Check_time"/>
+      <children xsi:type="Element" startLine="951" endLine="951" name="Create_options"/>
+      <children xsi:type="Element" startLine="952" endLine="952" name="Comment">
+        <children xsi:type="Text" startLine="952" name="#text" value="players:player_id"/>
+      </children>
+    </children>
+  </children>
+</Root>

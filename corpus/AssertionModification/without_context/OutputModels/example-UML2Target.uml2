@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<uml:Model xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:uml="http://www.eclipse.org/uml2/1.0.0/UML" name="example">
+  <ownedMember xsi:type="uml:Class" name="A">
+    <ownedOperation name="op">
+      <ownedRule name="Q2">
+        <specification xsi:type="uml:LiteralString" value="post ::= {Q2 : S>5}"/>
+      </ownedRule>
+      <ownedRule name="P2">
+        <specification xsi:type="uml:LiteralString" value="pre ::= {P2 : x &lt; 0 }"/>
+      </ownedRule>
+      <ownedParameter name="x" type="//@ownedMember.0/@nestedClassifier.0"/>
+    </ownedOperation>
+    <nestedClassifier xsi:type="uml:DataType" name="T"/>
+    <nestedClassifier xsi:type="uml:DataType" name="S"/>
+  </ownedMember>
+</uml:Model>

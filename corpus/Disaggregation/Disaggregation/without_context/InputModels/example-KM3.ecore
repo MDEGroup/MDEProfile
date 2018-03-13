@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<km3:Metamodel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:km3="http://www.eclipse.org/gmt/2005/KM3" location="1:1-43:2">
+  <contents location="1:1-37:2" name="example">
+    <contents xsi:type="km3:Class" location="3:2-35:3" name="AccomodationBooking">
+      <structuralFeatures xsi:type="km3:Attribute" location="4:9-4:38" name="bookingId" lower="1" upper="1" type="//@contents.1/@contents.0"/>
+      <structuralFeatures xsi:type="km3:Attribute" location="7:9-7:35" name="adresse" lower="1" upper="1" type="//@contents.1/@contents.1">
+        <commentsBefore>-- @label PersonalDetails</commentsBefore>
+      </structuralFeatures>
+      <structuralFeatures xsi:type="km3:Attribute" location="10:9-10:33" name="name" lower="1" upper="1" type="//@contents.1/@contents.1">
+        <commentsBefore>-- @label PersonalDetails</commentsBefore>
+      </structuralFeatures>
+      <structuralFeatures xsi:type="km3:Attribute" location="13:9-13:33" name="age" lower="1" upper="1" type="//@contents.1/@contents.0">
+        <commentsBefore>-- @label PersonalDetails</commentsBefore>
+      </structuralFeatures>
+      <structuralFeatures xsi:type="km3:Attribute" location="16:9-16:35" name="course" lower="1" upper="1" type="//@contents.1/@contents.1">
+        <commentsBefore>-- @label CourseDetails</commentsBefore>
+      </structuralFeatures>
+      <structuralFeatures xsi:type="km3:Attribute" location="19:9-19:34" name="year" lower="1" upper="1" type="//@contents.1/@contents.0">
+        <commentsBefore>-- @label CourseDetails</commentsBefore>
+      </structuralFeatures>
+      <structuralFeatures xsi:type="km3:Attribute" location="22:9-22:34" name="hall1" lower="1" upper="1" type="//@contents.1/@contents.1">
+        <commentsBefore>-- @label Preference</commentsBefore>
+      </structuralFeatures>
+      <structuralFeatures xsi:type="km3:Attribute" location="25:9-25:34" name="hall2" lower="1" upper="1" type="//@contents.1/@contents.1">
+        <commentsBefore>-- @label Preference</commentsBefore>
+      </structuralFeatures>
+      <structuralFeatures xsi:type="km3:Attribute" location="28:9-28:34" name="hall3" lower="1" upper="1" type="//@contents.1/@contents.1">
+        <commentsBefore>-- @label Preference</commentsBefore>
+      </structuralFeatures>
+      <structuralFeatures xsi:type="km3:Attribute" location="31:9-31:37" name="smoking" lower="1" upper="1" type="//@contents.1/@contents.2">
+        <commentsBefore>-- @label Preference</commentsBefore>
+      </structuralFeatures>
+      <structuralFeatures xsi:type="km3:Attribute" location="34:9-34:42" name="selfcatering" lower="1" upper="1" type="//@contents.1/@contents.2">
+        <commentsBefore>-- @label Preference</commentsBefore>
+      </structuralFeatures>
+    </contents>
+  </contents>
+  <contents location="39:1-43:2" name="PrimitiveTypes">
+    <contents xsi:type="km3:DataType" location="40:1-40:18" name="Integer"/>
+    <contents xsi:type="km3:DataType" location="41:1-41:17" name="String"/>
+    <contents xsi:type="km3:DataType" location="42:1-42:18" name="Boolean"/>
+  </contents>
+</km3:Metamodel>

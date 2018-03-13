@@ -1,0 +1,47 @@
+package MySQL {
+
+	abstract class NamedElement {
+		attribute name : String;
+	}
+
+	class DataBase extends NamedElement {
+		reference tables[*] container : Table oppositeOf database;
+	}
+
+	class Table extends NamedElement {
+		reference columns[*] ordered container : Column oppositeOf table;
+		reference database : DataBase oppositeOf tables;
+	}
+	
+	class Column extends NamedElement {
+		attribute type : String;
+		attribute isPrimaryKey : Boolean;
+		attribute null : Boolean;
+		attribute defaultValue : String;
+		attribute comment : String;
+		reference table : Table oppositeOf columns;
+	}
+	
+	class IntegerColumn extends Column {
+		attribute isAutoIncrement : Boolean;
+	}
+	
+	class EnumColumn extends Column {
+		reference enumSet container : EnumSet;
+	}
+	
+	class EnumSet {
+		reference enumItems[*] container : EnumItem oppositeOf enumSet;
+	}
+	
+	class EnumItem extends NamedElement {
+		reference enumSet : EnumSet oppositeOf enumItems;
+	}
+
+}
+
+package PrimitiveTypes {
+	datatype Boolean;
+	datatype Integer;
+	datatype String;
+}

@@ -1,0 +1,25 @@
+package example {
+
+ class A {
+  attribute akey : Integer;
+ }
+
+ class B {
+  attribute bkey : Integer;
+  attribute aForeignKey : Integer;
+ }
+
+ class C {
+  attribute ckey : Integer;
+  attribute bForeignKey : Integer;
+ }
+}
+
+package PrimitiveTypes {
+
+ datatype Boolean;
+
+ datatype Integer;
+
+ datatype String;
+}

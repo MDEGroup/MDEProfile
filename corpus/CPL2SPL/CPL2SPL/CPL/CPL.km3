@@ -1,0 +1,197 @@
+-- Syntactic metamodel of CPL
+-- RFC: http://www.faqs.org/rfcs/rfc3880.html (includes examples)
+package CPL {
+
+	abstract class Element {
+	}
+
+	class CPL extends Element {
+		-- no ancillary information defined yet
+
+		reference subActions[*] ordered container : SubAction;
+		reference outgoing[0-1] container : Outgoing;
+		reference incoming[0-1] container : Incoming;
+	}
+
+-- @begin Node Containers
+	abstract class NodeContainer extends Element {
+		reference contents[0-1] container : Node;
+	}
+
+	class SubAction extends NodeContainer {
+		attribute id : String;
+	}
+
+-- @begin Top-level Actions
+	class Outgoing extends NodeContainer {
+	}
+
+	class Incoming extends NodeContainer {
+	}
+-- @end Top-level Actions
+
+-- @begin Switched Node Containers
+	class NotPresent extends NodeContainer {
+	}
+
+	class Otherwise extends NodeContainer {
+	}
+
+	class SwitchedAddress extends NodeContainer {
+		attribute is[0-1] : String;
+		-- for: display
+		attribute contains[0-1] : String;
+		-- for: host, tel
+		attribute subDomainOf[0-1] : String;
+	}
+
+	class SwitchedString extends NodeContainer {
+		attribute is[0-1] : String;
+		attribute contains[0-1] : String;
+	}
+
+	class SwitchedLanguage extends NodeContainer {
+		attribute matches : String;
+	}
+
+	class SwitchedTime extends NodeContainer {
+		attribute dtstart : String;
+		attribute dtend[0-1] : String;
+		attribute duration[0-1] : String;
+		attribute freq[0-1] : String;
+		attribute until[0-1] : String;
+		attribute count[0-1] : String;
+		attribute interval : String;
+		attribute bySecond[0-1] : String;
+		attribute byMinute[0-1] : String;
+		attribute byHour[0-1] : String;
+		attribute byDay[0-1] : String;
+		attribute byMonthDay[0-1] : String;
+		attribute byYearDay[0-1] : String;
+		attribute byWeekNo[0-1] : String;
+		attribute byMonth[0-1] : String;
+		attribute wkst : String;
+		attribute bySetPos[0-1] : String;
+	}
+
+	class SwitchedPriority extends NodeContainer {
+		-- emergency, urgent, normal, non-urgent
+		attribute less[0-1] : String;
+		attribute greater[0-1] : String;
+		attribute equal[0-1] : String;
+	}
+-- @end Switched Node Containers
+
+-- @begin Proxy Items
+	class Busy extends NodeContainer {
+	}
+
+	class NoAnswer extends NodeContainer {
+	}
+
+	class Redirection extends NodeContainer {
+	}
+
+	class Failure extends NodeContainer {
+	}
+
+	class Default extends NodeContainer {
+	}
+-- @end Proxy Items
+-- @end Node Containers
+
+-- @begin Nodes
+	abstract class Node extends Element {
+
+	}
+
+-- @begin Switches
+	abstract class Switch extends Node {
+		-- can occur anywhere
+		reference notPresent[0-1] container : NotPresent;
+		-- must be last
+		reference otherwise[0-1] container : Otherwise;
+	}
+
+	class AddressSwitch extends Switch {
+		-- origin, destination, original-destination
+		attribute field : String;
+		-- address-type, user, host, port, tel, or display (also: password and alias-type)
+		attribute subField[0-1] : String;
+		reference addresses[*] ordered container : SwitchedAddress;
+	}
+
+	class StringSwitch extends Switch {
+		-- subject, organization, user-agent, or display
+		attribute field : String;
+		reference strings[*] ordered container : SwitchedString;
+	}
+
+	class LanguageSwitch extends Switch {
+		reference languages[*] ordered container : SwitchedLanguage;
+	}
+
+	class TimeSwitch extends Switch {
+		attribute tzid[0-1] : String;
+		attribute tzurl[0-1] : String;
+		reference times[*] ordered container : SwitchedTime;
+	}
+
+	class PrioritySwitch extends Switch {
+		reference priorities[*] ordered container : SwitchedPriority;
+	}
+-- @end Switches
+
+	-- TODO
+	class Location extends Node, NodeContainer {
+		attribute url : String;
+		attribute priority[0-1] : String;
+		attribute clear : String;
+	}
+--		attribute param[0-1] : String;
+--		attribute value[0-1] : String;
+--		attribute location[0-1] : String;
+
+	class SubCall extends Node {
+		attribute ref : String;
+	}
+
+-- @begin Actions
+	abstract class Action extends Node {
+	}
+
+	abstract class SignallingAction extends Action {
+	}
+
+	class Proxy extends SignallingAction {
+		attribute timeout[0-1] : String;
+		attribute recurse : String;
+		-- parallel, sequential, first-only
+		attribute ordering : String;
+
+		reference busy[0-1] container : Busy;
+		reference noAnswer[0-1] container : NoAnswer;
+		reference redirection[0-1] container : Redirection;
+		reference failure[0-1] container : Failure;
+		reference default[0-1] container : Default;
+	}
+
+	class Redirect extends SignallingAction {
+		attribute permanent : String;
+	}
+
+	class Reject extends SignallingAction {
+		-- busy, notfound, reject, error, or a SIP 4xx-6xx status
+		attribute status : String;
+		attribute reason[0-1] : String;
+	}
+-- @end Actions
+-- @end Nodes
+}
+
+package PrimitiveTypes {
+	datatype Boolean;
+	datatype Integer;
+	datatype String;
+}
+

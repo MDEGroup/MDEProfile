@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cpl		xmlns="urn:ietf:params:xml:ns:cpl"
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		xsi:schemaLocation="urn:ietf:params:xml:ns:cpl cpl.xsd ">
+	<subaction id="voicemail">
+		<location url="sip:jones@voicemail.example.com">
+			<proxy/>
+		</location>
+	</subaction>
+	<incoming>
+		<location url="sip:jones@jonespc.example.com">
+			<proxy timeout="8">
+				<busy>
+					<sub ref="voicemail"/>
+				</busy>
+				<noanswer>
+					<sub ref="voicemail"/>
+				</noanswer>
+			</proxy>
+		</location>
+	</incoming>
+</cpl>

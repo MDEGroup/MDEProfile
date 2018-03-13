@@ -1,0 +1,13 @@
+package example {
+	class A {
+	}
+	
+	class B {
+	}
+}
+
+package PrimitiveTypes {
+	datatype Boolean;
+	datatype Integer;
+	datatype String;
+}

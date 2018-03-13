@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:simplesbvr="simplesbvr">
+  <simplesbvr:ObjectType objectName="Company" representations="/6"/>
+  <simplesbvr:NonNegativeInteger objectName="One" representations="/12" value="1"/>
+  <simplesbvr:ObjectType objectName="Product" representations="/14"/>
+  <simplesbvr:NonNegativeInteger objectName="One" value="1"/>
+  <simplesbvr:Designation objectName="Each" meaning="/21" text="/5"/>
+  <simplesbvr:Text objectName="Each" value="Each"/>
+  <simplesbvr:Designation objectName="Company" meaning="/0" text="/7"/>
+  <simplesbvr:Text objectName="Company" value="Company"/>
+  <simplesbvr:Designation objectName="ToSell" meaning="/18" text="/9"/>
+  <simplesbvr:Text objectName="ToSell" value="ToSell"/>
+  <simplesbvr:Designation objectName="AtLeast" meaning="/22" text="/11"/>
+  <simplesbvr:Text objectName="AtLeast" value="AtLeast"/>
+  <simplesbvr:Designation objectName="1" meaning="/1" text="/13"/>
+  <simplesbvr:Text objectName="1" value="1"/>
+  <simplesbvr:Designation objectName="Product" meaning="/2" text="/15"/>
+  <simplesbvr:Text objectName="Product" value="Product"/>
+  <simplesbvr:Designation objectName="Exactly" text="/17"/>
+  <simplesbvr:Text objectName="Exactly" value="Exactly"/>
+  <simplesbvr:AssociativeFactType objectName="ToSell" representations="/8" role1="/19" role2="/20"/>
+  <simplesbvr:FactTypeRole nounConcept="/0"/>
+  <simplesbvr:FactTypeRole nounConcept="/2"/>
+  <simplesbvr:UniversalQuantification representations="/4" introducedVariable="/25" scopesOver="/26"/>
+  <simplesbvr:AtLeastNQuantification representations="/10" introducedVariable="/29" scopesOver="/26" minCardinality="/1"/>
+  <simplesbvr:UniversalQuantification introducedVariable="/29" scopesOver="/26"/>
+  <simplesbvr:ExactlyNQuantification introducedVariable="/25" scopesOver="/26" cardinality="/3"/>
+  <simplesbvr:Variable rangesOver="/0"/>
+  <simplesbvr:BinaryAtomicFormulation isBasedOn="/18" roleBinding1="/27" roleBinding2="/28"/>
+  <simplesbvr:RoleBinding occursIn="/26" isOf="/19" bindsTo="/25"/>
+  <simplesbvr:RoleBinding occursIn="/26" isOf="/20" bindsTo="/29"/>
+  <simplesbvr:Variable rangesOver="/2"/>
+</xmi:XMI>

@@ -1,0 +1,28 @@
+package example {
+
+	class User {
+		attribute name : String;
+		attribute userId : String;
+		attribute password : String;
+		reference person : Person oppositeOf user;
+		reference chose[*] : Chose oppositeOf user1;
+	}
+
+	class Person {
+		attribute name : String;
+		attribute age : Integer;
+		attribute adresse : String;
+		reference user : User oppositeOf person;
+	}
+
+	class Chose {
+		reference user1 : User oppositeOf chose;
+	}
+
+}
+
+package PrimitiveTypes {
+	datatype Boolean;
+	datatype Integer;
+	datatype String;
+}

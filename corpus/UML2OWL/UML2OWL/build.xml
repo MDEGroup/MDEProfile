@@ -1,0 +1,39 @@
+<project name="UML2OWL" default="transfo">
+	
+	<!-- Change this value if you want to use another input model -->
+	<property name="model" value="Museum"/>
+	
+	<target name="transfo" depends="loadModels">
+		
+		<am3.loadModel name="umlModel" metamodel="UML" path="/UML2OWL/Samples/UMLModels/${model}.uml"/>
+		
+		<am3.atl path="/UML2OWL/UML2OWL.asm">
+			<inModel name="IN" model="umlModel"/>
+			<inModel name="UML" model="UML"/>
+			<inModel name="OWL" model="OWL"/>
+			<outModel name="OUT" model="owlModel" metamodel="OWL"/>
+		</am3.atl>
+
+		<am3.saveModel model="owlModel" path="/UML2OWL/Samples/OWLModels/${model}-OWL.ecore"/> 
+
+		<am3.atl path="/UML2OWL/OWL/XmlSyntax/OWL2XML.asm">
+			<inModel name="IN" model="owlModel"/>
+			<inModel name="OWL" model="OWL"/>
+			<inModel name="XML" model="XML"/>
+			<outModel name="OUT" model="xmlModel" metamodel="XML"/>
+		</am3.atl>
+
+		<am3.saveModel model="xmlModel" path="/UML2OWL/Samples/OWLFiles/${model}.owl">
+			<extractor name="xml"/>
+		</am3.saveModel>
+	</target>
+	
+	<target name="loadModels">
+		<!-- Load UML 2.0 metamodel-->
+		<am3.loadModel modelHandler="EMF" name="UML" metamodel="MOF" nsuri="http://www.eclipse.org/uml2/2.0.0/UML"/>
+		<!-- Load OWL metamodel-->
+		<am3.loadModel modelHandler="EMF" name="OWL" metamodel="MOF" path="/UML2OWL/OWL/OWL.ecore"/>
+		<!-- Load XML metamodel-->
+		<am3.loadModel modelHandler="EMF" name="XML" metamodel="MOF" path="/UML2OWL/AMMACore/XML.ecore"/>
+	</target>
+</project>

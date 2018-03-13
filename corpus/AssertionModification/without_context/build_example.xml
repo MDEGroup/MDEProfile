@@ -1,0 +1,55 @@
+<!--
+ How to configure this ant script:
+	Run as->Ant Build...
+		Set:
+			- Base directory
+			- Run in same JRE
+			- Refresh
+			- ant-contrib jar
+-->
+
+<project name="replace" default="transfo">
+	<property name="projectPath" value="/CatalogueOfModelTransformations/AssertionModification/without_context/"/>
+	<property name="sourceMetaModel" value="UML2"/>
+    <property name="XMLMetaModel" value="XML"/>   
+	<property name="targetMetaModel" value="UML2Target"/>
+	<property name="inputModelsPath" value="${projectPath}InputModels/"/>
+	<property name="outputModelsPath" value="${projectPath}OutputModels/"/>
+	<property name="sample" value="example.uml2"/>
+    <property name="lib" value="lib.xml"/>   
+	
+	<target name="transfo" depends="loadModels">
+		<basename property="name" file="${sample}" suffix=".uml2"/>
+        <basename property="nameLib" file="${lib}" suffix=".xml"/>
+		<property name="sourceModel" value="${name}-${sourceMetaModel}.uml2"/>
+        <property name="XMLModel" value="${nameLib}-${XMLMetaModel}.ecore"/>      
+		<property name="targetModel" value="${name}-${targetMetaModel}.uml2"/>
+  
+        <!-- Inject XML sourceModel file to XML Model -->
+                <am3.loadModel modelHandler="EMF" name="${XMLMetaModel}" metamodel="MOF" path="${projectPath}MetaModels/XML.ecore"/>
+                <am3.loadModel modelHandler="EMF" name="${nameLib}" metamodel="XML" path="${inputModelsPath}${nameLib}.xml">
+                    <injector name="xml"/>
+                </am3.loadModel>      
+                <am3.saveModel model="${nameLib}" path="${inputModelsPath}${nameLib}-XML.ecore"/>
+        
+		<!-- Load source model and transform from sourceMetaModel to targetMetaModel and save targetModel -->		
+		<echo message="Transforming ${name} from ${sourceMetaModel} to ${targetMetaModel}"/>
+		<am3.loadModel modelHandler="EMF" name="${sourceModel}" metamodel="${sourceMetaModel}" path="${inputModelsPath}${sourceModel}"/>
+        <am3.loadModel modelHandler="EMF" name="${XMLModel}" metamodel="${XMLMetaModel}" path="${inputModelsPath}${XMLModel}"/>      
+		<am3.atl path="${projectPath}AssertionModification.atl">
+			<inModel name="${sourceMetaModel}" model="${sourceMetaModel}"/>
+			<inModel name="IN" model="${sourceModel}"/>
+            <inModel name="${XMLMetaModel}" model="${XMLMetaModel}"/>
+            <inModel name="Lib" model="${XMLModel}"/>         
+			<inModel name="${targetMetaModel}" model="${targetMetaModel}"/>
+			<outModel name="OUT" model="${targetModel}" metamodel="${targetMetaModel}"/>
+		</am3.atl>
+		<am3.saveModel model="${targetModel}" path="${outputModelsPath}${targetModel}"/>
+	</target>
+
+	<target name="loadModels">
+		<!-- Load source and target metamodels -->
+		<am3.loadModel modelHandler="EMF" name="${sourceMetaModel}" metamodel="MOF" nsUri="http://www.eclipse.org/uml2/1.0.0/UML"/>
+		<am3.loadModel modelHandler="EMF" name="${targetMetaModel}" metamodel="MOF" nsUri="http://www.eclipse.org/uml2/1.0.0/UML"/>
+	</target>	
+</project>

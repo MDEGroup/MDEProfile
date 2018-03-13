@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns="Trace">
+  <TraceLink ruleName="Module">
+    <sourceElements href="platform:/resource/ATL2Tracer/TracerTest/Input/sample-ATL-0.2-Tracer.ecore#/0"/>
+    <targetElements href="/ATL2Tracer/TracerTest/Output/sample-ATL-0.2-OUT.ecore#/0"/>
+  </TraceLink>
+  <TraceLink ruleName="Binding">
+    <sourceElements href="platform:/resource/ATL2Tracer/TracerTest/Input/sample-ATL-0.2-Tracer.ecore#/0/@elements.0/@outPattern/@elements.0/@bindings.0"/>
+    <targetElements href="/ATL2Tracer/TracerTest/Output/sample-ATL-0.2-OUT.ecore#/0/@elements.0/@outPattern/@elements.0/@bindings.0"/>
+    <targetElements href="/ATL2Tracer/TracerTest/Output/sample-ATL-0.2-OUT.ecore#/0/@elements.0/@outPattern/@elements.0/@bindings.0/@value"/>
+    <targetElements href="/ATL2Tracer/TracerTest/Output/sample-ATL-0.2-OUT.ecore#/0/@elements.0/@outPattern/@elements.0/@bindings.0/@value/@arguments.0"/>
+  </TraceLink>
+  <TraceLink ruleName="Binding">
+    <sourceElements href="platform:/resource/ATL2Tracer/TracerTest/Input/sample-ATL-0.2-Tracer.ecore#/0/@elements.0/@outPattern/@elements.0/@bindings.1"/>
+    <targetElements href="/ATL2Tracer/TracerTest/Output/sample-ATL-0.2-OUT.ecore#/0/@elements.0/@outPattern/@elements.0/@bindings.1"/>
+    <targetElements href="/ATL2Tracer/TracerTest/Output/sample-ATL-0.2-OUT.ecore#/0/@elements.0/@outPattern/@elements.0/@bindings.1/@value"/>
+    <targetElements href="/ATL2Tracer/TracerTest/Output/sample-ATL-0.2-OUT.ecore#/0/@elements.0/@outPattern/@elements.0/@bindings.1/@value/@arguments.0"/>
+  </TraceLink>
+  <TraceLink ruleName="Binding">
+    <sourceElements href="platform:/resource/ATL2Tracer/TracerTest/Input/sample-ATL-0.2-Tracer.ecore#/0/@elements.0/@outPattern/@elements.1/@bindings.0"/>
+    <targetElements href="/ATL2Tracer/TracerTest/Output/sample-ATL-0.2-OUT.ecore#/0/@elements.0/@outPattern/@elements.1/@bindings.0"/>
+    <targetElements href="/ATL2Tracer/TracerTest/Output/sample-ATL-0.2-OUT.ecore#/0/@elements.0/@outPattern/@elements.1/@bindings.0/@value"/>
+    <targetElements href="/ATL2Tracer/TracerTest/Output/sample-ATL-0.2-OUT.ecore#/0/@elements.0/@outPattern/@elements.1/@bindings.0/@value/@arguments.0"/>
+  </TraceLink>
+  <TraceLink ruleName="Binding">
+    <sourceElements href="platform:/resource/ATL2Tracer/TracerTest/Input/sample-ATL-0.2-Tracer.ecore#/0/@elements.1/@outPattern/@elements.1/@bindings.1"/>
+    <targetElements href="/ATL2Tracer/TracerTest/Output/sample-ATL-0.2-OUT.ecore#/0/@elements.1/@outPattern/@elements.1/@bindings.1"/>
+    <targetElements href="/ATL2Tracer/TracerTest/Output/sample-ATL-0.2-OUT.ecore#/0/@elements.1/@outPattern/@elements.1/@bindings.1/@value"/>
+    <targetElements href="/ATL2Tracer/TracerTest/Output/sample-ATL-0.2-OUT.ecore#/0/@elements.1/@outPattern/@elements.1/@bindings.1/@value/@arguments.0"/>
+  </TraceLink>
+  <TraceLink ruleName="Binding">
+    <sourceElements href="platform:/resource/ATL2Tracer/TracerTest/Input/sample-ATL-0.2-Tracer.ecore#/0/@elements.1/@outPattern/@elements.1/@bindings.2"/>
+    <targetElements href="/ATL2Tracer/TracerTest/Output/sample-ATL-0.2-OUT.ecore#/0/@elements.1/@outPattern/@elements.1/@bindings.2"/>
+    <targetElements href="/ATL2Tracer/TracerTest/Output/sample-ATL-0.2-OUT.ecore#/0/@elements.1/@outPattern/@elements.1/@bindings.2/@value"/>
+    <targetElements href="/ATL2Tracer/TracerTest/Output/sample-ATL-0.2-OUT.ecore#/0/@elements.1/@outPattern/@elements.1/@bindings.2/@value/@arguments.0"/>
+  </TraceLink>
+  <TraceLink ruleName="Binding">
+    <sourceElements href="platform:/resource/ATL2Tracer/TracerTest/Input/sample-ATL-0.2-Tracer.ecore#/0/@elements.0/@outPattern/@elements.1/@bindings.1"/>
+    <targetElements href="/ATL2Tracer/TracerTest/Output/sample-ATL-0.2-OUT.ecore#/0/@elements.0/@outPattern/@elements.1/@bindings.1"/>
+    <targetElements href="/ATL2Tracer/TracerTest/Output/sample-ATL-0.2-OUT.ecore#/0/@elements.0/@outPattern/@elements.1/@bindings.1/@value"/>
+    <targetElements href="/ATL2Tracer/TracerTest/Output/sample-ATL-0.2-OUT.ecore#/0/@elements.0/@outPattern/@elements.1/@bindings.1/@value/@arguments.0"/>
+  </TraceLink>
+  <TraceLink ruleName="Binding">
+    <sourceElements href="platform:/resource/ATL2Tracer/TracerTest/Input/sample-ATL-0.2-Tracer.ecore#/0/@elements.1/@outPattern/@elements.1/@bindings.0"/>
+    <targetElements href="/ATL2Tracer/TracerTest/Output/sample-ATL-0.2-OUT.ecore#/0/@elements.1/@outPattern/@elements.1/@bindings.0"/>
+    <targetElements href="/ATL2Tracer/TracerTest/Output/sample-ATL-0.2-OUT.ecore#/0/@elements.1/@outPattern/@elements.1/@bindings.0/@value"/>
+    <targetElements href="/ATL2Tracer/TracerTest/Output/sample-ATL-0.2-OUT.ecore#/0/@elements.1/@outPattern/@elements.1/@bindings.0/@value/@arguments.0"/>
+  </TraceLink>
+  <TraceLink ruleName="Binding">
+    <sourceElements href="platform:/resource/ATL2Tracer/TracerTest/Input/sample-ATL-0.2-Tracer.ecore#/0/@elements.1/@outPattern/@elements.0/@bindings.0"/>
+    <targetElements href="/ATL2Tracer/TracerTest/Output/sample-ATL-0.2-OUT.ecore#/0/@elements.1/@outPattern/@elements.0/@bindings.0"/>
+    <targetElements href="/ATL2Tracer/TracerTest/Output/sample-ATL-0.2-OUT.ecore#/0/@elements.1/@outPattern/@elements.0/@bindings.0/@value"/>
+    <targetElements href="/ATL2Tracer/TracerTest/Output/sample-ATL-0.2-OUT.ecore#/0/@elements.1/@outPattern/@elements.0/@bindings.0/@value/@arguments.0"/>
+  </TraceLink>
+  <TraceLink ruleName="Binding">
+    <sourceElements href="platform:/resource/ATL2Tracer/TracerTest/Input/sample-ATL-0.2-Tracer.ecore#/0/@elements.0/@outPattern/@elements.0/@bindings.3"/>
+    <targetElements href="/ATL2Tracer/TracerTest/Output/sample-ATL-0.2-OUT.ecore#/0/@elements.0/@outPattern/@elements.0/@bindings.3"/>
+    <targetElements href="/ATL2Tracer/TracerTest/Output/sample-ATL-0.2-OUT.ecore#/0/@elements.0/@outPattern/@elements.0/@bindings.3/@value"/>
+    <targetElements href="/ATL2Tracer/TracerTest/Output/sample-ATL-0.2-OUT.ecore#/0/@elements.0/@outPattern/@elements.0/@bindings.3/@value/@arguments.0"/>
+  </TraceLink>
+  <TraceLink ruleName="Binding">
+    <sourceElements href="platform:/resource/ATL2Tracer/TracerTest/Input/sample-ATL-0.2-Tracer.ecore#/0/@elements.0/@outPattern/@elements.0/@bindings.2"/>
+    <targetElements href="/ATL2Tracer/TracerTest/Output/sample-ATL-0.2-OUT.ecore#/0/@elements.0/@outPattern/@elements.0/@bindings.2"/>
+    <targetElements href="/ATL2Tracer/TracerTest/Output/sample-ATL-0.2-OUT.ecore#/0/@elements.0/@outPattern/@elements.0/@bindings.2/@value"/>
+    <targetElements href="/ATL2Tracer/TracerTest/Output/sample-ATL-0.2-OUT.ecore#/0/@elements.0/@outPattern/@elements.0/@bindings.2/@value/@arguments.0"/>
+  </TraceLink>
+  <TraceLink ruleName="Binding">
+    <sourceElements href="platform:/resource/ATL2Tracer/TracerTest/Input/sample-ATL-0.2-Tracer.ecore#/0/@elements.1/@outPattern/@elements.3/@bindings.0"/>
+    <targetElements href="/ATL2Tracer/TracerTest/Output/sample-ATL-0.2-OUT.ecore#/0/@elements.1/@outPattern/@elements.3/@bindings.0"/>
+    <targetElements href="/ATL2Tracer/TracerTest/Output/sample-ATL-0.2-OUT.ecore#/0/@elements.1/@outPattern/@elements.3/@bindings.0/@value"/>
+    <targetElements href="/ATL2Tracer/TracerTest/Output/sample-ATL-0.2-OUT.ecore#/0/@elements.1/@outPattern/@elements.3/@bindings.0/@value/@arguments.0"/>
+  </TraceLink>
+  <TraceLink ruleName="Binding">
+    <sourceElements href="platform:/resource/ATL2Tracer/TracerTest/Input/sample-ATL-0.2-Tracer.ecore#/0/@elements.1/@outPattern/@elements.3/@bindings.1"/>
+    <targetElements href="/ATL2Tracer/TracerTest/Output/sample-ATL-0.2-OUT.ecore#/0/@elements.1/@outPattern/@elements.3/@bindings.1"/>
+    <targetElements href="/ATL2Tracer/TracerTest/Output/sample-ATL-0.2-OUT.ecore#/0/@elements.1/@outPattern/@elements.3/@bindings.1/@value"/>
+    <targetElements href="/ATL2Tracer/TracerTest/Output/sample-ATL-0.2-OUT.ecore#/0/@elements.1/@outPattern/@elements.3/@bindings.1/@value/@arguments.0"/>
+  </TraceLink>
+  <TraceLink ruleName="Binding">
+    <sourceElements href="platform:/resource/ATL2Tracer/TracerTest/Input/sample-ATL-0.2-Tracer.ecore#/0/@elements.0/@outPattern/@elements.0/@bindings.5"/>
+    <targetElements href="/ATL2Tracer/TracerTest/Output/sample-ATL-0.2-OUT.ecore#/0/@elements.0/@outPattern/@elements.0/@bindings.5"/>
+    <targetElements href="/ATL2Tracer/TracerTest/Output/sample-ATL-0.2-OUT.ecore#/0/@elements.0/@outPattern/@elements.0/@bindings.5/@value"/>
+    <targetElements href="/ATL2Tracer/TracerTest/Output/sample-ATL-0.2-OUT.ecore#/0/@elements.0/@outPattern/@elements.0/@bindings.5/@value/@arguments.0"/>
+  </TraceLink>
+  <TraceLink ruleName="Binding">
+    <sourceElements href="platform:/resource/ATL2Tracer/TracerTest/Input/sample-ATL-0.2-Tracer.ecore#/0/@elements.1/@outPattern/@elements.0/@bindings.1"/>
+    <targetElements href="/ATL2Tracer/TracerTest/Output/sample-ATL-0.2-OUT.ecore#/0/@elements.1/@outPattern/@elements.0/@bindings.1"/>
+    <targetElements href="/ATL2Tracer/TracerTest/Output/sample-ATL-0.2-OUT.ecore#/0/@elements.1/@outPattern/@elements.0/@bindings.1/@value"/>
+    <targetElements href="/ATL2Tracer/TracerTest/Output/sample-ATL-0.2-OUT.ecore#/0/@elements.1/@outPattern/@elements.0/@bindings.1/@value/@arguments.0"/>
+  </TraceLink>
+  <TraceLink ruleName="Binding">
+    <sourceElements href="platform:/resource/ATL2Tracer/TracerTest/Input/sample-ATL-0.2-Tracer.ecore#/0/@elements.1/@outPattern/@elements.2/@bindings.0"/>
+    <targetElements href="/ATL2Tracer/TracerTest/Output/sample-ATL-0.2-OUT.ecore#/0/@elements.1/@outPattern/@elements.2/@bindings.0"/>
+    <targetElements href="/ATL2Tracer/TracerTest/Output/sample-ATL-0.2-OUT.ecore#/0/@elements.1/@outPattern/@elements.2/@bindings.0/@value"/>
+    <targetElements href="/ATL2Tracer/TracerTest/Output/sample-ATL-0.2-OUT.ecore#/0/@elements.1/@outPattern/@elements.2/@bindings.0/@value/@arguments.0"/>
+  </TraceLink>
+  <TraceLink ruleName="Binding">
+    <sourceElements href="platform:/resource/ATL2Tracer/TracerTest/Input/sample-ATL-0.2-Tracer.ecore#/0/@elements.0/@outPattern/@elements.0/@bindings.4"/>
+    <targetElements href="/ATL2Tracer/TracerTest/Output/sample-ATL-0.2-OUT.ecore#/0/@elements.0/@outPattern/@elements.0/@bindings.4"/>
+    <targetElements href="/ATL2Tracer/TracerTest/Output/sample-ATL-0.2-OUT.ecore#/0/@elements.0/@outPattern/@elements.0/@bindings.4/@value"/>
+    <targetElements href="/ATL2Tracer/TracerTest/Output/sample-ATL-0.2-OUT.ecore#/0/@elements.0/@outPattern/@elements.0/@bindings.4/@value/@arguments.0"/>
+  </TraceLink>
+</xmi:XMI>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:uml="http://www.eclipse.org/uml2/1.0.0/UML">
+  <uml:Model name="example">
+    <ownedMember xsi:type="uml:Class" name="A" clientDependency="/0/@ownedMember.0/@implementation.0">
+      <implementation name="a_implementation_A_B" client="/0/@ownedMember.0" supplier="/1" contract="/1"/>
+      <ownedOperation name="a1"/>
+      <ownedOperation name="a2"/>
+    </ownedMember>
+    <ownedMember xsi:type="uml:Class" name="B" clientDependency="/0/@ownedMember.1/@implementation.0">
+      <implementation name="b_implementation_A_B" client="/0/@ownedMember.1" supplier="/2" contract="/2"/>
+      <ownedOperation name="b1"/>
+      <ownedOperation name="b2"/>
+      <ownedOperation name="b3"/>
+    </ownedMember>
+    <ownedMember xsi:type="uml:Association" name="A_B" memberEnd="/0/@ownedMember.2/@ownedEnd.0 /0/@ownedMember.2/@ownedEnd.1">
+      <ownedEnd name="b" type="/2" association="/0/@ownedMember.2">
+        <upperValue xsi:type="uml:LiteralUnlimitedNatural" name="upper"/>
+        <lowerValue xsi:type="uml:LiteralInteger" name="lower"/>
+      </ownedEnd>
+      <ownedEnd name="a" type="/1" association="/0/@ownedMember.2">
+        <upperValue xsi:type="uml:LiteralInteger" name="upper" value="1"/>
+        <lowerValue xsi:type="uml:LiteralInteger" name="lower" value="1"/>
+      </ownedEnd>
+    </ownedMember>
+  </uml:Model>
+  <uml:Interface name="a_interface_A_B">
+    <ownedOperation name="a1"/>
+  </uml:Interface>
+  <uml:Interface name="b_interface_A_B">
+    <ownedOperation name="b1"/>
+    <ownedOperation name="b2"/>
+  </uml:Interface>
+</xmi:XMI>

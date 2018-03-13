@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="org.eclipse.m2m.atl.adt.launching.atlTransformation">
+<stringAttribute key="ATL File Name" value="/XSLT2XQuery/ATLFile/XSLT2XQuery.atl"/>
+<stringAttribute key="ATL VM" value="EMF-specific VM"/>
+<stringAttribute key="ATL_COMPILER" value="atl2006"/>
+<booleanAttribute key="IS_REFINING" value="false"/>
+<mapAttribute key="Input">
+<mapEntry key="IN" value="XSLT"/>
+</mapAttribute>
+<mapAttribute key="Libs"/>
+<mapAttribute key="Model Handler">
+<mapEntry key="XSLT" value="EMF"/>
+<mapEntry key="XQuery" value="EMF"/>
+</mapAttribute>
+<mapAttribute key="ModelType">
+<mapEntry key="IN" value="MODELINPUT"/>
+<mapEntry key="XSLT" value="METAMODELINPUT"/>
+<mapEntry key="OUT" value="MODELOUTPUT"/>
+<mapEntry key="XQuery" value="METAMODELOUTPUT"/>
+</mapAttribute>
+<mapAttribute key="Options">
+<mapEntry key="supportUML2Stereotypes" value="false"/>
+<mapEntry key="printExecutionTime" value="false"/>
+<mapEntry key="OPTION_CLEAR" value="false"/>
+<mapEntry key="OPTION_CONTENT_TYPE" value="false"/>
+<mapEntry key="OPTION_DERIVED" value="true"/>
+<mapEntry key="allowInterModelReferences" value="false"/>
+<mapEntry key="step" value="false"/>
+</mapAttribute>
+<mapAttribute key="Output">
+<mapEntry key="OUT" value="XQuery"/>
+</mapAttribute>
+<mapAttribute key="Path">
+<mapEntry key="IN" value="/XSLT2XQuery/XSLT/test-XSLT.xmi"/>
+<mapEntry key="XSLT" value="/XSLT2XQuery/XSLT/XSLT.ecore"/>
+<mapEntry key="OUT" value="/XSLT2XQuery/XQuery/test-XQuery.xmi"/>
+<mapEntry key="XQuery" value="/XSLT2XQuery/XQuery/XQuery.ecore"/>
+</mapAttribute>
+<listAttribute key="Superimpose"/>
+</launchConfiguration>

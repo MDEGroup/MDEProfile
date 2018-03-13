@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="ASCII"?>
+<syntax:Root xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:syntax="syntax" xsi:schemaLocation="syntax D:/Docs/dev/SBVR-P/eclipse-km3-workspace/Syntax-SBVR-UML-usecase/Syntax/Syntax.ecore#/0">
+  <elements xsi:type="syntax:Text" objectName="text" sentences="//@elements.1"/>
+  <elements xsi:type="syntax:Sentence" objectName="ASoftwareIsAProduct" sentenceCat="//@elements.12" words="//@elements.2 //@elements.4 //@elements.6 //@elements.8 //@elements.10"/>
+  <elements xsi:type="syntax:Word" objectName="A" sentence="//@elements.1" wordCat="//@elements.14" baseDesignation="//@elements.3"/>
+  <elements xsi:type="syntax:Designation" objectName="A"/>
+  <elements xsi:type="syntax:Word" objectName="Software" sentence="//@elements.1" wordCat="//@elements.15" baseDesignation="//@elements.5"/>
+  <elements xsi:type="syntax:Designation" objectName="Software" meaning="//@elements.21"/>
+  <elements xsi:type="syntax:Word" objectName="Is" sentence="//@elements.1" wordCat="//@elements.17" baseDesignation="//@elements.7"/>
+  <elements xsi:type="syntax:Designation" objectName="ToBe" meaning="//@elements.22"/>
+  <elements xsi:type="syntax:Word" objectName="A" sentence="//@elements.1" wordCat="//@elements.19" baseDesignation="//@elements.9"/>
+  <elements xsi:type="syntax:Designation" objectName="A"/>
+  <elements xsi:type="syntax:Word" objectName="Product" sentence="//@elements.1" wordCat="//@elements.20" baseDesignation="//@elements.11"/>
+  <elements xsi:type="syntax:Designation" objectName="Product" meaning="//@elements.23"/>
+  <elements xsi:type="syntax:SentenceCat" objectName="ASoftwareIsAProduct" terminal="false" composedOf="//@elements.16 //@elements.13" sentence="//@elements.1"/>
+  <elements xsi:type="syntax:NPCat" objectName="ASoftware" terminal="false" composedOf="//@elements.14 //@elements.15" composes="//@elements.12" sentence="//@elements.1" head="//@elements.15" determiner="//@elements.14" isSubjectOf="//@elements.17"/>
+  <elements xsi:type="syntax:IADCat" objectName="A" terminal="true" composes="//@elements.13" sentence="//@elements.1" word="//@elements.2" np="//@elements.13" object="//@elements.15"/>
+  <elements xsi:type="syntax:NCat" objectName="Software" terminal="true" composes="//@elements.13" sentence="//@elements.1" word="//@elements.4" expresses="//@elements.21" np="//@elements.13"/>
+  <elements xsi:type="syntax:VPCat" objectName="IsAProduct" terminal="false" composedOf="//@elements.17 //@elements.18" composes="//@elements.12" sentence="//@elements.1" head="//@elements.17"/>
+  <elements xsi:type="syntax:TVCat" objectName="Is" terminal="true" composes="//@elements.16" sentence="//@elements.1" word="//@elements.6" expresses="//@elements.22" passive="false" subject="//@elements.13" vp="//@elements.16" directObject="//@elements.18"/>
+  <elements xsi:type="syntax:NPCat" objectName="AProduct" terminal="false" composedOf="//@elements.19 //@elements.20" composes="//@elements.16" sentence="//@elements.1" head="//@elements.20" determiner="//@elements.19" isDirectObjectOf="//@elements.17"/>
+  <elements xsi:type="syntax:IADCat" objectName="A" terminal="true" composes="//@elements.18" sentence="//@elements.1" word="//@elements.8" np="//@elements.18" object="//@elements.20"/>
+  <elements xsi:type="syntax:NCat" objectName="Product" terminal="true" composes="//@elements.18" sentence="//@elements.1" word="//@elements.10" expresses="//@elements.23" np="//@elements.18"/>
+  <elements xsi:type="syntax:ObjectType" objectName="Software" expressedBy="//@elements.15"/>
+  <elements xsi:type="syntax:CategorizationFactType" objectName="ToBe" expressedBy="//@elements.17"/>
+  <elements xsi:type="syntax:ObjectType" objectName="Product" expressedBy="//@elements.20"/>
+</syntax:Root>

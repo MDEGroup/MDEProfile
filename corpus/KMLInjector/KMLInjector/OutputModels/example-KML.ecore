@@ -1,0 +1,1150 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<Folder xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="KML" name="Folder">
+  <nodes xsi:type="Description" name="description" value="Unleash your creativity with the help of these examples! "/>
+  <nodes xsi:type="Name" name="name" value="Google Earth Examples"/>
+  <nodes xsi:type="Visibility" name="visibility" value="0"/>
+  <nodes xsi:type="Open" name="open" value="1"/>
+  <nodes xsi:type="Folder" name="Folder">
+    <nodes xsi:type="Description" name="description" value="These are just some of the different kinds of placemarks with which you can mark your favourite places "/>
+    <nodes xsi:type="Name" name="name" value="Placemarks"/>
+    <nodes xsi:type="LookAt" name="LookAt">
+      <nodes xsi:type="Longitude" name="longitude" value="-122.0839597145766"/>
+      <nodes xsi:type="Latitude" name="latitude" value="37.42222904525232"/>
+      <nodes xsi:type="Range" name="range" value="500.6566641072245"/>
+      <nodes xsi:type="Tilt" name="tilt" value="40.5575073395506"/>
+      <nodes xsi:type="Heading" name="heading" value="-148.4122922628044"/>
+    </nodes>
+    <nodes xsi:type="Visibility" name="visibility" value="0"/>
+    <nodes xsi:type="Open" name="open" value="0"/>
+    <nodes xsi:type="Placemark" name="Placemark">
+      <nodes xsi:type="Description" name="description" value="Attached to ground. Intelligently places itself at the height of the underlying terrain. "/>
+      <nodes xsi:type="Name" name="name" value="Simple placemark"/>
+      <nodes xsi:type="LookAt" name="LookAt">
+        <nodes xsi:type="Longitude" name="longitude" value="-122.0839597145766"/>
+        <nodes xsi:type="Latitude" name="latitude" value="37.42222904525232"/>
+        <nodes xsi:type="Range" name="range" value="500.6566641072245"/>
+        <nodes xsi:type="Tilt" name="tilt" value="40.5575073395506"/>
+        <nodes xsi:type="Heading" name="heading" value="-148.4122922628044"/>
+      </nodes>
+      <nodes xsi:type="Visibility" name="visibility" value="0"/>
+      <nodes xsi:type="StyleUrl" name="styleUrl" value="#khStyle652"/>
+      <nodes xsi:type="Point" name="Point">
+        <nodes xsi:type="Extrude" name="extrude"/>
+        <nodes xsi:type="AltitudeMode" name="altitudeMode"/>
+        <nodes xsi:type="Coordinates" name="coordinates">
+          <nodes xsi:type="Coordinate" name="-122.0822035425683,37.42228990140251,0"/>
+        </nodes>
+      </nodes>
+    </nodes>
+    <nodes xsi:type="Placemark" name="Placemark">
+      <nodes xsi:type="Description" name="description" value="Floats a defined distance above the ground. "/>
+      <nodes xsi:type="Name" name="name" value="Floating placemark"/>
+      <nodes xsi:type="LookAt" name="LookAt">
+        <nodes xsi:type="Longitude" name="longitude" value="-122.0839597145766"/>
+        <nodes xsi:type="Latitude" name="latitude" value="37.42222904525232"/>
+        <nodes xsi:type="Range" name="range" value="500.6566641072245"/>
+        <nodes xsi:type="Tilt" name="tilt" value="40.5575073395506"/>
+        <nodes xsi:type="Heading" name="heading" value="-148.4122922628044"/>
+      </nodes>
+      <nodes xsi:type="Visibility" name="visibility" value="0"/>
+      <nodes xsi:type="StyleUrl" name="styleUrl" value="#khStyle652"/>
+      <nodes xsi:type="Style" name="Style" id="">
+        <nodes xsi:type="IconStyle" name="IconStyle">
+          <nodes xsi:type="Icon" name="Icon">
+            <nodes xsi:type="Href" name="href" value="root://icons/palette-4.png"/>
+            <nodes xsi:type="X" name="x" value="128"/>
+            <nodes xsi:type="Y" name="y" value="128"/>
+            <nodes xsi:type="W" name="w" value="32"/>
+            <nodes xsi:type="H" name="h" value="32"/>
+          </nodes>
+        </nodes>
+      </nodes>
+      <nodes xsi:type="Point" name="Point">
+        <nodes xsi:type="Extrude" name="extrude"/>
+        <nodes xsi:type="AltitudeMode" name="altitudeMode" value="relativeToGround"/>
+        <nodes xsi:type="Coordinates" name="coordinates">
+          <nodes xsi:type="Coordinate" name="-122.08407"/>
+          <nodes xsi:type="Coordinate" name="5,37.4220033612141,50"/>
+        </nodes>
+      </nodes>
+    </nodes>
+    <nodes xsi:type="Placemark" name="Placemark">
+      <nodes xsi:type="Description" name="description" value="Tethered to the ground by a customizable &quot; tail &quot; "/>
+      <nodes xsi:type="Name" name="name" value="Tethethed placemark"/>
+      <nodes xsi:type="LookAt" name="LookAt">
+        <nodes xsi:type="Longitude" name="longitude" value="-122.0845787421525"/>
+        <nodes xsi:type="Latitude" name="latitude" value="37.42215078737763"/>
+        <nodes xsi:type="Range" name="range" value="365.2646606980322"/>
+        <nodes xsi:type="Tilt" name="tilt" value="40.55750733918048"/>
+        <nodes xsi:type="Heading" name="heading" value="-148.4126684946234"/>
+      </nodes>
+      <nodes xsi:type="Visibility" name="visibility" value="0"/>
+      <nodes xsi:type="StyleUrl" name="styleUrl" value="#khStyle662"/>
+      <nodes xsi:type="Style" name="Style" id="">
+        <nodes xsi:type="LineStyle" name="LineStyle" id="">
+          <nodes xsi:type="Width" name="width" value="2.0"/>
+        </nodes>
+        <nodes xsi:type="IconStyle" name="IconStyle">
+          <nodes xsi:type="Icon" name="Icon">
+            <nodes xsi:type="Href" name="href" value="root://icons/palette-3.png"/>
+            <nodes xsi:type="X" name="x" value="96"/>
+            <nodes xsi:type="Y" name="y" value="160"/>
+            <nodes xsi:type="W" name="w" value="32"/>
+            <nodes xsi:type="H" name="h" value="32"/>
+          </nodes>
+        </nodes>
+      </nodes>
+      <nodes xsi:type="Point" name="Point">
+        <nodes xsi:type="Extrude" name="extrude" value="true"/>
+        <nodes xsi:type="AltitudeMode" name="altitudeMode" value="relativeToGround"/>
+        <nodes xsi:type="Coordinates" name="coordinates">
+          <nodes xsi:type="Coordinate" name="-122.0857667006183,37.42156927867553,50"/>
+        </nodes>
+      </nodes>
+    </nodes>
+  </nodes>
+  <nodes xsi:type="Folder" name="Folder">
+    <nodes xsi:type="Description" name="description" value="With KML it is easy to create rich, desriptive markup to annotate and enrich your placemarks "/>
+    <nodes xsi:type="Name" name="name" value="Styles and Markup"/>
+    <nodes xsi:type="LookAt" name="LookAt">
+      <nodes xsi:type="Longitude" name="longitude" value="-122.0845787422371"/>
+      <nodes xsi:type="Latitude" name="latitude" value="37.42215078726837"/>
+      <nodes xsi:type="Range" name="range" value="365.2646826292919"/>
+      <nodes xsi:type="Tilt" name="tilt" value="40.55750733930874"/>
+      <nodes xsi:type="Heading" name="heading" value="-148.4126777488172"/>
+    </nodes>
+    <nodes xsi:type="Visibility" name="visibility" value="0"/>
+    <nodes xsi:type="Open" name="open" value="0"/>
+    <nodes xsi:type="Document" name="Document">
+      <nodes xsi:type="Description" name="description" value="Place your mouse over the icon to see it display the new icon "/>
+      <nodes xsi:type="Name" name="name" value="Simple Icon Rollover"/>
+      <nodes xsi:type="LookAt" name="LookAt">
+        <nodes xsi:type="Longitude" name="longitude" value="-122.0856552124024"/>
+        <nodes xsi:type="Latitude" name="latitude" value="37.4224281311035"/>
+        <nodes xsi:type="Range" name="range" value="265.8520424250024"/>
+        <nodes xsi:type="Tilt" name="tilt" value="-9.39747581180414e-022"/>
+        <nodes xsi:type="Heading" name="heading" value="-3.876582019397347E-14"/>
+      </nodes>
+      <nodes xsi:type="Visibility" name="visibility" value="0"/>
+      <nodes xsi:type="StyleMap" name="StyleMap">
+        <nodes xsi:type="Pair" name="Pair">
+          <nodes xsi:type="Key" name="key" value="normal"/>
+          <nodes xsi:type="StyleUrl" name="styleUrl" value="#normalPlacemark"/>
+        </nodes>
+        <nodes xsi:type="Pair" name="Pair">
+          <nodes xsi:type="Key" name="key" value="highlight"/>
+          <nodes xsi:type="StyleUrl" name="styleUrl" value="#highlightPlacemark"/>
+        </nodes>
+      </nodes>
+      <nodes xsi:type="Style" name="Style" id="highlightPlacemark">
+        <nodes xsi:type="IconStyle" name="IconStyle">
+          <nodes xsi:type="Icon" name="Icon">
+            <nodes xsi:type="Href" name="href" value="http://bbs.keyhole.com/ubb/z0302a1700/google_icon.jpg"/>
+          </nodes>
+        </nodes>
+      </nodes>
+      <nodes xsi:type="Style" name="Style" id="khStyle565">
+        <nodes xsi:type="IconStyle" name="IconStyle">
+          <nodes xsi:type="Icon" name="Icon">
+            <nodes xsi:type="Href" name="href" value="http://bbs.keyhole.com/ubb/z0302a1700/keyhole_icon.jpg"/>
+          </nodes>
+        </nodes>
+      </nodes>
+      <nodes xsi:type="Style" name="Style" id="khStyle575">
+        <nodes xsi:type="IconStyle" name="IconStyle">
+          <nodes xsi:type="Icon" name="Icon">
+            <nodes xsi:type="Href" name="href" value="http://bbs.keyhole.com/ubb/z0302a1700/google_icon.jpg"/>
+          </nodes>
+        </nodes>
+      </nodes>
+      <nodes xsi:type="Style" name="Style" id="normalPlacemark">
+        <nodes xsi:type="IconStyle" name="IconStyle">
+          <nodes xsi:type="Icon" name="Icon">
+            <nodes xsi:type="Href" name="href" value="http://bbs.keyhole.com/ubb/z0302a1700/keyhole_icon.jpg"/>
+          </nodes>
+        </nodes>
+      </nodes>
+      <nodes xsi:type="StyleMap" name="StyleMap">
+        <nodes xsi:type="Pair" name="Pair">
+          <nodes xsi:type="Key" name="key" value="normal"/>
+          <nodes xsi:type="StyleUrl" name="styleUrl" value="#normalPlacemark"/>
+        </nodes>
+        <nodes xsi:type="Pair" name="Pair">
+          <nodes xsi:type="Key" name="key" value="highlight"/>
+          <nodes xsi:type="StyleUrl" name="styleUrl" value="#highlightPlacemark"/>
+        </nodes>
+      </nodes>
+      <nodes xsi:type="Placemark" name="Placemark">
+        <nodes xsi:type="Name" name="name" value="Example Placemark"/>
+        <nodes xsi:type="Visibility" name="visibility" value="0"/>
+        <nodes xsi:type="StyleUrl" name="styleUrl" value="#exampleStyleMap"/>
+        <nodes xsi:type="Point" name="Point">
+          <nodes xsi:type="Extrude" name="extrude"/>
+          <nodes xsi:type="AltitudeMode" name="altitudeMode"/>
+          <nodes xsi:type="Coordinates" name="coordinates">
+            <nodes xsi:type="Coordinate" name="-122.0856545755255,37.42243077405461,0"/>
+          </nodes>
+        </nodes>
+      </nodes>
+    </nodes>
+    <nodes xsi:type="Placemark" name="Placemark">
+      <nodes xsi:type="Description" name="description" value="Click on the blue link!&lt;br>&lt;br> Placemark descriptions can be enriched by using many standard HTML tags.&lt;br> For example: &lt;hr> Styles:&lt;br> &lt;i>Italics&lt;/i>, &lt;b>Bold&lt;/b>, &lt;u>Underlined&lt;/u>, &lt;s>Strike Out&lt;/s>, subscript&lt;sub>subscript&lt;/sub>, superscript&lt;sup>superscript&lt;/sup>, &lt;big>Big&lt;/big>, &lt;small>Small&lt;/small>, &lt;tt>Typewriter&lt;/tt>, &lt;em>Emphasized&lt;/em>, &lt;strong>Strong&lt;/strong>, &lt;code>Code&lt;/code> &lt;hr> Fonts:&lt;br> &lt;font color=&quot;red&quot;>red by name&lt;/font>, &lt;font color=&quot;#408010&quot;>leaf green by hexadecimal RGB&lt;/ font> &lt;br> &lt;font size=1>size 1&lt;/font>, &lt;font size=2>size 2&lt;/font>, &lt;font size=3>size 3&lt;/font>, &lt;font size=4>size 4&lt;/font>, &lt;font size=5>size 5&lt;/font>, &lt;font size=6>size 6&lt;/font>, &lt;font size=7>size 7&lt;/font> &lt;br> &lt;font face=times>Times&lt;/font>, &lt;font face=verdana>Verdana&lt;/font>, &lt;font face=arial>Arial&lt;/font>&lt;br> &lt;hr> Links: &lt;br> &lt;a href=&quot;http://earth.google.com/&quot;>Google Earth!&lt;/a> &lt;br> &lt;hr> Alignment:&lt;br> &lt;p align=left>left&lt;/p> &lt;p align=center>center&lt;/p> &lt;p align=right>right&lt;/p> &lt;hr> Ordered Lists:&lt;br> &lt;ol>&lt;li>First&lt;/li>&lt;li>Second&lt;/li>&lt;li>Third&lt;/li>&lt;/ol> &lt;ol type=&quot;a&quot;>&lt;li>First&lt;/li>&lt;li>Second&lt;/li>&lt;li>Third&lt;/li>&lt;/ol> &lt;ol type=&quot;A&quot;>&lt;li>First&lt;/li>&lt;li>Second&lt;/li>&lt;li>Third&lt;/li>&lt;/ol> &lt;hr> Unordered Lists:&lt;br> &lt;ul>&lt;li>A&lt;/li>&lt;li>B&lt;/li>&lt;li>C&lt;/li>&lt;/ul> &lt;ul type=&quot;circle&quot;>&lt;li>A&lt;/li>&lt;li>B&lt;/li>&lt;li>C&lt;/li>&lt;/ul> &lt;ul type=&quot;square&quot;>&lt;li>A&lt;/li>&lt;li>B&lt;/li>&lt;li>C&lt;/li>&lt;/ul> &lt;hr> Definitions:&lt;br> &lt;dl> &lt;dt>Google:&lt;/dt>&lt;dd>The best thing since sliced bread&lt;/dd> &lt;/dl> &lt;hr> Centered:&lt;br>&lt;center> Time present and time past&lt;br> Are both perhaps present in time future,&lt;br> And time future contained in time past.&lt;br> If all time is eternally present&lt;br> All time is unredeemable.&lt;br> &lt;/center> &lt;hr> Block Quote: &lt;br> &lt;blockquote> We shall not cease from exploration&lt;br> And the end of all our exploring&lt;br> Will be to arrive where we started&lt;br> And know the place for the first time.&lt;br> &lt;i>-- T.S. Eliot&lt;/i> &lt;/blockquote> &lt;br> &lt;hr> Headings:&lt;br> &lt;h1>Header 1&lt;/h1> &lt;h2>Header 2&lt;/h2> &lt;h3>Header 3&lt;/h3> &lt;h3>Header 4&lt;/h4> &lt;h3>Header 5&lt;/h5> &lt;hr> Images:&lt;br> &lt;i>Remote image&lt;/i>&lt;br> &lt;img src=&quot;http://bbs.keyhole.com/ubb/z0302a1700/googleSample.png&quot;>&lt;br> &lt;i>Scaled image&lt;/i>&lt;br> &lt;img src=&quot;http://bbs.keyhole.com/ubb/z0302a1700/googleSample.png&quot; width=100>&lt;br> &lt;hr> Simple Tables:&lt;br> &lt;table border=&quot;1&quot; padding=&quot;1&quot;> &lt;tr>&lt;td>1&lt;/td>&lt;td>2&lt;/td>&lt;td>3&lt;/td>&lt;td>4&lt;/td>&lt;td>5&lt;/td>&lt;/tr> &lt;tr>&lt;td>a&lt;/td>&lt;td>b&lt;/td>&lt;td>c&lt;/td>&lt;td>d&lt;/td>&lt;td>e&lt;/td>&lt;/tr> &lt;/table> &lt;br> [Did you notice that double-clicking on the placemark doesn't cause the viewer to take you anywhere? This is because it is possible to directly author a &quot;placeless placemark&quot;. If you look at the code for this example, you will see that it has neither a point coordinate nor a LookAt element. ] "/>
+      <nodes xsi:type="Name" name="name" value="Descriptive HTML"/>
+      <nodes xsi:type="Visibility" name="visibility" value="0"/>
+    </nodes>
+  </nodes>
+  <nodes xsi:type="Folder" name="Folder">
+    <nodes xsi:type="Description" name="description" value="Examples of ground overlays "/>
+    <nodes xsi:type="Name" name="name" value="Ground Overlays"/>
+    <nodes xsi:type="Visibility" name="visibility" value="0"/>
+    <nodes xsi:type="Open" name="open" value="0"/>
+    <nodes xsi:type="GroundOverlay" name="GroundOverlay">
+      <nodes xsi:type="Description" name="description" value="Overlay shows Mount Etna erupting on July 13th, 2001. "/>
+      <nodes xsi:type="Name" name="name" value="Large-scale overlay on terrain"/>
+      <nodes xsi:type="LookAt" name="LookAt">
+        <nodes xsi:type="Longitude" name="longitude" value="15.02468937557116"/>
+        <nodes xsi:type="Latitude" name="latitude" value="37.67395167941667"/>
+        <nodes xsi:type="Range" name="range" value="30350.36838438907"/>
+        <nodes xsi:type="Tilt" name="tilt" value="58.31228652890705"/>
+        <nodes xsi:type="Heading" name="heading" value="-16.5581842842829"/>
+      </nodes>
+      <nodes xsi:type="Visibility" name="visibility" value="0"/>
+      <nodes xsi:type="Icon" name="Icon">
+        <nodes xsi:type="Href" name="href" value="http://bbs.keyhole.com/ubb/z0302a1700/etna.jpg"/>
+      </nodes>
+      <nodes xsi:type="DrawOrder" name="drawOrder" value="0"/>
+      <nodes xsi:type="LatLonBox" name="LatLonBox">
+        <nodes xsi:type="North" name="north" value="37.91904192681665"/>
+        <nodes xsi:type="South" name="south" value="37.46543388598137"/>
+        <nodes xsi:type="East" name="east" value="15.35832653742206"/>
+        <nodes xsi:type="West" name="west" value="14.60128369746704"/>
+        <nodes xsi:type="Rotation" name="rotation" value="-0.1556640799496235"/>
+      </nodes>
+    </nodes>
+  </nodes>
+  <nodes xsi:type="Folder" name="Folder">
+    <nodes xsi:type="Description" name="description" value="Screen overlays have to be authored directly in KML. These examples illustrate absolute and dymanic positioning in screen space. "/>
+    <nodes xsi:type="Name" name="name" value="Screen Overlays"/>
+    <nodes xsi:type="Visibility" name="visibility" value="0"/>
+    <nodes xsi:type="Open" name="open" value="0"/>
+    <nodes xsi:type="ScreenOverlay" name="ScreenOverlay" id="khScreenOverlay756">
+      <nodes xsi:type="Description" name="description" value="This screen overlay uses fractional positioning to put the image in the exact center of the screen "/>
+      <nodes xsi:type="Name" name="name" value="Simple crosshairs"/>
+      <nodes xsi:type="Visibility" name="visibility" value="0"/>
+      <nodes xsi:type="Icon" name="Icon">
+        <nodes xsi:type="Href" name="href" value="http://bbs.keyhole.com/ubb/z0302a1700/crosshairs.png"/>
+      </nodes>
+      <nodes xsi:type="DrawOrder" name="drawOrder" value="0"/>
+      <nodes xsi:type="OverlayXY" name="overlayXY" x="0.5" y="0.5" xunits="fraction" yunits="fraction"/>
+      <nodes xsi:type="ScreenXY" name="screenXY" x="0.5" y="0.5" xunits="fraction" yunits="fraction"/>
+      <nodes xsi:type="Size" name="size" x="0" y="0" xunits="pixels" yunits="pixels"/>
+      <nodes xsi:type="Rotation" name="rotation" value="0"/>
+    </nodes>
+    <nodes xsi:type="ScreenOverlay" name="ScreenOverlay" id="">
+      <nodes xsi:type="Name" name="name" value="Absolute Positioning: Top left"/>
+      <nodes xsi:type="Visibility" name="visibility" value="0"/>
+      <nodes xsi:type="Icon" name="Icon">
+        <nodes xsi:type="Href" name="href" value="http://bbs.keyhole.com/ubb/z0302a1700/top_left.jpg"/>
+      </nodes>
+      <nodes xsi:type="DrawOrder" name="drawOrder" value="0"/>
+      <nodes xsi:type="OverlayXY" name="overlayXY" x="0" y="1" xunits="fraction" yunits="fraction"/>
+      <nodes xsi:type="ScreenXY" name="screenXY" x="0" y="1" xunits="fraction" yunits="fraction"/>
+      <nodes xsi:type="Size" name="size" x="0" y="0" xunits="fraction" yunits="fraction"/>
+      <nodes xsi:type="Rotation" name="rotation" value="0"/>
+    </nodes>
+    <nodes xsi:type="ScreenOverlay" name="ScreenOverlay" id="">
+      <nodes xsi:type="Name" name="name" value="Absolute Positioning: Top right"/>
+      <nodes xsi:type="Visibility" name="visibility" value="0"/>
+      <nodes xsi:type="Icon" name="Icon">
+        <nodes xsi:type="Href" name="href" value="http://bbs.keyhole.com/ubb/z0302a1700/top_right.jpg"/>
+      </nodes>
+      <nodes xsi:type="DrawOrder" name="drawOrder" value="0"/>
+      <nodes xsi:type="OverlayXY" name="overlayXY" x="1" y="1" xunits="fraction" yunits="fraction"/>
+      <nodes xsi:type="ScreenXY" name="screenXY" x="1" y="1" xunits="fraction" yunits="fraction"/>
+      <nodes xsi:type="Size" name="size" x="0" y="0" xunits="fraction" yunits="fraction"/>
+      <nodes xsi:type="Rotation" name="rotation" value="0"/>
+    </nodes>
+    <nodes xsi:type="ScreenOverlay" name="ScreenOverlay" id="">
+      <nodes xsi:type="Name" name="name" value="Absolute Positioning: Bottom left"/>
+      <nodes xsi:type="Visibility" name="visibility" value="0"/>
+      <nodes xsi:type="Icon" name="Icon">
+        <nodes xsi:type="Href" name="href" value="http://bbs.keyhole.com/ubb/z0302a1700/bottom_left.jpg"/>
+      </nodes>
+      <nodes xsi:type="DrawOrder" name="drawOrder" value="0"/>
+      <nodes xsi:type="OverlayXY" name="overlayXY" x="0" y="-1" xunits="fraction" yunits="fraction"/>
+      <nodes xsi:type="ScreenXY" name="screenXY" x="0" y="0" xunits="fraction" yunits="fraction"/>
+      <nodes xsi:type="Size" name="size" x="0" y="0" xunits="fraction" yunits="fraction"/>
+      <nodes xsi:type="Rotation" name="rotation" value="0"/>
+    </nodes>
+    <nodes xsi:type="ScreenOverlay" name="ScreenOverlay" id="">
+      <nodes xsi:type="Name" name="name" value="Absolute Positioning: Bottom right"/>
+      <nodes xsi:type="Visibility" name="visibility" value="0"/>
+      <nodes xsi:type="Icon" name="Icon">
+        <nodes xsi:type="Href" name="href" value="http://bbs.keyhole.com/ubb/z0302a1700/bottom_right.jpg"/>
+      </nodes>
+      <nodes xsi:type="DrawOrder" name="drawOrder" value="0"/>
+      <nodes xsi:type="OverlayXY" name="overlayXY" x="1" y="-1" xunits="fraction" yunits="fraction"/>
+      <nodes xsi:type="ScreenXY" name="screenXY" x="1" y="0" xunits="fraction" yunits="fraction"/>
+      <nodes xsi:type="Size" name="size" x="0" y="0" xunits="fraction" yunits="fraction"/>
+      <nodes xsi:type="Rotation" name="rotation" value="0"/>
+    </nodes>
+    <nodes xsi:type="ScreenOverlay" name="ScreenOverlay" id="">
+      <nodes xsi:type="Name" name="name" value="Dynamic Positioning: Top of screen"/>
+      <nodes xsi:type="Visibility" name="visibility" value="0"/>
+      <nodes xsi:type="Icon" name="Icon">
+        <nodes xsi:type="Href" name="href" value="http://bbs.keyhole.com/ubb/z0302a1700/dynamic_screenoverlay.jpg"/>
+      </nodes>
+      <nodes xsi:type="DrawOrder" name="drawOrder" value="0"/>
+      <nodes xsi:type="OverlayXY" name="overlayXY" x="0" y="1" xunits="fraction" yunits="fraction"/>
+      <nodes xsi:type="ScreenXY" name="screenXY" x="0" y="1" xunits="fraction" yunits="fraction"/>
+      <nodes xsi:type="Size" name="size" x="1" y="0.2" xunits="fraction" yunits="fraction"/>
+      <nodes xsi:type="Rotation" name="rotation" value="0"/>
+    </nodes>
+    <nodes xsi:type="ScreenOverlay" name="ScreenOverlay" id="">
+      <nodes xsi:type="Name" name="name" value="Dynamic Positioning: Right of screen"/>
+      <nodes xsi:type="Visibility" name="visibility" value="0"/>
+      <nodes xsi:type="Icon" name="Icon">
+        <nodes xsi:type="Href" name="href" value="http://bbs.keyhole.com/ubb/z0302a1700/dynamic_right.jpg"/>
+      </nodes>
+      <nodes xsi:type="DrawOrder" name="drawOrder" value="0"/>
+      <nodes xsi:type="OverlayXY" name="overlayXY" x="1" y="1" xunits="fraction" yunits="fraction"/>
+      <nodes xsi:type="ScreenXY" name="screenXY" x="1" y="1" xunits="fraction" yunits="fraction"/>
+      <nodes xsi:type="Size" name="size" x="0" y="1" xunits="fraction" yunits="fraction"/>
+      <nodes xsi:type="Rotation" name="rotation" value="0"/>
+    </nodes>
+  </nodes>
+  <nodes xsi:type="Folder" name="Folder">
+    <nodes xsi:type="Description" name="description" value="Examples of paths. Note that the tessellate tag is by default set to 1. If you want to create untessellated lines, they must be authored (or edited) directly in KML. "/>
+    <nodes xsi:type="Name" name="name" value="Paths"/>
+    <nodes xsi:type="Visibility" name="visibility" value="0"/>
+    <nodes xsi:type="Open" name="open" value="0"/>
+    <nodes xsi:type="Placemark" name="Placemark">
+      <nodes xsi:type="Description" name="description" value="If the &lt;tessellate> tag has a value of 1, the line will contour to the underlying terrain "/>
+      <nodes xsi:type="Name" name="name" value="Tessellated"/>
+      <nodes xsi:type="LookAt" name="LookAt">
+        <nodes xsi:type="Longitude" name="longitude" value="-112.0822680013139"/>
+        <nodes xsi:type="Latitude" name="latitude" value="36.09825589333556"/>
+        <nodes xsi:type="Range" name="range" value="2889.145007690472"/>
+        <nodes xsi:type="Tilt" name="tilt" value="62.04855796276328"/>
+        <nodes xsi:type="Heading" name="heading" value="103.8120432044965"/>
+      </nodes>
+      <nodes xsi:type="Visibility" name="visibility" value="0"/>
+      <nodes xsi:type="LineString" name="LineString">
+        <nodes xsi:type="Extrude" name="extrude"/>
+        <nodes xsi:type="Tessellate" name="tessellate" value="1"/>
+        <nodes xsi:type="AltitudeMode" name="altitudeMode"/>
+        <nodes xsi:type="Coordinates" name="coordinates">
+          <nodes xsi:type="Coordinate" name="-112.0814237830345,36.10677870477137,0"/>
+          <nodes xsi:type="Coordinate" name="-112.0870267752693,36.0905099328766,0"/>
+        </nodes>
+      </nodes>
+    </nodes>
+    <nodes xsi:type="Placemark" name="Placemark">
+      <nodes xsi:type="Description" name="description" value="If the &lt;tessellate> tag has a value of 0, the line follow a simple straight-line path from point to point "/>
+      <nodes xsi:type="Name" name="name" value="Untesselated"/>
+      <nodes xsi:type="LookAt" name="LookAt">
+        <nodes xsi:type="Longitude" name="longitude" value="-112.0822680013139"/>
+        <nodes xsi:type="Latitude" name="latitude" value="36.09825589333556"/>
+        <nodes xsi:type="Range" name="range" value="2889.145007690472"/>
+        <nodes xsi:type="Tilt" name="tilt" value="62.04855796276328"/>
+        <nodes xsi:type="Heading" name="heading" value="103.8120432044965"/>
+      </nodes>
+      <nodes xsi:type="Visibility" name="visibility" value="0"/>
+      <nodes xsi:type="LineString" name="LineString">
+        <nodes xsi:type="Extrude" name="extrude"/>
+        <nodes xsi:type="Tessellate" name="tessellate" value="0"/>
+        <nodes xsi:type="AltitudeMode" name="altitudeMode"/>
+        <nodes xsi:type="Coordinates" name="coordinates">
+          <nodes xsi:type="Coordinate" name="-112.080622229595,36.10673460007995,0"/>
+          <nodes xsi:type="Coordinate" name="-112.085242575315,36.09049598612422,0"/>
+        </nodes>
+      </nodes>
+    </nodes>
+    <nodes xsi:type="Placemark" name="Placemark">
+      <nodes xsi:type="Description" name="description" value="Transparent purple line "/>
+      <nodes xsi:type="Name" name="name" value="Absolute"/>
+      <nodes xsi:type="LookAt" name="LookAt">
+        <nodes xsi:type="Longitude" name="longitude" value="-112.2719329043177"/>
+        <nodes xsi:type="Latitude" name="latitude" value="36.08890633450894"/>
+        <nodes xsi:type="Range" name="range" value="2569.386744398339"/>
+        <nodes xsi:type="Tilt" name="tilt" value="44.60763714063257"/>
+        <nodes xsi:type="Heading" name="heading" value="-106.8161545998597"/>
+      </nodes>
+      <nodes xsi:type="Visibility" name="visibility" value="0"/>
+      <nodes xsi:type="StyleUrl" name="styleUrl" value="#khStyle580"/>
+      <nodes xsi:type="Style" name="Style" id="khStyle1193">
+        <nodes xsi:type="LineStyle" name="LineStyle" id="khLineStyle1196">
+          <nodes xsi:type="Color" name="color" value="7fff00ff"/>
+          <nodes xsi:type="Width" name="width" value="4.0"/>
+        </nodes>
+        <nodes xsi:type="PolyStyle" name="PolyStyle">
+          <nodes xsi:type="Color" name="color" value="7f00ff00"/>
+        </nodes>
+      </nodes>
+      <nodes xsi:type="LineString" name="LineString">
+        <nodes xsi:type="Extrude" name="extrude"/>
+        <nodes xsi:type="Tessellate" name="tessellate" value="1"/>
+        <nodes xsi:type="AltitudeMode" name="altitudeMode" value="absolute"/>
+        <nodes xsi:type="Coordinates" name="coordinates">
+          <nodes xsi:type="Coordinate" name="-112.265654928602,36.09447672602546,2357"/>
+          <nodes xsi:type="Coordinate" name="-112.2660384528238,36.0934"/>
+          <nodes xsi:type="Coordinate" name="2608838671,2357"/>
+          <nodes xsi:type="Coordinate" name="-112.2668139013453,36.09251058776881,2357"/>
+          <nodes xsi:type="Coordinate" name="-112.2677826834445,36.09189827357996,2357"/>
+          <nodes xsi:type="Coordinate" name="-112.2688557510952,36.0913137941187,2357"/>
+          <nodes xsi:type="Coordinate" name="-112.2694810717219,36.0903677207521,2357"/>
+          <nodes xsi:type="Coordinate" name="-112.2695268555611,36.08932171487285,2357"/>
+          <nodes xsi:type="Coordinate" name="-112.2690144567276,36.08850916060472,2357"/>
+          <nodes xsi:type="Coordinate" name="-112.2681528815339,36.08753813597956,2357"/>
+          <nodes xsi:type="Coordinate" name="-112.2670588176031,36.08682685262568,2357"/>
+          <nodes xsi:type="Coordinate" name="-112.2657374587321,36.08646312301303,2357"/>
+        </nodes>
+      </nodes>
+    </nodes>
+    <nodes xsi:type="Placemark" name="Placemark">
+      <nodes xsi:type="Description" name="description" value="Transparent green wall with yellow outlines "/>
+      <nodes xsi:type="Name" name="name" value="Absolute Extruded"/>
+      <nodes xsi:type="LookAt" name="LookAt">
+        <nodes xsi:type="Longitude" name="longitude" value="-112.2643334742529"/>
+        <nodes xsi:type="Latitude" name="latitude" value="36.08563154742419"/>
+        <nodes xsi:type="Range" name="range" value="4451.842204068102"/>
+        <nodes xsi:type="Tilt" name="tilt" value="44.61038665812578"/>
+        <nodes xsi:type="Heading" name="heading" value="-125.7518698668815"/>
+      </nodes>
+      <nodes xsi:type="Visibility" name="visibility" value="0"/>
+      <nodes xsi:type="StyleUrl" name="styleUrl" value="#khStyle580"/>
+      <nodes xsi:type="Style" name="Style" id="khStyle808">
+        <nodes xsi:type="LineStyle" name="LineStyle" id="khLineStyle811">
+          <nodes xsi:type="Color" name="color" value="ff00ffff"/>
+          <nodes xsi:type="Width" name="width" value="4.0"/>
+        </nodes>
+        <nodes xsi:type="PolyStyle" name="PolyStyle">
+          <nodes xsi:type="Color" name="color" value="7f00ff00"/>
+        </nodes>
+      </nodes>
+      <nodes xsi:type="LineString" name="LineString">
+        <nodes xsi:type="Extrude" name="extrude" value="true"/>
+        <nodes xsi:type="Tessellate" name="tessellate" value="1"/>
+        <nodes xsi:type="AltitudeMode" name="altitudeMode" value="absolute"/>
+        <nodes xsi:type="Coordinates" name="coordinates">
+          <nodes xsi:type="Coordinate" name="-112.2550785337791,36.07954952145647,2357"/>
+          <nodes xsi:type="Coordinate" name="-112.2549277039738,36.08117083492122,2357"/>
+          <nodes xsi:type="Coordinate" name="-112.2552505069063,36.08260761307279,2357"/>
+          <nodes xsi:type="Coordinate" name="-112.2564540158376,36.08395660588506,2357"/>
+          <nodes xsi:type="Coordinate" name="-112.2580238976449,36.08511401044813,2357"/>
+          <nodes xsi:type="Coordinate" name="-112.2595218489022,36.08584355239394,2357"/>
+          <nodes xsi:type="Coordinate" name="-112.2608216347552,36.08612634548589,2357"/>
+          <nodes xsi:type="Coordinate" name="-112.262073428656,36.08626019085147,2357"/>
+          <nodes xsi:type="Coordinate" name="-112.2633204928495,36.08621519860091,2357"/>
+          <nodes xsi:type="Coordinate" name="-112.2644963846444,36.08627897945274,2357"/>
+          <nodes xsi:type="Coordinate" name="-112.2656969554589,36.08649599090644,2357"/>
+        </nodes>
+      </nodes>
+    </nodes>
+    <nodes xsi:type="Placemark" name="Placemark">
+      <nodes xsi:type="Description" name="description" value="Black line (10 pixels wide), height tracks terrain "/>
+      <nodes xsi:type="Name" name="name" value="Relative"/>
+      <nodes xsi:type="LookAt" name="LookAt">
+        <nodes xsi:type="Longitude" name="longitude" value="-112.2580438551384"/>
+        <nodes xsi:type="Latitude" name="latitude" value="36.1072674824385"/>
+        <nodes xsi:type="Range" name="range" value="2927.61105910266"/>
+        <nodes xsi:type="Tilt" name="tilt" value="44.61324882043339"/>
+        <nodes xsi:type="Heading" name="heading" value="4.947421249553717"/>
+      </nodes>
+      <nodes xsi:type="Visibility" name="visibility" value="0"/>
+      <nodes xsi:type="StyleUrl" name="styleUrl" value="#khStyle580"/>
+      <nodes xsi:type="Style" name="Style" id="khStyle1369">
+        <nodes xsi:type="LineStyle" name="LineStyle" id="khLineStyle1372">
+          <nodes xsi:type="Color" name="color" value="87000000"/>
+          <nodes xsi:type="Width" name="width" value="10.0"/>
+        </nodes>
+      </nodes>
+      <nodes xsi:type="LineString" name="LineString">
+        <nodes xsi:type="Extrude" name="extrude"/>
+        <nodes xsi:type="Tessellate" name="tessellate" value="1"/>
+        <nodes xsi:type="AltitudeMode" name="altitudeMode" value="relativeToGround"/>
+        <nodes xsi:type="Coordinates" name="coordinates">
+          <nodes xsi:type="Coordinate" name="-112.2532845153347,36.09886943729116,645"/>
+          <nodes xsi:type="Coordinate" name="-112.2540466121145,36.09919570465255,645"/>
+          <nodes xsi:type="Coordinate" name="-112.254734666947,36.09984998366178,645"/>
+          <nodes xsi:type="Coordinate" name="-112.255493345654,36.10051310621746,645"/>
+          <nodes xsi:type="Coordinate" name="-112.2563157098468,36.10108441943419,645"/>
+          <nodes xsi:type="Coordinate" name="-112.2568033076439,36.10159722088088,645"/>
+          <nodes xsi:type="Coordinate" name="-112.257494011321,36.10204323542867,645"/>
+          <nodes xsi:type="Coordinate" name="-112.2584106072308,36.10229131995655,645"/>
+          <nodes xsi:type="Coordinate" name="-112.2596588987972,36.10240001286358,645"/>
+          <nodes xsi:type="Coordinate" name="-112.2610581199487,36.10213176873407,645"/>
+          <nodes xsi:type="Coordinate" name="-112.2626285262793,36.10157011437219,645"/>
+        </nodes>
+      </nodes>
+    </nodes>
+    <nodes xsi:type="Placemark" name="Placemark">
+      <nodes xsi:type="Description" name="description" value="Opaque gray walls with black outline, height tracks terrain "/>
+      <nodes xsi:type="Name" name="name" value="Relative Extruded"/>
+      <nodes xsi:type="LookAt" name="LookAt">
+        <nodes xsi:type="Longitude" name="longitude" value="-112.2683594333433"/>
+        <nodes xsi:type="Latitude" name="latitude" value="36.09884362144909"/>
+        <nodes xsi:type="Range" name="range" value="2184.193522571467"/>
+        <nodes xsi:type="Tilt" name="tilt" value="44.60855445139561"/>
+        <nodes xsi:type="Heading" name="heading" value="-72.24271551768405"/>
+      </nodes>
+      <nodes xsi:type="Visibility" name="visibility" value="0"/>
+      <nodes xsi:type="StyleUrl" name="styleUrl" value="#khStyle580"/>
+      <nodes xsi:type="Style" name="Style" id="khStyle919">
+        <nodes xsi:type="LineStyle" name="LineStyle" id="khLineStyle922">
+          <nodes xsi:type="Color" name="color" value="ff000000"/>
+          <nodes xsi:type="Width" name="width" value="4.0"/>
+        </nodes>
+      </nodes>
+      <nodes xsi:type="LineString" name="LineString">
+        <nodes xsi:type="Extrude" name="extrude" value="true"/>
+        <nodes xsi:type="Tessellate" name="tessellate" value="1"/>
+        <nodes xsi:type="AltitudeMode" name="altitudeMode" value="relativeToGround"/>
+        <nodes xsi:type="Coordinates" name="coordinates">
+          <nodes xsi:type="Coordinate" name="-112.2656634181359,36.09445214722695,630"/>
+          <nodes xsi:type="Coordinate" name="-112.2652238941097"/>
+          <nodes xsi:type="Coordinate" name=",36.09520916122063,630"/>
+          <nodes xsi:type="Coordinate" name="-112.2645079986395,36.09580763864907,630"/>
+          <nodes xsi:type="Coordinate" name="-112.2638827428817,36.09628572284063,630"/>
+          <nodes xsi:type="Coordinate" name="-112.2635746835406,36.09679275951239,630"/>
+          <nodes xsi:type="Coordinate" name="-112.2635711822407,36.09740038871899,630"/>
+          <nodes xsi:type="Coordinate" name="-112.2640296531825,36.09804913435539,630"/>
+          <nodes xsi:type="Coordinate" name="-112.264327720538,36.09880337400301,630"/>
+          <nodes xsi:type="Coordinate" name="-112.2642436562271,36.09963644790288,630"/>
+          <nodes xsi:type="Coordinate" name="-112.2639148687042,36.10055381117246,630"/>
+          <nodes xsi:type="Coordinate" name="-112.2626894973474,36.10149062823369,630"/>
+        </nodes>
+      </nodes>
+    </nodes>
+  </nodes>
+  <nodes xsi:type="Folder" name="Folder">
+    <nodes xsi:type="Description" name="description" value="Examples of polygon shapes "/>
+    <nodes xsi:type="Name" name="name" value="Polygons"/>
+    <nodes xsi:type="Visibility" name="visibility" value="0"/>
+    <nodes xsi:type="Open" name="open" value="0"/>
+    <nodes xsi:type="Document" name="Document">
+      <nodes xsi:type="Description" name="description" value="Place your mouse over the icon to see it display the new icon "/>
+      <nodes xsi:type="Name" name="name" value="Simple Icon Rollover"/>
+      <nodes xsi:type="Visibility" name="visibility" value="0"/>
+      <nodes xsi:type="Style" name="Style" id="highlightPlacemark">
+        <nodes xsi:type="IconStyle" name="IconStyle">
+          <nodes xsi:type="Icon" name="Icon">
+            <nodes xsi:type="Href" name="href" value="http://bbs.keyhole.com/ubb/z0302a1700/google_icon.jpg"/>
+          </nodes>
+        </nodes>
+      </nodes>
+      <nodes xsi:type="Style" name="Style" id="normalPlacemark">
+        <nodes xsi:type="IconStyle" name="IconStyle">
+          <nodes xsi:type="Icon" name="Icon">
+            <nodes xsi:type="Href" name="href" value="http://bbs.keyhole.com/ubb/z0302a1700/keyhole_icon.jpg"/>
+          </nodes>
+        </nodes>
+      </nodes>
+      <nodes xsi:type="StyleMap" name="StyleMap">
+        <nodes xsi:type="Pair" name="Pair">
+          <nodes xsi:type="Key" name="key" value="normal"/>
+          <nodes xsi:type="StyleUrl" name="styleUrl" value="#normalPlacemark"/>
+        </nodes>
+        <nodes xsi:type="Pair" name="Pair">
+          <nodes xsi:type="Key" name="key" value="highlight"/>
+          <nodes xsi:type="StyleUrl" name="styleUrl" value="#highlightPlacemark"/>
+        </nodes>
+      </nodes>
+      <nodes xsi:type="Placemark" name="Placemark">
+        <nodes xsi:type="Name" name="name" value="Example Placemark"/>
+        <nodes xsi:type="Visibility" name="visibility" value="0"/>
+        <nodes xsi:type="StyleUrl" name="styleUrl" value="#exampleStyleMap"/>
+        <nodes xsi:type="Point" name="Point">
+          <nodes xsi:type="Extrude" name="extrude"/>
+          <nodes xsi:type="AltitudeMode" name="altitudeMode"/>
+          <nodes xsi:type="Coordinates" name="coordinates">
+            <nodes xsi:type="Coordinate" name="-122.0856545755255,37.42243077405461,0"/>
+          </nodes>
+        </nodes>
+      </nodes>
+    </nodes>
+    <nodes xsi:type="Folder" name="Folder">
+      <nodes xsi:type="Description" name="description" value="A collection showing how easy it is to create 3-dimensional buildings "/>
+      <nodes xsi:type="Name" name="name" value="Google"/>
+      <nodes xsi:type="LookAt" name="LookAt">
+        <nodes xsi:type="Longitude" name="longitude" value="-122.084120030116"/>
+        <nodes xsi:type="Latitude" name="latitude" value="37.42174011925477"/>
+        <nodes xsi:type="Range" name="range" value="276.7870053764046"/>
+        <nodes xsi:type="Tilt" name="tilt" value="53.454348562403"/>
+        <nodes xsi:type="Heading" name="heading" value="-34.82469740081282"/>
+      </nodes>
+      <nodes xsi:type="Visibility" name="visibility" value="0"/>
+      <nodes xsi:type="Placemark" name="Placemark">
+        <nodes xsi:type="Name" name="name" value="Building 40"/>
+        <nodes xsi:type="Visibility" name="visibility" value="0"/>
+        <nodes xsi:type="Style" name="Style" id="khStyle767">
+          <nodes xsi:type="LineStyle" name="LineStyle" id="khLineStyle770">
+            <nodes xsi:type="Width" name="width" value="1.5"/>
+          </nodes>
+          <nodes xsi:type="PolyStyle" name="PolyStyle">
+            <nodes xsi:type="Color" name="color" value="7d0000ff"/>
+          </nodes>
+          <nodes xsi:type="IconStyle" name="IconStyle">
+            <nodes xsi:type="Scale" name="scale" value="4.244029702031485e-038"/>
+          </nodes>
+        </nodes>
+        <nodes xsi:type="Polygon" name="Polygon">
+          <nodes xsi:type="Extrude" name="extrude" value="true"/>
+          <nodes xsi:type="AltitudeMode" name="altitudeMode" value="relativeToGround"/>
+          <nodes xsi:type="OuterBoundaryIs" name="outerBoundaryIs">
+            <nodes xsi:type="LinearRing" name="LinearRing">
+              <nodes xsi:type="Coordinates" name="coordinates">
+                <nodes xsi:type="Coordinate" name="-122.08501956622,37.42211499771112,17"/>
+                <nodes xsi:type="Coordinate" name="-122.0849834990657,37.42248924109634,17"/>
+                <nodes xsi:type="Coordinate" name="-122.0849169371672,37.42247674949803,17"/>
+                <nodes xsi:type="Coordinate" name="-122.0849056009025,37.42253529606009,17"/>
+                <nodes xsi:type="Coordinate" name="-122.0847146454478,37.42256280605007,17"/>
+                <nodes xsi:type="Coordinate" name="-122.0845901956961,37.42255339509447,17"/>
+                <nodes xsi:type="Coordinate" name="-122.084317586281,37.4225238122142,17"/>
+                <nodes xsi:type="Coordinate" name="-122.0842547236984,37.42256234254846,17"/>
+                <nodes xsi:type="Coordinate" name="-122.0840030500614,37.42250254062454,17"/>
+                <nodes xsi:type="Coordinate" name="-122.0834635938769,37.42228222928219,17"/>
+                <nodes xsi:type="Coordinate" name="-122.0834826526979,37.42219772541348,17"/>
+                <nodes xsi:type="Coordinate" name="-122.083051963097,37.42226120139529,17"/>
+                <nodes xsi:type="Coordinate" name="-122.0829908668587,37.42224705527918,17"/>
+                <nodes xsi:type="Coordinate" name="-122.0831156405824,37.42213117801204,17"/>
+                <nodes xsi:type="Coordinate" name="-122.0833726117292,37.42202481787286,17"/>
+                <nodes xsi:type="Coordinate" name="-122.0834346878019,37.42209841960835,17"/>
+                <nodes xsi:type="Coordinate" name="-122.083531755758,37.42207753539115,17"/>
+                <nodes xsi:type="Coordinate" name="-122.083909041308,37.42196145324033,17"/>
+                <nodes xsi:type="Coordinate" name="-122.0839936910748,37.42227344775009,17"/>
+                <nodes xsi:type="Coordinate" name="-122.08501956622,37.42211499771112,17"/>
+              </nodes>
+            </nodes>
+          </nodes>
+        </nodes>
+      </nodes>
+      <nodes xsi:type="Placemark" name="Placemark">
+        <nodes xsi:type="Name" name="name" value="Building 41"/>
+        <nodes xsi:type="Visibility" name="visibility" value="0"/>
+        <nodes xsi:type="Style" name="Style" id="khStyle777">
+          <nodes xsi:type="LineStyle" name="LineStyle" id="khLineStyle780">
+            <nodes xsi:type="Width" name="width" value="1.0"/>
+          </nodes>
+          <nodes xsi:type="PolyStyle" name="PolyStyle">
+            <nodes xsi:type="Color" name="color" value="7dff0000"/>
+          </nodes>
+          <nodes xsi:type="IconStyle" name="IconStyle">
+            <nodes xsi:type="Scale" name="scale" value="4.244029702031485e-038"/>
+          </nodes>
+        </nodes>
+        <nodes xsi:type="Polygon" name="Polygon">
+          <nodes xsi:type="Extrude" name="extrude" value="true"/>
+          <nodes xsi:type="AltitudeMode" name="altitudeMode" value="relativeToGround"/>
+          <nodes xsi:type="OuterBoundaryIs" name="outerBoundaryIs">
+            <nodes xsi:type="LinearRing" name="LinearRing">
+              <nodes xsi:type="Coordinates" name="coordinates">
+                <nodes xsi:type="Coordinate" name="-122.0853382555126,37.42223610664351,25"/>
+                <nodes xsi:type="Coordinate" name="-122.0853318536943,37.4221739253251,25"/>
+                <nodes xsi:type="Coordinate" name="-122.085446594713,37.42214674232767,25"/>
+                <nodes xsi:type="Coordinate" name="-122.0855027192153,37.42220480064276,25"/>
+                <nodes xsi:type="Coordinate" name="-122.0855549777737,37.42214920428896,25"/>
+                <nodes xsi:type="Coordinate" name="-122.0855949924034,37.42217200415619,25"/>
+                <nodes xsi:type="Coordinate" name="-122.0856951980172,37.42206946271753,25"/>
+                <nodes xsi:type="Coordinate" name="-122.0857656320704,37.42207986818701,25"/>
+                <nodes xsi:type="Coordinate" name="-122.0858330634199,37.42210072723292,25"/>
+                <nodes xsi:type="Coordinate" name="-122.0858804062037,37.42212620720378,25"/>
+                <nodes xsi:type="Coordinate" name="-122.0859392675755,37.42216348297005,25"/>
+                <nodes xsi:type="Coordinate" name="-122.0859131253064,37.42222869807702,25"/>
+                <nodes xsi:type="Coordinate" name="-122.0859378265507,37.42223731315458,25"/>
+                <nodes xsi:type="Coordinate" name="-122.0859103982515,37.42227680787222,25"/>
+                <nodes xsi:type="Coordinate" name="-122.0858703567181,37.4223098329879,25"/>
+                <nodes xsi:type="Coordinate" name="-122.0857934929237,37.42227187713122,25"/>
+                <nodes xsi:type="Coordinate" name="-122.085767446047,37.42229023914588,25"/>
+                <nodes xsi:type="Coordinate" name="-122.0860135827987,37.42244539633496,25"/>
+                <nodes xsi:type="Coordinate" name="-122.0856808433546,37.42277253285285,25"/>
+                <nodes xsi:type="Coordinate" name="-122.0852022770712,37.42245615613076,25"/>
+                <nodes xsi:type="Coordinate" name="-122.0854047123013,37.42227639382812,25"/>
+                <nodes xsi:type="Coordinate" name="-122.0853382555126,37.42223610664351,25"/>
+              </nodes>
+            </nodes>
+          </nodes>
+        </nodes>
+      </nodes>
+      <nodes xsi:type="Placemark" name="Placemark">
+        <nodes xsi:type="Name" name="name" value="Building 42"/>
+        <nodes xsi:type="Visibility" name="visibility" value="0"/>
+        <nodes xsi:type="Style" name="Style" id="khStyle787">
+          <nodes xsi:type="LineStyle" name="LineStyle" id="khLineStyle790">
+            <nodes xsi:type="Width" name="width" value="1.5"/>
+          </nodes>
+          <nodes xsi:type="PolyStyle" name="PolyStyle">
+            <nodes xsi:type="Color" name="color" value="8f00ff00"/>
+          </nodes>
+          <nodes xsi:type="IconStyle" name="IconStyle">
+            <nodes xsi:type="Scale" name="scale" value="4.244029702031485e-038"/>
+          </nodes>
+        </nodes>
+        <nodes xsi:type="Polygon" name="Polygon">
+          <nodes xsi:type="Extrude" name="extrude" value="true"/>
+          <nodes xsi:type="AltitudeMode" name="altitudeMode" value="relativeToGround"/>
+          <nodes xsi:type="OuterBoundaryIs" name="outerBoundaryIs">
+            <nodes xsi:type="LinearRing" name="LinearRing">
+              <nodes xsi:type="Coordinates" name="coordinates">
+                <nodes xsi:type="Coordinate" name="-122.0859290635421,37.42139369541216,25"/>
+                <nodes xsi:type="Coordinate" name="-122.085791835592,37.42136750612213,25"/>
+                <nodes xsi:type="Coordinate" name="-122.0857977061047,37.42131874963533,25"/>
+                <nodes xsi:type="Coordinate" name="-122.0854895360885,37.42128794616325,25"/>
+                <nodes xsi:type="Coordinate" name="-122.0854419375475,37.4215301634753,25"/>
+                <nodes xsi:type="Coordinate" name="-122.0854852513714,37.42154234050855,25"/>
+                <nodes xsi:type="Coordinate" name="-122.0854798714853,37.42162489319049,25"/>
+                <nodes xsi:type="Coordinate" name="-122.0854456942235,37.42163602260002,25"/>
+                <nodes xsi:type="Coordinate" name="-122.0854703574229,37.42168017644806,25"/>
+                <nodes xsi:type="Coordinate" name="-122.0855236762464,37.42166815419937,25"/>
+                <nodes xsi:type="Coordinate" name="-122.0855328128851,37.4216860362041,25"/>
+                <nodes xsi:type="Coordinate" name="-122.0855438563166,37.42178426619047,25"/>
+                <nodes xsi:type="Coordinate" name="-122.085583092873,37.42181858617571,25"/>
+                <nodes xsi:type="Coordinate" name="-122.0856359776748,37.42183031672494,25"/>
+                <nodes xsi:type="Coordinate" name="-122.0857184714666,37.42182197678297,25"/>
+                <nodes xsi:type="Coordinate" name="-122.0857772553104,37.42180558867113,25"/>
+                <nodes xsi:type="Coordinate" name="-122.0858168690914,37.42176674331163,25"/>
+                <nodes xsi:type="Coordinate" name="-122.0858291296256,37.42172366441243,25"/>
+                <nodes xsi:type="Coordinate" name="-122.0858915851655,37.42172952398134,25"/>
+                <nodes xsi:type="Coordinate" name="-122.0858866397592,37.42179646047247,25"/>
+                <nodes xsi:type="Coordinate" name="-122.0861100055468,37.42181320706845,25"/>
+                <nodes xsi:type="Coordinate" name="-122.086130768649,37.42162390232544,25"/>
+                <nodes xsi:type="Coordinate" name="-122.0860733155441,37.42160051879284,25"/>
+                <nodes xsi:type="Coordinate" name="-122.0860536543681,37.42154155319064,25"/>
+                <nodes xsi:type="Coordinate" name="-122.0860367114035,37.42146601742952,25"/>
+                <nodes xsi:type="Coordinate" name="-122.0860613177918,37.42145804652374,25"/>
+                <nodes xsi:type="Coordinate" name="-122.0860475555615,37.42137909895018,25"/>
+                <nodes xsi:type="Coordinate" name="-122.0860074510157,37.42138414817713,25"/>
+                <nodes xsi:type="Coordinate" name="-122.0859928208459,37.42134456966203,25"/>
+                <nodes xsi:type="Coordinate" name="-122.0859362930617,37.42133936606868,25"/>
+                <nodes xsi:type="Coordinate" name="-122.0859290635421,37.42139369541216,25"/>
+              </nodes>
+            </nodes>
+          </nodes>
+        </nodes>
+      </nodes>
+      <nodes xsi:type="Placemark" name="Placemark">
+        <nodes xsi:type="Name" name="name" value="Building 43"/>
+        <nodes xsi:type="Visibility" name="visibility" value="0"/>
+        <nodes xsi:type="Style" name="Style" id="khStyle797">
+          <nodes xsi:type="LineStyle" name="LineStyle" id="khLineStyle800">
+            <nodes xsi:type="Width" name="width" value="1.5"/>
+          </nodes>
+          <nodes xsi:type="PolyStyle" name="PolyStyle">
+            <nodes xsi:type="Color" name="color" value="7d00ffff"/>
+          </nodes>
+          <nodes xsi:type="IconStyle" name="IconStyle">
+            <nodes xsi:type="Scale" name="scale" value="4.244029702031485e-038"/>
+          </nodes>
+        </nodes>
+        <nodes xsi:type="Polygon" name="Polygon">
+          <nodes xsi:type="Extrude" name="extrude" value="true"/>
+          <nodes xsi:type="AltitudeMode" name="altitudeMode" value="relativeToGround"/>
+          <nodes xsi:type="OuterBoundaryIs" name="outerBoundaryIs">
+            <nodes xsi:type="LinearRing" name="LinearRing">
+              <nodes xsi:type="Coordinates" name="coordinates">
+                <nodes xsi:type="Coordinate" name="-122.0845751033364,37.42164250841337,19"/>
+                <nodes xsi:type="Coordinate" name="-122.0846230975106,37.42177058827087,19"/>
+                <nodes xsi:type="Coordinate" name="-122.0850437216922,37.42168460555725,19"/>
+                <nodes xsi:type="Coordinate" name="-122.0850409468974,37.4216490510542,19"/>
+                <nodes xsi:type="Coordinate" name="-122.0851389387785,37.42163820887635,19"/>
+                <nodes xsi:type="Coordinate" name="-122.0851783268144,37.42138815300042,19"/>
+                <nodes xsi:type="Coordinate" name="-122.0851395813756,37.42138762909299,19"/>
+                <nodes xsi:type="Coordinate" name="-122.0851572507134,37.42128534768738,19"/>
+                <nodes xsi:type="Coordinate" name="-122.0850464795204,37.42127669796096,19"/>
+                <nodes xsi:type="Coordinate" name="-122.0850428080135,37.42125445020561,19"/>
+                <nodes xsi:type="Coordinate" name="-122.0843859586434,37.42122871680091,19"/>
+                <nodes xsi:type="Coordinate" name="-122.0843760373607,37.42132839069651,19"/>
+                <nodes xsi:type="Coordinate" name="-122.0841718148791,37.4213107482245,19"/>
+                <nodes xsi:type="Coordinate" name="-122.0841403004246,37.42125047030793,19"/>
+                <nodes xsi:type="Coordinate" name="-122.0840759959561,37.42121638644056,19"/>
+                <nodes xsi:type="Coordinate" name="-122.0840107946272,37.42119560926733,19"/>
+                <nodes xsi:type="Coordinate" name="-122.0840094631669,37.42122995663405,19"/>
+                <nodes xsi:type="Coordinate" name="-122.0839551918818,37.42120316031667,19"/>
+                <nodes xsi:type="Coordinate" name="-122.0834592518983,37.42118288710486,19"/>
+                <nodes xsi:type="Coordinate" name="-122.083443864316,37.42128963880136,19"/>
+                <nodes xsi:type="Coordinate" name="-122.0831557618037,37.42125984345081,19"/>
+                <nodes xsi:type="Coordinate" name="-122.0830948864474,37.42145690814568,19"/>
+                <nodes xsi:type="Coordinate" name="-122.0829882484051,37.42147552600115,19"/>
+                <nodes xsi:type="Coordinate" name="-122.0830029044301,37.42154659164194,19"/>
+                <nodes xsi:type="Coordinate" name="-122.0830566858039,37.42154230440313,19"/>
+                <nodes xsi:type="Coordinate" name="-122.0830471974917,37.42162093756363,19"/>
+                <nodes xsi:type="Coordinate" name="-122.0831520690867,37.42165499541878,19"/>
+                <nodes xsi:type="Coordinate" name="-122.0832783388366,37.42166385672398,19"/>
+                <nodes xsi:type="Coordinate" name="-122.0833845423499,37.42166356701601,19"/>
+                <nodes xsi:type="Coordinate" name="-122.0834296500156,37.42164641912394,19"/>
+                <nodes xsi:type="Coordinate" name="-122.0834314993402,37.42166921808,19"/>
+                <nodes xsi:type="Coordinate" name="-122.0836880615659,37.42161538462213,19"/>
+                <nodes xsi:type="Coordinate" name="-122.0837213142989,37.42159150013369,19"/>
+                <nodes xsi:type="Coordinate" name="-122.0837281941621,37.42163639848906,19"/>
+                <nodes xsi:type="Coordinate" name="-122.084100964714,37.42155536268492,19"/>
+                <nodes xsi:type="Coordinate" name="-122.0841256549352,37.42162557912604,19"/>
+                <nodes xsi:type="Coordinate" name="-122.0842455070085,37.42159998718519,19"/>
+                <nodes xsi:type="Coordinate" name="-122.0842212790757,37.42153479244936,19"/>
+                <nodes xsi:type="Coordinate" name="-122.0842850935485,37.42153508002232,19"/>
+                <nodes xsi:type="Coordinate" name="-122.0842738686703,37.42169516360249,19"/>
+                <nodes xsi:type="Coordinate" name="-122.0843217505882,37.42171628210883,19"/>
+                <nodes xsi:type="Coordinate" name="-122.0843851028068,37.42171154794662,19"/>
+                <nodes xsi:type="Coordinate" name="-122.0844525327917,37.42168467079804,19"/>
+                <nodes xsi:type="Coordinate" name="-122.0845208875693,37.42166783697406,19"/>
+                <nodes xsi:type="Coordinate" name="-122.0845190378809,37.42164232581968,19"/>
+                <nodes xsi:type="Coordinate" name="-122.0845751033364,37.42164250841337,19"/>
+              </nodes>
+            </nodes>
+          </nodes>
+        </nodes>
+      </nodes>
+    </nodes>
+    <nodes xsi:type="Folder" name="Folder">
+      <nodes xsi:type="Description" name="description" value="Four structures whose roofs meet exactly. Turn on/off terrain to see the difference between relative and absolute positioning. "/>
+      <nodes xsi:type="Name" name="name" value="Absolute and Relative"/>
+      <nodes xsi:type="LookAt" name="LookAt">
+        <nodes xsi:type="Longitude" name="longitude" value="-112.3348969157552"/>
+        <nodes xsi:type="Latitude" name="latitude" value="36.14845533214919"/>
+        <nodes xsi:type="Range" name="range" value="990.6761201087104"/>
+        <nodes xsi:type="Tilt" name="tilt" value="49.30695423894192"/>
+        <nodes xsi:type="Heading" name="heading" value="-86.91235037566909"/>
+      </nodes>
+      <nodes xsi:type="Visibility" name="visibility" value="0"/>
+      <nodes xsi:type="Open" name="open" value="0"/>
+      <nodes xsi:type="Placemark" name="Placemark">
+        <nodes xsi:type="Name" name="name" value="Absolute"/>
+        <nodes xsi:type="Visibility" name="visibility" value="0"/>
+        <nodes xsi:type="StyleUrl" name="styleUrl" value="#khStyle2093"/>
+        <nodes xsi:type="Style" name="Style" id="khStyle640">
+          <nodes xsi:type="LineStyle" name="LineStyle" id="khLineStyle643">
+            <nodes xsi:type="Color" name="color" value="ff000000"/>
+          </nodes>
+        </nodes>
+        <nodes xsi:type="Polygon" name="Polygon">
+          <nodes xsi:type="Extrude" name="extrude"/>
+          <nodes xsi:type="AltitudeMode" name="altitudeMode" value="absolute"/>
+          <nodes xsi:type="OuterBoundaryIs" name="outerBoundaryIs">
+            <nodes xsi:type="LinearRing" name="LinearRing">
+              <nodes xsi:type="Coordinates" name="coordinates">
+                <nodes xsi:type="Coordinate" name="-112.3372510731295,36.14888505105317,1784"/>
+                <nodes xsi:type="Coordinate" name="-112.3356128688403,36.14781540589019,1784"/>
+                <nodes xsi:type="Coordinate" name="-112.3368169371048,36.14658677734382,1784"/>
+                <nodes xsi:type="Coordinate" name="-112.3384408457543,36.14762778914076,1784"/>
+                <nodes xsi:type="Coordinate" name="-112.3372510731295,36.14888505105317,1784"/>
+              </nodes>
+            </nodes>
+          </nodes>
+        </nodes>
+      </nodes>
+      <nodes xsi:type="Placemark" name="Placemark">
+        <nodes xsi:type="Name" name="name" value="Absolute Extruded"/>
+        <nodes xsi:type="Visibility" name="visibility" value="0"/>
+        <nodes xsi:type="StyleUrl" name="styleUrl" value="#khStyle2093"/>
+        <nodes xsi:type="Style" name="Style" id="khStyle2126">
+          <nodes xsi:type="LineStyle" name="LineStyle" id="khLineStyle2129">
+            <nodes xsi:type="Color" name="color" value="ff000000"/>
+          </nodes>
+        </nodes>
+        <nodes xsi:type="Polygon" name="Polygon">
+          <nodes xsi:type="Extrude" name="extrude" value="true"/>
+          <nodes xsi:type="AltitudeMode" name="altitudeMode" value="absolute"/>
+          <nodes xsi:type="OuterBoundaryIs" name="outerBoundaryIs">
+            <nodes xsi:type="LinearRing" name="LinearRing">
+              <nodes xsi:type="Coordinates" name="coordinates">
+                <nodes xsi:type="Coordinate" name="-112.3396586818843,36.14637618647505,1784"/>
+                <nodes xsi:type="Coordinate" name="-112.3380597654315,36.14531751871353,1784"/>
+                <nodes xsi:type="Coordinate" name="-112.3368254237788,36.14659596244607,1784"/>
+                <nodes xsi:type="Coordinate" name="-112.3384555043203,36.14762621763982,1784"/>
+                <nodes xsi:type="Coordinate" name="-112.3396586818843,36.14637618647505,1784"/>
+              </nodes>
+            </nodes>
+          </nodes>
+        </nodes>
+      </nodes>
+      <nodes xsi:type="Placemark" name="Placemark">
+        <nodes xsi:type="Name" name="name" value="Relative"/>
+        <nodes xsi:type="LookAt" name="LookAt">
+          <nodes xsi:type="Longitude" name="longitude" value="-112.3350152490417"/>
+          <nodes xsi:type="Latitude" name="latitude" value="36.14943123077423"/>
+          <nodes xsi:type="Range" name="range" value="345.5169113679813"/>
+          <nodes xsi:type="Tilt" name="tilt" value="37.92486261093203"/>
+          <nodes xsi:type="Heading" name="heading" value="-118.9214100848499"/>
+        </nodes>
+        <nodes xsi:type="Visibility" name="visibility" value="0"/>
+        <nodes xsi:type="StyleUrl" name="styleUrl" value="#khStyle2093"/>
+        <nodes xsi:type="Style" name="Style" id="">
+          <nodes xsi:type="LineStyle" name="LineStyle" id="">
+            <nodes xsi:type="Color" name="color" value="ff000000"/>
+          </nodes>
+        </nodes>
+        <nodes xsi:type="Polygon" name="Polygon">
+          <nodes xsi:type="Extrude" name="extrude"/>
+          <nodes xsi:type="AltitudeMode" name="altitudeMode" value="relativeToGround"/>
+          <nodes xsi:type="OuterBoundaryIs" name="outerBoundaryIs">
+            <nodes xsi:type="LinearRing" name="LinearRing">
+              <nodes xsi:type="Coordinates" name="coordinates">
+                <nodes xsi:type="Coordinate" name="-112.3349463145932,36.14988705767721,100"/>
+                <nodes xsi:type="Coordinate" name="-112.3354019540677,36.14941108398372,100"/>
+                <nodes xsi:type="Coordinate" name="-112.3344428289146,36.14878490381308,100"/>
+                <nodes xsi:type="Coordinate" name="-112.3331289492913,36.14780840132443,100"/>
+                <nodes xsi:type="Coordinate" name="-112.3317019516947,36.14680755678357,100"/>
+                <nodes xsi:type="Coordinate" name="-112.331131440106,36.1474173426228,100"/>
+                <nodes xsi:type="Coordinate" name="-112.332616324338,36.14845453364654,100"/>
+                <nodes xsi:type="Coordinate" name="-112.3339876620524,36.14926570522069,100"/>
+                <nodes xsi:type="Coordinate" name="-112.3349463145932,36.14988705767721,100"/>
+              </nodes>
+            </nodes>
+          </nodes>
+        </nodes>
+      </nodes>
+      <nodes xsi:type="Placemark" name="Placemark">
+        <nodes xsi:type="Name" name="name" value="Relative Extruded"/>
+        <nodes xsi:type="LookAt" name="LookAt">
+          <nodes xsi:type="Longitude" name="longitude" value="-112.3351587892382"/>
+          <nodes xsi:type="Latitude" name="latitude" value="36.14979247129029"/>
+          <nodes xsi:type="Range" name="range" value="401.0997279712519"/>
+          <nodes xsi:type="Tilt" name="tilt" value="56.10280503739589"/>
+          <nodes xsi:type="Heading" name="heading" value="-55.42811560891606"/>
+        </nodes>
+        <nodes xsi:type="Visibility" name="visibility" value="0"/>
+        <nodes xsi:type="StyleUrl" name="styleUrl" value="#khStyle2093"/>
+        <nodes xsi:type="Style" name="Style" id="khStyle657">
+          <nodes xsi:type="LineStyle" name="LineStyle" id="khLineStyle660">
+            <nodes xsi:type="Color" name="color" value="ff000000"/>
+          </nodes>
+        </nodes>
+        <nodes xsi:type="Polygon" name="Polygon">
+          <nodes xsi:type="Extrude" name="extrude" value="true"/>
+          <nodes xsi:type="AltitudeMode" name="altitudeMode" value="relativeToGround"/>
+          <nodes xsi:type="OuterBoundaryIs" name="outerBoundaryIs">
+            <nodes xsi:type="LinearRing" name="LinearRing">
+              <nodes xsi:type="Coordinates" name="coordinates">
+                <nodes xsi:type="Coordinate" name="-112.3348783983763,36.1514008468736,100"/>
+                <nodes xsi:type="Coordinate" name="-112.3372535345629,36.14888517553886,100"/>
+                <nodes xsi:type="Coordinate" name="-112.3356068927954,36.14781612679284,100"/>
+                <nodes xsi:type="Coordinate" name="-112.3350034807972,36.14846469024177,100"/>
+                <nodes xsi:type="Coordinate" name="-112.3358353861232,36.1489624162954,100"/>
+                <nodes xsi:type="Coordinate" name="-112.3345888301373,36.15026229372507,100"/>
+                <nodes xsi:type="Coordinate" name="-112.3337937856278,36.14978096026463,100"/>
+                <nodes xsi:type="Coordinate" name="-112.3331798208424,36.1504472788618,100"/>
+                <nodes xsi:type="Coordinate" name="-112.3348783983763,36.1514008468736,100"/>
+              </nodes>
+            </nodes>
+          </nodes>
+        </nodes>
+      </nodes>
+    </nodes>
+  </nodes>
+  <nodes xsi:type="Folder" name="Folder">
+    <nodes xsi:type="Description" name="description" value="Examples of network links "/>
+    <nodes xsi:type="Name" name="name" value="Network Links"/>
+    <nodes xsi:type="Visibility" name="visibility" value="0"/>
+    <nodes xsi:type="Open" name="open" value="0"/>
+    <nodes xsi:type="NetworkLink" name="NetworkLink">
+      <nodes xsi:type="Description" name="description" value="A simple server-side script that generates a new random placemark on each call "/>
+      <nodes xsi:type="Name" name="name" value="Random Placemark"/>
+      <nodes xsi:type="Visibility" name="visibility" value="0"/>
+      <nodes xsi:type="RefreshVisibility" name="refreshVisibility" value="0"/>
+      <nodes xsi:type="Url" name="Url">
+        <nodes xsi:type="Href" name="href" value="http://bbs.keyhole.com/ubb/z0302a1700/random_placemark.php"/>
+      </nodes>
+      <nodes xsi:type="FlyToView" name="flyToView"/>
+    </nodes>
+    <nodes xsi:type="NetworkLink" name="NetworkLink">
+      <nodes xsi:type="Description" name="description" value="The view-based refresh allows the remote server to calculate the center of your screen and return a placemark. "/>
+      <nodes xsi:type="Name" name="name" value="View Centered Placemark"/>
+      <nodes xsi:type="Visibility" name="visibility" value="0"/>
+      <nodes xsi:type="RefreshVisibility" name="refreshVisibility" value="0"/>
+      <nodes xsi:type="Url" name="Url">
+        <nodes xsi:type="Href" name="href" value="http://bbs.keyhole.com/ubb/z0302a1700/view_centered_placemark.php"/>
+        <nodes xsi:type="ViewRefreshMode" name="viewRefreshMode" value="onStop"/>
+        <nodes xsi:type="ViewRefreshTime" name="viewRefreshTime" value="1"/>
+      </nodes>
+      <nodes xsi:type="FlyToView" name="flyToView"/>
+    </nodes>
+  </nodes>
+  <nodes xsi:type="Folder" name="Folder">
+    <nodes xsi:type="Open" name="open" value="0"/>
+    <nodes xsi:type="Placemark" name="Placemark">
+      <nodes xsi:type="Address" name="address" value="1600 Amphitheater Pkwy, Mountain View, CA"/>
+      <nodes xsi:type="Description" name="description" value="Tethered to the ground by a customizable tail "/>
+      <nodes xsi:type="Name" name="name" value="Tethethed placemark"/>
+      <nodes xsi:type="LookAt" name="LookAt">
+        <nodes xsi:type="Longitude" name="longitude" value="-122.0856375356631"/>
+        <nodes xsi:type="Latitude" name="latitude" value="37.42240551227282"/>
+        <nodes xsi:type="Range" name="range" value="305.8880792294568"/>
+        <nodes xsi:type="Tilt" name="tilt" value="46.72425699662645"/>
+        <nodes xsi:type="Heading" name="heading" value="49.06133439171233"/>
+      </nodes>
+      <nodes xsi:type="Visibility" name="visibility" value="0"/>
+      <nodes xsi:type="Style" name="Style" id="">
+        <nodes xsi:type="IconStyle" name="IconStyle">
+          <nodes xsi:type="Icon" name="Icon">
+            <nodes xsi:type="Href" name="href" value="root://icons/palette-3.png"/>
+            <nodes xsi:type="X" name="x" value="96"/>
+            <nodes xsi:type="Y" name="y" value="160"/>
+            <nodes xsi:type="W" name="w" value="32"/>
+            <nodes xsi:type="H" name="h" value="32"/>
+          </nodes>
+        </nodes>
+      </nodes>
+      <nodes xsi:type="Point" name="Point">
+        <nodes xsi:type="Extrude" name="extrude" value="true"/>
+        <nodes xsi:type="AltitudeMode" name="altitudeMode" value="relativeToGround"/>
+        <nodes xsi:type="Coordinates" name="coordinates">
+          <nodes xsi:type="Coordinate" name="-122.0856204541786,37.42244015321688,50"/>
+        </nodes>
+      </nodes>
+    </nodes>
+    <nodes xsi:type="Description" name="description" value="&lt;h1>CDATA Tags are important!&lt;/h1> &lt;p>&lt;font color=&quot;red&quot;>Text is &lt;i>more readable&lt;/i> and &lt;b>easier to write&lt;/b> when you can avoid using entity references.&lt;/font>&lt;/p> "/>
+    <nodes xsi:type="GroundOverlay" name="GroundOverlay">
+      <nodes xsi:type="Description" name="description" value="Overlay shows Mount Etna erupting on July 13th, 2001. "/>
+      <nodes xsi:type="Name" name="name" value="Large-scale overlay on terrain"/>
+      <nodes xsi:type="DrawOrder" name="drawOrder" value="1"/>
+      <nodes xsi:type="LookAt" name="LookAt">
+        <nodes xsi:type="Longitude" name="longitude" value="15.02468937557116"/>
+        <nodes xsi:type="Latitude" name="latitude" value="37.67395167941667"/>
+        <nodes xsi:type="Range" name="range" value="30350.36838438907"/>
+        <nodes xsi:type="Tilt" name="tilt" value="58.31228652890705"/>
+        <nodes xsi:type="Heading" name="heading" value="-16.5581842842829"/>
+      </nodes>
+      <nodes xsi:type="Visibility" name="visibility" value="0"/>
+      <nodes xsi:type="Icon" name="Icon">
+        <nodes xsi:type="Href" name="href" value="http://bbs.keyhole.com/ubb/z0302a1700/etna.jpg"/>
+      </nodes>
+      <nodes xsi:type="LatLonBox" name="LatLonBox">
+        <nodes xsi:type="North" name="north" value="37.91904192681665"/>
+        <nodes xsi:type="South" name="south" value="37.46543388598137"/>
+        <nodes xsi:type="East" name="east" value="15.35832653742206"/>
+        <nodes xsi:type="West" name="west" value="14.60128369746704"/>
+        <nodes xsi:type="Rotation" name="rotation" value="0"/>
+      </nodes>
+    </nodes>
+    <nodes xsi:type="Placemark" name="Placemark">
+      <nodes xsi:type="Description" name="description" value="Transparent green wall with yellow outlines "/>
+      <nodes xsi:type="Name" name="name" value="Absolute Extruded"/>
+      <nodes xsi:type="LookAt" name="LookAt">
+        <nodes xsi:type="Longitude" name="longitude" value="-112.2643334742529"/>
+        <nodes xsi:type="Latitude" name="latitude" value="36.08563154742419"/>
+        <nodes xsi:type="Range" name="range" value="4451.842204068102"/>
+        <nodes xsi:type="Tilt" name="tilt" value="44.61038665812578"/>
+        <nodes xsi:type="Heading" name="heading" value="-125.7518698668815"/>
+      </nodes>
+      <nodes xsi:type="Visibility" name="visibility" value="1"/>
+      <nodes xsi:type="Style" name="Style" id="">
+        <nodes xsi:type="LineStyle" name="LineStyle" id="">
+          <nodes xsi:type="Color" name="color" value="ff00ffff"/>
+        </nodes>
+        <nodes xsi:type="PolyStyle" name="PolyStyle">
+          <nodes xsi:type="Color" name="color" value="7f00ff00"/>
+        </nodes>
+      </nodes>
+      <nodes xsi:type="LineString" name="LineString">
+        <nodes xsi:type="Extrude" name="extrude" value="true"/>
+        <nodes xsi:type="Tessellate" name="tessellate" value="1"/>
+        <nodes xsi:type="AltitudeMode" name="altitudeMode" value="absolute"/>
+        <nodes xsi:type="Coordinates" name="coordinates">
+          <nodes xsi:type="Coordinate" name="-112.2550785337791,36.07954952145647,2357"/>
+          <nodes xsi:type="Coordinate" name="-112.2549277039738,36.08117083492122,2357"/>
+          <nodes xsi:type="Coordinate" name="-112.2552505069063,36.08260761307279,2357"/>
+          <nodes xsi:type="Coordinate" name="-112.2564540158376,36.08395660588506,2357"/>
+          <nodes xsi:type="Coordinate" name="-112.2580238976449,36.08511401044813,2357"/>
+          <nodes xsi:type="Coordinate" name="-112.2595218489022,36.08584355239394,2357"/>
+          <nodes xsi:type="Coordinate" name="-112.2608216347552,36.08612634548589,2357"/>
+          <nodes xsi:type="Coordinate" name="-112.262073428656,36.08626019085147,2357"/>
+          <nodes xsi:type="Coordinate" name="-112.2633204928495,36.08621519860091,2357"/>
+          <nodes xsi:type="Coordinate" name="-112.2644963846444,36.08627897945274,2357"/>
+          <nodes xsi:type="Coordinate" name="-112.2656969554589,36.08649599090644,2357"/>
+        </nodes>
+      </nodes>
+    </nodes>
+    <nodes xsi:type="Placemark" name="Placemark">
+      <nodes xsi:type="Name" name="name" value="The Pentagon"/>
+      <nodes xsi:type="LookAt" name="LookAt">
+        <nodes xsi:type="Longitude" name="longitude" value="-77.05580139178142"/>
+        <nodes xsi:type="Latitude" name="latitude" value="38.870832443487"/>
+        <nodes xsi:type="Range" name="range" value="742.0552506670548"/>
+        <nodes xsi:type="Tilt" name="tilt" value="48.09646074797388"/>
+        <nodes xsi:type="Heading" name="heading" value="59.88865561738225"/>
+      </nodes>
+      <nodes xsi:type="Polygon" name="Polygon">
+        <nodes xsi:type="Extrude" name="extrude" value="true"/>
+        <nodes xsi:type="AltitudeMode" name="altitudeMode" value="relativeToGround"/>
+        <nodes xsi:type="OuterBoundaryIs" name="outerBoundaryIs">
+          <nodes xsi:type="LinearRing" name="LinearRing">
+            <nodes xsi:type="Coordinates" name="coordinates">
+              <nodes xsi:type="Coordinate" name="-77.05788457660967,38.87253259892824,100"/>
+              <nodes xsi:type="Coordinate" name="-77.05465973756702,38.87291016281703,100"/>
+              <nodes xsi:type="Coordinate" name="-77.05315536854791,38.87053267794386,100"/>
+              <nodes xsi:type="Coordinate" name="-77.05552622493516,38.868757801256,100"/>
+              <nodes xsi:type="Coordinate" name="-77.05844056290393,38.86996206506943,100"/>
+              <nodes xsi:type="Coordinate" name="-77.05788457660967,38.87253259892824,100"/>
+            </nodes>
+          </nodes>
+        </nodes>
+        <nodes xsi:type="InnerBoundaryIs" name="innerBoundaryIs">
+          <nodes xsi:type="LinearRing" name="LinearRing">
+            <nodes xsi:type="Coordinates" name="coordinates">
+              <nodes xsi:type="Coordinate" name="-77.05668055019126,38.87154239798456,100"/>
+              <nodes xsi:type="Coordinate" name="-77.05542625960818,38.87167890344077,100"/>
+              <nodes xsi:type="Coordinate" name="-77.05485125901024,38.87076535397792,100"/>
+              <nodes xsi:type="Coordinate" name="-77.05577677433152,38.87008686581446,100"/>
+              <nodes xsi:type="Coordinate" name="-77.05691162017543,38.87054446963351,100"/>
+              <nodes xsi:type="Coordinate" name="-77.05668055019126,38.87154239798456,100"/>
+            </nodes>
+          </nodes>
+        </nodes>
+      </nodes>
+    </nodes>
+    <nodes xsi:type="Document" name="Document">
+      <nodes xsi:type="Description" name="description" value="Place your mouse over the icon to see it display the new icon "/>
+      <nodes xsi:type="Name" name="name" value="Simple Icon Rollover"/>
+      <nodes xsi:type="Visibility" name="visibility" value="0"/>
+      <nodes xsi:type="Style" name="Style" id="normalPlacemark">
+        <nodes xsi:type="IconStyle" name="IconStyle">
+          <nodes xsi:type="Icon" name="Icon">
+            <nodes xsi:type="Href" name="href" value="http://bbs.keyhole.com/ubb/z0302a1700/keyhole_icon.jpg"/>
+          </nodes>
+        </nodes>
+      </nodes>
+      <nodes xsi:type="Style" name="Style" id="highlightPlacemark">
+        <nodes xsi:type="IconStyle" name="IconStyle">
+          <nodes xsi:type="Icon" name="Icon">
+            <nodes xsi:type="Href" name="href" value="http://bbs.keyhole.com/ubb/z0302a1700/google_icon.jpg"/>
+          </nodes>
+        </nodes>
+      </nodes>
+      <nodes xsi:type="StyleMap" name="StyleMap">
+        <nodes xsi:type="Pair" name="Pair">
+          <nodes xsi:type="Key" name="key" value="normal"/>
+          <nodes xsi:type="StyleUrl" name="styleUrl" value="#normalPlacemark"/>
+        </nodes>
+        <nodes xsi:type="Pair" name="Pair">
+          <nodes xsi:type="Key" name="key" value="highlight"/>
+          <nodes xsi:type="StyleUrl" name="styleUrl" value="#highlightPlacemark"/>
+        </nodes>
+      </nodes>
+      <nodes xsi:type="Placemark" name="Placemark">
+        <nodes xsi:type="Name" name="name" value="Example Placemark"/>
+        <nodes xsi:type="Visibility" name="visibility" value="0"/>
+        <nodes xsi:type="StyleUrl" name="styleUrl" value="#exampleStyleMap"/>
+        <nodes xsi:type="Point" name="Point">
+          <nodes xsi:type="Coordinates" name="coordinates">
+            <nodes xsi:type="Coordinate" name="-122.0856545755255,37.42243077405461,0"/>
+          </nodes>
+        </nodes>
+      </nodes>
+      <nodes xsi:type="NetworkLinkControl" name="NetworkLinkControl">
+        <nodes xsi:type="Message" name="message">
+          <nodes xsi:type="TextNode" name="This is a pop-up message. You will only see this once"/>
+        </nodes>
+        <nodes xsi:type="Cookie" name="cookie" value="someCookieText"/>
+        <nodes xsi:type="LinkDescription" name="linkDescription" value="KML now has new features available! "/>
+      </nodes>
+    </nodes>
+    <nodes xsi:type="ScreenOverlay" name="ScreenOverlay" id="">
+      <nodes xsi:type="Name" name="name" value="Absolute Positi"/>
+      <nodes xsi:type="Icon" name="Icon">
+        <nodes xsi:type="Href" name="href" value="http://bbs.keyhole.com/ubb/z0302a1700/top_left.jpg"/>
+      </nodes>
+      <nodes xsi:type="OverlayXY" name="overlayXY" x="0" y="1" xunits="fraction" yunits="fraction"/>
+      <nodes xsi:type="ScreenXY" name="screenXY" x="0" y="1" xunits="fraction" yunits="fraction"/>
+      <nodes xsi:type="Size" name="size" x="0" y="0" xunits="fraction" yunits="fraction"/>
+    </nodes>
+  </nodes>
+</Folder>

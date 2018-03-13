@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="ASCII"?>
+<tree:Node xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:tree="platform:/resource/Tree2List/metamodels/MMTree.ecore" name="T3h main node">
+  <children xsi:type="tree:Node" name="another node">
+    <children xsi:type="tree:Leaf" name="SUB MEDIUM azdzere" size="medium"/>
+    <children xsi:type="tree:Leaf" name="SUB SMALL fdfsdf"/>
+    <children xsi:type="tree:Leaf" name="SUB SMALL aaaaaaa"/>
+  </children>
+  <children xsi:type="tree:Leaf" name="MEDIUM a leaf in main node" size="medium"/>
+  <children xsi:type="tree:Leaf" name="BIG another leaf in main node" size="big"/>
+  <children xsi:type="tree:Leaf" name="SMALL leaf in main node"/>
+  <children xsi:type="tree:Node" name="last node">
+    <children xsi:type="tree:Leaf" name="SUB2 SMALL2"/>
+    <children xsi:type="tree:Leaf" name="SUB2 MEDIUM" size="medium"/>
+    <children xsi:type="tree:Leaf" name="SUB2 SMALL"/>
+  </children>
+</tree:Node>

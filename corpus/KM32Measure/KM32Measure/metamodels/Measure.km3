@@ -1,0 +1,108 @@
+--@name			Measure
+--@version		2.0
+--@domains		measurement data, metrics
+--@authors		Eric Vepa (evepa <at> sodius.com) for SODIUS (www.sodius.com)
+--@date			2007/06/05
+--@description	This metamodel is a representation of measurement data. The measurement data are stored in sets of measures (MeasureSet). Each MeasureSet stores the data collected from one model element. The name and type of the model element are stored respectively in elementName and elementType of the MeasureSet. The reference subsets allow a hierarchy between the MeasureSets (the same as from the model measured). A measure (Measure) corresponds to a metric (Metric) (with a name and a description [desc]). The different metrics are also categorised (a category has a name and a description [desc]). The value of a measure can be an integer, a double or a percentage value (respectively IntegerMeasure, DoubleMeasure and PercentageMeasure).
+
+--@begin package Measure
+package Measure {
+	--@begin enumeration ModelKind
+	--@comments	Defines the kind of measurable model.
+	enumeration ModelKind {
+	   	literal KM3;
+	   	literal UML2;
+	}
+	--@end enumeration ModelKind
+	
+	--@begin class RootMeasureSet
+	--@comments	Defines the root measure with the kind of measured model, the registered categories of metrics.
+	class RootMeasureSet {
+	   	attribute modelType : ModelKind;
+	   	reference categories [1-*] ordered container : Category oppositeOf root;
+	   	reference measureSets [*] ordered container : MeasureSet oppositeOf root;
+	}
+	--@end class RootMeasureSet
+	
+	--@begin class Category
+	--@comments Defines a category with a name and a description, and metrics defined for this category.
+	class Category {
+	   	attribute name : String;
+	   	attribute desc : String;
+	   	reference metrics [1-*] ordered container : Metric oppositeOf category;
+	   	reference root : RootMeasureSet oppositeOf categories;
+	}
+	--@end class Category
+	
+	--@begin class Metric
+	--@comments Defines a metric with a name, a description and a preferred value for the metric (an operator [<, <=, =, !=, >=, >] followed by a number).
+	class Metric {
+	   	attribute name : String;
+	   	attribute desc : String;
+	   	attribute preferredValue : String;
+	   	reference category : Category oppositeOf metrics;
+	}
+	--@end class Metric
+	
+	--@begin enumeration ElementKind
+	--@comments	Defines the kind of measurable model element.
+	enumeration ElementKind {
+	   	literal metamodel;
+	   	literal model;
+	   	literal "package";
+	   	literal interface;
+	   	literal "class";
+	}
+	--@end enumeration ElementKind
+	
+	--@begin class MeasureSet
+	--@comments	Defines a set of measures on a named model element of a certain type.
+	class MeasureSet {
+	   	attribute elementName : String;
+	   	attribute elementType : ElementKind;
+		reference measures [*] ordered container : Measure oppositeOf owner;
+		reference root [0-1] : RootMeasureSet oppositeOf measureSets;
+		reference "subsets" [*] ordered container : MeasureSet oppositeOf parent;	
+		reference parent [0-1] : MeasureSet oppositeOf "subsets";
+	}
+	--@end class MeasureSet
+	
+	--@begin abstract class Measure
+	--@comments Defines an abstract measure for a certain metric.
+	abstract class Measure {
+	   	reference metric : Metric;
+	   	reference owner : MeasureSet oppositeOf measures;
+	}
+	--@end abstract class Measure
+	
+	--@begin class IntegerMeasure
+	--@comments Defines a measure with an Integer value.
+	class IntegerMeasure extends Measure {
+	   	attribute value : Integer;
+	}
+	--@end class IntegerMeasure
+	
+	--@begin class DoubleMeasure
+	--@comments Defines a measure with a Double value.
+	class DoubleMeasure extends Measure {
+	   	attribute value : Double;
+	}
+	--@end class DoubleMeasure
+	
+	--@begin class PercentageMeasure
+	--@comments Defines a measure with a percentage value (between 0 and 1).
+	class PercentageMeasure extends Measure {
+	   	attribute value : Double;
+	}
+	--@end class PercentageMeasure
+}
+--@end package Measure
+
+--@begin package PrimitiveTypes
+package PrimitiveTypes {
+	datatype String;
+	datatype Boolean;
+	datatype Integer;
+	datatype Double;
+}
+--@end package PrimitiveTypes

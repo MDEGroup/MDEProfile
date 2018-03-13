@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="org.eclipse.m2m.atl.adt.launching.atlTransformation">
+<stringAttribute key="ATL File Name" value="/Syntax-SBVR-UML-usecase/Syntax2SimpleSBVR.atl"/>
+<stringAttribute key="ATL VM" value="Regular VM (with debugger)"/>
+<booleanAttribute key="AllowInterModelReferences" value="false"/>
+<mapAttribute key="Input">
+<mapEntry key="IN" value="Syntax"/>
+</mapAttribute>
+<mapAttribute key="Libs"/>
+<booleanAttribute key="Mode Debug" value="false"/>
+<mapAttribute key="Model Handler">
+<mapEntry key="SimpleSBVR" value="EMF"/>
+<mapEntry key="Syntax" value="EMF"/>
+</mapAttribute>
+<mapAttribute key="ModelType">
+<mapEntry key="SimpleSBVR" value="METAMODELOUTPUT"/>
+<mapEntry key="Syntax" value="METAMODELINPUT"/>
+<mapEntry key="IN" value="MODELINPUT"/>
+<mapEntry key="OUT" value="MODELOUTPUT"/>
+</mapAttribute>
+<mapAttribute key="Output">
+<mapEntry key="OUT" value="SimpleSBVR"/>
+</mapAttribute>
+<mapAttribute key="Path">
+<mapEntry key="SimpleSBVR" value="/Syntax-SBVR-UML-usecase/SimpleSBVR/SimpleSBVR.ecore"/>
+<mapEntry key="Syntax" value="/Syntax-SBVR-UML-usecase/Syntax/Syntax.ecore"/>
+<mapEntry key="IN" value="/Syntax-SBVR-UML-usecase/Samples/Syntax-1-EachCompanySellsAtLeastOneProduct.xmi"/>
+<mapEntry key="OUT" value="/Syntax-SBVR-UML-usecase/Samples/SimpleSBVR-1-EachCompanySellsAtLeastOneProduct.xmi"/>
+</mapAttribute>
+<stringAttribute key="Project Name" value="Syntax-SBVR-UML-usecase"/>
+<listAttribute key="Superimpose"/>
+<booleanAttribute key="continueAfterError" value="false"/>
+<booleanAttribute key="disableAttributeHelperCache" value="false"/>
+<booleanAttribute key="printExecutionTime" value="true"/>
+<booleanAttribute key="profile" value="false"/>
+<booleanAttribute key="showSummary" value="false"/>
+<booleanAttribute key="step" value="false"/>
+</launchConfiguration>

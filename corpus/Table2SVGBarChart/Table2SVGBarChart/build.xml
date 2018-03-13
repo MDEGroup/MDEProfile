@@ -1,0 +1,40 @@
+<!--
+  How to configure this ANT script:
+    - See the build.properties property file.
+    - The example file name can be set there (default to "example").
+-->
+<project name="Table2SVGBarChart" default="transfo">
+	<!-- Project properties -->
+	<property file="build.properties" />
+
+	<!-- Launches the transformations -->
+	<target name="transfo" depends="loadModels">
+		<am3.atl path="${transformations.dir}${source.metamodel.name}2${target.name}.asm">
+			<inModel name="${source.metamodel.name}" model="${source.metamodel.name}" />
+			<inModel name="IN" model="${source.model.file}" />
+			<inModel name="${target.metamodel.name}" model="${target.metamodel.name}" />
+			<library name="${source.metamodel.name}Helpers" path="${lib.dir}${source.metamodel.name}Helpers.asm" />
+			<outModel name="OUT" model="${target.model.file}" metamodel="${target.metamodel.name}" />
+		</am3.atl>
+		<!--am3.saveModel model="${target.model.file}" path="${models.dir}${target.model.file}" /-->
+
+		<am3.atl path="${transformations.dir}${target.metamodel.name}2${xml.metamodel.name}.asm">
+			<inModel name="${target.metamodel.name}" model="${target.metamodel.name}" />
+			<inModel name="IN" model="${target.model.file}" />
+			<inModel name="${xml.metamodel.name}" model="${xml.metamodel.name}" />
+			<outModel name="OUT" model="${xml.model.file}" metamodel="${xml.metamodel.name}" />
+		</am3.atl>
+		<am3.saveModel model="${xml.model.file}" path="${models.dir}${target.file}">
+			<extractor name="xml" />
+		</am3.saveModel>
+	</target>
+
+	<!-- Loads the metamodels and the source model -->
+	<target name="loadModels">
+		<am3.loadModel name="${source.metamodel.name}" metamodel="MOF" path="${metamodels.dir}${source.metamodel.name}.ecore" />
+		<am3.loadModel name="${target.metamodel.name}" metamodel="MOF" path="${metamodels.dir}${target.metamodel.name}.ecore" />
+		<am3.loadModel name="${xml.metamodel.name}" metamodel="MOF" path="${metamodels.dir}${xml.metamodel.name}.ecore" />
+
+		<am3.loadModel name="${source.model.file}" metamodel="${source.metamodel.name}" path="${models.dir}${source.model.file}" />
+	</target>
+</project>

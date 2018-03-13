@@ -1,0 +1,62 @@
+<!--
+ How to configure this ant script:
+	Run as->Ant Build...
+		Set:
+			- Base directory
+			- Run in same JRE
+			- Refresh
+			- ant-contrib jar
+-->
+
+<project name="replace" default="transfo">
+	<property name="projectPath" value="/CatalogueOfModelTransformations/MergingPartialClasses/without_context/"/>
+	<property name="MetaModel" value="KM3"/>
+	<property name="inputModelsPath" value="${projectPath}InputModels/"/>
+	<property name="outputModelsPath" value="${projectPath}OutputModels/"/>
+	<property name="sample" value="example.km3"/>
+	
+	<target name="transfo" depends="loadModels">
+		<basename property="name" file="${sample}" suffix=".km3"/>
+		<property name="sourceModel" value="${name}-${MetaModel}.ecore"/>
+		<property name="targetModel" value="${name}-${MetaModel}Target.km3"/>
+
+		<!-- Inject KM3 sourceModel file to KM3 Model -->
+		<am3.loadModel modelHandler="EMF" name="${name}" metamodel="KM3" path="${inputModelsPath}${name}.km3">
+			<injector name="ebnf">
+				<param name="name" value="KM3"/>
+			</injector>
+		</am3.loadModel>
+		<!-- Save KM3 sourceModel -->
+		<am3.saveModel model="${name}" path="${inputModelsPath}${sourceModel}"/>
+
+		<!-- Load source model and transform from MetaModel to MetaModel and save targetModel -->		
+		<echo message="Transforming ${name} from ${MetaModel} to ${MetaModel}"/>
+		<am3.loadModel modelHandler="EMF" name="${sourceModel}" metamodel="${MetaModel}" path="${inputModelsPath}${sourceModel}"/>
+		<am3.atl path="${projectPath}MergingPartialClasses.atl">
+			<inModel name="${MetaModel}" model="${MetaModel}"/>
+			<inModel name="IN" model="${sourceModel}"/>
+			<inModel name="${MetaModel}" model="${MetaModel}"/>
+			<outModel name="OUT" model="${targetModel}" metamodel="${MetaModel}"/>
+		</am3.atl>
+		<am3.saveModel model="${targetModel}" path="${outputModelsPath}${targetModel}">
+		 <extractor name="ebnf">
+		  <param name="format" value="KM3.tcs"/>
+		  <param name="indentString" value=" "/>
+		  <param name="serializeComments" value="false"/>
+		 </extractor>
+		</am3.saveModel>
+	</target>
+
+	<target name="loadModels">
+		<!-- Load source and target metamodels -->
+		<am3.loadModel modelHandler="EMF" name="${MetaModel}" metamodel="MOF" nsUri="http://www.eclipse.org/gmt/2005/KM3"/>
+		<!-- Load TCS metamodel-->
+		<am3.loadModel modelHandler="EMF" name="TCS" metamodel="MOF" path="${projectPath}TCS.ecore"/>
+		<!-- Load KM3-TCS model-->
+		<am3.loadModel modelHandler="EMF" name="KM3.tcs" metamodel="TCS" path="${projectPath}KM3.tcs">
+			<injector name="ebnf">
+				<param name="name" value="TCS"/>
+			</injector>
+		</am3.loadModel>	
+	</target>	
+</project>

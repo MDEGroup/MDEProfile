@@ -1,0 +1,3000 @@
+<?xml version = '1.0' encoding = 'ISO-8859-1' ?>
+<XMI xmi.version = '1.2' xmlns:Model = 'org.omg.xmi.namespace.Model' timestamp = 'Mon Oct 30 21:04:03 CET 2006'>
+  <XMI.header>
+    <XMI.documentation>
+      <XMI.exporter>Netbeans XMI Writer</XMI.exporter>
+      <XMI.exporterVersion>1.0</XMI.exporterVersion>
+    </XMI.documentation>
+  </XMI.header>
+  <XMI.content>
+    <Model:Package xmi.id = 'a1' name = 'PrimitiveTypes' annotation = '' isRoot = 'false'
+      isLeaf = 'false' isAbstract = 'false' visibility = 'public_vis'>
+      <Model:Namespace.contents>
+        <Model:PrimitiveType xmi.id = 'a2' name = 'Integer' annotation = '' isRoot = 'true'
+          isLeaf = 'true' isAbstract = 'false' visibility = 'public_vis'/>
+        <Model:PrimitiveType xmi.id = 'a3' name = 'Long' annotation = '' isRoot = 'true'
+          isLeaf = 'true' isAbstract = 'false' visibility = 'public_vis'/>
+        <Model:PrimitiveType xmi.id = 'a4' name = 'Float' annotation = '' isRoot = 'true'
+          isLeaf = 'true' isAbstract = 'false' visibility = 'public_vis'/>
+        <Model:PrimitiveType xmi.id = 'a5' name = 'Double' annotation = '' isRoot = 'true'
+          isLeaf = 'true' isAbstract = 'false' visibility = 'public_vis'/>
+        <Model:PrimitiveType xmi.id = 'a6' name = 'Boolean' annotation = '' isRoot = 'true'
+          isLeaf = 'true' isAbstract = 'false' visibility = 'public_vis'/>
+        <Model:PrimitiveType xmi.id = 'a7' name = 'String' annotation = '' isRoot = 'true'
+          isLeaf = 'true' isAbstract = 'false' visibility = 'public_vis'/>
+      </Model:Namespace.contents>
+    </Model:Package>
+    <Model:Package xmi.id = 'a8' name = 'RDM' annotation = '' isRoot = 'false'
+      isLeaf = 'false' isAbstract = 'false' visibility = 'public_vis'>
+      <Model:Namespace.contents>
+        <Model:Association xmi.id = 'a9' name = 'A_IndividualVariable_classRef'
+          annotation = '' isRoot = 'true' isLeaf = 'true' isAbstract = 'false' visibility = 'public_vis'
+          isDerived = 'false'>
+          <Model:Namespace.contents>
+            <Model:AssociationEnd xmi.id = 'a10' name = 'classRef' annotation = '' isNavigable = 'true'
+              aggregation = 'none' isChangeable = 'true'>
+              <Model:AssociationEnd.multiplicity>
+                <XMI.field>0</XMI.field>
+                <XMI.field>1</XMI.field>
+                <XMI.field>false</XMI.field>
+                <XMI.field>false</XMI.field>
+              </Model:AssociationEnd.multiplicity>
+              <Model:TypedElement.type>
+                <Model:Class xmi.idref = 'a11'/>
+              </Model:TypedElement.type>
+            </Model:AssociationEnd>
+            <Model:AssociationEnd xmi.id = 'a12' name = 'oppositeOf_classRef' annotation = ''
+              isNavigable = 'false' aggregation = 'none' isChangeable = 'true'>
+              <Model:AssociationEnd.multiplicity>
+                <XMI.field>0</XMI.field>
+                <XMI.field>1</XMI.field>
+                <XMI.field>false</XMI.field>
+                <XMI.field>false</XMI.field>
+              </Model:AssociationEnd.multiplicity>
+              <Model:TypedElement.type>
+                <Model:Class xmi.idref = 'a13'/>
+              </Model:TypedElement.type>
+            </Model:AssociationEnd>
+          </Model:Namespace.contents>
+        </Model:Association>
+        <Model:Association xmi.id = 'a14' name = 'A_Variable_type' annotation = ''
+          isRoot = 'true' isLeaf = 'true' isAbstract = 'false' visibility = 'public_vis'
+          isDerived = 'false'>
+          <Model:Namespace.contents>
+            <Model:AssociationEnd xmi.id = 'a15' name = 'type' annotation = '' isNavigable = 'true'
+              aggregation = 'none' isChangeable = 'true'>
+              <Model:AssociationEnd.multiplicity>
+                <XMI.field>0</XMI.field>
+                <XMI.field>1</XMI.field>
+                <XMI.field>false</XMI.field>
+                <XMI.field>false</XMI.field>
+              </Model:AssociationEnd.multiplicity>
+              <Model:TypedElement.type>
+                <Model:Class xmi.idref = 'a16'/>
+              </Model:TypedElement.type>
+            </Model:AssociationEnd>
+            <Model:AssociationEnd xmi.id = 'a17' name = 'oppositeOf_type' annotation = ''
+              isNavigable = 'false' aggregation = 'none' isChangeable = 'true'>
+              <Model:AssociationEnd.multiplicity>
+                <XMI.field>0</XMI.field>
+                <XMI.field>1</XMI.field>
+                <XMI.field>false</XMI.field>
+                <XMI.field>false</XMI.field>
+              </Model:AssociationEnd.multiplicity>
+              <Model:TypedElement.type>
+                <Model:Class xmi.idref = 'a18'/>
+              </Model:TypedElement.type>
+            </Model:AssociationEnd>
+          </Model:Namespace.contents>
+        </Model:Association>
+        <Model:Association xmi.id = 'a19' name = 'A_Atom_hasPredicateSymbol' annotation = ''
+          isRoot = 'true' isLeaf = 'true' isAbstract = 'false' visibility = 'public_vis'
+          isDerived = 'false'>
+          <Model:Namespace.contents>
+            <Model:AssociationEnd xmi.id = 'a20' name = 'hasPredicateSymbol' annotation = ''
+              isNavigable = 'true' aggregation = 'none' isChangeable = 'true'>
+              <Model:AssociationEnd.multiplicity>
+                <XMI.field>1</XMI.field>
+                <XMI.field>1</XMI.field>
+                <XMI.field>false</XMI.field>
+                <XMI.field>false</XMI.field>
+              </Model:AssociationEnd.multiplicity>
+              <Model:TypedElement.type>
+                <Model:Class xmi.idref = 'a21'/>
+              </Model:TypedElement.type>
+            </Model:AssociationEnd>
+            <Model:AssociationEnd xmi.id = 'a22' name = 'oppositeOf_hasPredicateSymbol'
+              annotation = '' isNavigable = 'false' aggregation = 'none' isChangeable = 'true'>
+              <Model:AssociationEnd.multiplicity>
+                <XMI.field>0</XMI.field>
+                <XMI.field>1</XMI.field>
+                <XMI.field>false</XMI.field>
+                <XMI.field>false</XMI.field>
+              </Model:AssociationEnd.multiplicity>
+              <Model:TypedElement.type>
+                <Model:Class xmi.idref = 'a23'/>
+              </Model:TypedElement.type>
+            </Model:AssociationEnd>
+          </Model:Namespace.contents>
+        </Model:Association>
+        <Model:Association xmi.id = 'a24' name = 'A_Atom_terms' annotation = ''
+          isRoot = 'true' isLeaf = 'true' isAbstract = 'false' visibility = 'public_vis'
+          isDerived = 'false'>
+          <Model:Namespace.contents>
+            <Model:AssociationEnd xmi.id = 'a25' name = 'terms' annotation = '' isNavigable = 'true'
+              aggregation = 'none' isChangeable = 'true'>
+              <Model:AssociationEnd.multiplicity>
+                <XMI.field>0</XMI.field>
+                <XMI.field>-1</XMI.field>
+                <XMI.field>true</XMI.field>
+                <XMI.field>true</XMI.field>
+              </Model:AssociationEnd.multiplicity>
+              <Model:TypedElement.type>
+                <Model:Class xmi.idref = 'a26'/>
+              </Model:TypedElement.type>
+            </Model:AssociationEnd>
+            <Model:AssociationEnd xmi.id = 'a27' name = 'oppositeOf_terms' annotation = ''
+              isNavigable = 'false' aggregation = 'none' isChangeable = 'true'>
+              <Model:AssociationEnd.multiplicity>
+                <XMI.field>0</XMI.field>
+                <XMI.field>1</XMI.field>
+                <XMI.field>false</XMI.field>
+                <XMI.field>false</XMI.field>
+              </Model:AssociationEnd.multiplicity>
+              <Model:TypedElement.type>
+                <Model:Class xmi.idref = 'a23'/>
+              </Model:TypedElement.type>
+            </Model:AssociationEnd>
+          </Model:Namespace.contents>
+        </Model:Association>
+        <Model:Association xmi.id = 'a28' name = 'A_Consequent_containsAtom' annotation = ''
+          isRoot = 'true' isLeaf = 'true' isAbstract = 'false' visibility = 'public_vis'
+          isDerived = 'false'>
+          <Model:Namespace.contents>
+            <Model:AssociationEnd xmi.id = 'a29' name = 'containsAtom' annotation = ''
+              isNavigable = 'true' aggregation = 'none' isChangeable = 'true'>
+              <Model:AssociationEnd.multiplicity>
+                <XMI.field>0</XMI.field>
+                <XMI.field>-1</XMI.field>
+                <XMI.field>false</XMI.field>
+                <XMI.field>true</XMI.field>
+              </Model:AssociationEnd.multiplicity>
+              <Model:TypedElement.type>
+                <Model:Class xmi.idref = 'a23'/>
+              </Model:TypedElement.type>
+            </Model:AssociationEnd>
+            <Model:AssociationEnd xmi.id = 'a30' name = 'oppositeOf_containsAtom' annotation = ''
+              isNavigable = 'false' aggregation = 'none' isChangeable = 'true'>
+              <Model:AssociationEnd.multiplicity>
+                <XMI.field>0</XMI.field>
+                <XMI.field>1</XMI.field>
+                <XMI.field>false</XMI.field>
+                <XMI.field>false</XMI.field>
+              </Model:AssociationEnd.multiplicity>
+              <Model:TypedElement.type>
+                <Model:Class xmi.idref = 'a31'/>
+              </Model:TypedElement.type>
+            </Model:AssociationEnd>
+          </Model:Namespace.contents>
+        </Model:Association>
+        <Model:Association xmi.id = 'a32' name = 'A_Antecedent_containsAtom' annotation = ''
+          isRoot = 'true' isLeaf = 'true' isAbstract = 'false' visibility = 'public_vis'
+          isDerived = 'false'>
+          <Model:Namespace.contents>
+            <Model:AssociationEnd xmi.id = 'a33' name = 'containsAtom' annotation = ''
+              isNavigable = 'true' aggregation = 'none' isChangeable = 'true'>
+              <Model:AssociationEnd.multiplicity>
+                <XMI.field>0</XMI.field>
+                <XMI.field>-1</XMI.field>
+                <XMI.field>false</XMI.field>
+                <XMI.field>true</XMI.field>
+              </Model:AssociationEnd.multiplicity>
+              <Model:TypedElement.type>
+                <Model:Class xmi.idref = 'a23'/>
+              </Model:TypedElement.type>
+            </Model:AssociationEnd>
+            <Model:AssociationEnd xmi.id = 'a34' name = 'oppositeOf_containsAtom' annotation = ''
+              isNavigable = 'false' aggregation = 'none' isChangeable = 'true'>
+              <Model:AssociationEnd.multiplicity>
+                <XMI.field>0</XMI.field>
+                <XMI.field>1</XMI.field>
+                <XMI.field>false</XMI.field>
+                <XMI.field>false</XMI.field>
+              </Model:AssociationEnd.multiplicity>
+              <Model:TypedElement.type>
+                <Model:Class xmi.idref = 'a35'/>
+              </Model:TypedElement.type>
+            </Model:AssociationEnd>
+          </Model:Namespace.contents>
+        </Model:Association>
+        <Model:Association xmi.id = 'a36' name = 'A_Rule_hasAntecedent' annotation = ''
+          isRoot = 'true' isLeaf = 'true' isAbstract = 'false' visibility = 'public_vis'
+          isDerived = 'false'>
+          <Model:Namespace.contents>
+            <Model:AssociationEnd xmi.id = 'a37' name = 'hasAntecedent' annotation = ''
+              isNavigable = 'true' aggregation = 'none' isChangeable = 'true'>
+              <Model:AssociationEnd.multiplicity>
+                <XMI.field>1</XMI.field>
+                <XMI.field>1</XMI.field>
+                <XMI.field>false</XMI.field>
+                <XMI.field>false</XMI.field>
+              </Model:AssociationEnd.multiplicity>
+              <Model:TypedElement.type>
+                <Model:Class xmi.idref = 'a35'/>
+              </Model:TypedElement.type>
+            </Model:AssociationEnd>
+            <Model:AssociationEnd xmi.id = 'a38' name = 'oppositeOf_hasAntecedent' annotation = ''
+              isNavigable = 'false' aggregation = 'none' isChangeable = 'true'>
+              <Model:AssociationEnd.multiplicity>
+                <XMI.field>0</XMI.field>
+                <XMI.field>1</XMI.field>
+                <XMI.field>false</XMI.field>
+                <XMI.field>false</XMI.field>
+              </Model:AssociationEnd.multiplicity>
+              <Model:TypedElement.type>
+                <Model:Class xmi.idref = 'a39'/>
+              </Model:TypedElement.type>
+            </Model:AssociationEnd>
+          </Model:Namespace.contents>
+        </Model:Association>
+        <Model:Association xmi.id = 'a40' name = 'A_Rule_hasConsequent' annotation = ''
+          isRoot = 'true' isLeaf = 'true' isAbstract = 'false' visibility = 'public_vis'
+          isDerived = 'false'>
+          <Model:Namespace.contents>
+            <Model:AssociationEnd xmi.id = 'a41' name = 'hasConsequent' annotation = ''
+              isNavigable = 'true' aggregation = 'none' isChangeable = 'true'>
+              <Model:AssociationEnd.multiplicity>
+                <XMI.field>1</XMI.field>
+                <XMI.field>1</XMI.field>
+                <XMI.field>false</XMI.field>
+                <XMI.field>false</XMI.field>
+              </Model:AssociationEnd.multiplicity>
+              <Model:TypedElement.type>
+                <Model:Class xmi.idref = 'a31'/>
+              </Model:TypedElement.type>
+            </Model:AssociationEnd>
+            <Model:AssociationEnd xmi.id = 'a42' name = 'oppositeOf_hasConsequent' annotation = ''
+              isNavigable = 'false' aggregation = 'none' isChangeable = 'true'>
+              <Model:AssociationEnd.multiplicity>
+                <XMI.field>0</XMI.field>
+                <XMI.field>1</XMI.field>
+                <XMI.field>false</XMI.field>
+                <XMI.field>false</XMI.field>
+              </Model:AssociationEnd.multiplicity>
+              <Model:TypedElement.type>
+                <Model:Class xmi.idref = 'a39'/>
+              </Model:TypedElement.type>
+            </Model:AssociationEnd>
+          </Model:Namespace.contents>
+        </Model:Association>
+        <Model:Class xmi.id = 'a43' name = 'DifferentFrom' annotation = '' isRoot = 'false'
+          isLeaf = 'false' isAbstract = 'false' visibility = 'public_vis' isSingleton = 'false'>
+          <Model:GeneralizableElement.supertypes>
+            <Model:Class xmi.idref = 'a21'/>
+          </Model:GeneralizableElement.supertypes>
+        </Model:Class>
+        <Model:Class xmi.id = 'a44' name = 'SameAs' annotation = '' isRoot = 'false'
+          isLeaf = 'false' isAbstract = 'false' visibility = 'public_vis' isSingleton = 'false'>
+          <Model:GeneralizableElement.supertypes>
+            <Model:Class xmi.idref = 'a21'/>
+          </Model:GeneralizableElement.supertypes>
+        </Model:Class>
+        <Model:Class xmi.id = 'a13' name = 'IndividualVariable' annotation = ''
+          isRoot = 'false' isLeaf = 'false' isAbstract = 'false' visibility = 'public_vis'
+          isSingleton = 'false'>
+          <Model:Namespace.contents>
+            <Model:Reference xmi.id = 'a45' name = 'classRef' annotation = '' scope = 'instance_level'
+              visibility = 'public_vis' isChangeable = 'true'>
+              <Model:StructuralFeature.multiplicity>
+                <XMI.field>0</XMI.field>
+                <XMI.field>1</XMI.field>
+                <XMI.field>false</XMI.field>
+                <XMI.field>false</XMI.field>
+              </Model:StructuralFeature.multiplicity>
+              <Model:TypedElement.type>
+                <Model:Class xmi.idref = 'a11'/>
+              </Model:TypedElement.type>
+              <Model:Reference.referencedEnd>
+                <Model:AssociationEnd xmi.idref = 'a10'/>
+              </Model:Reference.referencedEnd>
+            </Model:Reference>
+          </Model:Namespace.contents>
+          <Model:GeneralizableElement.supertypes>
+            <Model:Class xmi.idref = 'a18'/>
+          </Model:GeneralizableElement.supertypes>
+        </Model:Class>
+        <Model:Class xmi.id = 'a46' name = 'DataVariable' annotation = '' isRoot = 'false'
+          isLeaf = 'false' isAbstract = 'false' visibility = 'public_vis' isSingleton = 'false'>
+          <Model:GeneralizableElement.supertypes>
+            <Model:Class xmi.idref = 'a18'/>
+          </Model:GeneralizableElement.supertypes>
+        </Model:Class>
+        <Model:Class xmi.id = 'a47' name = 'Constant' annotation = '' isRoot = 'false'
+          isLeaf = 'false' isAbstract = 'false' visibility = 'public_vis' isSingleton = 'false'>
+          <Model:GeneralizableElement.supertypes>
+            <Model:Class xmi.idref = 'a26'/>
+          </Model:GeneralizableElement.supertypes>
+        </Model:Class>
+        <Model:Class xmi.id = 'a18' name = 'Variable' annotation = '' isRoot = 'false'
+          isLeaf = 'false' isAbstract = 'false' visibility = 'public_vis' isSingleton = 'false'>
+          <Model:Namespace.contents>
+            <Model:Reference xmi.id = 'a48' name = 'type' annotation = '' scope = 'instance_level'
+              visibility = 'public_vis' isChangeable = 'true'>
+              <Model:StructuralFeature.multiplicity>
+                <XMI.field>0</XMI.field>
+                <XMI.field>1</XMI.field>
+                <XMI.field>false</XMI.field>
+                <XMI.field>false</XMI.field>
+              </Model:StructuralFeature.multiplicity>
+              <Model:TypedElement.type>
+                <Model:Class xmi.idref = 'a16'/>
+              </Model:TypedElement.type>
+              <Model:Reference.referencedEnd>
+                <Model:AssociationEnd xmi.idref = 'a15'/>
+              </Model:Reference.referencedEnd>
+            </Model:Reference>
+            <Model:Attribute xmi.id = 'a49' name = 'name' annotation = '' scope = 'instance_level'
+              visibility = 'public_vis' isChangeable = 'true' isDerived = 'false'>
+              <Model:StructuralFeature.multiplicity>
+                <XMI.field>1</XMI.field>
+                <XMI.field>1</XMI.field>
+                <XMI.field>false</XMI.field>
+                <XMI.field>false</XMI.field>
+              </Model:StructuralFeature.multiplicity>
+              <Model:TypedElement.type>
+                <Model:PrimitiveType xmi.idref = 'a7'/>
+              </Model:TypedElement.type>
+            </Model:Attribute>
+          </Model:Namespace.contents>
+          <Model:GeneralizableElement.supertypes>
+            <Model:Class xmi.idref = 'a26'/>
+          </Model:GeneralizableElement.supertypes>
+        </Model:Class>
+        <Model:Class xmi.id = 'a26' name = 'Term' annotation = '' isRoot = 'false'
+          isLeaf = 'false' isAbstract = 'true' visibility = 'public_vis' isSingleton = 'false'/>
+        <Model:Class xmi.id = 'a50' name = 'BuiltIn' annotation = '' isRoot = 'false'
+          isLeaf = 'false' isAbstract = 'false' visibility = 'public_vis' isSingleton = 'false'>
+          <Model:Namespace.contents>
+            <Model:Attribute xmi.id = 'a51' name = 'buildInID' annotation = '' scope = 'instance_level'
+              visibility = 'public_vis' isChangeable = 'true' isDerived = 'false'>
+              <Model:StructuralFeature.multiplicity>
+                <XMI.field>1</XMI.field>
+                <XMI.field>1</XMI.field>
+                <XMI.field>false</XMI.field>
+                <XMI.field>false</XMI.field>
+              </Model:StructuralFeature.multiplicity>
+              <Model:TypedElement.type>
+                <Model:PrimitiveType xmi.idref = 'a7'/>
+              </Model:TypedElement.type>
+            </Model:Attribute>
+          </Model:Namespace.contents>
+          <Model:GeneralizableElement.supertypes>
+            <Model:Class xmi.idref = 'a21'/>
+          </Model:GeneralizableElement.supertypes>
+        </Model:Class>
+        <Model:Class xmi.id = 'a21' name = 'PredicateSymbol' annotation = '' isRoot = 'false'
+          isLeaf = 'false' isAbstract = 'false' visibility = 'public_vis' isSingleton = 'false'/>
+        <Model:Class xmi.id = 'a23' name = 'Atom' annotation = '' isRoot = 'false'
+          isLeaf = 'false' isAbstract = 'false' visibility = 'public_vis' isSingleton = 'false'>
+          <Model:Namespace.contents>
+            <Model:Reference xmi.id = 'a52' name = 'terms' annotation = '' scope = 'instance_level'
+              visibility = 'public_vis' isChangeable = 'true'>
+              <Model:StructuralFeature.multiplicity>
+                <XMI.field>0</XMI.field>
+                <XMI.field>-1</XMI.field>
+                <XMI.field>true</XMI.field>
+                <XMI.field>true</XMI.field>
+              </Model:StructuralFeature.multiplicity>
+              <Model:TypedElement.type>
+                <Model:Class xmi.idref = 'a26'/>
+              </Model:TypedElement.type>
+              <Model:Reference.referencedEnd>
+                <Model:AssociationEnd xmi.idref = 'a25'/>
+              </Model:Reference.referencedEnd>
+            </Model:Reference>
+            <Model:Reference xmi.id = 'a53' name = 'hasPredicateSymbol' annotation = ''
+              scope = 'instance_level' visibility = 'public_vis' isChangeable = 'true'>
+              <Model:StructuralFeature.multiplicity>
+                <XMI.field>1</XMI.field>
+                <XMI.field>1</XMI.field>
+                <XMI.field>false</XMI.field>
+                <XMI.field>false</XMI.field>
+              </Model:StructuralFeature.multiplicity>
+              <Model:TypedElement.type>
+                <Model:Class xmi.idref = 'a21'/>
+              </Model:TypedElement.type>
+              <Model:Reference.referencedEnd>
+                <Model:AssociationEnd xmi.idref = 'a20'/>
+              </Model:Reference.referencedEnd>
+            </Model:Reference>
+            <Model:Attribute xmi.id = 'a54' name = 'name' annotation = '' scope = 'instance_level'
+              visibility = 'public_vis' isChangeable = 'true' isDerived = 'false'>
+              <Model:StructuralFeature.multiplicity>
+                <XMI.field>1</XMI.field>
+                <XMI.field>1</XMI.field>
+                <XMI.field>false</XMI.field>
+                <XMI.field>false</XMI.field>
+              </Model:StructuralFeature.multiplicity>
+              <Model:TypedElement.type>
+                <Model:PrimitiveType xmi.idref = 'a7'/>
+              </Model:TypedElement.type>
+            </Model:Attribute>
+          </Model:Namespace.contents>
+        </Model:Class>
+        <Model:Class xmi.id = 'a31' name = 'Consequent' annotation = '' isRoot = 'false'
+          isLeaf = 'false' isAbstract = 'false' visibility = 'public_vis' isSingleton = 'false'>
+          <Model:Namespace.contents>
+            <Model:Reference xmi.id = 'a55' name = 'containsAtom' annotation = '' scope = 'instance_level'
+              visibility = 'public_vis' isChangeable = 'true'>
+              <Model:StructuralFeature.multiplicity>
+                <XMI.field>0</XMI.field>
+                <XMI.field>-1</XMI.field>
+                <XMI.field>false</XMI.field>
+                <XMI.field>true</XMI.field>
+              </Model:StructuralFeature.multiplicity>
+              <Model:TypedElement.type>
+                <Model:Class xmi.idref = 'a23'/>
+              </Model:TypedElement.type>
+              <Model:Reference.referencedEnd>
+                <Model:AssociationEnd xmi.idref = 'a29'/>
+              </Model:Reference.referencedEnd>
+            </Model:Reference>
+          </Model:Namespace.contents>
+        </Model:Class>
+        <Model:Class xmi.id = 'a35' name = 'Antecedent' annotation = '' isRoot = 'false'
+          isLeaf = 'false' isAbstract = 'false' visibility = 'public_vis' isSingleton = 'false'>
+          <Model:Namespace.contents>
+            <Model:Reference xmi.id = 'a56' name = 'containsAtom' annotation = '' scope = 'instance_level'
+              visibility = 'public_vis' isChangeable = 'true'>
+              <Model:StructuralFeature.multiplicity>
+                <XMI.field>0</XMI.field>
+                <XMI.field>-1</XMI.field>
+                <XMI.field>false</XMI.field>
+                <XMI.field>true</XMI.field>
+              </Model:StructuralFeature.multiplicity>
+              <Model:TypedElement.type>
+                <Model:Class xmi.idref = 'a23'/>
+              </Model:TypedElement.type>
+              <Model:Reference.referencedEnd>
+                <Model:AssociationEnd xmi.idref = 'a33'/>
+              </Model:Reference.referencedEnd>
+            </Model:Reference>
+          </Model:Namespace.contents>
+        </Model:Class>
+        <Model:Class xmi.id = 'a39' name = 'Rule' annotation = '' isRoot = 'false'
+          isLeaf = 'false' isAbstract = 'false' visibility = 'public_vis' isSingleton = 'false'>
+          <Model:Namespace.contents>
+            <Model:Reference xmi.id = 'a57' name = 'hasAntecedent' annotation = '' scope = 'instance_level'
+              visibility = 'public_vis' isChangeable = 'true'>
+              <Model:StructuralFeature.multiplicity>
+                <XMI.field>1</XMI.field>
+                <XMI.field>1</XMI.field>
+                <XMI.field>false</XMI.field>
+                <XMI.field>false</XMI.field>
+              </Model:StructuralFeature.multiplicity>
+              <Model:TypedElement.type>
+                <Model:Class xmi.idref = 'a35'/>
+              </Model:TypedElement.type>
+              <Model:Reference.referencedEnd>
+                <Model:AssociationEnd xmi.idref = 'a37'/>
+              </Model:Reference.referencedEnd>
+            </Model:Reference>
+            <Model:Reference xmi.id = 'a58' name = 'hasConsequent' annotation = '' scope = 'instance_level'
+              visibility = 'public_vis' isChangeable = 'true'>
+              <Model:StructuralFeature.multiplicity>
+                <XMI.field>1</XMI.field>
+                <XMI.field>1</XMI.field>
+                <XMI.field>false</XMI.field>
+                <XMI.field>false</XMI.field>
+              </Model:StructuralFeature.multiplicity>
+              <Model:TypedElement.type>
+                <Model:Class xmi.idref = 'a31'/>
+              </Model:TypedElement.type>
+              <Model:Reference.referencedEnd>
+                <Model:AssociationEnd xmi.idref = 'a41'/>
+              </Model:Reference.referencedEnd>
+            </Model:Reference>
+          </Model:Namespace.contents>
+          <Model:GeneralizableElement.supertypes>
+            <Model:Class xmi.idref = 'a59'/>
+          </Model:GeneralizableElement.supertypes>
+        </Model:Class>
+        <Model:Package xmi.id = 'a60' name = 'ODM' annotation = '' isRoot = 'false'
+          isLeaf = 'false' isAbstract = 'false' visibility = 'public_vis'>
+          <Model:Namespace.contents>
+            <Model:Association xmi.id = 'a61' name = 'A_MinCardinalityRestriction_minCardinality'
+              annotation = '' isRoot = 'true' isLeaf = 'true' isAbstract = 'false' visibility = 'public_vis'
+              isDerived = 'false'>
+              <Model:Namespace.contents>
+                <Model:AssociationEnd xmi.id = 'a62' name = 'minCardinality' annotation = ''
+                  isNavigable = 'true' aggregation = 'none' isChangeable = 'true'>
+                  <Model:AssociationEnd.multiplicity>
+                    <XMI.field>1</XMI.field>
+                    <XMI.field>1</XMI.field>
+                    <XMI.field>false</XMI.field>
+                    <XMI.field>false</XMI.field>
+                  </Model:AssociationEnd.multiplicity>
+                  <Model:TypedElement.type>
+                    <Model:Class xmi.idref = 'a63'/>
+                  </Model:TypedElement.type>
+                </Model:AssociationEnd>
+                <Model:AssociationEnd xmi.id = 'a64' name = 'oppositeOf_minCardinality'
+                  annotation = '' isNavigable = 'false' aggregation = 'none' isChangeable = 'true'>
+                  <Model:AssociationEnd.multiplicity>
+                    <XMI.field>0</XMI.field>
+                    <XMI.field>1</XMI.field>
+                    <XMI.field>false</XMI.field>
+                    <XMI.field>false</XMI.field>
+                  </Model:AssociationEnd.multiplicity>
+                  <Model:TypedElement.type>
+                    <Model:Class xmi.idref = 'a65'/>
+                  </Model:TypedElement.type>
+                </Model:AssociationEnd>
+              </Model:Namespace.contents>
+            </Model:Association>
+            <Model:Association xmi.id = 'a66' name = 'A_MaxCardinalityRestriction_maxCardinality'
+              annotation = '' isRoot = 'true' isLeaf = 'true' isAbstract = 'false' visibility = 'public_vis'
+              isDerived = 'false'>
+              <Model:Namespace.contents>
+                <Model:AssociationEnd xmi.id = 'a67' name = 'maxCardinality' annotation = ''
+                  isNavigable = 'true' aggregation = 'none' isChangeable = 'true'>
+                  <Model:AssociationEnd.multiplicity>
+                    <XMI.field>1</XMI.field>
+                    <XMI.field>1</XMI.field>
+                    <XMI.field>false</XMI.field>
+                    <XMI.field>false</XMI.field>
+                  </Model:AssociationEnd.multiplicity>
+                  <Model:TypedElement.type>
+                    <Model:Class xmi.idref = 'a63'/>
+                  </Model:TypedElement.type>
+                </Model:AssociationEnd>
+                <Model:AssociationEnd xmi.id = 'a68' name = 'oppositeOf_maxCardinality'
+                  annotation = '' isNavigable = 'false' aggregation = 'none' isChangeable = 'true'>
+                  <Model:AssociationEnd.multiplicity>
+                    <XMI.field>0</XMI.field>
+                    <XMI.field>1</XMI.field>
+                    <XMI.field>false</XMI.field>
+                    <XMI.field>false</XMI.field>
+                  </Model:AssociationEnd.multiplicity>
+                  <Model:TypedElement.type>
+                    <Model:Class xmi.idref = 'a69'/>
+                  </Model:TypedElement.type>
+                </Model:AssociationEnd>
+              </Model:Namespace.contents>
+            </Model:Association>
+            <Model:Association xmi.id = 'a70' name = 'A_CardinalityRestriction_cardinality'
+              annotation = '' isRoot = 'true' isLeaf = 'true' isAbstract = 'false' visibility = 'public_vis'
+              isDerived = 'false'>
+              <Model:Namespace.contents>
+                <Model:AssociationEnd xmi.id = 'a71' name = 'cardinality' annotation = ''
+                  isNavigable = 'true' aggregation = 'none' isChangeable = 'true'>
+                  <Model:AssociationEnd.multiplicity>
+                    <XMI.field>1</XMI.field>
+                    <XMI.field>1</XMI.field>
+                    <XMI.field>false</XMI.field>
+                    <XMI.field>false</XMI.field>
+                  </Model:AssociationEnd.multiplicity>
+                  <Model:TypedElement.type>
+                    <Model:Class xmi.idref = 'a63'/>
+                  </Model:TypedElement.type>
+                </Model:AssociationEnd>
+                <Model:AssociationEnd xmi.id = 'a72' name = 'oppositeOf_cardinality' annotation = ''
+                  isNavigable = 'false' aggregation = 'none' isChangeable = 'true'>
+                  <Model:AssociationEnd.multiplicity>
+                    <XMI.field>0</XMI.field>
+                    <XMI.field>1</XMI.field>
+                    <XMI.field>false</XMI.field>
+                    <XMI.field>false</XMI.field>
+                  </Model:AssociationEnd.multiplicity>
+                  <Model:TypedElement.type>
+                    <Model:Class xmi.idref = 'a73'/>
+                  </Model:TypedElement.type>
+                </Model:AssociationEnd>
+              </Model:Namespace.contents>
+            </Model:Association>
+            <Model:Association xmi.id = 'a74' name = 'A_DataRange_datatype' annotation = ''
+              isRoot = 'true' isLeaf = 'true' isAbstract = 'false' visibility = 'public_vis'
+              isDerived = 'false'>
+              <Model:Namespace.contents>
+                <Model:AssociationEnd xmi.id = 'a75' name = 'datatype' annotation = '' isNavigable = 'true'
+                  aggregation = 'none' isChangeable = 'true'>
+                  <Model:AssociationEnd.multiplicity>
+                    <XMI.field>0</XMI.field>
+                    <XMI.field>1</XMI.field>
+                    <XMI.field>false</XMI.field>
+                    <XMI.field>false</XMI.field>
+                  </Model:AssociationEnd.multiplicity>
+                  <Model:TypedElement.type>
+                    <Model:Class xmi.idref = 'a16'/>
+                  </Model:TypedElement.type>
+                </Model:AssociationEnd>
+                <Model:AssociationEnd xmi.id = 'a76' name = 'oppositeOf_datatype' annotation = ''
+                  isNavigable = 'false' aggregation = 'none' isChangeable = 'true'>
+                  <Model:AssociationEnd.multiplicity>
+                    <XMI.field>0</XMI.field>
+                    <XMI.field>1</XMI.field>
+                    <XMI.field>false</XMI.field>
+                    <XMI.field>false</XMI.field>
+                  </Model:AssociationEnd.multiplicity>
+                  <Model:TypedElement.type>
+                    <Model:Class xmi.idref = 'a77'/>
+                  </Model:TypedElement.type>
+                </Model:AssociationEnd>
+              </Model:Namespace.contents>
+            </Model:Association>
+            <Model:Association xmi.id = 'a78' name = 'A_DataRange_oneOf' annotation = ''
+              isRoot = 'true' isLeaf = 'true' isAbstract = 'false' visibility = 'public_vis'
+              isDerived = 'false'>
+              <Model:Namespace.contents>
+                <Model:AssociationEnd xmi.id = 'a79' name = 'oneOf' annotation = '' isNavigable = 'true'
+                  aggregation = 'none' isChangeable = 'true'>
+                  <Model:AssociationEnd.multiplicity>
+                    <XMI.field>0</XMI.field>
+                    <XMI.field>-1</XMI.field>
+                    <XMI.field>false</XMI.field>
+                    <XMI.field>true</XMI.field>
+                  </Model:AssociationEnd.multiplicity>
+                  <Model:TypedElement.type>
+                    <Model:Class xmi.idref = 'a80'/>
+                  </Model:TypedElement.type>
+                </Model:AssociationEnd>
+                <Model:AssociationEnd xmi.id = 'a81' name = 'oppositeOf_oneOf' annotation = ''
+                  isNavigable = 'false' aggregation = 'none' isChangeable = 'true'>
+                  <Model:AssociationEnd.multiplicity>
+                    <XMI.field>0</XMI.field>
+                    <XMI.field>1</XMI.field>
+                    <XMI.field>false</XMI.field>
+                    <XMI.field>false</XMI.field>
+                  </Model:AssociationEnd.multiplicity>
+                  <Model:TypedElement.type>
+                    <Model:Class xmi.idref = 'a77'/>
+                  </Model:TypedElement.type>
+                </Model:AssociationEnd>
+              </Model:Namespace.contents>
+            </Model:Association>
+            <Model:Association xmi.id = 'a82' name = 'A_AllValuesFromRestriction_allValuesFromRange'
+              annotation = '' isRoot = 'true' isLeaf = 'true' isAbstract = 'false' visibility = 'public_vis'
+              isDerived = 'false'>
+              <Model:Namespace.contents>
+                <Model:AssociationEnd xmi.id = 'a83' name = 'allValuesFromRange' annotation = ''
+                  isNavigable = 'true' aggregation = 'none' isChangeable = 'true'>
+                  <Model:AssociationEnd.multiplicity>
+                    <XMI.field>0</XMI.field>
+                    <XMI.field>1</XMI.field>
+                    <XMI.field>false</XMI.field>
+                    <XMI.field>false</XMI.field>
+                  </Model:AssociationEnd.multiplicity>
+                  <Model:TypedElement.type>
+                    <Model:Class xmi.idref = 'a77'/>
+                  </Model:TypedElement.type>
+                </Model:AssociationEnd>
+                <Model:AssociationEnd xmi.id = 'a84' name = 'oppositeOf_allValuesFromRange'
+                  annotation = '' isNavigable = 'false' aggregation = 'none' isChangeable = 'true'>
+                  <Model:AssociationEnd.multiplicity>
+                    <XMI.field>0</XMI.field>
+                    <XMI.field>1</XMI.field>
+                    <XMI.field>false</XMI.field>
+                    <XMI.field>false</XMI.field>
+                  </Model:AssociationEnd.multiplicity>
+                  <Model:TypedElement.type>
+                    <Model:Class xmi.idref = 'a85'/>
+                  </Model:TypedElement.type>
+                </Model:AssociationEnd>
+              </Model:Namespace.contents>
+            </Model:Association>
+            <Model:Association xmi.id = 'a86' name = 'A_AllValuesFromRestriction_allValuesFromClass'
+              annotation = '' isRoot = 'true' isLeaf = 'true' isAbstract = 'false' visibility = 'public_vis'
+              isDerived = 'false'>
+              <Model:Namespace.contents>
+                <Model:AssociationEnd xmi.id = 'a87' name = 'allValuesFromClass' annotation = ''
+                  isNavigable = 'true' aggregation = 'none' isChangeable = 'true'>
+                  <Model:AssociationEnd.multiplicity>
+                    <XMI.field>0</XMI.field>
+                    <XMI.field>1</XMI.field>
+                    <XMI.field>false</XMI.field>
+                    <XMI.field>false</XMI.field>
+                  </Model:AssociationEnd.multiplicity>
+                  <Model:TypedElement.type>
+                    <Model:Class xmi.idref = 'a11'/>
+                  </Model:TypedElement.type>
+                </Model:AssociationEnd>
+                <Model:AssociationEnd xmi.id = 'a88' name = 'oppositeOf_allValuesFromClass'
+                  annotation = '' isNavigable = 'false' aggregation = 'none' isChangeable = 'true'>
+                  <Model:AssociationEnd.multiplicity>
+                    <XMI.field>0</XMI.field>
+                    <XMI.field>1</XMI.field>
+                    <XMI.field>false</XMI.field>
+                    <XMI.field>false</XMI.field>
+                  </Model:AssociationEnd.multiplicity>
+                  <Model:TypedElement.type>
+                    <Model:Class xmi.idref = 'a85'/>
+                  </Model:TypedElement.type>
+                </Model:AssociationEnd>
+              </Model:Namespace.contents>
+            </Model:Association>
+            <Model:Association xmi.id = 'a89' name = 'A_SomeValuesFromRestriction_someValuesFromClass'
+              annotation = '' isRoot = 'true' isLeaf = 'true' isAbstract = 'false' visibility = 'public_vis'
+              isDerived = 'false'>
+              <Model:Namespace.contents>
+                <Model:AssociationEnd xmi.id = 'a90' name = 'someValuesFromClass' annotation = ''
+                  isNavigable = 'true' aggregation = 'none' isChangeable = 'true'>
+                  <Model:AssociationEnd.multiplicity>
+                    <XMI.field>0</XMI.field>
+                    <XMI.field>1</XMI.field>
+                    <XMI.field>false</XMI.field>
+                    <XMI.field>false</XMI.field>
+                  </Model:AssociationEnd.multiplicity>
+                  <Model:TypedElement.type>
+                    <Model:Class xmi.idref = 'a11'/>
+                  </Model:TypedElement.type>
+                </Model:AssociationEnd>
+                <Model:AssociationEnd xmi.id = 'a91' name = 'oppositeOf_someValuesFromClass'
+                  annotation = '' isNavigable = 'false' aggregation = 'none' isChangeable = 'true'>
+                  <Model:AssociationEnd.multiplicity>
+                    <XMI.field>0</XMI.field>
+                    <XMI.field>1</XMI.field>
+                    <XMI.field>false</XMI.field>
+                    <XMI.field>false</XMI.field>
+                  </Model:AssociationEnd.multiplicity>
+                  <Model:TypedElement.type>
+                    <Model:Class xmi.idref = 'a92'/>
+                  </Model:TypedElement.type>
+                </Model:AssociationEnd>
+              </Model:Namespace.contents>
+            </Model:Association>
+            <Model:Association xmi.id = 'a93' name = 'A_SomeValuesFromRestriction_someValuesFromRange'
+              annotation = '' isRoot = 'true' isLeaf = 'true' isAbstract = 'false' visibility = 'public_vis'
+              isDerived = 'false'>
+              <Model:Namespace.contents>
+                <Model:AssociationEnd xmi.id = 'a94' name = 'someValuesFromRange' annotation = ''
+                  isNavigable = 'true' aggregation = 'none' isChangeable = 'true'>
+                  <Model:AssociationEnd.multiplicity>
+                    <XMI.field>0</XMI.field>
+                    <XMI.field>1</XMI.field>
+                    <XMI.field>false</XMI.field>
+                    <XMI.field>false</XMI.field>
+                  </Model:AssociationEnd.multiplicity>
+                  <Model:TypedElement.type>
+                    <Model:Class xmi.idref = 'a77'/>
+                  </Model:TypedElement.type>
+                </Model:AssociationEnd>
+                <Model:AssociationEnd xmi.id = 'a95' name = 'oppositeOf_someValuesFromRange'
+                  annotation = '' isNavigable = 'false' aggregation = 'none' isChangeable = 'true'>
+                  <Model:AssociationEnd.multiplicity>
+                    <XMI.field>0</XMI.field>
+                    <XMI.field>1</XMI.field>
+                    <XMI.field>false</XMI.field>
+                    <XMI.field>false</XMI.field>
+                  </Model:AssociationEnd.multiplicity>
+                  <Model:TypedElement.type>
+                    <Model:Class xmi.idref = 'a92'/>
+                  </Model:TypedElement.type>
+                </Model:AssociationEnd>
+              </Model:Namespace.contents>
+            </Model:Association>
+            <Model:Association xmi.id = 'a96' name = 'A_AnnotationPropertyValue_object'
+              annotation = '' isRoot = 'true' isLeaf = 'true' isAbstract = 'false' visibility = 'public_vis'
+              isDerived = 'false'>
+              <Model:Namespace.contents>
+                <Model:AssociationEnd xmi.id = 'a97' name = 'object' annotation = '' isNavigable = 'true'
+                  aggregation = 'none' isChangeable = 'true'>
+                  <Model:AssociationEnd.multiplicity>
+                    <XMI.field>1</XMI.field>
+                    <XMI.field>1</XMI.field>
+                    <XMI.field>false</XMI.field>
+                    <XMI.field>false</XMI.field>
+                  </Model:AssociationEnd.multiplicity>
+                  <Model:TypedElement.type>
+                    <Model:Class xmi.idref = 'a98'/>
+                  </Model:TypedElement.type>
+                </Model:AssociationEnd>
+                <Model:AssociationEnd xmi.id = 'a99' name = 'oppositeOf_object' annotation = ''
+                  isNavigable = 'false' aggregation = 'none' isChangeable = 'true'>
+                  <Model:AssociationEnd.multiplicity>
+                    <XMI.field>0</XMI.field>
+                    <XMI.field>1</XMI.field>
+                    <XMI.field>false</XMI.field>
+                    <XMI.field>false</XMI.field>
+                  </Model:AssociationEnd.multiplicity>
+                  <Model:TypedElement.type>
+                    <Model:Class xmi.idref = 'a100'/>
+                  </Model:TypedElement.type>
+                </Model:AssociationEnd>
+              </Model:Namespace.contents>
+            </Model:Association>
+            <Model:Association xmi.id = 'a101' name = 'A_AnnotationPropertyValue_subject'
+              annotation = '' isRoot = 'true' isLeaf = 'true' isAbstract = 'false' visibility = 'public_vis'
+              isDerived = 'false'>
+              <Model:Namespace.contents>
+                <Model:AssociationEnd xmi.id = 'a102' name = 'subject' annotation = '' isNavigable = 'true'
+                  aggregation = 'none' isChangeable = 'true'>
+                  <Model:AssociationEnd.multiplicity>
+                    <XMI.field>1</XMI.field>
+                    <XMI.field>1</XMI.field>
+                    <XMI.field>false</XMI.field>
+                    <XMI.field>false</XMI.field>
+                  </Model:AssociationEnd.multiplicity>
+                  <Model:TypedElement.type>
+                    <Model:Class xmi.idref = 'a103'/>
+                  </Model:TypedElement.type>
+                </Model:AssociationEnd>
+                <Model:AssociationEnd xmi.id = 'a104' name = 'oppositeOf_subject' annotation = ''
+                  isNavigable = 'false' aggregation = 'none' isChangeable = 'true'>
+                  <Model:AssociationEnd.multiplicity>
+                    <XMI.field>0</XMI.field>
+                    <XMI.field>1</XMI.field>
+                    <XMI.field>false</XMI.field>
+                    <XMI.field>false</XMI.field>
+                  </Model:AssociationEnd.multiplicity>
+                  <Model:TypedElement.type>
+                    <Model:Class xmi.idref = 'a100'/>
+                  </Model:TypedElement.type>
+                </Model:AssociationEnd>
+              </Model:Namespace.contents>
+            </Model:Association>
+            <Model:Association xmi.id = 'a105' name = 'A_AnnotationPropertyValue_type'
+              annotation = '' isRoot = 'true' isLeaf = 'true' isAbstract = 'false' visibility = 'public_vis'
+              isDerived = 'false'>
+              <Model:Namespace.contents>
+                <Model:AssociationEnd xmi.id = 'a106' name = 'type' annotation = '' isNavigable = 'true'
+                  aggregation = 'none' isChangeable = 'true'>
+                  <Model:AssociationEnd.multiplicity>
+                    <XMI.field>1</XMI.field>
+                    <XMI.field>1</XMI.field>
+                    <XMI.field>false</XMI.field>
+                    <XMI.field>false</XMI.field>
+                  </Model:AssociationEnd.multiplicity>
+                  <Model:TypedElement.type>
+                    <Model:Class xmi.idref = 'a107'/>
+                  </Model:TypedElement.type>
+                </Model:AssociationEnd>
+                <Model:AssociationEnd xmi.id = 'a108' name = 'oppositeOf_type' annotation = ''
+                  isNavigable = 'false' aggregation = 'none' isChangeable = 'true'>
+                  <Model:AssociationEnd.multiplicity>
+                    <XMI.field>0</XMI.field>
+                    <XMI.field>1</XMI.field>
+                    <XMI.field>false</XMI.field>
+                    <XMI.field>false</XMI.field>
+                  </Model:AssociationEnd.multiplicity>
+                  <Model:TypedElement.type>
+                    <Model:Class xmi.idref = 'a100'/>
+                  </Model:TypedElement.type>
+                </Model:AssociationEnd>
+              </Model:Namespace.contents>
+            </Model:Association>
+            <Model:Association xmi.id = 'a109' name = 'A_EnumeratedDatatype_collectionOf'
+              annotation = '' isRoot = 'true' isLeaf = 'true' isAbstract = 'false' visibility = 'public_vis'
+              isDerived = 'false'>
+              <Model:Namespace.contents>
+                <Model:AssociationEnd xmi.id = 'a110' name = 'collectionOf' annotation = ''
+                  isNavigable = 'true' aggregation = 'none' isChangeable = 'true'>
+                  <Model:AssociationEnd.multiplicity>
+                    <XMI.field>0</XMI.field>
+                    <XMI.field>-1</XMI.field>
+                    <XMI.field>false</XMI.field>
+                    <XMI.field>true</XMI.field>
+                  </Model:AssociationEnd.multiplicity>
+                  <Model:TypedElement.type>
+                    <Model:Class xmi.idref = 'a111'/>
+                  </Model:TypedElement.type>
+                </Model:AssociationEnd>
+                <Model:AssociationEnd xmi.id = 'a112' name = 'oppositeOf_collectionOf' annotation = ''
+                  isNavigable = 'false' aggregation = 'none' isChangeable = 'true'>
+                  <Model:AssociationEnd.multiplicity>
+                    <XMI.field>0</XMI.field>
+                    <XMI.field>1</XMI.field>
+                    <XMI.field>false</XMI.field>
+                    <XMI.field>false</XMI.field>
+                  </Model:AssociationEnd.multiplicity>
+                  <Model:TypedElement.type>
+                    <Model:Class xmi.idref = 'a113'/>
+                  </Model:TypedElement.type>
+                </Model:AssociationEnd>
+              </Model:Namespace.contents>
+            </Model:Association>
+            <Model:Association xmi.id = 'a114' name = 'A_HasValueRestriction_hasLiteralValue'
+              annotation = '' isRoot = 'true' isLeaf = 'true' isAbstract = 'false' visibility = 'public_vis'
+              isDerived = 'false'>
+              <Model:Namespace.contents>
+                <Model:AssociationEnd xmi.id = 'a115' name = 'hasLiteralValue' annotation = ''
+                  isNavigable = 'true' aggregation = 'none' isChangeable = 'true'>
+                  <Model:AssociationEnd.multiplicity>
+                    <XMI.field>0</XMI.field>
+                    <XMI.field>1</XMI.field>
+                    <XMI.field>false</XMI.field>
+                    <XMI.field>false</XMI.field>
+                  </Model:AssociationEnd.multiplicity>
+                  <Model:TypedElement.type>
+                    <Model:Class xmi.idref = 'a80'/>
+                  </Model:TypedElement.type>
+                </Model:AssociationEnd>
+                <Model:AssociationEnd xmi.id = 'a116' name = 'oppositeOf_hasLiteralValue'
+                  annotation = '' isNavigable = 'false' aggregation = 'none' isChangeable = 'true'>
+                  <Model:AssociationEnd.multiplicity>
+                    <XMI.field>0</XMI.field>
+                    <XMI.field>1</XMI.field>
+                    <XMI.field>false</XMI.field>
+                    <XMI.field>false</XMI.field>
+                  </Model:AssociationEnd.multiplicity>
+                  <Model:TypedElement.type>
+                    <Model:Class xmi.idref = 'a117'/>
+                  </Model:TypedElement.type>
+                </Model:AssociationEnd>
+              </Model:Namespace.contents>
+            </Model:Association>
+            <Model:Association xmi.id = 'a118' name = 'A_HasValueRestriction_hasValue'
+              annotation = '' isRoot = 'true' isLeaf = 'true' isAbstract = 'false' visibility = 'public_vis'
+              isDerived = 'false'>
+              <Model:Namespace.contents>
+                <Model:AssociationEnd xmi.id = 'a119' name = 'hasValue' annotation = ''
+                  isNavigable = 'true' aggregation = 'none' isChangeable = 'true'>
+                  <Model:AssociationEnd.multiplicity>
+                    <XMI.field>0</XMI.field>
+                    <XMI.field>1</XMI.field>
+                    <XMI.field>false</XMI.field>
+                    <XMI.field>false</XMI.field>
+                  </Model:AssociationEnd.multiplicity>
+                  <Model:TypedElement.type>
+                    <Model:Class xmi.idref = 'a120'/>
+                  </Model:TypedElement.type>
+                </Model:AssociationEnd>
+                <Model:AssociationEnd xmi.id = 'a121' name = 'oppositeOf_hasValue' annotation = ''
+                  isNavigable = 'false' aggregation = 'none' isChangeable = 'true'>
+                  <Model:AssociationEnd.multiplicity>
+                    <XMI.field>0</XMI.field>
+                    <XMI.field>1</XMI.field>
+                    <XMI.field>false</XMI.field>
+                    <XMI.field>false</XMI.field>
+                  </Model:AssociationEnd.multiplicity>
+                  <Model:TypedElement.type>
+                    <Model:Class xmi.idref = 'a117'/>
+                  </Model:TypedElement.type>
+                </Model:AssociationEnd>
+              </Model:Namespace.contents>
+            </Model:Association>
+            <Model:Association xmi.id = 'a122' name = 'A_Restriction_onProperty' annotation = ''
+              isRoot = 'true' isLeaf = 'true' isAbstract = 'false' visibility = 'public_vis'
+              isDerived = 'false'>
+              <Model:Namespace.contents>
+                <Model:AssociationEnd xmi.id = 'a123' name = 'onProperty' annotation = ''
+                  isNavigable = 'true' aggregation = 'none' isChangeable = 'true'>
+                  <Model:AssociationEnd.multiplicity>
+                    <XMI.field>0</XMI.field>
+                    <XMI.field>-1</XMI.field>
+                    <XMI.field>false</XMI.field>
+                    <XMI.field>true</XMI.field>
+                  </Model:AssociationEnd.multiplicity>
+                  <Model:TypedElement.type>
+                    <Model:Class xmi.idref = 'a124'/>
+                  </Model:TypedElement.type>
+                </Model:AssociationEnd>
+                <Model:AssociationEnd xmi.id = 'a125' name = 'oppositeOf_onProperty' annotation = ''
+                  isNavigable = 'false' aggregation = 'none' isChangeable = 'true'>
+                  <Model:AssociationEnd.multiplicity>
+                    <XMI.field>0</XMI.field>
+                    <XMI.field>1</XMI.field>
+                    <XMI.field>false</XMI.field>
+                    <XMI.field>false</XMI.field>
+                  </Model:AssociationEnd.multiplicity>
+                  <Model:TypedElement.type>
+                    <Model:Class xmi.idref = 'a126'/>
+                  </Model:TypedElement.type>
+                </Model:AssociationEnd>
+              </Model:Namespace.contents>
+            </Model:Association>
+            <Model:Association xmi.id = 'a127' name = 'A_Restriction_toDatatype' annotation = ''
+              isRoot = 'true' isLeaf = 'true' isAbstract = 'false' visibility = 'public_vis'
+              isDerived = 'false'>
+              <Model:Namespace.contents>
+                <Model:AssociationEnd xmi.id = 'a128' name = 'toDatatype' annotation = ''
+                  isNavigable = 'true' aggregation = 'none' isChangeable = 'true'>
+                  <Model:AssociationEnd.multiplicity>
+                    <XMI.field>0</XMI.field>
+                    <XMI.field>1</XMI.field>
+                    <XMI.field>false</XMI.field>
+                    <XMI.field>false</XMI.field>
+                  </Model:AssociationEnd.multiplicity>
+                  <Model:TypedElement.type>
+                    <Model:Class xmi.idref = 'a16'/>
+                  </Model:TypedElement.type>
+                </Model:AssociationEnd>
+                <Model:AssociationEnd xmi.id = 'a129' name = 'oppositeOf_toDatatype' annotation = ''
+                  isNavigable = 'false' aggregation = 'none' isChangeable = 'true'>
+                  <Model:AssociationEnd.multiplicity>
+                    <XMI.field>0</XMI.field>
+                    <XMI.field>1</XMI.field>
+                    <XMI.field>false</XMI.field>
+                    <XMI.field>false</XMI.field>
+                  </Model:AssociationEnd.multiplicity>
+                  <Model:TypedElement.type>
+                    <Model:Class xmi.idref = 'a126'/>
+                  </Model:TypedElement.type>
+                </Model:AssociationEnd>
+              </Model:Namespace.contents>
+            </Model:Association>
+            <Model:Association xmi.id = 'a130' name = 'A_AllDiferent_distinctMembers'
+              annotation = '' isRoot = 'true' isLeaf = 'true' isAbstract = 'false' visibility = 'public_vis'
+              isDerived = 'false'>
+              <Model:Namespace.contents>
+                <Model:AssociationEnd xmi.id = 'a131' name = 'distinctMembers' annotation = ''
+                  isNavigable = 'true' aggregation = 'none' isChangeable = 'true'>
+                  <Model:AssociationEnd.multiplicity>
+                    <XMI.field>0</XMI.field>
+                    <XMI.field>-1</XMI.field>
+                    <XMI.field>false</XMI.field>
+                    <XMI.field>true</XMI.field>
+                  </Model:AssociationEnd.multiplicity>
+                  <Model:TypedElement.type>
+                    <Model:Class xmi.idref = 'a120'/>
+                  </Model:TypedElement.type>
+                </Model:AssociationEnd>
+                <Model:AssociationEnd xmi.id = 'a132' name = 'oppositeOf_distinctMembers'
+                  annotation = '' isNavigable = 'false' aggregation = 'none' isChangeable = 'true'>
+                  <Model:AssociationEnd.multiplicity>
+                    <XMI.field>0</XMI.field>
+                    <XMI.field>1</XMI.field>
+                    <XMI.field>false</XMI.field>
+                    <XMI.field>false</XMI.field>
+                  </Model:AssociationEnd.multiplicity>
+                  <Model:TypedElement.type>
+                    <Model:Class xmi.idref = 'a133'/>
+                  </Model:TypedElement.type>
+                </Model:AssociationEnd>
+              </Model:Namespace.contents>
+            </Model:Association>
+            <Model:Association xmi.id = 'a134' name = 'A_DataValue_type' annotation = ''
+              isRoot = 'true' isLeaf = 'true' isAbstract = 'false' visibility = 'public_vis'
+              isDerived = 'false'>
+              <Model:Namespace.contents>
+                <Model:AssociationEnd xmi.id = 'a135' name = 'type' annotation = '' isNavigable = 'true'
+                  aggregation = 'none' isChangeable = 'true'>
+                  <Model:AssociationEnd.multiplicity>
+                    <XMI.field>1</XMI.field>
+                    <XMI.field>1</XMI.field>
+                    <XMI.field>false</XMI.field>
+                    <XMI.field>false</XMI.field>
+                  </Model:AssociationEnd.multiplicity>
+                  <Model:TypedElement.type>
+                    <Model:Class xmi.idref = 'a16'/>
+                  </Model:TypedElement.type>
+                </Model:AssociationEnd>
+                <Model:AssociationEnd xmi.id = 'a136' name = 'oppositeOf_type' annotation = ''
+                  isNavigable = 'false' aggregation = 'none' isChangeable = 'true'>
+                  <Model:AssociationEnd.multiplicity>
+                    <XMI.field>0</XMI.field>
+                    <XMI.field>1</XMI.field>
+                    <XMI.field>false</XMI.field>
+                    <XMI.field>false</XMI.field>
+                  </Model:AssociationEnd.multiplicity>
+                  <Model:TypedElement.type>
+                    <Model:Class xmi.idref = 'a111'/>
+                  </Model:TypedElement.type>
+                </Model:AssociationEnd>
+              </Model:Namespace.contents>
+            </Model:Association>
+            <Model:Association xmi.id = 'a137' name = 'A_DatatypePropertyValue_object'
+              annotation = '' isRoot = 'true' isLeaf = 'true' isAbstract = 'false' visibility = 'public_vis'
+              isDerived = 'false'>
+              <Model:Namespace.contents>
+                <Model:AssociationEnd xmi.id = 'a138' name = 'object' annotation = '' isNavigable = 'true'
+                  aggregation = 'none' isChangeable = 'true'>
+                  <Model:AssociationEnd.multiplicity>
+                    <XMI.field>1</XMI.field>
+                    <XMI.field>1</XMI.field>
+                    <XMI.field>false</XMI.field>
+                    <XMI.field>false</XMI.field>
+                  </Model:AssociationEnd.multiplicity>
+                  <Model:TypedElement.type>
+                    <Model:Class xmi.idref = 'a111'/>
+                  </Model:TypedElement.type>
+                </Model:AssociationEnd>
+                <Model:AssociationEnd xmi.id = 'a139' name = 'oppositeOf_object' annotation = ''
+                  isNavigable = 'false' aggregation = 'none' isChangeable = 'true'>
+                  <Model:AssociationEnd.multiplicity>
+                    <XMI.field>0</XMI.field>
+                    <XMI.field>1</XMI.field>
+                    <XMI.field>false</XMI.field>
+                    <XMI.field>false</XMI.field>
+                  </Model:AssociationEnd.multiplicity>
+                  <Model:TypedElement.type>
+                    <Model:Class xmi.idref = 'a140'/>
+                  </Model:TypedElement.type>
+                </Model:AssociationEnd>
+              </Model:Namespace.contents>
+            </Model:Association>
+            <Model:Association xmi.id = 'a141' name = 'A_ObjectPropertyValue_object'
+              annotation = '' isRoot = 'true' isLeaf = 'true' isAbstract = 'false' visibility = 'public_vis'
+              isDerived = 'false'>
+              <Model:Namespace.contents>
+                <Model:AssociationEnd xmi.id = 'a142' name = 'object' annotation = '' isNavigable = 'true'
+                  aggregation = 'none' isChangeable = 'true'>
+                  <Model:AssociationEnd.multiplicity>
+                    <XMI.field>1</XMI.field>
+                    <XMI.field>1</XMI.field>
+                    <XMI.field>false</XMI.field>
+                    <XMI.field>false</XMI.field>
+                  </Model:AssociationEnd.multiplicity>
+                  <Model:TypedElement.type>
+                    <Model:Class xmi.idref = 'a120'/>
+                  </Model:TypedElement.type>
+                </Model:AssociationEnd>
+                <Model:AssociationEnd xmi.id = 'a143' name = 'oppositeOf_object' annotation = ''
+                  isNavigable = 'false' aggregation = 'none' isChangeable = 'true'>
+                  <Model:AssociationEnd.multiplicity>
+                    <XMI.field>0</XMI.field>
+                    <XMI.field>1</XMI.field>
+                    <XMI.field>false</XMI.field>
+                    <XMI.field>false</XMI.field>
+                  </Model:AssociationEnd.multiplicity>
+                  <Model:TypedElement.type>
+                    <Model:Class xmi.idref = 'a144'/>
+                  </Model:TypedElement.type>
+                </Model:AssociationEnd>
+              </Model:Namespace.contents>
+            </Model:Association>
+            <Model:Association xmi.id = 'a145' name = 'A_PropertyValue_subject' annotation = ''
+              isRoot = 'true' isLeaf = 'true' isAbstract = 'false' visibility = 'public_vis'
+              isDerived = 'false'>
+              <Model:Namespace.contents>
+                <Model:AssociationEnd xmi.id = 'a146' name = 'subject' annotation = '' isNavigable = 'true'
+                  aggregation = 'none' isChangeable = 'true'>
+                  <Model:AssociationEnd.multiplicity>
+                    <XMI.field>1</XMI.field>
+                    <XMI.field>1</XMI.field>
+                    <XMI.field>false</XMI.field>
+                    <XMI.field>false</XMI.field>
+                  </Model:AssociationEnd.multiplicity>
+                  <Model:TypedElement.type>
+                    <Model:Class xmi.idref = 'a120'/>
+                  </Model:TypedElement.type>
+                </Model:AssociationEnd>
+                <Model:AssociationEnd xmi.id = 'a147' name = 'oppositeOf_subject' annotation = ''
+                  isNavigable = 'false' aggregation = 'none' isChangeable = 'true'>
+                  <Model:AssociationEnd.multiplicity>
+                    <XMI.field>0</XMI.field>
+                    <XMI.field>1</XMI.field>
+                    <XMI.field>false</XMI.field>
+                    <XMI.field>false</XMI.field>
+                  </Model:AssociationEnd.multiplicity>
+                  <Model:TypedElement.type>
+                    <Model:Class xmi.idref = 'a148'/>
+                  </Model:TypedElement.type>
+                </Model:AssociationEnd>
+              </Model:Namespace.contents>
+            </Model:Association>
+            <Model:Association xmi.id = 'a149' name = 'A_UnionClass_unionOf' annotation = ''
+              isRoot = 'true' isLeaf = 'true' isAbstract = 'false' visibility = 'public_vis'
+              isDerived = 'false'>
+              <Model:Namespace.contents>
+                <Model:AssociationEnd xmi.id = 'a150' name = 'unionOf' annotation = '' isNavigable = 'true'
+                  aggregation = 'none' isChangeable = 'true'>
+                  <Model:AssociationEnd.multiplicity>
+                    <XMI.field>0</XMI.field>
+                    <XMI.field>-1</XMI.field>
+                    <XMI.field>false</XMI.field>
+                    <XMI.field>true</XMI.field>
+                  </Model:AssociationEnd.multiplicity>
+                  <Model:TypedElement.type>
+                    <Model:Class xmi.idref = 'a11'/>
+                  </Model:TypedElement.type>
+                </Model:AssociationEnd>
+                <Model:AssociationEnd xmi.id = 'a151' name = 'oppositeOf_unionOf' annotation = ''
+                  isNavigable = 'false' aggregation = 'none' isChangeable = 'true'>
+                  <Model:AssociationEnd.multiplicity>
+                    <XMI.field>0</XMI.field>
+                    <XMI.field>1</XMI.field>
+                    <XMI.field>false</XMI.field>
+                    <XMI.field>false</XMI.field>
+                  </Model:AssociationEnd.multiplicity>
+                  <Model:TypedElement.type>
+                    <Model:Class xmi.idref = 'a152'/>
+                  </Model:TypedElement.type>
+                </Model:AssociationEnd>
+              </Model:Namespace.contents>
+            </Model:Association>
+            <Model:Association xmi.id = 'a153' name = 'A_IntersectionClass_intersectionOf'
+              annotation = '' isRoot = 'true' isLeaf = 'true' isAbstract = 'false' visibility = 'public_vis'
+              isDerived = 'false'>
+              <Model:Namespace.contents>
+                <Model:AssociationEnd xmi.id = 'a154' name = 'intersectionOf' annotation = ''
+                  isNavigable = 'true' aggregation = 'none' isChangeable = 'true'>
+                  <Model:AssociationEnd.multiplicity>
+                    <XMI.field>0</XMI.field>
+                    <XMI.field>-1</XMI.field>
+                    <XMI.field>false</XMI.field>
+                    <XMI.field>true</XMI.field>
+                  </Model:AssociationEnd.multiplicity>
+                  <Model:TypedElement.type>
+                    <Model:Class xmi.idref = 'a11'/>
+                  </Model:TypedElement.type>
+                </Model:AssociationEnd>
+                <Model:AssociationEnd xmi.id = 'a155' name = 'oppositeOf_intersectionOf'
+                  annotation = '' isNavigable = 'false' aggregation = 'none' isChangeable = 'true'>
+                  <Model:AssociationEnd.multiplicity>
+                    <XMI.field>0</XMI.field>
+                    <XMI.field>1</XMI.field>
+                    <XMI.field>false</XMI.field>
+                    <XMI.field>false</XMI.field>
+                  </Model:AssociationEnd.multiplicity>
+                  <Model:TypedElement.type>
+                    <Model:Class xmi.idref = 'a156'/>
+                  </Model:TypedElement.type>
+                </Model:AssociationEnd>
+              </Model:Namespace.contents>
+            </Model:Association>
+            <Model:Association xmi.id = 'a157' name = 'A_ComplementClass_complementOf'
+              annotation = '' isRoot = 'true' isLeaf = 'true' isAbstract = 'false' visibility = 'public_vis'
+              isDerived = 'false'>
+              <Model:Namespace.contents>
+                <Model:AssociationEnd xmi.id = 'a158' name = 'complementOf' annotation = ''
+                  isNavigable = 'true' aggregation = 'none' isChangeable = 'true'>
+                  <Model:AssociationEnd.multiplicity>
+                    <XMI.field>1</XMI.field>
+                    <XMI.field>1</XMI.field>
+                    <XMI.field>false</XMI.field>
+                    <XMI.field>false</XMI.field>
+                  </Model:AssociationEnd.multiplicity>
+                  <Model:TypedElement.type>
+                    <Model:Class xmi.idref = 'a11'/>
+                  </Model:TypedElement.type>
+                </Model:AssociationEnd>
+                <Model:AssociationEnd xmi.id = 'a159' name = 'oppositeOf_complementOf' annotation = ''
+                  isNavigable = 'false' aggregation = 'none' isChangeable = 'true'>
+                  <Model:AssociationEnd.multiplicity>
+                    <XMI.field>0</XMI.field>
+                    <XMI.field>1</XMI.field>
+                    <XMI.field>false</XMI.field>
+                    <XMI.field>false</XMI.field>
+                  </Model:AssociationEnd.multiplicity>
+                  <Model:TypedElement.type>
+                    <Model:Class xmi.idref = 'a160'/>
+                  </Model:TypedElement.type>
+                </Model:AssociationEnd>
+              </Model:Namespace.contents>
+            </Model:Association>
+            <Model:Association xmi.id = 'a161' name = 'A_EnumeratedClass_oneOf' annotation = ''
+              isRoot = 'true' isLeaf = 'true' isAbstract = 'false' visibility = 'public_vis'
+              isDerived = 'false'>
+              <Model:Namespace.contents>
+                <Model:AssociationEnd xmi.id = 'a162' name = 'oneOf' annotation = '' isNavigable = 'true'
+                  aggregation = 'none' isChangeable = 'true'>
+                  <Model:AssociationEnd.multiplicity>
+                    <XMI.field>0</XMI.field>
+                    <XMI.field>-1</XMI.field>
+                    <XMI.field>false</XMI.field>
+                    <XMI.field>true</XMI.field>
+                  </Model:AssociationEnd.multiplicity>
+                  <Model:TypedElement.type>
+                    <Model:Class xmi.idref = 'a120'/>
+                  </Model:TypedElement.type>
+                </Model:AssociationEnd>
+                <Model:AssociationEnd xmi.id = 'a163' name = 'oppositeOf_oneOf' annotation = ''
+                  isNavigable = 'false' aggregation = 'none' isChangeable = 'true'>
+                  <Model:AssociationEnd.multiplicity>
+                    <XMI.field>0</XMI.field>
+                    <XMI.field>1</XMI.field>
+                    <XMI.field>false</XMI.field>
+                    <XMI.field>false</XMI.field>
+                  </Model:AssociationEnd.multiplicity>
+                  <Model:TypedElement.type>
+                    <Model:Class xmi.idref = 'a164'/>
+                  </Model:TypedElement.type>
+                </Model:AssociationEnd>
+              </Model:Namespace.contents>
+            </Model:Association>
+            <Model:Association xmi.id = 'a165' name = 'A_Namespace_members' annotation = ''
+              isRoot = 'true' isLeaf = 'true' isAbstract = 'false' visibility = 'public_vis'
+              isDerived = 'false'>
+              <Model:Namespace.contents>
+                <Model:AssociationEnd xmi.id = 'a166' name = 'members' annotation = '' isNavigable = 'true'
+                  aggregation = 'none' isChangeable = 'true'>
+                  <Model:AssociationEnd.multiplicity>
+                    <XMI.field>0</XMI.field>
+                    <XMI.field>-1</XMI.field>
+                    <XMI.field>false</XMI.field>
+                    <XMI.field>true</XMI.field>
+                  </Model:AssociationEnd.multiplicity>
+                  <Model:TypedElement.type>
+                    <Model:Class xmi.idref = 'a167'/>
+                  </Model:TypedElement.type>
+                </Model:AssociationEnd>
+                <Model:AssociationEnd xmi.id = 'a168' name = 'oppositeOf_members' annotation = ''
+                  isNavigable = 'false' aggregation = 'composite' isChangeable = 'true'>
+                  <Model:AssociationEnd.multiplicity>
+                    <XMI.field>0</XMI.field>
+                    <XMI.field>1</XMI.field>
+                    <XMI.field>false</XMI.field>
+                    <XMI.field>false</XMI.field>
+                  </Model:AssociationEnd.multiplicity>
+                  <Model:TypedElement.type>
+                    <Model:Class xmi.idref = 'a169'/>
+                  </Model:TypedElement.type>
+                </Model:AssociationEnd>
+              </Model:Namespace.contents>
+            </Model:Association>
+            <Model:Association xmi.id = 'a170' name = 'A_DatatypeProperty_range' annotation = ''
+              isRoot = 'true' isLeaf = 'true' isAbstract = 'false' visibility = 'public_vis'
+              isDerived = 'false'>
+              <Model:Namespace.contents>
+                <Model:AssociationEnd xmi.id = 'a171' name = 'range' annotation = '' isNavigable = 'true'
+                  aggregation = 'none' isChangeable = 'true'>
+                  <Model:AssociationEnd.multiplicity>
+                    <XMI.field>0</XMI.field>
+                    <XMI.field>-1</XMI.field>
+                    <XMI.field>false</XMI.field>
+                    <XMI.field>true</XMI.field>
+                  </Model:AssociationEnd.multiplicity>
+                  <Model:TypedElement.type>
+                    <Model:Class xmi.idref = 'a77'/>
+                  </Model:TypedElement.type>
+                </Model:AssociationEnd>
+                <Model:AssociationEnd xmi.id = 'a172' name = 'oppositeOf_range' annotation = ''
+                  isNavigable = 'false' aggregation = 'none' isChangeable = 'true'>
+                  <Model:AssociationEnd.multiplicity>
+                    <XMI.field>0</XMI.field>
+                    <XMI.field>1</XMI.field>
+                    <XMI.field>false</XMI.field>
+                    <XMI.field>false</XMI.field>
+                  </Model:AssociationEnd.multiplicity>
+                  <Model:TypedElement.type>
+                    <Model:Class xmi.idref = 'a173'/>
+                  </Model:TypedElement.type>
+                </Model:AssociationEnd>
+              </Model:Namespace.contents>
+            </Model:Association>
+            <Model:Association xmi.id = 'a174' name = 'A_ObjectProperty_range' annotation = ''
+              isRoot = 'true' isLeaf = 'true' isAbstract = 'false' visibility = 'public_vis'
+              isDerived = 'false'>
+              <Model:Namespace.contents>
+                <Model:AssociationEnd xmi.id = 'a175' name = 'range' annotation = '' isNavigable = 'true'
+                  aggregation = 'none' isChangeable = 'true'>
+                  <Model:AssociationEnd.multiplicity>
+                    <XMI.field>0</XMI.field>
+                    <XMI.field>-1</XMI.field>
+                    <XMI.field>false</XMI.field>
+                    <XMI.field>true</XMI.field>
+                  </Model:AssociationEnd.multiplicity>
+                  <Model:TypedElement.type>
+                    <Model:Class xmi.idref = 'a11'/>
+                  </Model:TypedElement.type>
+                </Model:AssociationEnd>
+                <Model:AssociationEnd xmi.id = 'a176' name = 'oppositeOf_range' annotation = ''
+                  isNavigable = 'false' aggregation = 'none' isChangeable = 'true'>
+                  <Model:AssociationEnd.multiplicity>
+                    <XMI.field>0</XMI.field>
+                    <XMI.field>1</XMI.field>
+                    <XMI.field>false</XMI.field>
+                    <XMI.field>false</XMI.field>
+                  </Model:AssociationEnd.multiplicity>
+                  <Model:TypedElement.type>
+                    <Model:Class xmi.idref = 'a177'/>
+                  </Model:TypedElement.type>
+                </Model:AssociationEnd>
+              </Model:Namespace.contents>
+            </Model:Association>
+            <Model:Association xmi.id = 'a178' name = 'A_ObjectProperty_inverseOf' annotation = ''
+              isRoot = 'true' isLeaf = 'true' isAbstract = 'false' visibility = 'public_vis'
+              isDerived = 'false'>
+              <Model:Namespace.contents>
+                <Model:AssociationEnd xmi.id = 'a179' name = 'inverseOf' annotation = ''
+                  isNavigable = 'true' aggregation = 'none' isChangeable = 'true'>
+                  <Model:AssociationEnd.multiplicity>
+                    <XMI.field>0</XMI.field>
+                    <XMI.field>-1</XMI.field>
+                    <XMI.field>false</XMI.field>
+                    <XMI.field>true</XMI.field>
+                  </Model:AssociationEnd.multiplicity>
+                  <Model:TypedElement.type>
+                    <Model:Class xmi.idref = 'a177'/>
+                  </Model:TypedElement.type>
+                </Model:AssociationEnd>
+                <Model:AssociationEnd xmi.id = 'a180' name = 'oppositeOf_inverseOf' annotation = ''
+                  isNavigable = 'false' aggregation = 'none' isChangeable = 'true'>
+                  <Model:AssociationEnd.multiplicity>
+                    <XMI.field>0</XMI.field>
+                    <XMI.field>1</XMI.field>
+                    <XMI.field>false</XMI.field>
+                    <XMI.field>false</XMI.field>
+                  </Model:AssociationEnd.multiplicity>
+                  <Model:TypedElement.type>
+                    <Model:Class xmi.idref = 'a177'/>
+                  </Model:TypedElement.type>
+                </Model:AssociationEnd>
+              </Model:Namespace.contents>
+            </Model:Association>
+            <Model:Association xmi.id = 'a181' name = 'A_Individual_sameAs' annotation = ''
+              isRoot = 'true' isLeaf = 'true' isAbstract = 'false' visibility = 'public_vis'
+              isDerived = 'false'>
+              <Model:Namespace.contents>
+                <Model:AssociationEnd xmi.id = 'a182' name = 'sameAs' annotation = '' isNavigable = 'true'
+                  aggregation = 'none' isChangeable = 'true'>
+                  <Model:AssociationEnd.multiplicity>
+                    <XMI.field>0</XMI.field>
+                    <XMI.field>-1</XMI.field>
+                    <XMI.field>false</XMI.field>
+                    <XMI.field>true</XMI.field>
+                  </Model:AssociationEnd.multiplicity>
+                  <Model:TypedElement.type>
+                    <Model:Class xmi.idref = 'a120'/>
+                  </Model:TypedElement.type>
+                </Model:AssociationEnd>
+                <Model:AssociationEnd xmi.id = 'a183' name = 'oppositeOf_sameAs' annotation = ''
+                  isNavigable = 'false' aggregation = 'none' isChangeable = 'true'>
+                  <Model:AssociationEnd.multiplicity>
+                    <XMI.field>0</XMI.field>
+                    <XMI.field>1</XMI.field>
+                    <XMI.field>false</XMI.field>
+                    <XMI.field>false</XMI.field>
+                  </Model:AssociationEnd.multiplicity>
+                  <Model:TypedElement.type>
+                    <Model:Class xmi.idref = 'a120'/>
+                  </Model:TypedElement.type>
+                </Model:AssociationEnd>
+              </Model:Namespace.contents>
+            </Model:Association>
+            <Model:Association xmi.id = 'a184' name = 'A_Individual_differentFrom' annotation = ''
+              isRoot = 'true' isLeaf = 'true' isAbstract = 'false' visibility = 'public_vis'
+              isDerived = 'false'>
+              <Model:Namespace.contents>
+                <Model:AssociationEnd xmi.id = 'a185' name = 'differentFrom' annotation = ''
+                  isNavigable = 'true' aggregation = 'none' isChangeable = 'true'>
+                  <Model:AssociationEnd.multiplicity>
+                    <XMI.field>0</XMI.field>
+                    <XMI.field>-1</XMI.field>
+                    <XMI.field>false</XMI.field>
+                    <XMI.field>true</XMI.field>
+                  </Model:AssociationEnd.multiplicity>
+                  <Model:TypedElement.type>
+                    <Model:Class xmi.idref = 'a120'/>
+                  </Model:TypedElement.type>
+                </Model:AssociationEnd>
+                <Model:AssociationEnd xmi.id = 'a186' name = 'oppositeOf_differentFrom'
+                  annotation = '' isNavigable = 'false' aggregation = 'none' isChangeable = 'true'>
+                  <Model:AssociationEnd.multiplicity>
+                    <XMI.field>0</XMI.field>
+                    <XMI.field>1</XMI.field>
+                    <XMI.field>false</XMI.field>
+                    <XMI.field>false</XMI.field>
+                  </Model:AssociationEnd.multiplicity>
+                  <Model:TypedElement.type>
+                    <Model:Class xmi.idref = 'a120'/>
+                  </Model:TypedElement.type>
+                </Model:AssociationEnd>
+              </Model:Namespace.contents>
+            </Model:Association>
+            <Model:Association xmi.id = 'a187' name = 'A_Individual_type' annotation = ''
+              isRoot = 'true' isLeaf = 'true' isAbstract = 'false' visibility = 'public_vis'
+              isDerived = 'false'>
+              <Model:Namespace.contents>
+                <Model:AssociationEnd xmi.id = 'a188' name = 'type' annotation = '' isNavigable = 'true'
+                  aggregation = 'none' isChangeable = 'true'>
+                  <Model:AssociationEnd.multiplicity>
+                    <XMI.field>1</XMI.field>
+                    <XMI.field>1</XMI.field>
+                    <XMI.field>false</XMI.field>
+                    <XMI.field>false</XMI.field>
+                  </Model:AssociationEnd.multiplicity>
+                  <Model:TypedElement.type>
+                    <Model:Class xmi.idref = 'a11'/>
+                  </Model:TypedElement.type>
+                </Model:AssociationEnd>
+                <Model:AssociationEnd xmi.id = 'a189' name = 'oppositeOf_type' annotation = ''
+                  isNavigable = 'false' aggregation = 'none' isChangeable = 'true'>
+                  <Model:AssociationEnd.multiplicity>
+                    <XMI.field>0</XMI.field>
+                    <XMI.field>1</XMI.field>
+                    <XMI.field>false</XMI.field>
+                    <XMI.field>false</XMI.field>
+                  </Model:AssociationEnd.multiplicity>
+                  <Model:TypedElement.type>
+                    <Model:Class xmi.idref = 'a120'/>
+                  </Model:TypedElement.type>
+                </Model:AssociationEnd>
+              </Model:Namespace.contents>
+            </Model:Association>
+            <Model:Association xmi.id = 'a190' name = 'A_Class_disjointWith' annotation = ''
+              isRoot = 'true' isLeaf = 'true' isAbstract = 'false' visibility = 'public_vis'
+              isDerived = 'false'>
+              <Model:Namespace.contents>
+                <Model:AssociationEnd xmi.id = 'a191' name = 'disjointWith' annotation = ''
+                  isNavigable = 'true' aggregation = 'none' isChangeable = 'true'>
+                  <Model:AssociationEnd.multiplicity>
+                    <XMI.field>0</XMI.field>
+                    <XMI.field>-1</XMI.field>
+                    <XMI.field>false</XMI.field>
+                    <XMI.field>true</XMI.field>
+                  </Model:AssociationEnd.multiplicity>
+                  <Model:TypedElement.type>
+                    <Model:Class xmi.idref = 'a11'/>
+                  </Model:TypedElement.type>
+                </Model:AssociationEnd>
+                <Model:AssociationEnd xmi.id = 'a192' name = 'oppositeOf_disjointWith' annotation = ''
+                  isNavigable = 'false' aggregation = 'none' isChangeable = 'true'>
+                  <Model:AssociationEnd.multiplicity>
+                    <XMI.field>0</XMI.field>
+                    <XMI.field>1</XMI.field>
+                    <XMI.field>false</XMI.field>
+                    <XMI.field>false</XMI.field>
+                  </Model:AssociationEnd.multiplicity>
+                  <Model:TypedElement.type>
+                    <Model:Class xmi.idref = 'a11'/>
+                  </Model:TypedElement.type>
+                </Model:AssociationEnd>
+              </Model:Namespace.contents>
+            </Model:Association>
+            <Model:Association xmi.id = 'a193' name = 'A_Class_subClassOf' annotation = ''
+              isRoot = 'true' isLeaf = 'true' isAbstract = 'false' visibility = 'public_vis'
+              isDerived = 'false'>
+              <Model:Namespace.contents>
+                <Model:AssociationEnd xmi.id = 'a194' name = 'subClassOf' annotation = ''
+                  isNavigable = 'true' aggregation = 'none' isChangeable = 'true'>
+                  <Model:AssociationEnd.multiplicity>
+                    <XMI.field>0</XMI.field>
+                    <XMI.field>-1</XMI.field>
+                    <XMI.field>false</XMI.field>
+                    <XMI.field>true</XMI.field>
+                  </Model:AssociationEnd.multiplicity>
+                  <Model:TypedElement.type>
+                    <Model:Class xmi.idref = 'a11'/>
+                  </Model:TypedElement.type>
+                </Model:AssociationEnd>
+                <Model:AssociationEnd xmi.id = 'a195' name = 'oppositeOf_subClassOf' annotation = ''
+                  isNavigable = 'false' aggregation = 'none' isChangeable = 'true'>
+                  <Model:AssociationEnd.multiplicity>
+                    <XMI.field>0</XMI.field>
+                    <XMI.field>1</XMI.field>
+                    <XMI.field>false</XMI.field>
+                    <XMI.field>false</XMI.field>
+                  </Model:AssociationEnd.multiplicity>
+                  <Model:TypedElement.type>
+                    <Model:Class xmi.idref = 'a11'/>
+                  </Model:TypedElement.type>
+                </Model:AssociationEnd>
+              </Model:Namespace.contents>
+            </Model:Association>
+            <Model:Association xmi.id = 'a196' name = 'A_Class_equivalentClass' annotation = ''
+              isRoot = 'true' isLeaf = 'true' isAbstract = 'false' visibility = 'public_vis'
+              isDerived = 'false'>
+              <Model:Namespace.contents>
+                <Model:AssociationEnd xmi.id = 'a197' name = 'equivalentClass' annotation = ''
+                  isNavigable = 'true' aggregation = 'none' isChangeable = 'true'>
+                  <Model:AssociationEnd.multiplicity>
+                    <XMI.field>0</XMI.field>
+                    <XMI.field>-1</XMI.field>
+                    <XMI.field>false</XMI.field>
+                    <XMI.field>true</XMI.field>
+                  </Model:AssociationEnd.multiplicity>
+                  <Model:TypedElement.type>
+                    <Model:Class xmi.idref = 'a11'/>
+                  </Model:TypedElement.type>
+                </Model:AssociationEnd>
+                <Model:AssociationEnd xmi.id = 'a198' name = 'oppositeOf_equivalentClass'
+                  annotation = '' isNavigable = 'false' aggregation = 'none' isChangeable = 'true'>
+                  <Model:AssociationEnd.multiplicity>
+                    <XMI.field>0</XMI.field>
+                    <XMI.field>1</XMI.field>
+                    <XMI.field>false</XMI.field>
+                    <XMI.field>false</XMI.field>
+                  </Model:AssociationEnd.multiplicity>
+                  <Model:TypedElement.type>
+                    <Model:Class xmi.idref = 'a11'/>
+                  </Model:TypedElement.type>
+                </Model:AssociationEnd>
+              </Model:Namespace.contents>
+            </Model:Association>
+            <Model:Association xmi.id = 'a199' name = 'A_Property_domain' annotation = ''
+              isRoot = 'true' isLeaf = 'true' isAbstract = 'false' visibility = 'public_vis'
+              isDerived = 'false'>
+              <Model:Namespace.contents>
+                <Model:AssociationEnd xmi.id = 'a200' name = 'domain' annotation = '' isNavigable = 'true'
+                  aggregation = 'none' isChangeable = 'true'>
+                  <Model:AssociationEnd.multiplicity>
+                    <XMI.field>0</XMI.field>
+                    <XMI.field>-1</XMI.field>
+                    <XMI.field>false</XMI.field>
+                    <XMI.field>true</XMI.field>
+                  </Model:AssociationEnd.multiplicity>
+                  <Model:TypedElement.type>
+                    <Model:Class xmi.idref = 'a11'/>
+                  </Model:TypedElement.type>
+                </Model:AssociationEnd>
+                <Model:AssociationEnd xmi.id = 'a201' name = 'oppositeOf_domain' annotation = ''
+                  isNavigable = 'false' aggregation = 'none' isChangeable = 'true'>
+                  <Model:AssociationEnd.multiplicity>
+                    <XMI.field>0</XMI.field>
+                    <XMI.field>1</XMI.field>
+                    <XMI.field>false</XMI.field>
+                    <XMI.field>false</XMI.field>
+                  </Model:AssociationEnd.multiplicity>
+                  <Model:TypedElement.type>
+                    <Model:Class xmi.idref = 'a124'/>
+                  </Model:TypedElement.type>
+                </Model:AssociationEnd>
+              </Model:Namespace.contents>
+            </Model:Association>
+            <Model:Association xmi.id = 'a202' name = 'A_Property_equivalentProperty'
+              annotation = '' isRoot = 'true' isLeaf = 'true' isAbstract = 'false' visibility = 'public_vis'
+              isDerived = 'false'>
+              <Model:Namespace.contents>
+                <Model:AssociationEnd xmi.id = 'a203' name = 'equivalentProperty' annotation = ''
+                  isNavigable = 'true' aggregation = 'none' isChangeable = 'true'>
+                  <Model:AssociationEnd.multiplicity>
+                    <XMI.field>0</XMI.field>
+                    <XMI.field>-1</XMI.field>
+                    <XMI.field>false</XMI.field>
+                    <XMI.field>true</XMI.field>
+                  </Model:AssociationEnd.multiplicity>
+                  <Model:TypedElement.type>
+                    <Model:Class xmi.idref = 'a124'/>
+                  </Model:TypedElement.type>
+                </Model:AssociationEnd>
+                <Model:AssociationEnd xmi.id = 'a204' name = 'oppositeOf_equivalentProperty'
+                  annotation = '' isNavigable = 'false' aggregation = 'none' isChangeable = 'true'>
+                  <Model:AssociationEnd.multiplicity>
+                    <XMI.field>0</XMI.field>
+                    <XMI.field>1</XMI.field>
+                    <XMI.field>false</XMI.field>
+                    <XMI.field>false</XMI.field>
+                  </Model:AssociationEnd.multiplicity>
+                  <Model:TypedElement.type>
+                    <Model:Class xmi.idref = 'a124'/>
+                  </Model:TypedElement.type>
+                </Model:AssociationEnd>
+              </Model:Namespace.contents>
+            </Model:Association>
+            <Model:Association xmi.id = 'a205' name = 'A_Property_subPropertyOf' annotation = ''
+              isRoot = 'true' isLeaf = 'true' isAbstract = 'false' visibility = 'public_vis'
+              isDerived = 'false'>
+              <Model:Namespace.contents>
+                <Model:AssociationEnd xmi.id = 'a206' name = 'subPropertyOf' annotation = ''
+                  isNavigable = 'true' aggregation = 'none' isChangeable = 'true'>
+                  <Model:AssociationEnd.multiplicity>
+                    <XMI.field>0</XMI.field>
+                    <XMI.field>-1</XMI.field>
+                    <XMI.field>false</XMI.field>
+                    <XMI.field>true</XMI.field>
+                  </Model:AssociationEnd.multiplicity>
+                  <Model:TypedElement.type>
+                    <Model:Class xmi.idref = 'a124'/>
+                  </Model:TypedElement.type>
+                </Model:AssociationEnd>
+                <Model:AssociationEnd xmi.id = 'a207' name = 'oppositeOf_subPropertyOf'
+                  annotation = '' isNavigable = 'false' aggregation = 'none' isChangeable = 'true'>
+                  <Model:AssociationEnd.multiplicity>
+                    <XMI.field>0</XMI.field>
+                    <XMI.field>1</XMI.field>
+                    <XMI.field>false</XMI.field>
+                    <XMI.field>false</XMI.field>
+                  </Model:AssociationEnd.multiplicity>
+                  <Model:TypedElement.type>
+                    <Model:Class xmi.idref = 'a124'/>
+                  </Model:TypedElement.type>
+                </Model:AssociationEnd>
+              </Model:Namespace.contents>
+            </Model:Association>
+            <Model:Association xmi.id = 'a208' name = 'A_Ontology_imports' annotation = ''
+              isRoot = 'true' isLeaf = 'true' isAbstract = 'false' visibility = 'public_vis'
+              isDerived = 'false'>
+              <Model:Namespace.contents>
+                <Model:AssociationEnd xmi.id = 'a209' name = 'imports' annotation = '' isNavigable = 'true'
+                  aggregation = 'none' isChangeable = 'true'>
+                  <Model:AssociationEnd.multiplicity>
+                    <XMI.field>0</XMI.field>
+                    <XMI.field>-1</XMI.field>
+                    <XMI.field>false</XMI.field>
+                    <XMI.field>true</XMI.field>
+                  </Model:AssociationEnd.multiplicity>
+                  <Model:TypedElement.type>
+                    <Model:Class xmi.idref = 'a210'/>
+                  </Model:TypedElement.type>
+                </Model:AssociationEnd>
+                <Model:AssociationEnd xmi.id = 'a211' name = 'oppositeOf_imports' annotation = ''
+                  isNavigable = 'false' aggregation = 'none' isChangeable = 'true'>
+                  <Model:AssociationEnd.multiplicity>
+                    <XMI.field>0</XMI.field>
+                    <XMI.field>1</XMI.field>
+                    <XMI.field>false</XMI.field>
+                    <XMI.field>false</XMI.field>
+                  </Model:AssociationEnd.multiplicity>
+                  <Model:TypedElement.type>
+                    <Model:Class xmi.idref = 'a210'/>
+                  </Model:TypedElement.type>
+                </Model:AssociationEnd>
+              </Model:Namespace.contents>
+            </Model:Association>
+            <Model:Association xmi.id = 'a212' name = 'A_Ontology_priorVersion' annotation = ''
+              isRoot = 'true' isLeaf = 'true' isAbstract = 'false' visibility = 'public_vis'
+              isDerived = 'false'>
+              <Model:Namespace.contents>
+                <Model:AssociationEnd xmi.id = 'a213' name = 'priorVersion' annotation = ''
+                  isNavigable = 'true' aggregation = 'none' isChangeable = 'true'>
+                  <Model:AssociationEnd.multiplicity>
+                    <XMI.field>0</XMI.field>
+                    <XMI.field>1</XMI.field>
+                    <XMI.field>false</XMI.field>
+                    <XMI.field>false</XMI.field>
+                  </Model:AssociationEnd.multiplicity>
+                  <Model:TypedElement.type>
+                    <Model:Class xmi.idref = 'a210'/>
+                  </Model:TypedElement.type>
+                </Model:AssociationEnd>
+                <Model:AssociationEnd xmi.id = 'a214' name = 'oppositeOf_priorVersion' annotation = ''
+                  isNavigable = 'false' aggregation = 'none' isChangeable = 'true'>
+                  <Model:AssociationEnd.multiplicity>
+                    <XMI.field>0</XMI.field>
+                    <XMI.field>1</XMI.field>
+                    <XMI.field>false</XMI.field>
+                    <XMI.field>false</XMI.field>
+                  </Model:AssociationEnd.multiplicity>
+                  <Model:TypedElement.type>
+                    <Model:Class xmi.idref = 'a210'/>
+                  </Model:TypedElement.type>
+                </Model:AssociationEnd>
+              </Model:Namespace.contents>
+            </Model:Association>
+            <Model:Association xmi.id = 'a215' name = 'A_Ontology_elements' annotation = ''
+              isRoot = 'true' isLeaf = 'true' isAbstract = 'false' visibility = 'public_vis'
+              isDerived = 'false'>
+              <Model:Namespace.contents>
+                <Model:AssociationEnd xmi.id = 'a216' name = 'elements' annotation = ''
+                  isNavigable = 'true' aggregation = 'none' isChangeable = 'true'>
+                  <Model:AssociationEnd.multiplicity>
+                    <XMI.field>0</XMI.field>
+                    <XMI.field>-1</XMI.field>
+                    <XMI.field>false</XMI.field>
+                    <XMI.field>true</XMI.field>
+                  </Model:AssociationEnd.multiplicity>
+                  <Model:TypedElement.type>
+                    <Model:Class xmi.idref = 'a167'/>
+                  </Model:TypedElement.type>
+                </Model:AssociationEnd>
+                <Model:AssociationEnd xmi.id = 'a217' name = 'oppositeOf_elements' annotation = ''
+                  isNavigable = 'false' aggregation = 'composite' isChangeable = 'true'>
+                  <Model:AssociationEnd.multiplicity>
+                    <XMI.field>0</XMI.field>
+                    <XMI.field>1</XMI.field>
+                    <XMI.field>false</XMI.field>
+                    <XMI.field>false</XMI.field>
+                  </Model:AssociationEnd.multiplicity>
+                  <Model:TypedElement.type>
+                    <Model:Class xmi.idref = 'a210'/>
+                  </Model:TypedElement.type>
+                </Model:AssociationEnd>
+              </Model:Namespace.contents>
+            </Model:Association>
+            <Model:Association xmi.id = 'a218' name = 'A_Ontology_incompatibleWith'
+              annotation = '' isRoot = 'true' isLeaf = 'true' isAbstract = 'false' visibility = 'public_vis'
+              isDerived = 'false'>
+              <Model:Namespace.contents>
+                <Model:AssociationEnd xmi.id = 'a219' name = 'incompatibleWith' annotation = ''
+                  isNavigable = 'true' aggregation = 'none' isChangeable = 'true'>
+                  <Model:AssociationEnd.multiplicity>
+                    <XMI.field>0</XMI.field>
+                    <XMI.field>-1</XMI.field>
+                    <XMI.field>false</XMI.field>
+                    <XMI.field>true</XMI.field>
+                  </Model:AssociationEnd.multiplicity>
+                  <Model:TypedElement.type>
+                    <Model:Class xmi.idref = 'a210'/>
+                  </Model:TypedElement.type>
+                </Model:AssociationEnd>
+                <Model:AssociationEnd xmi.id = 'a220' name = 'oppositeOf_incompatibleWith'
+                  annotation = '' isNavigable = 'false' aggregation = 'none' isChangeable = 'true'>
+                  <Model:AssociationEnd.multiplicity>
+                    <XMI.field>0</XMI.field>
+                    <XMI.field>1</XMI.field>
+                    <XMI.field>false</XMI.field>
+                    <XMI.field>false</XMI.field>
+                  </Model:AssociationEnd.multiplicity>
+                  <Model:TypedElement.type>
+                    <Model:Class xmi.idref = 'a210'/>
+                  </Model:TypedElement.type>
+                </Model:AssociationEnd>
+              </Model:Namespace.contents>
+            </Model:Association>
+            <Model:Association xmi.id = 'a221' name = 'A_Ontology_reference' annotation = ''
+              isRoot = 'true' isLeaf = 'true' isAbstract = 'false' visibility = 'public_vis'
+              isDerived = 'false'>
+              <Model:Namespace.contents>
+                <Model:AssociationEnd xmi.id = 'a222' name = 'reference' annotation = ''
+                  isNavigable = 'true' aggregation = 'none' isChangeable = 'true'>
+                  <Model:AssociationEnd.multiplicity>
+                    <XMI.field>0</XMI.field>
+                    <XMI.field>-1</XMI.field>
+                    <XMI.field>false</XMI.field>
+                    <XMI.field>true</XMI.field>
+                  </Model:AssociationEnd.multiplicity>
+                  <Model:TypedElement.type>
+                    <Model:Class xmi.idref = 'a223'/>
+                  </Model:TypedElement.type>
+                </Model:AssociationEnd>
+                <Model:AssociationEnd xmi.id = 'a224' name = 'oppositeOf_reference' annotation = ''
+                  isNavigable = 'false' aggregation = 'none' isChangeable = 'true'>
+                  <Model:AssociationEnd.multiplicity>
+                    <XMI.field>0</XMI.field>
+                    <XMI.field>1</XMI.field>
+                    <XMI.field>false</XMI.field>
+                    <XMI.field>false</XMI.field>
+                  </Model:AssociationEnd.multiplicity>
+                  <Model:TypedElement.type>
+                    <Model:Class xmi.idref = 'a210'/>
+                  </Model:TypedElement.type>
+                </Model:AssociationEnd>
+              </Model:Namespace.contents>
+            </Model:Association>
+            <Model:Class xmi.id = 'a65' name = 'MinCardinalityRestriction' annotation = ''
+              isRoot = 'false' isLeaf = 'false' isAbstract = 'false' visibility = 'public_vis'
+              isSingleton = 'false'>
+              <Model:Namespace.contents>
+                <Model:Reference xmi.id = 'a225' name = 'minCardinality' annotation = ''
+                  scope = 'instance_level' visibility = 'public_vis' isChangeable = 'true'>
+                  <Model:StructuralFeature.multiplicity>
+                    <XMI.field>1</XMI.field>
+                    <XMI.field>1</XMI.field>
+                    <XMI.field>false</XMI.field>
+                    <XMI.field>false</XMI.field>
+                  </Model:StructuralFeature.multiplicity>
+                  <Model:TypedElement.type>
+                    <Model:Class xmi.idref = 'a63'/>
+                  </Model:TypedElement.type>
+                  <Model:Reference.referencedEnd>
+                    <Model:AssociationEnd xmi.idref = 'a62'/>
+                  </Model:Reference.referencedEnd>
+                </Model:Reference>
+              </Model:Namespace.contents>
+              <Model:GeneralizableElement.supertypes>
+                <Model:Class xmi.idref = 'a126'/>
+              </Model:GeneralizableElement.supertypes>
+            </Model:Class>
+            <Model:Class xmi.id = 'a69' name = 'MaxCardinalityRestriction' annotation = ''
+              isRoot = 'false' isLeaf = 'false' isAbstract = 'false' visibility = 'public_vis'
+              isSingleton = 'false'>
+              <Model:Namespace.contents>
+                <Model:Reference xmi.id = 'a226' name = 'maxCardinality' annotation = ''
+                  scope = 'instance_level' visibility = 'public_vis' isChangeable = 'true'>
+                  <Model:StructuralFeature.multiplicity>
+                    <XMI.field>1</XMI.field>
+                    <XMI.field>1</XMI.field>
+                    <XMI.field>false</XMI.field>
+                    <XMI.field>false</XMI.field>
+                  </Model:StructuralFeature.multiplicity>
+                  <Model:TypedElement.type>
+                    <Model:Class xmi.idref = 'a63'/>
+                  </Model:TypedElement.type>
+                  <Model:Reference.referencedEnd>
+                    <Model:AssociationEnd xmi.idref = 'a67'/>
+                  </Model:Reference.referencedEnd>
+                </Model:Reference>
+              </Model:Namespace.contents>
+              <Model:GeneralizableElement.supertypes>
+                <Model:Class xmi.idref = 'a126'/>
+              </Model:GeneralizableElement.supertypes>
+            </Model:Class>
+            <Model:Class xmi.id = 'a73' name = 'CardinalityRestriction' annotation = ''
+              isRoot = 'false' isLeaf = 'false' isAbstract = 'false' visibility = 'public_vis'
+              isSingleton = 'false'>
+              <Model:Namespace.contents>
+                <Model:Reference xmi.id = 'a227' name = 'cardinality' annotation = '' scope = 'instance_level'
+                  visibility = 'public_vis' isChangeable = 'true'>
+                  <Model:StructuralFeature.multiplicity>
+                    <XMI.field>1</XMI.field>
+                    <XMI.field>1</XMI.field>
+                    <XMI.field>false</XMI.field>
+                    <XMI.field>false</XMI.field>
+                  </Model:StructuralFeature.multiplicity>
+                  <Model:TypedElement.type>
+                    <Model:Class xmi.idref = 'a63'/>
+                  </Model:TypedElement.type>
+                  <Model:Reference.referencedEnd>
+                    <Model:AssociationEnd xmi.idref = 'a71'/>
+                  </Model:Reference.referencedEnd>
+                </Model:Reference>
+              </Model:Namespace.contents>
+              <Model:GeneralizableElement.supertypes>
+                <Model:Class xmi.idref = 'a126'/>
+              </Model:GeneralizableElement.supertypes>
+            </Model:Class>
+            <Model:Class xmi.id = 'a228' name = 'TransitiveProperty' annotation = ''
+              isRoot = 'false' isLeaf = 'false' isAbstract = 'false' visibility = 'public_vis'
+              isSingleton = 'false'>
+              <Model:GeneralizableElement.supertypes>
+                <Model:Class xmi.idref = 'a177'/>
+              </Model:GeneralizableElement.supertypes>
+            </Model:Class>
+            <Model:Class xmi.id = 'a229' name = 'SymmetricProperty' annotation = ''
+              isRoot = 'false' isLeaf = 'false' isAbstract = 'false' visibility = 'public_vis'
+              isSingleton = 'false'>
+              <Model:GeneralizableElement.supertypes>
+                <Model:Class xmi.idref = 'a177'/>
+              </Model:GeneralizableElement.supertypes>
+            </Model:Class>
+            <Model:Class xmi.id = 'a230' name = 'InverseFunctionalProperty' annotation = ''
+              isRoot = 'false' isLeaf = 'false' isAbstract = 'false' visibility = 'public_vis'
+              isSingleton = 'false'>
+              <Model:GeneralizableElement.supertypes>
+                <Model:Class xmi.idref = 'a177'/>
+              </Model:GeneralizableElement.supertypes>
+            </Model:Class>
+            <Model:Class xmi.id = 'a231' name = 'FunctionalProperty' annotation = ''
+              isRoot = 'false' isLeaf = 'false' isAbstract = 'false' visibility = 'public_vis'
+              isSingleton = 'false'>
+              <Model:GeneralizableElement.supertypes>
+                <Model:Class xmi.idref = 'a124'/>
+              </Model:GeneralizableElement.supertypes>
+            </Model:Class>
+            <Model:Class xmi.id = 'a232' name = 'PlainLiteral' annotation = '' isRoot = 'false'
+              isLeaf = 'false' isAbstract = 'false' visibility = 'public_vis' isSingleton = 'false'>
+              <Model:Namespace.contents>
+                <Model:Attribute xmi.id = 'a233' name = 'language' annotation = '' scope = 'instance_level'
+                  visibility = 'public_vis' isChangeable = 'true' isDerived = 'false'>
+                  <Model:StructuralFeature.multiplicity>
+                    <XMI.field>1</XMI.field>
+                    <XMI.field>1</XMI.field>
+                    <XMI.field>false</XMI.field>
+                    <XMI.field>false</XMI.field>
+                  </Model:StructuralFeature.multiplicity>
+                  <Model:TypedElement.type>
+                    <Model:PrimitiveType xmi.idref = 'a7'/>
+                  </Model:TypedElement.type>
+                </Model:Attribute>
+              </Model:Namespace.contents>
+              <Model:GeneralizableElement.supertypes>
+                <Model:Class xmi.idref = 'a80'/>
+              </Model:GeneralizableElement.supertypes>
+            </Model:Class>
+            <Model:Class xmi.id = 'a63' name = 'TypedLiteral' annotation = '' isRoot = 'false'
+              isLeaf = 'false' isAbstract = 'false' visibility = 'public_vis' isSingleton = 'false'>
+              <Model:Namespace.contents>
+                <Model:Attribute xmi.id = 'a234' name = 'theType' annotation = '' scope = 'instance_level'
+                  visibility = 'public_vis' isChangeable = 'true' isDerived = 'false'>
+                  <Model:StructuralFeature.multiplicity>
+                    <XMI.field>1</XMI.field>
+                    <XMI.field>1</XMI.field>
+                    <XMI.field>false</XMI.field>
+                    <XMI.field>false</XMI.field>
+                  </Model:StructuralFeature.multiplicity>
+                  <Model:TypedElement.type>
+                    <Model:PrimitiveType xmi.idref = 'a7'/>
+                  </Model:TypedElement.type>
+                </Model:Attribute>
+              </Model:Namespace.contents>
+              <Model:GeneralizableElement.supertypes>
+                <Model:Class xmi.idref = 'a80'/>
+              </Model:GeneralizableElement.supertypes>
+            </Model:Class>
+            <Model:Class xmi.id = 'a80' name = 'Literal' annotation = '' isRoot = 'false'
+              isLeaf = 'false' isAbstract = 'true' visibility = 'public_vis' isSingleton = 'false'>
+              <Model:Namespace.contents>
+                <Model:Attribute xmi.id = 'a235' name = 'lexicalForm' annotation = '' scope = 'instance_level'
+                  visibility = 'public_vis' isChangeable = 'true' isDerived = 'false'>
+                  <Model:StructuralFeature.multiplicity>
+                    <XMI.field>1</XMI.field>
+                    <XMI.field>1</XMI.field>
+                    <XMI.field>false</XMI.field>
+                    <XMI.field>false</XMI.field>
+                  </Model:StructuralFeature.multiplicity>
+                  <Model:TypedElement.type>
+                    <Model:PrimitiveType xmi.idref = 'a7'/>
+                  </Model:TypedElement.type>
+                </Model:Attribute>
+              </Model:Namespace.contents>
+              <Model:GeneralizableElement.supertypes>
+                <Model:Class xmi.idref = 'a16'/>
+              </Model:GeneralizableElement.supertypes>
+            </Model:Class>
+            <Model:Class xmi.id = 'a16' name = 'Datatype' annotation = '' isRoot = 'false'
+              isLeaf = 'false' isAbstract = 'true' visibility = 'public_vis' isSingleton = 'false'>
+              <Model:GeneralizableElement.supertypes>
+                <Model:Class xmi.idref = 'a59'/>
+              </Model:GeneralizableElement.supertypes>
+            </Model:Class>
+            <Model:Class xmi.id = 'a77' name = 'DataRange' annotation = '' isRoot = 'false'
+              isLeaf = 'false' isAbstract = 'false' visibility = 'public_vis' isSingleton = 'false'>
+              <Model:Namespace.contents>
+                <Model:Reference xmi.id = 'a236' name = 'oneOf' annotation = '' scope = 'instance_level'
+                  visibility = 'public_vis' isChangeable = 'true'>
+                  <Model:StructuralFeature.multiplicity>
+                    <XMI.field>0</XMI.field>
+                    <XMI.field>-1</XMI.field>
+                    <XMI.field>false</XMI.field>
+                    <XMI.field>true</XMI.field>
+                  </Model:StructuralFeature.multiplicity>
+                  <Model:TypedElement.type>
+                    <Model:Class xmi.idref = 'a80'/>
+                  </Model:TypedElement.type>
+                  <Model:Reference.referencedEnd>
+                    <Model:AssociationEnd xmi.idref = 'a79'/>
+                  </Model:Reference.referencedEnd>
+                </Model:Reference>
+                <Model:Reference xmi.id = 'a237' name = 'datatype' annotation = '' scope = 'instance_level'
+                  visibility = 'public_vis' isChangeable = 'true'>
+                  <Model:StructuralFeature.multiplicity>
+                    <XMI.field>0</XMI.field>
+                    <XMI.field>1</XMI.field>
+                    <XMI.field>false</XMI.field>
+                    <XMI.field>false</XMI.field>
+                  </Model:StructuralFeature.multiplicity>
+                  <Model:TypedElement.type>
+                    <Model:Class xmi.idref = 'a16'/>
+                  </Model:TypedElement.type>
+                  <Model:Reference.referencedEnd>
+                    <Model:AssociationEnd xmi.idref = 'a75'/>
+                  </Model:Reference.referencedEnd>
+                </Model:Reference>
+              </Model:Namespace.contents>
+              <Model:GeneralizableElement.supertypes>
+                <Model:Class xmi.idref = 'a11'/>
+              </Model:GeneralizableElement.supertypes>
+            </Model:Class>
+            <Model:Class xmi.id = 'a85' name = 'AllValuesFromRestriction' annotation = ''
+              isRoot = 'false' isLeaf = 'false' isAbstract = 'false' visibility = 'public_vis'
+              isSingleton = 'false'>
+              <Model:Namespace.contents>
+                <Model:Reference xmi.id = 'a238' name = 'allValuesFromRange' annotation = ''
+                  scope = 'instance_level' visibility = 'public_vis' isChangeable = 'true'>
+                  <Model:StructuralFeature.multiplicity>
+                    <XMI.field>0</XMI.field>
+                    <XMI.field>1</XMI.field>
+                    <XMI.field>false</XMI.field>
+                    <XMI.field>false</XMI.field>
+                  </Model:StructuralFeature.multiplicity>
+                  <Model:TypedElement.type>
+                    <Model:Class xmi.idref = 'a77'/>
+                  </Model:TypedElement.type>
+                  <Model:Reference.referencedEnd>
+                    <Model:AssociationEnd xmi.idref = 'a83'/>
+                  </Model:Reference.referencedEnd>
+                </Model:Reference>
+                <Model:Reference xmi.id = 'a239' name = 'allValuesFromClass' annotation = ''
+                  scope = 'instance_level' visibility = 'public_vis' isChangeable = 'true'>
+                  <Model:StructuralFeature.multiplicity>
+                    <XMI.field>0</XMI.field>
+                    <XMI.field>1</XMI.field>
+                    <XMI.field>false</XMI.field>
+                    <XMI.field>false</XMI.field>
+                  </Model:StructuralFeature.multiplicity>
+                  <Model:TypedElement.type>
+                    <Model:Class xmi.idref = 'a11'/>
+                  </Model:TypedElement.type>
+                  <Model:Reference.referencedEnd>
+                    <Model:AssociationEnd xmi.idref = 'a87'/>
+                  </Model:Reference.referencedEnd>
+                </Model:Reference>
+              </Model:Namespace.contents>
+              <Model:GeneralizableElement.supertypes>
+                <Model:Class xmi.idref = 'a126'/>
+              </Model:GeneralizableElement.supertypes>
+            </Model:Class>
+            <Model:Class xmi.id = 'a92' name = 'SomeValuesFromRestriction' annotation = ''
+              isRoot = 'false' isLeaf = 'false' isAbstract = 'false' visibility = 'public_vis'
+              isSingleton = 'false'>
+              <Model:Namespace.contents>
+                <Model:Reference xmi.id = 'a240' name = 'someValuesFromRange' annotation = ''
+                  scope = 'instance_level' visibility = 'public_vis' isChangeable = 'true'>
+                  <Model:StructuralFeature.multiplicity>
+                    <XMI.field>0</XMI.field>
+                    <XMI.field>1</XMI.field>
+                    <XMI.field>false</XMI.field>
+                    <XMI.field>false</XMI.field>
+                  </Model:StructuralFeature.multiplicity>
+                  <Model:TypedElement.type>
+                    <Model:Class xmi.idref = 'a77'/>
+                  </Model:TypedElement.type>
+                  <Model:Reference.referencedEnd>
+                    <Model:AssociationEnd xmi.idref = 'a94'/>
+                  </Model:Reference.referencedEnd>
+                </Model:Reference>
+                <Model:Reference xmi.id = 'a241' name = 'someValuesFromClass' annotation = ''
+                  scope = 'instance_level' visibility = 'public_vis' isChangeable = 'true'>
+                  <Model:StructuralFeature.multiplicity>
+                    <XMI.field>0</XMI.field>
+                    <XMI.field>1</XMI.field>
+                    <XMI.field>false</XMI.field>
+                    <XMI.field>false</XMI.field>
+                  </Model:StructuralFeature.multiplicity>
+                  <Model:TypedElement.type>
+                    <Model:Class xmi.idref = 'a11'/>
+                  </Model:TypedElement.type>
+                  <Model:Reference.referencedEnd>
+                    <Model:AssociationEnd xmi.idref = 'a90'/>
+                  </Model:Reference.referencedEnd>
+                </Model:Reference>
+              </Model:Namespace.contents>
+              <Model:GeneralizableElement.supertypes>
+                <Model:Class xmi.idref = 'a126'/>
+              </Model:GeneralizableElement.supertypes>
+            </Model:Class>
+            <Model:Class xmi.id = 'a223' name = 'OntologyPropertyValue' annotation = ''
+              isRoot = 'false' isLeaf = 'false' isAbstract = 'false' visibility = 'public_vis'
+              isSingleton = 'false'>
+              <Model:GeneralizableElement.supertypes>
+                <Model:Class xmi.idref = 'a242'/>
+              </Model:GeneralizableElement.supertypes>
+            </Model:Class>
+            <Model:Class xmi.id = 'a243' name = 'URI' annotation = '' isRoot = 'false'
+              isLeaf = 'false' isAbstract = 'false' visibility = 'public_vis' isSingleton = 'false'>
+              <Model:GeneralizableElement.supertypes>
+                <Model:Class xmi.idref = 'a98'/>
+              </Model:GeneralizableElement.supertypes>
+            </Model:Class>
+            <Model:Class xmi.id = 'a98' name = 'Annotation' annotation = '' isRoot = 'false'
+              isLeaf = 'false' isAbstract = 'true' visibility = 'public_vis' isSingleton = 'false'/>
+            <Model:Class xmi.id = 'a100' name = 'AnnotationPropertyValue' annotation = ''
+              isRoot = 'false' isLeaf = 'false' isAbstract = 'false' visibility = 'public_vis'
+              isSingleton = 'false'>
+              <Model:Namespace.contents>
+                <Model:Reference xmi.id = 'a244' name = 'subject' annotation = '' scope = 'instance_level'
+                  visibility = 'public_vis' isChangeable = 'true'>
+                  <Model:StructuralFeature.multiplicity>
+                    <XMI.field>1</XMI.field>
+                    <XMI.field>1</XMI.field>
+                    <XMI.field>false</XMI.field>
+                    <XMI.field>false</XMI.field>
+                  </Model:StructuralFeature.multiplicity>
+                  <Model:TypedElement.type>
+                    <Model:Class xmi.idref = 'a103'/>
+                  </Model:TypedElement.type>
+                  <Model:Reference.referencedEnd>
+                    <Model:AssociationEnd xmi.idref = 'a102'/>
+                  </Model:Reference.referencedEnd>
+                </Model:Reference>
+                <Model:Reference xmi.id = 'a245' name = 'object' annotation = '' scope = 'instance_level'
+                  visibility = 'public_vis' isChangeable = 'true'>
+                  <Model:StructuralFeature.multiplicity>
+                    <XMI.field>1</XMI.field>
+                    <XMI.field>1</XMI.field>
+                    <XMI.field>false</XMI.field>
+                    <XMI.field>false</XMI.field>
+                  </Model:StructuralFeature.multiplicity>
+                  <Model:TypedElement.type>
+                    <Model:Class xmi.idref = 'a98'/>
+                  </Model:TypedElement.type>
+                  <Model:Reference.referencedEnd>
+                    <Model:AssociationEnd xmi.idref = 'a97'/>
+                  </Model:Reference.referencedEnd>
+                </Model:Reference>
+                <Model:Reference xmi.id = 'a246' name = 'type' annotation = '' scope = 'instance_level'
+                  visibility = 'public_vis' isChangeable = 'true'>
+                  <Model:StructuralFeature.multiplicity>
+                    <XMI.field>1</XMI.field>
+                    <XMI.field>1</XMI.field>
+                    <XMI.field>false</XMI.field>
+                    <XMI.field>false</XMI.field>
+                  </Model:StructuralFeature.multiplicity>
+                  <Model:TypedElement.type>
+                    <Model:Class xmi.idref = 'a107'/>
+                  </Model:TypedElement.type>
+                  <Model:Reference.referencedEnd>
+                    <Model:AssociationEnd xmi.idref = 'a106'/>
+                  </Model:Reference.referencedEnd>
+                </Model:Reference>
+              </Model:Namespace.contents>
+            </Model:Class>
+            <Model:Class xmi.id = 'a113' name = 'EnumeratedDatatype' annotation = ''
+              isRoot = 'false' isLeaf = 'false' isAbstract = 'false' visibility = 'public_vis'
+              isSingleton = 'false'>
+              <Model:Namespace.contents>
+                <Model:Reference xmi.id = 'a247' name = 'collectionOf' annotation = '' scope = 'instance_level'
+                  visibility = 'public_vis' isChangeable = 'true'>
+                  <Model:StructuralFeature.multiplicity>
+                    <XMI.field>0</XMI.field>
+                    <XMI.field>-1</XMI.field>
+                    <XMI.field>false</XMI.field>
+                    <XMI.field>true</XMI.field>
+                  </Model:StructuralFeature.multiplicity>
+                  <Model:TypedElement.type>
+                    <Model:Class xmi.idref = 'a111'/>
+                  </Model:TypedElement.type>
+                  <Model:Reference.referencedEnd>
+                    <Model:AssociationEnd xmi.idref = 'a110'/>
+                  </Model:Reference.referencedEnd>
+                </Model:Reference>
+              </Model:Namespace.contents>
+              <Model:GeneralizableElement.supertypes>
+                <Model:Class xmi.idref = 'a16'/>
+              </Model:GeneralizableElement.supertypes>
+            </Model:Class>
+            <Model:Class xmi.id = 'a248' name = 'PrimitiveType' annotation = '' isRoot = 'false'
+              isLeaf = 'false' isAbstract = 'false' visibility = 'public_vis' isSingleton = 'false'>
+              <Model:GeneralizableElement.supertypes>
+                <Model:Class xmi.idref = 'a16'/>
+              </Model:GeneralizableElement.supertypes>
+            </Model:Class>
+            <Model:Class xmi.id = 'a117' name = 'HasValueRestriction' annotation = ''
+              isRoot = 'false' isLeaf = 'false' isAbstract = 'false' visibility = 'public_vis'
+              isSingleton = 'false'>
+              <Model:Namespace.contents>
+                <Model:Reference xmi.id = 'a249' name = 'hasLiteralValue' annotation = ''
+                  scope = 'instance_level' visibility = 'public_vis' isChangeable = 'true'>
+                  <Model:StructuralFeature.multiplicity>
+                    <XMI.field>0</XMI.field>
+                    <XMI.field>1</XMI.field>
+                    <XMI.field>false</XMI.field>
+                    <XMI.field>false</XMI.field>
+                  </Model:StructuralFeature.multiplicity>
+                  <Model:TypedElement.type>
+                    <Model:Class xmi.idref = 'a80'/>
+                  </Model:TypedElement.type>
+                  <Model:Reference.referencedEnd>
+                    <Model:AssociationEnd xmi.idref = 'a115'/>
+                  </Model:Reference.referencedEnd>
+                </Model:Reference>
+                <Model:Reference xmi.id = 'a250' name = 'hasValue' annotation = '' scope = 'instance_level'
+                  visibility = 'public_vis' isChangeable = 'true'>
+                  <Model:StructuralFeature.multiplicity>
+                    <XMI.field>0</XMI.field>
+                    <XMI.field>1</XMI.field>
+                    <XMI.field>false</XMI.field>
+                    <XMI.field>false</XMI.field>
+                  </Model:StructuralFeature.multiplicity>
+                  <Model:TypedElement.type>
+                    <Model:Class xmi.idref = 'a120'/>
+                  </Model:TypedElement.type>
+                  <Model:Reference.referencedEnd>
+                    <Model:AssociationEnd xmi.idref = 'a119'/>
+                  </Model:Reference.referencedEnd>
+                </Model:Reference>
+              </Model:Namespace.contents>
+              <Model:GeneralizableElement.supertypes>
+                <Model:Class xmi.idref = 'a126'/>
+              </Model:GeneralizableElement.supertypes>
+            </Model:Class>
+            <Model:Class xmi.id = 'a126' name = 'Restriction' annotation = '' isRoot = 'false'
+              isLeaf = 'false' isAbstract = 'true' visibility = 'public_vis' isSingleton = 'false'>
+              <Model:Namespace.contents>
+                <Model:Reference xmi.id = 'a251' name = 'onProperty' annotation = '' scope = 'instance_level'
+                  visibility = 'public_vis' isChangeable = 'true'>
+                  <Model:StructuralFeature.multiplicity>
+                    <XMI.field>0</XMI.field>
+                    <XMI.field>-1</XMI.field>
+                    <XMI.field>false</XMI.field>
+                    <XMI.field>true</XMI.field>
+                  </Model:StructuralFeature.multiplicity>
+                  <Model:TypedElement.type>
+                    <Model:Class xmi.idref = 'a124'/>
+                  </Model:TypedElement.type>
+                  <Model:Reference.referencedEnd>
+                    <Model:AssociationEnd xmi.idref = 'a123'/>
+                  </Model:Reference.referencedEnd>
+                </Model:Reference>
+                <Model:Reference xmi.id = 'a252' name = 'toDatatype' annotation = '' scope = 'instance_level'
+                  visibility = 'public_vis' isChangeable = 'true'>
+                  <Model:StructuralFeature.multiplicity>
+                    <XMI.field>0</XMI.field>
+                    <XMI.field>1</XMI.field>
+                    <XMI.field>false</XMI.field>
+                    <XMI.field>false</XMI.field>
+                  </Model:StructuralFeature.multiplicity>
+                  <Model:TypedElement.type>
+                    <Model:Class xmi.idref = 'a16'/>
+                  </Model:TypedElement.type>
+                  <Model:Reference.referencedEnd>
+                    <Model:AssociationEnd xmi.idref = 'a128'/>
+                  </Model:Reference.referencedEnd>
+                </Model:Reference>
+              </Model:Namespace.contents>
+              <Model:GeneralizableElement.supertypes>
+                <Model:Class xmi.idref = 'a11'/>
+              </Model:GeneralizableElement.supertypes>
+            </Model:Class>
+            <Model:Class xmi.id = 'a133' name = 'AllDiferent' annotation = '' isRoot = 'false'
+              isLeaf = 'false' isAbstract = 'false' visibility = 'public_vis' isSingleton = 'false'>
+              <Model:Namespace.contents>
+                <Model:Reference xmi.id = 'a253' name = 'distinctMembers' annotation = ''
+                  scope = 'instance_level' visibility = 'public_vis' isChangeable = 'true'>
+                  <Model:StructuralFeature.multiplicity>
+                    <XMI.field>0</XMI.field>
+                    <XMI.field>-1</XMI.field>
+                    <XMI.field>false</XMI.field>
+                    <XMI.field>true</XMI.field>
+                  </Model:StructuralFeature.multiplicity>
+                  <Model:TypedElement.type>
+                    <Model:Class xmi.idref = 'a120'/>
+                  </Model:TypedElement.type>
+                  <Model:Reference.referencedEnd>
+                    <Model:AssociationEnd xmi.idref = 'a131'/>
+                  </Model:Reference.referencedEnd>
+                </Model:Reference>
+              </Model:Namespace.contents>
+              <Model:GeneralizableElement.supertypes>
+                <Model:Class xmi.idref = 'a11'/>
+              </Model:GeneralizableElement.supertypes>
+            </Model:Class>
+            <Model:Class xmi.id = 'a111' name = 'DataValue' annotation = '' isRoot = 'false'
+              isLeaf = 'false' isAbstract = 'false' visibility = 'public_vis' isSingleton = 'false'>
+              <Model:Namespace.contents>
+                <Model:Reference xmi.id = 'a254' name = 'type' annotation = '' scope = 'instance_level'
+                  visibility = 'public_vis' isChangeable = 'true'>
+                  <Model:StructuralFeature.multiplicity>
+                    <XMI.field>1</XMI.field>
+                    <XMI.field>1</XMI.field>
+                    <XMI.field>false</XMI.field>
+                    <XMI.field>false</XMI.field>
+                  </Model:StructuralFeature.multiplicity>
+                  <Model:TypedElement.type>
+                    <Model:Class xmi.idref = 'a16'/>
+                  </Model:TypedElement.type>
+                  <Model:Reference.referencedEnd>
+                    <Model:AssociationEnd xmi.idref = 'a135'/>
+                  </Model:Reference.referencedEnd>
+                </Model:Reference>
+                <Model:Attribute xmi.id = 'a255' name = 'value' annotation = '' scope = 'instance_level'
+                  visibility = 'public_vis' isChangeable = 'true' isDerived = 'false'>
+                  <Model:StructuralFeature.multiplicity>
+                    <XMI.field>1</XMI.field>
+                    <XMI.field>1</XMI.field>
+                    <XMI.field>false</XMI.field>
+                    <XMI.field>false</XMI.field>
+                  </Model:StructuralFeature.multiplicity>
+                  <Model:TypedElement.type>
+                    <Model:PrimitiveType xmi.idref = 'a7'/>
+                  </Model:TypedElement.type>
+                </Model:Attribute>
+              </Model:Namespace.contents>
+              <Model:GeneralizableElement.supertypes>
+                <Model:Class xmi.idref = 'a47'/>
+                <Model:Class xmi.idref = 'a98'/>
+              </Model:GeneralizableElement.supertypes>
+            </Model:Class>
+            <Model:Class xmi.id = 'a140' name = 'DatatypePropertyValue' annotation = ''
+              isRoot = 'false' isLeaf = 'false' isAbstract = 'false' visibility = 'public_vis'
+              isSingleton = 'false'>
+              <Model:Namespace.contents>
+                <Model:Reference xmi.id = 'a256' name = 'object' annotation = '' scope = 'instance_level'
+                  visibility = 'public_vis' isChangeable = 'true'>
+                  <Model:StructuralFeature.multiplicity>
+                    <XMI.field>1</XMI.field>
+                    <XMI.field>1</XMI.field>
+                    <XMI.field>false</XMI.field>
+                    <XMI.field>false</XMI.field>
+                  </Model:StructuralFeature.multiplicity>
+                  <Model:TypedElement.type>
+                    <Model:Class xmi.idref = 'a111'/>
+                  </Model:TypedElement.type>
+                  <Model:Reference.referencedEnd>
+                    <Model:AssociationEnd xmi.idref = 'a138'/>
+                  </Model:Reference.referencedEnd>
+                </Model:Reference>
+              </Model:Namespace.contents>
+              <Model:GeneralizableElement.supertypes>
+                <Model:Class xmi.idref = 'a148'/>
+              </Model:GeneralizableElement.supertypes>
+            </Model:Class>
+            <Model:Class xmi.id = 'a144' name = 'ObjectPropertyValue' annotation = ''
+              isRoot = 'false' isLeaf = 'false' isAbstract = 'false' visibility = 'public_vis'
+              isSingleton = 'false'>
+              <Model:Namespace.contents>
+                <Model:Reference xmi.id = 'a257' name = 'object' annotation = '' scope = 'instance_level'
+                  visibility = 'public_vis' isChangeable = 'true'>
+                  <Model:StructuralFeature.multiplicity>
+                    <XMI.field>1</XMI.field>
+                    <XMI.field>1</XMI.field>
+                    <XMI.field>false</XMI.field>
+                    <XMI.field>false</XMI.field>
+                  </Model:StructuralFeature.multiplicity>
+                  <Model:TypedElement.type>
+                    <Model:Class xmi.idref = 'a120'/>
+                  </Model:TypedElement.type>
+                  <Model:Reference.referencedEnd>
+                    <Model:AssociationEnd xmi.idref = 'a142'/>
+                  </Model:Reference.referencedEnd>
+                </Model:Reference>
+              </Model:Namespace.contents>
+              <Model:GeneralizableElement.supertypes>
+                <Model:Class xmi.idref = 'a148'/>
+              </Model:GeneralizableElement.supertypes>
+            </Model:Class>
+            <Model:Class xmi.id = 'a148' name = 'PropertyValue' annotation = '' isRoot = 'false'
+              isLeaf = 'false' isAbstract = 'true' visibility = 'public_vis' isSingleton = 'false'>
+              <Model:Namespace.contents>
+                <Model:Reference xmi.id = 'a258' name = 'subject' annotation = '' scope = 'instance_level'
+                  visibility = 'public_vis' isChangeable = 'true'>
+                  <Model:StructuralFeature.multiplicity>
+                    <XMI.field>1</XMI.field>
+                    <XMI.field>1</XMI.field>
+                    <XMI.field>false</XMI.field>
+                    <XMI.field>false</XMI.field>
+                  </Model:StructuralFeature.multiplicity>
+                  <Model:TypedElement.type>
+                    <Model:Class xmi.idref = 'a120'/>
+                  </Model:TypedElement.type>
+                  <Model:Reference.referencedEnd>
+                    <Model:AssociationEnd xmi.idref = 'a146'/>
+                  </Model:Reference.referencedEnd>
+                </Model:Reference>
+              </Model:Namespace.contents>
+            </Model:Class>
+            <Model:Class xmi.id = 'a152' name = 'UnionClass' annotation = '' isRoot = 'false'
+              isLeaf = 'false' isAbstract = 'false' visibility = 'public_vis' isSingleton = 'false'>
+              <Model:Namespace.contents>
+                <Model:Reference xmi.id = 'a259' name = 'unionOf' annotation = '' scope = 'instance_level'
+                  visibility = 'public_vis' isChangeable = 'true'>
+                  <Model:StructuralFeature.multiplicity>
+                    <XMI.field>0</XMI.field>
+                    <XMI.field>-1</XMI.field>
+                    <XMI.field>false</XMI.field>
+                    <XMI.field>true</XMI.field>
+                  </Model:StructuralFeature.multiplicity>
+                  <Model:TypedElement.type>
+                    <Model:Class xmi.idref = 'a11'/>
+                  </Model:TypedElement.type>
+                  <Model:Reference.referencedEnd>
+                    <Model:AssociationEnd xmi.idref = 'a150'/>
+                  </Model:Reference.referencedEnd>
+                </Model:Reference>
+              </Model:Namespace.contents>
+              <Model:GeneralizableElement.supertypes>
+                <Model:Class xmi.idref = 'a11'/>
+              </Model:GeneralizableElement.supertypes>
+            </Model:Class>
+            <Model:Class xmi.id = 'a156' name = 'IntersectionClass' annotation = ''
+              isRoot = 'false' isLeaf = 'false' isAbstract = 'false' visibility = 'public_vis'
+              isSingleton = 'false'>
+              <Model:Namespace.contents>
+                <Model:Reference xmi.id = 'a260' name = 'intersectionOf' annotation = ''
+                  scope = 'instance_level' visibility = 'public_vis' isChangeable = 'true'>
+                  <Model:StructuralFeature.multiplicity>
+                    <XMI.field>0</XMI.field>
+                    <XMI.field>-1</XMI.field>
+                    <XMI.field>false</XMI.field>
+                    <XMI.field>true</XMI.field>
+                  </Model:StructuralFeature.multiplicity>
+                  <Model:TypedElement.type>
+                    <Model:Class xmi.idref = 'a11'/>
+                  </Model:TypedElement.type>
+                  <Model:Reference.referencedEnd>
+                    <Model:AssociationEnd xmi.idref = 'a154'/>
+                  </Model:Reference.referencedEnd>
+                </Model:Reference>
+              </Model:Namespace.contents>
+              <Model:GeneralizableElement.supertypes>
+                <Model:Class xmi.idref = 'a11'/>
+              </Model:GeneralizableElement.supertypes>
+            </Model:Class>
+            <Model:Class xmi.id = 'a160' name = 'ComplementClass' annotation = '' isRoot = 'false'
+              isLeaf = 'false' isAbstract = 'false' visibility = 'public_vis' isSingleton = 'false'>
+              <Model:Namespace.contents>
+                <Model:Reference xmi.id = 'a261' name = 'complementOf' annotation = '' scope = 'instance_level'
+                  visibility = 'public_vis' isChangeable = 'true'>
+                  <Model:StructuralFeature.multiplicity>
+                    <XMI.field>1</XMI.field>
+                    <XMI.field>1</XMI.field>
+                    <XMI.field>false</XMI.field>
+                    <XMI.field>false</XMI.field>
+                  </Model:StructuralFeature.multiplicity>
+                  <Model:TypedElement.type>
+                    <Model:Class xmi.idref = 'a11'/>
+                  </Model:TypedElement.type>
+                  <Model:Reference.referencedEnd>
+                    <Model:AssociationEnd xmi.idref = 'a158'/>
+                  </Model:Reference.referencedEnd>
+                </Model:Reference>
+              </Model:Namespace.contents>
+              <Model:GeneralizableElement.supertypes>
+                <Model:Class xmi.idref = 'a11'/>
+              </Model:GeneralizableElement.supertypes>
+            </Model:Class>
+            <Model:Class xmi.id = 'a164' name = 'EnumeratedClass' annotation = '' isRoot = 'false'
+              isLeaf = 'false' isAbstract = 'false' visibility = 'public_vis' isSingleton = 'false'>
+              <Model:Namespace.contents>
+                <Model:Reference xmi.id = 'a262' name = 'oneOf' annotation = '' scope = 'instance_level'
+                  visibility = 'public_vis' isChangeable = 'true'>
+                  <Model:StructuralFeature.multiplicity>
+                    <XMI.field>0</XMI.field>
+                    <XMI.field>-1</XMI.field>
+                    <XMI.field>false</XMI.field>
+                    <XMI.field>true</XMI.field>
+                  </Model:StructuralFeature.multiplicity>
+                  <Model:TypedElement.type>
+                    <Model:Class xmi.idref = 'a120'/>
+                  </Model:TypedElement.type>
+                  <Model:Reference.referencedEnd>
+                    <Model:AssociationEnd xmi.idref = 'a162'/>
+                  </Model:Reference.referencedEnd>
+                </Model:Reference>
+              </Model:Namespace.contents>
+              <Model:GeneralizableElement.supertypes>
+                <Model:Class xmi.idref = 'a11'/>
+              </Model:GeneralizableElement.supertypes>
+            </Model:Class>
+            <Model:Class xmi.id = 'a169' name = 'Namespace' annotation = '' isRoot = 'false'
+              isLeaf = 'false' isAbstract = 'false' visibility = 'public_vis' isSingleton = 'false'>
+              <Model:Namespace.contents>
+                <Model:Reference xmi.id = 'a263' name = 'members' annotation = '' scope = 'instance_level'
+                  visibility = 'public_vis' isChangeable = 'true'>
+                  <Model:StructuralFeature.multiplicity>
+                    <XMI.field>0</XMI.field>
+                    <XMI.field>-1</XMI.field>
+                    <XMI.field>false</XMI.field>
+                    <XMI.field>true</XMI.field>
+                  </Model:StructuralFeature.multiplicity>
+                  <Model:TypedElement.type>
+                    <Model:Class xmi.idref = 'a167'/>
+                  </Model:TypedElement.type>
+                  <Model:Reference.referencedEnd>
+                    <Model:AssociationEnd xmi.idref = 'a166'/>
+                  </Model:Reference.referencedEnd>
+                </Model:Reference>
+                <Model:Attribute xmi.id = 'a264' name = 'name' annotation = '' scope = 'instance_level'
+                  visibility = 'public_vis' isChangeable = 'true' isDerived = 'false'>
+                  <Model:StructuralFeature.multiplicity>
+                    <XMI.field>1</XMI.field>
+                    <XMI.field>1</XMI.field>
+                    <XMI.field>false</XMI.field>
+                    <XMI.field>false</XMI.field>
+                  </Model:StructuralFeature.multiplicity>
+                  <Model:TypedElement.type>
+                    <Model:PrimitiveType xmi.idref = 'a7'/>
+                  </Model:TypedElement.type>
+                </Model:Attribute>
+                <Model:Attribute xmi.id = 'a265' name = 'uri' annotation = '' scope = 'instance_level'
+                  visibility = 'public_vis' isChangeable = 'true' isDerived = 'false'>
+                  <Model:StructuralFeature.multiplicity>
+                    <XMI.field>1</XMI.field>
+                    <XMI.field>1</XMI.field>
+                    <XMI.field>false</XMI.field>
+                    <XMI.field>false</XMI.field>
+                  </Model:StructuralFeature.multiplicity>
+                  <Model:TypedElement.type>
+                    <Model:PrimitiveType xmi.idref = 'a7'/>
+                  </Model:TypedElement.type>
+                </Model:Attribute>
+              </Model:Namespace.contents>
+            </Model:Class>
+            <Model:Class xmi.id = 'a173' name = 'DatatypeProperty' annotation = '' isRoot = 'false'
+              isLeaf = 'false' isAbstract = 'false' visibility = 'public_vis' isSingleton = 'false'>
+              <Model:Namespace.contents>
+                <Model:Reference xmi.id = 'a266' name = 'range' annotation = '' scope = 'instance_level'
+                  visibility = 'public_vis' isChangeable = 'true'>
+                  <Model:StructuralFeature.multiplicity>
+                    <XMI.field>0</XMI.field>
+                    <XMI.field>-1</XMI.field>
+                    <XMI.field>false</XMI.field>
+                    <XMI.field>true</XMI.field>
+                  </Model:StructuralFeature.multiplicity>
+                  <Model:TypedElement.type>
+                    <Model:Class xmi.idref = 'a77'/>
+                  </Model:TypedElement.type>
+                  <Model:Reference.referencedEnd>
+                    <Model:AssociationEnd xmi.idref = 'a171'/>
+                  </Model:Reference.referencedEnd>
+                </Model:Reference>
+              </Model:Namespace.contents>
+              <Model:GeneralizableElement.supertypes>
+                <Model:Class xmi.idref = 'a124'/>
+              </Model:GeneralizableElement.supertypes>
+            </Model:Class>
+            <Model:Class xmi.id = 'a177' name = 'ObjectProperty' annotation = '' isRoot = 'false'
+              isLeaf = 'false' isAbstract = 'false' visibility = 'public_vis' isSingleton = 'false'>
+              <Model:Namespace.contents>
+                <Model:Reference xmi.id = 'a267' name = 'range' annotation = '' scope = 'instance_level'
+                  visibility = 'public_vis' isChangeable = 'true'>
+                  <Model:StructuralFeature.multiplicity>
+                    <XMI.field>0</XMI.field>
+                    <XMI.field>-1</XMI.field>
+                    <XMI.field>false</XMI.field>
+                    <XMI.field>true</XMI.field>
+                  </Model:StructuralFeature.multiplicity>
+                  <Model:TypedElement.type>
+                    <Model:Class xmi.idref = 'a11'/>
+                  </Model:TypedElement.type>
+                  <Model:Reference.referencedEnd>
+                    <Model:AssociationEnd xmi.idref = 'a175'/>
+                  </Model:Reference.referencedEnd>
+                </Model:Reference>
+                <Model:Reference xmi.id = 'a268' name = 'inverseOf' annotation = '' scope = 'instance_level'
+                  visibility = 'public_vis' isChangeable = 'true'>
+                  <Model:StructuralFeature.multiplicity>
+                    <XMI.field>0</XMI.field>
+                    <XMI.field>-1</XMI.field>
+                    <XMI.field>false</XMI.field>
+                    <XMI.field>true</XMI.field>
+                  </Model:StructuralFeature.multiplicity>
+                  <Model:TypedElement.type>
+                    <Model:Class xmi.idref = 'a177'/>
+                  </Model:TypedElement.type>
+                  <Model:Reference.referencedEnd>
+                    <Model:AssociationEnd xmi.idref = 'a179'/>
+                  </Model:Reference.referencedEnd>
+                </Model:Reference>
+                <Model:Attribute xmi.id = 'a269' name = 'transitive' annotation = '' scope = 'instance_level'
+                  visibility = 'public_vis' isChangeable = 'true' isDerived = 'false'>
+                  <Model:StructuralFeature.multiplicity>
+                    <XMI.field>1</XMI.field>
+                    <XMI.field>1</XMI.field>
+                    <XMI.field>false</XMI.field>
+                    <XMI.field>false</XMI.field>
+                  </Model:StructuralFeature.multiplicity>
+                  <Model:TypedElement.type>
+                    <Model:PrimitiveType xmi.idref = 'a6'/>
+                  </Model:TypedElement.type>
+                </Model:Attribute>
+                <Model:Attribute xmi.id = 'a270' name = 'symmetric' annotation = '' scope = 'instance_level'
+                  visibility = 'public_vis' isChangeable = 'true' isDerived = 'false'>
+                  <Model:StructuralFeature.multiplicity>
+                    <XMI.field>1</XMI.field>
+                    <XMI.field>1</XMI.field>
+                    <XMI.field>false</XMI.field>
+                    <XMI.field>false</XMI.field>
+                  </Model:StructuralFeature.multiplicity>
+                  <Model:TypedElement.type>
+                    <Model:PrimitiveType xmi.idref = 'a6'/>
+                  </Model:TypedElement.type>
+                </Model:Attribute>
+                <Model:Attribute xmi.id = 'a271' name = 'inverseFunctional' annotation = ''
+                  scope = 'instance_level' visibility = 'public_vis' isChangeable = 'true'
+                  isDerived = 'false'>
+                  <Model:StructuralFeature.multiplicity>
+                    <XMI.field>1</XMI.field>
+                    <XMI.field>1</XMI.field>
+                    <XMI.field>false</XMI.field>
+                    <XMI.field>false</XMI.field>
+                  </Model:StructuralFeature.multiplicity>
+                  <Model:TypedElement.type>
+                    <Model:PrimitiveType xmi.idref = 'a6'/>
+                  </Model:TypedElement.type>
+                </Model:Attribute>
+                <Model:Attribute xmi.id = 'a272' name = 'complex' annotation = '' scope = 'instance_level'
+                  visibility = 'public_vis' isChangeable = 'true' isDerived = 'false'>
+                  <Model:StructuralFeature.multiplicity>
+                    <XMI.field>1</XMI.field>
+                    <XMI.field>1</XMI.field>
+                    <XMI.field>false</XMI.field>
+                    <XMI.field>false</XMI.field>
+                  </Model:StructuralFeature.multiplicity>
+                  <Model:TypedElement.type>
+                    <Model:PrimitiveType xmi.idref = 'a6'/>
+                  </Model:TypedElement.type>
+                </Model:Attribute>
+              </Model:Namespace.contents>
+              <Model:GeneralizableElement.supertypes>
+                <Model:Class xmi.idref = 'a124'/>
+              </Model:GeneralizableElement.supertypes>
+            </Model:Class>
+            <Model:Class xmi.id = 'a120' name = 'Individual' annotation = '' isRoot = 'false'
+              isLeaf = 'false' isAbstract = 'false' visibility = 'public_vis' isSingleton = 'false'>
+              <Model:Namespace.contents>
+                <Model:Reference xmi.id = 'a273' name = 'type' annotation = '' scope = 'instance_level'
+                  visibility = 'public_vis' isChangeable = 'true'>
+                  <Model:StructuralFeature.multiplicity>
+                    <XMI.field>1</XMI.field>
+                    <XMI.field>1</XMI.field>
+                    <XMI.field>false</XMI.field>
+                    <XMI.field>false</XMI.field>
+                  </Model:StructuralFeature.multiplicity>
+                  <Model:TypedElement.type>
+                    <Model:Class xmi.idref = 'a11'/>
+                  </Model:TypedElement.type>
+                  <Model:Reference.referencedEnd>
+                    <Model:AssociationEnd xmi.idref = 'a188'/>
+                  </Model:Reference.referencedEnd>
+                </Model:Reference>
+                <Model:Reference xmi.id = 'a274' name = 'sameAs' annotation = '' scope = 'instance_level'
+                  visibility = 'public_vis' isChangeable = 'true'>
+                  <Model:StructuralFeature.multiplicity>
+                    <XMI.field>0</XMI.field>
+                    <XMI.field>-1</XMI.field>
+                    <XMI.field>false</XMI.field>
+                    <XMI.field>true</XMI.field>
+                  </Model:StructuralFeature.multiplicity>
+                  <Model:TypedElement.type>
+                    <Model:Class xmi.idref = 'a120'/>
+                  </Model:TypedElement.type>
+                  <Model:Reference.referencedEnd>
+                    <Model:AssociationEnd xmi.idref = 'a182'/>
+                  </Model:Reference.referencedEnd>
+                </Model:Reference>
+                <Model:Reference xmi.id = 'a275' name = 'differentFrom' annotation = ''
+                  scope = 'instance_level' visibility = 'public_vis' isChangeable = 'true'>
+                  <Model:StructuralFeature.multiplicity>
+                    <XMI.field>0</XMI.field>
+                    <XMI.field>-1</XMI.field>
+                    <XMI.field>false</XMI.field>
+                    <XMI.field>true</XMI.field>
+                  </Model:StructuralFeature.multiplicity>
+                  <Model:TypedElement.type>
+                    <Model:Class xmi.idref = 'a120'/>
+                  </Model:TypedElement.type>
+                  <Model:Reference.referencedEnd>
+                    <Model:AssociationEnd xmi.idref = 'a185'/>
+                  </Model:Reference.referencedEnd>
+                </Model:Reference>
+              </Model:Namespace.contents>
+              <Model:GeneralizableElement.supertypes>
+                <Model:Class xmi.idref = 'a47'/>
+                <Model:Class xmi.idref = 'a98'/>
+                <Model:Class xmi.idref = 'a11'/>
+              </Model:GeneralizableElement.supertypes>
+            </Model:Class>
+            <Model:Class xmi.id = 'a11' name = 'Class' annotation = '' isRoot = 'false'
+              isLeaf = 'false' isAbstract = 'false' visibility = 'public_vis' isSingleton = 'false'>
+              <Model:Namespace.contents>
+                <Model:Reference xmi.id = 'a276' name = 'equivalentClass' annotation = ''
+                  scope = 'instance_level' visibility = 'public_vis' isChangeable = 'true'>
+                  <Model:StructuralFeature.multiplicity>
+                    <XMI.field>0</XMI.field>
+                    <XMI.field>-1</XMI.field>
+                    <XMI.field>false</XMI.field>
+                    <XMI.field>true</XMI.field>
+                  </Model:StructuralFeature.multiplicity>
+                  <Model:TypedElement.type>
+                    <Model:Class xmi.idref = 'a11'/>
+                  </Model:TypedElement.type>
+                  <Model:Reference.referencedEnd>
+                    <Model:AssociationEnd xmi.idref = 'a197'/>
+                  </Model:Reference.referencedEnd>
+                </Model:Reference>
+                <Model:Reference xmi.id = 'a277' name = 'disjointWith' annotation = '' scope = 'instance_level'
+                  visibility = 'public_vis' isChangeable = 'true'>
+                  <Model:StructuralFeature.multiplicity>
+                    <XMI.field>0</XMI.field>
+                    <XMI.field>-1</XMI.field>
+                    <XMI.field>false</XMI.field>
+                    <XMI.field>true</XMI.field>
+                  </Model:StructuralFeature.multiplicity>
+                  <Model:TypedElement.type>
+                    <Model:Class xmi.idref = 'a11'/>
+                  </Model:TypedElement.type>
+                  <Model:Reference.referencedEnd>
+                    <Model:AssociationEnd xmi.idref = 'a191'/>
+                  </Model:Reference.referencedEnd>
+                </Model:Reference>
+                <Model:Reference xmi.id = 'a278' name = 'subClassOf' annotation = '' scope = 'instance_level'
+                  visibility = 'public_vis' isChangeable = 'true'>
+                  <Model:StructuralFeature.multiplicity>
+                    <XMI.field>0</XMI.field>
+                    <XMI.field>-1</XMI.field>
+                    <XMI.field>false</XMI.field>
+                    <XMI.field>true</XMI.field>
+                  </Model:StructuralFeature.multiplicity>
+                  <Model:TypedElement.type>
+                    <Model:Class xmi.idref = 'a11'/>
+                  </Model:TypedElement.type>
+                  <Model:Reference.referencedEnd>
+                    <Model:AssociationEnd xmi.idref = 'a194'/>
+                  </Model:Reference.referencedEnd>
+                </Model:Reference>
+              </Model:Namespace.contents>
+              <Model:GeneralizableElement.supertypes>
+                <Model:Class xmi.idref = 'a21'/>
+                <Model:Class xmi.idref = 'a59'/>
+              </Model:GeneralizableElement.supertypes>
+            </Model:Class>
+            <Model:Class xmi.id = 'a124' name = 'Property' annotation = '' isRoot = 'false'
+              isLeaf = 'false' isAbstract = 'true' visibility = 'public_vis' isSingleton = 'false'>
+              <Model:Namespace.contents>
+                <Model:Reference xmi.id = 'a279' name = 'subPropertyOf' annotation = ''
+                  scope = 'instance_level' visibility = 'public_vis' isChangeable = 'true'>
+                  <Model:StructuralFeature.multiplicity>
+                    <XMI.field>0</XMI.field>
+                    <XMI.field>-1</XMI.field>
+                    <XMI.field>false</XMI.field>
+                    <XMI.field>true</XMI.field>
+                  </Model:StructuralFeature.multiplicity>
+                  <Model:TypedElement.type>
+                    <Model:Class xmi.idref = 'a124'/>
+                  </Model:TypedElement.type>
+                  <Model:Reference.referencedEnd>
+                    <Model:AssociationEnd xmi.idref = 'a206'/>
+                  </Model:Reference.referencedEnd>
+                </Model:Reference>
+                <Model:Reference xmi.id = 'a280' name = 'equivalentProperty' annotation = ''
+                  scope = 'instance_level' visibility = 'public_vis' isChangeable = 'true'>
+                  <Model:StructuralFeature.multiplicity>
+                    <XMI.field>0</XMI.field>
+                    <XMI.field>-1</XMI.field>
+                    <XMI.field>false</XMI.field>
+                    <XMI.field>true</XMI.field>
+                  </Model:StructuralFeature.multiplicity>
+                  <Model:TypedElement.type>
+                    <Model:Class xmi.idref = 'a124'/>
+                  </Model:TypedElement.type>
+                  <Model:Reference.referencedEnd>
+                    <Model:AssociationEnd xmi.idref = 'a203'/>
+                  </Model:Reference.referencedEnd>
+                </Model:Reference>
+                <Model:Reference xmi.id = 'a281' name = 'domain' annotation = '' scope = 'instance_level'
+                  visibility = 'public_vis' isChangeable = 'true'>
+                  <Model:StructuralFeature.multiplicity>
+                    <XMI.field>0</XMI.field>
+                    <XMI.field>-1</XMI.field>
+                    <XMI.field>false</XMI.field>
+                    <XMI.field>true</XMI.field>
+                  </Model:StructuralFeature.multiplicity>
+                  <Model:TypedElement.type>
+                    <Model:Class xmi.idref = 'a11'/>
+                  </Model:TypedElement.type>
+                  <Model:Reference.referencedEnd>
+                    <Model:AssociationEnd xmi.idref = 'a200'/>
+                  </Model:Reference.referencedEnd>
+                </Model:Reference>
+                <Model:Attribute xmi.id = 'a282' name = 'deprecated' annotation = '' scope = 'instance_level'
+                  visibility = 'public_vis' isChangeable = 'true' isDerived = 'false'>
+                  <Model:StructuralFeature.multiplicity>
+                    <XMI.field>1</XMI.field>
+                    <XMI.field>1</XMI.field>
+                    <XMI.field>false</XMI.field>
+                    <XMI.field>false</XMI.field>
+                  </Model:StructuralFeature.multiplicity>
+                  <Model:TypedElement.type>
+                    <Model:PrimitiveType xmi.idref = 'a6'/>
+                  </Model:TypedElement.type>
+                </Model:Attribute>
+                <Model:Attribute xmi.id = 'a283' name = 'functional' annotation = '' scope = 'instance_level'
+                  visibility = 'public_vis' isChangeable = 'true' isDerived = 'false'>
+                  <Model:StructuralFeature.multiplicity>
+                    <XMI.field>1</XMI.field>
+                    <XMI.field>1</XMI.field>
+                    <XMI.field>false</XMI.field>
+                    <XMI.field>false</XMI.field>
+                  </Model:StructuralFeature.multiplicity>
+                  <Model:TypedElement.type>
+                    <Model:PrimitiveType xmi.idref = 'a6'/>
+                  </Model:TypedElement.type>
+                </Model:Attribute>
+              </Model:Namespace.contents>
+              <Model:GeneralizableElement.supertypes>
+                <Model:Class xmi.idref = 'a21'/>
+                <Model:Class xmi.idref = 'a59'/>
+              </Model:GeneralizableElement.supertypes>
+            </Model:Class>
+            <Model:Class xmi.id = 'a107' name = 'AnnotationProperty' annotation = ''
+              isRoot = 'false' isLeaf = 'false' isAbstract = 'false' visibility = 'public_vis'
+              isSingleton = 'false'>
+              <Model:GeneralizableElement.supertypes>
+                <Model:Class xmi.idref = 'a59'/>
+              </Model:GeneralizableElement.supertypes>
+            </Model:Class>
+            <Model:Class xmi.id = 'a242' name = 'OntologyProperty' annotation = '' isRoot = 'false'
+              isLeaf = 'false' isAbstract = 'true' visibility = 'public_vis' isSingleton = 'false'>
+              <Model:GeneralizableElement.supertypes>
+                <Model:Class xmi.idref = 'a59'/>
+              </Model:GeneralizableElement.supertypes>
+            </Model:Class>
+            <Model:Class xmi.id = 'a59' name = 'OntologyElement' annotation = '' isRoot = 'false'
+              isLeaf = 'false' isAbstract = 'false' visibility = 'public_vis' isSingleton = 'false'>
+              <Model:GeneralizableElement.supertypes>
+                <Model:Class xmi.idref = 'a167'/>
+                <Model:Class xmi.idref = 'a103'/>
+              </Model:GeneralizableElement.supertypes>
+            </Model:Class>
+            <Model:Class xmi.id = 'a210' name = 'Ontology' annotation = '' isRoot = 'false'
+              isLeaf = 'false' isAbstract = 'false' visibility = 'public_vis' isSingleton = 'false'>
+              <Model:Namespace.contents>
+                <Model:Reference xmi.id = 'a284' name = 'priorVersion' annotation = '' scope = 'instance_level'
+                  visibility = 'public_vis' isChangeable = 'true'>
+                  <Model:StructuralFeature.multiplicity>
+                    <XMI.field>0</XMI.field>
+                    <XMI.field>1</XMI.field>
+                    <XMI.field>false</XMI.field>
+                    <XMI.field>false</XMI.field>
+                  </Model:StructuralFeature.multiplicity>
+                  <Model:TypedElement.type>
+                    <Model:Class xmi.idref = 'a210'/>
+                  </Model:TypedElement.type>
+                  <Model:Reference.referencedEnd>
+                    <Model:AssociationEnd xmi.idref = 'a213'/>
+                  </Model:Reference.referencedEnd>
+                </Model:Reference>
+                <Model:Reference xmi.id = 'a285' name = 'reference' annotation = '' scope = 'instance_level'
+                  visibility = 'public_vis' isChangeable = 'true'>
+                  <Model:StructuralFeature.multiplicity>
+                    <XMI.field>0</XMI.field>
+                    <XMI.field>-1</XMI.field>
+                    <XMI.field>false</XMI.field>
+                    <XMI.field>true</XMI.field>
+                  </Model:StructuralFeature.multiplicity>
+                  <Model:TypedElement.type>
+                    <Model:Class xmi.idref = 'a223'/>
+                  </Model:TypedElement.type>
+                  <Model:Reference.referencedEnd>
+                    <Model:AssociationEnd xmi.idref = 'a222'/>
+                  </Model:Reference.referencedEnd>
+                </Model:Reference>
+                <Model:Reference xmi.id = 'a286' name = 'incompatibleWith' annotation = ''
+                  scope = 'instance_level' visibility = 'public_vis' isChangeable = 'true'>
+                  <Model:StructuralFeature.multiplicity>
+                    <XMI.field>0</XMI.field>
+                    <XMI.field>-1</XMI.field>
+                    <XMI.field>false</XMI.field>
+                    <XMI.field>true</XMI.field>
+                  </Model:StructuralFeature.multiplicity>
+                  <Model:TypedElement.type>
+                    <Model:Class xmi.idref = 'a210'/>
+                  </Model:TypedElement.type>
+                  <Model:Reference.referencedEnd>
+                    <Model:AssociationEnd xmi.idref = 'a219'/>
+                  </Model:Reference.referencedEnd>
+                </Model:Reference>
+                <Model:Reference xmi.id = 'a287' name = 'elements' annotation = '' scope = 'instance_level'
+                  visibility = 'public_vis' isChangeable = 'true'>
+                  <Model:StructuralFeature.multiplicity>
+                    <XMI.field>0</XMI.field>
+                    <XMI.field>-1</XMI.field>
+                    <XMI.field>false</XMI.field>
+                    <XMI.field>true</XMI.field>
+                  </Model:StructuralFeature.multiplicity>
+                  <Model:TypedElement.type>
+                    <Model:Class xmi.idref = 'a167'/>
+                  </Model:TypedElement.type>
+                  <Model:Reference.referencedEnd>
+                    <Model:AssociationEnd xmi.idref = 'a216'/>
+                  </Model:Reference.referencedEnd>
+                </Model:Reference>
+                <Model:Reference xmi.id = 'a288' name = 'imports' annotation = '' scope = 'instance_level'
+                  visibility = 'public_vis' isChangeable = 'true'>
+                  <Model:StructuralFeature.multiplicity>
+                    <XMI.field>0</XMI.field>
+                    <XMI.field>-1</XMI.field>
+                    <XMI.field>false</XMI.field>
+                    <XMI.field>true</XMI.field>
+                  </Model:StructuralFeature.multiplicity>
+                  <Model:TypedElement.type>
+                    <Model:Class xmi.idref = 'a210'/>
+                  </Model:TypedElement.type>
+                  <Model:Reference.referencedEnd>
+                    <Model:AssociationEnd xmi.idref = 'a209'/>
+                  </Model:Reference.referencedEnd>
+                </Model:Reference>
+              </Model:Namespace.contents>
+              <Model:GeneralizableElement.supertypes>
+                <Model:Class xmi.idref = 'a103'/>
+              </Model:GeneralizableElement.supertypes>
+            </Model:Class>
+            <Model:Class xmi.id = 'a103' name = 'AnnotatableElement' annotation = ''
+              isRoot = 'false' isLeaf = 'false' isAbstract = 'true' visibility = 'public_vis'
+              isSingleton = 'false'/>
+            <Model:Class xmi.id = 'a167' name = 'NamedElement' annotation = '' isRoot = 'false'
+              isLeaf = 'false' isAbstract = 'false' visibility = 'public_vis' isSingleton = 'false'>
+              <Model:Namespace.contents>
+                <Model:Attribute xmi.id = 'a289' name = 'uri' annotation = '' scope = 'instance_level'
+                  visibility = 'public_vis' isChangeable = 'true' isDerived = 'false'>
+                  <Model:StructuralFeature.multiplicity>
+                    <XMI.field>1</XMI.field>
+                    <XMI.field>1</XMI.field>
+                    <XMI.field>false</XMI.field>
+                    <XMI.field>false</XMI.field>
+                  </Model:StructuralFeature.multiplicity>
+                  <Model:TypedElement.type>
+                    <Model:PrimitiveType xmi.idref = 'a7'/>
+                  </Model:TypedElement.type>
+                </Model:Attribute>
+                <Model:Attribute xmi.id = 'a290' name = 'name' annotation = '' scope = 'instance_level'
+                  visibility = 'public_vis' isChangeable = 'true' isDerived = 'false'>
+                  <Model:StructuralFeature.multiplicity>
+                    <XMI.field>1</XMI.field>
+                    <XMI.field>1</XMI.field>
+                    <XMI.field>false</XMI.field>
+                    <XMI.field>false</XMI.field>
+                  </Model:StructuralFeature.multiplicity>
+                  <Model:TypedElement.type>
+                    <Model:PrimitiveType xmi.idref = 'a7'/>
+                  </Model:TypedElement.type>
+                </Model:Attribute>
+                <Model:Attribute xmi.id = 'a291' name = 'qualifiedName' annotation = ''
+                  scope = 'instance_level' visibility = 'public_vis' isChangeable = 'true'
+                  isDerived = 'false'>
+                  <Model:StructuralFeature.multiplicity>
+                    <XMI.field>1</XMI.field>
+                    <XMI.field>1</XMI.field>
+                    <XMI.field>false</XMI.field>
+                    <XMI.field>false</XMI.field>
+                  </Model:StructuralFeature.multiplicity>
+                  <Model:TypedElement.type>
+                    <Model:PrimitiveType xmi.idref = 'a7'/>
+                  </Model:TypedElement.type>
+                </Model:Attribute>
+              </Model:Namespace.contents>
+            </Model:Class>
+          </Model:Namespace.contents>
+        </Model:Package>
+        <Model:Import xmi.id = 'a292' name = 'PrimitiveTypes' visibility = 'public_vis'
+          isClustered = 'true'>
+          <Model:Import.importedNamespace>
+            <Model:Package xmi.idref = 'a1'/>
+          </Model:Import.importedNamespace>
+        </Model:Import>
+      </Model:Namespace.contents>
+    </Model:Package>
+  </XMI.content>
+</XMI>

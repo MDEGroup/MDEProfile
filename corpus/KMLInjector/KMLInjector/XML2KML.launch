@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<launchConfiguration type="org.atl.eclipse.adt.launching.atlTransformation">
+<mapAttribute key="Model Handler">
+<mapEntry key="OUT" value=""/>
+<mapEntry key="KML" value="EMF"/>
+<mapEntry key="XML" value="EMF"/>
+<mapEntry key="IN" value=""/>
+</mapAttribute>
+<stringAttribute key="ATL File Name" value="/KMLInjector/Transformations/XML2KML.atl"/>
+<mapAttribute key="Libs"/>
+<booleanAttribute key="Mode Debug" value="false"/>
+<mapAttribute key="ModelType">
+<mapEntry key="OUT" value="MODELOUTPUT"/>
+<mapEntry key="KML" value="METAMODELOUTPUT"/>
+<mapEntry key="XML" value="METAMODELINPUT"/>
+<mapEntry key="IN" value="MODELINPUT"/>
+</mapAttribute>
+<mapAttribute key="Path">
+<mapEntry key="OUT" value="/KMLInjector/OutputModels/example-KML.ecore"/>
+<mapEntry key="KML" value="/KMLInjector/Metamodels/KML.ecore"/>
+<mapEntry key="XML" value="/KMLInjector/Metamodels/XML.ecore"/>
+<mapEntry key="IN" value="/KMLInjector/InputModels/example-XML.ecore"/>
+</mapAttribute>
+<stringAttribute key="Project Name" value="KMLInjector"/>
+<mapAttribute key="Output">
+<mapEntry key="OUT" value="KML"/>
+</mapAttribute>
+<mapAttribute key="Input">
+<mapEntry key="IN" value="XML"/>
+</mapAttribute>
+<booleanAttribute key="AllowInterModelReferences" value="false"/>
+</launchConfiguration>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<uml:Model xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:uml="http://www.eclipse.org/uml2/1.0.0/UML" name="Example">
+  <ownedMember xsi:type="uml:Class" name="C"/>
+  <ownedMember xsi:type="uml:Class" name="A">
+    <ownedRule>
+      <specification xsi:type="uml:LiteralString" value="{pre : y = cr.size}"/>
+    </ownedRule>
+    <ownedAttribute name="y" type="//@ownedMember.3"/>
+    <ownedAttribute name="att" type="//@ownedMember.2"/>
+  </ownedMember>
+  <ownedMember xsi:type="uml:DataType" name="Real"/>
+  <ownedMember xsi:type="uml:DataType" name="Integer"/>
+  <ownedMember xsi:type="uml:Association" name="a" memberEnd="//@ownedMember.4/@ownedEnd.0 //@ownedMember.4/@ownedEnd.1">
+    <ownedEnd name="cr" type="//@ownedMember.0" association="//@ownedMember.4">
+      <upperValue xsi:type="uml:LiteralUnlimitedNatural"/>
+      <lowerValue xsi:type="uml:LiteralNull"/>
+    </ownedEnd>
+    <ownedEnd name="a" type="//@ownedMember.1" association="//@ownedMember.4">
+      <defaultValue xsi:type="uml:LiteralInteger" value="1"/>
+    </ownedEnd>
+  </ownedMember>
+</uml:Model>

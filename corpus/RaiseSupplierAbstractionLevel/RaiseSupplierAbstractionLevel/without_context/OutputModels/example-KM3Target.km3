@@ -1,0 +1,23 @@
+package example {
+
+ class A {
+  
+ }
+
+ class B extends A {
+  
+ }
+
+ class D extends B, F {
+  
+ }
+
+ class C {
+  reference br[*] : A;
+  reference br[*] : F;
+ }
+
+ class F {
+  
+ }
+}

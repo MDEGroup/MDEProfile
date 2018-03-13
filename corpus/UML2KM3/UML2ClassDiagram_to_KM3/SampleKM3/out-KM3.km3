@@ -1,0 +1,35 @@
+package Book {
+
+	class Book extends NamedElement {
+		attribute year : Integer;
+		reference chapter[1-*] container : Chapter;
+	}
+
+	class Chapter extends NamedElement {
+		attribute numberOfPages : Integer;
+		reference author : Author oppositeOf chapter;
+	}
+
+	class Author {
+		attribute firstName : String;
+		attribute lastName : String;
+		attribute gender : Gender;
+		reference chapter[*] : Chapter oppositeOf author;
+	}
+
+	enumeration Gender {
+		literal Male;
+		literal Female;
+	}
+
+	abstract class NamedElement {
+		attribute title : String;
+	}
+}
+
+package PrimitiveType {
+
+	datatype Integer;
+
+	datatype String;
+}

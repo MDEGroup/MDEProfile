@@ -1,0 +1,534 @@
+-- @name KML 2.0 (Keyhole Markup Language)
+-- @version 1.0
+-- @domains KML, Google Earth, Geospatial data
+-- @authors Eric Vepa (eric.vepa <at> gmail.com)
+-- @date 2006/06/30
+-- @description KML (Keyhole Markup Language) is an XML-based language for managing three-dimensionageospatial data in the program Google Earth
+-- @see KML specifications : http://earth.google.com/kml/kml_tags.html
+-- @comments Each KML tag is represented as a class, details for each class are in the specifications (see the previous link).
+
+--@begin package Keyhole Markup Language
+package KML {
+	--@begin class Node
+	abstract class Node {
+	   	attribute name : String;
+		reference parentNode[0-1] : ElementNode oppositeOf nodes;
+	}
+	--@end class Node
+
+	--@begin class ElementNode
+	abstract class ElementNode extends Node {
+		reference nodes[*] ordered container : Node oppositeOf parentNode;
+	}
+	--@end class ElementNode
+	
+	--@begin class AttributeNode
+	class AttributeNode extends Node {
+		attribute value : String;
+	}
+	--@end class AttributeNode
+
+	
+	--@begin class RootNode
+	abstract class RootNode extends ElementNode {}
+	--@end class RootNode
+
+
+	--@begin class TextNode
+	class TextNode extends ElementNode {}
+	--@end class TextNode
+
+	--@begin class KMLNode
+	abstract class KMLNode extends ElementNode {}
+	--@end class KMLNode
+
+	--@begin class KMLRootNode
+	class KMLRootNode extends RootNode {}
+	--@end class KMLRootNode
+	
+	
+	--@begin class Address
+	class Address extends KMLNode {
+		attribute value : String;
+	}
+	--@end class Address
+	
+	--@begin class AltitudeMode
+	class AltitudeMode extends KMLNode {
+		attribute value : AltitudeModeValue;
+	}
+	--@end class AltitudeMode
+	
+	--@begin enumeration AltitudeModeValue
+	enumeration AltitudeModeValue {
+		literal clampedToGround;
+		literal relativeToGround;
+		literal absolute;
+	}
+	--@end enumeration AltitudeModeValue
+
+	--@begin class BalloonStyle
+	class BalloonStyle extends KMLNode {}
+	--@end class BalloonStyle
+
+	--@begin class Color
+	class Color extends KMLNode {
+		attribute value : String;
+	}
+	--@end class Color
+
+	--@begin class ColorMode
+	class ColorMode extends KMLNode {
+		attribute value : ColorModeValue;
+	}
+	--@end class ColorMode
+	
+	--@begin enumeration ColorModeValue
+	enumeration ColorModeValue {
+		literal normal;
+		literal random;
+	}
+	--@end enumeration ColorModeValue
+
+	--@begin class Cookie
+	class Cookie extends KMLNode {
+		attribute value : String;
+	}
+	--@end class Cookie
+
+	--@begin class Coordinates
+	class Coordinates extends KMLNode {}
+	--@end class Coordinates
+	
+	--@begin class Coordinate
+	class Coordinate extends KMLNode {}
+	--@end class Coordinate
+	
+	--@begin class Description
+	class Description extends KMLNode {
+		attribute value : String;
+	}
+	--@end class Description
+
+	--@begin class Document
+	class Document extends KMLNode {}
+	--@end class Document
+	
+	--@begin class DrawOrder
+	class DrawOrder extends KMLNode {
+		attribute value : Integer;
+	}
+	--@end class DrawOrder
+
+	--@begin class East
+	class East extends KMLNode {
+		attribute value : Double;
+	}
+	--@end class East
+	
+	--@begin class Extrude
+	class Extrude extends KMLNode {
+		attribute value : Boolean;
+	}
+	--@end class Extrude
+	
+	--@begin class Fill
+	class Fill extends KMLNode {
+		attribute value : Boolean;
+	}
+	--@end class Fill
+	
+	--@begin class FlyToView
+	--@comments always present in a NetworkLink (default value to false)
+	class FlyToView extends KMLNode {
+		attribute value : Boolean;
+	}
+	--@end class FlyToView
+	
+	--@begin class Folder
+	class Folder extends KMLNode {}
+	--@end class Folder
+
+	--@begin class GroundOverlay
+	class GroundOverlay extends KMLNode {}
+	--@end class GroundOverlay
+	
+	--@begin class H
+	class H extends KMLNode {
+		attribute value : Integer;
+	}
+	--@end class H
+	
+	--@begin class Heading
+	class Heading extends KMLNode {
+		attribute value : Double;
+	}
+	--@end class Heading
+	
+	--@begin class Href
+	class Href extends KMLNode {
+		attribute value : String;
+	}
+	--@end class Href
+	
+	--@begin class Icon
+	class Icon extends KMLNode {}
+	--@end class Icon
+	
+	--@begin class IconStyle
+	class IconStyle extends KMLNode {}
+	--@end class IconStyle
+	
+	--@begin class InnerBoundaryIs
+	class InnerBoundaryIs extends KMLNode {}
+	--@end class InnerBoundaryIs
+	
+	--@begin class Key
+	class Key extends KMLNode {
+		attribute value : String;
+	}
+	--@end class Key
+	
+	--@begin class LabelStyle
+	class LabelStyle extends KMLNode {}
+	--@end class LabelStyle
+	
+	--@begin class Latitude
+	class Latitude extends KMLNode {
+		attribute value : Double;
+	}
+	--@end class Latitude
+	
+	--@begin class LatLonBox
+	class LatLonBox extends KMLNode {}
+	--@end class LatLonBox
+	
+	--@begin class LinearRing
+	class LinearRing extends KMLNode {}
+	--@end class LinearRing
+	
+	--@begin class LineString
+	class LineString extends KMLNode {}
+	--@end class LineString
+	
+	--@begin class LineStyle
+	class LineStyle extends KMLNode {
+		attribute id : String;
+	}
+	--@end class LineStyle
+	
+	--@begin class LinkDescription
+	class LinkDescription extends KMLNode {
+		attribute value : String;
+	}
+	--@end class LinkDescription
+	
+	--@begin class LinkName
+	class LinkName extends KMLNode {
+		attribute value : String;
+	}
+	--@end class LinkName
+	
+	--@begin class Longitude
+	class Longitude extends KMLNode {
+		attribute value : Double;
+	}
+	--@end class Longitude
+	
+	--@begin class LookAt
+	class LookAt extends KMLNode {}
+	--@end class LookAt
+	
+	--@begin class Message
+	class Message extends KMLNode {}
+	--@end class Message
+	
+	--@begin class MinRefreshPeriod
+	class MinRefreshPeriod extends KMLNode {
+		attribute value : String;
+	}
+	--@end class MinRefreshPeriod
+	
+	--@begin class MultiGeometry
+	class MultiGeometry extends KMLNode {}
+	--@end class MultiGeometry
+	
+	--@begin class name
+	class Name extends KMLNode {
+		attribute value : String;
+	}
+	--@end class name
+	
+	--@begin class NetworkLink
+	class NetworkLink extends KMLNode {}
+	--@end class NetworkLink
+	
+	--@begin class NetworkLinkControl
+	class NetworkLinkControl extends KMLNode {}
+	--@end class NetworkLinkControl
+	
+	--@begin class North
+	class North extends KMLNode {
+		attribute value : Double;
+	}
+	--@end class North
+	
+	--@begin class ObjArrayField
+	class ObjArrayField extends KMLNode {}
+	--@end class ObjArrayField
+	
+	--@begin class ObjField
+	class ObjField extends KMLNode {}
+	--@end class ObjField
+	
+	--@begin class Open
+	class Open extends KMLNode {
+		attribute value : String;
+	}
+	--@end class Open
+	
+	--@begin class OuterBoundaryIs
+	class OuterBoundaryIs extends KMLNode {}
+	--@end class OuterBoundaryIs
+	
+	--@begin class Outline
+	class Outline extends KMLNode {
+		attribute value : String;
+	}
+	--@end class Outline
+	
+	--@begin class OverlayXY
+	class OverlayXY extends KMLNode {
+		attribute x : String;
+		attribute y : String;
+		attribute xunits : String;
+		attribute yunits : String;
+	}
+	--@end class OverlayXY
+	
+	--@begin class Pair
+	class Pair extends KMLNode {}
+	--@end class Pair
+	
+	--@begin class Parent
+	class Parent extends KMLNode {
+		attribute value : String;
+	}
+	--@end class Parent
+	
+	--@begin class Placemark
+	class Placemark extends KMLNode {}
+	--@end class Placemark
+	
+	--@begin class Point
+	class Point extends KMLNode {}
+	--@end class Point
+	
+	--@begin class Polygon
+	class Polygon extends KMLNode {}
+	--@end class Polygon
+	
+	--@begin class PolyStyle
+	class PolyStyle extends KMLNode {}
+	--@end class PolyStyle
+	
+	--@begin class Range
+	class Range extends KMLNode {
+		attribute value : String;
+	}
+	--@end class Range
+	
+	--@begin class RefreshInterval
+	class RefreshInterval extends KMLNode {
+		attribute value : String;
+	}
+	--@end class RefreshInterval
+	
+	--@begin class RefreshMode
+	class RefreshMode extends KMLNode {
+		attribute value : String;
+	}
+	--@end class RefreshMode
+	
+	--@begin class RefreshVisibility
+	class RefreshVisibility extends KMLNode {
+		attribute value : String;
+	}
+	--@end class RefreshVisibility
+	
+	--@begin class Rotation
+	class Rotation extends KMLNode {
+		attribute value : String;
+	}
+	--@end class Rotation
+	
+	--@begin class Schema
+	class Schema extends KMLNode {}
+	--@end class Schema
+	
+	--@begin class Scale
+	class Scale extends KMLNode {
+		attribute value : String;
+	}
+	--@end class Scale
+	
+	--@begin class ScreenOverlay
+	class ScreenOverlay extends KMLNode {
+		attribute id : String;
+	}
+	--@end class ScreenOverlay
+	
+	--@begin class ScreenXY
+	class ScreenXY extends KMLNode {
+		attribute x : String;
+		attribute y : String;
+		attribute xunits : String;
+		attribute yunits : String;
+	}
+	--@end class ScreenXY
+	
+	--@begin class SimpleArrayField
+	class SimpleArrayField extends KMLNode {}
+	--@end class SimpleArrayField
+	
+	--@begin class SimpleField
+	class SimpleField extends KMLNode {}
+	--@end class SimpleField
+	
+	--@begin class Size
+	class Size extends KMLNode {
+		attribute x : String;
+		attribute y : String;
+		attribute xunits : String;
+		attribute yunits : String;
+	}
+	--@end class Size
+	
+	--@begin class South
+	class South extends KMLNode {
+		attribute value : Double;
+	}
+	--@end class South
+	
+	--@begin class Snippet
+	class Snippet extends KMLNode {}
+	--@end class Snippet
+	
+	--@begin class Style
+	class Style extends KMLNode {
+		attribute id : String;
+	}
+	--@end class Style
+	
+	--@begin class StyleMap
+	class StyleMap extends KMLNode {}
+	--@end class StyleMap
+	
+	--@begin class StyleUrl
+	class StyleUrl extends KMLNode {
+		attribute value : String;
+	}
+	--@end class StyleUrl
+	
+	--@begin class Tessellate
+	class Tessellate extends KMLNode {
+		attribute value : String;
+	}
+	--@end class Tessellate
+	
+	--@begin class Text
+	class Text extends KMLNode {}
+	--@end class Text
+	
+	--@begin class TextColor
+	class TextColor extends KMLNode {
+		attribute value : String;
+	}
+	--@end class TextColor
+
+	--@begin class Tilt
+	class Tilt extends KMLNode {
+		attribute value : String;
+	}
+	--@end class Tilt
+
+	--@begin class Type
+	class Type extends KMLNode {
+		attribute value : String;
+	}
+	--@end class Type
+
+	--@begin class Url
+	class Url extends KMLNode {}
+	--@end class Url
+
+	--@begin class ViewBoundScale
+	class ViewBoundScale extends KMLNode {
+		attribute value : String;
+	}
+	--@end class ViewBoundScale
+
+	--@begin class ViewRefreshMode
+	class ViewRefreshMode extends KMLNode {
+		attribute value : String;
+	}
+	--@end class ViewRefreshMode
+
+	--@begin class ViewRefreshTime
+	class ViewRefreshTime extends KMLNode {
+		attribute value : Integer;
+	}
+	--@end class ViewRefreshTime
+
+	--@begin class ViewFormat
+	class ViewFormat extends KMLNode {
+		attribute value : String;
+	}
+	--@end class ViewFormat
+	
+	--@begin class Visibility
+	class Visibility extends KMLNode {
+		attribute value : String;
+	}
+	--@end class Visibility
+	
+	--@begin class W
+	class W extends KMLNode {
+		attribute value : Integer;
+	}
+	--@end class W
+	
+	--@begin class West
+	class West extends KMLNode {
+		attribute value : Double;
+	}
+	--@end class West
+	
+	--@begin class Width
+	class Width extends KMLNode {
+		attribute value : Double;
+	}
+	--@end class Width	
+	
+	--@begin class X
+	class X extends KMLNode {
+		attribute value : Integer;
+	}
+	--@end class X
+	
+	--@begin class Y
+	class Y extends KMLNode {
+		attribute value : Integer;
+	}
+	--@end class Y
+}
+--@end package Keyhole Markup Language
+
+--@begin package PrimitiveTypes
+package PrimitiveTypes {
+	datatype String;
+	datatype Boolean;
+	datatype Integer;
+	datatype Double;
+}
+--@end package PrimitiveTypes

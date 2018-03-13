@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<launchConfiguration type="org.atl.eclipse.adt.launching.atlTransformation">
+<stringAttribute key="ATL File Name" value="/UMLClassDiagram_to_UMLProfile/Transformations/UML2Copy.atl"/>
+<stringAttribute key="ATL VM" value="Regular VM (with debugger)"/>
+<booleanAttribute key="AllowInterModelReferences" value="true"/>
+<mapAttribute key="Input">
+<mapEntry key="UMLCD" value="UML2"/>
+<mapEntry key="PRO_STD" value="UML2"/>
+<mapEntry key="IN" value="UML2"/>
+</mapAttribute>
+<mapAttribute key="Libs"/>
+<booleanAttribute key="Mode Debug" value="false"/>
+<mapAttribute key="Model Handler">
+<mapEntry key="UML2" value="EMF"/>
+</mapAttribute>
+<mapAttribute key="ModelType">
+<mapEntry key="OUT" value="MODELOUTPUT"/>
+<mapEntry key="UMLCD" value="MODELINPUT"/>
+<mapEntry key="UML2" value="METAMODELOUTPUT"/>
+<mapEntry key="PRO_STD" value="MODELINPUT"/>
+<mapEntry key="IN" value="MODELINPUT"/>
+</mapAttribute>
+<mapAttribute key="Output">
+<mapEntry key="OUT" value="UML2"/>
+</mapAttribute>
+<mapAttribute key="Path">
+<mapEntry key="OUT" value="/UMLClassDiagram_to_UMLProfile/OutputModel/Book.profile.uml"/>
+<mapEntry key="UMLCD" value="/UMLClassDiagram_to_UMLProfile/ParamModels/UML.uml"/>
+<mapEntry key="UML2" value="uri:http://www.eclipse.org/uml2/2.1.0/UML"/>
+<mapEntry key="PRO_STD" value="/UMLClassDiagram_to_UMLProfile/ParamModels/Standard.profile.uml"/>
+<mapEntry key="IN" value="/UMLClassDiagram_to_UMLProfile/InputModel/Book.uml"/>
+</mapAttribute>
+<stringAttribute key="Project Name" value="UMLClassDiagram_to_UMLProfile"/>
+<listAttribute key="Superimpose">
+<listEntry value="/UMLClassDiagram_to_UMLProfile/Transformations/UMLCD2UMLProfile.asm"/>
+</listAttribute>
+<booleanAttribute key="continueAfterError" value="false"/>
+<booleanAttribute key="disableAttributeHelperCache" value="false"/>
+<booleanAttribute key="printExecutionTime" value="false"/>
+<booleanAttribute key="profile" value="false"/>
+<booleanAttribute key="showSummary" value="false"/>
+<booleanAttribute key="step" value="false"/>
+</launchConfiguration>

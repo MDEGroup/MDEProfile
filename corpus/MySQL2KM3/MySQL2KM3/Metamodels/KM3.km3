@@ -1,0 +1,84 @@
+package KM3 {
+	abstract class LocatedElement {
+		attribute location : String;
+	}
+
+	abstract class ModelElement extends LocatedElement {
+		attribute name : String;
+		reference "package" : Package oppositeOf contents;
+	}
+
+	class Classifier extends ModelElement {}
+
+	class DataType extends Classifier {}
+
+	class Enumeration extends Classifier {	-- extends DataType in Ecore but if so, cannot use an abstract template in TCS
+		reference literals[*] ordered container : EnumLiteral oppositeOf enum;
+	}
+
+	class EnumLiteral extends ModelElement {
+		reference enum : Enumeration oppositeOf literals;
+	}
+
+-- WARNING, ONLY FOR OCL Standard Library
+	class TemplateParameter extends  Classifier {
+	}
+-- End WARNING
+
+	class Class extends Classifier {
+-- WARNING, ONLY FOR OCL Standard Library
+		reference parameters[*] ordered container : TemplateParameter;
+-- End WARNING
+	
+		attribute isAbstract : Boolean;
+		reference supertypes[*] : Class;
+		reference structuralFeatures[*] ordered container : StructuralFeature oppositeOf owner;
+		reference operations[*] ordered container : Operation oppositeOf owner;
+	}
+
+	class TypedElement extends ModelElement {
+		attribute lower : Integer;
+		attribute upper : Integer;
+		attribute isOrdered : Boolean;
+		attribute isUnique : Boolean;
+		reference type : Classifier;
+	}
+
+	class StructuralFeature extends TypedElement {
+		reference owner : Class oppositeOf structuralFeatures;
+		reference subsetOf[*] : StructuralFeature oppositeOf derivedFrom;
+		reference derivedFrom[*] : StructuralFeature oppositeOf subsetOf;
+	}
+
+	class Attribute extends StructuralFeature {}
+
+	class Reference extends StructuralFeature {
+		attribute isContainer : Boolean;
+		reference opposite[0-1] : Reference;
+	}
+
+	class Operation extends TypedElement {
+		reference owner : Class oppositeOf operations;
+		reference parameters[*] ordered container : Parameter oppositeOf owner;
+	}
+
+	class Parameter extends TypedElement {
+		reference owner : Operation oppositeOf parameters;
+	}
+
+	class Package extends ModelElement {
+		reference contents[*] ordered container : ModelElement oppositeOf "package";
+		reference metamodel : Metamodel oppositeOf contents;
+	}
+
+	class Metamodel extends LocatedElement {
+		reference contents[*] ordered container : Package oppositeOf metamodel;
+	}
+}
+
+package PrimitiveTypes {
+	datatype Boolean;
+	datatype Integer;
+	datatype String;
+}
+

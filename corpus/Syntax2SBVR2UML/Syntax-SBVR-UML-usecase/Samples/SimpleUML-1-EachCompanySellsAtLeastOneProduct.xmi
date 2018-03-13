@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:simpleuml="simpleuml">
+  <simpleuml:Class name="Company" ownedAttribute="/5"/>
+  <simpleuml:Class name="Product" ownedAttribute="/4"/>
+  <simpleuml:PrimitiveType name="Integer"/>
+  <simpleuml:Association name="ToSell" memberEnd="/5 /4"/>
+  <simpleuml:Property name="Company" type="/0" classifier="/1" association="/3"/>
+  <simpleuml:Property name="Product" type="/1" lowerValue="1" classifier="/0" association="/3"/>
+</xmi:XMI>

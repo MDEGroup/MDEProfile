@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<km3:Metamodel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:km3="http://www.eclipse.org/gmt/2005/KM3" location="1:1-28:2">
+  <contents name="example">
+    <contents xsi:type="km3:Class" location="18:9-20:10" name="Chose">
+      <structuralFeatures xsi:type="km3:Reference" name="user1" lower="1" upper="1" opposite="//@contents.0/@contents.1/@structuralFeatures.0"/>
+    </contents>
+    <contents xsi:type="km3:Class" name="UserPerson">
+      <structuralFeatures xsi:type="km3:Reference" name="chose" lower="0" upper="-1" type="//@contents.0/@contents.0" opposite="//@contents.0/@contents.0/@structuralFeatures.0"/>
+      <structuralFeatures xsi:type="km3:Attribute" name="name" lower="1" upper="1" type="//@contents.1/@contents.2"/>
+      <structuralFeatures xsi:type="km3:Attribute" name="userId" lower="1" upper="1" type="//@contents.1/@contents.2"/>
+      <structuralFeatures xsi:type="km3:Attribute" name="password" lower="1" upper="1" type="//@contents.1/@contents.2"/>
+      <structuralFeatures xsi:type="km3:Attribute" name="name" lower="1" upper="1" type="//@contents.1/@contents.2"/>
+      <structuralFeatures xsi:type="km3:Attribute" name="age" lower="1" upper="1" type="//@contents.1/@contents.1"/>
+      <structuralFeatures xsi:type="km3:Attribute" name="adresse" lower="1" upper="1" type="//@contents.1/@contents.2"/>
+    </contents>
+  </contents>
+  <contents name="PrimitiveTypes">
+    <contents xsi:type="km3:DataType" location="25:9-25:26" name="Boolean"/>
+    <contents xsi:type="km3:DataType" location="26:9-26:26" name="Integer"/>
+    <contents xsi:type="km3:DataType" location="27:9-27:25" name="String"/>
+  </contents>
+</km3:Metamodel>

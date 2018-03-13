@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:simplesbvr="simplesbvr">
+  <simplesbvr:ObjectType objectName="Company" representations="/7"/>
+  <simplesbvr:NonNegativeInteger objectName="One" representations="/13" value="1"/>
+  <simplesbvr:ObjectType objectName="Product" representations="/15"/>
+  <simplesbvr:NonNegativeInteger objectName="One" value="1"/>
+  <simplesbvr:ObjectType objectName="Software" representations="/21"/>
+  <simplesbvr:Designation objectName="Each" meaning="/31" text="/6"/>
+  <simplesbvr:Text objectName="Each" value="Each"/>
+  <simplesbvr:Designation objectName="Company" meaning="/0" text="/8"/>
+  <simplesbvr:Text objectName="Company" value="Company"/>
+  <simplesbvr:Designation objectName="ToSell" meaning="/25" text="/10"/>
+  <simplesbvr:Text objectName="ToSell" value="ToSell"/>
+  <simplesbvr:Designation objectName="AtLeast" meaning="/32" text="/12"/>
+  <simplesbvr:Text objectName="AtLeast" value="AtLeast"/>
+  <simplesbvr:Designation objectName="1" meaning="/1" text="/14"/>
+  <simplesbvr:Text objectName="1" value="1"/>
+  <simplesbvr:Designation objectName="Product" meaning="/2" text="/16"/>
+  <simplesbvr:Text objectName="Product" value="Product"/>
+  <simplesbvr:Designation objectName="Exactly" text="/18"/>
+  <simplesbvr:Text objectName="Exactly" value="Exactly"/>
+  <simplesbvr:Designation objectName="A" text="/20"/>
+  <simplesbvr:Text objectName="A" value="A"/>
+  <simplesbvr:Designation objectName="Software" meaning="/4" text="/22"/>
+  <simplesbvr:Text objectName="Software" value="Software"/>
+  <simplesbvr:Designation objectName="ToBe" text="/24"/>
+  <simplesbvr:Text objectName="ToBe" value="ToBe"/>
+  <simplesbvr:AssociativeFactType objectName="ToSell" representations="/9" role1="/26" role2="/27"/>
+  <simplesbvr:FactTypeRole nounConcept="/0"/>
+  <simplesbvr:FactTypeRole nounConcept="/2"/>
+  <simplesbvr:CategorizationFactType objectName="ToBe" role1="/29" role2="/30"/>
+  <simplesbvr:FactTypeRole nounConcept="/4"/>
+  <simplesbvr:FactTypeRole nounConcept="/2"/>
+  <simplesbvr:UniversalQuantification representations="/5" introducedVariable="/35" scopesOver="/36"/>
+  <simplesbvr:AtLeastNQuantification representations="/11" introducedVariable="/39" scopesOver="/36" minCardinality="/1"/>
+  <simplesbvr:UniversalQuantification introducedVariable="/39" scopesOver="/36"/>
+  <simplesbvr:ExactlyNQuantification introducedVariable="/35" scopesOver="/36" cardinality="/3"/>
+  <simplesbvr:Variable rangesOver="/0"/>
+  <simplesbvr:BinaryAtomicFormulation isBasedOn="/25" roleBinding1="/37" roleBinding2="/38"/>
+  <simplesbvr:RoleBinding occursIn="/36" isOf="/26" bindsTo="/35"/>
+  <simplesbvr:RoleBinding occursIn="/36" isOf="/27" bindsTo="/39"/>
+  <simplesbvr:Variable rangesOver="/2"/>
+</xmi:XMI>

@@ -1,0 +1,17 @@
+package typeB {
+
+	class RootB {
+		reference elms[*] ordered container : ElementB;
+		reference defs[*] ordered container : DefinitionB;
+	}
+
+	class DefinitionB {
+		attribute name[0-1] : String;
+	}
+
+	class ElementB {
+		reference definition[0-1] : DefinitionB;
+	}
+	
+	datatype String;
+}

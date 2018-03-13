@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<uml:Model xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:uml="http://www.eclipse.org/uml2/1.0.0/UML" name="model">
+  <ownedMember xsi:type="uml:Class" name="A">
+    <ownedAttribute name="b">
+      <upperValue xsi:type="uml:LiteralInteger" name="upper" value="100"/>
+      <lowerValue xsi:type="uml:LiteralInteger" name="lower" value="10"/>
+    </ownedAttribute>
+  </ownedMember>
+  <ownedMember xsi:type="uml:Class" name="B">
+    <ownedAttribute name="a">
+      <upperValue xsi:type="uml:LiteralUnlimitedNatural" name="upper"/>
+      <lowerValue xsi:type="uml:LiteralInteger" name="lower"/>
+    </ownedAttribute>
+    <ownedAttribute name="noName"/>
+  </ownedMember>
+</uml:Model>

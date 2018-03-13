@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:uml="http://www.eclipse.org/uml2/1.0.0/UML" xmi:id="_yHCzYCLREdu9U_Iao4gKTA" name="Example">
+  <ownedMember xmi:type="uml:DataType" xmi:id="_pD3tQCLSEdu9U_Iao4gKTA" name="Real"/>
+  <ownedMember xmi:type="uml:DataType" xmi:id="_rh0WYCLSEdu9U_Iao4gKTA" name="Integer"/>
+  <ownedMember xmi:type="uml:Class" xmi:id="_-66HcCLREdu9U_Iao4gKTA" name="C"/>
+  <ownedMember xmi:type="uml:Class" xmi:id="_3BnP8CLREdu9U_Iao4gKTA" name="A">
+    <ownedRule xmi:id="_9I6lYCLREdu9U_Iao4gKTA" constrainedElement="_mwMacCLSEdu9U_Iao4gKTA _Lfaw4CLSEdu9U_Iao4gKTA">
+      <specification xmi:type="uml:LiteralString" xmi:id="_8-X6kCLXEdu9U_Iao4gKTA" value="{pre : y = cr.size}"/>
+    </ownedRule>
+    <ownedAttribute xmi:id="_mwMacCLSEdu9U_Iao4gKTA" name="y" type="_rh0WYCLSEdu9U_Iao4gKTA"/>
+    <ownedAttribute xmi:id="_oJmdYCLSEdu9U_Iao4gKTA" name="att" type="_pD3tQCLSEdu9U_Iao4gKTA"/>
+  </ownedMember>
+  <ownedMember xmi:type="uml:Class" xmi:id="_4GJ2ICLREdu9U_Iao4gKTA" name="B">
+    <ownedRule xmi:id="_9vNJUCLREdu9U_Iao4gKTA">
+      <specification xmi:type="uml:LiteralString" xmi:id="_ptmNcCLXEdu9U_Iao4gKTA" value="{pre : x = cr.size}"/>
+    </ownedRule>
+    <ownedAttribute xmi:id="_YpWCQCLXEdu9U_Iao4gKTA" name="x" type="_rh0WYCLSEdu9U_Iao4gKTA"/>
+    <ownedAttribute xmi:id="_Z-Iq8CLXEdu9U_Iao4gKTA" name="att" type="_pD3tQCLSEdu9U_Iao4gKTA"/>
+  </ownedMember>
+  <ownedMember xmi:type="uml:Association" xmi:id="_5vNeoCLREdu9U_Iao4gKTA" name="a" memberEnd="_Lfaw4CLSEdu9U_Iao4gKTA _Ma4TkCLSEdu9U_Iao4gKTA">
+    <ownedEnd xmi:id="_Ma4TkCLSEdu9U_Iao4gKTA" name="a" type="_3BnP8CLREdu9U_Iao4gKTA" association="_5vNeoCLREdu9U_Iao4gKTA">
+      <defaultValue xmi:type="uml:LiteralInteger" xmi:id="_ZpRAcCLSEdu9U_Iao4gKTA" value="1"/>
+    </ownedEnd>
+    <ownedEnd xmi:id="_Lfaw4CLSEdu9U_Iao4gKTA" name="cr" type="_-66HcCLREdu9U_Iao4gKTA" association="_5vNeoCLREdu9U_Iao4gKTA">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_YmWx8CLSEdu9U_Iao4gKTA"/>
+      <lowerValue xmi:type="uml:LiteralNull" xmi:id="_WHEFACLSEdu9U_Iao4gKTA"/>
+    </ownedEnd>
+  </ownedMember>
+  <ownedMember xmi:type="uml:Association" xmi:id="_6iBboCLREdu9U_Iao4gKTA" name="b" memberEnd="_c-WF4CLSEdu9U_Iao4gKTA _c-WF4yLSEdu9U_Iao4gKTA">
+    <ownedEnd xmi:id="_c-WF4CLSEdu9U_Iao4gKTA" name="cr" type="_-66HcCLREdu9U_Iao4gKTA" association="_6iBboCLREdu9U_Iao4gKTA">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_c-WF4SLSEdu9U_Iao4gKTA"/>
+      <lowerValue xmi:type="uml:LiteralNull" xmi:id="_c-WF4iLSEdu9U_Iao4gKTA"/>
+    </ownedEnd>
+    <ownedEnd xmi:id="_c-WF4yLSEdu9U_Iao4gKTA" name="b" type="_4GJ2ICLREdu9U_Iao4gKTA" association="_6iBboCLREdu9U_Iao4gKTA">
+      <defaultValue xmi:type="uml:LiteralInteger" xmi:id="_c-WF5CLSEdu9U_Iao4gKTA" value="1"/>
+    </ownedEnd>
+  </ownedMember>
+</uml:Model>

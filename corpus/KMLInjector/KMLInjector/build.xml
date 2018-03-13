@@ -1,0 +1,57 @@
+<!--
+ How to configure this ant script:
+	Run as->Ant Build...
+		Set:
+			- Base directory
+			- Run in same JRE
+			- Refresh
+			- Give correct ant-contrib.jar path
+-->
+
+<project name="KMLInjector" default="transfo">
+	<!-- Give correct ant-contrib.jar path -->
+	<taskdef resource="net/sf/antcontrib/antlib.xml">
+	  <classpath>
+	    <pathelement location="/usr/share/ant-contrib/lib/ant-contrib.jar"/>
+	  </classpath>
+	</taskdef>
+	
+	<property name="projectPath" value="/KMLInjector/"/>
+	<property name="sourceMetaModel" value="XML"/>
+	<property name="targetMetaModel" value="KML"/>
+	<property name="metamodelsPath" value="${projectPath}Metamodels/"/>
+	<property name="inputModelsPath" value="${projectPath}InputModels/"/>
+	<property name="outputModelsPath" value="${projectPath}OutputModels/"/>
+	
+	<target name="transfo" depends="loadModels">
+		<basename property="name" file="example" suffix=".xml"/>
+		<property name="sourceModel" value="${name}-${sourceMetaModel}.ecore"/>
+		<property name="targetModel" value="${name}-${targetMetaModel}.ecore"/>
+
+		<!-- Inject from XML file to XML model (Ecore based) and save XML model -->
+		<am3.loadModel modelHandler="EMF" name="${name}" metamodel= "XML" path="${inputModelsPath}${name}.xml">
+	      <injector name="xml"/>
+	    </am3.loadModel>
+		<am3.saveModel model="${name}" path="${inputModelsPath}${sourceModel}"/>
+		
+		<!-- Transforming sourceModel to targetModel -->
+		<echo message="Transforming ${name} from ${sourceMetaModel} to ${targetMetaModel}"/>
+
+		<!-- Load source model and transform from source metamodel to  target metamodel and save target model -->
+		<am3.loadModel modelHandler="EMF" name="${sourceModel}" metamodel="${sourceMetaModel}" path="${inputModelsPath}${sourceModel}"/>
+		<am3.atl path="${projectPath}Transformations/${sourceMetaModel}2${targetMetaModel}.atl">
+			<inModel name="${sourceMetaModel}" model="${sourceMetaModel}"/>
+			<inModel name="IN" model="${sourceModel}"/>
+			<inModel name="${targetMetaModel}" model="${targetMetaModel}"/>
+			<outModel name="OUT" model="${targetModel}" metamodel="${targetMetaModel}"/>
+		</am3.atl>
+		<am3.saveModel model="${targetModel}" path="${outputModelsPath}${targetModel}"/>
+	</target>
+
+	<target name="loadModels">
+		<!-- Load all metamodels -->
+		<am3.loadModel modelHandler="EMF" name="KM3" metamodel="MOF" path="uri:http://www.eclipse.org/gmt/2005/KM3"/>
+		<am3.loadModel modelHandler="EMF" name="${sourceMetaModel}" metamodel="MOF" path="${metamodelsPath}${sourceMetaModel}.ecore"/>
+		<am3.loadModel modelHandler="EMF" name="${targetMetaModel}" metamodel="MOF" path="${metamodelsPath}${targetMetaModel}.ecore"/>
+	</target>	
+</project>

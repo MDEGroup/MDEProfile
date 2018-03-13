@@ -1,0 +1,501 @@
+-- Textual Concrete Syntax (TCS) for OMG standard OCL 2.0 language (adopted)
+-- Created as part of M.Sc. theses
+-- Author: Milan Milanovic (milan at milanovic.org)
+-- Licence: GNU General Public License, version 2
+syntax OCL {
+
+	-- Data type String is represented as an identifier corresponding to lexer 
+	-- non-terminal NAME
+	primitiveTemplate identifier for String default using NAME:
+		value = "%token%";
+
+	primitiveTemplate identifierOrKeyword for String using NAME orKeyword:
+		value = "%token%";
+
+	primitiveTemplate stringSymbol for String using STRING:
+		value = "%token%",
+		serializer="'\'' + %value%.toCString() + '\''";
+
+	primitiveTemplate integerSymbol for Integer default using INT:
+		value = "Integer.valueOf(%token%)";
+
+	primitiveTemplate floatSymbol for Double default using FLOAT:
+		value = "Double.valueOf(%token%)";
+
+	primitiveTemplate booleanSymbol for Boolean default using BOOLEAN:
+		value = "Boolean.valueOf(%token%)";
+
+	-- OCL
+	template OclModule main
+		: ownedElements
+		;
+
+	template OclFeature abstract;
+	
+	template OclModuleElement abstract;
+	
+ 	template Invariant context							
+		:  (isDefined(contextDefinition) ? contextDefinition) <newline> <tab> "inv" (isDefined(name) ? name) <no_space> ":" 
+		   [ specification ] { endNL = false}
+		;
+		
+	template DeriveOclModuleElement context							
+		:  (isDefined(contextDefinition) ? contextDefinition) <no_space> "::" <no_space> refAttr  <newline> <tab> "derive" <no_space> ":" 
+		   [ specification ] { endNL = false}
+		;
+		
+	template OclOperation context
+		:  name "(" ownedParameter{separator = ","} ")" ":" type "=" 
+		   [ body ] {endNL = false}
+		;
+
+	template OclProperty context
+		: 	name ":" type "="
+		  	[ body ] {endNL = false}
+		;
+	
+	template OclContextDefinition
+		: "context" contextElement
+		;
+
+	template OclExpression abstract operatored;
+	
+	template Type abstract;
+	
+	template Parameter addToContext
+		: name ":" type
+		;
+	
+	template Property addToContext
+		: ":" name ":" type
+		;
+		
+	template LoopExp abstract operatored;
+	
+	--	operatored
+
+	-- must be operatorTemplate because it is left recursive
+	operatorTemplate OperationCallExp(operators = opPoint, source = 'source', disambiguate = "NAME LPAREN")
+		: name{as = identifierOrKeyword} "(" argument{separator = ","} ")"
+		;		
+	           
+	operatorTemplate CollectionOperationCallExp(operators = opRarrow, source = 'source')
+		: name "(" argument{separator = ","} ")"
+		;
+  		
+	operatorTemplate PropertyCallExp(operators = opPoint, source = 'source')
+		: name{as = identifierOrKeyword} 
+		;
+     
+	operatorTemplate OperatorCallExp(operators = opStar opSlash opDiv opMod opPlus opNot opMinus1 opMinus2 opEq opGt opLt opGe opLe opNe opAnd opOr opXor opImplies, source = 'source', storeOpTo = name, storeRightTo = argument);
+                                                         
+	operatorTemplate IteratorExp(operators = opRarrow, source = 'source', disambiguate = "NAME LPAREN NAME (PIPE | ((COMA NAME)+ PIPE))") context
+		: name "(" iterator{separator = ","} "|" [
+		       body
+		  ] ")"
+		;
+			
+	operatorTemplate IterateExp(operators = opRarrow, source = 'source') context
+		: "iterate" "(" iterator{separator = ","} ";" result "|" [
+			   body
+		  ] ")"
+		;
+		
+	--	end operatored
+	
+	template Iterator addToContext
+		:	name (isDefined(type) ? ":" type)
+		;
+		
+	template Variable (disambiguate = "NAME ~(EXCL)") addToContext
+		:	name (isDefined(type) ? ":" type) (isDefined(initExpression) ? "=" initExpression)  
+		;
+			
+	--	values
+	template LiteralExp abstract;
+	
+	template PrimitiveLiteralExp abstract;
+	
+	template BooleanLiteralExp
+		: booleanSymbol
+		;
+		
+	template IntegerLiteralExp
+		: integerSymbol
+		;
+	
+	template RealLiteralExp
+		: realSymbol
+		;
+		
+	template StringLiteralExp
+		: stringSymbol{as = stringSymbol}
+		;
+		
+	template InvalidLiteralExp 
+		: "Invalid"
+		;
+	
+	template NullLiteralExp 
+		: "Null"
+		;
+
+	template NumericLiteralExp abstract
+		: "Numeric"
+		;
+	
+	--	end values
+	template IfExp
+		:	"if" condition "then" [
+				thenExpression
+			] "else" [
+				elseExpression
+			] "endif"
+		;
+	
+	template VariableExp
+		:	referredVariable{refersTo = name, lookIn = #all, autoCreate = ifmissing}
+		;
+
+	-- must be nonPrimary because it finishes (or may finish) by an expression
+	template LetExp nonPrimary
+		:	"let" variable "in"
+			[ in ] {indentIncr = 0, endNL = false}
+		;
+		
+	template EnumLiteralExp
+		:	"#" referredEnumLiteral{refersTo = name}
+		;
+		
+	template EnumerationLiteral addToContext
+		: name
+		;
+
+	--	collections
+	template CollectionType abstract
+		:	"Collection" "(" elementType{refersTo = name, autoCreate = ifmissing} ")"
+		;
+		
+	template CollectionLiteralPart abstract;
+	
+	template CollectionItem 
+		: item
+		;
+	
+	template CollectionRange 
+		: first <no_space> ".." <no_space> last
+		;
+		
+	template CollectionLiteralExp
+		: kind "{" part{separator = ","} "}"
+		;
+	--	end collections
+	
+	-- tuples
+	template TupleLiteralExp
+		:	"Tuple" "{" part{separator= ","} "}"
+		;
+	
+	template TupleLiteralPart
+		:	attribute{as = identifierOrKeyword} (isDefined(type) ? ":" type{refersTo = name}) "=" value
+		;
+	-- end tuples
+	
+	--	types
+	template DataType abstract;
+	
+	template PrimitiveType abstract;
+		
+	template Class addToContext
+		: name 
+		;	
+	
+	template IntegerType 
+		: "Integer"
+		;
+		
+	template RealType
+		: "Real"
+		;
+		
+	template BooleanType
+		: "Boolean"
+		;
+		
+	template StringType
+		: "String"
+		;
+		
+	template TupleType
+		: "TupleType" "(" name ")"
+		;
+		
+	template AnyType
+		: "OclAny"
+		;
+		
+	template VoidType
+		: "VoidType"
+		;
+	
+	template InvalidType
+		: "OclUndefined"
+		;
+		
+	template BagType
+		: "Bag" "(" elementType{refersTo = name, autoCreate = ifmissing} ")"
+		;
+
+	template SetType
+		: "Set" "(" elementType{refersTo = name, autoCreate = ifmissing} ")"
+		;
+
+	template OrderedSetType
+		: "OrderedSet" "(" elementType{refersTo = name, autoCreate = ifmissing} ")"
+		;
+
+	template SequenceType
+		: "Sequence" "(" elementType{refersTo = name, autoCreate = ifmissing} ")"
+		;
+
+	--	end types
+
+-- End OCL
+	
+	-- enumerations
+	enumerationTemplate CollectionKind auto
+		:	#Set		= "Set",
+			#OrderedSet	= "OrderedSet",
+			#Bag		= "Bag",
+			#Sequence	= "Sequence"
+		;
+			
+	-- symbols
+	
+
+	symbols {
+		lsquare		= "[";
+		rsquare		= "]"	: rightSpace;
+		excl		= "!";
+		coma		= ","	: leftNone, rightSpace;
+		lparen		= "(";
+		rparen		= ")"	: leftNone, rightSpace;
+		lcurly		= "{"	: leftSpace;
+		rcurly		= "}"	: leftNone, rightSpace;
+		semi		= ";"	: leftNone, rightSpace;
+		colon		= ":"	: leftSpace, rightSpace;	-- except after def where it is leftNone, rightSpace
+		colons		= "::"  : leftNone, rightNone;
+		pipe		= "|"	: leftSpace, rightSpace;
+		sharp		= "#"	: leftSpace;
+		qmark		= "?";
+
+		-- operator symbols
+		point		= "."	: leftNone;
+		twopoints	= ".."  : leftNone, rightNone;
+		rarrow		= "->"	: leftNone;
+		minus		= "-"	: leftSpace, rightSpace;
+		star		= "*"	: leftSpace, rightSpace;
+		slash		= "/"	: leftSpace, rightSpace;
+		plus		= "+"	: leftSpace, rightSpace;
+		eq			= "="	: leftSpace, rightSpace;
+		gt			= ">"	: leftSpace, rightSpace;
+		lt			= "<"	: leftSpace, rightSpace;
+		ge			= ">="	: leftSpace, rightSpace;
+		le			= "<="	: leftSpace, rightSpace;
+		ne			= "<>"	: leftSpace, rightSpace;
+		larrow		= "<-"	: leftSpace, rightSpace;
+	}
+
+	operators {
+		priority 0 {	-- 0 is highest
+			opTwoPoints = twopoints, 2;
+			opPoint = point, 2;
+			opRarrow = rarrow, 2;
+		}
+
+		priority 1 {
+			opNot = "not", 1;		-- no corresponding symbol => symbol is the keyword defined by the quoted string (which is also the name)
+			opMinus1 = minus, 1;
+		}
+
+		priority 2 {
+			opStar = star, 2;
+			opSlash = slash, 2;
+			opDiv = "div", 2;
+			opMod = "mod", 2;
+		}
+
+		priority 3 {
+			opPlus = plus, 2;
+			opMinus2 = minus, 2;
+		}
+
+		priority 4 {
+			opEq = eq, 2;
+			opGt = gt, 2;
+			opLt = lt, 2;
+			opGe = ge, 2;
+			opLe = le, 2;
+			opNe = ne, 2;
+		}
+
+		priority 5 {
+			opAnd = "and", 2;
+			opOr = "or", 2;
+			opXor = "xor", 2;
+			opImplies = "implies", 2;
+		}
+	}
+	
+	lexer = "
+class OCLLexer extends Lexer;
+
+options {
+	k = 2;
+	charVocabulary = '\\0' .. '\\u00FF';
+	//testLiterals = false;
+}
+
+{
+
+	protected Token makeToken(int t) {
+		org.atl.engine.injectors.ebnf.LocationToken ret = null;
+
+		tokenObjectClass = org.atl.engine.injectors.ebnf.LocationToken.class;
+		ret = (org.atl.engine.injectors.ebnf.LocationToken)super.makeToken(t);
+		ret.setEndLine(getLine());
+		ret.setEndColumn(getColumn());
+
+		return ret;
+	}
+
+}
+
+protected
+NL
+	:	(	'\\r' '\\n'
+		|	'\\n' '\\r'	//Improbable
+		|	'\\r'
+		|	'\\n'
+		)
+	{newline();}
+	;
+
+WS
+	:	(	' '
+		|	'\\t'
+		|	NL
+		)
+	{ $setType(Token.SKIP); }
+	;
+
+COMMENT
+	:	\"--\"
+		(~(	'\\r'
+		|	'\\n'
+		))*
+		({LA(1) != EOF_CHAR}? NL)?
+	{ $setType(Token.SKIP); }
+	;
+
+protected
+DIGIT
+	:	'0'..'9'
+	;
+
+protected
+ALPHA
+	:	'a'..'z'
+	|	'A'..'Z'
+	|	'_'
+	//For Unicode compatibility (from 0000 to 00ff)
+	|	'\\u00C0' .. '\\u00D6'
+	|	'\\u00D8' .. '\\u00F6'
+	|	'\\u00F8' .. '\\u00FF'
+	;
+
+protected
+SNAME
+options {
+	testLiterals = true;
+}
+	:	(ALPHA) (ALPHA | DIGIT)*
+;
+
+NAME
+	:	(	s:SNAME {if(s.getType() != SNAME) $setType(s.getType());}
+		|	'\"'!
+			(	ESC
+			|	'\\n' {newline();}
+			|	~('\\\\'|'\\\"'|'\\n')
+			)*
+			'\"'!
+		)
+	{
+	if($getText.equals(\"true\")) $setType(BOOLEAN);
+	if($getText.equals(\"false\")) $setType(BOOLEAN);
+	}
+	;
+
+INT
+	:	(DIGIT)+
+		(('.' DIGIT)=> '.' (DIGIT)+ {$setType(FLOAT);})?
+	;
+
+protected
+ESC
+	:	'\\\\'!
+		(	'n' {$setText(\"\\n\");}
+		|	'r' {$setText(\"\\r\");}
+		|	't' {$setText(\"\\t\");}
+		|	'b' {$setText(\"\\b\");}
+		|	'f' {$setText(\"\\f\");}
+		|	'\"' {$setText(\"\\\"\");}
+		|	'\\'' {$setText(\"\\'\");}
+		|	'\\\\' {$setText(\"\\\\\");}
+		|	(
+				('0'..'3')
+				(
+					options {
+						warnWhenFollowAmbig = false;
+					}
+				:	('0'..'7')
+					(
+						options {
+							warnWhenFollowAmbig = false;
+						}
+					:	'0'..'7'
+					)?
+				)?
+			|	('4'..'7')
+				(
+					options {
+						warnWhenFollowAmbig = false;
+					}
+				:	('0'..'7')
+				)?
+			)
+				{
+					String s = $getText;
+					int i;
+					int ret = 0;
+					String ans;
+					for (i=0; i<s.length(); ++i)
+						ret = ret*8 + s.charAt(i) - '0';
+					ans = String.valueOf((char) ret);
+					$setText(ans);
+				}
+		)
+	;
+
+STRING
+	:	'\\''!
+		(	ESC
+		|	'\\n' {newline();}
+		|	~('\\\\'|'\\''|'\\n')
+		)*
+		'\\''!
+	;
+
+	";
+}

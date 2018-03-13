@@ -1,0 +1,39 @@
+<!--
+ How to configure this ant script:
+	Run as->Ant Build...
+		Set:
+			- Base directory
+			- Run in same JRE
+			- Refresh
+			- ant-contrib jar
+-->
+
+<project name="replace" default="transfo">
+	<property name="projectPath" value="/CatalogueOfModelTransformations/RemovingAssociationClass/without_context/"/>
+	<property name="MetaModel" value="UML2"/>
+	<property name="inputModelsPath" value="${projectPath}InputModels/"/>
+	<property name="outputModelsPath" value="${projectPath}OutputModels/"/>
+	<property name="sample" value="example.uml2"/>
+	
+	<target name="transfo" depends="loadModels">
+		<basename property="name" file="${sample}" suffix=".uml2"/>
+		<property name="sourceModel" value="${name}-${MetaModel}.uml2"/>
+		<property name="targetModel" value="${name}-${MetaModel}Target.uml2"/>
+
+		<!-- Load source model and transform from MetaModel to MetaModel and save targetModel -->		
+		<echo message="Transforming ${name} from ${MetaModel} to ${MetaModel}"/>
+		<am3.loadModel modelHandler="EMF" name="${sourceModel}" metamodel="${MetaModel}" path="${inputModelsPath}${sourceModel}"/>
+		<am3.atl path="${projectPath}RemovingAnAssociationClass.atl">
+			<inModel name="${MetaModel}" model="${MetaModel}"/>
+			<inModel name="IN" model="${sourceModel}"/>
+			<inModel name="${MetaModel}" model="${MetaModel}"/>
+			<outModel name="OUT" model="${targetModel}" metamodel="${MetaModel}"/>
+		</am3.atl>
+		<am3.saveModel model="${targetModel}" path="${outputModelsPath}${targetModel}"/>
+	</target>
+
+	<target name="loadModels">
+		<!-- Load source and target metamodels -->
+		<am3.loadModel modelHandler="EMF" name="${MetaModel}" metamodel="MOF" nsUri="http://www.eclipse.org/uml2/1.0.0/UML"/>
+	</target>	
+</project>

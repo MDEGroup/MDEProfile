@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:simplesbvr="simplesbvr">
+  <simplesbvr:ObjectType objectName="Software" representations="/4"/>
+  <simplesbvr:ObjectType objectName="Product" representations="/10"/>
+  <simplesbvr:Designation objectName="A" text="/3"/>
+  <simplesbvr:Text objectName="A" value="A"/>
+  <simplesbvr:Designation objectName="Software" meaning="/0" text="/5"/>
+  <simplesbvr:Text objectName="Software" value="Software"/>
+  <simplesbvr:Designation objectName="ToBe" meaning="/12" text="/7"/>
+  <simplesbvr:Text objectName="ToBe" value="ToBe"/>
+  <simplesbvr:Designation objectName="A" text="/9"/>
+  <simplesbvr:Text objectName="A" value="A"/>
+  <simplesbvr:Designation objectName="Product" meaning="/1" text="/11"/>
+  <simplesbvr:Text objectName="Product" value="Product"/>
+  <simplesbvr:CategorizationFactType objectName="ToBe" representations="/6" role1="/13" role2="/14"/>
+  <simplesbvr:FactTypeRole nounConcept="/0"/>
+  <simplesbvr:FactTypeRole nounConcept="/1"/>
+</xmi:XMI>

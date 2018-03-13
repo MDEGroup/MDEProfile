@@ -1,0 +1,47 @@
+<!-- How to configure this ant script:
+	Run as->Ant Build...
+		Set:
+			- Base directory (?)
+			- Run in same JRE
+			- Refresh
+			- ANTLR jar (?)
+-->
+<project name="ASMLExtractor" default="transformAll">
+	<property name="workingPath" value="/IEEE1471_2_MoDAF/" />
+	<property name="example" value="${workingPath}example/" />
+	<property name="metamodel" value="${workingPath}metamodel/" />
+	<property name="transformation" value="${workingPath}transformation/" />
+
+	<target name="transformAll" depends="loadModels">
+		<antcall target="transformOne" inheritall="true" inheritrefs="true">
+			<param name="sample" value="sample" />
+		</antcall>
+	</target>
+
+	<target name="transformOne">
+		<property name="sourceModel" value="${example}${sample}-IEEE1471.ecore" />
+		<property name="targetModel" value="${example}${sample}-MoDAF.ecore" />
+
+		<echo message="Extracting ${sample}IEEE1471" />
+		<am3.loadModel modelHandler="EMF" name="source" metamodel="IEEE1471" path="${sourceModel}"/>
+
+		<echo message="Transforming ${sample}-IEEE1471 to ${sample}-MoDAF" />
+		<am3.atl path="${transformation}IEEE1471_2_MoDAF.atl">
+			<inModel name="IN" model="source" />
+			<inModel name="IEEE1471" model="IEEE1471" />
+			<inModel name="MoDAF" model="MoDAF" />
+			<outModel name="OUT" model="target" metamodel="MoDAF" />
+		</am3.atl>
+		
+		<echo message="Serializing ${sample}-MoDAF" />
+		<am3.saveModel model="target" path="${example}${sample}-MoDAF.ecore"/>
+	</target>
+
+	<target name="loadModels">
+		<!-- Load MoDAF metamodel -->
+		<am3.loadModel modelHandler="EMF" name="MoDAF" metamodel="MOF" path="${metamodel}MoDAF-AV.ecore" />
+
+		<!-- Load IEEE1471 metamodel -->
+		<am3.loadModel modelHandler="EMF" name="IEEE1471" metamodel="MOF" path="${metamodel}IEEE1471ConceptualModel.ecore" />
+	</target>
+</project>

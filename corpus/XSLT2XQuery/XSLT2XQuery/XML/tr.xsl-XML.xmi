@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="ASCII"?>
+<Root xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="XML" name="xsl:stylesheet">
+  <children xsi:type="Attribute" name="version" value="1.0"/>
+  <children xsi:type="Attribute" name="xmlns:xsl" value="http://www.w3.org/1999/XSL/Transform"/>
+  <children xsi:type="Element" name="xsl:template">
+    <children xsi:type="Attribute" name="match" value="/"/>
+    <children xsi:type="Element" name="emps">
+      <children xsi:type="Element" name="xsl:apply-templates">
+        <children xsi:type="Attribute" name="select" value="employee"/>
+      </children>
+    </children>
+  </children>
+  <children xsi:type="Element" name="xsl:template">
+    <children xsi:type="Attribute" name="match" value="employee"/>
+    <children xsi:type="Element" name="xsl:if">
+      <children xsi:type="Attribute" name="test" value="salary>2000"/>
+      <children xsi:type="Element" name="emp">
+        <children xsi:type="Element" name="xsl:value-of">
+          <children xsi:type="Attribute" name="select" value="name"/>
+        </children>
+        <children xsi:type="Element" name="xsl:value-of">
+          <children xsi:type="Attribute" name="select" value="firstname"/>
+        </children>
+      </children>
+    </children>
+  </children>
+</Root>

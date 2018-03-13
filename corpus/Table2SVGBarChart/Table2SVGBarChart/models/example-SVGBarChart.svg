@@ -1,0 +1,1686 @@
+<?xml version = '1.0' encoding = 'ISO-8859-1' ?>
+<svg xmlns = 'http://www.w3.org/2000/svg' version = '1.1' width = '11881.125' height = '322.25' viewBox = '0 0 11881.125 322.25'>
+  <g transform = 'translate(93.75,20.0)'>
+    <rect width = '256.5' height = '62.75' x = '-83.75' y = '-10.0' fill = 'none' stroke = 'black'/>
+    <text x = '64.5' y = '42.75' stroke = 'black' font-size = '15.0' text-anchor = 'middle'>MOOD2::IIF</text>
+    <path d = 'M162.75,0 H0 V25.5,0 z' fill = 'none' stroke = 'black'/>
+    <g>
+      <rect width = '150.0' height = '12.75' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '12.75' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD (50%)</text>
+    </g>
+  </g>
+  <g transform = 'translate(360.25,20.0)'>
+    <rect width = '256.5' height = '62.75' x = '-83.75' y = '-10.0' fill = 'none' stroke = 'black'/>
+    <text x = '64.5' y = '42.75' stroke = 'black' font-size = '15.0' text-anchor = 'middle'>MOOD::AIF</text>
+    <path d = 'M162.75,0 H0 V25.5,0 z' fill = 'none' stroke = 'black'/>
+    <g>
+      <rect width = '150.0' height = '12.75' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '12.75' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD (50%)</text>
+    </g>
+  </g>
+  <g transform = 'translate(626.75,20.0)'>
+    <rect width = '256.5' height = '62.75' x = '-83.75' y = '-10.0' fill = 'none' stroke = 'black'/>
+    <text x = '64.5' y = '42.75' stroke = 'black' font-size = '15.0' text-anchor = 'middle'>MOOD::CCF</text>
+    <path d = 'M162.75,0 H0 V25.5,0 z' fill = 'none' stroke = 'black'/>
+    <g>
+      <rect width = '150.0' height = '12.75' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '12.75' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD (12%)</text>
+    </g>
+  </g>
+  <g transform = 'translate(893.25,20.0)'>
+    <rect width = '256.5' height = '62.75' x = '-83.75' y = '-10.0' fill = 'none' stroke = 'black'/>
+    <text x = '64.5' y = '42.75' stroke = 'black' font-size = '15.0' text-anchor = 'middle'>MOOD::ICF</text>
+    <path d = 'M162.75,0 H0 V25.5,0 z' fill = 'none' stroke = 'black'/>
+    <g>
+      <rect width = '150.0' height = '12.75' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '12.75' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD (50%)</text>
+    </g>
+  </g>
+  <g transform = 'translate(1159.75,20.0)'>
+    <rect width = '256.5' height = '62.75' x = '-83.75' y = '-10.0' fill = 'none' stroke = 'black'/>
+    <text x = '64.5' y = '42.75' stroke = 'black' font-size = '15.0' text-anchor = 'middle'>MOOD::RIF</text>
+    <path d = 'M162.75,0 H0 V25.5,0 z' fill = 'none' stroke = 'black'/>
+    <g>
+      <rect width = '150.0' height = '12.75' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '12.75' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD (33.3%)</text>
+    </g>
+  </g>
+  <g transform = 'translate(1426.25,20.0)'>
+    <rect width = '256.5' height = '62.75' x = '-83.75' y = '-10.0' fill = 'none' stroke = 'black'/>
+    <text x = '64.5' y = '42.75' stroke = 'black' font-size = '15.0' text-anchor = 'middle'>QMOOD::ADI</text>
+    <path d = 'M162.75,0 H0 V25.5,0 z' fill = 'none' stroke = 'black'/>
+    <g>
+      <rect width = '0.0' height = '12.75' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '12.75' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD (0)</text>
+    </g>
+  </g>
+  <g transform = 'translate(1692.75,20.0)'>
+    <rect width = '256.5' height = '62.75' x = '-83.75' y = '-10.0' fill = 'none' stroke = 'black'/>
+    <text x = '64.5' y = '42.75' stroke = 'black' font-size = '15.0' text-anchor = 'middle'>QMOOD::ANA</text>
+    <path d = 'M162.75,0 H0 V25.5,0 z' fill = 'none' stroke = 'black'/>
+    <g>
+      <rect width = '150.0' height = '12.75' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '12.75' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD (0.3)</text>
+    </g>
+  </g>
+  <g transform = 'translate(1959.25,20.0)'>
+    <rect width = '256.5' height = '62.75' x = '-83.75' y = '-10.0' fill = 'none' stroke = 'black'/>
+    <text x = '64.5' y = '42.75' stroke = 'black' font-size = '15.0' text-anchor = 'middle'>QMOOD::AWI</text>
+    <path d = 'M162.75,0 H0 V25.5,0 z' fill = 'none' stroke = 'black'/>
+    <g>
+      <rect width = '150.0' height = '12.75' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '12.75' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD (1.4)</text>
+    </g>
+  </g>
+  <g transform = 'translate(2225.75,20.0)'>
+    <rect width = '256.5' height = '62.75' x = '-83.75' y = '-10.0' fill = 'none' stroke = 'black'/>
+    <text x = '64.5' y = '42.75' stroke = 'black' font-size = '15.0' text-anchor = 'middle'>QMOOD::DSC</text>
+    <path d = 'M162.75,0 H0 V25.5,0 z' fill = 'none' stroke = 'black'/>
+    <g>
+      <rect width = '150.0' height = '12.75' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '12.75' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD (19)</text>
+    </g>
+  </g>
+  <g transform = 'translate(2492.25,20.0)'>
+    <rect width = '256.5' height = '62.75' x = '-83.75' y = '-10.0' fill = 'none' stroke = 'black'/>
+    <text x = '64.5' y = '42.75' stroke = 'black' font-size = '15.0' text-anchor = 'middle'>QMOOD::NAC</text>
+    <path d = 'M162.75,0 H0 V25.5,0 z' fill = 'none' stroke = 'black'/>
+    <g>
+      <rect width = '150.0' height = '12.75' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '12.75' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD (6)</text>
+    </g>
+  </g>
+  <g transform = 'translate(2758.75,20.0)'>
+    <rect width = '256.5' height = '62.75' x = '-83.75' y = '-10.0' fill = 'none' stroke = 'black'/>
+    <text x = '64.5' y = '42.75' stroke = 'black' font-size = '15.0' text-anchor = 'middle'>QMOOD::NIC</text>
+    <path d = 'M162.75,0 H0 V25.5,0 z' fill = 'none' stroke = 'black'/>
+    <g>
+      <rect width = '150.0' height = '12.75' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '12.75' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD (13)</text>
+    </g>
+  </g>
+  <g transform = 'translate(3025.25,20.0)'>
+    <rect width = '256.5' height = '62.75' x = '-83.75' y = '-10.0' fill = 'none' stroke = 'black'/>
+    <text x = '64.5' y = '42.75' stroke = 'black' font-size = '15.0' text-anchor = 'middle'>QMOOD::NLC</text>
+    <path d = 'M162.75,0 H0 V25.5,0 z' fill = 'none' stroke = 'black'/>
+    <g>
+      <rect width = '150.0' height = '12.75' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '12.75' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD (13)</text>
+    </g>
+  </g>
+  <g transform = 'translate(3291.75,20.0)'>
+    <rect width = '256.5' height = '62.75' x = '-83.75' y = '-10.0' fill = 'none' stroke = 'black'/>
+    <text x = '64.5' y = '42.75' stroke = 'black' font-size = '15.0' text-anchor = 'middle'>QMOOD::NMI</text>
+    <path d = 'M162.75,0 H0 V25.5,0 z' fill = 'none' stroke = 'black'/>
+    <g>
+      <rect width = '0.0' height = '12.75' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '12.75' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD (0)</text>
+    </g>
+  </g>
+  <g transform = 'translate(3558.25,20.0)'>
+    <rect width = '256.5' height = '62.75' x = '-83.75' y = '-10.0' fill = 'none' stroke = 'black'/>
+    <text x = '64.5' y = '42.75' stroke = 'black' font-size = '15.0' text-anchor = 'middle'>QMOOD::NNC</text>
+    <path d = 'M162.75,0 H0 V25.5,0 z' fill = 'none' stroke = 'black'/>
+    <g>
+      <rect width = '150.0' height = '12.75' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '12.75' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD (15)</text>
+    </g>
+  </g>
+  <g transform = 'translate(3824.75,20.0)'>
+    <rect width = '256.5' height = '62.75' x = '-83.75' y = '-10.0' fill = 'none' stroke = 'black'/>
+    <text x = '64.5' y = '42.75' stroke = 'black' font-size = '15.0' text-anchor = 'middle'>QMOOD::NOH</text>
+    <path d = 'M162.75,0 H0 V25.5,0 z' fill = 'none' stroke = 'black'/>
+    <g>
+      <rect width = '150.0' height = '12.75' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '12.75' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD (15)</text>
+    </g>
+  </g>
+  <g transform = 'translate(4091.25,20.0)'>
+    <rect width = '256.5' height = '62.75' x = '-83.75' y = '-10.0' fill = 'none' stroke = 'black'/>
+    <text x = '64.5' y = '42.75' stroke = 'black' font-size = '15.0' text-anchor = 'middle'>QMOOD::NSI</text>
+    <path d = 'M162.75,0 H0 V25.5,0 z' fill = 'none' stroke = 'black'/>
+    <g>
+      <rect width = '150.0' height = '12.75' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '12.75' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD (15)</text>
+    </g>
+  </g>
+  <g transform = 'translate(4491.625,20.0)'>
+    <rect width = '390.375' height = '292.25' x = '-217.625' y = '-10.0' fill = 'none' stroke = 'black'/>
+    <text x = '-2.4375' y = '272.25' stroke = 'black' font-size = '15.0' text-anchor = 'middle'>EMOOSE::SIZE2</text>
+    <path d = 'M162.75,0 H0 V255.0,0 z' fill = 'none' stroke = 'black'/>
+    <g>
+      <rect width = '0.0' height = '12.75' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '12.75' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.AnyElement (0)</text>
+    </g>
+    <g>
+      <rect width = '150.0' height = '12.75' y = '12.75' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '25.5' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.AttributeDescription (2)</text>
+    </g>
+    <g>
+      <rect width = '75.0' height = '12.75' y = '25.5' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '38.25' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.AttributeList (1)</text>
+    </g>
+    <g>
+      <rect width = '0.0' height = '12.75' y = '38.25' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '51.0' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.AttributeType (0)</text>
+    </g>
+    <g>
+      <rect width = '75.0' height = '12.75' y = '51.0' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '63.75' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.Children (1)</text>
+    </g>
+    <g>
+      <rect width = '75.0' height = '12.75' y = '63.75' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '76.5' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.Choice (1)</text>
+    </g>
+    <g>
+      <rect width = '150.0' height = '12.75' y = '76.5' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '89.25' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.DefaultValue (2)</text>
+    </g>
+    <g>
+      <rect width = '0.0' height = '12.75' y = '89.25' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '102.0' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.Element (0)</text>
+    </g>
+    <g>
+      <rect width = '0.0' height = '12.75' y = '102.0' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '114.75' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.ElementContent (0)</text>
+    </g>
+    <g>
+      <rect width = '150.0' height = '12.75' y = '114.75' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '127.5' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.Entity (2)</text>
+    </g>
+    <g>
+      <rect width = '75.0' height = '12.75' y = '127.5' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '140.25' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.Enumeration (1)</text>
+    </g>
+    <g>
+      <rect width = '75.0' height = '12.75' y = '140.25' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '153.0' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.Leaf (1)</text>
+    </g>
+    <g>
+      <rect width = '75.0' height = '12.75' y = '153.0' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '165.75' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.Mixed (1)</text>
+    </g>
+    <g>
+      <rect width = '75.0' height = '12.75' y = '165.75' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '178.5' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.NoDefaultValue (1)</text>
+    </g>
+    <g>
+      <rect width = '75.0' height = '12.75' y = '178.5' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '191.25' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.Notation (1)</text>
+    </g>
+    <g>
+      <rect width = '75.0' height = '12.75' y = '191.25' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '204.0' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.OtherAttributeType (1)</text>
+    </g>
+    <g>
+      <rect width = '75.0' height = '12.75' y = '204.0' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '216.75' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.RestrictedElement (1)</text>
+    </g>
+    <g>
+      <rect width = '75.0' height = '12.75' y = '216.75' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '229.5' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.Sequence (1)</text>
+    </g>
+    <g>
+      <rect width = '75.0' height = '12.75' y = '229.5' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '242.25' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.TypeDescription (1)</text>
+    </g>
+  </g>
+  <g transform = 'translate(4892.0,20.0)'>
+    <rect width = '390.375' height = '292.25' x = '-217.625' y = '-10.0' fill = 'none' stroke = 'black'/>
+    <text x = '-2.4375' y = '272.25' stroke = 'black' font-size = '15.0' text-anchor = 'middle'>MOOSE::CBO</text>
+    <path d = 'M162.75,0 H0 V255.0,0 z' fill = 'none' stroke = 'black'/>
+    <g>
+      <rect width = '0.0' height = '12.75' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '12.75' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.AnyElement (0)</text>
+    </g>
+    <g>
+      <rect width = '150.0' height = '12.75' y = '12.75' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '25.5' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.AttributeDescription (2)</text>
+    </g>
+    <g>
+      <rect width = '75.0' height = '12.75' y = '25.5' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '38.25' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.AttributeList (1)</text>
+    </g>
+    <g>
+      <rect width = '0.0' height = '12.75' y = '38.25' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '51.0' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.AttributeType (0)</text>
+    </g>
+    <g>
+      <rect width = '0.0' height = '12.75' y = '51.0' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '63.75' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.Children (0)</text>
+    </g>
+    <g>
+      <rect width = '75.0' height = '12.75' y = '63.75' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '76.5' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.Choice (1)</text>
+    </g>
+    <g>
+      <rect width = '150.0' height = '12.75' y = '76.5' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '89.25' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.DefaultValue (2)</text>
+    </g>
+    <g>
+      <rect width = '0.0' height = '12.75' y = '89.25' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '102.0' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.Element (0)</text>
+    </g>
+    <g>
+      <rect width = '0.0' height = '12.75' y = '102.0' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '114.75' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.ElementContent (0)</text>
+    </g>
+    <g>
+      <rect width = '0.0' height = '12.75' y = '114.75' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '127.5' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.Entity (0)</text>
+    </g>
+    <g>
+      <rect width = '0.0' height = '12.75' y = '127.5' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '140.25' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.Enumeration (0)</text>
+    </g>
+    <g>
+      <rect width = '0.0' height = '12.75' y = '140.25' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '153.0' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.Leaf (0)</text>
+    </g>
+    <g>
+      <rect width = '0.0' height = '12.75' y = '153.0' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '165.75' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.Mixed (0)</text>
+    </g>
+    <g>
+      <rect width = '150.0' height = '12.75' y = '165.75' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '178.5' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.NoDefaultValue (2)</text>
+    </g>
+    <g>
+      <rect width = '0.0' height = '12.75' y = '178.5' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '191.25' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.Notation (0)</text>
+    </g>
+    <g>
+      <rect width = '0.0' height = '12.75' y = '191.25' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '204.0' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.OtherAttributeType (0)</text>
+    </g>
+    <g>
+      <rect width = '75.0' height = '12.75' y = '204.0' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '216.75' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.RestrictedElement (1)</text>
+    </g>
+    <g>
+      <rect width = '75.0' height = '12.75' y = '216.75' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '229.5' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.Sequence (1)</text>
+    </g>
+    <g>
+      <rect width = '0.0' height = '12.75' y = '229.5' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '242.25' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.TypeDescription (0)</text>
+    </g>
+  </g>
+  <g transform = 'translate(5292.375,20.0)'>
+    <rect width = '390.375' height = '292.25' x = '-217.625' y = '-10.0' fill = 'none' stroke = 'black'/>
+    <text x = '-2.4375' y = '272.25' stroke = 'black' font-size = '15.0' text-anchor = 'middle'>MOOSE::DIT</text>
+    <path d = 'M162.75,0 H0 V255.0,0 z' fill = 'none' stroke = 'black'/>
+    <g>
+      <rect width = '150.0' height = '12.75' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '12.75' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.AnyElement (2)</text>
+    </g>
+    <g>
+      <rect width = '75.0' height = '12.75' y = '12.75' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '25.5' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.AttributeDescription (1)</text>
+    </g>
+    <g>
+      <rect width = '75.0' height = '12.75' y = '25.5' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '38.25' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.AttributeList (1)</text>
+    </g>
+    <g>
+      <rect width = '0.0' height = '12.75' y = '38.25' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '51.0' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.AttributeType (0)</text>
+    </g>
+    <g>
+      <rect width = '75.0' height = '12.75' y = '51.0' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '63.75' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.Children (1)</text>
+    </g>
+    <g>
+      <rect width = '150.0' height = '12.75' y = '63.75' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '76.5' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.Choice (2)</text>
+    </g>
+    <g>
+      <rect width = '150.0' height = '12.75' y = '76.5' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '89.25' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.DefaultValue (2)</text>
+    </g>
+    <g>
+      <rect width = '75.0' height = '12.75' y = '89.25' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '102.0' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.Element (1)</text>
+    </g>
+    <g>
+      <rect width = '0.0' height = '12.75' y = '102.0' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '114.75' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.ElementContent (0)</text>
+    </g>
+    <g>
+      <rect width = '75.0' height = '12.75' y = '114.75' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '127.5' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.Entity (1)</text>
+    </g>
+    <g>
+      <rect width = '75.0' height = '12.75' y = '127.5' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '140.25' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.Enumeration (1)</text>
+    </g>
+    <g>
+      <rect width = '150.0' height = '12.75' y = '140.25' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '153.0' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.Leaf (2)</text>
+    </g>
+    <g>
+      <rect width = '75.0' height = '12.75' y = '153.0' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '165.75' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.Mixed (1)</text>
+    </g>
+    <g>
+      <rect width = '150.0' height = '12.75' y = '165.75' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '178.5' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.NoDefaultValue (2)</text>
+    </g>
+    <g>
+      <rect width = '75.0' height = '12.75' y = '178.5' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '191.25' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.Notation (1)</text>
+    </g>
+    <g>
+      <rect width = '0.0' height = '12.75' y = '191.25' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '204.0' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.OtherAttributeType (0)</text>
+    </g>
+    <g>
+      <rect width = '150.0' height = '12.75' y = '204.0' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '216.75' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.RestrictedElement (2)</text>
+    </g>
+    <g>
+      <rect width = '150.0' height = '12.75' y = '216.75' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '229.5' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.Sequence (2)</text>
+    </g>
+    <g>
+      <rect width = '0.0' height = '12.75' y = '229.5' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '242.25' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.TypeDescription (0)</text>
+    </g>
+  </g>
+  <g transform = 'translate(5692.75,20.0)'>
+    <rect width = '390.375' height = '292.25' x = '-217.625' y = '-10.0' fill = 'none' stroke = 'black'/>
+    <text x = '-2.4375' y = '272.25' stroke = 'black' font-size = '15.0' text-anchor = 'middle'>MOOSE::NOC</text>
+    <path d = 'M162.75,0 H0 V255.0,0 z' fill = 'none' stroke = 'black'/>
+    <g>
+      <rect width = '0.0' height = '12.75' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '12.75' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.AnyElement (0)</text>
+    </g>
+    <g>
+      <rect width = '60.0' height = '12.75' y = '12.75' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '25.5' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.AttributeDescription (2)</text>
+    </g>
+    <g>
+      <rect width = '0.0' height = '12.75' y = '25.5' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '38.25' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.AttributeList (0)</text>
+    </g>
+    <g>
+      <rect width = '30.0' height = '12.75' y = '38.25' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '51.0' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.AttributeType (1)</text>
+    </g>
+    <g>
+      <rect width = '90.0' height = '12.75' y = '51.0' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '63.75' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.Children (3)</text>
+    </g>
+    <g>
+      <rect width = '0.0' height = '12.75' y = '63.75' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '76.5' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.Choice (0)</text>
+    </g>
+    <g>
+      <rect width = '0.0' height = '12.75' y = '76.5' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '89.25' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.DefaultValue (0)</text>
+    </g>
+    <g>
+      <rect width = '60.0' height = '12.75' y = '89.25' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '102.0' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.Element (2)</text>
+    </g>
+    <g>
+      <rect width = '60.0' height = '12.75' y = '102.0' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '114.75' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.ElementContent (2)</text>
+    </g>
+    <g>
+      <rect width = '0.0' height = '12.75' y = '114.75' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '127.5' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.Entity (0)</text>
+    </g>
+    <g>
+      <rect width = '0.0' height = '12.75' y = '127.5' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '140.25' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.Enumeration (0)</text>
+    </g>
+    <g>
+      <rect width = '0.0' height = '12.75' y = '140.25' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '153.0' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.Leaf (0)</text>
+    </g>
+    <g>
+      <rect width = '0.0' height = '12.75' y = '153.0' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '165.75' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.Mixed (0)</text>
+    </g>
+    <g>
+      <rect width = '0.0' height = '12.75' y = '165.75' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '178.5' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.NoDefaultValue (0)</text>
+    </g>
+    <g>
+      <rect width = '0.0' height = '12.75' y = '178.5' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '191.25' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.Notation (0)</text>
+    </g>
+    <g>
+      <rect width = '0.0' height = '12.75' y = '191.25' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '204.0' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.OtherAttributeType (0)</text>
+    </g>
+    <g>
+      <rect width = '0.0' height = '12.75' y = '204.0' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '216.75' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.RestrictedElement (0)</text>
+    </g>
+    <g>
+      <rect width = '0.0' height = '12.75' y = '216.75' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '229.5' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.Sequence (0)</text>
+    </g>
+    <g>
+      <rect width = '150.0' height = '12.75' y = '229.5' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '242.25' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.TypeDescription (5)</text>
+    </g>
+  </g>
+  <g transform = 'translate(6093.125,20.0)'>
+    <rect width = '390.375' height = '292.25' x = '-217.625' y = '-10.0' fill = 'none' stroke = 'black'/>
+    <text x = '-2.4375' y = '272.25' stroke = 'black' font-size = '15.0' text-anchor = 'middle'>MOOSE::WRC</text>
+    <path d = 'M162.75,0 H0 V255.0,0 z' fill = 'none' stroke = 'black'/>
+    <g>
+      <rect width = '0.0' height = '12.75' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '12.75' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.AnyElement (0)</text>
+    </g>
+    <g>
+      <rect width = '150.0' height = '12.75' y = '12.75' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '25.5' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.AttributeDescription (1)</text>
+    </g>
+    <g>
+      <rect width = '150.0' height = '12.75' y = '25.5' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '38.25' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.AttributeList (1)</text>
+    </g>
+    <g>
+      <rect width = '0.0' height = '12.75' y = '38.25' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '51.0' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.AttributeType (0)</text>
+    </g>
+    <g>
+      <rect width = '0.0' height = '12.75' y = '51.0' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '63.75' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.Children (0)</text>
+    </g>
+    <g>
+      <rect width = '150.0' height = '12.75' y = '63.75' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '76.5' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.Choice (1)</text>
+    </g>
+    <g>
+      <rect width = '150.0' height = '12.75' y = '76.5' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '89.25' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.DefaultValue (1)</text>
+    </g>
+    <g>
+      <rect width = '0.0' height = '12.75' y = '89.25' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '102.0' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.Element (0)</text>
+    </g>
+    <g>
+      <rect width = '0.0' height = '12.75' y = '102.0' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '114.75' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.ElementContent (0)</text>
+    </g>
+    <g>
+      <rect width = '0.0' height = '12.75' y = '114.75' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '127.5' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.Entity (0)</text>
+    </g>
+    <g>
+      <rect width = '0.0' height = '12.75' y = '127.5' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '140.25' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.Enumeration (0)</text>
+    </g>
+    <g>
+      <rect width = '0.0' height = '12.75' y = '140.25' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '153.0' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.Leaf (0)</text>
+    </g>
+    <g>
+      <rect width = '0.0' height = '12.75' y = '153.0' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '165.75' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.Mixed (0)</text>
+    </g>
+    <g>
+      <rect width = '150.0' height = '12.75' y = '165.75' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '178.5' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.NoDefaultValue (1)</text>
+    </g>
+    <g>
+      <rect width = '0.0' height = '12.75' y = '178.5' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '191.25' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.Notation (0)</text>
+    </g>
+    <g>
+      <rect width = '0.0' height = '12.75' y = '191.25' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '204.0' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.OtherAttributeType (0)</text>
+    </g>
+    <g>
+      <rect width = '0.0' height = '12.75' y = '204.0' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '216.75' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.RestrictedElement (0)</text>
+    </g>
+    <g>
+      <rect width = '150.0' height = '12.75' y = '216.75' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '229.5' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.Sequence (1)</text>
+    </g>
+    <g>
+      <rect width = '0.0' height = '12.75' y = '229.5' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '242.25' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.TypeDescription (0)</text>
+    </g>
+  </g>
+  <g transform = 'translate(6493.5,20.0)'>
+    <rect width = '390.375' height = '292.25' x = '-217.625' y = '-10.0' fill = 'none' stroke = 'black'/>
+    <text x = '-2.4375' y = '272.25' stroke = 'black' font-size = '15.0' text-anchor = 'middle'>QMOOD::CCD</text>
+    <path d = 'M162.75,0 H0 V255.0,0 z' fill = 'none' stroke = 'black'/>
+    <g>
+      <rect width = '37.5' height = '12.75' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '12.75' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.AnyElement (1)</text>
+    </g>
+    <g>
+      <rect width = '75.0' height = '12.75' y = '12.75' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '25.5' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.AttributeDescription (2)</text>
+    </g>
+    <g>
+      <rect width = '37.5' height = '12.75' y = '25.5' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '38.25' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.AttributeList (1)</text>
+    </g>
+    <g>
+      <rect width = '0.0' height = '12.75' y = '38.25' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '51.0' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.AttributeType (0)</text>
+    </g>
+    <g>
+      <rect width = '37.5' height = '12.75' y = '51.0' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '63.75' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.Children (1)</text>
+    </g>
+    <g>
+      <rect width = '37.5' height = '12.75' y = '63.75' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '76.5' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.Choice (1)</text>
+    </g>
+    <g>
+      <rect width = '150.0' height = '12.75' y = '76.5' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '89.25' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.DefaultValue (4)</text>
+    </g>
+    <g>
+      <rect width = '37.5' height = '12.75' y = '89.25' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '102.0' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.Element (1)</text>
+    </g>
+    <g>
+      <rect width = '0.0' height = '12.75' y = '102.0' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '114.75' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.ElementContent (0)</text>
+    </g>
+    <g>
+      <rect width = '112.5' height = '12.75' y = '114.75' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '127.5' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.Entity (3)</text>
+    </g>
+    <g>
+      <rect width = '37.5' height = '12.75' y = '127.5' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '140.25' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.Enumeration (1)</text>
+    </g>
+    <g>
+      <rect width = '75.0' height = '12.75' y = '140.25' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '153.0' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.Leaf (2)</text>
+    </g>
+    <g>
+      <rect width = '37.5' height = '12.75' y = '153.0' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '165.75' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.Mixed (1)</text>
+    </g>
+    <g>
+      <rect width = '112.5' height = '12.75' y = '165.75' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '178.5' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.NoDefaultValue (3)</text>
+    </g>
+    <g>
+      <rect width = '75.0' height = '12.75' y = '178.5' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '191.25' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.Notation (2)</text>
+    </g>
+    <g>
+      <rect width = '37.5' height = '12.75' y = '191.25' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '204.0' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.OtherAttributeType (1)</text>
+    </g>
+    <g>
+      <rect width = '75.0' height = '12.75' y = '204.0' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '216.75' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.RestrictedElement (2)</text>
+    </g>
+    <g>
+      <rect width = '37.5' height = '12.75' y = '216.75' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '229.5' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.Sequence (1)</text>
+    </g>
+    <g>
+      <rect width = '37.5' height = '12.75' y = '229.5' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '242.25' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.TypeDescription (1)</text>
+    </g>
+  </g>
+  <g transform = 'translate(6893.875,20.0)'>
+    <rect width = '390.375' height = '292.25' x = '-217.625' y = '-10.0' fill = 'none' stroke = 'black'/>
+    <text x = '-2.4375' y = '272.25' stroke = 'black' font-size = '15.0' text-anchor = 'middle'>QMOOD::CSM</text>
+    <path d = 'M162.75,0 H0 V255.0,0 z' fill = 'none' stroke = 'black'/>
+    <g>
+      <rect width = '30.0' height = '12.75' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '12.75' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.AnyElement (1)</text>
+    </g>
+    <g>
+      <rect width = '90.0' height = '12.75' y = '12.75' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '25.5' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.AttributeDescription (3)</text>
+    </g>
+    <g>
+      <rect width = '60.0' height = '12.75' y = '25.5' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '38.25' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.AttributeList (2)</text>
+    </g>
+    <g>
+      <rect width = '0.0' height = '12.75' y = '38.25' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '51.0' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.AttributeType (0)</text>
+    </g>
+    <g>
+      <rect width = '30.0' height = '12.75' y = '51.0' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '63.75' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.Children (1)</text>
+    </g>
+    <g>
+      <rect width = '60.0' height = '12.75' y = '63.75' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '76.5' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.Choice (2)</text>
+    </g>
+    <g>
+      <rect width = '150.0' height = '12.75' y = '76.5' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '89.25' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.DefaultValue (5)</text>
+    </g>
+    <g>
+      <rect width = '30.0' height = '12.75' y = '89.25' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '102.0' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.Element (1)</text>
+    </g>
+    <g>
+      <rect width = '0.0' height = '12.75' y = '102.0' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '114.75' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.ElementContent (0)</text>
+    </g>
+    <g>
+      <rect width = '90.0' height = '12.75' y = '114.75' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '127.5' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.Entity (3)</text>
+    </g>
+    <g>
+      <rect width = '30.0' height = '12.75' y = '127.5' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '140.25' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.Enumeration (1)</text>
+    </g>
+    <g>
+      <rect width = '60.0' height = '12.75' y = '140.25' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '153.0' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.Leaf (2)</text>
+    </g>
+    <g>
+      <rect width = '30.0' height = '12.75' y = '153.0' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '165.75' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.Mixed (1)</text>
+    </g>
+    <g>
+      <rect width = '120.0' height = '12.75' y = '165.75' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '178.5' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.NoDefaultValue (4)</text>
+    </g>
+    <g>
+      <rect width = '60.0' height = '12.75' y = '178.5' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '191.25' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.Notation (2)</text>
+    </g>
+    <g>
+      <rect width = '30.0' height = '12.75' y = '191.25' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '204.0' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.OtherAttributeType (1)</text>
+    </g>
+    <g>
+      <rect width = '60.0' height = '12.75' y = '204.0' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '216.75' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.RestrictedElement (2)</text>
+    </g>
+    <g>
+      <rect width = '60.0' height = '12.75' y = '216.75' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '229.5' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.Sequence (2)</text>
+    </g>
+    <g>
+      <rect width = '30.0' height = '12.75' y = '229.5' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '242.25' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.TypeDescription (1)</text>
+    </g>
+  </g>
+  <g transform = 'translate(7294.25,20.0)'>
+    <rect width = '390.375' height = '292.25' x = '-217.625' y = '-10.0' fill = 'none' stroke = 'black'/>
+    <text x = '-2.4375' y = '272.25' stroke = 'black' font-size = '15.0' text-anchor = 'middle'>QMOOD::DAC</text>
+    <path d = 'M162.75,0 H0 V255.0,0 z' fill = 'none' stroke = 'black'/>
+    <g>
+      <rect width = '0.0' height = '12.75' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '12.75' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.AnyElement (0)</text>
+    </g>
+    <g>
+      <rect width = '150.0' height = '12.75' y = '12.75' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '25.5' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.AttributeDescription (1)</text>
+    </g>
+    <g>
+      <rect width = '0.0' height = '12.75' y = '25.5' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '38.25' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.AttributeList (0)</text>
+    </g>
+    <g>
+      <rect width = '0.0' height = '12.75' y = '38.25' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '51.0' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.AttributeType (0)</text>
+    </g>
+    <g>
+      <rect width = '0.0' height = '12.75' y = '51.0' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '63.75' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.Children (0)</text>
+    </g>
+    <g>
+      <rect width = '0.0' height = '12.75' y = '63.75' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '76.5' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.Choice (0)</text>
+    </g>
+    <g>
+      <rect width = '150.0' height = '12.75' y = '76.5' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '89.25' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.DefaultValue (1)</text>
+    </g>
+    <g>
+      <rect width = '0.0' height = '12.75' y = '89.25' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '102.0' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.Element (0)</text>
+    </g>
+    <g>
+      <rect width = '0.0' height = '12.75' y = '102.0' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '114.75' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.ElementContent (0)</text>
+    </g>
+    <g>
+      <rect width = '0.0' height = '12.75' y = '114.75' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '127.5' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.Entity (0)</text>
+    </g>
+    <g>
+      <rect width = '0.0' height = '12.75' y = '127.5' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '140.25' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.Enumeration (0)</text>
+    </g>
+    <g>
+      <rect width = '0.0' height = '12.75' y = '140.25' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '153.0' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.Leaf (0)</text>
+    </g>
+    <g>
+      <rect width = '0.0' height = '12.75' y = '153.0' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '165.75' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.Mixed (0)</text>
+    </g>
+    <g>
+      <rect width = '150.0' height = '12.75' y = '165.75' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '178.5' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.NoDefaultValue (1)</text>
+    </g>
+    <g>
+      <rect width = '0.0' height = '12.75' y = '178.5' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '191.25' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.Notation (0)</text>
+    </g>
+    <g>
+      <rect width = '0.0' height = '12.75' y = '191.25' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '204.0' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.OtherAttributeType (0)</text>
+    </g>
+    <g>
+      <rect width = '150.0' height = '12.75' y = '204.0' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '216.75' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.RestrictedElement (1)</text>
+    </g>
+    <g>
+      <rect width = '0.0' height = '12.75' y = '216.75' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '229.5' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.Sequence (0)</text>
+    </g>
+    <g>
+      <rect width = '0.0' height = '12.75' y = '229.5' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '242.25' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.TypeDescription (0)</text>
+    </g>
+  </g>
+  <g transform = 'translate(7694.625,20.0)'>
+    <rect width = '390.375' height = '292.25' x = '-217.625' y = '-10.0' fill = 'none' stroke = 'black'/>
+    <text x = '-2.4375' y = '272.25' stroke = 'black' font-size = '15.0' text-anchor = 'middle'>QMOOD::DCC</text>
+    <path d = 'M162.75,0 H0 V255.0,0 z' fill = 'none' stroke = 'black'/>
+    <g>
+      <rect width = '0.0' height = '12.75' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '12.75' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.AnyElement (0)</text>
+    </g>
+    <g>
+      <rect width = '150.0' height = '12.75' y = '12.75' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '25.5' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.AttributeDescription (2)</text>
+    </g>
+    <g>
+      <rect width = '75.0' height = '12.75' y = '25.5' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '38.25' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.AttributeList (1)</text>
+    </g>
+    <g>
+      <rect width = '0.0' height = '12.75' y = '38.25' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '51.0' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.AttributeType (0)</text>
+    </g>
+    <g>
+      <rect width = '0.0' height = '12.75' y = '51.0' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '63.75' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.Children (0)</text>
+    </g>
+    <g>
+      <rect width = '75.0' height = '12.75' y = '63.75' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '76.5' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.Choice (1)</text>
+    </g>
+    <g>
+      <rect width = '150.0' height = '12.75' y = '76.5' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '89.25' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.DefaultValue (2)</text>
+    </g>
+    <g>
+      <rect width = '0.0' height = '12.75' y = '89.25' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '102.0' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.Element (0)</text>
+    </g>
+    <g>
+      <rect width = '0.0' height = '12.75' y = '102.0' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '114.75' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.ElementContent (0)</text>
+    </g>
+    <g>
+      <rect width = '0.0' height = '12.75' y = '114.75' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '127.5' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.Entity (0)</text>
+    </g>
+    <g>
+      <rect width = '0.0' height = '12.75' y = '127.5' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '140.25' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.Enumeration (0)</text>
+    </g>
+    <g>
+      <rect width = '0.0' height = '12.75' y = '140.25' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '153.0' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.Leaf (0)</text>
+    </g>
+    <g>
+      <rect width = '0.0' height = '12.75' y = '153.0' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '165.75' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.Mixed (0)</text>
+    </g>
+    <g>
+      <rect width = '150.0' height = '12.75' y = '165.75' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '178.5' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.NoDefaultValue (2)</text>
+    </g>
+    <g>
+      <rect width = '0.0' height = '12.75' y = '178.5' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '191.25' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.Notation (0)</text>
+    </g>
+    <g>
+      <rect width = '0.0' height = '12.75' y = '191.25' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '204.0' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.OtherAttributeType (0)</text>
+    </g>
+    <g>
+      <rect width = '75.0' height = '12.75' y = '204.0' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '216.75' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.RestrictedElement (1)</text>
+    </g>
+    <g>
+      <rect width = '75.0' height = '12.75' y = '216.75' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '229.5' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.Sequence (1)</text>
+    </g>
+    <g>
+      <rect width = '0.0' height = '12.75' y = '229.5' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '242.25' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.TypeDescription (0)</text>
+    </g>
+  </g>
+  <g transform = 'translate(8095.0,20.0)'>
+    <rect width = '390.375' height = '292.25' x = '-217.625' y = '-10.0' fill = 'none' stroke = 'black'/>
+    <text x = '-2.4375' y = '272.25' stroke = 'black' font-size = '15.0' text-anchor = 'middle'>QMOOD::DRC</text>
+    <path d = 'M162.75,0 H0 V255.0,0 z' fill = 'none' stroke = 'black'/>
+    <g>
+      <rect width = '0.0' height = '12.75' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '12.75' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.AnyElement (0)</text>
+    </g>
+    <g>
+      <rect width = '150.0' height = '12.75' y = '12.75' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '25.5' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.AttributeDescription (1)</text>
+    </g>
+    <g>
+      <rect width = '150.0' height = '12.75' y = '25.5' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '38.25' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.AttributeList (1)</text>
+    </g>
+    <g>
+      <rect width = '0.0' height = '12.75' y = '38.25' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '51.0' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.AttributeType (0)</text>
+    </g>
+    <g>
+      <rect width = '0.0' height = '12.75' y = '51.0' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '63.75' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.Children (0)</text>
+    </g>
+    <g>
+      <rect width = '150.0' height = '12.75' y = '63.75' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '76.5' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.Choice (1)</text>
+    </g>
+    <g>
+      <rect width = '150.0' height = '12.75' y = '76.5' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '89.25' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.DefaultValue (1)</text>
+    </g>
+    <g>
+      <rect width = '0.0' height = '12.75' y = '89.25' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '102.0' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.Element (0)</text>
+    </g>
+    <g>
+      <rect width = '0.0' height = '12.75' y = '102.0' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '114.75' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.ElementContent (0)</text>
+    </g>
+    <g>
+      <rect width = '0.0' height = '12.75' y = '114.75' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '127.5' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.Entity (0)</text>
+    </g>
+    <g>
+      <rect width = '0.0' height = '12.75' y = '127.5' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '140.25' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.Enumeration (0)</text>
+    </g>
+    <g>
+      <rect width = '0.0' height = '12.75' y = '140.25' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '153.0' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.Leaf (0)</text>
+    </g>
+    <g>
+      <rect width = '0.0' height = '12.75' y = '153.0' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '165.75' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.Mixed (0)</text>
+    </g>
+    <g>
+      <rect width = '150.0' height = '12.75' y = '165.75' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '178.5' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.NoDefaultValue (1)</text>
+    </g>
+    <g>
+      <rect width = '0.0' height = '12.75' y = '178.5' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '191.25' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.Notation (0)</text>
+    </g>
+    <g>
+      <rect width = '0.0' height = '12.75' y = '191.25' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '204.0' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.OtherAttributeType (0)</text>
+    </g>
+    <g>
+      <rect width = '0.0' height = '12.75' y = '204.0' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '216.75' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.RestrictedElement (0)</text>
+    </g>
+    <g>
+      <rect width = '150.0' height = '12.75' y = '216.75' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '229.5' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.Sequence (1)</text>
+    </g>
+    <g>
+      <rect width = '0.0' height = '12.75' y = '229.5' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '242.25' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.TypeDescription (0)</text>
+    </g>
+  </g>
+  <g transform = 'translate(8495.375,20.0)'>
+    <rect width = '390.375' height = '292.25' x = '-217.625' y = '-10.0' fill = 'none' stroke = 'black'/>
+    <text x = '-2.4375' y = '272.25' stroke = 'black' font-size = '15.0' text-anchor = 'middle'>QMOOD::MAA</text>
+    <path d = 'M162.75,0 H0 V255.0,0 z' fill = 'none' stroke = 'black'/>
+    <g>
+      <rect width = '150.0' height = '12.75' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '12.75' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.AnyElement (100%)</text>
+    </g>
+    <g>
+      <rect width = '75.0' height = '12.75' y = '12.75' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '25.5' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.AttributeDescription (50%)</text>
+    </g>
+    <g>
+      <rect width = '150.0' height = '12.75' y = '25.5' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '38.25' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.AttributeList (100%)</text>
+    </g>
+    <g>
+      <rect width = '0.0' height = '12.75' y = '38.25' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '51.0' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.AttributeType (0%)</text>
+    </g>
+    <g>
+      <rect width = '0.0' height = '12.75' y = '51.0' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '63.75' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.Children (0%)</text>
+    </g>
+    <g>
+      <rect width = '150.0' height = '12.75' y = '63.75' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '76.5' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.Choice (100%)</text>
+    </g>
+    <g>
+      <rect width = '75.0' height = '12.75' y = '76.5' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '89.25' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.DefaultValue (50%)</text>
+    </g>
+    <g>
+      <rect width = '150.0' height = '12.75' y = '89.25' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '102.0' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.Element (100%)</text>
+    </g>
+    <g>
+      <rect width = '0.0' height = '12.75' y = '102.0' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '114.75' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.ElementContent (0%)</text>
+    </g>
+    <g>
+      <rect width = '49.949999999999996' height = '12.75' y = '114.75' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '127.5' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.Entity (33.3%)</text>
+    </g>
+    <g>
+      <rect width = '0.0' height = '12.75' y = '127.5' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '140.25' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.Enumeration (0%)</text>
+    </g>
+    <g>
+      <rect width = '75.0' height = '12.75' y = '140.25' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '153.0' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.Leaf (50%)</text>
+    </g>
+    <g>
+      <rect width = '0.0' height = '12.75' y = '153.0' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '165.75' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.Mixed (0%)</text>
+    </g>
+    <g>
+      <rect width = '99.89999999999999' height = '12.75' y = '165.75' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '178.5' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.NoDefaultValue (66.6%)</text>
+    </g>
+    <g>
+      <rect width = '75.0' height = '12.75' y = '178.5' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '191.25' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.Notation (50%)</text>
+    </g>
+    <g>
+      <rect width = '0.0' height = '12.75' y = '191.25' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '204.0' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.OtherAttributeType (0%)</text>
+    </g>
+    <g>
+      <rect width = '75.0' height = '12.75' y = '204.0' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '216.75' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.RestrictedElement (50%)</text>
+    </g>
+    <g>
+      <rect width = '150.0' height = '12.75' y = '216.75' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '229.5' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.Sequence (100%)</text>
+    </g>
+    <g>
+      <rect width = '0.0' height = '12.75' y = '229.5' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '242.25' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.TypeDescription (0%)</text>
+    </g>
+  </g>
+  <g transform = 'translate(8895.75,20.0)'>
+    <rect width = '390.375' height = '292.25' x = '-217.625' y = '-10.0' fill = 'none' stroke = 'black'/>
+    <text x = '-2.4375' y = '272.25' stroke = 'black' font-size = '15.0' text-anchor = 'middle'>QMOOD::MCC</text>
+    <path d = 'M162.75,0 H0 V255.0,0 z' fill = 'none' stroke = 'black'/>
+    <g>
+      <rect width = '0.0' height = '12.75' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '12.75' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.AnyElement (0)</text>
+    </g>
+    <g>
+      <rect width = '75.0' height = '12.75' y = '12.75' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '25.5' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.AttributeDescription (1)</text>
+    </g>
+    <g>
+      <rect width = '150.0' height = '12.75' y = '25.5' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '38.25' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.AttributeList (2)</text>
+    </g>
+    <g>
+      <rect width = '0.0' height = '12.75' y = '38.25' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '51.0' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.AttributeType (0)</text>
+    </g>
+    <g>
+      <rect width = '0.0' height = '12.75' y = '51.0' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '63.75' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.Children (0)</text>
+    </g>
+    <g>
+      <rect width = '75.0' height = '12.75' y = '63.75' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '76.5' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.Choice (1)</text>
+    </g>
+    <g>
+      <rect width = '75.0' height = '12.75' y = '76.5' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '89.25' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.DefaultValue (1)</text>
+    </g>
+    <g>
+      <rect width = '0.0' height = '12.75' y = '89.25' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '102.0' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.Element (0)</text>
+    </g>
+    <g>
+      <rect width = '0.0' height = '12.75' y = '102.0' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '114.75' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.ElementContent (0)</text>
+    </g>
+    <g>
+      <rect width = '0.0' height = '12.75' y = '114.75' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '127.5' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.Entity (0)</text>
+    </g>
+    <g>
+      <rect width = '0.0' height = '12.75' y = '127.5' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '140.25' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.Enumeration (0)</text>
+    </g>
+    <g>
+      <rect width = '0.0' height = '12.75' y = '140.25' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '153.0' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.Leaf (0)</text>
+    </g>
+    <g>
+      <rect width = '0.0' height = '12.75' y = '153.0' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '165.75' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.Mixed (0)</text>
+    </g>
+    <g>
+      <rect width = '75.0' height = '12.75' y = '165.75' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '178.5' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.NoDefaultValue (1)</text>
+    </g>
+    <g>
+      <rect width = '0.0' height = '12.75' y = '178.5' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '191.25' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.Notation (0)</text>
+    </g>
+    <g>
+      <rect width = '0.0' height = '12.75' y = '191.25' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '204.0' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.OtherAttributeType (0)</text>
+    </g>
+    <g>
+      <rect width = '0.0' height = '12.75' y = '204.0' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '216.75' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.RestrictedElement (0)</text>
+    </g>
+    <g>
+      <rect width = '75.0' height = '12.75' y = '216.75' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '229.5' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.Sequence (1)</text>
+    </g>
+    <g>
+      <rect width = '0.0' height = '12.75' y = '229.5' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '242.25' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.TypeDescription (0)</text>
+    </g>
+  </g>
+  <g transform = 'translate(9296.125,20.0)'>
+    <rect width = '390.375' height = '292.25' x = '-217.625' y = '-10.0' fill = 'none' stroke = 'black'/>
+    <text x = '-2.4375' y = '272.25' stroke = 'black' font-size = '15.0' text-anchor = 'middle'>QMOOD::MOA</text>
+    <path d = 'M162.75,0 H0 V255.0,0 z' fill = 'none' stroke = 'black'/>
+    <g>
+      <rect width = '0.0' height = '12.75' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '12.75' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.AnyElement (0)</text>
+    </g>
+    <g>
+      <rect width = '150.0' height = '12.75' y = '12.75' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '25.5' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.AttributeDescription (2)</text>
+    </g>
+    <g>
+      <rect width = '75.0' height = '12.75' y = '25.5' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '38.25' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.AttributeList (1)</text>
+    </g>
+    <g>
+      <rect width = '0.0' height = '12.75' y = '38.25' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '51.0' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.AttributeType (0)</text>
+    </g>
+    <g>
+      <rect width = '0.0' height = '12.75' y = '51.0' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '63.75' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.Children (0)</text>
+    </g>
+    <g>
+      <rect width = '75.0' height = '12.75' y = '63.75' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '76.5' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.Choice (1)</text>
+    </g>
+    <g>
+      <rect width = '150.0' height = '12.75' y = '76.5' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '89.25' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.DefaultValue (2)</text>
+    </g>
+    <g>
+      <rect width = '0.0' height = '12.75' y = '89.25' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '102.0' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.Element (0)</text>
+    </g>
+    <g>
+      <rect width = '0.0' height = '12.75' y = '102.0' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '114.75' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.ElementContent (0)</text>
+    </g>
+    <g>
+      <rect width = '0.0' height = '12.75' y = '114.75' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '127.5' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.Entity (0)</text>
+    </g>
+    <g>
+      <rect width = '0.0' height = '12.75' y = '127.5' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '140.25' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.Enumeration (0)</text>
+    </g>
+    <g>
+      <rect width = '0.0' height = '12.75' y = '140.25' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '153.0' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.Leaf (0)</text>
+    </g>
+    <g>
+      <rect width = '0.0' height = '12.75' y = '153.0' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '165.75' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.Mixed (0)</text>
+    </g>
+    <g>
+      <rect width = '150.0' height = '12.75' y = '165.75' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '178.5' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.NoDefaultValue (2)</text>
+    </g>
+    <g>
+      <rect width = '0.0' height = '12.75' y = '178.5' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '191.25' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.Notation (0)</text>
+    </g>
+    <g>
+      <rect width = '0.0' height = '12.75' y = '191.25' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '204.0' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.OtherAttributeType (0)</text>
+    </g>
+    <g>
+      <rect width = '75.0' height = '12.75' y = '204.0' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '216.75' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.RestrictedElement (1)</text>
+    </g>
+    <g>
+      <rect width = '75.0' height = '12.75' y = '216.75' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '229.5' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.Sequence (1)</text>
+    </g>
+    <g>
+      <rect width = '0.0' height = '12.75' y = '229.5' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '242.25' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.TypeDescription (0)</text>
+    </g>
+  </g>
+  <g transform = 'translate(9696.5,20.0)'>
+    <rect width = '390.375' height = '292.25' x = '-217.625' y = '-10.0' fill = 'none' stroke = 'black'/>
+    <text x = '-2.4375' y = '272.25' stroke = 'black' font-size = '15.0' text-anchor = 'middle'>QMOOD::MRA</text>
+    <path d = 'M162.75,0 H0 V255.0,0 z' fill = 'none' stroke = 'black'/>
+    <g>
+      <rect width = '0.0' height = '12.75' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '12.75' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.AnyElement (0%)</text>
+    </g>
+    <g>
+      <rect width = '0.0' height = '12.75' y = '12.75' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '25.5' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.AttributeDescription (0%)</text>
+    </g>
+    <g>
+      <rect width = '0.0' height = '12.75' y = '25.5' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '38.25' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.AttributeList (0%)</text>
+    </g>
+    <g>
+      <rect width = '0.0' height = '12.75' y = '38.25' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '51.0' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.AttributeType (0%)</text>
+    </g>
+    <g>
+      <rect width = '0.0' height = '12.75' y = '51.0' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '63.75' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.Children (0%)</text>
+    </g>
+    <g>
+      <rect width = '0.0' height = '12.75' y = '63.75' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '76.5' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.Choice (0%)</text>
+    </g>
+    <g>
+      <rect width = '150.0' height = '12.75' y = '76.5' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '89.25' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.DefaultValue (100%)</text>
+    </g>
+    <g>
+      <rect width = '0.0' height = '12.75' y = '89.25' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '102.0' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.Element (0%)</text>
+    </g>
+    <g>
+      <rect width = '0.0' height = '12.75' y = '102.0' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '114.75' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.ElementContent (0%)</text>
+    </g>
+    <g>
+      <rect width = '0.0' height = '12.75' y = '114.75' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '127.5' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.Entity (0%)</text>
+    </g>
+    <g>
+      <rect width = '0.0' height = '12.75' y = '127.5' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '140.25' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.Enumeration (0%)</text>
+    </g>
+    <g>
+      <rect width = '0.0' height = '12.75' y = '140.25' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '153.0' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.Leaf (0%)</text>
+    </g>
+    <g>
+      <rect width = '0.0' height = '12.75' y = '153.0' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '165.75' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.Mixed (0%)</text>
+    </g>
+    <g>
+      <rect width = '150.0' height = '12.75' y = '165.75' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '178.5' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.NoDefaultValue (100%)</text>
+    </g>
+    <g>
+      <rect width = '0.0' height = '12.75' y = '178.5' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '191.25' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.Notation (0%)</text>
+    </g>
+    <g>
+      <rect width = '0.0' height = '12.75' y = '191.25' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '204.0' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.OtherAttributeType (0%)</text>
+    </g>
+    <g>
+      <rect width = '0.0' height = '12.75' y = '204.0' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '216.75' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.RestrictedElement (0%)</text>
+    </g>
+    <g>
+      <rect width = '0.0' height = '12.75' y = '216.75' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '229.5' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.Sequence (0%)</text>
+    </g>
+    <g>
+      <rect width = '0.0' height = '12.75' y = '229.5' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '242.25' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.TypeDescription (0%)</text>
+    </g>
+  </g>
+  <g transform = 'translate(10096.875,20.0)'>
+    <rect width = '390.375' height = '292.25' x = '-217.625' y = '-10.0' fill = 'none' stroke = 'black'/>
+    <text x = '-2.4375' y = '272.25' stroke = 'black' font-size = '15.0' text-anchor = 'middle'>QMOOD::MRM</text>
+    <path d = 'M162.75,0 H0 V255.0,0 z' fill = 'none' stroke = 'black'/>
+    <g>
+      <rect width = '0.0' height = '12.75' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '12.75' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.AnyElement (0)</text>
+    </g>
+    <g>
+      <rect width = '150.0' height = '12.75' y = '12.75' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '25.5' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.AttributeDescription (4)</text>
+    </g>
+    <g>
+      <rect width = '75.0' height = '12.75' y = '25.5' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '38.25' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.AttributeList (2)</text>
+    </g>
+    <g>
+      <rect width = '0.0' height = '12.75' y = '38.25' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '51.0' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.AttributeType (0)</text>
+    </g>
+    <g>
+      <rect width = '0.0' height = '12.75' y = '51.0' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '63.75' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.Children (0)</text>
+    </g>
+    <g>
+      <rect width = '75.0' height = '12.75' y = '63.75' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '76.5' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.Choice (2)</text>
+    </g>
+    <g>
+      <rect width = '150.0' height = '12.75' y = '76.5' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '89.25' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.DefaultValue (4)</text>
+    </g>
+    <g>
+      <rect width = '0.0' height = '12.75' y = '89.25' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '102.0' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.Element (0)</text>
+    </g>
+    <g>
+      <rect width = '0.0' height = '12.75' y = '102.0' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '114.75' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.ElementContent (0)</text>
+    </g>
+    <g>
+      <rect width = '0.0' height = '12.75' y = '114.75' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '127.5' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.Entity (0)</text>
+    </g>
+    <g>
+      <rect width = '0.0' height = '12.75' y = '127.5' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '140.25' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.Enumeration (0)</text>
+    </g>
+    <g>
+      <rect width = '0.0' height = '12.75' y = '140.25' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '153.0' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.Leaf (0)</text>
+    </g>
+    <g>
+      <rect width = '0.0' height = '12.75' y = '153.0' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '165.75' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.Mixed (0)</text>
+    </g>
+    <g>
+      <rect width = '150.0' height = '12.75' y = '165.75' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '178.5' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.NoDefaultValue (4)</text>
+    </g>
+    <g>
+      <rect width = '0.0' height = '12.75' y = '178.5' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '191.25' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.Notation (0)</text>
+    </g>
+    <g>
+      <rect width = '0.0' height = '12.75' y = '191.25' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '204.0' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.OtherAttributeType (0)</text>
+    </g>
+    <g>
+      <rect width = '75.0' height = '12.75' y = '204.0' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '216.75' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.RestrictedElement (2)</text>
+    </g>
+    <g>
+      <rect width = '75.0' height = '12.75' y = '216.75' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '229.5' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.Sequence (2)</text>
+    </g>
+    <g>
+      <rect width = '0.0' height = '12.75' y = '229.5' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '242.25' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.TypeDescription (0)</text>
+    </g>
+  </g>
+  <g transform = 'translate(10497.25,20.0)'>
+    <rect width = '390.375' height = '292.25' x = '-217.625' y = '-10.0' fill = 'none' stroke = 'black'/>
+    <text x = '-2.4375' y = '272.25' stroke = 'black' font-size = '15.0' text-anchor = 'middle'>QMOOD::NAD</text>
+    <path d = 'M162.75,0 H0 V255.0,0 z' fill = 'none' stroke = 'black'/>
+    <g>
+      <rect width = '0.0' height = '12.75' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '12.75' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.AnyElement (0)</text>
+    </g>
+    <g>
+      <rect width = '150.0' height = '12.75' y = '12.75' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '25.5' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.AttributeDescription (2)</text>
+    </g>
+    <g>
+      <rect width = '75.0' height = '12.75' y = '25.5' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '38.25' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.AttributeList (1)</text>
+    </g>
+    <g>
+      <rect width = '0.0' height = '12.75' y = '38.25' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '51.0' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.AttributeType (0)</text>
+    </g>
+    <g>
+      <rect width = '0.0' height = '12.75' y = '51.0' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '63.75' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.Children (0)</text>
+    </g>
+    <g>
+      <rect width = '75.0' height = '12.75' y = '63.75' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '76.5' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.Choice (1)</text>
+    </g>
+    <g>
+      <rect width = '150.0' height = '12.75' y = '76.5' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '89.25' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.DefaultValue (2)</text>
+    </g>
+    <g>
+      <rect width = '0.0' height = '12.75' y = '89.25' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '102.0' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.Element (0)</text>
+    </g>
+    <g>
+      <rect width = '0.0' height = '12.75' y = '102.0' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '114.75' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.ElementContent (0)</text>
+    </g>
+    <g>
+      <rect width = '0.0' height = '12.75' y = '114.75' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '127.5' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.Entity (0)</text>
+    </g>
+    <g>
+      <rect width = '0.0' height = '12.75' y = '127.5' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '140.25' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.Enumeration (0)</text>
+    </g>
+    <g>
+      <rect width = '0.0' height = '12.75' y = '140.25' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '153.0' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.Leaf (0)</text>
+    </g>
+    <g>
+      <rect width = '0.0' height = '12.75' y = '153.0' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '165.75' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.Mixed (0)</text>
+    </g>
+    <g>
+      <rect width = '150.0' height = '12.75' y = '165.75' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '178.5' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.NoDefaultValue (2)</text>
+    </g>
+    <g>
+      <rect width = '0.0' height = '12.75' y = '178.5' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '191.25' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.Notation (0)</text>
+    </g>
+    <g>
+      <rect width = '0.0' height = '12.75' y = '191.25' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '204.0' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.OtherAttributeType (0)</text>
+    </g>
+    <g>
+      <rect width = '75.0' height = '12.75' y = '204.0' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '216.75' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.RestrictedElement (1)</text>
+    </g>
+    <g>
+      <rect width = '75.0' height = '12.75' y = '216.75' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '229.5' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.Sequence (1)</text>
+    </g>
+    <g>
+      <rect width = '0.0' height = '12.75' y = '229.5' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '242.25' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.TypeDescription (0)</text>
+    </g>
+  </g>
+  <g transform = 'translate(10897.625,20.0)'>
+    <rect width = '390.375' height = '292.25' x = '-217.625' y = '-10.0' fill = 'none' stroke = 'black'/>
+    <text x = '-2.4375' y = '272.25' stroke = 'black' font-size = '15.0' text-anchor = 'middle'>QMOOD::NOA</text>
+    <path d = 'M162.75,0 H0 V255.0,0 z' fill = 'none' stroke = 'black'/>
+    <g>
+      <rect width = '150.0' height = '12.75' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '12.75' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.AnyElement (2)</text>
+    </g>
+    <g>
+      <rect width = '75.0' height = '12.75' y = '12.75' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '25.5' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.AttributeDescription (1)</text>
+    </g>
+    <g>
+      <rect width = '75.0' height = '12.75' y = '25.5' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '38.25' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.AttributeList (1)</text>
+    </g>
+    <g>
+      <rect width = '0.0' height = '12.75' y = '38.25' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '51.0' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.AttributeType (0)</text>
+    </g>
+    <g>
+      <rect width = '75.0' height = '12.75' y = '51.0' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '63.75' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.Children (1)</text>
+    </g>
+    <g>
+      <rect width = '150.0' height = '12.75' y = '63.75' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '76.5' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.Choice (2)</text>
+    </g>
+    <g>
+      <rect width = '150.0' height = '12.75' y = '76.5' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '89.25' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.DefaultValue (2)</text>
+    </g>
+    <g>
+      <rect width = '75.0' height = '12.75' y = '89.25' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '102.0' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.Element (1)</text>
+    </g>
+    <g>
+      <rect width = '0.0' height = '12.75' y = '102.0' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '114.75' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.ElementContent (0)</text>
+    </g>
+    <g>
+      <rect width = '75.0' height = '12.75' y = '114.75' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '127.5' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.Entity (1)</text>
+    </g>
+    <g>
+      <rect width = '75.0' height = '12.75' y = '127.5' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '140.25' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.Enumeration (1)</text>
+    </g>
+    <g>
+      <rect width = '150.0' height = '12.75' y = '140.25' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '153.0' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.Leaf (2)</text>
+    </g>
+    <g>
+      <rect width = '75.0' height = '12.75' y = '153.0' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '165.75' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.Mixed (1)</text>
+    </g>
+    <g>
+      <rect width = '150.0' height = '12.75' y = '165.75' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '178.5' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.NoDefaultValue (2)</text>
+    </g>
+    <g>
+      <rect width = '75.0' height = '12.75' y = '178.5' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '191.25' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.Notation (1)</text>
+    </g>
+    <g>
+      <rect width = '0.0' height = '12.75' y = '191.25' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '204.0' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.OtherAttributeType (0)</text>
+    </g>
+    <g>
+      <rect width = '150.0' height = '12.75' y = '204.0' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '216.75' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.RestrictedElement (2)</text>
+    </g>
+    <g>
+      <rect width = '150.0' height = '12.75' y = '216.75' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '229.5' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.Sequence (2)</text>
+    </g>
+    <g>
+      <rect width = '0.0' height = '12.75' y = '229.5' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '242.25' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.TypeDescription (0)</text>
+    </g>
+  </g>
+  <g transform = 'translate(11298.0,20.0)'>
+    <rect width = '390.375' height = '292.25' x = '-217.625' y = '-10.0' fill = 'none' stroke = 'black'/>
+    <text x = '-2.4375' y = '272.25' stroke = 'black' font-size = '15.0' text-anchor = 'middle'>QMOOD::NOD</text>
+    <path d = 'M162.75,0 H0 V255.0,0 z' fill = 'none' stroke = 'black'/>
+    <g>
+      <rect width = '37.5' height = '12.75' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '12.75' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.AnyElement (1)</text>
+    </g>
+    <g>
+      <rect width = '75.0' height = '12.75' y = '12.75' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '25.5' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.AttributeDescription (2)</text>
+    </g>
+    <g>
+      <rect width = '37.5' height = '12.75' y = '25.5' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '38.25' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.AttributeList (1)</text>
+    </g>
+    <g>
+      <rect width = '0.0' height = '12.75' y = '38.25' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '51.0' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.AttributeType (0)</text>
+    </g>
+    <g>
+      <rect width = '37.5' height = '12.75' y = '51.0' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '63.75' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.Children (1)</text>
+    </g>
+    <g>
+      <rect width = '37.5' height = '12.75' y = '63.75' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '76.5' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.Choice (1)</text>
+    </g>
+    <g>
+      <rect width = '150.0' height = '12.75' y = '76.5' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '89.25' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.DefaultValue (4)</text>
+    </g>
+    <g>
+      <rect width = '37.5' height = '12.75' y = '89.25' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '102.0' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.Element (1)</text>
+    </g>
+    <g>
+      <rect width = '0.0' height = '12.75' y = '102.0' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '114.75' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.ElementContent (0)</text>
+    </g>
+    <g>
+      <rect width = '112.5' height = '12.75' y = '114.75' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '127.5' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.Entity (3)</text>
+    </g>
+    <g>
+      <rect width = '37.5' height = '12.75' y = '127.5' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '140.25' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.Enumeration (1)</text>
+    </g>
+    <g>
+      <rect width = '75.0' height = '12.75' y = '140.25' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '153.0' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.Leaf (2)</text>
+    </g>
+    <g>
+      <rect width = '37.5' height = '12.75' y = '153.0' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '165.75' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.Mixed (1)</text>
+    </g>
+    <g>
+      <rect width = '112.5' height = '12.75' y = '165.75' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '178.5' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.NoDefaultValue (3)</text>
+    </g>
+    <g>
+      <rect width = '75.0' height = '12.75' y = '178.5' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '191.25' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.Notation (2)</text>
+    </g>
+    <g>
+      <rect width = '37.5' height = '12.75' y = '191.25' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '204.0' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.OtherAttributeType (1)</text>
+    </g>
+    <g>
+      <rect width = '75.0' height = '12.75' y = '204.0' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '216.75' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.RestrictedElement (2)</text>
+    </g>
+    <g>
+      <rect width = '37.5' height = '12.75' y = '216.75' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '229.5' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.Sequence (1)</text>
+    </g>
+    <g>
+      <rect width = '37.5' height = '12.75' y = '229.5' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '242.25' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.TypeDescription (1)</text>
+    </g>
+  </g>
+  <g transform = 'translate(11698.375,20.0)'>
+    <rect width = '390.375' height = '292.25' x = '-217.625' y = '-10.0' fill = 'none' stroke = 'black'/>
+    <text x = '-2.4375' y = '272.25' stroke = 'black' font-size = '15.0' text-anchor = 'middle'>QMOOD::NOR</text>
+    <path d = 'M162.75,0 H0 V255.0,0 z' fill = 'none' stroke = 'black'/>
+    <g>
+      <rect width = '0.0' height = '12.75' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '12.75' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.AnyElement (0)</text>
+    </g>
+    <g>
+      <rect width = '150.0' height = '12.75' y = '12.75' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '25.5' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.AttributeDescription (1)</text>
+    </g>
+    <g>
+      <rect width = '150.0' height = '12.75' y = '25.5' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '38.25' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.AttributeList (1)</text>
+    </g>
+    <g>
+      <rect width = '0.0' height = '12.75' y = '38.25' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '51.0' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.AttributeType (0)</text>
+    </g>
+    <g>
+      <rect width = '0.0' height = '12.75' y = '51.0' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '63.75' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.Children (0)</text>
+    </g>
+    <g>
+      <rect width = '150.0' height = '12.75' y = '63.75' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '76.5' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.Choice (1)</text>
+    </g>
+    <g>
+      <rect width = '150.0' height = '12.75' y = '76.5' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '89.25' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.DefaultValue (1)</text>
+    </g>
+    <g>
+      <rect width = '0.0' height = '12.75' y = '89.25' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '102.0' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.Element (0)</text>
+    </g>
+    <g>
+      <rect width = '0.0' height = '12.75' y = '102.0' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '114.75' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.ElementContent (0)</text>
+    </g>
+    <g>
+      <rect width = '0.0' height = '12.75' y = '114.75' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '127.5' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.Entity (0)</text>
+    </g>
+    <g>
+      <rect width = '0.0' height = '12.75' y = '127.5' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '140.25' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.Enumeration (0)</text>
+    </g>
+    <g>
+      <rect width = '0.0' height = '12.75' y = '140.25' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '153.0' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.Leaf (0)</text>
+    </g>
+    <g>
+      <rect width = '0.0' height = '12.75' y = '153.0' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '165.75' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.Mixed (0)</text>
+    </g>
+    <g>
+      <rect width = '150.0' height = '12.75' y = '165.75' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '178.5' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.NoDefaultValue (1)</text>
+    </g>
+    <g>
+      <rect width = '0.0' height = '12.75' y = '178.5' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '191.25' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.Notation (0)</text>
+    </g>
+    <g>
+      <rect width = '0.0' height = '12.75' y = '191.25' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '204.0' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.OtherAttributeType (0)</text>
+    </g>
+    <g>
+      <rect width = '0.0' height = '12.75' y = '204.0' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '216.75' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.RestrictedElement (0)</text>
+    </g>
+    <g>
+      <rect width = '150.0' height = '12.75' y = '216.75' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '229.5' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.Sequence (1)</text>
+    </g>
+    <g>
+      <rect width = '0.0' height = '12.75' y = '229.5' fill = 'grey' stroke = 'black'/>
+      <text x = '-10.0' y = '242.25' stroke = 'black' font-size = '12.75' text-anchor = 'end'>DTD.TypeDescription (0)</text>
+    </g>
+  </g>
+</svg>

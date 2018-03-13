@@ -1,0 +1,40 @@
+package example {
+
+ class AccomodationBooking {
+  attribute bookingId : Integer;
+  reference ref1PersonalDetails container : PersonalDetails oppositeOf refAccomodationBooking;
+  reference ref1CourseDetails container : CourseDetails oppositeOf refAccomodationBooking;
+  reference ref1Preference container : Preference oppositeOf refAccomodationBooking;
+ }
+
+ class PersonalDetails {
+  attribute adresse : String;
+  attribute name : String;
+  attribute age : Integer;
+  reference refAccomodationBooking : AccomodationBooking oppositeOf ref1PersonalDetails;
+ }
+
+ class CourseDetails {
+  attribute course : String;
+  attribute year : Integer;
+  reference refAccomodationBooking : AccomodationBooking oppositeOf ref1CourseDetails;
+ }
+
+ class Preference {
+  attribute hall1 : String;
+  attribute hall2 : String;
+  attribute hall3 : String;
+  attribute smoking : Boolean;
+  attribute selfcatering : Boolean;
+  reference refAccomodationBooking : AccomodationBooking oppositeOf ref1Preference;
+ }
+}
+
+package PrimitiveTypes {
+
+ datatype Integer;
+
+ datatype String;
+
+ datatype Boolean;
+}

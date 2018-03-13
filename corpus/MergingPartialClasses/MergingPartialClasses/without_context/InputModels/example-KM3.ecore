@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<km3:Metamodel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:km3="http://www.eclipse.org/gmt/2005/KM3" location="1:1-28:2">
+  <contents location="1:1-22:2" name="example">
+    <contents xsi:type="km3:Class" location="3:9-9:10" name="User">
+      <structuralFeatures xsi:type="km3:Attribute" location="4:17-4:41" name="name" lower="1" upper="1" type="//@contents.1/@contents.2"/>
+      <structuralFeatures xsi:type="km3:Attribute" location="5:17-5:43" name="userId" lower="1" upper="1" type="//@contents.1/@contents.2"/>
+      <structuralFeatures xsi:type="km3:Attribute" location="6:17-6:45" name="password" lower="1" upper="1" type="//@contents.1/@contents.2"/>
+      <structuralFeatures xsi:type="km3:Reference" location="7:17-7:59" name="person" lower="1" upper="1" type="//@contents.0/@contents.1" opposite="//@contents.0/@contents.1/@structuralFeatures.3"/>
+      <structuralFeatures xsi:type="km3:Reference" location="8:17-8:61" name="chose" lower="0" upper="-1" type="//@contents.0/@contents.2" opposite="//@contents.0/@contents.2/@structuralFeatures.0"/>
+    </contents>
+    <contents xsi:type="km3:Class" location="11:9-16:10" name="Person">
+      <structuralFeatures xsi:type="km3:Attribute" location="12:17-12:41" name="name" lower="1" upper="1" type="//@contents.1/@contents.2"/>
+      <structuralFeatures xsi:type="km3:Attribute" location="13:17-13:41" name="age" lower="1" upper="1" type="//@contents.1/@contents.1"/>
+      <structuralFeatures xsi:type="km3:Attribute" location="14:17-14:44" name="adresse" lower="1" upper="1" type="//@contents.1/@contents.2"/>
+      <structuralFeatures xsi:type="km3:Reference" location="15:17-15:57" name="user" lower="1" upper="1" type="//@contents.0/@contents.0" opposite="//@contents.0/@contents.0/@structuralFeatures.3"/>
+    </contents>
+    <contents xsi:type="km3:Class" location="18:9-20:10" name="Chose">
+      <structuralFeatures xsi:type="km3:Reference" location="19:17-19:57" name="user1" lower="1" upper="1" type="//@contents.0/@contents.0" opposite="//@contents.0/@contents.0/@structuralFeatures.4"/>
+    </contents>
+  </contents>
+  <contents location="24:1-28:2" name="PrimitiveTypes">
+    <contents xsi:type="km3:DataType" location="25:9-25:26" name="Boolean"/>
+    <contents xsi:type="km3:DataType" location="26:9-26:26" name="Integer"/>
+    <contents xsi:type="km3:DataType" location="27:9-27:25" name="String"/>
+  </contents>
+</km3:Metamodel>

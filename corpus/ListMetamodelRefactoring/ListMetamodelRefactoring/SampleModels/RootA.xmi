@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="ASCII"?>
+<tpA:RootA xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:tpA="platform:/resource/ListMetamodelRefactoring/Metamodel/TypeA.ecore" name="la racine">
+  <elms name="elm1"/>
+  <elms name="elm2"/>
+</tpA:RootA>

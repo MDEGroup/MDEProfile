@@ -1,0 +1,1278 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Folder>
+	<description>Unleash your creativity with the help of these examples!</description>
+	<name>Google Earth Examples</name>
+	<visibility>0</visibility>
+	<open>1</open>
+	<Folder>
+		<description>These are just some of the different kinds of placemarks with which you
+			can mark your favourite places</description>
+		<name>Placemarks</name>
+		<LookAt>
+			<longitude>-122.0839597145766</longitude>
+			<latitude>37.42222904525232</latitude>
+			<range>500.6566641072245</range>
+			<tilt>40.5575073395506</tilt>
+			<heading>-148.4122922628044</heading>
+		</LookAt>
+		<visibility>0</visibility>
+		<open>0</open>
+		<Placemark>
+			<description>Attached to ground. Intelligently places itself at the height of
+				the underlying terrain.</description>
+			<name>Simple placemark</name>
+			<LookAt>
+				<longitude>-122.0839597145766</longitude>
+				<latitude>37.42222904525232</latitude>
+				<range>500.6566641072245</range>
+				<tilt>40.5575073395506</tilt>
+				<heading>-148.4122922628044</heading>
+			</LookAt>
+			<visibility>0</visibility>
+			<styleUrl>#khStyle652</styleUrl>
+			<Point>
+				<extrude>0</extrude>
+				<altitudeMode>clampToGround</altitudeMode>
+				<coordinates>
+					-122.0822035425683,37.42228990140251,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description>Floats a defined distance above the ground.</description>
+			<name>Floating placemark</name>
+			<LookAt>
+				<longitude>-122.0839597145766</longitude>
+				<latitude>37.42222904525232</latitude>
+				<range>500.6566641072245</range>
+				<tilt>40.5575073395506</tilt>
+				<heading>-148.4122922628044</heading>
+			</LookAt>
+			<visibility>0</visibility>
+			<styleUrl>#khStyle652</styleUrl>
+			<Style>
+				<IconStyle>
+					<Icon>
+						<href>root://icons/palette-4.png</href>
+						<x>128</x>
+						<y>128</y>
+						<w>32</w>
+						<h>32</h>
+					</Icon>
+				</IconStyle>
+			</Style>
+			<Point>
+				<extrude>0</extrude>
+				<altitudeMode>relativeToGround</altitudeMode>
+				<coordinates>-122.084075,37.4220033612141,50</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description>Tethered to the ground by a customizable
+				&quot;tail&quot;</description>
+			<name>Tethethed placemark</name>
+			<LookAt>
+				<longitude>-122.0845787421525</longitude>
+				<latitude>37.42215078737763</latitude>
+				<range>365.2646606980322</range>
+				<tilt>40.55750733918048</tilt>
+				<heading>-148.4126684946234</heading>
+			</LookAt>
+			<visibility>0</visibility>
+			<styleUrl>#khStyle662</styleUrl>
+			<Style>
+				<LineStyle>
+					<width>2</width>
+				</LineStyle>
+				<IconStyle>
+					<Icon>
+						<href>root://icons/palette-3.png</href>
+						<x>96</x>
+						<y>160</y>
+						<w>32</w>
+						<h>32</h>
+					</Icon>
+				</IconStyle>
+			</Style>
+			<Point>
+				<extrude>1</extrude>
+				<altitudeMode>relativeToGround</altitudeMode>
+				<coordinates>
+					-122.0857667006183,37.42156927867553,50</coordinates>
+			</Point>
+		</Placemark>
+	</Folder>
+	<Folder>
+		<description>With KML it is easy to create rich, desriptive markup to annotate and
+			enrich your placemarks</description>
+		<name>Styles and Markup</name>
+		<LookAt>
+			<longitude>-122.0845787422371</longitude>
+			<latitude>37.42215078726837</latitude>
+			<range>365.2646826292919</range>
+			<tilt>40.55750733930874</tilt>
+			<heading>-148.4126777488172</heading>
+		</LookAt>
+		<visibility>0</visibility>
+		<open>0</open>
+		<Document>
+			<description>Place your mouse over the icon to see it display the new
+				icon</description>
+			<name>Simple Icon Rollover</name>
+			<LookAt>
+				<longitude>-122.0856552124024</longitude>
+				<latitude>37.4224281311035</latitude>
+				<range>265.8520424250024</range>
+				<tilt>-9.39747581180414e-022</tilt>
+				<heading>-3.876582019397347e-014</heading>
+			</LookAt>
+			<visibility>0</visibility>
+			<StyleMap id="khStyleMap572">
+				<Pair id="khPair573">
+					<key>normal</key>
+					<styleUrl>#normalPlacemark</styleUrl>
+				</Pair>
+				<Pair id="khPair574">
+					<key>highlight</key>
+					<styleUrl>#highlightPlacemark</styleUrl>
+				</Pair>
+			</StyleMap>
+			<Style id="highlightPlacemark">
+				<IconStyle>
+					<Icon>
+						<href>
+							http://bbs.keyhole.com/ubb/z0302a1700/google_icon.jpg</href>
+					</Icon>
+				</IconStyle>
+			</Style>
+			<Style id="khStyle565">
+				<IconStyle id="khIconStyle569">
+					<Icon>
+						<href>
+							http://bbs.keyhole.com/ubb/z0302a1700/keyhole_icon.jpg</href>
+					</Icon>
+				</IconStyle>
+			</Style>
+			<Style id="khStyle575">
+				<IconStyle id="khIconStyle579">
+					<Icon>
+						<href>
+							http://bbs.keyhole.com/ubb/z0302a1700/google_icon.jpg</href>
+					</Icon>
+				</IconStyle>
+			</Style>
+			<Style id="normalPlacemark">
+				<IconStyle>
+					<Icon>
+						<href>
+							http://bbs.keyhole.com/ubb/z0302a1700/keyhole_icon.jpg</href>
+					</Icon>
+				</IconStyle>
+			</Style>
+			<StyleMap id="exampleStyleMap">
+				<Pair>
+					<key>normal</key>
+					<styleUrl>#normalPlacemark</styleUrl>
+				</Pair>
+				<Pair>
+					<key>highlight</key>
+					<styleUrl>#highlightPlacemark</styleUrl>
+				</Pair>
+			</StyleMap>
+			<Placemark>
+				<name>Example Placemark</name>
+				<visibility>0</visibility>
+				<styleUrl>#exampleStyleMap</styleUrl>
+				<Point>
+					<extrude>0</extrude>
+					<altitudeMode>clampToGround</altitudeMode>
+					<coordinates>
+						-122.0856545755255,37.42243077405461,0</coordinates>
+				</Point>
+			</Placemark>
+		</Document>
+		<Placemark>
+			<description>
+				<![CDATA[Click on the blue link!<br><br>
+Placemark descriptions can be enriched by using many standard HTML tags.<br>
+For example:
+<hr>
+Styles:<br>
+<i>Italics</i>, 
+<b>Bold</b>, 
+<u>Underlined</u>, 
+<s>Strike Out</s>, 
+subscript<sub>subscript</sub>, 
+superscript<sup>superscript</sup>, 
+<big>Big</big>, 
+<small>Small</small>, 
+<tt>Typewriter</tt>, 
+<em>Emphasized</em>, 
+<strong>Strong</strong>, 
+<code>Code</code>
+<hr>
+Fonts:<br> 
+<font color="red">red by name</font>, 
+<font color="#408010">leaf green by hexadecimal RGB</font>
+<br>
+<font size=1>size 1</font>, 
+<font size=2>size 2</font>, 
+<font size=3>size 3</font>, 
+<font size=4>size 4</font>, 
+<font size=5>size 5</font>, 
+<font size=6>size 6</font>, 
+<font size=7>size 7</font>
+<br>
+<font face=times>Times</font>, 
+<font face=verdana>Verdana</font>, 
+<font face=arial>Arial</font><br>
+<hr>
+Links: 
+<br>
+<a href="http://earth.google.com/">Google Earth!</a>
+<br>
+<hr>
+Alignment:<br>
+<p align=left>left</p>
+<p align=center>center</p>
+<p align=right>right</p>
+<hr>
+Ordered Lists:<br>
+<ol><li>First</li><li>Second</li><li>Third</li></ol>
+<ol type="a"><li>First</li><li>Second</li><li>Third</li></ol>
+<ol type="A"><li>First</li><li>Second</li><li>Third</li></ol>
+<hr>
+Unordered Lists:<br>
+<ul><li>A</li><li>B</li><li>C</li></ul>
+<ul type="circle"><li>A</li><li>B</li><li>C</li></ul>
+<ul type="square"><li>A</li><li>B</li><li>C</li></ul>
+<hr>
+Definitions:<br>
+<dl>
+<dt>Google:</dt><dd>The best thing since sliced bread</dd>
+</dl>
+<hr>
+Centered:<br><center>
+Time present and time past<br>
+Are both perhaps present in time future,<br>
+And time future contained in time past.<br>
+If all time is eternally present<br>
+All time is unredeemable.<br>
+</center>
+<hr>
+Block Quote:
+<br>
+<blockquote>
+We shall not cease from exploration<br>
+And the end of all our exploring<br>
+Will be to arrive where we started<br>
+And know the place for the first time.<br>
+<i>-- T.S. Eliot</i>
+</blockquote>
+<br>
+<hr>
+Headings:<br>
+<h1>Header 1</h1>
+<h2>Header 2</h2>
+<h3>Header 3</h3>
+<h3>Header 4</h4>
+<h3>Header 5</h5>
+<hr>
+Images:<br>
+<i>Remote image</i><br>
+<img src="http://bbs.keyhole.com/ubb/z0302a1700/googleSample.png"><br>
+<i>Scaled image</i><br>
+<img src="http://bbs.keyhole.com/ubb/z0302a1700/googleSample.png" width=100><br>
+<hr>
+Simple Tables:<br>
+<table border="1" padding="1">
+<tr><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td></tr>
+<tr><td>a</td><td>b</td><td>c</td><td>d</td><td>e</td></tr>
+</table>
+<br>
+[Did you notice that double-clicking on the placemark doesn't cause the viewer to take you anywhere? This is because it is possible to directly author a "placeless placemark". If you look at the code for this example, you will see that it has neither a point coordinate nor a LookAt element.]]]>
+			</description>
+			<name>Descriptive HTML</name>
+			<visibility>0</visibility>
+		</Placemark>
+	</Folder>
+	<Folder>
+		<description>Examples of ground overlays</description>
+		<name>Ground Overlays</name>
+		<visibility>0</visibility>
+		<open>0</open>
+		<GroundOverlay>
+			<description>Overlay shows Mount Etna erupting on July 13th,
+				2001.</description>
+			<name>Large-scale overlay on terrain</name>
+			<LookAt id="khLookAt802">
+				<longitude>15.02468937557116</longitude>
+				<latitude>37.67395167941667</latitude>
+				<range>30350.36838438907</range>
+				<tilt>58.31228652890705</tilt>
+				<heading>-16.5581842842829</heading>
+			</LookAt>
+			<visibility>0</visibility>
+			<Icon>
+				<href>http://bbs.keyhole.com/ubb/z0302a1700/etna.jpg</href>
+			</Icon>
+			<drawOrder>0</drawOrder>
+			<LatLonBox id="khLatLonBox804">
+				<north>37.91904192681665</north>
+				<south>37.46543388598137</south>
+				<east>15.35832653742206</east>
+				<west>14.60128369746704</west>
+				<rotation>-0.1556640799496235</rotation>
+			</LatLonBox>
+		</GroundOverlay>
+	</Folder>
+	<Folder>
+		<description>Screen overlays have to be authored directly in KML. These examples
+			illustrate absolute and dymanic positioning in screen space.</description>
+		<name>Screen Overlays</name>
+		<visibility>0</visibility>
+		<open>0</open>
+		<ScreenOverlay id="khScreenOverlay756">
+			<description>This screen overlay uses fractional positioning to put the image
+				in the exact center of the screen</description>
+			<name>Simple crosshairs</name>
+			<visibility>0</visibility>
+			<Icon>
+				<href>
+					http://bbs.keyhole.com/ubb/z0302a1700/crosshairs.png</href>
+			</Icon>
+			<drawOrder>0</drawOrder>
+			<overlayXY x="0.5" y="0.5" xunits="fraction" yunits="fraction"/>
+			<screenXY x="0.5" y="0.5" xunits="fraction" yunits="fraction"/>
+			<rotationXY x="0.5" y="0.5" xunits="fraction" yunits="fraction"/>
+			<size x="0" y="0" xunits="pixels" yunits="pixels"/>
+			<rotation>0</rotation>
+		</ScreenOverlay>
+		<ScreenOverlay>
+			<name>Absolute Positioning: Top left</name>
+			<visibility>0</visibility>
+			<Icon>
+				<href>http://bbs.keyhole.com/ubb/z0302a1700/top_left.jpg</href>
+			</Icon>
+			<drawOrder>0</drawOrder>
+			<overlayXY x="0" y="1" xunits="fraction" yunits="fraction"/>
+			<screenXY x="0" y="1" xunits="fraction" yunits="fraction"/>
+			<rotationXY x="0" y="0" xunits="fraction" yunits="fraction"/>
+			<size x="0" y="0" xunits="fraction" yunits="fraction"/>
+			<rotation>0</rotation>
+		</ScreenOverlay>
+		<ScreenOverlay>
+			<name>Absolute Positioning: Top right</name>
+			<visibility>0</visibility>
+			<Icon>
+				<href>http://bbs.keyhole.com/ubb/z0302a1700/top_right.jpg</href>
+			</Icon>
+			<drawOrder>0</drawOrder>
+			<overlayXY x="1" y="1" xunits="fraction" yunits="fraction"/>
+			<screenXY x="1" y="1" xunits="fraction" yunits="fraction"/>
+			<rotationXY x="0" y="0" xunits="fraction" yunits="fraction"/>
+			<size x="0" y="0" xunits="fraction" yunits="fraction"/>
+			<rotation>0</rotation>
+		</ScreenOverlay>
+		<ScreenOverlay>
+			<name>Absolute Positioning: Bottom left</name>
+			<visibility>0</visibility>
+			<Icon>
+				<href>
+					http://bbs.keyhole.com/ubb/z0302a1700/bottom_left.jpg</href>
+			</Icon>
+			<drawOrder>0</drawOrder>
+			<overlayXY x="0" y="-1" xunits="fraction" yunits="fraction"/>
+			<screenXY x="0" y="0" xunits="fraction" yunits="fraction"/>
+			<rotationXY x="0" y="0" xunits="fraction" yunits="fraction"/>
+			<size x="0" y="0" xunits="fraction" yunits="fraction"/>
+			<rotation>0</rotation>
+		</ScreenOverlay>
+		<ScreenOverlay>
+			<name>Absolute Positioning: Bottom right</name>
+			<visibility>0</visibility>
+			<Icon>
+				<href>
+					http://bbs.keyhole.com/ubb/z0302a1700/bottom_right.jpg</href>
+			</Icon>
+			<drawOrder>0</drawOrder>
+			<overlayXY x="1" y="-1" xunits="fraction" yunits="fraction"/>
+			<screenXY x="1" y="0" xunits="fraction" yunits="fraction"/>
+			<rotationXY x="0" y="0" xunits="fraction" yunits="fraction"/>
+			<size x="0" y="0" xunits="fraction" yunits="fraction"/>
+			<rotation>0</rotation>
+		</ScreenOverlay>
+		<ScreenOverlay>
+			<name>Dynamic Positioning: Top of screen</name>
+			<visibility>0</visibility>
+			<Icon>
+				<href>
+					http://bbs.keyhole.com/ubb/z0302a1700/dynamic_screenoverlay.jpg</href>
+			</Icon>
+			<drawOrder>0</drawOrder>
+			<overlayXY x="0" y="1" xunits="fraction" yunits="fraction"/>
+			<screenXY x="0" y="1" xunits="fraction" yunits="fraction"/>
+			<rotationXY x="0" y="0" xunits="fraction" yunits="fraction"/>
+			<size x="1" y="0.2" xunits="fraction" yunits="fraction"/>
+			<rotation>0</rotation>
+		</ScreenOverlay>
+		<ScreenOverlay>
+			<name>Dynamic Positioning: Right of screen</name>
+			<visibility>0</visibility>
+			<Icon>
+				<href>
+					http://bbs.keyhole.com/ubb/z0302a1700/dynamic_right.jpg</href>
+			</Icon>
+			<drawOrder>0</drawOrder>
+			<overlayXY x="1" y="1" xunits="fraction" yunits="fraction"/>
+			<screenXY x="1" y="1" xunits="fraction" yunits="fraction"/>
+			<rotationXY x="0" y="0" xunits="fraction" yunits="fraction"/>
+			<size x="0" y="1" xunits="fraction" yunits="fraction"/>
+			<rotation>0</rotation>
+		</ScreenOverlay>
+	</Folder>
+	<Folder>
+		<description>Examples of paths. Note that the tessellate tag is by default set to 1.
+			If you want to create untessellated lines, they must be authored (or edited)
+			directly in KML.</description>
+		<name>Paths</name>
+		<visibility>0</visibility>
+		<open>0</open>
+		<Placemark id="khPlacemark552">
+			<description>
+				<![CDATA[If the <tessellate> tag has a value of 1, the line will contour to the underlying terrain]]>
+			</description>
+			<name>Tessellated</name>
+			<LookAt>
+				<longitude>-112.0822680013139</longitude>
+				<latitude>36.09825589333556</latitude>
+				<range>2889.145007690472</range>
+				<tilt>62.04855796276328</tilt>
+				<heading>103.8120432044965</heading>
+			</LookAt>
+			<visibility>0</visibility>
+			<LineString id="khLineString553">
+				<extrude>0</extrude>
+				<tessellate>1</tessellate>
+				<altitudeMode>clampToGround</altitudeMode>
+				<coordinates> -112.0814237830345,36.10677870477137,0
+					-112.0870267752693,36.0905099328766,0 </coordinates>
+			</LineString>
+		</Placemark>
+		<Placemark>
+			<description>
+				<![CDATA[If the <tessellate> tag has a value of 0, the line follow a simple straight-line path from point to point]]>
+			</description>
+			<name>Untesselated</name>
+			<LookAt>
+				<longitude>-112.0822680013139</longitude>
+				<latitude>36.09825589333556</latitude>
+				<range>2889.145007690472</range>
+				<tilt>62.04855796276328</tilt>
+				<heading>103.8120432044965</heading>
+			</LookAt>
+			<visibility>0</visibility>
+			<LineString>
+				<extrude>0</extrude>
+				<tessellate>0</tessellate>
+				<altitudeMode>clampToGround</altitudeMode>
+				<coordinates> -112.080622229595,36.10673460007995,0
+					-112.085242575315,36.09049598612422,0 </coordinates>
+			</LineString>
+		</Placemark>
+		<Placemark id="khPlacemark804">
+			<description>Transparent purple line</description>
+			<name>Absolute</name>
+			<LookAt>
+				<longitude>-112.2719329043177</longitude>
+				<latitude>36.08890633450894</latitude>
+				<range>2569.386744398339</range>
+				<tilt>44.60763714063257</tilt>
+				<heading>-106.8161545998597</heading>
+			</LookAt>
+			<visibility>0</visibility>
+			<styleUrl>#khStyle580</styleUrl>
+			<Style id="khStyle1193">
+				<LineStyle id="khLineStyle1196">
+					<color>7fff00ff</color>
+					<width>4</width>
+				</LineStyle>
+				<PolyStyle id="khPolyStyle1195">
+					<color>7f00ff00</color>
+				</PolyStyle>
+			</Style>
+			<LineString id="khLineString1200">
+				<extrude>0</extrude>
+				<tessellate>1</tessellate>
+				<altitudeMode>absolute</altitudeMode>
+				<coordinates> -112.265654928602,36.09447672602546,2357
+					-112.2660384528238,36.09342608838671,2357
+					-112.2668139013453,36.09251058776881,2357
+					-112.2677826834445,36.09189827357996,2357
+					-112.2688557510952,36.0913137941187,2357
+					-112.2694810717219,36.0903677207521,2357
+					-112.2695268555611,36.08932171487285,2357
+					-112.2690144567276,36.08850916060472,2357
+					-112.2681528815339,36.08753813597956,2357
+					-112.2670588176031,36.08682685262568,2357
+					-112.2657374587321,36.08646312301303,2357 </coordinates>
+			</LineString>
+		</Placemark>
+		<Placemark id="khPlacemark674">
+			<description>Transparent green wall with yellow outlines</description>
+			<name>Absolute Extruded</name>
+			<LookAt id="khLookAt807">
+				<longitude>-112.2643334742529</longitude>
+				<latitude>36.08563154742419</latitude>
+				<range>4451.842204068102</range>
+				<tilt>44.61038665812578</tilt>
+				<heading>-125.7518698668815</heading>
+			</LookAt>
+			<visibility>0</visibility>
+			<styleUrl>#khStyle580</styleUrl>
+			<Style id="khStyle808">
+				<LineStyle id="khLineStyle811">
+					<color>ff00ffff</color>
+					<width>4</width>
+				</LineStyle>
+				<PolyStyle id="khPolyStyle810">
+					<color>7f00ff00</color>
+				</PolyStyle>
+			</Style>
+			<LineString id="khLineString815">
+				<extrude>1</extrude>
+				<tessellate>1</tessellate>
+				<altitudeMode>absolute</altitudeMode>
+				<coordinates> -112.2550785337791,36.07954952145647,2357
+					-112.2549277039738,36.08117083492122,2357
+					-112.2552505069063,36.08260761307279,2357
+					-112.2564540158376,36.08395660588506,2357
+					-112.2580238976449,36.08511401044813,2357
+					-112.2595218489022,36.08584355239394,2357
+					-112.2608216347552,36.08612634548589,2357
+					-112.262073428656,36.08626019085147,2357
+					-112.2633204928495,36.08621519860091,2357
+					-112.2644963846444,36.08627897945274,2357
+					-112.2656969554589,36.08649599090644,2357 </coordinates>
+			</LineString>
+		</Placemark>
+		<Placemark id="khPlacemark1368">
+			<description>Black line (10 pixels wide), height tracks
+				terrain</description>
+			<name>Relative</name>
+			<LookAt>
+				<longitude>-112.2580438551384</longitude>
+				<latitude>36.1072674824385</latitude>
+				<range>2927.61105910266</range>
+				<tilt>44.61324882043339</tilt>
+				<heading>4.947421249553717</heading>
+			</LookAt>
+			<visibility>0</visibility>
+			<styleUrl>#khStyle580</styleUrl>
+			<Style id="khStyle1369">
+				<LineStyle id="khLineStyle1372">
+					<color>87000000</color>
+					<width>10</width>
+				</LineStyle>
+			</Style>
+			<LineString id="khLineString1376">
+				<extrude>0</extrude>
+				<tessellate>1</tessellate>
+				<altitudeMode>relativeToGround</altitudeMode>
+				<coordinates> -112.2532845153347,36.09886943729116,645
+					-112.2540466121145,36.09919570465255,645
+					-112.254734666947,36.09984998366178,645
+					-112.255493345654,36.10051310621746,645
+					-112.2563157098468,36.10108441943419,645
+					-112.2568033076439,36.10159722088088,645
+					-112.257494011321,36.10204323542867,645
+					-112.2584106072308,36.10229131995655,645
+					-112.2596588987972,36.10240001286358,645
+					-112.2610581199487,36.10213176873407,645
+					-112.2626285262793,36.10157011437219,645 </coordinates>
+			</LineString>
+		</Placemark>
+		<Placemark id="khPlacemark918">
+			<description>Opaque gray walls with black outline, height tracks
+				terrain</description>
+			<name>Relative Extruded</name>
+			<LookAt>
+				<longitude>-112.2683594333433</longitude>
+				<latitude>36.09884362144909</latitude>
+				<range>2184.193522571467</range>
+				<tilt>44.60855445139561</tilt>
+				<heading>-72.24271551768405</heading>
+			</LookAt>
+			<visibility>0</visibility>
+			<styleUrl>#khStyle580</styleUrl>
+			<Style id="khStyle919">
+				<LineStyle id="khLineStyle922">
+					<color>ff000000</color>
+					<width>4</width>
+				</LineStyle>
+			</Style>
+			<LineString id="khLineString926">
+				<extrude>1</extrude>
+				<tessellate>1</tessellate>
+				<altitudeMode>relativeToGround</altitudeMode>
+				<coordinates> -112.2656634181359,36.09445214722695,630
+					-112.2652238941097,36.09520916122063,630
+					-112.2645079986395,36.09580763864907,630
+					-112.2638827428817,36.09628572284063,630
+					-112.2635746835406,36.09679275951239,630
+					-112.2635711822407,36.09740038871899,630
+					-112.2640296531825,36.09804913435539,630
+					-112.264327720538,36.09880337400301,630
+					-112.2642436562271,36.09963644790288,630
+					-112.2639148687042,36.10055381117246,630
+					-112.2626894973474,36.10149062823369,630 </coordinates>
+			</LineString>
+		</Placemark>
+	</Folder>
+	<Folder>
+		<description>Examples of polygon shapes</description>
+		<name>Polygons</name>
+		<visibility>0</visibility>
+		<open>0</open>
+		<Document>
+			<description>Place your mouse over the icon to see it display the new
+				icon</description>
+			<name>Simple Icon Rollover</name>
+			<visibility>0</visibility>
+			<Style id="highlightPlacemark">
+				<IconStyle>
+					<Icon>
+						<href>
+							http://bbs.keyhole.com/ubb/z0302a1700/google_icon.jpg</href>
+					</Icon>
+				</IconStyle>
+			</Style>
+			<Style id="normalPlacemark">
+				<IconStyle>
+					<Icon>
+						<href>
+							http://bbs.keyhole.com/ubb/z0302a1700/keyhole_icon.jpg</href>
+					</Icon>
+				</IconStyle>
+			</Style>
+			<StyleMap id="exampleStyleMap">
+				<Pair>
+					<key>normal</key>
+					<styleUrl>#normalPlacemark</styleUrl>
+				</Pair>
+				<Pair>
+					<key>highlight</key>
+					<styleUrl>#highlightPlacemark</styleUrl>
+				</Pair>
+			</StyleMap>
+			<Placemark>
+				<name>Example Placemark</name>
+				<visibility>0</visibility>
+				<styleUrl>#exampleStyleMap</styleUrl>
+				<Point>
+					<extrude>0</extrude>
+					<altitudeMode>clampToGround</altitudeMode>
+					<coordinates>
+						-122.0856545755255,37.42243077405461,0</coordinates>
+				</Point>
+			</Placemark>
+		</Document>
+		<Folder id="khFolder764">
+			<description>A collection showing how easy it is to create 3-dimensional
+				buildings</description>
+			<name>Google&apos;s Campus</name>
+			<LookAt>
+				<longitude>-122.084120030116</longitude>
+				<latitude>37.42174011925477</latitude>
+				<range>276.7870053764046</range>
+				<tilt>53.454348562403</tilt>
+				<heading>-34.82469740081282</heading>
+			</LookAt>
+			<visibility>0</visibility>
+			<Placemark id="khPlacemark766">
+				<name>Building 40</name>
+				<visibility>0</visibility>
+				<Style id="khStyle767">
+					<LineStyle id="khLineStyle770">
+						<width>1.5</width>
+					</LineStyle>
+					<PolyStyle id="khPolyStyle769">
+						<color>7d0000ff</color>
+					</PolyStyle>
+					<IconStyle id="khIconStyle771">
+						<scale>4.244029702031485e-038</scale>
+					</IconStyle>
+				</Style>
+				<Polygon id="khPolygon774">
+					<extrude>1</extrude>
+					<altitudeMode>relativeToGround</altitudeMode>
+					<outerBoundaryIs>
+						<LinearRing id="khLinearRing775">
+							<coordinates> -122.08501956622,37.42211499771112,17
+								-122.0849834990657,37.42248924109634,17
+								-122.0849169371672,37.42247674949803,17
+								-122.0849056009025,37.42253529606009,17
+								-122.0847146454478,37.42256280605007,17
+								-122.0845901956961,37.42255339509447,17
+								-122.084317586281,37.4225238122142,17
+								-122.0842547236984,37.42256234254846,17
+								-122.0840030500614,37.42250254062454,17
+								-122.0834635938769,37.42228222928219,17
+								-122.0834826526979,37.42219772541348,17
+								-122.083051963097,37.42226120139529,17
+								-122.0829908668587,37.42224705527918,17
+								-122.0831156405824,37.42213117801204,17
+								-122.0833726117292,37.42202481787286,17
+								-122.0834346878019,37.42209841960835,17
+								-122.083531755758,37.42207753539115,17
+								-122.083909041308,37.42196145324033,17
+								-122.0839936910748,37.42227344775009,17
+								-122.08501956622,37.42211499771112,17
+								</coordinates>
+						</LinearRing>
+					</outerBoundaryIs>
+				</Polygon>
+			</Placemark>
+			<Placemark id="khPlacemark776">
+				<name>Building 41</name>
+				<visibility>0</visibility>
+				<Style id="khStyle777">
+					<LineStyle id="khLineStyle780">
+						<width>1.5</width>
+					</LineStyle>
+					<PolyStyle id="khPolyStyle779">
+						<color>7dff0000</color>
+					</PolyStyle>
+					<IconStyle id="khIconStyle781">
+						<scale>4.244029702031485e-038</scale>
+					</IconStyle>
+				</Style>
+				<Polygon id="khPolygon784">
+					<extrude>1</extrude>
+					<altitudeMode>relativeToGround</altitudeMode>
+					<outerBoundaryIs>
+						<LinearRing id="khLinearRing785">
+							<coordinates> -122.0853382555126,37.42223610664351,25
+								-122.0853318536943,37.4221739253251,25
+								-122.085446594713,37.42214674232767,25
+								-122.0855027192153,37.42220480064276,25
+								-122.0855549777737,37.42214920428896,25
+								-122.0855949924034,37.42217200415619,25
+								-122.0856951980172,37.42206946271753,25
+								-122.0857656320704,37.42207986818701,25
+								-122.0858330634199,37.42210072723292,25
+								-122.0858804062037,37.42212620720378,25
+								-122.0859392675755,37.42216348297005,25
+								-122.0859131253064,37.42222869807702,25
+								-122.0859378265507,37.42223731315458,25
+								-122.0859103982515,37.42227680787222,25
+								-122.0858703567181,37.4223098329879,25
+								-122.0857934929237,37.42227187713122,25
+								-122.085767446047,37.42229023914588,25
+								-122.0860135827987,37.42244539633496,25
+								-122.0856808433546,37.42277253285285,25
+								-122.0852022770712,37.42245615613076,25
+								-122.0854047123013,37.42227639382812,25
+								-122.0853382555126,37.42223610664351,25
+								</coordinates>
+						</LinearRing>
+					</outerBoundaryIs>
+				</Polygon>
+			</Placemark>
+			<Placemark id="khPlacemark786">
+				<name>Building 42</name>
+				<visibility>0</visibility>
+				<Style id="khStyle787">
+					<LineStyle id="khLineStyle790">
+						<width>1.5</width>
+					</LineStyle>
+					<PolyStyle id="khPolyStyle789">
+						<color>8f00ff00</color>
+					</PolyStyle>
+					<IconStyle id="khIconStyle791">
+						<scale>4.244029702031485e-038</scale>
+					</IconStyle>
+				</Style>
+				<Polygon id="khPolygon794">
+					<extrude>1</extrude>
+					<altitudeMode>relativeToGround</altitudeMode>
+					<outerBoundaryIs>
+						<LinearRing id="khLinearRing795">
+							<coordinates> -122.0859290635421,37.42139369541216,25
+								-122.085791835592,37.42136750612213,25
+								-122.0857977061047,37.42131874963533,25
+								-122.0854895360885,37.42128794616325,25
+								-122.0854419375475,37.4215301634753,25
+								-122.0854852513714,37.42154234050855,25
+								-122.0854798714853,37.42162489319049,25
+								-122.0854456942235,37.42163602260002,25
+								-122.0854703574229,37.42168017644806,25
+								-122.0855236762464,37.42166815419937,25
+								-122.0855328128851,37.4216860362041,25
+								-122.0855438563166,37.42178426619047,25
+								-122.085583092873,37.42181858617571,25
+								-122.0856359776748,37.42183031672494,25
+								-122.0857184714666,37.42182197678297,25
+								-122.0857772553104,37.42180558867113,25
+								-122.0858168690914,37.42176674331163,25
+								-122.0858291296256,37.42172366441243,25
+								-122.0858915851655,37.42172952398134,25
+								-122.0858866397592,37.42179646047247,25
+								-122.0861100055468,37.42181320706845,25
+								-122.086130768649,37.42162390232544,25
+								-122.0860733155441,37.42160051879284,25
+								-122.0860536543681,37.42154155319064,25
+								-122.0860367114035,37.42146601742952,25
+								-122.0860613177918,37.42145804652374,25
+								-122.0860475555615,37.42137909895018,25
+								-122.0860074510157,37.42138414817713,25
+								-122.0859928208459,37.42134456966203,25
+								-122.0859362930617,37.42133936606868,25
+								-122.0859290635421,37.42139369541216,25
+								</coordinates>
+						</LinearRing>
+					</outerBoundaryIs>
+				</Polygon>
+			</Placemark>
+			<Placemark id="khPlacemark796">
+				<name>Building 43</name>
+				<visibility>0</visibility>
+				<Style id="khStyle797">
+					<LineStyle id="khLineStyle800">
+						<width>1.5</width>
+					</LineStyle>
+					<PolyStyle id="khPolyStyle799">
+						<color>7d00ffff</color>
+					</PolyStyle>
+					<IconStyle id="khIconStyle801">
+						<scale>4.244029702031485e-038</scale>
+					</IconStyle>
+				</Style>
+				<Polygon id="khPolygon804">
+					<extrude>1</extrude>
+					<altitudeMode>relativeToGround</altitudeMode>
+					<outerBoundaryIs>
+						<LinearRing id="khLinearRing805">
+							<coordinates> -122.0845751033364,37.42164250841337,19
+								-122.0846230975106,37.42177058827087,19
+								-122.0850437216922,37.42168460555725,19
+								-122.0850409468974,37.4216490510542,19
+								-122.0851389387785,37.42163820887635,19
+								-122.0851783268144,37.42138815300042,19
+								-122.0851395813756,37.42138762909299,19
+								-122.0851572507134,37.42128534768738,19
+								-122.0850464795204,37.42127669796096,19
+								-122.0850428080135,37.42125445020561,19
+								-122.0843859586434,37.42122871680091,19
+								-122.0843760373607,37.42132839069651,19
+								-122.0841718148791,37.4213107482245,19
+								-122.0841403004246,37.42125047030793,19
+								-122.0840759959561,37.42121638644056,19
+								-122.0840107946272,37.42119560926733,19
+								-122.0840094631669,37.42122995663405,19
+								-122.0839551918818,37.42120316031667,19
+								-122.0834592518983,37.42118288710486,19
+								-122.083443864316,37.42128963880136,19
+								-122.0831557618037,37.42125984345081,19
+								-122.0830948864474,37.42145690814568,19
+								-122.0829882484051,37.42147552600115,19
+								-122.0830029044301,37.42154659164194,19
+								-122.0830566858039,37.42154230440313,19
+								-122.0830471974917,37.42162093756363,19
+								-122.0831520690867,37.42165499541878,19
+								-122.0832783388366,37.42166385672398,19
+								-122.0833845423499,37.42166356701601,19
+								-122.0834296500156,37.42164641912394,19
+								-122.0834314993402,37.42166921808,19
+								-122.0836880615659,37.42161538462213,19
+								-122.0837213142989,37.42159150013369,19
+								-122.0837281941621,37.42163639848906,19
+								-122.084100964714,37.42155536268492,19
+								-122.0841256549352,37.42162557912604,19
+								-122.0842455070085,37.42159998718519,19
+								-122.0842212790757,37.42153479244936,19
+								-122.0842850935485,37.42153508002232,19
+								-122.0842738686703,37.42169516360249,19
+								-122.0843217505882,37.42171628210883,19
+								-122.0843851028068,37.42171154794662,19
+								-122.0844525327917,37.42168467079804,19
+								-122.0845208875693,37.42166783697406,19
+								-122.0845190378809,37.42164232581968,19
+								-122.0845751033364,37.42164250841337,19
+								</coordinates>
+						</LinearRing>
+					</outerBoundaryIs>
+				</Polygon>
+			</Placemark>
+		</Folder>
+		<Folder>
+			<description>Four structures whose roofs meet exactly. Turn on/off terrain to
+				see the difference between relative and absolute
+				positioning.</description>
+			<name>Absolute and Relative</name>
+			<LookAt>
+				<longitude>-112.3348969157552</longitude>
+				<latitude>36.14845533214919</latitude>
+				<range>990.6761201087104</range>
+				<tilt>49.30695423894192</tilt>
+				<heading>-86.91235037566909</heading>
+			</LookAt>
+			<visibility>0</visibility>
+			<open>0</open>
+			<Placemark id="khPlacemark2179">
+				<name>Absolute</name>
+				<visibility>0</visibility>
+				<styleUrl>#khStyle2093</styleUrl>
+				<Style id="khStyle640">
+					<LineStyle id="khLineStyle643">
+						<color>ff000000</color>
+					</LineStyle>
+				</Style>
+				<Polygon id="khPolygon647">
+					<extrude>0</extrude>
+					<altitudeMode>absolute</altitudeMode>
+					<outerBoundaryIs>
+						<LinearRing id="khLinearRing648">
+							<coordinates>
+								-112.3372510731295,36.14888505105317,1784
+								-112.3356128688403,36.14781540589019,1784
+								-112.3368169371048,36.14658677734382,1784
+								-112.3384408457543,36.14762778914076,1784
+								-112.3372510731295,36.14888505105317,1784
+								</coordinates>
+						</LinearRing>
+					</outerBoundaryIs>
+				</Polygon>
+			</Placemark>
+			<Placemark id="khPlacemark2125">
+				<name>Absolute Extruded</name>
+				<visibility>0</visibility>
+				<styleUrl>#khStyle2093</styleUrl>
+				<Style id="khStyle2126">
+					<LineStyle id="khLineStyle2129">
+						<color>ff000000</color>
+					</LineStyle>
+				</Style>
+				<Polygon id="khPolygon2133">
+					<extrude>1</extrude>
+					<altitudeMode>absolute</altitudeMode>
+					<outerBoundaryIs>
+						<LinearRing id="khLinearRing2134">
+							<coordinates>
+								-112.3396586818843,36.14637618647505,1784
+								-112.3380597654315,36.14531751871353,1784
+								-112.3368254237788,36.14659596244607,1784
+								-112.3384555043203,36.14762621763982,1784
+								-112.3396586818843,36.14637618647505,1784
+								</coordinates>
+						</LinearRing>
+					</outerBoundaryIs>
+				</Polygon>
+			</Placemark>
+			<Placemark id="khPlacemark2100">
+				<name>Relative</name>
+				<LookAt>
+					<longitude>-112.3350152490417</longitude>
+					<latitude>36.14943123077423</latitude>
+					<range>345.5169113679813</range>
+					<tilt>37.92486261093203</tilt>
+					<heading>-118.9214100848499</heading>
+				</LookAt>
+				<visibility>0</visibility>
+				<styleUrl>#khStyle2093</styleUrl>
+				<Style>
+					<LineStyle>
+						<color>ff000000</color>
+					</LineStyle>
+				</Style>
+				<Polygon id="khPolygon2107">
+					<extrude>0</extrude>
+					<altitudeMode>relativeToGround</altitudeMode>
+					<outerBoundaryIs>
+						<LinearRing id="khLinearRing2108">
+							<coordinates>
+								-112.3349463145932,36.14988705767721,100
+								-112.3354019540677,36.14941108398372,100
+								-112.3344428289146,36.14878490381308,100
+								-112.3331289492913,36.14780840132443,100
+								-112.3317019516947,36.14680755678357,100
+								-112.331131440106,36.1474173426228,100
+								-112.332616324338,36.14845453364654,100
+								-112.3339876620524,36.14926570522069,100
+								-112.3349463145932,36.14988705767721,100
+								</coordinates>
+						</LinearRing>
+					</outerBoundaryIs>
+				</Polygon>
+			</Placemark>
+			<Placemark id="khPlacemark2335">
+				<name>Relative Extruded</name>
+				<LookAt>
+					<longitude>-112.3351587892382</longitude>
+					<latitude>36.14979247129029</latitude>
+					<range>401.0997279712519</range>
+					<tilt>56.10280503739589</tilt>
+					<heading>-55.42811560891606</heading>
+				</LookAt>
+				<visibility>0</visibility>
+				<styleUrl>#khStyle2093</styleUrl>
+				<Style id="khStyle657">
+					<LineStyle id="khLineStyle660">
+						<color>ff000000</color>
+					</LineStyle>
+				</Style>
+				<Polygon id="khPolygon664">
+					<extrude>1</extrude>
+					<altitudeMode>relativeToGround</altitudeMode>
+					<outerBoundaryIs>
+						<LinearRing id="khLinearRing665">
+							<coordinates> -112.3348783983763,36.1514008468736,100
+								-112.3372535345629,36.14888517553886,100
+								-112.3356068927954,36.14781612679284,100
+								-112.3350034807972,36.14846469024177,100
+								-112.3358353861232,36.1489624162954,100
+								-112.3345888301373,36.15026229372507,100
+								-112.3337937856278,36.14978096026463,100
+								-112.3331798208424,36.1504472788618,100
+								-112.3348783983763,36.1514008468736,100
+								</coordinates>
+						</LinearRing>
+					</outerBoundaryIs>
+				</Polygon>
+			</Placemark>
+		</Folder>
+	</Folder>
+	<Folder>
+		<description>Examples of network links</description>
+		<name>Network Links</name>
+		<visibility>0</visibility>
+		<open>0</open>
+		<NetworkLink>
+			<description>A simple server-side script that generates a new random
+				placemark on each call</description>
+			<name>Random Placemark</name>
+			<visibility>0</visibility>
+			<refreshVisibility>0</refreshVisibility>
+			<flyToView>0</flyToView>
+			<Url>
+				<href>
+					http://bbs.keyhole.com/ubb/z0302a1700/random_placemark.php</href>
+			</Url>
+		</NetworkLink>
+		<NetworkLink>
+			<description>The view-based refresh allows the remote server to calculate the
+				center of your screen and return a placemark.</description>
+			<name>View Centered Placemark</name>
+			<visibility>0</visibility>
+			<refreshVisibility>0</refreshVisibility>
+			<flyToView>0</flyToView>
+			<Url>
+				<href>
+					http://bbs.keyhole.com/ubb/z0302a1700/view_centered_placemark.php</href>
+				<refreshInverval>2</refreshInverval>
+				<viewRefreshMode>onStop</viewRefreshMode>
+				<viewRefreshTime>1</viewRefreshTime>
+			</Url>
+		</NetworkLink>
+	</Folder>
+	<Folder>
+		<open>0</open>
+		
+		<Placemark>
+			<address>1600 Amphitheater Pkwy, Mountain View, CA</address>
+			<description> Tethered to the ground by a customizable tail </description>
+			<name>Tethethed placemark</name>
+			<LookAt>
+				<longitude>-122.0856375356631</longitude>
+				<latitude>37.42240551227282</latitude>
+				<range>305.8880792294568</range>
+				<tilt>46.72425699662645</tilt>
+				<heading>49.06133439171233</heading>
+			</LookAt>
+			<visibility>0</visibility>
+			<Style>
+				<IconStyle>
+					<Icon>
+						<href>root://icons/palette-3.png</href>
+						<x>96</x>
+						<y>160</y>
+						<w>32</w>
+						<h>32</h>
+					</Icon>
+				</IconStyle>
+			</Style>
+			<Point>
+				<extrude>1</extrude>
+				<altitudeMode>relativeToGround</altitudeMode>
+				<coordinates>
+					-122.0856204541786,37.42244015321688,50</coordinates>
+			</Point>
+		</Placemark>
+		
+		<description>
+			<![CDATA[
+    		<h1>CDATA Tags are important!</h1>
+    		<p><font color="red">Text is <i>more readable</i> and <b>easier to write</b> when you can avoid using entity references.</font></p>
+    	]]>
+		</description>
+		
+		<GroundOverlay>
+			<description>Overlay shows Mount Etna erupting on July 13th,
+				2001.</description>
+			<name>Large-scale overlay on terrain</name>
+			<drawOrder>1</drawOrder>
+			<LookAt>
+				<longitude>15.02468937557116</longitude>
+				<latitude>37.67395167941667</latitude>
+				<range>30350.36838438907</range>
+				<tilt>58.31228652890705</tilt>
+				<heading>-16.5581842842829</heading>
+			</LookAt>
+			<visibility>0</visibility>
+			<Icon>
+				<href>http://bbs.keyhole.com/ubb/z0302a1700/etna.jpg</href>
+			</Icon>
+			<LatLonBox id="khLatLonBox751">
+				<north>37.91904192681665</north>
+				<south>37.46543388598137</south>
+				<east>15.35832653742206</east>
+				<west>14.60128369746704</west>
+				<rotation>0</rotation>
+			</LatLonBox>
+		</GroundOverlay>
+		
+		<Placemark>
+			<description>Transparent green wall with yellow outlines</description>
+			<name>Absolute Extruded</name>
+			<LookAt>
+				<longitude>-112.2643334742529</longitude>
+				<latitude>36.08563154742419</latitude>
+				<range>4451.842204068102</range>
+				<tilt>44.61038665812578</tilt>
+				<heading>-125.7518698668815</heading>
+			</LookAt>
+			<visibility>1</visibility>
+			<Style>
+				<LineStyle>
+					<color>ff00ffff</color>
+				</LineStyle>
+				<PolyStyle>
+					<color>7f00ff00</color>
+				</PolyStyle>
+			</Style>
+			<LineString>
+				<extrude>1</extrude>
+				<tessellate>1</tessellate>
+				<altitudeMode>absolute</altitudeMode>
+				<coordinates> -112.2550785337791,36.07954952145647,2357
+					-112.2549277039738,36.08117083492122,2357
+					-112.2552505069063,36.08260761307279,2357
+					-112.2564540158376,36.08395660588506,2357
+					-112.2580238976449,36.08511401044813,2357
+					-112.2595218489022,36.08584355239394,2357
+					-112.2608216347552,36.08612634548589,2357
+					-112.262073428656,36.08626019085147,2357
+					-112.2633204928495,36.08621519860091,2357
+					-112.2644963846444,36.08627897945274,2357
+					-112.2656969554589,36.08649599090644,2357 </coordinates>
+			</LineString>
+		</Placemark>
+		
+		<Placemark>
+			<name>The Pentagon</name>
+			<LookAt>
+				<longitude>-77.05580139178142</longitude>
+				<latitude>38.870832443487</latitude>
+				<range>742.0552506670548</range>
+				<tilt>48.09646074797388</tilt>
+				<heading>59.88865561738225</heading>
+			</LookAt>
+			<Polygon>
+				<extrude>1</extrude>
+				<altitudeMode>relativeToGround</altitudeMode>
+				<outerBoundaryIs>
+					<LinearRing>
+						<coordinates> -77.05788457660967,38.87253259892824,100
+							-77.05465973756702,38.87291016281703,100
+							-77.05315536854791,38.87053267794386,100
+							-77.05552622493516,38.868757801256,100
+							-77.05844056290393,38.86996206506943,100
+							-77.05788457660967,38.87253259892824,100
+							</coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+				<innerBoundaryIs>
+					<LinearRing>
+						<coordinates> -77.05668055019126,38.87154239798456,100
+							-77.05542625960818,38.87167890344077,100
+							-77.05485125901024,38.87076535397792,100
+							-77.05577677433152,38.87008686581446,100
+							-77.05691162017543,38.87054446963351,100
+							-77.05668055019126,38.87154239798456,100
+							</coordinates>
+					</LinearRing>
+				</innerBoundaryIs>
+			</Polygon>
+		</Placemark>
+		
+		<Document>
+			<description>Place your mouse over the icon to see it display the new
+				icon</description>
+			<name>Simple Icon Rollover</name>
+			<visibility>0</visibility>
+			<Style id="normalPlacemark">
+				<IconStyle>
+					<Icon>
+						<href>
+							http://bbs.keyhole.com/ubb/z0302a1700/keyhole_icon.jpg</href>
+					</Icon>
+				</IconStyle>
+			</Style>
+			<Style id="highlightPlacemark">
+				<IconStyle>
+					<Icon>
+						<href>
+							http://bbs.keyhole.com/ubb/z0302a1700/google_icon.jpg</href>
+					</Icon>
+				</IconStyle>
+			</Style>
+			<StyleMap id="exampleStyleMap">
+				<Pair>
+					<key>normal</key>
+					<styleUrl>#normalPlacemark</styleUrl>
+				</Pair>
+				<Pair>
+					<key>highlight</key>
+					<styleUrl>#highlightPlacemark</styleUrl>
+				</Pair>
+			</StyleMap>
+			<Placemark>
+				<name>Example Placemark</name>
+				<visibility>0</visibility>
+				<styleUrl>#exampleStyleMap</styleUrl>
+				<Point>
+					<coordinates>
+						-122.0856545755255,37.42243077405461,0</coordinates>
+				</Point>
+			</Placemark>
+			
+			<NetworkLinkControl>
+				<message>This is a pop-up message. You will only see this once</message>
+				<cookie>someCookieText</cookie>
+				<linkName>New KML features</linkName>
+				<linkDescription><![CDATA[KML now has new features available!]]>
+				</linkDescription>
+			</NetworkLinkControl>
+		</Document>
+		
+		<ScreenOverlay>
+			<name>Absolute Positioning: Top left</name>
+			<Icon>
+				<href>http://bbs.keyhole.com/ubb/z0302a1700/top_left.jpg</href>
+			</Icon>
+			<overlayXY x="0" y="1" xunits="fraction" yunits="fraction"/>
+			<screenXY x="0" y="1" xunits="fraction" yunits="fraction"/>
+			<size x="0" y="0" xunits="fraction" yunits="fraction"/>
+		</ScreenOverlay>
+		
+	</Folder>
+</Folder>

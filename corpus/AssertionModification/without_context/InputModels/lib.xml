@@ -1,0 +1,1 @@
+<root><operation package="example" name ="op" class="A"><precondition name ="P2" value="pre ::= {P2 : x &lt; 0 }" /><postcondition name="Q2" value="post ::= {Q2 : S>5}" /></operation></root>

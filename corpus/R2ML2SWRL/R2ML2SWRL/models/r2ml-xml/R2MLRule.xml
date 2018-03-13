@@ -1,0 +1,46 @@
+<?xml version = '1.0' encoding = 'ISO-8859-1' ?>
+<r2ml:RuleBase xmlns:dc = 'http://purl.org/dc/elements/1.1/' xsi:schemaLocation = 'http://www.rewerse.net/I1/2006/R2ML http://oxygen.informatik.tu-cottbus.de/R2ML/0.4/R2ML.xsd' xmlns:r2ml = 'http://www.rewerse.net/I1/2006/R2ML' xmlns:xsi = 'http://www.w3.org/2001/XMLSchema-instance'>
+  <r2ml:IntegrityRuleSet>
+    <r2ml:AlethicIntegrityRule>
+      <r2ml:constraint>
+        <r2ml:UniversallyQuantifiedFormula>
+          <r2ml:ObjectVariable r2ml:name = 'x1'/>
+          <r2ml:ObjectVariable r2ml:name = 'x2'/>
+          <r2ml:ObjectVariable r2ml:name = 'x3'/>
+          <r2ml:Implication>
+            <r2ml:antecedent>
+              <r2ml:Conjunction>
+                <r2ml:ReferencePropertyAtom r2ml:referencePropertyID = 'hasParent'>
+                  <r2ml:subject>
+                    <r2ml:ObjectVariable r2ml:name = 'x2'/>
+                  </r2ml:subject>
+                  <r2ml:object>
+                    <r2ml:ObjectVariable r2ml:name = 'x1'/>
+                  </r2ml:object>
+                </r2ml:ReferencePropertyAtom>
+                <r2ml:ReferencePropertyAtom r2ml:referencePropertyID = 'hasBrother'>
+                  <r2ml:subject>
+                    <r2ml:ObjectVariable r2ml:name = 'x3'/>
+                  </r2ml:subject>
+                  <r2ml:object>
+                    <r2ml:ObjectVariable r2ml:name = 'x2'/>
+                  </r2ml:object>
+                </r2ml:ReferencePropertyAtom>
+              </r2ml:Conjunction>
+            </r2ml:antecedent>
+            <r2ml:consequent>
+              <r2ml:ReferencePropertyAtom r2ml:referencePropertyID = 'hasUncle'>
+                <r2ml:subject>
+                  <r2ml:ObjectVariable r2ml:name = 'x3'/>
+                </r2ml:subject>
+                <r2ml:object>
+                  <r2ml:ObjectVariable r2ml:name = 'x1'/>
+                </r2ml:object>
+              </r2ml:ReferencePropertyAtom>
+            </r2ml:consequent>
+          </r2ml:Implication>
+        </r2ml:UniversallyQuantifiedFormula>
+      </r2ml:constraint>
+    </r2ml:AlethicIntegrityRule>
+  </r2ml:IntegrityRuleSet>
+</r2ml:RuleBase>

@@ -1,0 +1,25 @@
+package example {
+
+ class C {
+  attribute a : String;
+ }
+
+ class A {
+  attribute a : String;
+  reference br : oppositeOf AB1;
+ }
+
+ class B {
+  reference ar : oppositeOf AB2;
+ }
+
+ class AB {
+  reference AB1[*] : oppositeOf br;
+  reference AB2[*] : oppositeOf ar;
+ }
+}
+
+package PrimitiveTypes {
+
+ datatype String;
+}

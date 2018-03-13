@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:atl="http://www.eclipse.org/gmt/2005/ATL" xmlns:ocl="http://www.eclipse.org/gmt/2005/OCL">
+  <atl:Module name="ATL2BindingDebugger" isRefining="true">
+    <inModels location="2:27-2:35" metamodel="/1" name="IN"/>
+    <outModels location="2:8-2:17" metamodel="/1" name="OUT"/>
+    <outModels metamodel="/2" name="trace"/>
+    <elements xsi:type="atl:MatchedRule" location="5:1-17:2" name="Module" isAbstract="false" isRefining="false">
+      <commentsBefore>-- We copy the ATL!Module to make sure the whole program is actually copied even if it contains no binding.</commentsBefore>
+      <outPattern>
+        <elements xsi:type="atl:SimpleOutPatternElement" location="9:17-16:18" variableExp="/0/@elements.0/@outPattern/@elements.1/@bindings.1/@value/@source/@elements.0" varName="t">
+          <type xsi:type="ocl:OclModelElement" location="9:21-9:31" name="Module" model="/1"/>
+          <bindings propertyName="name">
+            <value xsi:type="ocl:OperationCallExp" operationName="debug">
+              <source xsi:type="ocl:NavigationOrAttributeCallExp" location="10:33-10:39" name="name">
+                <source xsi:type="ocl:VariableExp" location="10:33-10:34" referredVariable="/0/@elements.0/@inPattern/@elements.0"/>
+              </source>
+              <arguments xsi:type="ocl:StringExp" stringSymbol="Module.t.name"/>
+            </value>
+          </bindings>
+          <bindings propertyName="libraries">
+            <value xsi:type="ocl:OperationCallExp" operationName="debug">
+              <source xsi:type="ocl:NavigationOrAttributeCallExp" location="11:38-11:49" name="libraries">
+                <source xsi:type="ocl:VariableExp" location="11:38-11:39" referredVariable="/0/@elements.0/@inPattern/@elements.0"/>
+              </source>
+              <arguments xsi:type="ocl:StringExp" stringSymbol="Module.t.libraries"/>
+            </value>
+          </bindings>
+          <bindings propertyName="isRefining">
+            <value xsi:type="ocl:OperationCallExp" operationName="debug">
+              <source xsi:type="ocl:NavigationOrAttributeCallExp" location="12:39-12:51" name="isRefining">
+                <source xsi:type="ocl:VariableExp" location="12:39-12:40" referredVariable="/0/@elements.0/@inPattern/@elements.0"/>
+              </source>
+              <arguments xsi:type="ocl:StringExp" stringSymbol="Module.t.isRefining"/>
+            </value>
+          </bindings>
+          <bindings propertyName="inModels">
+            <value xsi:type="ocl:OperationCallExp" operationName="debug">
+              <source xsi:type="ocl:NavigationOrAttributeCallExp" location="13:37-13:47" name="inModels">
+                <source xsi:type="ocl:VariableExp" location="13:37-13:38" referredVariable="/0/@elements.0/@inPattern/@elements.0"/>
+              </source>
+              <arguments xsi:type="ocl:StringExp" stringSymbol="Module.t.inModels"/>
+            </value>
+          </bindings>
+          <bindings propertyName="outModels">
+            <value xsi:type="ocl:OperationCallExp" operationName="debug">
+              <source xsi:type="ocl:NavigationOrAttributeCallExp" location="14:38-14:49" name="outModels">
+                <source xsi:type="ocl:VariableExp" location="14:38-14:39" referredVariable="/0/@elements.0/@inPattern/@elements.0"/>
+              </source>
+              <arguments xsi:type="ocl:StringExp" stringSymbol="Module.t.outModels"/>
+            </value>
+          </bindings>
+          <bindings propertyName="elements">
+            <value xsi:type="ocl:OperationCallExp" operationName="debug">
+              <source xsi:type="ocl:NavigationOrAttributeCallExp" location="15:37-15:47" name="elements">
+                <source xsi:type="ocl:VariableExp" location="15:37-15:38" referredVariable="/0/@elements.0/@inPattern/@elements.0"/>
+              </source>
+              <arguments xsi:type="ocl:StringExp" stringSymbol="Module.t.elements"/>
+            </value>
+          </bindings>
+        </elements>
+        <elements xsi:type="atl:SimpleOutPatternElement" variableExp="/0/@elements.0/@actionBlock/@statements.0/@expression/@source" varName="traceLink">
+          <type xsi:type="ocl:OclModelElement" name="TraceLink" model="/2"/>
+          <bindings propertyName="ruleName">
+            <value xsi:type="ocl:OperationCallExp" operationName="debug">
+              <source xsi:type="ocl:StringExp" stringSymbol="Module"/>
+              <arguments xsi:type="ocl:StringExp" stringSymbol="Module.traceLink.ruleName"/>
+            </value>
+          </bindings>
+          <bindings propertyName="targetElements">
+            <value xsi:type="ocl:OperationCallExp" operationName="debug">
+              <source xsi:type="ocl:SequenceExp">
+                <elements xsi:type="ocl:VariableExp" referredVariable="/0/@elements.0/@outPattern/@elements.0"/>
+              </source>
+              <arguments xsi:type="ocl:StringExp" stringSymbol="Module.traceLink.targetElements"/>
+            </value>
+          </bindings>
+        </elements>
+      </outPattern>
+      <actionBlock>
+        <statements xsi:type="atl:ExpressionStat">
+          <expression xsi:type="ocl:OperationCallExp" operationName="refSetValue">
+            <source xsi:type="ocl:VariableExp" referredVariable="/0/@elements.0/@outPattern/@elements.1"/>
+            <arguments xsi:type="ocl:StringExp" stringSymbol="sourceElements"/>
+            <arguments xsi:type="ocl:SequenceExp">
+              <elements xsi:type="ocl:VariableExp" referredVariable="/0/@elements.0/@inPattern/@elements.0"/>
+            </arguments>
+          </expression>
+        </statements>
+      </actionBlock>
+      <inPattern location="6:9-7:31">
+        <elements xsi:type="atl:SimpleInPatternElement" location="7:17-7:31" variableExp="/0/@elements.0/@actionBlock/@statements.0/@expression/@arguments.1/@elements.0 /0/@elements.0/@outPattern/@elements.0/@bindings.0/@value/@source/@source /0/@elements.0/@outPattern/@elements.0/@bindings.1/@value/@source/@source /0/@elements.0/@outPattern/@elements.0/@bindings.2/@value/@source/@source /0/@elements.0/@outPattern/@elements.0/@bindings.3/@value/@source/@source /0/@elements.0/@outPattern/@elements.0/@bindings.4/@value/@source/@source /0/@elements.0/@outPattern/@elements.0/@bindings.5/@value/@source/@source" varName="s">
+          <type xsi:type="ocl:OclModelElement" location="7:21-7:31" name="Module" model="/1"/>
+        </elements>
+      </inPattern>
+    </elements>
+    <elements xsi:type="atl:MatchedRule" location="22:1-40:2" name="Binding" isAbstract="false" isRefining="false">
+      <commentsBefore>-- We change the value of each binding so that it calls the OclAny.debug(msg : String)</commentsBefore>
+      <commentsBefore>-- operation with information about the current rule, target element and property name</commentsBefore>
+      <commentsBefore>-- as a message.</commentsBefore>
+      <outPattern>
+        <elements xsi:type="atl:SimpleOutPatternElement" location="26:17-29:18" variableExp="/0/@elements.1/@outPattern/@elements.3/@bindings.1/@value/@source/@elements.0" varName="t">
+          <type xsi:type="ocl:OclModelElement" location="26:21-26:32" name="Binding" model="/1"/>
+          <bindings propertyName="propertyName">
+            <value xsi:type="ocl:OperationCallExp" operationName="debug">
+              <source xsi:type="ocl:NavigationOrAttributeCallExp" location="27:41-27:55" name="propertyName">
+                <source xsi:type="ocl:VariableExp" location="27:41-27:42" referredVariable="/0/@elements.1/@inPattern/@elements.0"/>
+              </source>
+              <arguments xsi:type="ocl:StringExp" stringSymbol="Binding.t.propertyName"/>
+            </value>
+          </bindings>
+          <bindings propertyName="value">
+            <value xsi:type="ocl:OperationCallExp" operationName="debug">
+              <source xsi:type="ocl:VariableExp" location="28:34-28:42" referredVariable="/0/@elements.1/@outPattern/@elements.1"/>
+              <arguments xsi:type="ocl:StringExp" stringSymbol="Binding.t.value"/>
+            </value>
+          </bindings>
+        </elements>
+        <elements xsi:type="atl:SimpleOutPatternElement" location="30:17-34:18" variableExp="/0/@elements.1/@outPattern/@elements.0/@bindings.1/@value/@source /0/@elements.1/@outPattern/@elements.3/@bindings.1/@value/@source/@elements.1" varName="debugger">
+          <type xsi:type="ocl:OclModelElement" location="30:28-30:48" name="OperationCallExp" model="/1"/>
+          <bindings propertyName="source">
+            <value xsi:type="ocl:OperationCallExp" operationName="debug">
+              <source xsi:type="ocl:NavigationOrAttributeCallExp" location="31:35-31:42" name="value">
+                <source xsi:type="ocl:VariableExp" location="31:35-31:36" referredVariable="/0/@elements.1/@inPattern/@elements.0"/>
+              </source>
+              <arguments xsi:type="ocl:StringExp" stringSymbol="Binding.debugger.source"/>
+            </value>
+          </bindings>
+          <bindings propertyName="operationName">
+            <value xsi:type="ocl:OperationCallExp" operationName="debug">
+              <source xsi:type="ocl:StringExp" location="32:42-32:49" stringSymbol="debug"/>
+              <arguments xsi:type="ocl:StringExp" stringSymbol="Binding.debugger.operationName"/>
+            </value>
+          </bindings>
+          <bindings propertyName="arguments">
+            <value xsi:type="ocl:OperationCallExp" operationName="debug">
+              <source xsi:type="ocl:SequenceExp" location="33:38-33:52">
+                <elements xsi:type="ocl:VariableExp" location="33:48-33:51" referredVariable="/0/@elements.1/@outPattern/@elements.2"/>
+              </source>
+              <arguments xsi:type="ocl:StringExp" stringSymbol="Binding.debugger.arguments"/>
+            </value>
+          </bindings>
+        </elements>
+        <elements xsi:type="atl:SimpleOutPatternElement" location="35:17-39:18" variableExp="/0/@elements.1/@outPattern/@elements.1/@bindings.2/@value/@source/@elements.0 /0/@elements.1/@outPattern/@elements.3/@bindings.1/@value/@source/@elements.2" varName="arg">
+          <type xsi:type="ocl:OclModelElement" location="35:23-35:36" name="StringExp" model="/1"/>
+          <bindings propertyName="stringSymbol">
+            <value xsi:type="ocl:OperationCallExp" operationName="debug">
+              <source xsi:type="ocl:OperatorCallExp" location="36:41-38:55" operationName="+">
+                <source xsi:type="ocl:OperatorCallExp" location="36:41-37:74" operationName="+">
+                  <source xsi:type="ocl:OperatorCallExp" location="36:41-37:68" operationName="+">
+                    <source xsi:type="ocl:OperatorCallExp" location="36:41-36:89" operationName="+">
+                      <source xsi:type="ocl:NavigationOrAttributeCallExp" location="36:41-36:83" name="name">
+                        <source xsi:type="ocl:NavigationOrAttributeCallExp" location="36:41-36:78" name="rule">
+                          <source xsi:type="ocl:NavigationOrAttributeCallExp" location="36:41-36:71" name="outPattern">
+                            <source xsi:type="ocl:NavigationOrAttributeCallExp" location="36:41-36:60" name="outPatternElement">
+                              <source xsi:type="ocl:VariableExp" location="36:41-36:42" referredVariable="/0/@elements.1/@inPattern/@elements.0"/>
+                            </source>
+                          </source>
+                        </source>
+                      </source>
+                      <arguments xsi:type="ocl:StringExp" location="36:86-36:89" stringSymbol="."/>
+                    </source>
+                    <arguments xsi:type="ocl:NavigationOrAttributeCallExp" location="37:41-37:68" name="varName">
+                      <source xsi:type="ocl:NavigationOrAttributeCallExp" location="37:41-37:60" name="outPatternElement">
+                        <source xsi:type="ocl:VariableExp" location="37:41-37:42" referredVariable="/0/@elements.1/@inPattern/@elements.0"/>
+                      </source>
+                    </arguments>
+                  </source>
+                  <arguments xsi:type="ocl:StringExp" location="37:71-37:74" stringSymbol="."/>
+                </source>
+                <arguments xsi:type="ocl:NavigationOrAttributeCallExp" location="38:41-38:55" name="propertyName">
+                  <source xsi:type="ocl:VariableExp" location="38:41-38:42" referredVariable="/0/@elements.1/@inPattern/@elements.0"/>
+                </arguments>
+              </source>
+              <arguments xsi:type="ocl:StringExp" stringSymbol="Binding.arg.stringSymbol"/>
+            </value>
+          </bindings>
+        </elements>
+        <elements xsi:type="atl:SimpleOutPatternElement" variableExp="/0/@elements.1/@actionBlock/@statements.0/@expression/@source" varName="traceLink">
+          <type xsi:type="ocl:OclModelElement" name="TraceLink" model="/2"/>
+          <bindings propertyName="ruleName">
+            <value xsi:type="ocl:OperationCallExp" operationName="debug">
+              <source xsi:type="ocl:StringExp" stringSymbol="Binding"/>
+              <arguments xsi:type="ocl:StringExp" stringSymbol="Binding.traceLink.ruleName"/>
+            </value>
+          </bindings>
+          <bindings propertyName="targetElements">
+            <value xsi:type="ocl:OperationCallExp" operationName="debug">
+              <source xsi:type="ocl:SequenceExp">
+                <elements xsi:type="ocl:VariableExp" referredVariable="/0/@elements.1/@outPattern/@elements.0"/>
+                <elements xsi:type="ocl:VariableExp" referredVariable="/0/@elements.1/@outPattern/@elements.1"/>
+                <elements xsi:type="ocl:VariableExp" referredVariable="/0/@elements.1/@outPattern/@elements.2"/>
+              </source>
+              <arguments xsi:type="ocl:StringExp" stringSymbol="Binding.traceLink.targetElements"/>
+            </value>
+          </bindings>
+        </elements>
+      </outPattern>
+      <actionBlock>
+        <statements xsi:type="atl:ExpressionStat">
+          <expression xsi:type="ocl:OperationCallExp" operationName="refSetValue">
+            <source xsi:type="ocl:VariableExp" referredVariable="/0/@elements.1/@outPattern/@elements.3"/>
+            <arguments xsi:type="ocl:StringExp" stringSymbol="sourceElements"/>
+            <arguments xsi:type="ocl:SequenceExp">
+              <elements xsi:type="ocl:VariableExp" referredVariable="/0/@elements.1/@inPattern/@elements.0"/>
+            </arguments>
+          </expression>
+        </statements>
+      </actionBlock>
+      <inPattern location="23:9-24:32">
+        <elements xsi:type="atl:SimpleInPatternElement" location="24:17-24:32" variableExp="/0/@elements.1/@outPattern/@elements.0/@bindings.0/@value/@source/@source /0/@elements.1/@outPattern/@elements.1/@bindings.0/@value/@source/@source /0/@elements.1/@outPattern/@elements.2/@bindings.0/@value/@source/@source/@source/@source/@source/@source/@source/@source/@source /0/@elements.1/@outPattern/@elements.2/@bindings.0/@value/@source/@source/@source/@arguments.0/@source/@source /0/@elements.1/@outPattern/@elements.2/@bindings.0/@value/@source/@arguments.0/@source /0/@elements.1/@actionBlock/@statements.0/@expression/@arguments.1/@elements.0" varName="s">
+          <type xsi:type="ocl:OclModelElement" location="24:21-24:32" name="Binding" model="/1"/>
+        </elements>
+      </inPattern>
+    </elements>
+  </atl:Module>
+  <ocl:OclModel elements="/0/@elements.0/@inPattern/@elements.0/@type /0/@elements.0/@outPattern/@elements.0/@type /0/@elements.1/@inPattern/@elements.0/@type /0/@elements.1/@outPattern/@elements.0/@type /0/@elements.1/@outPattern/@elements.1/@type /0/@elements.1/@outPattern/@elements.2/@type" model="/0/@outModels.0 /0/@inModels.0" name="ATL"/>
+  <ocl:OclModel elements="/0/@elements.1/@outPattern/@elements.3/@type /0/@elements.0/@outPattern/@elements.1/@type" model="/0/@outModels.1" name="Trace"/>
+</xmi:XMI>

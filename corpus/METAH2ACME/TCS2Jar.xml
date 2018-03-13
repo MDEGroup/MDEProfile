@@ -1,0 +1,136 @@
+<!-- How to configure this ant script:
+	Run as->Ant Build...
+		Set:
+			- Base directory (?)
+			- Run in same JRE
+			- ANTLR jar
+			- ebnfinjector jar
+			- vm jar
+			- Refresh
+-->
+<project name="TCS2Jar" default="transfo">
+	<!-- For javac to work we need either:
+		- tools.jar to be added to the classpath
+		- Eclipse to be run with a JDK, not a JRE
+		- this property
+	-->
+	<property name="build.compiler" value="org.eclipse.jdt.core.JDTCompilerAdapter"/>
+
+		
+	<property name="tcsPath" value="/METAH2ACME/TCS/"/>
+	<property name="km3Path" value="/METAH2ACME/METAMODELS/"/>
+	<property name="metamodel" value="METAH"/>
+
+	<target name="transfo">
+		<property name="parser.package" value="org/atl/engine/injectors/ebnf"/>
+
+		<!-- Load TCS metamodel -->
+		<am3.loadModel modelHandler="EMF" name="TCS" metamodel="MOF" path="/AMMACore/KM3/TCS/TCS.ecore" />
+		
+		<!-- Load TCS model -->
+		<am3.loadModel modelHandler="EMF" name="${metamodel}.tcs" metamodel="TCS" path="${tcsPath}${metamodel}.tcs">
+			<injector name="ebnf">
+				<param name="name" value="TCS"/>
+			</injector>
+		</am3.loadModel>
+
+		<!-- Load KM3 metamodel -->
+		<am3.loadModel modelHandler="EMF" name="KM3" metamodel="MOF" path="uri:http://www.eclipse.org/gmt/2005/KM3" />
+
+		<!-- Load KM3 model -->
+		<am3.loadModel modelHandler="EMF" name="${metamodel}.km3" metamodel="KM3" path="${km3Path}${metamodel}.km3">
+			<injector name="ebnf">
+				<param name="name" value="KM3"/>
+			</injector>
+		</am3.loadModel>
+
+		<!-- Load Problem metamodel -->
+		<am3.loadModel modelHandler="EMF" name="Problem" metamodel="MOF" path="uri:http://www.eclipse.org/gmt/2005/Problem" />
+
+		<!-- Check TCS model for problems -->
+		<am3.atl path="/AMMACore/KM3/ATL-0.2/TCS2Problem/TCS2Problem.atl">
+			<inModel name="IN" model="${metamodel}.tcs"/>
+			<inModel name="TCS" model="TCS"/>
+			<inModel name="MM" model="${metamodel}.km3"/>
+			<inModel name="KM3" model="KM3"/>
+			<inModel name="Problem" model="Problem"/>
+			<library name="KM3Helpers" path="/AMMACore/KM3/ATL-0.2/KM3Helpers/KM3Helpers.asm" />
+			<library name="strings" path="/AMMACore/KM3/ATL-0.2/strings/strings.asm" />
+			<outModel name="OUT" model="${metamodel}.pbs" metamodel="Problem"/>
+		</am3.atl>
+
+		<!-- Make problems visible within Eclipse -->
+		<am3.applyMarkers model="${metamodel}.pbs" path="${tcsPath}${metamodel}.tcs"/>
+		
+		<!-- Load Problem Textual Concrete Syntax -->
+		<am3.loadModel modelHandler="EMF" name="Problem.tcs" metamodel="TCS" path="/AMMACore/KM3/TCS/Problem/Problem.tcs">
+			<injector name="ebnf">
+				<param name="name" value="TCS"/>
+			</injector>
+		</am3.loadModel>
+
+		<!-- Serialize Problem model to text file -->
+		<am3.saveModel model="${metamodel}.pbs" path="${tcsPath}${metamodel}.pbs">
+			<extractor name="ebnf">
+				<param name="format" value="Problem.tcs"/>
+			</extractor>
+		</am3.saveModel>
+
+		<!-- Fail if problems were found -->
+		<am3.query body="Problem!Problem.allInstances()->select(e | e.severity = #error)->size() > 0" property="thereAreErrors">
+			<inModel name="Problem" model="Problem"/>
+			<inModel name="IN" model="${metamodel}.pbs"/>
+		</am3.query>
+		<fail message="There are errors in ${metamodel}.tcs" if="thereAreErrors"/>
+
+		<!-- Load ANTLR metamodel -->
+		<am3.loadModel modelHandler="EMF" name="ANTLR" metamodel="MOF" path="/AMMACore/KM3/ANTLR/ANTLR.ecore" />
+
+		<!-- Create ANTLR model from KM3 and TCS models -->
+		<am3.atl path="/AMMACore/KM3/ATL-0.2/TCS2ANTLR/TCS2ANTLR.asm">
+			<inModel name="IN" model="${metamodel}.tcs"/>
+			<inModel name="TCS" model="TCS"/>
+			<inModel name="MM" model="${metamodel}.km3"/>
+			<inModel name="KM3" model="KM3"/>
+			<inModel name="MOF" model="%EMF"/>
+			<inModel name="ANTLR" model="ANTLR"/>
+			<library name="KM3Helpers" path="/AMMACore/KM3/ATL-0.2/KM3Helpers/KM3Helpers.asm" />
+			<library name="strings" path="/AMMACore/KM3/ATL-0.2/strings/strings.asm" />
+			<outModel name="OUT" model="${metamodel}.g" metamodel="ANTLR"/>
+		</am3.atl>
+
+		<!-- Load ANTLR Textual Concrete Syntax -->
+		<am3.loadModel modelHandler="EMF" name="ANTLR.tcs" metamodel="TCS" path="/AMMACore/KM3/TCS/ANTLR/ANTLR.tcs">
+			<injector name="ebnf">
+				<param name="name" value="TCS"/>
+			</injector>
+		</am3.loadModel>
+
+		<!-- Serialize ANTLR model to text -->
+		<am3.saveModel model="${metamodel}.g" path="${tcsPath}${metamodel}.g">
+			<extractor name="ebnf">
+				<param name="format" value="ANTLR.tcs"/>
+				<param name="identEsc" value=""/>
+				<param name="indentString" value="	"/>
+			</extractor>
+		</am3.saveModel>
+
+		<!-- Use ANTLR to generate the parser -->
+		<mkdir dir="${parser.package}"/>
+		<antlr target="${metamodel}.g" outputdirectory="${parser.package}"/>
+
+		<!-- Compile the parser -->
+		<am3.useClasspath name="tcsBuildPath"/>
+		<javac srcdir="." classpathref="tcsBuildPath" nowarn="on">
+			<include name="org/**/*.java"/>
+		</javac>
+
+		<!-- Package the parser -->
+		<delete file="${metamodel}-importer.jar"/>
+		<jar destfile="${metamodel}-importer.jar">
+			<fileset dir=".">
+				<include name="**/*.class"/>
+			</fileset>
+		</jar>
+	</target>
+</project>

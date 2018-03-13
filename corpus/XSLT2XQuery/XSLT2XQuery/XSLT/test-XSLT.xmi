@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<XSLTRootNode xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="XSLT" name="xsl:stylesheet">
+  <nodes xsi:type="Template" name="xsl:template" match="/">
+    <nodes xsi:type="ElementNode" name="emps">
+      <nodes xsi:type="ApplyTemplates" name="xsl:apply-templates" select="employee"/>
+    </nodes>
+  </nodes>
+  <nodes xsi:type="Template" name="xsl:template" match="employee">
+    <nodes xsi:type="If" name="xsl:if" test="salary>2000">
+      <nodes xsi:type="ElementNode" name="emp">
+        <nodes xsi:type="ValueOf" name="xsl:value-of" select="name"/>
+        <nodes xsi:type="ValueOf" name="xsl:value-of" select="firstname"/>
+      </nodes>
+    </nodes>
+  </nodes>
+</XSLTRootNode>

@@ -1,0 +1,215 @@
+-- @nsURI syntax
+-- @nsPrefix syntax
+
+-- ******************************************************************************
+-- Copyright (c) 2009 INRIA. 
+-- All rights reserved. This program and the accompanying materials 
+-- are made available under the terms of the Eclipse Public License v1.0 
+-- which accompanies this distribution, and is available at
+-- http://www.eclipse.org/legal/epl-v10.html
+-- 
+-- Contributors: 
+-- 	INRIA - Initial implementation
+--  
+-- ******************************************************************************
+
+--@author Mathias Kleiner (mathias.kleiner@inria.fr)
+
+package Syntax {
+	
+	-- Rooting
+	
+	class Root {
+	
+		reference elements[0-*] container : Element;
+	}
+	
+	class Element {
+		
+		attribute objectName : String;
+	}
+	
+	class SyntaxElement extends Element {
+	
+	}
+	
+	class SBVRElement extends Element {
+	
+		reference expressedBy[1-*] : Cat oppositeOf expresses;
+	}
+	
+	-- Designations
+	
+	class Designation extends Element {
+	
+		reference meaning[1-1] : SBVRElement;
+	}
+	
+	-- Text, sentences, words
+	
+	class Text extends SyntaxElement {
+	
+		reference sentences[1-*] : Sentence;
+	}
+	
+	class Sentence extends SyntaxElement {
+	
+		reference sentenceCat[1-1] : SentenceCat;
+		reference words[1-*] : Word oppositeOf sentence;
+	}
+	
+	class Word extends SyntaxElement {
+	
+		reference sentence[1-1] : Sentence oppositeOf words;
+		reference wordCat[1-1] : Cat oppositeOf word;
+		reference baseDesignation[1-1] : Designation;
+	}
+	
+	-- Syntax (Categories)
+	
+	class Cat extends SyntaxElement {
+
+		attribute terminal : Boolean;
+		reference composedOf[0-*] : Cat oppositeOf composes;
+		reference composes[0-1] : Cat oppositeOf composedOf;
+		reference sentence[1-1] : Sentence;
+		reference word[0-1] : Word oppositeOf wordCat;
+		reference expresses[0-1] : SBVRElement oppositeOf expressedBy;
+	}
+
+	-- Syntax
+	
+	class SentenceCat extends Cat {
+	
+		reference vp[1-1] : VPCat;
+	}
+	
+	class VPCat extends Cat {
+	
+		reference head[1-1] : VCat oppositeOf vp;
+	}
+	
+	class NPCat extends Cat {
+	
+		reference head[1-1] : NCat oppositeOf np;
+		reference determiner[0-1] : DCat oppositeOf np;
+		reference isSubjectOf[0-1] : VCat oppositeOf subject;
+		reference isDirectObjectOf[0-1] : TVCat oppositeOf directObject;
+	}
+	
+	class VCat extends Cat {
+
+		attribute passive : Boolean;
+		reference subject[1-1] : NPCat oppositeOf isSubjectOf;
+		reference vp[1-1] : VPCat oppositeOf head;
+	}
+	
+	class TVCat extends VCat {
+	
+		reference directObject[0-1] : NPCat oppositeOf isDirectObjectOf;
+	}
+	
+	
+	class NCat extends Cat {
+
+		reference np[1-1] : NPCat oppositeOf head;
+	}
+	
+	class DCat extends Cat {
+	
+		reference np[1-1] : NPCat oppositeOf determiner;
+		reference object[1-1] : NCat;
+	}
+	
+	class ADCat extends DCat { }
+	
+	class IADCat extends ADCat { }
+	
+	class DADCat extends ADCat { }
+	
+	class QCat extends DCat {
+	
+	}
+	
+	
+	class QUnvaluedCat extends QCat {
+	
+	}
+	
+	class QValuedCat extends QCat {
+	
+		reference value[1-1] : NumeralCat;
+	}
+	
+	class NumeralCat extends Cat {
+	
+	}
+	
+	
+	-- SBVRElements
+	
+	-- Concepts
+	
+	class Concept extends SBVRElement {}
+	
+	-- NounConcepts
+	 
+	class NounConcept extends Concept {}
+	
+	-- ObjectTypes
+	
+	class ObjectType extends NounConcept {}
+	
+	-- Individuals
+	
+	class Individual extends NounConcept {}
+	
+	-- DataTypes
+	
+	class DataType extends NounConcept {}
+	
+	class NonNegativeInteger extends DataType {}
+	
+	class NonEmptyString extends DataType {}
+	
+	-- FactTypes
+	
+	class FactType extends Concept {}
+	
+	class BinaryFactType extends FactType {}
+	
+	class IsPropertyOfFactType extends BinaryFactType {}
+	
+	class CategorizationFactType extends BinaryFactType {}
+	
+	class AssociativeFactType extends BinaryFactType {}
+	
+	class ObjectificationFactType extends BinaryFactType {}
+	
+	-- Logical formulations
+	
+	class LogicalFormulation extends SBVRElement {}
+	
+	-- Quantifications
+	
+	class Quantification extends LogicalFormulation {}
+	
+	class UniversalQuantification extends Quantification {}
+	
+	class AtLeastNQuantification extends Quantification {}
+	
+	class ExactlyNQuantification extends Quantification {}
+	
+	class AtMostNQuantification extends Quantification {}
+	
+}
+
+-- @nsURI ptype
+-- @nsPrefix ptype
+
+package PrimitiveTypes {
+
+	datatype Boolean;
+	datatype String;
+	datatype Integer;
+}

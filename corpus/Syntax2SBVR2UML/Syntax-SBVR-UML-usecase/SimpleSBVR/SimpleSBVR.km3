@@ -1,0 +1,191 @@
+-- @nsURI simplesbvr
+-- @nsPrefix simplesbvr
+
+-- ******************************************************************************
+-- Copyright (c) 2009 INRIA. 
+-- All rights reserved. This program and the accompanying materials 
+-- are made available under the terms of the Eclipse Public License v1.0 
+-- which accompanies this distribution, and is available at
+-- http://www.eclipse.org/legal/epl-v10.html
+-- 
+-- Contributors: 
+-- 	INRIA - Initial implementation
+--  
+-- ******************************************************************************
+
+--@author Mathias Kleiner (mathias.kleiner@inria.fr)
+
+package SimpleSBVR {
+
+	-- Rooting
+	
+	class Root {
+	
+		reference elements[0-*] container : Element;
+	}
+	
+	class Element {
+		
+		attribute objectName : String;
+	}
+	
+	-- Representation
+	
+	class Representation extends Element { 
+	
+		reference meaning[1-1] : Meaning oppositeOf representations;
+	}
+	
+	class Designation extends Representation {
+	
+		reference text[1-1] : Text;
+	}
+	
+	class Text extends Element {
+		
+		attribute value : String;
+	}
+	-- Meaning 
+	
+	class Meaning extends Element { 
+	
+		reference representations[0-*] : Representation oppositeOf meaning;
+	}
+	
+	class Concept extends Meaning { }
+	
+	-- NounConcepts
+	
+	class NounConcept extends Concept { }
+	
+	class ObjectType extends NounConcept { 
+		
+		reference specializes[0-1] : ObjectType oppositeOf generalizes;
+		reference generalizes[0-*] : ObjectType oppositeOf specializes;
+	}
+	
+	class IndividualConcept extends NounConcept {
+	
+		reference instanceOf[0-1] : ObjectType;
+	}
+	
+	class DataType extends NounConcept {}
+	
+	class NonEmptyString extends DataType {
+	
+		attribute value : String;
+	}
+	
+	class NonNegativeInteger extends DataType {
+	
+		attribute value : Integer;
+	}
+	
+	-- FactType
+	
+	class FactType extends Concept {
+	
+	}
+	
+	class BinaryFactType extends FactType {
+	
+		reference role1[1-1] : FactTypeRole;
+		reference role2[1-1] : FactTypeRole;
+	}
+	
+	class IsPropertyOfFactType extends BinaryFactType {
+	
+	}
+	
+	class AssociativeFactType extends BinaryFactType {
+	
+	}
+	
+	class CategorizationFactType extends BinaryFactType {
+	
+	}
+	
+	class ObjectificationFactType extends BinaryFactType {
+	
+	}
+	
+	-- Roles
+	
+	class Role extends Element {
+	
+		reference nounConcept[1-1] : NounConcept;
+	}
+	
+	class FactTypeRole extends Role {
+	
+	
+	}
+	
+	-- Logical formulations
+	
+	class LogicalFormulation extends Meaning {}
+	
+	class AtomicFormulation extends LogicalFormulation {
+	
+		reference isBasedOn[1-1] : FactType;
+		--reference roleBindings[1-*] : RoleBinding;
+	}
+	
+	class BinaryAtomicFormulation extends AtomicFormulation {
+	
+		reference roleBinding1[1-1] : RoleBinding;
+		reference roleBinding2[1-1] : RoleBinding;
+	}
+	
+	class NecessityFormulation extends LogicalFormulation {}
+	
+	-- Quantifications
+	
+	class Quantification extends LogicalFormulation {
+	
+		reference introducedVariable[1-1] : Variable;
+		reference scopesOver[1-1] : LogicalFormulation;
+	}
+	
+	class UniversalQuantification extends Quantification {}
+	
+	class AtLeastNQuantification extends Quantification {
+	
+		reference minCardinality[1-1] : NonNegativeInteger;
+	}
+	
+	class ExactlyNQuantification extends Quantification {
+	
+		reference cardinality[1-1] : NonNegativeInteger;
+	}
+	
+	class AtMostNQuantification extends Quantification {
+	
+		reference maxCardinality[1-1] : NonNegativeInteger;
+	}
+	
+	-- Bindings
+	
+	class BindableTarget extends Element {}
+	
+	class Variable extends BindableTarget {
+	
+		reference rangesOver[1-1] : ObjectType;
+	}
+	
+	class RoleBinding extends Element {
+	
+		reference occursIn[1-1] : AtomicFormulation;
+		reference isOf[1-1] : FactType;
+		reference bindsTo[1-1] : BindableTarget;
+	}
+}
+
+-- @nsURI ptype
+-- @nsPrefix ptype
+
+package PrimitiveTypes {
+
+	datatype String;
+	datatype Integer;
+}

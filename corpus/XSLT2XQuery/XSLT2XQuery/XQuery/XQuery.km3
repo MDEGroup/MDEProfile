@@ -1,0 +1,98 @@
+package XQuery {
+
+	class XQueryProgram {
+		reference expressions[*] ordered container : ExecutableExpression oppositeOf xQueryProgram;
+	}
+
+ 	class Expression {
+		reference parentNode[0-1] : ElementNode oppositeOf nodes;
+		reference returnEx : Return oppositeOf expressions;
+
+ 	}
+
+ 	class ExecutableExpression extends Expression {
+		reference xQueryProgram : XQueryProgram oppositeOf expressions;
+		reference functionDeclaration : FunctionDeclaration oppositeOf expression; 
+ 	}
+
+
+ 	class Node extends Expression {
+		attribute name : String;
+ 	}
+ 
+ 	class FLWOR extends ExecutableExpression {
+		reference for container : For oppositeOf flwor;
+		reference let container : Let oppositeOf flwor;
+		reference where container : Where oppositeOf flwor;
+		reference orderBy container : OrderBy oppositeOf flwor;
+		reference return container : Return oppositeOf flwor;
+ 	}
+
+ 	class FunctionCall extends ExecutableExpression {
+		attribute name : String;
+		reference parameters[*] container : XPath oppositeOf functionCall; --[*] added
+ 	}
+
+ 	class FunctionDeclaration extends ExecutableExpression {
+		attribute name : String;
+		reference expression[1-*] container : ExecutableExpression oppositeOf functionDeclaration;
+ 	}
+
+ 	class ElementNode extends Node {
+		reference nodes[*] container : Expression oppositeOf parentNode; 
+ 	}
+
+ 	class AttributeNode extends Node {
+		attribute value : String;
+ 	}
+
+ 	class TextNode extends ElementNode {
+ 	}
+
+ 	class ReturnXPath extends Expression {
+		attribute value : String;
+ 	} 
+
+ 	class XPath extends ReturnXPath {
+ 		reference functionCall : FunctionCall oppositeOf parameters;  
+ 		reference for : For oppositeOf expression;
+ 		reference let : Let oppositeOf expression; 		
+ 	}
+
+ 	class BooleanExp extends XPath{
+ 		reference where : Where oppositeOf expression;
+ 	}
+
+ 	class For {
+		attribute var : String;
+		reference flwor : FLWOR oppositeOf for;
+		reference expression container : XPath oppositeOf for; 
+ 	}
+
+ 	class Let {
+		attribute var : String;
+		reference flwor : FLWOR oppositeOf let;
+		reference expression container : XPath oppositeOf let;
+ 	}
+
+ 	class Where {
+		reference flwor : FLWOR oppositeOf where;
+		reference expression container : BooleanExp oppositeOf where;
+ 	}
+
+ 	class OrderBy {
+		reference flwor container : FLWOR oppositeOf orderBy;
+ 	}
+
+ 	class Return {
+		reference flwor : FLWOR oppositeOf return;
+		reference expressions[*] container : Expression oppositeOf returnEx;
+ 	}
+}
+
+package PrimitiveTypes {
+	datatype Boolean;
+	datatype Integer;
+	datatype String;
+}
+

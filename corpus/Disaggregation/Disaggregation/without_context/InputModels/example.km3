@@ -1,0 +1,43 @@
+package example {
+
+ class AccomodationBooking {
+ 	attribute bookingId: Integer;
+ 	
+ -- @label PersonalDetails
+ 	attribute adresse :String;
+ 	
+ -- @label PersonalDetails
+ 	attribute name : String;
+ 	
+ -- @label PersonalDetails
+ 	attribute age : Integer;
+ 	
+ -- @label CourseDetails
+ 	attribute course : String;
+ 	
+ -- @label CourseDetails
+ 	attribute year : Integer;
+ 	
+ -- @label Preference
+ 	attribute hall1 : String;
+ 	
+ -- @label Preference
+ 	attribute hall2 : String;
+ 	
+ -- @label Preference
+ 	attribute hall3 : String;
+ 	
+ -- @label Preference
+ 	attribute smoking : Boolean;
+ 	
+ -- @label Preference
+ 	attribute selfcatering : Boolean;
+ }
+
+}
+
+package PrimitiveTypes {
+datatype Integer;
+datatype String;
+datatype Boolean;
+}

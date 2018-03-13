@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<km3:Metamodel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:km3="http://www.eclipse.org/gmt/2005/KM3" location="1:1-13:2">
+  <contents location="1:1-7:2" name="example">
+    <contents xsi:type="km3:Class" location="2:9-3:10" name="A"/>
+    <contents xsi:type="km3:Class" location="5:9-6:10" name="B"/>
+  </contents>
+  <contents location="9:1-13:2" name="PrimitiveTypes">
+    <contents xsi:type="km3:DataType" location="10:9-10:26" name="Boolean"/>
+    <contents xsi:type="km3:DataType" location="11:9-11:26" name="Integer"/>
+    <contents xsi:type="km3:DataType" location="12:9-12:25" name="String"/>
+  </contents>
+</km3:Metamodel>

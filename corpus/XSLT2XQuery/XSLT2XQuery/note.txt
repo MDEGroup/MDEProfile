@@ -1,0 +1,8 @@
+The XSLT2Query program has been upgrade from an early ATL version.
+
+The XSLT2Code ATL program has been added.
+The later has not yet been fully finished,
+the order of the resulting code is not correct.
+
+The example file tr.xsl-XML.xmi has been injected by a program
+from the file tr.xsl.
